@@ -8,6 +8,8 @@ export interface AugmentData {
 	effects: Record<string, number>,
 }
 
+export type AugmentTierProbability = [probability: number, children?: [AugmentTierProbability, AugmentTierProbability, AugmentTierProbability]]
+
 export const enum BonusKey {
 	Armor = 'Armor',
 	AttackDamage = 'AD',
