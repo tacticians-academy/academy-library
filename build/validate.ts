@@ -2,9 +2,9 @@ import fs from 'fs/promises'
 
 import type { AugmentData, AugmentTierProbability } from '../dist/index'
 
-import { getPathTo, importAugments, importAugmentTiers, setNumberPath } from './helpers.js'
+import { getAugmentNameKey, getCurrentSetNumber, getPathTo, importAugments, importAugmentTiers, setNumberPath } from './helpers.js'
 
-const currentSetNumber = parseInt(await fs.readFile(setNumberPath, 'utf8'), 10)
+const currentSetNumber = await getCurrentSetNumber()
 
 const { activeAugments, inactiveAugments } = await importAugments(currentSetNumber)
 
@@ -33,7 +33,7 @@ activeAugments.forEach(augment => {
 		console.log(augment)
 		return
 	}
-	const nameKey = augment.name.replace(/ I+$/, '')
+	const nameKey = getAugmentNameKey(augment)
 	if (uniqueActiveAugments[nameKey] === undefined) {
 		uniqueActiveAugments[nameKey] = [undefined, undefined, undefined]
 	}

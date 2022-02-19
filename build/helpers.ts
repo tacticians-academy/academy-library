@@ -1,7 +1,14 @@
+import fs from 'fs/promises'
 import path from 'path'
+
+import type { AugmentData } from '../dist/index'
 
 export const setNumberPath = path.resolve('build', 'set_number.local')
 export const etagPath = path.resolve('build', 'cdragon_etag.local')
+
+export async function getCurrentSetNumber() {
+	return parseInt(await fs.readFile(setNumberPath, 'utf8'), 10)
+}
 
 function getOutputFolder(setNumber: number) {
 	return `dist/set${setNumber}`
@@ -24,4 +31,11 @@ export async function importAugmentTiers(setNumber: number) {
 
 export async function importItems(setNumber: number) {
 	return await importPath(setNumber, 'items') as typeof import('../dist/set6/items.js')
+}
+
+export function getAugmentNameKey(item: AugmentData) {
+	if (item.name === 'Arcane Crest') {
+		return 'Arcanist Crest'
+	}
+	return item.name.replace(/ I+$/, '')
 }

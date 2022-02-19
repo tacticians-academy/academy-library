@@ -1,3 +1,5 @@
+export const ASSET_PREFIX = 'https://raw.communitydragon.org/pbe/game/'
+
 export type AugmentTier = 1 | 2 | 3
 
 export interface AugmentData {
@@ -5,7 +7,7 @@ export interface AugmentData {
 	name: string
 	desc: string
 	icon: string
-	effects: Record<string, number>,
+	effects: EffectVariables,
 }
 
 export type AugmentTierProbability = [probability: number, children?: [AugmentTierProbability, AugmentTierProbability, AugmentTierProbability]]
@@ -50,7 +52,7 @@ export interface ChampionSpellData {
 	name: string
 	castTime?: number
 	missile?: ChampionSpellMissileData
-	variables: Record<string, number[]>
+	variables: SpellVariables
 	cantCastWhileRooted?: true
 	uninterruptable?: true
 }
@@ -83,11 +85,14 @@ export interface ChampionData {
 	traits: string[]
 }
 
+export type SpellVariables = Record<string, number[]>
+export type EffectVariables = Record<string, number | null>
+
 export interface TraitEffectData {
 	maxUnits: number
 	minUnits: number
 	style: number
-	variables: Record<string, number | null>
+	variables: EffectVariables
 }
 export interface TraitData {
 	apiName: string
@@ -99,10 +104,30 @@ export interface TraitData {
 
 export interface ItemData {
 	desc: string
-	effects: Record<string, number>
+	effects: EffectVariables
 	from: number[]
 	icon: string
 	id: number
 	name: string
 	unique: boolean
+}
+
+export function substituteVariables(description: string, variablesArray: EffectVariables[]) {
+	return description.replace(/(@[\w*]+?@)/g, (placeholder) => {
+		placeholder = placeholder.slice(1, -1)
+		const [multiplierPlaceholder, multiplier] = placeholder.split('*')
+		if (multiplier) {
+			placeholder = multiplierPlaceholder
+		}
+		let substitutions = variablesArray
+			.map(variables => variables[placeholder.toUpperCase()])
+			.filter((substitution): substitution is number => !!substitution)
+		if (!substitutions.length) {
+			return `{${placeholder}}`
+		}
+		if (multiplier) {
+			substitutions = substitutions.map(substitution => Math.round(substitution! * parseInt(multiplier, 10)))
+		}
+		return new Set(substitutions).size === 1 ? substitutions[0]!.toString() : substitutions.join('/')
+	})
 }

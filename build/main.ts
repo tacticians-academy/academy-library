@@ -8,7 +8,7 @@ import path from 'path'
 import { getPathTo, importItems, etagPath, setNumberPath } from './helpers.js'
 
 import { BonusKey } from '../dist/index'
-import type { AugmentData, AugmentTier, ChampionData, ChampionSpellData, ItemData, TraitData } from '../dist/index'
+import type { AugmentData, AugmentTier, ChampionData, ChampionSpellData, EffectVariables, ItemData, SpellVariables, TraitData } from '../dist/index'
 
 const baseURL = `https://raw.communitydragon.org/${PATCH_LINE}`
 const url = `${baseURL}/cdragon/tft/en_us.json`
@@ -470,7 +470,7 @@ const outputChampions = await Promise.all(playableChampions.map(async champion =
 			const missileSpec = spellData.mMissileSpec
 			const missileMovement = missileSpec?.movementComponent
 			// const variables: {name: string, values: number[]}[] = []
-			const variables: Record<string, number[]> = {}
+			const variables: SpellVariables = {}
 			if (spellData.mDataValues) {
 				for (const dataValues of spellData.mDataValues) {
 					if (dataValues.mValues) {
@@ -975,7 +975,7 @@ for (const item of itemsData) {
 			tier,
 			name: item.name,
 			desc: item.desc,
-			effects: effects as Record<string, number>,
+			effects: effects as EffectVariables,
 			icon: item.icon,
 		}
 		if (UNUSED_AUGMENT_NAME_KEYS.includes(nameKey) || icon.includes('/missing-t')) {
