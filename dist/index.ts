@@ -1,7 +1,7 @@
 export type AugmentTier = 1 | 2 | 3
 
 export interface AugmentData {
-	tier?: AugmentTier,
+	tier: AugmentTier,
 	name: string
 	desc: string
 	icon: string

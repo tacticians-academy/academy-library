@@ -109,7 +109,7 @@ export const activeAugments: AugmentData[] = [
 		"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Duet1.TFT_Set6.dds"
 	},
 	{
-		"tier": 2,
+		"tier": 3,
 		"name": "Arcanist Crown",
 		"desc": "Gain 2 Arcanist Emblems.",
 		"effects": {},
@@ -415,7 +415,7 @@ export const activeAugments: AugmentData[] = [
 		"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/FirstAidKit1.TFT_Set6.dds"
 	},
 	{
-		"tier": 2,
+		"tier": 3,
 		"name": "Bruiser Crown",
 		"desc": "Gain 2 Bruiser Emblems.",
 		"effects": {},
@@ -438,7 +438,7 @@ export const activeAugments: AugmentData[] = [
 		"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/InnovatorSoul3.TFT_Set6.dds"
 	},
 	{
-		"tier": 2,
+		"tier": 3,
 		"name": "Bodyguard Crown",
 		"desc": "Gain 2 Bodyguard Emblems.",
 		"effects": {},
@@ -452,7 +452,7 @@ export const activeAugments: AugmentData[] = [
 		"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/ScrapEmblem2.TFT_Set6.dds"
 	},
 	{
-		"tier": 2,
+		"tier": 3,
 		"name": "Challenger Crown",
 		"desc": "Gain 2 Challenger Emblems.",
 		"effects": {},
@@ -856,7 +856,7 @@ export const activeAugments: AugmentData[] = [
 		"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/MetabolicAccel2.TFT_Set6.dds"
 	},
 	{
-		"tier": 2,
+		"tier": 3,
 		"name": "Assassin Crown",
 		"desc": "Gain 2 Assassin Emblems.",
 		"effects": {},
@@ -1353,7 +1353,7 @@ export const activeAugments: AugmentData[] = [
 		"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Second--Wind-I.TFT_Set6_Stage2.dds"
 	},
 	{
-		"tier": 2,
+		"tier": 3,
 		"name": "Striker Crown",
 		"desc": "Gain 2 Striker Emblems.",
 		"effects": {},
@@ -1379,7 +1379,7 @@ export const activeAugments: AugmentData[] = [
 		"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/TitanicForce2.TFT_Set6.dds"
 	},
 	{
-		"tier": 2,
+		"tier": 3,
 		"name": "Chemtech Crown",
 		"desc": "Gain 2 Chemtech Emblems.",
 		"effects": {},
@@ -1443,7 +1443,7 @@ export const activeAugments: AugmentData[] = [
 		"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/MutantHeart1.TFT_Set6.dds"
 	},
 	{
-		"tier": 2,
+		"tier": 3,
 		"name": "Hextech Crown",
 		"desc": "Gain 2 Hextech Emblems.",
 		"effects": {},
@@ -1583,7 +1583,7 @@ export const activeAugments: AugmentData[] = [
 		"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/SoSmall1.TFT_Set6.dds"
 	},
 	{
-		"tier": 2,
+		"tier": 3,
 		"name": "Mutant Crown",
 		"desc": "Gain 2 Mutant Emblems.",
 		"effects": {},
@@ -1641,7 +1641,7 @@ export const activeAugments: AugmentData[] = [
 		"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Pandora1.TFT_Set6.dds"
 	},
 	{
-		"tier": 2,
+		"tier": 3,
 		"name": "Sniper Crown",
 		"desc": "Gain 2 Sniper Emblems.",
 		"effects": {},
@@ -1716,7 +1716,7 @@ export const activeAugments: AugmentData[] = [
 		"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/ArmorPlating2.TFT_Set6.dds"
 	},
 	{
-		"tier": 2,
+		"tier": 3,
 		"name": "Debonair Crown",
 		"desc": "Gain 2 Debonair Emblems.",
 		"effects": {},
@@ -1890,7 +1890,7 @@ export const activeAugments: AugmentData[] = [
 		"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Hextech-Armory-I.TFT_Set6_Stage2.dds"
 	},
 	{
-		"tier": 2,
+		"tier": 3,
 		"name": "Syndicate Crown",
 		"desc": "Gain 2 Syndicate Emblems.",
 		"effects": {},

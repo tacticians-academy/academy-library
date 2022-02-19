@@ -948,7 +948,7 @@ for (const item of itemsData) {
 			if (tier && tier !== 3) {
 				console.log('Multiple tier designations for crown', tier, 3, item)
 			}
-			tier = 2
+			tier = 3
 		}
 		const manualTier = MANUAL_TIER_DESIGNATIONS[item.name]
 		if (manualTier) {
@@ -958,7 +958,7 @@ for (const item of itemsData) {
 			tier = manualTier
 		}
 		if (!tier) {
-			console.log(item)
+			throw 'No tier for item: ' + JSON.stringify(item)
 		}
 		const effects = item.effects
 		for (const key in effects) {
