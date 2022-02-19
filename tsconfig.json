@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"target": "esnext",
+		"useDefineForClassFields": true,
+		"module": "esnext",
+		"moduleResolution": "node",
+		"strict": true,
+		"noImplicitAny": true,
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+		"lib": ["esnext"],
+		"outDir": "dist",
+	},
+	"include": ["build/**/*.ts", "build/**/*.d.ts", "dist/index.ts"],
+}

@@ -1,0 +1,216 @@
+Arcanist Heart
+Assassin Heart
+Bodyguard Heart
+Bruiser Heart
+Challenger Heart
+Chemtech Heart
+Clockwork Heart
+Debonair Heart
+Enchanter Heart
+Enforcer Heart
+Hextech Heart
+Innovator Heart
+Mercenary Heart
+Mutant Heart
+Scholar Heart
+Scrap Heart
+Sniper Heart
+Socialite Heart
+Striker Heart
+Syndicate Heart
+Twinshot Heart
+Ancient Archives
+Arcane Nullifier I
+Ardent Censer
+Ascension
+Backfoot I
+Battlemage I
+Blue Battery I
+Built Different I
+Calculated Loss
+Celestial Blessing I
+Chemical Overload I
+Concussive Blows
+Cutthroat
+Cybernetic Implants I
+Cybernetic Shell I
+Cybernetic Uplink I
+Disintegrator I
+Dominance
+Double Trouble I
+Duet
+Electrocharge I
+En Garde
+Exiles
+Featherweights I
+First Aid Kit
+Chemtech Unity
+Hexnova
+Hextech Unity
+Hyper Roll
+Irresistible Charm
+Item Grab Bag I
+Keepers I
+Knife's Edge I
+Lifelong Learning
+Luden's Echo I
+Makeshift Armor I
+Meditation I
+One For All
+Overpower
+Pandora's Items
+Payday
+Phalanx I
+Phony Frontline
+Pirates
+Recombobulator
+Runic Shield I
+Second Wind I
+Self Repair
+Shrug It Off
+Sniper's Nest
+So Small
+Stand Behind Me
+Stand United I
+Stored Power
+Challenger Unity
+Thrill of the Hunt I
+Tinker
+Treasure Trove I
+Tri Force I
+Swift Justice
+Underdogs
+Unstable Evolution
+Weakspot I
+Arcane Crest
+Assassin Crest
+Bodyguard Crest
+Bruiser Crest
+Challenger Crest
+Chemtech Crest
+Debonair Crest
+Hextech Crest
+Mercenary Crest
+Mutant Crest
+Scholar Crest
+Scrap Crest
+Sniper Crest
+Striker Crest
+Syndicate Crest
+Arcane Nullifier II
+Archangel's Embrace
+Armor Plating
+Backfoot II
+Battlemage II
+Binary Airdrop
+Broken Stopwatch
+Built Different II
+Celestial Blessing II
+Chemical Overload II
+Clear Mind
+Component Grab Bag
+Cybernetic Implants II
+Cybernetic Shell II
+Cybernetic Uplink II
+Disintegrator II
+Double Trouble II
+Electrocharge II
+Exiles II
+Featherweights II
+Four Score
+Future Sight
+Gold Reserves
+Golden Gifts I
+Instant Injection
+Jeweled Lotus
+Junkyard
+Keepers II
+Knife's Edge II
+Luden's Echo II
+Makeshift Armor II
+Meditation II
+Metabolic Accelerator
+Phalanx II
+Portable Forge
+Rich Get Richer
+Runic Shield II
+Salvage Bin
+Second Wind II
+Sharpshooter
+Smoke Bomb
+Spell Blade
+Stand United II
+Sunfire Board
+Thieving Rascals
+Three's Company
+Thrill of the Hunt II
+Tiny Titans
+Titanic Force
+Trade Sector
+Treasure Trove II
+Tri Force II
+True Twos
+Very VIP
+Weakspot II
+Woodland Trinket
+Arcanist Crown
+Assassin Crown
+Bodyguard Crown
+Bruiser Crown
+Challenger Crown
+Chemtech Crown
+Clockwork Soul
+Debonair Crown
+Enchanter Soul
+Hextech Crown
+Innovator Soul
+Mercenary Soul
+Mutant Crown
+Scholar Soul
+Scrap Soul
+Sniper Crown
+Socialite Soul
+Striker Crown
+Syndicate Crown
+Twinshot Soul
+Arcane Nullifier III
+Backfoot III
+Band of Thieves
+Battlemage III
+Blue Battery II
+Built Different III
+Celestial Blessing III
+Cybernetic Implants III
+Cybernetic Shell III
+Cybernetic Uplink III
+Disintegrator III
+Double Trouble III
+Electrocharge III
+Exiles III
+Featherweights III
+Future Sight II
+Golden Gifts II
+Golden Ticket
+High End Shopping
+High Roller
+Item Grab Bag II
+Knife's Edge III
+Level Up!
+Luden's Echo III
+Makeshift Armor III
+March of Progress
+Meditation III
+New Recruit
+Phalanx III
+Radiant Relics
+Second Wind III
+Share the Spotlight
+Stand United III
+The Golden Egg
+Treasure Trove III
+Tri Force III
+Verdant Veil
+Weakspot III
+Windfall
+Wise Spending
+Woodland Charm
