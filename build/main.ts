@@ -5,9 +5,10 @@ import fetch from 'node-fetch'
 import fs from 'fs/promises'
 import path from 'path'
 
+import { getPathTo, importItems, etagPath, setNumberPath } from './helpers.js'
+
 import { BonusKey } from '../dist/index'
 import type { AugmentData, AugmentTier, ChampionData, ChampionSpellData, ItemData, TraitData } from '../dist/index'
-import { ItemKey } from '../dist/set6/items.js'
 
 const baseURL = `https://raw.communitydragon.org/${PATCH_LINE}`
 const url = `${baseURL}/cdragon/tft/en_us.json`
@@ -15,10 +16,9 @@ const response = await fetch(url)
 if (!response.ok) { throw response }
 console.log(url)
 
-const tagPath = path.resolve('build', 'cdragon_etag.local')
 let oldEtag: string | undefined
 try {
-	oldEtag = await fs.readFile(tagPath, 'utf8')
+	oldEtag = await fs.readFile(etagPath, 'utf8')
 } catch {
 	console.log('No local hash. Reloading data.')
 }
@@ -29,7 +29,7 @@ if (newEtag != null) {
 		process.exit(0)
 	}
 	console.log('File updated! Rebuilding data.', newEtag, oldEtag)
-	fs.writeFile(tagPath, newEtag)
+	fs.writeFile(etagPath, newEtag)
 } else {
 	console.log('No cache etag for resource, reloading data.')
 }
@@ -37,11 +37,13 @@ if (newEtag != null) {
 const responseJSON = await response.json() as Record<string, any>
 
 const currentSetNumber = Object.keys(responseJSON.sets).reduce((previous, current) => Math.max(previous, parseInt(current, 10)), 0)
+fs.writeFile(setNumberPath, currentSetNumber.toString())
 const { champions, traits } = (responseJSON as any).sets[currentSetNumber]
-const outputFolder = `dist/set${currentSetNumber}/`
 console.log('Loading set', currentSetNumber, 'from', PATCH_LINE.toUpperCase(), '...', 'Units:', champions.length, 'Traits:', traits.length)
 
 // Items
+
+const { ItemKey } = await importItems(currentSetNumber)
 
 interface ResponseItem {
 	id: number
@@ -329,7 +331,7 @@ function parseAttack(attack: ChampionJSONAttack, json: ChampionJSON) {
 	// }
 }
 
-const championsPath = path.resolve(outputFolder, 'champion')
+const championsPath = getPathTo(currentSetNumber, 'champion')
 await fs.mkdir(championsPath, { recursive: true })
 const outputChampions = await Promise.all(playableChampions.map(async champion => {
 	const apiName = champion.apiName
@@ -993,45 +995,8 @@ const outputAugmentSections = [
 // Output
 
 await Promise.all([
-	fs.writeFile(path.resolve(outputFolder, 'augments.ts'), outputAugmentSections.join('\n\n')),
-	fs.writeFile(path.resolve(outputFolder, 'champions.ts'), `import type { ChampionData } from '../index'\n\nexport const champions: ChampionData[] = ` + JSON.stringify(outputChampions, undefined, '\t')),
-	fs.writeFile(path.resolve(outputFolder, 'traits.ts'), `import type { TraitData } from '../index'\n\n${traitKeysString}\n\nexport const traits: TraitData[] = ` + JSON.stringify(traits, undefined, '\t').replace(/"null"/g, 'null')),
-	fs.writeFile(path.resolve(outputFolder, 'items.ts'), `import type { ItemData } from '../index'\n\n${itemKeysString}\n\nexport const items: ItemData[] = ` + JSON.stringify(currentItems, undefined, '\t')),
+	fs.writeFile(getPathTo(currentSetNumber, 'augments.ts'), outputAugmentSections.join('\n\n')),
+	fs.writeFile(getPathTo(currentSetNumber, 'champions.ts'), `import type { ChampionData } from '../index'\n\nexport const champions: ChampionData[] = ` + JSON.stringify(outputChampions, undefined, '\t')),
+	fs.writeFile(getPathTo(currentSetNumber, 'traits.ts'), `import type { TraitData } from '../index'\n\n${traitKeysString}\n\nexport const traits: TraitData[] = ` + JSON.stringify(traits, undefined, '\t').replace(/"null"/g, 'null')),
+	fs.writeFile(getPathTo(currentSetNumber, 'items.ts'), `import type { ItemData } from '../index'\n\n${itemKeysString}\n\nexport const items: ItemData[] = ` + JSON.stringify(currentItems, undefined, '\t')),
 ])
-
-// Validation
-
-const knownAugmentNames = (await fs.readFile(path.resolve(outputFolder, 'augments-known.txt'), 'utf8'))
-	.toLowerCase()
-	.split('\n')
-	.filter(name => name)
-const remainingKnownAugmentNames = new Set(knownAugmentNames)
-const foundAugmentNames = activeAugments.map(augment => augment.name.toLowerCase())
-const remainingFoundAugmentNames = new Set(foundAugmentNames)
-for (const foundName of foundAugmentNames) {
-	if (remainingKnownAugmentNames.delete(foundName)) {
-		remainingFoundAugmentNames.delete(foundName)
-	}
-}
-
-if (remainingKnownAugmentNames.size || remainingFoundAugmentNames.size) {
-	console.log('Augments missing', remainingKnownAugmentNames, remainingFoundAugmentNames)
-}
-
-const uniqueActiveAugments: Record<string, [AugmentData | undefined, AugmentData | undefined, AugmentData | undefined]> = {}
-activeAugments.forEach(augment => {
-	if (!augment.tier) {
-		console.log(augment)
-		return
-	}
-	const nameKey = augment.name.replace(/ I+$/, '')
-	if (uniqueActiveAugments[nameKey] === undefined) {
-		uniqueActiveAugments[nameKey] = [undefined, undefined, undefined]
-	}
-	if (uniqueActiveAugments[nameKey][augment.tier - 1]) {
-		console.log('Multiple augments at tier', augment, uniqueActiveAugments[nameKey][augment.tier - 1])
-	}
-	uniqueActiveAugments[nameKey][augment.tier - 1] = augment
-})
-const uniqueActiveAugmentNames = Object.keys(uniqueActiveAugments)
-console.log('Augments Active:', activeAugments.length, '/', 'Unique:', uniqueActiveAugmentNames.length, '/', 'Unreleased:', unreleasedAugments.length)

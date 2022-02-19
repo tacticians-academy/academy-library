@@ -11,5 +11,5 @@
 		"lib": ["esnext"],
 		"outDir": "dist",
 	},
-	"include": ["build/**/*.ts", "build/**/*.d.ts", "dist/index.ts"],
+	"include": ["build/**/*.ts", "build/**/*.d.ts", "dist/*.ts"],
 }
