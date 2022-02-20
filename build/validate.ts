@@ -2,7 +2,8 @@ import fs from 'fs/promises'
 
 import type { AugmentData, AugmentTierProbability } from '../dist/index'
 
-import { getAugmentNameKey, getCurrentSetNumber, getPathTo, importAugments, importAugmentTiers, setNumberPath } from './helpers.js'
+import { getCurrentSetNumber, getPathTo, importAugments, importAugmentTiers } from './helpers/files.js'
+import { getAugmentNameKey } from './helpers/utils.js'
 
 const currentSetNumber = await getCurrentSetNumber()
 

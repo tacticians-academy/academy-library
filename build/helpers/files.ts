@@ -1,10 +1,11 @@
 import fs from 'fs/promises'
 import path from 'path'
 
-import type { AugmentData } from '../dist/index'
+const cachePath = path.resolve('build', 'cache')
+await fs.mkdir(cachePath, { recursive: true })
 
-export const setNumberPath = path.resolve('build', 'set_number.local')
-export const etagPath = path.resolve('build', 'cdragon_etag.local')
+export const setNumberPath = path.resolve(cachePath, 'set_number.local')
+export const etagPath = path.resolve(cachePath, 'cdragon_etag.local')
 
 export async function getCurrentSetNumber() {
 	return parseInt(await fs.readFile(setNumberPath, 'utf8'), 10)
@@ -23,19 +24,16 @@ async function importPath(setNumber: number, fileName: string) {
 }
 
 export async function importAugments(setNumber: number) {
-	return await importPath(setNumber, 'augments') as typeof import('../dist/set6/augments.js')
+	return await importPath(setNumber, 'augments') as typeof import('../../dist/set6/augments.js')
 }
 export async function importAugmentTiers(setNumber: number) {
-	return await importPath(setNumber, 'augment-tiers') as typeof import('../dist/set6/augment-tiers.js')
+	return await importPath(setNumber, 'augment-tiers') as typeof import('../../dist/set6/augment-tiers.js')
 }
 
 export async function importItems(setNumber: number) {
-	return await importPath(setNumber, 'items') as typeof import('../dist/set6/items.js')
+	return await importPath(setNumber, 'items') as typeof import('../../dist/set6/items.js')
 }
 
-export function getAugmentNameKey(item: AugmentData) {
-	if (item.name === 'Arcane Crest') {
-		return 'Arcanist Crest'
-	}
-	return item.name.replace(/ I+$/, '')
+export async function importSetData(setNumber: number) {
+	return await importPath(setNumber, 'set-data') as typeof import('../../dist/set6/set-data.js')
 }

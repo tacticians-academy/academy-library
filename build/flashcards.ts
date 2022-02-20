@@ -4,13 +4,14 @@ import path from 'path'
 import { ASSET_PREFIX, substituteVariables } from '../dist/index.js'
 import type{ AugmentTier, EffectVariables } from '../dist/index.js'
 
-import { getAugmentNameKey, getCurrentSetNumber, getPathTo, importAugments } from './helpers.js'
+import { getCurrentSetNumber, getPathTo, importAugments, importItems } from './helpers/files.js'
+import { getAugmentNameKey } from './helpers/utils.js'
 
 const currentSetNumber = await getCurrentSetNumber()
 
-const { activeAugments } = await importAugments(currentSetNumber)
+// Augments
 
-const columns = ['name', 'tiers', 'descriptions', 'icons']
+const { activeAugments } = await importAugments(currentSetNumber)
 
 type AugmentEntry = [name: string, nameExtensions: (string | undefined)[], tiers: AugmentTier[], descriptions: string[], effectsArray: EffectVariables[], icons: string[]]
 
@@ -71,6 +72,8 @@ const output = results
 		return [ (extensions ? name + ' ' + extensions : `${name} (${tiers.filter(e => e).join('/')})`), description, icons.filter(e => e).join() ]
 	})
 	.sort((a, b) => a[0].localeCompare(b[0]))
+
+// Output
 
 const flashcardsPath = getPathTo(currentSetNumber, 'flashcards')
 await fs.mkdir(flashcardsPath, { recursive: true })
