@@ -12,6 +12,14 @@ export interface AugmentData {
 	effects: EffectVariables,
 }
 
+export interface AugmentFlashcard {
+	id: string
+	name: string
+	tiers: AugmentTier[]
+	description: string
+	icons: string[]
+}
+
 export type AugmentTierProbability = [probability: number, children?: [AugmentTierProbability, AugmentTierProbability, AugmentTierProbability]]
 
 export const enum BonusKey {

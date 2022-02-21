@@ -2,9 +2,10 @@ import fs from 'fs/promises'
 import path from 'path'
 
 import { ASSET_PREFIX, substituteVariables } from '../dist/index.js'
-import type{ AugmentTier, EffectVariables } from '../dist/index.js'
+import type { AugmentFlashcard, AugmentTier, EffectVariables } from '../dist/index.js'
 
 import { getCurrentSetNumber, getPathTo, importAugments, importItems } from './helpers/files.js'
+import { formatJS } from './helpers/formatting.js'
 import { getAugmentNameKey } from './helpers/utils.js'
 
 const currentSetNumber = await getCurrentSetNumber()
@@ -45,22 +46,22 @@ activeAugments.forEach(augment => {
 		normalizedEffects[key.toUpperCase()] = augment.effects[key]
 	}
 	entry[4][tierIndex] = normalizedEffects
-	// entry[5][tierIndex] = augment.icon.toLowerCase().replace('assets/maps/particles/tft/item_icons/augments/hexcore/', '').replace('.dds', '') // TSV
 	entry[5][tierIndex] = ASSET_PREFIX + augment.icon.toLowerCase().replace('.dds', '.png')
 })
 
-const output = results
-	.map(([name, nameExtensions, tiers, descriptions, effectsArray, icons]) => {
+const outputTSV: string[][] = []
+const outputObject: AugmentFlashcard[] = []
+results
+	.sort((a, b) => a[0].localeCompare(b[0]))
+	.forEach(([name, nameExtensions, tiers, descriptions, effectsArray, icons]) => {
 		const validDescriptions = descriptions.filter(description => description)
 		let description: string
 		if (validDescriptions.length > 1) {
 			description = descriptions
 				.map((description, index) => {
-					// return description ? substituteVariables(description, [effectsArray[index]]) : null // TSV
 					return description ? `${index + 1}: ${substituteVariables(description, [effectsArray[index]])}` : null
 				})
 				.filter((description): description is string => !!description)
-				// .join('|') // TSV
 				.join('  ')
 		} else {
 			description = substituteVariables(validDescriptions[0], effectsArray)
@@ -68,14 +69,20 @@ const output = results
 		const extensions = nameExtensions
 			.filter(extension => extension)
 			.join('/')
-		// return [ extensions ? name + ' ' + extensions : name, tiers.filter(e => e).join(), description, icons.filter(e => e).join() ] // TSV
-		return [ (extensions ? name + ' ' + extensions : `${name} (${tiers.filter(e => e).join('/')})`), description, icons.filter(e => e).join() ]
+		outputObject.push({
+			id: name.toLowerCase().replaceAll(/[ '.+-]/g, ''),
+			name: extensions ? name + ' ' + extensions : name,
+			tiers: tiers.filter(e => e),
+			description,
+			icons: icons.filter(e => e).map(icon => icon.replace('https://raw.communitydragon.org/pbe/game/assets/maps/particles/tft/item_icons/augments/hexcore/', '').replace('.png', ''))
+		})
+		outputTSV.push([ (extensions ? name + ' ' + extensions : `${name} (${tiers.filter(e => e).join('/')})`), description, icons.filter(e => e).join() ])
 	})
-	.sort((a, b) => a[0].localeCompare(b[0]))
 
 // Output
 
 const flashcardsPath = getPathTo(currentSetNumber, 'flashcards')
 await fs.mkdir(flashcardsPath, { recursive: true })
 // output.unshift(columns) // TSV
-await fs.writeFile(path.resolve(flashcardsPath, 'augments.tsv'), output.map(row => row.join('\t')).join('\n'))
+await fs.writeFile(path.resolve(flashcardsPath, 'augments.ts'), `import type { AugmentFlashcard } from '../../index'\n\nexport const augmentFlashcards: AugmentFlashcard[] = ` + formatJS(outputObject))
+await fs.writeFile(path.resolve(flashcardsPath, 'augments.tsv'), outputTSV.map(row => row.join('\t')).join('\n'))
