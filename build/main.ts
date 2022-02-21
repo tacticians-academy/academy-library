@@ -6,6 +6,7 @@ import fs from 'fs/promises'
 import path from 'path'
 
 import { getPathTo, importItems, importSetData, etagPath, setNumberPath } from './helpers/files.js'
+import { formatJS } from './helpers/formatting.js'
 import { mStatSubstitutions, mDataValueSubstitutions, mSpellCalculationsSubstitutions, UNRELEASED_ITEM_NAME_KEYS, AUGMENT_EFFECTS_SUBSTITUTIONS, NORMALIZE_EFFECT_KEYS, SUBSTITUTE_EFFECT_KEYS } from './helpers/normalize.js'
 
 import { COMPONENT_ITEM_IDS } from '../dist/index.js'
@@ -217,7 +218,7 @@ const outputItemSections = []
 for (const key in currentItemsByType) {
 	const itemKey = key as ItemTypeKey
 	currentItemsByType[itemKey].sort((a, b) => a.id - b.id)
-	outputItemSections.push(`export const ${itemKey}Items: ItemData[] = ` + JSON.stringify(currentItemsByType[itemKey], undefined, '\t'))
+	outputItemSections.push(`export const ${itemKey}Items: ItemData[] = ` + formatJS(currentItemsByType[itemKey]))
 }
 outputItemSections.push(`export const currentItems: ItemData[] = componentItems.concat(completedItems, spatulaItems)`)
 
@@ -712,15 +713,15 @@ for (const item of itemsData) {
 
 const outputAugmentSections = [
 	`import type { AugmentData } from '../index'`,
-	`export const activeAugments: AugmentData[] = ` + JSON.stringify(activeAugments, undefined, '\t'),
-	`export const inactiveAugments: AugmentData[] = ` + JSON.stringify(unreleasedAugments, undefined, '\t'),
+	`export const activeAugments: AugmentData[] = ` + formatJS(activeAugments),
+	`export const inactiveAugments: AugmentData[] = ` + formatJS(unreleasedAugments),
 ]
 
 // Output
 
 await Promise.all([
 	fs.writeFile(getPathTo(currentSetNumber, 'augments.ts'), outputAugmentSections.join('\n\n')),
-	fs.writeFile(getPathTo(currentSetNumber, 'champions.ts'), `import type { ChampionData } from '../index'\n\nexport const champions: ChampionData[] = ` + JSON.stringify(outputChampions, undefined, '\t')),
-	fs.writeFile(getPathTo(currentSetNumber, 'traits.ts'), `import type { TraitData } from '../index'\n\n${traitKeysString}\n\nexport const traits: TraitData[] = ` + JSON.stringify(traits, undefined, '\t').replace(/"null"/g, 'null')),
+	fs.writeFile(getPathTo(currentSetNumber, 'champions.ts'), `import type { ChampionData } from '../index'\n\nexport const champions: ChampionData[] = ` + formatJS(outputChampions)),
+	fs.writeFile(getPathTo(currentSetNumber, 'traits.ts'), `import type { TraitData } from '../index'\n\n${traitKeysString}\n\nexport const traits: TraitData[] = ` + formatJS(traits)),
 	fs.writeFile(getPathTo(currentSetNumber, 'items.ts'), `import type { ItemData } from '../index'\n\n${itemKeysString}\n\n` + outputItemSections.join('\n\n')),
 ])
