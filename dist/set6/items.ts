@@ -72,7 +72,7 @@ export const componentItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		desc: `%i:scaleHP% +@Health@ Health`,
+		desc: `%i:scaleHP% +@HP@ HP`,
 		effects: {
 			'HP': 150,
 		},
@@ -127,7 +127,7 @@ export const completedItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		desc: `The holder's Abilities and attacks do @SmallBonusPct@% bonus damage. If the target has more than @HPThreshold@ maximum Health, the bonus increases to @LargeBonusPct@%.`,
+		desc: `The holder's Abilities and attacks do @SmallBonusPct@% bonus damage. If the target has more than @HPThreshold@ maximum HP, the bonus increases to @LargeBonusPct@%.`,
 		effects: {
 			'AD': 10,
 			'AS': 10,
@@ -169,7 +169,7 @@ export const completedItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		desc: `Physical damage heals the holder for @Lifesteal@% of the damage dealt. Upon falling below @HPThreshold@% Health, the holder gains a @ShieldHealthPercent@% maximum Health shield that lasts up to @ShieldDuration@ seconds.`,
+		desc: `Physical damage heals the holder for @Lifesteal@% of the damage dealt. Upon falling below @HPThreshold@% HP, the holder gains a @ShieldHPPercent@% maximum HP shield that lasts up to @ShieldDuration@ seconds.`,
 		effects: {
 			'AD': 10,
 			'HPThreshold': 40,
@@ -453,7 +453,7 @@ export const completedItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		desc: `Every @HealTickRate@ seconds, the holder radiates an aura to allies within @HexRadius@ hex, healing them for @MissingHPHeal@% of their missing Health. Affected allies take @AoEDamageReduction@% reduced damage from multi-target abilities and attacks for @HealTickRate@ seconds.`,
+		desc: `Every @HealTickRate@ seconds, the holder radiates an aura to allies within @HexRadius@ hex, healing them for @MissingHPHeal@% of their missing HP. Affected allies take @AoEDamageReduction@% reduced damage from multi-target abilities and attacks for @HealTickRate@ seconds.`,
 		effects: {
 			'HP': 150,
 			'Mana': 15,
@@ -553,7 +553,7 @@ export const completedItems: ItemData[] = [
 		unique: true,
 	},
 	{
-		desc: `Grants %i:scaleMR% @MR@ bonus Magic Resist (including components). On being hit by magic or true damage from a casted Ability, launch a fireball at the Ability's caster that deals magic damage equal to @PercentHPDamage@% of their maximum Health (@ICD@ second cooldown).`,
+		desc: `Grants %i:scaleMR% @MR@ bonus Magic Resist (including components). On being hit by magic or true damage from a casted Ability, launch a fireball at the Ability's caster that deals magic damage equal to @PercentHPDamage@% of their maximum HP (@ICD@ second cooldown).`,
 		effects: {
 			'ICD': 0.5,
 			'MR': 200,
@@ -594,7 +594,7 @@ export const completedItems: ItemData[] = [
 		unique: true,
 	},
 	{
-		desc: `Grants %i:scaleHP% @Health@ bonus Health (including components).`,
+		desc: `Grants %i:scaleHP% @HP@ bonus HP (including components).`,
 		effects: {
 			'HP': 1000,
 		},
@@ -1037,7 +1037,7 @@ export const shadowItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		desc: `%i:scaleHP% +@Health@ Health`,
+		desc: `%i:scaleHP% +@HP@ HP`,
 		effects: {
 			'HP': 150,
 		},
@@ -1091,7 +1091,7 @@ export const radiantItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		desc: `The holder's Abilities and attacks do <TFTRadiantItemBonus>@SmallBonusPct@%</TFTRadiantItemBonus> bonus damage. If the target has more than <TFTRadiantItemBonus>@HPThreshold@ maximum Health</TFTRadiantItemBonus>, the bonus increases to <TFTRadiantItemBonus>@LargeBonusPct@%</TFTRadiantItemBonus>.`,
+		desc: `The holder's Abilities and attacks do <TFTRadiantItemBonus>@SmallBonusPct@%</TFTRadiantItemBonus> bonus damage. If the target has more than <TFTRadiantItemBonus>@HPThreshold@ maximum HP</TFTRadiantItemBonus>, the bonus increases to <TFTRadiantItemBonus>@LargeBonusPct@%</TFTRadiantItemBonus>.`,
 		effects: {
 			'AD': 10,
 			'AS': 10,
@@ -1135,7 +1135,7 @@ export const radiantItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		desc: `When the holder first drops below @HPThreshold@% health, they briefly enter stealth, becoming untargetable and shedding negative effects. After coming out of stealth, the holder gains an additional <TFTRadiantItemBonus>%i:scaleAS% @AS@%</TFTRadiantItemBonus> bonus Attack Speed.<br><br><TFTRadiantItemBonus>Radiant Bonus: Triggers again at @HealthThreshold2@% health.</TFTRadiantItemBonus><br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>`,
+		desc: `When the holder first drops below @HPThreshold@% health, they briefly enter stealth, becoming untargetable and shedding negative effects. After coming out of stealth, the holder gains an additional <TFTRadiantItemBonus>%i:scaleAS% @AS@%</TFTRadiantItemBonus> bonus Attack Speed.<br><br><TFTRadiantItemBonus>Radiant Bonus: Triggers again at @HPThreshold2@% health.</TFTRadiantItemBonus><br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>`,
 		effects: {
 			'AD': 10,
 			'Armor': 20,
@@ -1152,7 +1152,7 @@ export const radiantItems: ItemData[] = [
 		unique: true,
 	},
 	{
-		desc: `Physical damage heals the holder for <TFTRadiantItemBonus>@Lifesteal@%</TFTRadiantItemBonus> of the damage dealt. Upon falling below @HPThreshold@% Health, the holder gains a <TFTRadiantItemBonus>@ShieldHealthPercent@%</TFTRadiantItemBonus> max Health shield that lasts up to @ShieldDuration@ seconds.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@BonusAD@ Attack Damage.</TFTRadiantItemBonus>`,
+		desc: `Physical damage heals the holder for <TFTRadiantItemBonus>@Lifesteal@%</TFTRadiantItemBonus> of the damage dealt. Upon falling below @HPThreshold@% HP, the holder gains a <TFTRadiantItemBonus>@ShieldHPPercent@%</TFTRadiantItemBonus> max HP shield that lasts up to @ShieldDuration@ seconds.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@BonusAD@ Attack Damage.</TFTRadiantItemBonus>`,
 		effects: {
 			'AD': 30,
 			'BonusAD': 20,
@@ -1335,7 +1335,7 @@ export const radiantItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		desc: `When combat begins, the holder and all allies within <TFTRadiantItemBonus>@HexRange@</TFTRadiantItemBonus> hexes in the same row gain a shield that blocks <TFTRadiantItemBonus>@1StarShieldValue@/@2StarShieldValue@/@3StarShieldValue@</TFTRadiantItemBonus> %i:star% damage for <TFTRadiantItemBonus>@ShieldDuration@</TFTRadiantItemBonus> seconds.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@BonusAllyHP@ Health for all allies</TFTRadiantItemBonus> at the start of combat.`,
+		desc: `When combat begins, the holder and all allies within <TFTRadiantItemBonus>@HexRange@</TFTRadiantItemBonus> hexes in the same row gain a shield that blocks <TFTRadiantItemBonus>@1StarShieldValue@/@2StarShieldValue@/@3StarShieldValue@</TFTRadiantItemBonus> %i:star% damage for <TFTRadiantItemBonus>@ShieldDuration@</TFTRadiantItemBonus> seconds.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@BonusAllyHP@ HP for all allies</TFTRadiantItemBonus> at the start of combat.`,
 		effects: {
 			'AP': 10,
 			'Armor': 20,
@@ -1354,7 +1354,7 @@ export const radiantItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		desc: `Enemies within <TFTRadiantItemBonus>@HexRange@</TFTRadiantItemBonus> hexes have their Magic Resist reduced by @MRShred@%. When they cast an Ability, they are zapped taking magic damage equal to <TFTRadiantItemBonus>@ManaRatio@%</TFTRadiantItemBonus> of their max Mana.<br><br><TFTRadiantItemBonus>Radiant Bonus: Regenerate @MaxHPRegen@% max Health per second.</TFTRadiantItemBonus><br>`,
+		desc: `Enemies within <TFTRadiantItemBonus>@HexRange@</TFTRadiantItemBonus> hexes have their Magic Resist reduced by @MRShred@%. When they cast an Ability, they are zapped taking magic damage equal to <TFTRadiantItemBonus>@ManaRatio@%</TFTRadiantItemBonus> of their max Mana.<br><br><TFTRadiantItemBonus>Radiant Bonus: Regenerate @MaxHPRegen@% max HP per second.</TFTRadiantItemBonus><br>`,
 		effects: {
 			'AP': 10,
 			'MR': 20,
@@ -1446,7 +1446,7 @@ export const radiantItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		desc: `Every @HealTickRate@ seconds, the holder radiates an aura to allies within <TFTRadiantItemBonus>@HexRadius@</TFTRadiantItemBonus> hexes, healing them for <TFTRadiantItemBonus>@MissingHPHeal@%</TFTRadiantItemBonus> of their missing Health. Affected allies take @AoEDamageReduction@% reduced damage from multi-target abilities and attacks for @HealTickRate@ seconds.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@BonusHealth@ Health.</TFTRadiantItemBonus>`,
+		desc: `Every @HealTickRate@ seconds, the holder radiates an aura to allies within <TFTRadiantItemBonus>@HexRadius@</TFTRadiantItemBonus> hexes, healing them for <TFTRadiantItemBonus>@MissingHPHeal@%</TFTRadiantItemBonus> of their missing HP. Affected allies take @AoEDamageReduction@% reduced damage from multi-target abilities and attacks for @HealTickRate@ seconds.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@BonusHP@ HP.</TFTRadiantItemBonus>`,
 		effects: {
 			'BonusHP': 350,
 			'HP': 500,
@@ -1479,7 +1479,7 @@ export const radiantItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		desc: `Grants %i:scaleArmor% @Armor@ bonus Armor (including components). Negates bonus damage from incoming critical strikes. On being hit by an attack, deal <TFTRadiantItemBonus>@1StarAoEDamage@/@2StarAoEDamage@/@3StarAoEDamage@</TFTRadiantItemBonus> %i:star% magic damage to all nearby enemies (once every @ICD@ seconds).<br><br><TFTRadiantItemBonus>Radiant Bonus: Regenerate @MaxHPRegen@% max Health per second.</TFTRadiantItemBonus>`,
+		desc: `Grants %i:scaleArmor% @Armor@ bonus Armor (including components). Negates bonus damage from incoming critical strikes. On being hit by an attack, deal <TFTRadiantItemBonus>@1StarAoEDamage@/@2StarAoEDamage@/@3StarAoEDamage@</TFTRadiantItemBonus> %i:star% magic damage to all nearby enemies (once every @ICD@ seconds).<br><br><TFTRadiantItemBonus>Radiant Bonus: Regenerate @MaxHPRegen@% max HP per second.</TFTRadiantItemBonus>`,
 		effects: {
 			'Armor': 70,
 			'ICD': 2.5,
@@ -1497,7 +1497,7 @@ export const radiantItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		desc: `The holder gains %i:scaleArmor% <TFTRadiantItemBonus>@ArmorPerEnemy@</TFTRadiantItemBonus> Armor and %i:scaleMR% <TFTRadiantItemBonus>@MRPerEnemy@</TFTRadiantItemBonus> Magic Resist for each enemy targeting them.<br><br><TFTRadiantItemBonus>Radiant Bonus: Regenerate @MaxHPRegen@% max Health per second.</TFTRadiantItemBonus>`,
+		desc: `The holder gains %i:scaleArmor% <TFTRadiantItemBonus>@ArmorPerEnemy@</TFTRadiantItemBonus> Armor and %i:scaleMR% <TFTRadiantItemBonus>@MRPerEnemy@</TFTRadiantItemBonus> Magic Resist for each enemy targeting them.<br><br><TFTRadiantItemBonus>Radiant Bonus: Regenerate @MaxHPRegen@% max HP per second.</TFTRadiantItemBonus>`,
 		effects: {
 			'Armor': 20,
 			'MR': 20,
@@ -1513,7 +1513,7 @@ export const radiantItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		desc: `Every <TFTRadiantItemBonus>@ICD@</TFTRadiantItemBonus> seconds, a random enemy within <TFTRadiantItemBonus>@HexRange@</TFTRadiantItemBonus> hexes is burned for <TFTRadiantItemBonus>@BurnPercent@% of their maximum HP as true damage over @BurnDuration@ seconds</TFTRadiantItemBonus>. Any healing they receive is reduced by @GrievousWoundsPercent@%.<br><br><TFTRadiantItemBonus>Radiant Bonus: Regenerate @MaxHealthRegen@% max Health per second.</TFTRadiantItemBonus><br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>`,
+		desc: `Every <TFTRadiantItemBonus>@ICD@</TFTRadiantItemBonus> seconds, a random enemy within <TFTRadiantItemBonus>@HexRange@</TFTRadiantItemBonus> hexes is burned for <TFTRadiantItemBonus>@BurnPercent@% of their maximum HP as true damage over @BurnDuration@ seconds</TFTRadiantItemBonus>. Any healing they receive is reduced by @GrievousWoundsPercent@%.<br><br><TFTRadiantItemBonus>Radiant Bonus: Regenerate @MaxHPRegen@% max HP per second.</TFTRadiantItemBonus><br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>`,
 		effects: {
 			'Armor': 20,
 			'HP': 150,
@@ -1548,7 +1548,7 @@ export const radiantItems: ItemData[] = [
 		unique: true,
 	},
 	{
-		desc: `Grants %i:scaleMR% <TFTRadiantItemBonus>@MR@</TFTRadiantItemBonus> bonus Magic Resist (including components). On being hit by magic or true damage from an Ability, launch a fireball at the Ability's caster that deals magic damage equal to <TFTRadiantItemBonus>@PercentHPDamage@% of their max Health</TFTRadiantItemBonus> (@ICD@ second cooldown).<br><br><TFTRadiantItemBonus>Radiant Bonus: Regenerate @MaxHealthRegen@% max Health per second.</TFTRadiantItemBonus>`,
+		desc: `Grants %i:scaleMR% <TFTRadiantItemBonus>@MR@</TFTRadiantItemBonus> bonus Magic Resist (including components). On being hit by magic or true damage from an Ability, launch a fireball at the Ability's caster that deals magic damage equal to <TFTRadiantItemBonus>@PercentHPDamage@% of their max HP</TFTRadiantItemBonus> (@ICD@ second cooldown).<br><br><TFTRadiantItemBonus>Radiant Bonus: Regenerate @MaxHPRegen@% max HP per second.</TFTRadiantItemBonus>`,
 		effects: {
 			'ICD': 0.5,
 			'MR': 300,
@@ -1591,7 +1591,7 @@ export const radiantItems: ItemData[] = [
 		unique: true,
 	},
 	{
-		desc: `Grants %i:scaleHP% <TFTRadiantItemBonus>@Health@</TFTRadiantItemBonus> bonus Health (including components).<br><br><TFTRadiantItemBonus>Radiant Bonus: Regenerate @MaxHealthRegen@% max Health per second.</TFTRadiantItemBonus>`,
+		desc: `Grants %i:scaleHP% <TFTRadiantItemBonus>@HP@</TFTRadiantItemBonus> bonus HP (including components).<br><br><TFTRadiantItemBonus>Radiant Bonus: Regenerate @MaxHPRegen@% max HP per second.</TFTRadiantItemBonus>`,
 		effects: {
 			'HP': 1800,
 			'{52358605}': 1,
@@ -1604,7 +1604,7 @@ export const radiantItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		desc: `When combat begins, the holder <TFTRadiantItemBonus>and all allies</TFTRadiantItemBonus> gain a shield that blocks the damage and effects of the first enemy Ability, up to 600 damage. <br><br><TFTRadiantItemBonus>Radiant Bonus: +@BonusAllyHP@ Health for all allies</TFTRadiantItemBonus> at the start of combat.`,
+		desc: `When combat begins, the holder <TFTRadiantItemBonus>and all allies</TFTRadiantItemBonus> gain a shield that blocks the damage and effects of the first enemy Ability, up to 600 damage. <br><br><TFTRadiantItemBonus>Radiant Bonus: +@BonusAllyHP@ HP for all allies</TFTRadiantItemBonus> at the start of combat.`,
 		effects: {
 			'HP': 150,
 			'{940ca598}': 50,
@@ -1634,7 +1634,7 @@ export const radiantItems: ItemData[] = [
 
 export const ornnItems: ItemData[] = [
 	{
-		desc: `The wearer regenerates @PercentHPRegen@% of their maximum Health each second.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
+		desc: `The wearer regenerates @PercentHPRegen@% of their maximum HP each second.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
 		effects: {
 			'HP': 200,
 			'MR': 25,
@@ -1768,7 +1768,7 @@ export const ornnItems: ItemData[] = [
 		unique: true,
 	},
 	{
-		desc: `The first instance of damage that would reduce the wearer below @PercentHPThreshold@% Health is prevented, causing them to become invulnerable for @InvulnDuration@ seconds.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
+		desc: `The first instance of damage that would reduce the wearer below @PercentHPThreshold@% HP is prevented, causing them to become invulnerable for @InvulnDuration@ seconds.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
 		effects: {
 			'AP': 45,
 			'Armor': 35,
@@ -2061,7 +2061,7 @@ export const unreleasedItems: ItemData[] = [
 		unique: true,
 	},
 	{
-		desc: `On falling below @HPPercent@% Health, become untargetable, invulnerable, but unable to move for @StasisDuration@ seconds.`,
+		desc: `On falling below @HPPercent@% HP, become untargetable, invulnerable, but unable to move for @StasisDuration@ seconds.`,
 		effects: {
 			'AP': 20,
 			'Armor': 25,

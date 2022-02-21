@@ -648,7 +648,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Set6_Bruiser`,
-		desc: `Your team gains bonus maximum HP. Bruisers gain double the bonus.<br><expandRow>(@MinUnits@) @BonusHealth@ Health</expandRow>`,
+		desc: `Your team gains bonus maximum HP. Bruisers gain double the bonus.<br><expandRow>(@MinUnits@) @BonusHP@ HP</expandRow>`,
 		effects: [
 			{
 				maxUnits: 3,
@@ -723,7 +723,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Set6_Colossus`,
-		desc: `Innate: Colossi are bigger and more powerful. They gain @BonusHPTooltip@ bonus Health and immunity to crowd control effects. However, each Colossus requires 2 team slots.<br><row>(@MinUnits@) Colossus champions take @DamageReduction*100@% less damage</row>`,
+		desc: `Innate: Colossi are bigger and more powerful. They gain @BonusHPTooltip@ bonus HP and immunity to crowd control effects. However, each Colossus requires 2 team slots.<br><row>(@MinUnits@) Colossus champions take @DamageReduction*100@% less damage</row>`,
 		effects: [
 			{
 				maxUnits: 25000,
@@ -741,7 +741,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Set6_Debonair`,
-		desc: `Debonair champions gain bonus HP and Ability Power, and you have a higher chance to see Debonair VIPs in your Shop. <br><br>If there is a Debonair VIP in play, they activate their unique bonus. Sell the old VIP for a chance to see a new one in your Shop. <br><br><expandRow>(@MinUnits@) @Health@ Health, @AP@ Ability Power </expandRow>`,
+		desc: `Debonair champions gain bonus HP and Ability Power, and you have a higher chance to see Debonair VIPs in your Shop. <br><br>If there is a Debonair VIP in play, they activate their unique bonus. Sell the old VIP for a chance to see a new one in your Shop. <br><br><expandRow>(@MinUnits@) @HP@ HP, @AP@ Ability Power </expandRow>`,
 		effects: [
 			{
 				maxUnits: 4,
@@ -776,7 +776,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Set6_Arcanist`,
-		desc: `Arcanists increase the Ability Power of your team.<br><row>(@MinUnits@) Your team gains @TeamAP@ Ability Power</row><br><row>(@MinUnits@) Your team gains @TeamAbilityPower@ Ability Power, Arcanists gain an additional @ArcanistAbilityPower@</row><br><row>(@MinUnits@) Your team gains @TeamAbilityPower@ Ability Power, Arcanists gain an additional @ArcanistAbilityPower@</row><br><row>(@MinUnits@) Your team gains @TeamAbilityPower@ Ability Power</row>`,
+		desc: `Arcanists increase the Ability Power of your team.<br><row>(@MinUnits@) Your team gains @TeamAP@ Ability Power</row><br><row>(@MinUnits@) Your team gains @TeamAP@ Ability Power, Arcanists gain an additional @ArcanistAP@</row><br><row>(@MinUnits@) Your team gains @TeamAP@ Ability Power, Arcanists gain an additional @ArcanistAP@</row><br><row>(@MinUnits@) Your team gains @TeamAP@ Ability Power</row>`,
 		effects: [
 			{
 				maxUnits: 3,
@@ -922,7 +922,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Set6_Enforcer`,
-		desc: `Enforcers stun enemies at the start of combat. The target breaks free after @DetainDuration@ seconds, or after losing @HPPercent*100@% of their maximum HP. Enforcers will not try to stun enemies who are immune to crowd control effects.<br><br><row>(@MinUnits@) The enemy who has the most Health</row><br><row>(@MinUnits@) And the enemy who dealt the most damage last combat</row>`,
+		desc: `Enforcers stun enemies at the start of combat. The target breaks free after @DetainDuration@ seconds, or after losing @HPPercent*100@% of their maximum HP. Enforcers will not try to stun enemies who are immune to crowd control effects.<br><br><row>(@MinUnits@) The enemy who has the most HP</row><br><row>(@MinUnits@) And the enemy who dealt the most damage last combat</row>`,
 		effects: [
 			{
 				maxUnits: 3,
@@ -950,7 +950,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Set6_Chemtech`,
-		desc: `After dropping below @HPThreshold@% Health, Chemtech champions become chem-powered, gaining Attack Speed, @DamageReduction@% damage reduction, and regenerating a percentage of their maximum Health each second for @Duration@ seconds.<br><br><expandRow>(@MinUnits@) @AS@% Attack Speed, @HealthRegen@% Health</expandRow>`,
+		desc: `After dropping below @HPThreshold@% HP, Chemtech champions become chem-powered, gaining Attack Speed, @DamageReduction@% damage reduction, and regenerating a percentage of their maximum HP each second for @Duration@ seconds.<br><br><expandRow>(@MinUnits@) @AS@% Attack Speed, @HPRegen@% HP</expandRow>`,
 		effects: [
 			{
 				maxUnits: 4,

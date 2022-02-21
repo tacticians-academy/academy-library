@@ -9,7 +9,7 @@ import { getPathTo, importItems, importSetData, etagPath, setNumberPath } from '
 import { formatJS } from './helpers/formatting.js'
 import { mStatSubstitutions, mDataValueSubstitutions, mSpellCalculationsSubstitutions, UNRELEASED_ITEM_NAME_KEYS, AUGMENT_EFFECTS_SUBSTITUTIONS, NORMALIZE_EFFECT_KEYS, SUBSTITUTE_EFFECT_KEYS } from './helpers/normalize.js'
 
-import { COMPONENT_ITEM_IDS } from '../dist/index.js'
+import { COMPONENT_ITEM_IDS, ItemTypeKey } from '../dist/index.js'
 import type { AugmentData, AugmentTier, ChampionData, ChampionSpellData, EffectVariables, ItemData, SpellVariables, TraitData } from '../dist/index.js'
 
 const baseURL = `https://raw.communitydragon.org/${PATCH_LINE}`
@@ -48,20 +48,7 @@ console.log('Loading set', currentSetNumber, 'from', PATCH_LINE.toUpperCase(), '
 const { ItemKey } = await importItems(currentSetNumber)
 const { SPATULA_ITEM_IDS, RETIRED_AUGMENT_NAME_KEYS, UNUSED_AUGMENT_NAME_KEYS, TRAIT_DATA_SUBSTITUTIONS } = await importSetData(currentSetNumber)
 
-const currentItemsByType = {
-	component: [] as ItemData[],
-	completed: [] as ItemData[],
-	spatula: [] as ItemData[],
-	duos: [] as ItemData[],
-	consumable: [] as ItemData[],
-	shadow: [] as ItemData[],
-	radiant: [] as ItemData[],
-	ornn: [] as ItemData[],
-	hexbuff: [] as ItemData[],
-	mercenaryDice: [] as ItemData[],
-	unreleased: [] as ItemData[],
-}
-type ItemTypeKey = keyof typeof currentItemsByType
+const currentItemsByType: Record<ItemTypeKey, ItemData[]> = {component: [], completed: [], spatula: [], duos: [], consumable: [], shadow: [], radiant: [], ornn: [], hexbuff: [], mercenaryDice: [], unreleased: []}
 
 const itemsData = responseJSON.items as ItemData[]
 const foundItemIDs: number[] = []
@@ -144,7 +131,10 @@ allItems.forEach((item: ItemData) => {
 		}
 	}
 	for (const normalize in NORMALIZE_EFFECT_KEYS) {
-		item.desc = item.desc.replace(normalize, NORMALIZE_EFFECT_KEYS[normalize])
+		item.desc = item.desc.replaceAll(normalize, NORMALIZE_EFFECT_KEYS[normalize])
+		if (item.id === ItemKey.WarmogsArmor) {
+			console.log(normalize, item.desc)
+		}
 	}
 	Object.keys(item.effects).forEach(key => {
 		const originalValue = item.effects[key]
@@ -160,7 +150,7 @@ allItems.forEach((item: ItemData) => {
 		}
 		for (const normalize in NORMALIZE_EFFECT_KEYS) {
 			delete item.effects[key]
-			key = key.replace(normalize, NORMALIZE_EFFECT_KEYS[normalize])
+			key = key.replaceAll(normalize, NORMALIZE_EFFECT_KEYS[normalize])
 			item.effects[key] = originalValue
 		}
 	})
@@ -176,7 +166,7 @@ const traitKeys = (traits as TraitData[])
 
 traits.forEach((trait: TraitData) => {
 	for (const normalize in NORMALIZE_EFFECT_KEYS) {
-		trait.desc = trait.desc.replace(normalize, NORMALIZE_EFFECT_KEYS[normalize])
+		trait.desc = trait.desc.replaceAll(normalize, NORMALIZE_EFFECT_KEYS[normalize])
 	}
 	trait.effects.forEach(effect => {
 		Object.keys(effect.variables).forEach(key => {
@@ -193,7 +183,7 @@ traits.forEach((trait: TraitData) => {
 			}
 			for (const normalize in NORMALIZE_EFFECT_KEYS) {
 				delete effect.variables[key]
-				key = key.replace(normalize, NORMALIZE_EFFECT_KEYS[normalize])
+				key = key.replaceAll(normalize, NORMALIZE_EFFECT_KEYS[normalize])
 				effect.variables[key] = originalValue
 			}
 		})
@@ -204,7 +194,7 @@ const traitKeysString = `export enum TraitKey {\n\t${traitKeys}\n}`
 const itemKeys = currentItemsByType['component'].concat(currentItemsByType['completed'], currentItemsByType['spatula'])
 	.sort((a, b) => a.id - b.id)
 	.map(({name, id}) => {
-		const key = name.replace(/['.\+-]/g, '').split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join('')
+		const key = name.replaceAll(/['.\+-]/g, '').split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join('')
 		return `${key} = ${id}`
 	})
 	.join(', ')

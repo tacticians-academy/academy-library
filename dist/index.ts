@@ -12,6 +12,10 @@ export interface AugmentData {
 	effects: EffectVariables,
 }
 
+export type AugmentTierProbability = [probability: number, children?: [AugmentTierProbability, AugmentTierProbability, AugmentTierProbability]]
+
+export type ItemTypeKey = 'component' | 'completed' | 'spatula' | 'duos' | 'consumable' | 'shadow' | 'radiant' | 'ornn' | 'hexbuff' | 'mercenaryDice' | 'unreleased'
+
 export interface AugmentFlashcard {
 	id: string
 	name: string
@@ -19,8 +23,15 @@ export interface AugmentFlashcard {
 	description: string
 	icons: string[]
 }
-
-export type AugmentTierProbability = [probability: number, children?: [AugmentTierProbability, AugmentTierProbability, AugmentTierProbability]]
+export interface ItemFlashcard {
+	id: number
+	name: string
+	type: ItemTypeKey
+	description: string
+	icon: string
+	from: number[]
+	unique: boolean
+}
 
 export const enum BonusKey {
 	Armor = 'Armor',
