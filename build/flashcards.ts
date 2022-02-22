@@ -106,7 +106,7 @@ currentItems.forEach(item => {
 			? 'spatula'
 			: 'completed'
 	const description = substituteVariables(item.desc, [getNormalizedEffects(item.effects)])
-		.replaceAll(/%.+?%/g, '')
+		.replaceAll(/%i.+?%/g, '')
 		.replaceAll(/<.+?>/g, ' ')
 		.trim()
 		.replaceAll(/ +/g, ' ')
