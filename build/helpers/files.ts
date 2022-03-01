@@ -27,7 +27,7 @@ export async function importAugments(setNumber: number) {
 	return await importPath(setNumber, 'augments') as typeof import('../../dist/set6/augments.js')
 }
 export async function importAugmentTiers(setNumber: number) {
-	return await importPath(setNumber, 'augment-tiers') as typeof import('../../dist/set6/augment-tiers.js')
+	return await importPath(setNumber, 'augment-tiers') as typeof import('../../dist/set6/hardcoded/augment-tiers.js')
 }
 
 export async function importItems(setNumber: number) {
@@ -35,5 +35,5 @@ export async function importItems(setNumber: number) {
 }
 
 export async function importSetData(setNumber: number) {
-	return await importPath(setNumber, 'set-data') as typeof import('../../dist/set6/set-data.js')
+	return await importPath(setNumber, 'set-data') as typeof import('../../dist/set6/hardcoded/set-data.js')
 }

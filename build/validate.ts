@@ -11,7 +11,7 @@ const { activeAugments, inactiveAugments } = await importAugments(currentSetNumb
 
 console.log('\n')
 
-const knownAugmentNames = (await fs.readFile(getPathTo(currentSetNumber, 'augments-known.txt'), 'utf8'))
+const knownAugmentNames = (await fs.readFile(getPathTo(currentSetNumber, 'hardcoded/augments-known.txt'), 'utf8'))
 	.toLowerCase()
 	.split('\n')
 	.filter(name => name)

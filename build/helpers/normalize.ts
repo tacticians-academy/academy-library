@@ -232,6 +232,7 @@ export const AUGMENT_EFFECTS_SUBSTITUTIONS: Record<string, string> = {
 	'{e3d58c55}': 'NumTomes',
 	'{962760a9}': 'PercentAbilityPower',
 	'{a13cb3fa}': 'EggTurns',
+	'{b300068b}': 'ArmoryChoiceCount',
 }
 
 // Abilities

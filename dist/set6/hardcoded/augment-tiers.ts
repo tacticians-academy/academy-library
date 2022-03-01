@@ -1,4 +1,4 @@
-import type { AugmentTierProbability } from '../index'
+import type { AugmentTierProbability } from '../../index'
 
 export const augmentTierProbabilities: AugmentTierProbability = [100, [
 	[65, [

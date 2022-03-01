@@ -27,14 +27,17 @@ try {
 const newEtag = response.headers.get('etag')
 if (newEtag != null) {
 	if (newEtag === oldEtag) {
-		console.log('Cached etag unchanged. Terminating.')
+		console.log('Cached etag unchanged. Terminating.\n')
 		process.exit(0)
 	}
-	console.log('File updated! Rebuilding data.', newEtag, oldEtag)
+	if (oldEtag !== undefined) {
+		console.log('File updated! Rebuilding data.', newEtag, oldEtag)
+	}
 	fs.writeFile(etagPath, newEtag)
 } else {
 	console.log('No cache etag for resource, reloading data.')
 }
+console.log('')
 
 const responseJSON = await response.json() as Record<string, any>
 
@@ -535,9 +538,9 @@ const outputChampions = await Promise.all(playableChampions.map(async champion =
 				cantCastWhileRooted: spellData.cantCastWhileRooted,
 				uninterruptable: spellData.mCantCancelWhileWindingUp,
 			}
-			if (spellData.mCastTime == null) { //TODO verify these aren't supposed to instacast?
-				console.log('!mCastTime', spellName)
-			}
+			// if (spellData.mCastTime == null) { //TODO verify these aren't supposed to instacast?
+			// 	console.log('!mCastTime', spellName)
+			// }
 			// if (!spell.missile) { //TODO multipart spells (TFT6_ViktorE, TFT6_JhinR, etc)
 			// if (spell.missile && spell.missile.speedMin == null && spell.missile.travelTime == null) {
 			// 	console.log('!missile', spellName)
