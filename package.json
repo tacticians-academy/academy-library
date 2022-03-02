@@ -7,7 +7,8 @@
 	"types": "dist/index.ts",
 	"scripts": {
 		"prepare": "node --loader ts-node/esm build/main.ts && node --loader ts-node/esm build/validate.ts && node --loader ts-node/esm build/flashcards.ts",
-		"flashcards": "node --loader ts-node/esm build/flashcards.ts"
+		"flashcards": "node --loader ts-node/esm build/flashcards.ts",
+		"github": "node --loader ts-node/esm build/github.ts"
 	},
 	"devDependencies": {
 		"@ky-is/eslint-config": "^2.3.6",

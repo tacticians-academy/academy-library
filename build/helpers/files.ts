@@ -6,6 +6,7 @@ await fs.mkdir(cachePath, { recursive: true })
 
 export const setNumberPath = path.resolve(cachePath, 'set_number.local')
 export const etagPath = path.resolve(cachePath, 'cdragon_etag.local')
+export const githubTokenPath = path.resolve(cachePath, 'github_token.local')
 
 export async function getCurrentSetNumber() {
 	return parseInt(await fs.readFile(setNumberPath, 'utf8'), 10)
@@ -28,6 +29,10 @@ export async function importAugments(setNumber: number) {
 }
 export async function importAugmentTiers(setNumber: number) {
 	return await importPath(setNumber, 'hardcoded/augment-tiers') as typeof import('../../dist/set6/hardcoded/augment-tiers.js')
+}
+
+export async function importChampions(setNumber: number) {
+	return await importPath(setNumber, 'champions') as typeof import('../../dist/set6/champions.js')
 }
 
 export async function importItems(setNumber: number) {
