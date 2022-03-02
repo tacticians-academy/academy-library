@@ -76,11 +76,11 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/BruiserHeart1.TFT_Set6.dds`,
 	},
 	{
-		tier: 1,
+		tier: 2,
 		name: `Chemtech Unity`,
 		desc: `The Chemtech trait grants its bonuses to all of your Champions. This does not increase your number of Chemtech units. Gain a Warwick.`,
 		effects: {},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Free-Healthcare-I.TFT_Set6_Stage2.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Free-Healthcare-II.TFT_Set6_Stage2.dds`,
 	},
 	{
 		tier: 2,
@@ -90,14 +90,14 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Salvage2.TFT_Set6.dds`,
 	},
 	{
-		tier: 1,
+		tier: 2,
 		name: `Concussive Blows`,
 		desc: `Striker's critical strikes stun their target for @StunDuration@ second(s). Each target can only be stunned once every @StunCD@ seconds. Gain a Rek'Sai.`,
 		effects: {
-			'StunCD': 7,
+			'StunCD': 6,
 			'StunDuration': 1.5,
 		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Concussive-Blows-I.TFT_Set6_Stage2.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Concussive-Blows-II.TFT_Set6_Stage2.dds`,
 	},
 	{
 		tier: 1,
@@ -258,7 +258,7 @@ export const activeAugments: AugmentData[] = [
 		name: `Double Trouble I`,
 		desc: `If you have exactly 2 copies of a champion on your board, they both gain @BonusStats@ Attack Damage, Ability Power, Armor, and Magic Resist. When you 3-star, gain a 2-star copy.`,
 		effects: {
-			'BonusStats': 40,
+			'BonusStats': 35,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Double-Trouble-I.TFT_Set6_Stage2.dds`,
 	},
@@ -268,7 +268,7 @@ export const activeAugments: AugmentData[] = [
 		desc: `Your champions holding an item gain @HP@ Health and @AD@ Attack Damage.`,
 		effects: {
 			'AD': 30,
-			'HP': 450,
+			'HP': 350,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Cybernetic3.TFT_Set6.dds`,
 	},
@@ -295,7 +295,7 @@ export const activeAugments: AugmentData[] = [
 		name: `Double Trouble III`,
 		desc: `If you have exactly 2 copies of a champion on your board, they both gain @BonusStats@ Attack Damage, Ability Power, Armor, and Magic Resist. When you 3-star, gain a 2-star copy.`,
 		effects: {
-			'BonusStats': 65,
+			'BonusStats': 60,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Double-Trouble-III.TFT_Set6_Stage2.dds`,
 	},
@@ -313,7 +313,7 @@ export const activeAugments: AugmentData[] = [
 		name: `Double Trouble II`,
 		desc: `If you have exactly 2 copies of a champion on your board, they both gain @BonusStats@ Attack Damage, Ability Power, Armor, and Magic Resist. When you 3-star, gain a 2-star copy.`,
 		effects: {
-			'BonusStats': 50,
+			'BonusStats': 45,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Double-Trouble-II.TFT_Set6_Stage2.dds`,
 	},
@@ -358,7 +358,7 @@ export const activeAugments: AugmentData[] = [
 		name: `Electrocharge II`,
 		desc: `When your units receive critical strikes, they deal @Damage@ magic damage to nearby enemies. (@ICD@ second cooldown).`,
 		effects: {
-			'Damage': 135,
+			'Damage': 100,
 			'ICD': 1,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Electrocharge-II.TFT_Set6_Stage2.dds`,
@@ -379,7 +379,7 @@ export const activeAugments: AugmentData[] = [
 		name: `Electrocharge III`,
 		desc: `When your units receive critical strikes, they deal @Damage@ magic damage to nearby enemies. (@ICD@ second cooldown).`,
 		effects: {
-			'Damage': 180,
+			'Damage': 160,
 			'ICD': 1,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Electrocharge-III.TFT_Set6_Stage2.dds`,
@@ -400,7 +400,7 @@ export const activeAugments: AugmentData[] = [
 		name: `Electrocharge I`,
 		desc: `When your units receive critical strikes, they deal @Damage@ magic damage to nearby enemies. (@ICD@ second cooldown).`,
 		effects: {
-			'Damage': 90,
+			'Damage': 60,
 			'ICD': 1,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Electrocharge-I.TFT_Set6_Stage2.dds`,
@@ -468,8 +468,10 @@ export const activeAugments: AugmentData[] = [
 	{
 		tier: 2,
 		name: `Portable Forge`,
-		desc: `Open an Armory and choose 1 of 3 unique Artifacts crafted by Ornn.`,
-		effects: {},
+		desc: `Open an Armory and choose 1 of @ArmoryChoiceCount@ unique Artifacts crafted by Ornn.`,
+		effects: {
+			'ArmoryChoiceCount': 3,
+		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/PortableForge2.TFT_Set6.dds`,
 	},
 	{
@@ -540,8 +542,10 @@ export const activeAugments: AugmentData[] = [
 	{
 		tier: 3,
 		name: `Radiant Relics`,
-		desc: `Open an Armory and choose 1 of 4 unique Radiant items.`,
-		effects: {},
+		desc: `Open an Armory and choose 1 of @ArmoryChoiceCount@ unique Radiant items.`,
+		effects: {
+			'ArmoryChoiceCount': 4,
+		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/RadiantRelic-III.TFT_Set6_Stage2.dds`,
 	},
 	{
@@ -734,7 +738,7 @@ export const activeAugments: AugmentData[] = [
 		name: `Golden Gifts II`,
 		desc: `Gain @NumGoldOrbs@ golden and @NumGrayOrbs@ gray loot orb(s).`,
 		effects: {
-			'NumGrayOrbs': 2,
+			'NumGrayOrbs': 3,
 			'NumGoldOrbs': 2,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Golden-Gifts-III.TFT_Set6_Stage2.dds`,
@@ -762,7 +766,7 @@ export const activeAugments: AugmentData[] = [
 		name: `Golden Gifts I`,
 		desc: `Gain @NumGoldOrbs@ golden and @NumGrayOrbs@ gray loot orb(s).`,
 		effects: {
-			'NumGrayOrbs': 1,
+			'NumGrayOrbs': 2,
 			'NumGoldOrbs': 1,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Golden-Gifts-II.TFT_Set6_Stage2.dds`,
@@ -824,7 +828,7 @@ export const activeAugments: AugmentData[] = [
 		name: `Disintegrator II`,
 		desc: `Your units' attacks deal bonus magic damage equal to @MaxHPDamage@% of the target's maximum Health.`,
 		effects: {
-			'MaxHPDamage': 3,
+			'MaxHPDamage': 2.5,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Disintegrator-II.TFT_Set6_Stage2.dds`,
 	},
@@ -842,7 +846,7 @@ export const activeAugments: AugmentData[] = [
 		name: `Disintegrator I`,
 		desc: `Your units' attacks deal bonus magic damage equal to @MaxHPDamage@% of the target's maximum Health.`,
 		effects: {
-			'MaxHPDamage': 2,
+			'MaxHPDamage': 1.5,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Disintegrator-I.TFT_Set6_Stage2.dds`,
 	},
@@ -947,7 +951,7 @@ export const activeAugments: AugmentData[] = [
 		name: `Luden's Echo II`,
 		desc: `When your units cast and deal Ability damage, the first target hit and a nearby enemy take @MagicDamage@ bonus magic damage.`,
 		effects: {
-			'MagicDamage': 200,
+			'MagicDamage': 150,
 			'{26a9a9b1}': 1,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Ludens-Echo-II.TFT_Set6_Stage2.dds`,
@@ -957,7 +961,7 @@ export const activeAugments: AugmentData[] = [
 		name: `Luden's Echo III`,
 		desc: `When your units cast and deal Ability damage, the first target hit and a nearby enemy take @MagicDamage@ bonus magic damage.`,
 		effects: {
-			'MagicDamage': 275,
+			'MagicDamage': 200,
 			'{26a9a9b1}': 1,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Ludens-Echo-III.TFT_Set6_Stage2.dds`,
@@ -976,7 +980,7 @@ export const activeAugments: AugmentData[] = [
 		name: `Luden's Echo I`,
 		desc: `When your units cast and deal Ability damage, the first target hit and a nearby enemy take @MagicDamage@ bonus magic damage.`,
 		effects: {
-			'MagicDamage': 135,
+			'MagicDamage': 100,
 			'{26a9a9b1}': 1,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Ludens-Echo-I.TFT_Set6_Stage2.dds`,
@@ -1015,7 +1019,7 @@ export const activeAugments: AugmentData[] = [
 		name: `Woodland Trinket`,
 		desc: `At the start of combat, your highest Attack Speed champion creates two @CloneHealth@ Health copies of themself (excluding items).`,
 		effects: {
-			'CloneHealth': 250,
+			'CloneHealth': 300,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Woodland-Trinket-II.TFT_Set6_Stage2.dds`,
 	},
@@ -1337,8 +1341,8 @@ export const activeAugments: AugmentData[] = [
 		name: `Tiny Titans`,
 		desc: `Your Tactician heals @Heal@ Health, grows larger, and has @TooltipMaxHealth@ maximum Health.`,
 		effects: {
-			'Heal': 35,
-			'TooltipMaxHealth': 135,
+			'Heal': 40,
+			'TooltipMaxHealth': 140,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Tiny-Titans-II.TFT_Set6_Stage2.dds`,
 	},
@@ -1406,7 +1410,7 @@ export const activeAugments: AugmentData[] = [
 		name: `Battlemage I`,
 		desc: `Your units that start combat in the front 2 rows gain @AP@ Ability Power.`,
 		effects: {
-			'AP': 30,
+			'AP': 25,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Battlemage-I-A.TFT_Set6_Stage2.dds`,
 	},
@@ -1415,7 +1419,7 @@ export const activeAugments: AugmentData[] = [
 		name: `Battlemage II`,
 		desc: `Your units that start combat in the front 2 rows gain @AP@ Ability Power.`,
 		effects: {
-			'AP': 45,
+			'AP': 35,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Battlemage-II-A.TFT_Set6_Stage2.dds`,
 	},
@@ -1431,7 +1435,7 @@ export const activeAugments: AugmentData[] = [
 		name: `Battlemage III`,
 		desc: `Your units that start combat in the front 2 rows gain @AP@ Ability Power.`,
 		effects: {
-			'AP': 60,
+			'AP': 50,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Battlemage-III-A.TFT_Set6_Stage2.dds`,
 	},
@@ -1452,7 +1456,7 @@ export const activeAugments: AugmentData[] = [
 	{
 		tier: 1,
 		name: `Makeshift Armor I`,
-		desc: `Your units with no items gain @Resists@ Armor and Magic Resist.`,
+		desc: `Your units without items equipped gain @Resists@ Armor and Magic Resist.`,
 		effects: {
 			'Resists': 35,
 		},
@@ -1491,7 +1495,7 @@ export const activeAugments: AugmentData[] = [
 	{
 		tier: 3,
 		name: `Makeshift Armor III`,
-		desc: `Your units with no items gain @Resists@ Armor and Magic Resist.`,
+		desc: `Your units without items equipped gain @Resists@ Armor and Magic Resist.`,
 		effects: {
 			'Resists': 80,
 		},
@@ -1510,7 +1514,7 @@ export const activeAugments: AugmentData[] = [
 	{
 		tier: 2,
 		name: `Makeshift Armor II`,
-		desc: `Your units with no items gain @Resists@ Armor and Magic Resist.`,
+		desc: `Your units without items equipped gain @Resists@ Armor and Magic Resist.`,
 		effects: {
 			'Resists': 55,
 		},
@@ -1770,8 +1774,10 @@ export const activeAugments: AugmentData[] = [
 	{
 		tier: 2,
 		name: `True Twos`,
-		desc: `Gain 2 random 2-star 2-cost units.`,
-		effects: {},
+		desc: `Gain @NumChamps@ random 2-star 2-cost units.`,
+		effects: {
+			'NumChamps': 2,
+		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/True-Twos-II.TFT_Set6_Stage2.dds`,
 	},
 	{
@@ -1814,7 +1820,7 @@ export const activeAugments: AugmentData[] = [
 	},
 	{
 		tier: 1,
-		name: `Swift Justice`,
+		name: `True Justice`,
 		desc: `Your Enforcers deal true damage to enemies below @HealthThreshold@% Health. Gain a Sejuani.`,
 		effects: {
 			'HealthThreshold': 50,
@@ -1899,8 +1905,10 @@ export const activeAugments: AugmentData[] = [
 	{
 		tier: 2,
 		name: `Four Score`,
-		desc: `Gain 3 random 4-cost champions.`,
-		effects: {},
+		desc: `Gain @NumChamps@ random 4-cost champions.`,
+		effects: {
+			'NumChamps': 4,
+		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Four-Score-II.TFT_Set6_Stage2.dds`,
 	},
 	{

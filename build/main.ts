@@ -1,4 +1,4 @@
-const PATCH_LINE = 'pbe' // 'latest' 'pbe' '12.4'
+const PATCH_LINE = 'latest' // 'latest' 'pbe' '12.4'
 const MAX_STAR_LEVEL = 3
 
 import fetch from 'node-fetch'
@@ -51,7 +51,7 @@ console.log('Loading set', currentSetNumber, 'from', PATCH_LINE.toUpperCase(), '
 const { ItemKey } = await importItems(currentSetNumber)
 const { SPATULA_ITEM_IDS, RETIRED_AUGMENT_NAME_KEYS, UNUSED_AUGMENT_NAME_KEYS, TRAIT_DATA_SUBSTITUTIONS } = await importSetData(currentSetNumber)
 
-const currentItemsByType: Record<ItemTypeKey, ItemData[]> = {component: [], completed: [], spatula: [], duos: [], consumable: [], shadow: [], radiant: [], ornn: [], hexbuff: [], mercenaryDice: [], unreleased: []}
+const currentItemsByType: Record<ItemTypeKey, ItemData[]> = {component: [], completed: [], spatula: [], duos: [], consumable: [], radiant: [], ornn: [], hexbuff: [], mercenaryDice: [], unreleased: []}
 
 const itemsData = responseJSON.items as ItemData[]
 const foundItemIDs: number[] = []
@@ -94,8 +94,6 @@ itemsData.reverse().forEach(item => {
 			typeKey = 'component'
 		} else if (icon.includes('/pairs/')) {
 			typeKey = 'duos'
-		} else if (icon.includes('/shadow/')) {
-			typeKey = 'shadow'
 		} else if (icon.includes('/radiant/')) {
 			typeKey = 'radiant'
 		} else if (icon.includes('ornnitem')) {

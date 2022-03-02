@@ -178,7 +178,7 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
-					'MR': 20,
+					'MR': 25,
 					'HealShieldBoost': 0.25,
 				},
 			},
@@ -187,8 +187,8 @@ export const traits: TraitData[] = [
 				minUnits: 3,
 				style: 2,
 				variables: {
-					'MR': 35,
-					'HealShieldBoost': 0.4000000059604645,
+					'MR': 45,
+					'HealShieldBoost': 0.44999998807907104,
 				},
 			},
 			{
@@ -196,8 +196,8 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 3,
 				variables: {
-					'MR': 50,
-					'HealShieldBoost': 0.6000000238418579,
+					'MR': 70,
+					'HealShieldBoost': 0.699999988079071,
 				},
 			},
 			{
@@ -205,7 +205,7 @@ export const traits: TraitData[] = [
 				minUnits: 5,
 				style: 4,
 				variables: {
-					'MR': 75,
+					'MR': 100,
 					'HealShieldBoost': 1,
 				},
 			},
@@ -237,7 +237,7 @@ export const traits: TraitData[] = [
 				style: 1,
 				variables: {
 					'BonusArmor': 80,
-					'ShieldAmount': 150,
+					'ShieldAmount': 200,
 				},
 			},
 			{
@@ -246,7 +246,7 @@ export const traits: TraitData[] = [
 				style: 2,
 				variables: {
 					'BonusArmor': 160,
-					'ShieldAmount': 350,
+					'ShieldAmount': 400,
 				},
 			},
 			{
@@ -255,7 +255,7 @@ export const traits: TraitData[] = [
 				style: 3,
 				variables: {
 					'BonusArmor': 250,
-					'ShieldAmount': 700,
+					'ShieldAmount': 800,
 				},
 			},
 			{
@@ -264,7 +264,7 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'BonusArmor': 450,
-					'ShieldAmount': 1200,
+					'ShieldAmount': 2000,
 				},
 			},
 		],
@@ -419,7 +419,7 @@ export const traits: TraitData[] = [
 				minUnits: 1,
 				style: 3,
 				variables: {
-					'ManaGrant': 40,
+					'ManaGrant': 30,
 				},
 			},
 		],
@@ -545,8 +545,8 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
-					'MagicDamage': 20,
-					'ShieldAmount': 140,
+					'MagicDamage': 15,
+					'ShieldAmount': 100,
 					'ShieldDuration': 4,
 					'Frequency': 6,
 				},
@@ -556,8 +556,8 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 2,
 				variables: {
-					'MagicDamage': 50,
-					'ShieldAmount': 180,
+					'MagicDamage': 30,
+					'ShieldAmount': 150,
 					'ShieldDuration': 4,
 					'Frequency': 6,
 				},
@@ -567,8 +567,8 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 3,
 				variables: {
-					'MagicDamage': 100,
-					'ShieldAmount': 400,
+					'MagicDamage': 60,
+					'ShieldAmount': 300,
 					'ShieldDuration': 4,
 					'Frequency': 6,
 				},
@@ -578,7 +578,7 @@ export const traits: TraitData[] = [
 				minUnits: 8,
 				style: 4,
 				variables: {
-					'MagicDamage': 170,
+					'MagicDamage': 120,
 					'ShieldAmount': 600,
 					'ShieldDuration': 4,
 					'Frequency': 6,
@@ -615,7 +615,7 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 3,
 				variables: {
-					'BonusAD': 40,
+					'BonusAD': 45,
 					'ProcChance': 70,
 				},
 			},
@@ -624,7 +624,7 @@ export const traits: TraitData[] = [
 				minUnits: 5,
 				style: 4,
 				variables: {
-					'BonusAD': 60,
+					'BonusAD': 80,
 					'ProcChance': 100,
 				},
 			},
@@ -762,7 +762,7 @@ export const traits: TraitData[] = [
 				},
 			},
 			{
-				maxUnits: 8,
+				maxUnits: 25000,
 				minUnits: 7,
 				style: 4,
 				variables: {
@@ -930,7 +930,7 @@ export const traits: TraitData[] = [
 				style: 1,
 				variables: {
 					'HPPercent': 0.4000000059604645,
-					'DetainDuration': 4,
+					'DetainDuration': 3,
 					'DetainCount': 1,
 				},
 			},
@@ -958,7 +958,7 @@ export const traits: TraitData[] = [
 				style: 1,
 				variables: {
 					'AS': 15,
-					'DamageReduction': 20,
+					'DamageReduction': 15,
 					'Duration': 8,
 					'HPRegen': 4,
 					'HPThreshold': 75,
@@ -970,7 +970,7 @@ export const traits: TraitData[] = [
 				style: 2,
 				variables: {
 					'AS': 40,
-					'DamageReduction': 20,
+					'DamageReduction': 15,
 					'Duration': 8,
 					'HPRegen': 7,
 					'HPThreshold': 75,
@@ -982,7 +982,7 @@ export const traits: TraitData[] = [
 				style: 3,
 				variables: {
 					'AS': 80,
-					'DamageReduction': 20,
+					'DamageReduction': 15,
 					'Duration': 8,
 					'HPRegen': 10,
 					'HPThreshold': 75,
@@ -994,7 +994,7 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'AS': 150,
-					'DamageReduction': 20,
+					'DamageReduction': 15,
 					'Duration': 8,
 					'HPRegen': 18,
 					'HPThreshold': 75,

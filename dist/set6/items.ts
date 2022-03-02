@@ -242,9 +242,9 @@ export const completedItems: ItemData[] = [
 	{
 		desc: `The holder gains %i:scaleAS% @BonusAS@% bonus Attack Speed. Every 3rd attack from the holder unleashes a chain lightning that bounces to @1StarBounces@ enemies, dealing @Damage@ magic damage and reducing their Magic Resist by @MRShred@% for @MRShredDuration@ seconds. `,
 		effects: {
-			'AS': 10,
+			'AS': 20,
 			'BonusAS': 10,
-			'Damage': 70,
+			'Damage': 60,
 			'Mana': 15,
 			'1StarBounces': 4,
 			'2StarBounces': 4,
@@ -493,11 +493,11 @@ export const completedItems: ItemData[] = [
 		effects: {
 			'Armor': 70,
 			'ICD': 2.5,
-			'3StarAoEDamage': 120,
-			'1StarAoEDamage': 60,
+			'3StarAoEDamage': 150,
+			'1StarAoEDamage': 75,
 			'CritDamageBlock': 100,
-			'CritReduction': 100,
-			'2StarAoEDamage': 80,
+			'CritReduction': 75,
+			'2StarAoEDamage': 100,
 			'4StarAoEDamage': 200,
 		},
 		from: [5, 5],
@@ -631,13 +631,13 @@ export const completedItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		desc: `When the holder first drops below @HPThreshold@% health, they briefly enter stealth, becoming untargetable and shedding negative effects. After coming out of stealth, the holder gains an additional %i:scaleAS% @AS@% bonus Attack Speed.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>`,
+		desc: `When the holder first drops below @HPThreshold@% health, they briefly enter stealth, becoming untargetable and shedding negative effects. After coming out of stealth, the holder gains an additional %i:scaleAS% @AS@% bonus Attack Speed.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
 		effects: {
 			'AD': 10,
 			'Armor': 20,
 			'AS': 40,
 			'DamageReduction': 100,
-			'HPThreshold': 50,
+			'HPThreshold': 60,
 			'StealthDuration': 1,
 		},
 		from: [1, 5],
@@ -969,109 +969,6 @@ export const consumableItems: ItemData[] = [
 	},
 ]
 
-export const shadowItems: ItemData[] = [
-	{
-		desc: `%i:scaleAD% +@AD@ Attack Damage`,
-		effects: {
-			'AD': 10,
-		},
-		from: [],
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_BF_Sword.dds`,
-		id: 1001,
-		name: `Shadow Sword`,
-		unique: false,
-	},
-	{
-		desc: `%i:scaleAS% +@AS@ Attack Speed`,
-		effects: {
-			'AS': 10,
-		},
-		from: [],
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Recurve_Bow.dds`,
-		id: 1002,
-		name: `Shadow Bow`,
-		unique: false,
-	},
-	{
-		desc: `%i:scaleAP% +@AP@ Ability Power`,
-		effects: {
-			'AP': 10,
-		},
-		from: [],
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Needlessly_Large_Rod.dds`,
-		id: 1003,
-		name: `Shadow Rod`,
-		unique: false,
-	},
-	{
-		desc: `%i:scaleMana% +@Mana@ Mana`,
-		effects: {
-			'Mana': 15,
-		},
-		from: [],
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Tear_of_the_Goddess.dds`,
-		id: 1004,
-		name: `Shadow Tear`,
-		unique: false,
-	},
-	{
-		desc: `%i:scaleArmor% +@Armor@ Armor`,
-		effects: {
-			'Armor': 20,
-		},
-		from: [],
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Chain_Vest.dds`,
-		id: 1005,
-		name: `Shadow Vest`,
-		unique: false,
-	},
-	{
-		desc: `%i:scaleMR% +@MR@ Magic Resist`,
-		effects: {
-			'MR': 20,
-		},
-		from: [],
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Negatron_Cloak.dds`,
-		id: 1006,
-		name: `Shadow Cloak`,
-		unique: false,
-	},
-	{
-		desc: `%i:scaleHP% +@HP@ HP`,
-		effects: {
-			'HP': 150,
-		},
-		from: [],
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Gaints_Belt.dds`,
-		id: 1007,
-		name: `Shadow Belt`,
-		unique: false,
-	},
-	{
-		desc: `It must do <i>something <TFTShadowItemBonus>evil</TFTShadowItemBonus></i>...`,
-		effects: {
-			'{fe9818ef}': 5,
-		},
-		from: [],
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Spatula.dds`,
-		id: 1008,
-		name: `Shadow Spatula`,
-		unique: false,
-	},
-	{
-		desc: `+@CritChance@ Critical Strike Chance<br>+@DodgeChance@ Dodge Chance`,
-		effects: {
-			'CritChance': 5,
-			'DodgeChance': 10,
-		},
-		from: [],
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Sparring_Gloves.dds`,
-		id: 1009,
-		name: `Shadow Gloves`,
-		unique: false,
-	},
-]
-
 export const radiantItems: ItemData[] = [
 	{
 		desc: `The holder gains %i:scaleAD% <TFTRadiantItemBonus>@Tooltip1StarBonusAD@/@Tooltip2StarBonusAD@/@Tooltip3StarBonusAD@</TFTRadiantItemBonus> %i:star% bonus Attack Damage (including components).`,
@@ -1135,15 +1032,15 @@ export const radiantItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		desc: `When the holder first drops below @HPThreshold@% health, they briefly enter stealth, becoming untargetable and shedding negative effects. After coming out of stealth, the holder gains an additional <TFTRadiantItemBonus>%i:scaleAS% @AS@%</TFTRadiantItemBonus> bonus Attack Speed.<br><br><TFTRadiantItemBonus>Radiant Bonus: Triggers again at @HPThreshold2@% health.</TFTRadiantItemBonus><br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>`,
+		desc: `When the holder first drops below @HPThreshold@% HP, they briefly enter stealth, becoming untargetable and shedding negative effects. After coming out of stealth, the holder gains an additional <TFTRadiantItemBonus>%i:scaleAS% @AS@%</TFTRadiantItemBonus> bonus Attack Speed.<br><br><TFTRadiantItemBonus>Radiant Bonus: Triggers again at @HPThreshold2@% HP.</TFTRadiantItemBonus><br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
 		effects: {
 			'AD': 10,
 			'Armor': 20,
 			'AS': 55,
 			'DamageReduction': 100,
-			'HPThreshold': 50,
+			'HPThreshold': 60,
 			'StealthDuration': 1,
-			'{c8e44ba8}': 25,
+			'{c8e44ba8}': 30,
 		},
 		from: [],
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Radiant/Edge_Of_Night_Radiant.dds`,
@@ -1184,7 +1081,7 @@ export const radiantItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		desc: `Grants @CritChance@% Critical Strike Chance (including components) and @BonusCritDamage@% Critical Strike Damage. Each point of Critical Strike Chance above 100% becomes +@BonusCritDmgPerCritAbove100@% Critical Strike Damage.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@RadiantBonusCritDamage@% Critical Strike Damage.</TFTRadiantItemBonus><br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>`,
+		desc: `Grants @CritChance@% Critical Strike Chance (including components) and @BonusCritDamage@% Critical Strike Damage. Each point of Critical Strike Chance above 100% becomes +@BonusCritDmgPerCritAbove100@% Critical Strike Damage.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@RadiantBonusCritDamage@% Critical Strike Damage.</TFTRadiantItemBonus><br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
 		effects: {
 			'AD': 10,
 			'CritChance': 75,
@@ -1199,12 +1096,10 @@ export const radiantItems: ItemData[] = [
 		unique: true,
 	},
 	{
-		desc: `Increases the holder's Attack Range by <TFTRadiantItemBonus>@HexRangeIncrease@</TFTRadiantItemBonus> hexes and grants %i:scaleAS% @TooltipBonusAS@% bonus Attack Speed (including components).<br><br>The wearer's attacks can no longer miss.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@RadiantBonusAS@% Attack Speed.</TFTRadiantItemBonus>`,
+		desc: `Increases the holder's Attack Range by <TFTRadiantItemBonus>@HexRangeIncrease@</TFTRadiantItemBonus> hexes and grants %i:scaleAS% @AS@% bonus Attack Speed (including components). The holder's attacks can no longer miss.`,
 		effects: {
 			'AS': 85,
 			'HexRangeIncrease': 2,
-			'TooltipBonusAS': 55,
-			'{e7dee847}': 30,
 		},
 		from: [],
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Radiant/Rapid_Fire_Cannon_Radiant.dds`,
@@ -1361,7 +1256,7 @@ export const radiantItems: ItemData[] = [
 			'{52358605}': 1,
 			'{8f854a28}': 1,
 			'HexRange': 4,
-			'ManaRatio': 300,
+			'ManaRatio': 275,
 			'MRShred': 50,
 		},
 		from: [],
@@ -1371,7 +1266,7 @@ export const radiantItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		desc: `When the holder deals magic or true damage with their Ability, they burn the target, dealing <TFTRadiantItemBonus>@BurnPercent@%</TFTRadiantItemBonus> of the target's maximum HP as true damage over <TFTRadiantItemBonus>@BurnDuration@</TFTRadiantItemBonus> seconds, and reducing healing by @GrievousWoundsPercent@% for the duration of the burn.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@Mana@ Starting Mana.</TFTRadiantItemBonus><br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>`,
+		desc: `When the holder deals magic or true damage with their Ability, they burn the target, dealing <TFTRadiantItemBonus>@BurnPercent@%</TFTRadiantItemBonus> of the target's maximum HP as true damage over <TFTRadiantItemBonus>@BurnDuration@</TFTRadiantItemBonus> seconds, and reducing healing by @GrievousWoundsPercent@% for the duration of the burn.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@Mana@ Starting Mana.</TFTRadiantItemBonus><br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
 		effects: {
 			'AP': 10,
 			'HP': 150,
@@ -1513,7 +1408,7 @@ export const radiantItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		desc: `Every <TFTRadiantItemBonus>@ICD@</TFTRadiantItemBonus> seconds, a random enemy within <TFTRadiantItemBonus>@HexRange@</TFTRadiantItemBonus> hexes is burned for <TFTRadiantItemBonus>@BurnPercent@% of their maximum HP as true damage over @BurnDuration@ seconds</TFTRadiantItemBonus>. Any healing they receive is reduced by @GrievousWoundsPercent@%.<br><br><TFTRadiantItemBonus>Radiant Bonus: Regenerate @MaxHPRegen@% max HP per second.</TFTRadiantItemBonus><br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>`,
+		desc: `Every <TFTRadiantItemBonus>@ICD@</TFTRadiantItemBonus> seconds, a random enemy within <TFTRadiantItemBonus>@HexRange@</TFTRadiantItemBonus> hexes is burned for <TFTRadiantItemBonus>@BurnPercent@% of their maximum HP as true damage over @BurnDuration@ seconds</TFTRadiantItemBonus>. Any healing they receive is reduced by @GrievousWoundsPercent@%.<br><br><TFTRadiantItemBonus>Radiant Bonus: Regenerate @MaxHPRegen@% max HP per second.</TFTRadiantItemBonus><br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
 		effects: {
 			'Armor': 20,
 			'HP': 150,
@@ -1521,7 +1416,7 @@ export const radiantItems: ItemData[] = [
 			'MonsterCap': 150,
 			'GrievousWoundsPercent': 50,
 			'{52358605}': 1,
-			'BurnPercent': 120,
+			'BurnPercent': 90,
 			'{8f854a28}': 0.5,
 			'BurnDuration': 30,
 			'HexRange': 4,
@@ -1563,11 +1458,11 @@ export const radiantItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		desc: `When combat begins, the wearer summons a whirlwind on the opposite side of the arena that removes the closest enemy from combat for <TFTRadiantItemBonus>@BanishDuration@</TFTRadiantItemBonus> seconds. Ignores CC immunity.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@AllyBonusAS@% Attack Speed for all allies</TFTRadiantItemBonus> at the start of combat.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>`,
+		desc: `When combat begins, the holder summons a whirlwind on the opposite side of the arena that removes the closest enemy from combat for <TFTRadiantItemBonus>@BanishDuration@</TFTRadiantItemBonus> seconds. Ignores crowd control immunity.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@AllyBonusAS@% Attack Speed for all allies</TFTRadiantItemBonus> at the start of combat.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
 		effects: {
 			'HP': 150,
 			'MR': 20,
-			'BanishDuration': 10,
+			'BanishDuration': 8,
 			'{c67a1046}': 20,
 		},
 		from: [],
@@ -1577,7 +1472,7 @@ export const radiantItems: ItemData[] = [
 		unique: true,
 	},
 	{
-		desc: `The holder gains immunity to crowd control in combat for <TFTRadiantItemBonus>@SpellShieldDuration@</TFTRadiantItemBonus> seconds.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@AS@% Attack Speed.</TFTRadiantItemBonus><br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>`,
+		desc: `The holder gains %i:scaleAS% <TFTRadiantItemBonus>@AS@%</TFTRadiantItemBonus> bonus Attack Speed.  The holder is immune to crowd control in combat for <TFTRadiantItemBonus>@SpellShieldDuration@</TFTRadiantItemBonus> seconds. <br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
 		effects: {
 			'AS': 45,
 			'MR': 20,
@@ -1758,7 +1653,7 @@ export const ornnItems: ItemData[] = [
 		effects: {
 			'AD': 20,
 			'CritChance': 20,
-			'{2dd33743}': 50,
+			'{2dd33743}': 60,
 			'{430f8969}': 10,
 		},
 		from: [],
@@ -1770,11 +1665,11 @@ export const ornnItems: ItemData[] = [
 	{
 		desc: `The first instance of damage that would reduce the wearer below @PercentHPThreshold@% HP is prevented, causing them to become invulnerable for @InvulnDuration@ seconds.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
 		effects: {
-			'AP': 45,
-			'Armor': 35,
-			'MR': 35,
+			'AP': 50,
+			'Armor': 50,
+			'MR': 50,
 			'{046e3023}': 40,
-			'{69247755}': 2.5,
+			'{69247755}': 3,
 		},
 		from: [],
 		icon: `ASSETS/Maps/Particles/TFT/TFT4_OrnnItem_Mage_T3_ZhonyasHourglass.dds`,
