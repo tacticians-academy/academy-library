@@ -1,7 +1,7 @@
 import fs from 'fs/promises'
 import path from 'path'
 
-import { ASSET_PREFIX, substituteVariables } from '../dist/index.js'
+import { ASSET_PREFIX, substituteVariables, getIconURL } from '../dist/index.js'
 import type { AugmentFlashcard, ItemFlashcard, AugmentTier, EffectVariables } from '../dist/index.js'
 
 import { getCurrentSetNumber, getPathTo, importAugments, importItems } from './helpers/files.js'
@@ -19,10 +19,6 @@ function getNormalizedEffects(variables: EffectVariables) {
 		normalizedEffects[key.toUpperCase()] = variables[key]
 	}
 	return normalizedEffects
-}
-
-function getIconURL(dataObject: {icon: string}) {
-	return ASSET_PREFIX + dataObject.icon.toLowerCase().replace('.dds', '.png')
 }
 
 // Augments
@@ -57,7 +53,7 @@ activeAugments.forEach(augment => {
 		entry[3][tierIndex] = augment.desc
 	}
 	entry[4][tierIndex] = getNormalizedEffects(augment.effects)
-	entry[5][tierIndex] = getIconURL(augment)
+	entry[5][tierIndex] = getIconURL(augment, true)
 })
 
 const outputAugmentsTSV: string[][] = []
@@ -85,7 +81,7 @@ results
 			name: extensions ? name + ' ' + extensions : name,
 			tiers: tiers.filter(e => e),
 			description,
-			icons: icons.filter(e => e).map(icon => icon.replace('https://raw.communitydragon.org/pbe/game/assets/maps/particles/tft/item_icons/augments/hexcore/', '').replace('.png', ''))
+			icons: icons.filter(e => e).map(icon => icon.replace(ASSET_PREFIX, '').replace('.png', ''))
 		})
 		outputAugmentsTSV.push([ (extensions ? name + ' ' + extensions : `${name} (${tiers.filter(e => e).join('/')})`), description, icons.filter(e => e).join() ])
 	})
@@ -110,18 +106,18 @@ currentItems.forEach(item => {
 		.replaceAll(/<.+?>/g, ' ')
 		.trim()
 		.replaceAll(/ +/g, ' ')
-	const iconURL = getIconURL(item)
+	const iconURL = getIconURL(item, true)
 	outputItemsTSV.push([item.name, description, iconURL])
 	outputItemsObject.push({
 		id: item.id,
 		name: item.name,
 		type,
 		description,
-		icon: iconURL.replace('https://raw.communitydragon.org/pbe/game/assets/maps/particles/tft/', '').replace('.png', ''),
+		icon: iconURL.replace(ASSET_PREFIX, '').replace('.png', ''),
 		from: item.from,
 		unique: item.unique,
 	})
 })
 
-await fs.writeFile(path.resolve(flashcardsPath, 'items.ts'), `import type { ItemFlashcard } from '../../index'\n\nexport const augmentFlashcards: ItemFlashcard[] = ` + formatJS(outputItemsObject))
+await fs.writeFile(path.resolve(flashcardsPath, 'items.ts'), `import type { ItemFlashcard } from '../../index'\n\nexport const itemFlashcards: ItemFlashcard[] = ` + formatJS(outputItemsObject))
 await fs.writeFile(path.resolve(flashcardsPath, 'items.tsv'), outputItemsTSV.map(row => row.join('\t')).join('\n'))
