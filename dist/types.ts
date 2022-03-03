@@ -42,7 +42,7 @@ export interface ItemFlashcard {
 	unique: boolean
 }
 
-export const enum BonusKey {
+export enum BonusKey {
 	Armor = 'Armor',
 	AttackDamage = 'AD',
 	AttackSpeed = 'AS',
@@ -50,10 +50,11 @@ export const enum BonusKey {
 	CritChance = 'CritChance',
 	CritMultiplier = 'CritDamage',
 	CritReduction = 'CritReduction',
+	DamageReduction = 'DamageReduction',
 	HexRangeIncrease = 'HexRangeIncrease',
 	Health = 'HP',
 	MagicResist = 'MR',
-	Mana = 'Mana'
+	Mana = 'Mana',
 }
 
 export interface ChampionAbilityVariable {

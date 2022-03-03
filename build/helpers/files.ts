@@ -42,3 +42,7 @@ export async function importItems(setNumber: number) {
 export async function importSetData(setNumber: number) {
 	return await importPath(setNumber, 'hardcoded/set-data') as typeof import('../../dist/set6/hardcoded/set-data.js')
 }
+
+export async function importTraits(setNumber: number) {
+	return await importPath(setNumber, 'traits') as typeof import('../../dist/set6/traits.js')
+}
