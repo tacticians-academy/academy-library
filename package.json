@@ -1,6 +1,6 @@
 {
 	"name": "@tacticians-academy/academy-library",
-	"version": "0.3.0",
+	"version": "0.3.1",
 	"license": "ISC",
 	"type": "module",
 	"main": "dist/index.ts",
