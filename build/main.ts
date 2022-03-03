@@ -12,6 +12,10 @@ import { mStatSubstitutions, mDataValueSubstitutions, mSpellCalculationsSubstitu
 import { COMPONENT_ITEM_IDS, ItemTypeKey } from '../dist/index.js'
 import type { AugmentData, AugmentTier, ChampionData, ChampionSpellData, EffectVariables, ItemData, SpellVariables, TraitData } from '../dist/index.js'
 
+function sortByName(a: {name: string}, b: {name: string}) {
+	return a.name.localeCompare(b.name)
+}
+
 const baseURL = `https://raw.communitydragon.org/${PATCH_LINE}`
 const url = `${baseURL}/cdragon/tft/en_us.json`
 const response = await fetch(url)
@@ -157,13 +161,14 @@ allItems.forEach((item: ItemData) => {
 	})
 })
 
+traits.sort(sortByName)
+
 const traitKeys = (traits as TraitData[])
 	.map(trait => {
 		const nameKey = trait.apiName.split('_')[1]
 		return `${nameKey} = '${nameKey}'`
 	})
-	.sort((a, b) => a.localeCompare(b))
-	.join(', ')
+const traitKeysString = `export enum TraitKey {\n\t${traitKeys.join(', ')}\n}`
 
 traits.forEach((trait: TraitData) => {
 	for (const normalize in NORMALIZE_EFFECT_KEYS) {
@@ -190,7 +195,6 @@ traits.forEach((trait: TraitData) => {
 		})
 	})
 })
-const traitKeysString = `export enum TraitKey {\n\t${traitKeys}\n}`
 
 const itemKeys = currentItemsByType['component'].concat(currentItemsByType['completed'], currentItemsByType['spatula'])
 	.sort((a, b) => a.id - b.id)
@@ -229,7 +233,7 @@ const playableChampions = (champions as ChampionData[])
 		}
 		return true
 	})
-	.sort((a, b) => a.name.localeCompare(b.name))
+	.sort(sortByName)
 
 type ChampionJSON = Record<string, Record<string, any>>
 type ChampionJSONType = 'SpellObject' | 'TFTCharacterRecord'

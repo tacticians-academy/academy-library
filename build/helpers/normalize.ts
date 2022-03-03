@@ -154,7 +154,7 @@ export const SUBSTITUTE_EFFECT_KEYS: Record<string, string> = {
 	'fa1ef605': 'UNUSED_MagicDamageReductionMultiplier', //TODO verify https://leagueoflegends.fandom.com/wiki/Dragon%27s_Claw_(Teamfight_Tactics)
 	'79a4455a': 'CritReduction',
 	'b1442c34': 'StealthDuration', //TODO verify
-	'5c51b509': 'Colossus/Mutant/Socialite', //TODO ??
+	// '5c51b509': 'Colossus/Mutant/Socialite', //TODO ??
 	'7f1304b2': 'AbilityPower',
 	'df962703': 'ADBoost',
 	'c9b0e3af': 'PercentOmnivamp',
@@ -162,8 +162,19 @@ export const SUBSTITUTE_EFFECT_KEYS: Record<string, string> = {
 	'2fb31c01': 'Frequency',
 	'e86b1aa9': 'BonusHealthTooltip',
 
+	'c26236e7': 'MutantAdrenalineProcChance',
+	'7f322ebf': 'MutantAdrenalineAD',
+	'2f805979': 'MutantBioLeechingOmnivamp',
+	'b6322d58': 'MutantCyberAD',
 	'76882e8f': 'MutantCyberHealth',
+	'994006f0': 'MutantMetamorphosisADAP',
 	'190fb0a2': 'MutantMetamorphosisArmorMR',
+	'6b5aee70': 'MutantMetamorphosisGrowthRate',
+	'82e43c84': 'MutantSynapticManaCost',
+	'f90dd382': 'MutantSynapticAP',
+	'3f1cec4d': 'MutantVoidborneExecuteThreshold',
+	'9cc303b4': 'MutantVoidborneTrueDamagePercent',
+	'7c799240': 'MutantVoraciousADAP',
 }
 
 // Augments
