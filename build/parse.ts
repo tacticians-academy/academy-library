@@ -512,18 +512,18 @@ const outputChampions = await Promise.all(playableChampions.map(async champion =
 		return traitData.TraitData.split('_')[1] //TODO
 	}) ?? []
 	return {
-		spells,
 		apiName,
+		name: champion.name,
+		icon: champion.icon,
 		cost: characterRecord.tier,
-		isSpawn,
 		starLevel: LOCKED_STAR_LEVEL[apiName],
 		teamSize: characterRecord.teamSize,
-		icon: champion.icon,
-		name: champion.name,
+		isSpawn,
+		traits,
+		stats,
 		basicAttackMissileSpeed,
 		critAttackMissileSpeed,
-		stats,
-		traits,
+		spells,
 	}
 }))
 

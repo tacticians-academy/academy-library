@@ -92,17 +92,14 @@ export interface ChampionSpellData {
 }
 
 export interface ChampionData {
-	ability?: ChampionAbility
-	spells: ChampionSpellData[]
-	basicAttackMissileSpeed?: number
-	critAttackMissileSpeed?: number
 	apiName: string
-	cost?: number
-	isSpawn: boolean
-	starLevel?: number
-	teamSize?: number
-	icon: string
 	name: string
+	icon: string
+	cost?: number
+	starLevel?: number
+	isSpawn: boolean
+	traits: string[]
+	teamSize?: number
 	stats: {
 		armor: number
 		attackSpeed: number
@@ -116,7 +113,9 @@ export interface ChampionData {
 		moveSpeed: number
 		range: number
 	},
-	traits: string[]
+	basicAttackMissileSpeed?: number
+	critAttackMissileSpeed?: number
+	spells: ChampionSpellData[]
 }
 
 export interface TraitEffectData {
