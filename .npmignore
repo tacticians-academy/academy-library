@@ -1,4 +1,5 @@
 build/
 dist/set*/champion/
 dist/set*/augments-known.txt
+dist/set*/_.json
 pnpm-lock.yaml

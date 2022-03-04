@@ -1,0 +1,62 @@
+{
+	"Characters/TFT6_MercenaryChest/CharacterRecords/Root": {
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"{4e28a666}": "Root",
+		"{7cbc4762}": 0,
+		"mCharacterName": "TFT6_MercenaryChest",
+		"baseHP": 1,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 12,
+			"arBaseStaticRegen": 0,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 0,
+		"baseArmor": 0,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.2999999523162842,
+		"baseMoveSpeed": 500,
+		"attackRange": 0,
+		"spellNames": [
+			"TFT6_MercenaryChest",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"__type": "TFTCharacterRecord",
+		"teamSize": 0
+	},
+	"Characters/TFT6_MercenaryChest/Spells/TFT6_MercenaryChest": {
+		"mScriptName": "TFT6_MercenaryChest",
+		"mSpell": {
+			"mDataValues": [
+				{
+					"mName": "RoundsToHatch",
+					"mValues": [
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2
+					],
+					"mBaseP": 2,
+					"__type": "SpellDataValue"
+				}
+			],
+			"mCastTime": 0.5,
+			"mCantCancelWhileWindingUp": true,
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	}
+}

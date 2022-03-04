@@ -1,0 +1,64 @@
+{
+	"{48ef16d3}": {
+		"mScriptName": "TFT6_TheGoldenEgg",
+		"mSpell": {
+			"mDataValues": [
+				{
+					"mName": "EggTurns",
+					"mValues": [
+						7,
+						7,
+						7,
+						7,
+						7,
+						7,
+						7
+					],
+					"mBaseP": 7,
+					"__type": "SpellDataValue"
+				}
+			],
+			"mCastTime": 0.5,
+			"mCantCancelWhileWindingUp": true,
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{a5e3d543}": {
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 0,
+		"mMoveHeight": 0,
+		"{4e28a666}": "base_egg_root",
+		"{ef57098f}": false,
+		"{7cbc4762}": 0,
+		"mCharacterName": "TFT6_TheGoldenEgg",
+		"baseHP": 10,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBaseStaticRegen": 0,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"secondaryAbilityResource": {
+			"arBase": 0,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseArmor": 10,
+		"baseSpellBlock": 10,
+		"critDamageMultiplier": 0,
+		"baseMoveSpeed": 0,
+		"attackSpeed": 1,
+		"spellNames": [
+			"TFT6_TheGoldenEgg",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"__type": "TFTCharacterRecord"
+	}
+}
