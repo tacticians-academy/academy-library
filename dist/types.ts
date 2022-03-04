@@ -55,6 +55,9 @@ export enum BonusKey {
 	Health = 'HP',
 	MagicResist = 'MR',
 	Mana = 'Mana',
+	VampOmni = 'VampAllSources',
+	VampPhysical = 'LifeSteal',
+	VampSpell = 'OmniVamp',
 }
 
 export interface ChampionAbilityVariable {
