@@ -52,8 +52,8 @@ export const NORMALIZE_EFFECT_KEYS: Record<string, BonusKey> = {
 
 export const SUBSTITUTE_EFFECT_KEYS: Record<string, string> = {
 	'b4a90a5d': 'ProcChance',
-	// '0acd95c2': 'ImperialBonusDamage',
-	// 'f469c9e6': 'TyrantTooltipBonusDamage',
+	'0acd95c2': 'ImperialBonusDamage',
+	'f469c9e6': 'TyrantTooltipBonusDamage',
 	'45564848': 'InnovationStarLevel', //TODO actual string
 	'97ea7bfc': 'InnovatorStarLevelMultiplier', //TODO actual string
 	'5263ba40': 'JinxEmpoweredAS',
@@ -64,9 +64,9 @@ export const SUBSTITUTE_EFFECT_KEYS: Record<string, string> = {
 	'd0539890': 'ManaPerTick',
 	'6c155e99': 'OmnivampPercent',
 	'f9f3a081': 'ManaPerSecond',
-	// '65722d9c': 'ADAPBase',
-	// '96ca059f': 'ADAPPerCast',
-	// 'b3105623': 'ManaPerAllyAttack',
+	'65722d9c': 'ADAPBase',
+	'96ca059f': 'ADAPPerCast',
+	'b3105623': 'ManaPerAllyAttack',
 	'70ed38c6': 'DetainDuration',
 	'd2b7f6f1': 'DetainCount', //TODO actual string
 	'2f744e2b': 'TeamAbilityPower',
@@ -98,7 +98,7 @@ export const SUBSTITUTE_EFFECT_KEYS: Record<string, string> = {
 	'b223097c': 'MRShredDuration',
 	'df6f64b9': 'ManaRatio',
 	'c3360f16': 'DamageCap', //TODO actual name
-	// 'c425872e': 'StasisDuration',
+	'c425872e': 'StasisDuration',
 	'7c694b41': 'ArmorPerEnemy', //TODO monitor. unverifiable MRPerEnemy/ArmorPerEnemy
 	'7ba8c0e3': 'MRPerEnemy', //TODO monitor. unverifiable MRPerEnemy/ArmorPerEnemy
 	'1ee760be': '1StarAoEDamage',
@@ -135,6 +135,7 @@ export const SUBSTITUTE_EFFECT_KEYS: Record<string, string> = {
 	'a7db7345': 'IntervalSeconds',
 	'7ff4f3b6': 'SummonedStatReduction',
 	'4b9a3b61': 'FlatManaRestore',
+	'c8d95a76': 'ManaDuration',
 	'6fb9af6a': '1StarShieldValue',
 	'0d46330d': '2StarShieldValue',
 	'829e6cec': '3StarShieldValue',
@@ -150,11 +151,11 @@ export const SUBSTITUTE_EFFECT_KEYS: Record<string, string> = {
 	'ae49cc70': 'AdditionalAD', //TODO actual name, monitor. unverifiable BonusAP
 	'c0c9af7f': 'AdditionalAP', //TODO actual name, monitor. unverifiable BonusAD
 	'f2474447': 'TooltipBonus',
-	'9fd37c1c': 'UNUSED_APTimer', //TODO verify https://leagueoflegends.fandom.com/wiki/Chalice_of_Power_(Teamfight_Tactics)
-	'fa1ef605': 'UNUSED_MagicDamageReductionMultiplier', //TODO verify https://leagueoflegends.fandom.com/wiki/Dragon%27s_Claw_(Teamfight_Tactics)
+	'9fd37c1c': '{APTimer}', //TODO unused? https://leagueoflegends.fandom.com/wiki/Chalice_of_Power_(Teamfight_Tactics)
+	'fa1ef605': '{MagicDamageReductionMultiplier}', //TODO unused? https://leagueoflegends.fandom.com/wiki/Dragon%27s_Claw_(Teamfight_Tactics)
 	'79a4455a': 'CritReduction',
 	'b1442c34': 'StealthDuration', //TODO verify
-	// '5c51b509': 'Colossus/Mutant/Socialite', //TODO ??
+	'5c51b509': '{Colossus/Mutant/Socialite}', //TODO ??
 	'7f1304b2': 'AbilityPower',
 	'df962703': 'ADBoost',
 	'c9b0e3af': 'PercentOmnivamp',
@@ -175,11 +176,9 @@ export const SUBSTITUTE_EFFECT_KEYS: Record<string, string> = {
 	'3f1cec4d': 'MutantVoidborneExecuteThreshold',
 	'9cc303b4': 'MutantVoidborneTrueDamagePercent',
 	'7c799240': 'MutantVoraciousADAP',
-}
 
-// Augments
+	// Augments
 
-export const AUGMENT_EFFECTS_SUBSTITUTIONS: Record<string, string> = {
 	'{927ebb75}': 'APShield',
 	'{4e39b1d2}': 'MaxHealthShield',
 	'{043ce1d5}': 'MissingHPHeal',

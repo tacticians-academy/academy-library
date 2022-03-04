@@ -4,7 +4,7 @@ import fs from 'fs/promises'
 
 import { getCurrentSetNumber, getPathTo, importItems, importSetData } from './helpers/files.js'
 import { formatJS } from './helpers/formatting.js'
-import { UNRELEASED_ITEM_NAME_KEYS, AUGMENT_EFFECTS_SUBSTITUTIONS, NORMALIZE_EFFECT_KEYS, SUBSTITUTE_EFFECT_KEYS } from './helpers/normalize.js'
+import { UNRELEASED_ITEM_NAME_KEYS, NORMALIZE_EFFECT_KEYS, SUBSTITUTE_EFFECT_KEYS } from './helpers/normalize.js'
 import { ChampionJSON, ChampionJSONType, ChampionJSONAttack, ChampionJSONSpell, ChampionJSONSpellAttack, ChampionJSONStats, ResponseJSON } from './helpers/types.js'
 
 import { COMPONENT_ITEM_IDS, ItemTypeKey } from '../dist/index.js'
@@ -285,7 +285,7 @@ for (const item of itemsData) {
 		}
 		const effects = item.effects
 		for (const key in effects) {
-			const substitution = AUGMENT_EFFECTS_SUBSTITUTIONS[key]
+			const substitution = SUBSTITUTE_EFFECT_KEYS[key]
 			if (substitution) {
 				const value = effects[key]
 				delete effects[key]
