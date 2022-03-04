@@ -3,7 +3,7 @@ const IS_MID_SET = true
 import fetch from 'node-fetch'
 import fs from 'fs/promises'
 
-import { getCurrentSetNumber, githubTokenPath, importTraits, importChampions } from './helpers/files.js'
+import { getCurrentSetNumber, githubTokenPath, importItems, importTraits, importChampions } from './helpers/files.js'
 import { BonusKey } from '../dist/types.js'
 
 const githubToken = (await fs.readFile(githubTokenPath, 'utf8')).trim()
@@ -54,6 +54,7 @@ const milestone = milestoneIDForSetString[setString]
 
 const { champions } = await importChampions(currentSetNumber)
 const { traits } = await importTraits(currentSetNumber)
+const { completedItems } = await importItems(currentSetNumber)
 
 for (const champion of champions) {
 	// if ([].includes(champion.name)) { continue }
@@ -75,21 +76,47 @@ for (const champion of champions) {
 
 const bonusKeyEntries = Object.values(BonusKey)
 
+function getBulletEntriesFor(variableKeys: string[]) {
+	const deduped = Array.from(new Set(variableKeys.map(key => key.replace(/[1-4]Star/, ''))))
+	return deduped
+		.filter(key => {
+			return !key.startsWith('{') && !bonusKeyEntries.includes(key.replace('Bonus', '') as BonusKey)
+		})
+}
+
 for (const trait of traits) {
 	if (!milestone) {
 		console.log('Unknown milestone', setString)
 		break
 	}
-	const bulletPoints = Array.from(new Set(trait.effects.flatMap(effect => Object.keys(effect.variables))))
-		.filter(key => {
-			return !key.startsWith('{') && !bonusKeyEntries.includes(key.replace('Bonus', '') as BonusKey)
-		})
+	const bulletPoints = getBulletEntriesFor(trait.effects.flatMap(effect => Object.keys(effect.variables)))
 	console.log(trait.name, bulletPoints)
 
 	const canContinue = await createIssue({
 		title: `${trait.name} trait`,
 		body: `Implement ${trait.name} trait` + bulletPoints.map(line => `\n- ${line}`).join(''),
 		labels: [`Trait`, `Set ${setString}`],
+		milestone,
+	})
+	if (!canContinue) {
+		break
+	}
+	// break //SAMPLE
+}
+
+for (const item of completedItems) {
+	if (!milestone) {
+		console.log('Unknown milestone', setString)
+		break
+	}
+	const bulletPoints = getBulletEntriesFor(Object.keys(item.effects))
+		.filter(bulletPoint => !bulletPoint.includes('Tooltip'))
+	console.log(item.name, bulletPoints)
+
+	const canContinue = await createIssue({
+		title: `${item.name} item`,
+		body: `Implement ${item.name} item` + bulletPoints.map(line => `\n- ${line}`).join(''),
+		labels: [`Item`, `Set ${setString}`],
 		milestone,
 	})
 	if (!canContinue) {
