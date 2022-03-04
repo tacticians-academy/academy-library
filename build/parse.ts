@@ -30,7 +30,7 @@ const itemsData = responseJSON.items as ItemData[]
 // Items
 
 const { ItemKey } = await importItems(currentSetNumber)
-const { SPATULA_ITEM_IDS, RETIRED_AUGMENT_NAME_KEYS, UNUSED_AUGMENT_NAME_KEYS } = await importSetData(currentSetNumber)
+const { LOCKED_STAR_LEVEL, SPATULA_ITEM_IDS, RETIRED_AUGMENT_NAME_KEYS, UNUSED_AUGMENT_NAME_KEYS } = await importSetData(currentSetNumber)
 
 const currentItemsByType: Record<ItemTypeKey, ItemData[]> = {component: [], completed: [], spatula: [], duos: [], consumable: [], radiant: [], ornn: [], hexbuff: [], mercenaryDice: [], unreleased: []}
 
@@ -516,7 +516,7 @@ const outputChampions = await Promise.all(playableChampions.map(async champion =
 		apiName,
 		cost: characterRecord.tier,
 		isSpawn,
-		starLevel: apiName === 'TFT6_HexTechDragon' ? 3 : (apiName === 'TFT6_Tibbers' ? 2 : (apiName === 'TFT6_MalzaharVoidling' ? 1 : undefined)),
+		starLevel: LOCKED_STAR_LEVEL[apiName],
 		teamSize: characterRecord.teamSize,
 		icon: champion.icon,
 		name: champion.name,

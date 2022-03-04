@@ -1,3 +1,9 @@
+export const LOCKED_STAR_LEVEL: Record<string, number> = {
+	TFT6_MalzaharVoidling: 1,
+	TFT6_Tibbers: 2,
+	TFT6_HexTechDragon: 3,
+}
+
 export const SPATULA_ITEM_IDS = [
 	// 18, Imperial
 	28, // Challenger
