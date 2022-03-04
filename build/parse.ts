@@ -20,7 +20,7 @@ const currentSetNumber = await getCurrentSetNumber()
 
 let responseJSON: ResponseJSON
 try {
-	responseJSON = JSON.parse(await fs.readFile(getPathTo(currentSetNumber, '_.json'), 'utf8'))
+	responseJSON = JSON.parse(await fs.readFile(getPathTo(currentSetNumber, '._.json'), 'utf8'))
 } catch {
 	throw 'Missing cache.local. Erase the `cache` directory and re-run `prepare`.'
 }

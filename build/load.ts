@@ -39,7 +39,7 @@ const responseJSON = await response.json() as ResponseJSON
 const currentSetNumber = Object.keys(responseJSON.sets).reduce((previous, current) => Math.max(previous, parseInt(current, 10)), 0)
 const { champions } = responseJSON.sets[currentSetNumber]
 
-fs.writeFile(getPathTo(currentSetNumber, '_.json'), JSON.stringify(responseJSON, undefined, '\t'))
+fs.writeFile(getPathTo(currentSetNumber, '._.json'), JSON.stringify(responseJSON, undefined, '\t'))
 fs.writeFile(setNumberPath, currentSetNumber.toString())
 console.log('Loading set', currentSetNumber, 'from', PATCH_LINE.toUpperCase(), '...', 'Units:', champions.length, '\n')
 
