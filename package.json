@@ -1,13 +1,12 @@
 {
 	"name": "@tacticians-academy/academy-library",
-	"version": "0.4.0",
+	"version": "0.4.1",
 	"license": "ISC",
 	"type": "module",
 	"main": "dist/index.ts",
 	"types": "dist/index.ts",
 	"scripts": {
 		"prepare": "node --loader ts-node/esm build/load.ts && node --loader ts-node/esm build/parse.ts && node --loader ts-node/esm build/validate.ts && node --loader ts-node/esm build/flashcards.ts",
-		"parse": "node --loader ts-node/esm build/parse.ts && node --loader ts-node/esm build/validate.ts && node --loader ts-node/esm build/flashcards.ts",
 		"github": "node --loader ts-node/esm build/github.ts"
 	},
 	"devDependencies": {
