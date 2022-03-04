@@ -55,6 +55,7 @@ export enum BonusKey {
 	Health = 'HP',
 	MagicResist = 'MR',
 	Mana = 'Mana',
+	ManaRestore = 'ManaRestore',
 	VampOmni = 'VampAllSources',
 	VampPhysical = 'LifeSteal',
 	VampSpell = 'OmniVamp',
