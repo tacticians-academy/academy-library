@@ -56,7 +56,6 @@ activeAugments.forEach(augment => {
 	entry[5][tierIndex] = getIconURL(augment, true)
 })
 
-const outputAugmentsTSV: string[][] = []
 const outputAugmentsObject: AugmentFlashcard[] = []
 results
 	.sort((a, b) => a[0].localeCompare(b[0]))
@@ -83,18 +82,15 @@ results
 			description,
 			icons: icons.filter(e => e).map(icon => icon.replace(ASSET_PREFIX, '').replace('.png', ''))
 		})
-		outputAugmentsTSV.push([ (extensions ? name + ' ' + extensions : `${name} (${tiers.filter(e => e).join('/')})`), description, icons.filter(e => e).join() ])
 	})
 
 await fs.writeFile(path.resolve(flashcardsPath, 'augments.ts'), `import type { AugmentFlashcard } from '../../index'\n\nexport const augmentFlashcards: AugmentFlashcard[] = ` + formatJS(outputAugmentsObject))
-await fs.writeFile(path.resolve(flashcardsPath, 'augments.tsv'), outputAugmentsTSV.map(row => row.join('\t')).join('\n'))
 
 // Items
 
 const { currentItems, spatulaItems, componentItems } = await importItems(currentSetNumber)
 
 const outputItemsObject: ItemFlashcard[] = []
-const outputItemsTSV: string[][] = []
 currentItems.forEach(item => {
 	const type = componentItems.some(component => item === component)
 		? 'component'
@@ -107,7 +103,6 @@ currentItems.forEach(item => {
 		.trim()
 		.replaceAll(/ +/g, ' ')
 	const iconURL = getIconURL(item, true)
-	outputItemsTSV.push([item.name, description, iconURL])
 	outputItemsObject.push({
 		id: item.id,
 		name: item.name,
@@ -120,4 +115,3 @@ currentItems.forEach(item => {
 })
 
 await fs.writeFile(path.resolve(flashcardsPath, 'items.ts'), `import type { ItemFlashcard } from '../../index'\n\nexport const itemFlashcards: ItemFlashcard[] = ` + formatJS(outputItemsObject))
-await fs.writeFile(path.resolve(flashcardsPath, 'items.tsv'), outputItemsTSV.map(row => row.join('\t')).join('\n'))
