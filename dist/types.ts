@@ -51,6 +51,7 @@ export enum BonusKey {
 	CritMultiplier = 'CritDamage',
 	CritReduction = 'CritReduction',
 	DamageReduction = 'DamageReduction',
+	DodgeChance = 'DodgeChance',
 	HexRangeIncrease = 'HexRangeIncrease',
 	Health = 'HP',
 	MagicResist = 'MR',
