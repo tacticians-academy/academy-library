@@ -1,5 +1,9 @@
 import type { ChampionData } from '../index'
 
+export enum ChampionKey {
+	Ahri = 'Ahri', Alistar = 'Alistar', Ashe = 'Ashe', Blitzcrank = 'Blitzcrank', Brand = 'Brand', Braum = 'Braum', Caitlyn = 'Caitlyn', Camille = 'Camille', ChoGath = 'ChoGath', Corki = 'Corki', Darius = 'Darius', Draven = 'Draven', Ekko = 'Ekko', Ezreal = 'Ezreal', Galio = 'Galio', Gangplank = 'Gangplank', Gnar = 'Gnar', Illaoi = 'Illaoi', Irelia = 'Irelia', JarvanIV = 'JarvanIV', Jayce = 'Jayce', Jhin = 'Jhin', Jinx = 'Jinx', Kaisa = 'Kaisa', Kassadin = 'Kassadin', KhaZix = 'KhaZix', Leona = 'Leona', Lucian = 'Lucian', Lulu = 'Lulu', Malzahar = 'Malzahar', Tibbers = 'Tibbers', HexTechDragon = 'HexTechDragon', MalzaharVoidling = 'MalzaharVoidling', MissFortune = 'MissFortune', Morgana = 'Morgana', Nocturne = 'Nocturne', Orianna = 'Orianna', Poppy = 'Poppy', Quinn = 'Quinn', RekSai = 'RekSai', Renata = 'Renata', Sejuani = 'Sejuani', Senna = 'Senna', Seraphine = 'Seraphine', Silco = 'Silco', Singed = 'Singed', Sivir = 'Sivir', Swain = 'Swain', Syndra = 'Syndra', TahmKench = 'TahmKench', Talon = 'Talon', Tryndamere = 'Tryndamere', Twitch = 'Twitch', Veigar = 'Veigar', Vex = 'Vex', Vi = 'Vi', Viktor = 'Viktor', Warwick = 'Warwick', Zac = 'Zac', Zeri = 'Zeri', Ziggs = 'Ziggs', Zilean = 'Zilean', Zyra = 'Zyra'
+}
+
 export const champions: ChampionData[] = [
 	{
 		apiName: `TFT6_Ahri`,

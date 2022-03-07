@@ -527,11 +527,18 @@ const outputChampions = await Promise.all(playableChampions.map(async champion =
 	}
 }))
 
+const championKeys = playableChampions
+	.map(champion => {
+		const nameKey = champion.apiName.split('_')[1]
+		return `${nameKey} = '${nameKey}'`
+	})
+const championKeysString = `export enum ChampionKey {\n\t${championKeys.join(', ')}\n}`
+
 // Output
 
 await Promise.all([
 	fs.writeFile(getPathTo(currentSetNumber, 'augments.ts'), outputAugmentSections.join('\n\n')),
-	fs.writeFile(getPathTo(currentSetNumber, 'champions.ts'), `import type { ChampionData } from '../index'\n\nexport const champions: ChampionData[] = ` + formatJS(outputChampions)),
+	fs.writeFile(getPathTo(currentSetNumber, 'champions.ts'), `import type { ChampionData } from '../index'\n\n${championKeysString}\n\nexport const champions: ChampionData[] = ` + formatJS(outputChampions)),
 	fs.writeFile(getPathTo(currentSetNumber, 'traits.ts'), `import type { TraitData } from '../index'\n\n${traitKeysString}\n\nexport const traits: TraitData[] = ` + formatJS(traits)),
 	fs.writeFile(getPathTo(currentSetNumber, 'items.ts'), `import type { ItemData } from '../index'\n\n${itemKeysString}\n\n` + outputItemSections.join('\n\n')),
 ])
