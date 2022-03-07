@@ -27,6 +27,21 @@ try {
 const { champions, traits } = responseJSON.sets[currentSetNumber]
 const itemsData = responseJSON.items as ItemData[]
 
+if (!champions.some(champion => champion.apiName === 'TFT_TrainingDummy')) {
+	champions.push({
+		apiName: 'TFT_TrainingDummy',
+		name: 'Training Dummy',
+		icon: 'ASSETS/UX/TFT/ChampionSplashes/TFTDebug_Dummy.dds',
+		isSpawn: true,
+		traits: [],
+		stats: {
+			hp: 500, armor: 40, magicResist: 40, attackSpeed: 0.20000000298023224,
+			initialMana: 0, critChance: 0, critMultiplier: 0, damage: 0, mana: 0, moveSpeed: 0, range: 0,
+		},
+		spells: [],
+	})
+}
+
 // Items
 
 const { ItemKey } = await importItems(currentSetNumber)
@@ -372,6 +387,7 @@ function getSpell(name: string, json: ChampionJSON): ChampionJSONSpell | undefin
 }
 
 const unplayableNames = ['TFT5_EmblemArmoryKey', 'TFT6_MercenaryChest', 'TFT6_TheGoldenEgg']
+
 const playableChampions = champions
 	.filter(champion => {
 		if (unplayableNames.includes(champion.apiName)) {
