@@ -2671,7 +2671,7 @@ export const champions: ChampionData[] = [
 		stats: {
 			armor: 40,
 			attackSpeed: 0.20000000298023224,
-			critChance: undefined,
+			critChance: null,
 			critMultiplier: 0,
 			damage: 0,
 			hp: 500,

@@ -2,6 +2,9 @@ export function formatJS(json: any, indents: string = ''): string {
 	const type = typeof json
 	const nextIndents = indents + '\t'
 	if (type === 'object') {
+		if (json === null) {
+			return 'null'
+		}
 		if (Array.isArray(json)) {
 			const array = json as any[]
 			const hasObject = array.some(child => typeof child === 'object')

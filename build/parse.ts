@@ -420,7 +420,7 @@ const outputChampions = await Promise.all(playableChampions.map(async champion =
 	const stats = {
 		armor: characterRecord.baseArmor,
 		attackSpeed: characterRecord.attackSpeed,
-		critChance: characterRecord.baseCritChance,
+		critChance: characterRecord.baseCritChance ?? null,
 		critMultiplier: characterRecord.critDamageMultiplier,
 		damage: characterRecord.baseDamage,
 		hp: characterRecord.baseHP,
