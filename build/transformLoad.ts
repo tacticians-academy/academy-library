@@ -481,12 +481,14 @@ const outputChampions = await Promise.all(playableChampions.map(async champion =
 				for (const calculationKey in sourceCalculations) {
 					const prefix = prefixes.find(prefix => calculationKey.startsWith(prefix))
 					if (!prefix) {
-						console.log('No prefix for ', spellName, calculationKey)
+						console.log('No prefix for', spellName, calculationKey)
 					}
 					const variableName = prefix ? calculationKey.replace(prefix, '') : calculationKey
 					const sourceCalculation = sourceCalculations[calculationKey]
-					if (!variables[variableName] && variableName.startsWith('{')) {
-						console.log('ERR', 'Missing variable for calculation', spellName, variableName, Object.keys(variables))
+					if (!variables[variableName]) {
+						if (variableName !== 'UNUSED') {
+							console.log('ERR', 'Missing variable for calculation', spellName, variableName, Object.keys(variables))
+						}
 					}
 					const totalPrefix = 'Total'
 					if (prefix !== totalPrefix && sourceCalculations[`${totalPrefix}${variableName}`]) {
@@ -514,29 +516,27 @@ const outputChampions = await Promise.all(playableChampions.map(async champion =
 							}
 							const subparts: SpellCalculationSubpart[] = sourceSubparts
 								.map(subpart => {
-									const variable = subpart.mDataValue ?? subpart.mSubpart.mDataValue
+									const variable: string = subpart.mDataValue ?? subpart.mSubpart.mDataValue
 									if (variable.startsWith('{')) {
 										console.log('ERR', 'Unknown variable', spellName, calculationKey, subpart)
 									}
 									const mStat: number | undefined = subpart.mSubpart?.mStat ?? subpart.mStat
 									let stat: string | undefined = mStat ? mStatSubstitutions[mStat] : undefined
 									let ratio: number | undefined = subpart.mRatio
-									if (subpart.mSubpart) {
-										if (stat === undefined) {
-											if (spellName === 'TFT6_GnarR' && variable === 'ADPercent') {
-												ratio = 1
-												stat = BonusKey.AttackDamage
-											}
-											const scaleString = subpart['{a5749b52}']?.toLowerCase()
-											if (subpart.mRatio === BASE_AP_RATIO) {
-												if (scaleString === 'scaleap' || scaleString == null || (spellName === 'TFT6_DravenSpinning' && variable === 'Damage')) {
-													stat = BonusKey.AbilityPower
-												} else {
-													console.log('Unknown scale', spellName, calculationKey, subpart)
-												}
+									if (stat === undefined) {
+										if (spellName === 'TFT6_GnarR' && variable === 'ADPercent') {
+											ratio = 1
+											stat = BonusKey.AttackDamage
+										}
+										const scaleString = subpart['{a5749b52}']?.toLowerCase()
+										if (subpart.mRatio === BASE_AP_RATIO) {
+											if (scaleString === 'scaleap' || scaleString == null || (spellName === 'TFT6_DravenSpinning' && variable === 'Damage')) {
+												stat = BonusKey.AbilityPower
 											} else {
-												console.log('Unknown mRatio', spellName, calculationKey, subpart)
+												console.log('Unknown scale', spellName, calculationKey, subpart)
 											}
+										} else {
+											console.log('Unknown mRatio', spellName, calculationKey, subpart)
 										}
 									}
 									if (stat && !ratio) {
@@ -547,8 +547,12 @@ const outputChampions = await Promise.all(playableChampions.map(async champion =
 											ratio = 1
 										}
 									}
+									if (!variables[variable]) {
+										console.log('ERR', 'Missing variable', spellName, calculationKey, variable, variables)
+									}
 									return {
 										variable,
+										starValues: variables[variable] ?? [],
 										stat,
 										ratio,
 									}

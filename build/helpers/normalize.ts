@@ -248,11 +248,11 @@ export const SUBSTITUTE_EFFECT_KEYS: Record<string, string> = {
 // Abilities
 
 export const mSpellCalculationsSubstitutions: Record<string, string> = {
-	'{197fbc1c}': 'UNKNOWN', // Unused on Tibbers ModifiedAllyPercentASBase?
+	'{197fbc1c}': 'UNUSED', // Unused on Tibbers ModifiedAllyPercentASBase?
+	'{7ad6f313}': 'UNUSED', // Unused on Senna BaseHeal
 	'{5c260301}': 'TotalASBoost',
 	'{a7f7ee8e}': 'ModifiedASBoost',
 	'{7fd62dab}': 'ModifiedAttackDamage',
-	'{7ad6f313}': 'ModifiedBaseHealing', // Unused on Senna
 	'{e7712601}': 'ModifiedBonusAttackSpeed',
 	'{a9241a3b}': 'ModifiedBonusAS',
 	'{5b31e270}': 'ModifiedBonusDamage', //TODO Galio uses CritBonusDamage so these need to be disambiguated
@@ -294,7 +294,7 @@ export const mDataValueSubstitutions: Record<string, string> = {
 	'{df3d2f5f}': 'PercentAD',
 	'{608d099c}': 'PercentArmorDamage',
 	'{7ac38453}': 'PercentAttackDamage',
-	'{6f755c2e}': 'PercentPercentADDamage',
+	'{6f755c2e}': 'PercentADDamage',
 	'{112cdf9c}': 'PercentHealing',
 	'{b8dc87fd}': 'RangedASBoost',
 	'{a95a0f9b}': 'RocketLauncherPercentAD',

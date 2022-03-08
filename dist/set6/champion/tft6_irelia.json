@@ -93,7 +93,7 @@
 									"__type": "SubPartScaledProportionalToStat"
 								},
 								{
-									"mDataValue": "PercentPercentADDamage",
+									"mDataValue": "PercentADDamage",
 									"mStat": 2,
 									"__type": "StatByNamedDataValueCalculationPart"
 								}

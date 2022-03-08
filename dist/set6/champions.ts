@@ -59,6 +59,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [150, 125, 190, 450],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -179,6 +180,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [0, 150, 250, 1000],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -245,6 +247,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Duration`,
+										starValues: [3, 3, 3, 3],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -260,6 +263,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `ADPercent`,
+										starValues: [1, 1, 1, 1],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -324,6 +328,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [200, 150, 300, 900],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -391,11 +396,13 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `BonusDamage`,
+										starValues: [0, 165, 225, 300],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
 									{
 										variable: `Damage`,
+										starValues: [0, 135, 175, 235],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -411,6 +418,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `BonusDamage`,
+										starValues: [0, 165, 225, 300],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -466,6 +474,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [100, 100, 200, 600],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -547,6 +556,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [0, 800, 1400, 2000],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -604,6 +614,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Shield`,
+										starValues: [100, 225, 300, 435],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -619,6 +630,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [25, 150, 200, 300],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -634,6 +646,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `HealingPerAttack`,
+										starValues: [10, 30, 50, 80],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -690,6 +703,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [200, 850, 950, 1050],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -753,6 +767,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `RocketDamage`,
+										starValues: [0, 220, 275, 350],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -818,6 +833,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [125, 200, 275, 350],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -833,6 +849,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Heal`,
+										starValues: [100, 120, 140, 160],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -901,6 +918,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `ADMult`,
+										starValues: [1, 1.5, 1.600000023841858, 4],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -911,6 +929,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [0, 150, 200, 500],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1035,6 +1054,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [75, 150, 200, 350],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1050,6 +1070,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `BonusAS`,
+										starValues: [0.10000000149011612, 0.3499999940395355, 0.4000000059604645, 0.5],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1116,6 +1137,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `PercentAD`,
+										starValues: [1.5, 1.5, 1.5, 1.5],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -1126,6 +1148,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `BonusDamage`,
+										starValues: [0, 25, 50, 100],
 										stat: undefined,
 										ratio: undefined,
 									},
@@ -1141,11 +1164,13 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `MaxStacks`,
+										starValues: [5, 5, 5, 5],
 										stat: undefined,
 										ratio: undefined,
 									},
 									{
 										variable: `ASBoost`,
+										starValues: [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1213,11 +1238,13 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [200, 150, 225, 9001],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
 									{
 										variable: `MaxHealthPercent`,
+										starValues: [0.05999999865889549, 0.05999999865889549, 0.05999999865889549, 0.05999999865889549],
 										stat: `HP`,
 										ratio: 1,
 									},
@@ -1233,6 +1260,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `CritBonusDamage`,
+										starValues: [0, 70, 100, 1999],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1297,11 +1325,13 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [0, 120, 160, 225],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
 									{
 										variable: `ADPercent`,
+										starValues: [1.7000000476837158, 1.7000000476837158, 1.7000000476837158, 1.7000000476837158],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -1370,13 +1400,15 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [0, 150, 200, 300],
 										stat: `AD`,
 										ratio: 0.009999999776482582,
 									},
 									{
 										variable: `ADPercent`,
-										stat: undefined,
-										ratio: undefined,
+										starValues: [0, 1.850000023841858, 1.850000023841858, 1.850000023841858],
+										stat: `AD`,
+										ratio: 1,
 									},
 								],
 							},
@@ -1390,6 +1422,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `TransformHealth`,
+										starValues: [50, 500, 750, 1200],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1464,6 +1497,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `MagicDamage`,
+										starValues: [0, 200, 325, 550],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1528,11 +1562,13 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `BaseDamage`,
+										starValues: [0, 75, 100, 600],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
 									{
-										variable: `PercentPercentADDamage`,
+										variable: `PercentADDamage`,
+										starValues: [0, 1.850000023841858, 1.850000023841858, 1.850000023841858],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -1598,6 +1634,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `ASPercent`,
+										starValues: [0.6499999761581421, 0.4000000059604645, 0.5, 0.699999988079071],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1667,6 +1704,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `MeleeDamagePercent`,
+										starValues: [0, 1.600000023841858, 1.7000000476837158, 10],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -1682,6 +1720,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `ShieldAmount`,
+										starValues: [0, 375, 550, 3000],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1721,6 +1760,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `RangedADPercentBase`,
+										starValues: [0, 1.7000000476837158, 1.7999999523162842, 5],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -1736,6 +1776,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `RangedASBoost`,
+										starValues: [0, 0.5, 0.75, 3],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1794,6 +1835,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `PercentAttackDamage`,
+										starValues: [1.2000000476837158, 1.75, 2, 3],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -1809,6 +1851,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `BonusDamage`,
+										starValues: [1, 1, 1, 1],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1878,6 +1921,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `RocketLauncherPercentAD`,
+										starValues: [0.75, 2.200000047683716, 2.299999952316284, 8.880000114440918],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -1943,6 +1987,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [50, 70, 90, 180],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2010,6 +2055,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [150, 250, 325, 400],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2025,6 +2071,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `ShieldAmount`,
+										starValues: [0, 150, 250, 350],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2091,11 +2138,13 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [0, 175, 225, 500],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
 									{
 										variable: `ADPercent`,
+										starValues: [0, 1.9500000476837158, 2, 2.25],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -2162,6 +2211,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Shielding`,
+										starValues: [0, 400, 650, 1000],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2217,6 +2267,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [0, 185, 295, 315],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2355,6 +2406,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `BonusHealth`,
+										starValues: [300, 350, 370, 390],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2413,6 +2465,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [0, 600, 825, 950],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2472,7 +2525,7 @@ export const champions: ChampionData[] = [
 					'AllyPercentASBase': [1, 1, 1, 1],
 				},
 				calculations: {
-					'UNKNOWN': {
+					'UNUSED': {
 						asPercent: true,
 						parts: [
 							{
@@ -2480,6 +2533,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `UNKNOWN`,
+										starValues: [],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2495,6 +2549,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `BuffDuration`,
+										starValues: [4, 4, 4, 4],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2572,6 +2627,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `BonusLightningDamage`,
+										starValues: [600, 600, 600, 600],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2646,6 +2702,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `DamageAmount`,
+										starValues: [50, 50, 50, 50],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2711,6 +2768,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `MagicDamage`,
+										starValues: [0, 275, 375, 600],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2779,6 +2837,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `DamagePerSecond`,
+										starValues: [0, 80, 125, 175],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2794,6 +2853,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `ShieldAmount`,
+										starValues: [50, 500, 600, 750],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2858,6 +2918,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [200, 190, 300, 450],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2924,6 +2985,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [0, 300, 450, 1200],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2939,6 +3001,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `ShieldAmount`,
+										starValues: [0, 120, 170, 600],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3003,6 +3066,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `PercentArmorDamage`,
+										starValues: [2, 1.7999999523162842, 2.0999999046325684, 2.4000000953674316],
 										stat: `Armor`,
 										ratio: 1,
 									},
@@ -3018,6 +3082,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `ShieldAmount`,
+										starValues: [100, 225, 275, 325],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3082,6 +3147,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `BonusDamage`,
+										starValues: [0, 200, 300, 700],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3149,11 +3215,13 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [0, 100, 150, 200],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
 									{
 										variable: `ADPercent`,
+										starValues: [1.25, 1.25, 1.25, 1.25],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -3169,6 +3237,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Heal`,
+										starValues: [0, 150, 200, 350],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3184,6 +3253,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `HealBonus`,
+										starValues: [0, 250, 350, 500],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3250,6 +3320,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `DamagePerSecond`,
+										starValues: [1, 45, 70, 240],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3307,6 +3378,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `MagicDamage`,
+										starValues: [0, 275, 400, 650],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3381,11 +3453,13 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [0, 80, 125, 200],
 										stat: undefined,
 										ratio: undefined,
 									},
 									{
 										variable: `PercentAD`,
+										starValues: [1.600000023841858, 1.600000023841858, 1.600000023841858, 1.600000023841858],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -3401,6 +3475,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `PercentHealing`,
+										starValues: [0.5, 0.5, 0.5, 0.5],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3408,7 +3483,7 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'BaseHealing': {
+					'UNUSED': {
 						asPercent: false,
 						parts: [
 							{
@@ -3416,6 +3491,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `BaseHealing`,
+										starValues: [],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3482,6 +3558,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [1, 250, 400, 1200],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3497,6 +3574,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Heal`,
+										starValues: [0, 250, 350, 1000],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3564,6 +3642,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [0, 250, 500, 5000],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3629,6 +3708,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [50, 125, 175, 250],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3696,6 +3776,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `PercentDamage`,
+										starValues: [0.33000001311302185, 0.33000001311302185, 0.33000001311302185, 0.33000001311302185],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -3711,6 +3792,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `BonusAttackSpeed`,
+										starValues: [0, 0.6000000238418579, 0.800000011920929, 2.5],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3767,6 +3849,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `BaseDamage`,
+										starValues: [0, 225, 300, 450],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3782,6 +3865,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Healing`,
+										starValues: [80, 225, 250, 350],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3838,6 +3922,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [0, 225, 325, 500],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3906,6 +3991,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [600, 900, 1350, 30000],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3921,6 +4007,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `ReducedDamageToCC`,
+										starValues: [0, 450, 675, 15000],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3986,6 +4073,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [0, 450, 650, 950],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4068,11 +4156,13 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `BaseSpinDamage`,
+										starValues: [0, 50, 75, 100],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
 									{
 										variable: `SpinDamage`,
+										starValues: [1, 1, 1, 1],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -4139,11 +4229,13 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `BaseDamage`,
+										starValues: [0.5, 30, 50, 70],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
 									{
 										variable: `PercentAttackDamage`,
+										starValues: [0, 1.25, 1.2999999523162842, 1.399999976158142],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -4199,6 +4291,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [0, 250, 300, 777],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4266,6 +4359,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `ShieldAmount`,
+										starValues: [400, 550, 700, 900],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4281,6 +4375,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `ShieldDamage`,
+										starValues: [125, 100, 135, 175],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4296,6 +4391,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `BonusDamage`,
+										starValues: [125, 100, 135, 175],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4363,6 +4459,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [50, 125, 200, 450],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4378,6 +4475,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Shield`,
+										starValues: [0, 225, 325, 750],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4393,6 +4491,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `DamageFinal`,
+										starValues: [0, 250, 350, 900],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4451,6 +4550,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `DamageAmount`,
+										starValues: [50, 360, 420, 1500],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4515,6 +4615,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `PercentHealth`,
+										starValues: [0.05000000074505806, 0.07000000029802322, 0.09000000357627869, 0.11999999731779099],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4530,6 +4631,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `HealAmount`,
+										starValues: [0, 35, 50, 75],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4595,6 +4697,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [50, 300, 400, 600],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4656,6 +4759,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `PercentAD`,
+										starValues: [0.18000000715255737, 0.18000000715255737, 0.18000000715255737, 0.18000000715255737],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -4671,6 +4775,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `BonusOnHit`,
+										starValues: [0, 11, 22, 44],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4770,6 +4875,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [0, 300, 400, 550],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4836,6 +4942,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [0, 250, 350, 700],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4900,6 +5007,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
+										starValues: [0, 325, 450, 675],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},

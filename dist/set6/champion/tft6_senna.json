@@ -96,7 +96,7 @@
 					"mDisplayAsPercent": true,
 					"__type": "GameCalculation"
 				},
-				"ModifiedBaseHealing": {
+				"UNUSED": {
 					"mFormulaParts": [
 						{
 							"mSubpart": {

@@ -63,17 +63,6 @@ export enum BonusKey {
 	VampSpell = 'OmniVamp',
 }
 
-export interface ChampionAbilityVariable {
-	name: string
-	value: number[] | null
-}
-export interface ChampionAbility {
-	desc: string | null
-	icon: string
-	name: string | null
-	variables: ChampionAbilityVariable[]
-}
-
 export interface ChampionSpellMissileData {
 	width?: number
 	travelTime?: number
@@ -98,6 +87,7 @@ export interface ChampionSpellData {
 export type SpellCalculations = Record<string, SpellCalculation>
 export interface SpellCalculationSubpart {
 	variable: string
+	starValues: number[]
 	stat?: string
 	ratio?: number
 }

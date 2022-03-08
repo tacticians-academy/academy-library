@@ -179,7 +179,7 @@
 				}
 			],
 			"mSpellCalculations": {
-				"UNKNOWN": {
+				"UNUSED": {
 					"mFormulaParts": [
 						{
 							"mSubpart": {
