@@ -56,10 +56,10 @@ export interface ChampionJSONSpell {
 		mName: string
 		mValues?: number[]
 	}[]
-	mSpellCalculations?: {
-		mName: string
-		mValues?: number[]
-	}[]
+	mSpellCalculations?: Record<string, {
+		mFormulaParts: Record<string, string | Record<string, Object> | Record<string, Object>[]>[]
+		mDisplayAsPercent?: boolean
+	}>
 	mCantCancelWhileWindingUp?: true
 	missileSpeed?: number
 	mMissileSpec?: {

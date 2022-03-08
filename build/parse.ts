@@ -4,15 +4,17 @@ import fs from 'fs/promises'
 
 import { getCurrentSetNumber, getPathTo, importItems, importSetData } from './helpers/files.js'
 import { formatJS } from './helpers/formatting.js'
-import { UNRELEASED_ITEM_NAME_KEYS, NORMALIZE_EFFECT_KEYS, SUBSTITUTE_EFFECT_KEYS } from './helpers/normalize.js'
+import { UNRELEASED_ITEM_NAME_KEYS, NORMALIZE_EFFECT_KEYS, SUBSTITUTE_EFFECT_KEYS, mStatSubstitutions, spellCalculationOperatorSubstitutions } from './helpers/normalize.js'
 import { ChampionJSON, ChampionJSONType, ChampionJSONAttack, ChampionJSONSpell, ChampionJSONSpellAttack, ChampionJSONStats, ResponseJSON } from './helpers/types.js'
 
 import { COMPONENT_ITEM_IDS, ItemTypeKey } from '../dist/index.js'
-import type { AugmentData, AugmentTier, ChampionSpellData, EffectVariables, ItemData, SpellVariables, TraitData } from '../dist/index.js'
+import { AugmentData, AugmentTier, BonusKey, ChampionSpellData, EffectVariables, ItemData, SpellCalculations, SpellCalculationPart, SpellCalculationSubpart, SpellVariables, TraitData } from '../dist/index.js'
 
 function sortByName(a: {name: string}, b: {name: string}) {
 	return a.name.localeCompare(b.name)
 }
+
+const BASE_AP_RATIO = 0.009999999776482582
 
 // Load
 
@@ -472,6 +474,99 @@ const outputChampions = await Promise.all(playableChampions.map(async champion =
 					}
 				}
 			}
+			const calculations: SpellCalculations = {}
+			const sourceCalculations = spellData.mSpellCalculations
+			if (sourceCalculations) {
+				const prefixes = ['Tooltip', 'Modified', 'Total']
+				for (const calculationKey in sourceCalculations) {
+					const prefix = prefixes.find(prefix => calculationKey.startsWith(prefix))
+					if (!prefix) {
+						console.log('No prefix for ', spellName, calculationKey)
+					}
+					const variableName = prefix ? calculationKey.replace(prefix, '') : calculationKey
+					const sourceCalculation = sourceCalculations[calculationKey]
+					if (!variables[variableName] && variableName.startsWith('{')) {
+						console.log('ERR', 'Missing variable for calculation', spellName, variableName, Object.keys(variables))
+					}
+					const totalPrefix = 'Total'
+					if (prefix !== totalPrefix && sourceCalculations[`${totalPrefix}${variableName}`]) {
+						// console.log(sourceCalculation, sourceCalculations[`Total${variableName}`])
+						continue
+					}
+					const parts = sourceCalculation.mFormulaParts
+						.map((part): SpellCalculationPart => {
+							let sourceSubparts: Record<string, any>[]
+							const sourceOperator = part['__type'] as string
+							let operator: string | undefined
+							if (sourceOperator) {
+								operator = spellCalculationOperatorSubstitutions[sourceOperator]
+								if (!operator) {
+									console.log('ERR Unknown operator', spellName, sourceOperator)
+								}
+							}
+							if (part.mPart1) {
+								sourceSubparts = [part.mPart1, part.mPart2, part.mPart3, part.mPart4, , part.mPart5]
+									.filter((subpart): subpart is Record<string, any> => !!subpart)
+							} else if (part.mSubparts) {
+								sourceSubparts = part.mSubparts as Record<string, any>[]
+							} else {
+								sourceSubparts = [part]
+							}
+							const subparts: SpellCalculationSubpart[] = sourceSubparts
+								.map(subpart => {
+									const variable = subpart.mDataValue ?? subpart.mSubpart.mDataValue
+									if (variable.startsWith('{')) {
+										console.log('ERR', 'Unknown variable', spellName, calculationKey, subpart)
+									}
+									const mStat: number | undefined = subpart.mSubpart?.mStat ?? subpart.mStat
+									let stat: string | undefined = mStat ? mStatSubstitutions[mStat] : undefined
+									let ratio: number | undefined = subpart.mRatio
+									if (subpart.mSubpart) {
+										if (stat === undefined) {
+											if (spellName === 'TFT6_GnarR' && variable === 'ADPercent') {
+												ratio = 1
+												stat = BonusKey.AttackDamage
+											}
+											const scaleString = subpart['{a5749b52}']?.toLowerCase()
+											if (subpart.mRatio === BASE_AP_RATIO) {
+												if (scaleString === 'scaleap' || scaleString == null || (spellName === 'TFT6_DravenSpinning' && variable === 'Damage')) {
+													stat = BonusKey.AbilityPower
+												} else {
+													console.log('Unknown scale', spellName, calculationKey, subpart)
+												}
+											} else {
+												console.log('Unknown mRatio', spellName, calculationKey, subpart)
+											}
+										}
+									}
+									if (stat && !ratio) {
+										if (stat === BonusKey.AbilityPower) {
+											console.log('ERR', 'Assume base AP ratio', spellName, calculationKey, stat)
+											ratio = BASE_AP_RATIO
+										} else {
+											ratio = 1
+										}
+									}
+									return {
+										variable,
+										stat,
+										ratio,
+									}
+								})
+							if (subparts.length > 1 && operator !== 'product' && operator !== 'sum') {
+								console.log('ERR', 'Multipart unsupported operator', spellName, calculationKey, operator, subparts)
+							}
+							return {
+								operator,
+								subparts,
+							}
+						})
+					calculations[variableName] = {
+						asPercent: !!sourceCalculation.mDisplayAsPercent,
+						parts,
+					}
+				}
+			}
 			const missileSpeed = spellData.missileSpeed
 			const spell: ChampionSpellData = {
 				name: spellName,
@@ -489,6 +584,7 @@ const outputChampions = await Promise.all(playableChampions.map(async champion =
 						tracksTarget: missileMovement?.mTracksTarget !== false,
 					},
 				variables,
+				calculations,
 				cantCastWhileRooted: spellData.cantCastWhileRooted,
 				uninterruptable: spellData.mCantCancelWhileWindingUp,
 			}

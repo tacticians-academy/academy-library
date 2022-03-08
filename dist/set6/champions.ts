@@ -50,6 +50,23 @@ export const champions: ChampionData[] = [
 					'MultiOrbDamage': [0.800000011920929, 0.800000011920929, 0.800000011920929, 0.800000011920929],
 					'AngleBetweenOrbs': [10, 10, 10, 10],
 				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -67,6 +84,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: false,
 				},
 				variables: {},
+				calculations: {},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -84,6 +102,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {},
+				calculations: {},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -101,6 +120,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {},
+				calculations: {},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -149,6 +169,23 @@ export const champions: ChampionData[] = [
 					'Radius': [2, 2, 2, 2],
 					'StunDuration': [1.5, 2, 2.5, 8],
 					'KnockupDuration': [1, 1, 1, 1],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
 				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
@@ -199,6 +236,38 @@ export const champions: ChampionData[] = [
 					'ASReduction': [15, 15, 15, 15],
 					'Duration': [3, 3, 3, 3],
 				},
+				calculations: {
+					'Duration': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Duration`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `sum`,
+								subparts: [
+									{
+										variable: `ADPercent`,
+										stat: `AD`,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: undefined,
 			},
@@ -245,6 +314,23 @@ export const champions: ChampionData[] = [
 				variables: {
 					'Damage': [200, 150, 300, 900],
 					'StunDuration': [1.5, 1.5, 1.5, 1.5],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
 				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
@@ -296,6 +382,43 @@ export const champions: ChampionData[] = [
 					'StunDuration': [0, 1, 1.5, 2],
 					'VIPBonusReducedDamage': [30, 30, 30, 30],
 				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `sum`,
+								subparts: [
+									{
+										variable: `BonusDamage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+									{
+										variable: `Damage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'BonusDamage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `BonusDamage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -334,6 +457,23 @@ export const champions: ChampionData[] = [
 					'Damage': [100, 100, 200, 600],
 					'StunDuration': [2.5, 2, 2.75, 8],
 				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -351,6 +491,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {},
+				calculations: {},
 				cantCastWhileRooted: undefined,
 				uninterruptable: undefined,
 			},
@@ -397,6 +538,23 @@ export const champions: ChampionData[] = [
 				variables: {
 					'Damage': [0, 800, 1400, 2000],
 				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -437,6 +595,53 @@ export const champions: ChampionData[] = [
 					'Shield': [100, 225, 300, 435],
 					'HealingPerAttack': [10, 30, 50, 80],
 				},
+				calculations: {
+					'Shield': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Shield`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'Healing': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `HealingPerAttack`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: undefined,
 			},
@@ -475,6 +680,23 @@ export const champions: ChampionData[] = [
 					'Damage': [200, 850, 950, 1050],
 					'BonusHealthOnKill': [0.019999999552965164, 0.019999999552965164, 0.019999999552965164, 0.019999999552965164],
 					'MaxFeastStacks': [0, 20, 40, 999],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
 				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
@@ -521,6 +743,23 @@ export const champions: ChampionData[] = [
 				},
 				variables: {
 					'RocketDamage': [0, 220, 275, 350],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `RocketDamage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
 				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: undefined,
@@ -569,6 +808,38 @@ export const champions: ChampionData[] = [
 					'Damage': [125, 200, 275, 350],
 					'Heal': [100, 120, 140, 160],
 					'HexRange': [1, 1, 1, 1],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'Heal': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Heal`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
 				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
@@ -621,6 +892,33 @@ export const champions: ChampionData[] = [
 					'T1DebutantBonus': [2.5, 2.5, 2.5, 2.5],
 					'PassiveArmorPenPercent': [25, 25, 25, 25],
 				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `ADMult`,
+										stat: `AD`,
+										ratio: 1,
+									},
+								],
+							},
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -638,6 +936,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {},
+				calculations: {},
 				cantCastWhileRooted: undefined,
 				uninterruptable: undefined,
 			},
@@ -655,6 +954,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {},
+				calculations: {},
 				cantCastWhileRooted: undefined,
 				uninterruptable: undefined,
 			},
@@ -672,6 +972,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {},
+				calculations: {},
 				cantCastWhileRooted: undefined,
 				uninterruptable: undefined,
 			},
@@ -725,6 +1026,38 @@ export const champions: ChampionData[] = [
 					'SlowDuration': [4, 4, 4, 4],
 					'BuffDuration': [4, 4, 4, 4],
 				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'BonusAS': {
+						asPercent: true,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `BonusAS`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -773,6 +1106,53 @@ export const champions: ChampionData[] = [
 					'ASBoost': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
 					'MaxStacks': [5, 5, 5, 5],
 					'PercentAD': [1.5, 1.5, 1.5, 1.5],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `PercentAD`,
+										stat: `AD`,
+										ratio: 1,
+									},
+								],
+							},
+							{
+								operator: `identity`,
+								subparts: [
+									{
+										variable: `BonusDamage`,
+										stat: undefined,
+										ratio: undefined,
+									},
+								],
+							},
+						],
+					},
+					'ASBoost': {
+						asPercent: true,
+						parts: [
+							{
+								operator: `product`,
+								subparts: [
+									{
+										variable: `MaxStacks`,
+										stat: undefined,
+										ratio: undefined,
+									},
+									{
+										variable: `ASBoost`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
 				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: undefined,
@@ -824,6 +1204,43 @@ export const champions: ChampionData[] = [
 					'CritBonusDamage': [0, 70, 100, 1999],
 					'MaxHealthPercent': [0.05999999865889549, 0.05999999865889549, 0.05999999865889549, 0.05999999865889549],
 				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `sum`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+									{
+										variable: `MaxHealthPercent`,
+										stat: `HP`,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+					'BonusDamage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `CritBonusDamage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -870,6 +1287,28 @@ export const champions: ChampionData[] = [
 				variables: {
 					'Damage': [0, 120, 160, 225],
 					'ADPercent': [1.7000000476837158, 1.7000000476837158, 1.7000000476837158, 1.7000000476837158],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `sum`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+									{
+										variable: `ADPercent`,
+										stat: `AD`,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
 				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: undefined,
@@ -922,6 +1361,43 @@ export const champions: ChampionData[] = [
 					'Damage': [0, 150, 200, 300],
 					'TransformManaReduc': [20, 20, 20, 20],
 				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `sum`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: `AD`,
+										ratio: 0.009999999776482582,
+									},
+									{
+										variable: `ADPercent`,
+										stat: undefined,
+										ratio: undefined,
+									},
+								],
+							},
+						],
+					},
+					'TransformHealth': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `TransformHealth`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -939,6 +1415,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: false,
 				},
 				variables: {},
+				calculations: {},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -977,6 +1454,23 @@ export const champions: ChampionData[] = [
 					'MagicDamage': [0, 200, 325, 550],
 					'PercentHealing': [0, 0.25, 0.30000001192092896, 0.4000000059604645],
 					'Duration': [5, 5, 5, 5],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `MagicDamage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
 				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: undefined,
@@ -1025,6 +1519,28 @@ export const champions: ChampionData[] = [
 					'PercentADDamage': [0, 1.850000023841858, 1.850000023841858, 1.850000023841858],
 					'BaseDamage': [0, 75, 100, 600],
 				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `sum`,
+								subparts: [
+									{
+										variable: `BaseDamage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+									{
+										variable: `PercentPercentADDamage`,
+										stat: `AD`,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: true,
 				uninterruptable: true,
 			},
@@ -1072,6 +1588,23 @@ export const champions: ChampionData[] = [
 					'Duration': [5, 5, 5, 5],
 					'HexRadius': [3, 3, 3, 3],
 					'ASPercent': [0.6499999761581421, 0.4000000059604645, 0.5, 0.699999988079071],
+				},
+				calculations: {
+					'ASBoost': {
+						asPercent: true,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `ASPercent`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
 				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
@@ -1125,6 +1658,38 @@ export const champions: ChampionData[] = [
 					'ShieldAmount': [0, 375, 550, 3000],
 					'ShieldDuration': [3, 3, 3, 3],
 				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `sum`,
+								subparts: [
+									{
+										variable: `MeleeDamagePercent`,
+										stat: `AD`,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+					'ShieldAmount': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `ShieldAmount`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: true,
 				uninterruptable: true,
 			},
@@ -1146,6 +1711,38 @@ export const champions: ChampionData[] = [
 					'RangedASBoost': [0, 0.5, 0.75, 3],
 					'RangedASDuration': [5, 5, 5, 5],
 					'RangedADGain': [50, 45, 70, 1000],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `sum`,
+								subparts: [
+									{
+										variable: `RangedADPercentBase`,
+										stat: `AD`,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+					'RangedASBoost': {
+						asPercent: true,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `RangedASBoost`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
 				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
@@ -1187,6 +1784,38 @@ export const champions: ChampionData[] = [
 					'DamageFalloff': [0.33000001311302185, 0.33000001311302185, 0.33000001311302185, 0.33000001311302185],
 					'AttackSpeed': [0.8500000238418579, 0.8999999761581421, 0.8999999761581421, 1.399999976158142],
 					'ADFromAttackSpeed': [0.800000011920929, 0.800000011920929, 0.800000011920929, 0.800000011920929],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `sum`,
+								subparts: [
+									{
+										variable: `PercentAttackDamage`,
+										stat: `AD`,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+					'BonusDamage': {
+						asPercent: true,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `BonusDamage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
 				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
@@ -1240,6 +1869,23 @@ export const champions: ChampionData[] = [
 					'RocketLauncherPercentAD': [0.75, 2.200000047683716, 2.299999952316284, 8.880000114440918],
 					'HexDuration': [5, 5, 5, 5],
 				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `sum`,
+								subparts: [
+									{
+										variable: `RocketLauncherPercentAD`,
+										stat: `AD`,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -1287,6 +1933,23 @@ export const champions: ChampionData[] = [
 					'NumMissiles': [4, 12, 18, 100],
 					'FakeCastTime': [1, 1, 1, 1],
 					'Damage': [50, 70, 90, 180],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
 				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
@@ -1338,6 +2001,38 @@ export const champions: ChampionData[] = [
 					'Duration': [5, 5, 5, 5],
 					'ShieldAmount': [0, 150, 250, 350],
 				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'ShieldAmount': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `ShieldAmount`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -1386,6 +2081,28 @@ export const champions: ChampionData[] = [
 					'Damage': [0, 175, 225, 500],
 					'ManaReave': [0, 50, 50, 50],
 					'ADPercent': [0, 1.9500000476837158, 2, 2.25],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `sum`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+									{
+										variable: `ADPercent`,
+										stat: `AD`,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
 				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
@@ -1436,6 +2153,23 @@ export const champions: ChampionData[] = [
 					'BonusStats': [25, 30, 50, 80],
 					'T1DebutantBonus': [0.800000011920929, 0.800000011920929, 0.800000011920929, 0.800000011920929],
 				},
+				calculations: {
+					'Shielding': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Shielding`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -1474,6 +2208,23 @@ export const champions: ChampionData[] = [
 					'Damage': [0, 185, 295, 315],
 					'NumShots': [0, 2, 2, 3],
 				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -1491,6 +2242,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {},
+				calculations: {},
 				cantCastWhileRooted: undefined,
 				uninterruptable: undefined,
 			},
@@ -1508,6 +2260,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {},
+				calculations: {},
 				cantCastWhileRooted: undefined,
 				uninterruptable: undefined,
 			},
@@ -1525,6 +2278,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {},
+				calculations: {},
 				cantCastWhileRooted: undefined,
 				uninterruptable: undefined,
 			},
@@ -1542,6 +2296,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {},
+				calculations: {},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -1591,6 +2346,23 @@ export const champions: ChampionData[] = [
 					'CCDuration': [1, 1, 1, 1],
 					'NumAllies': [1, 1, 2, 3],
 				},
+				calculations: {
+					'BonusHealth': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `BonusHealth`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -1631,6 +2403,23 @@ export const champions: ChampionData[] = [
 					'MRShred': [0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645],
 					'SpreadTargets': [0, 1, 1, 2],
 					'TickRate': [0.5, 0.5, 0.5, 0.5],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
 				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
@@ -1682,6 +2471,38 @@ export const champions: ChampionData[] = [
 					'AllyPercentAD': [0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645],
 					'AllyPercentASBase': [1, 1, 1, 1],
 				},
+				calculations: {
+					'UNKNOWN': {
+						asPercent: true,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `UNKNOWN`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'BuffDuration': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `BuffDuration`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -1699,6 +2520,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {},
+				calculations: {},
 				cantCastWhileRooted: undefined,
 				uninterruptable: undefined,
 			},
@@ -1741,6 +2563,23 @@ export const champions: ChampionData[] = [
 					'CritDamageIncrease': [0.25, 0.25, 0.25, 0.25],
 					'FearHexRange': [5, 5, 5, 5],
 				},
+				calculations: {
+					'BonusLightningDamage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `BonusLightningDamage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -1758,6 +2597,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {},
+				calculations: {},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -1796,6 +2636,23 @@ export const champions: ChampionData[] = [
 					'DamageReducedPercent': [0.25, 0.25, 0.25, 0.25],
 					'DamageReducedDuration': [4, 4, 4, 4],
 					'DamageAmount': [50, 50, 50, 50],
+				},
+				calculations: {
+					'DamageAmount': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `DamageAmount`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
 				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
@@ -1844,6 +2701,23 @@ export const champions: ChampionData[] = [
 					'MagicDamage': [0, 275, 375, 600],
 					'HealingReduction': [0, 50, 50, 50],
 					'HealingReductionDuration': [0, 6, 6, 6],
+				},
+				calculations: {
+					'MagicDamage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `MagicDamage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
 				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
@@ -1896,6 +2770,38 @@ export const champions: ChampionData[] = [
 					'DamagePerSecond': [0, 80, 125, 175],
 					'RefundedMana': [30, 30, 30, 30],
 				},
+				calculations: {
+					'DamagePerSecond': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `DamagePerSecond`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'ShieldAmount': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `ShieldAmount`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -1942,6 +2848,23 @@ export const champions: ChampionData[] = [
 				variables: {
 					'Damage': [200, 190, 300, 450],
 					'StunDuration': [2, 2, 2.5, 3],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
 				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
@@ -1992,6 +2915,38 @@ export const champions: ChampionData[] = [
 					'Damage': [0, 300, 450, 1200],
 					'StunDuration': [2, 1, 1, 4],
 				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'ShieldAmount': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `ShieldAmount`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -2039,6 +2994,38 @@ export const champions: ChampionData[] = [
 					'PercentArmorDamage': [2, 1.7999999523162842, 2.0999999046325684, 2.4000000953674316],
 					'ShieldAmount': [100, 225, 275, 325],
 				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `PercentArmorDamage`,
+										stat: `Armor`,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+					'Shield': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `ShieldAmount`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -2085,6 +3072,23 @@ export const champions: ChampionData[] = [
 				variables: {
 					'BonusDamage': [0, 200, 300, 700],
 					'DisarmDuration': [3, 2, 2.5, 3],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `BonusDamage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
 				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: undefined,
@@ -2136,6 +3140,58 @@ export const champions: ChampionData[] = [
 					'Heal': [0, 150, 200, 350],
 					'HealBonus': [0, 250, 350, 500],
 				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `sum`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+									{
+										variable: `ADPercent`,
+										stat: `AD`,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+					'Heal': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Heal`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'HealBonus': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `HealBonus`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -2185,6 +3241,23 @@ export const champions: ChampionData[] = [
 					'Duration': [15, 15, 15, 15],
 					'SpellRange': [6, 6, 6, 6],
 				},
+				calculations: {
+					'DamagePerSecond': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `DamagePerSecond`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -2225,6 +3298,23 @@ export const champions: ChampionData[] = [
 					'StunDuration': [0, 1.5, 2, 3],
 					'MagicDamage': [0, 275, 400, 650],
 				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `MagicDamage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: undefined,
 			},
@@ -2233,6 +3323,7 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {},
+				calculations: {},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -2280,6 +3371,58 @@ export const champions: ChampionData[] = [
 					'PercentAD': [1.600000023841858, 1.600000023841858, 1.600000023841858, 1.600000023841858],
 					'PercentHealing': [0.5, 0.5, 0.5, 0.5],
 					'Damage': [0, 80, 125, 200],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `sum`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: undefined,
+										ratio: undefined,
+									},
+									{
+										variable: `PercentAD`,
+										stat: `AD`,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+					'PercentHealing': {
+						asPercent: true,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `PercentHealing`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'BaseHealing': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `BaseHealing`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
 				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
@@ -2329,6 +3472,38 @@ export const champions: ChampionData[] = [
 					'Heal': [0, 250, 350, 1000],
 					'ASBonus': [0.30000001192092896, 0.30000001192092896, 0.44999998807907104, 1],
 					'ASBonusDuration': [4, 4, 4, 4],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'Heal': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Heal`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
 				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
@@ -2380,6 +3555,23 @@ export const champions: ChampionData[] = [
 					'Duration': [6, 6, 6, 6],
 					'Damage': [0, 250, 500, 5000],
 				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -2427,6 +3619,23 @@ export const champions: ChampionData[] = [
 					'AoEStunDuration': [0.75, 0.75, 0.75, 0.75],
 					'Damage': [50, 125, 175, 250],
 					'StunDuration': [2, 1.5, 2, 3],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
 				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
@@ -2478,6 +3687,38 @@ export const champions: ChampionData[] = [
 					'Duration': [5, 5, 5, 5],
 					'BonusAttackSpeed': [0, 0.6000000238418579, 0.800000011920929, 2.5],
 				},
+				calculations: {
+					'DamageCalc': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `sum`,
+								subparts: [
+									{
+										variable: `PercentDamage`,
+										stat: `AD`,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+					'BonusAttackSpeed': {
+						asPercent: true,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `BonusAttackSpeed`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -2516,6 +3757,38 @@ export const champions: ChampionData[] = [
 					'BaseDamage': [0, 225, 300, 450],
 					'Range': [660, 660, 660, 660],
 					'Healing': [80, 225, 250, 350],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `BaseDamage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'Healing': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Healing`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
 				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
@@ -2556,6 +3829,23 @@ export const champions: ChampionData[] = [
 					'StunDuration': [0, 2, 2.5, 3],
 					'VIPDebutantBonus': [1.5, 1.5, 1.5, 1.5],
 				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: undefined,
 			},
@@ -2564,6 +3854,7 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {},
+				calculations: {},
 				cantCastWhileRooted: undefined,
 				uninterruptable: undefined,
 			},
@@ -2605,6 +3896,38 @@ export const champions: ChampionData[] = [
 					'DamageReduction': [0.30000001192092896, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
 					'TickRate': [0.5, 0.5, 0.5, 0.5],
 					'ReducedDamageToCC': [0, 450, 675, 15000],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'ReducedDamageToCC': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `ReducedDamageToCC`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
 				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
@@ -2653,6 +3976,23 @@ export const champions: ChampionData[] = [
 					'Damage': [0, 450, 650, 950],
 					'BleedDuration': [7, 7, 7, 7],
 					'VIPBleedDurationBonus': [100, 100, 100, 100],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
 				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
@@ -2719,6 +4059,28 @@ export const champions: ChampionData[] = [
 					'BaseSpinDamage': [0, 50, 75, 100],
 					'BonusAAPercent': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
 				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `sum`,
+								subparts: [
+									{
+										variable: `BaseSpinDamage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+									{
+										variable: `SpinDamage`,
+										stat: `AD`,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: undefined,
 			},
@@ -2768,6 +4130,28 @@ export const champions: ChampionData[] = [
 					'GWDuration': [5, 5, 5, 5],
 					'BaseDamage': [0.5, 30, 50, 70],
 				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `sum`,
+								subparts: [
+									{
+										variable: `BaseDamage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+									{
+										variable: `PercentAttackDamage`,
+										stat: `AD`,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -2805,6 +4189,23 @@ export const champions: ChampionData[] = [
 				variables: {
 					'NumStrikes': [0, 20, 30, 99],
 					'Damage': [0, 250, 300, 777],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
 				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: undefined,
@@ -2856,6 +4257,53 @@ export const champions: ChampionData[] = [
 					'ShieldDamage': [125, 100, 135, 175],
 					'BonusDamage': [125, 100, 135, 175],
 				},
+				calculations: {
+					'Shield': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `ShieldAmount`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `ShieldDamage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'BonusDamage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `BonusDamage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -2906,6 +4354,53 @@ export const champions: ChampionData[] = [
 					'Shield': [0, 225, 325, 750],
 					'ShieldDuration': [4, 4, 4, 4],
 				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'Shield': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Shield`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'DamageFinal': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `DamageFinal`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -2946,6 +4441,23 @@ export const champions: ChampionData[] = [
 					'ShredDuration': [6, 6, 6, 6],
 					'ArmorReduction': [0.5, 0.699999988079071, 0.699999988079071, 0.699999988079071],
 					'ShieldDestructionPercent': [0, 0.25, 0.33000001311302185, 1],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `DamageAmount`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
 				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
@@ -2993,6 +4505,38 @@ export const champions: ChampionData[] = [
 				variables: {
 					'PercentHealth': [0.05000000074505806, 0.07000000029802322, 0.09000000357627869, 0.11999999731779099],
 					'HealAmount': [0, 35, 50, 75],
+				},
+				calculations: {
+					'PercentHealth': {
+						asPercent: true,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `PercentHealth`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'HealAmount': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `HealAmount`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
 				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
@@ -3042,6 +4586,23 @@ export const champions: ChampionData[] = [
 					'HexPull': [2, 2, 2, 2],
 					'DamageReduction': [50, 50, 50, 50],
 				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -3086,6 +4647,38 @@ export const champions: ChampionData[] = [
 					'CritDuration': [8, 8, 8, 8],
 					'VIPTotalDuration': [60, 60, 60, 60],
 				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `sum`,
+								subparts: [
+									{
+										variable: `PercentAD`,
+										stat: `AD`,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+					'BonusOnHit': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `BonusOnHit`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -3103,6 +4696,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {},
+				calculations: {},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -3120,6 +4714,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {},
+				calculations: {},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -3165,6 +4760,23 @@ export const champions: ChampionData[] = [
 				},
 				variables: {
 					'Damage': [0, 300, 400, 550],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
 				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
@@ -3215,6 +4827,23 @@ export const champions: ChampionData[] = [
 					'StunDuration': [0, 1.5, 2, 2.5],
 					'SlowDuration': [4, 4, 4, 4],
 				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: undefined,
 			},
@@ -3261,6 +4890,23 @@ export const champions: ChampionData[] = [
 				variables: {
 					'Damage': [0, 325, 450, 675],
 					'StunDuration': [1, 1.5, 2, 2.5],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Damage`,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
 				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: undefined,

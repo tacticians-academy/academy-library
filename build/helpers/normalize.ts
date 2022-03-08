@@ -312,3 +312,11 @@ export const mStatSubstitutions: Record<number, BonusKey> = {
 	2: BonusKey.AttackDamage,
 	11: BonusKey.Health,
 }
+
+export const spellCalculationOperatorSubstitutions: Record<string, string> = {
+	NamedDataValueCalculationPart: 'identity',
+	ProductOfSubPartsCalculationPart: 'product',
+	StatBySubPartCalculationPart: 'scale',
+	SubPartScaledProportionalToStat: 'scale',
+	SumOfSubPartsCalculationPart: 'sum',
+}

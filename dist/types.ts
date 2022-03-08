@@ -90,8 +90,24 @@ export interface ChampionSpellData {
 	castTime?: number
 	missile?: ChampionSpellMissileData
 	variables: SpellVariables
+	calculations: SpellCalculations
 	cantCastWhileRooted?: true
 	uninterruptable?: true
+}
+
+export type SpellCalculations = Record<string, SpellCalculation>
+export interface SpellCalculationSubpart {
+	variable: string
+	stat?: string
+	ratio?: number
+}
+export interface SpellCalculationPart {
+	operator?: string
+	subparts: SpellCalculationSubpart[]
+}
+export interface SpellCalculation {
+	parts: SpellCalculationPart[]
+	asPercent?: boolean
 }
 
 export interface ChampionData {
