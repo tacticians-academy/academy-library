@@ -100,7 +100,15 @@ await Promise.all(champions.map(async champion => {
 							console.log('UNKNOWN mSpellCalculationsSubstitution', key, 'for', apiName)
 						}
 						for (const mFormulaPart of value.mFormulaParts) {
-							const childArray = mFormulaPart.mSubparts != null ? mFormulaPart.mSubparts : [ mFormulaPart.mSubpart ?? mFormulaPart ]
+							let childArray: any[]
+							if (mFormulaPart.mPart1) {
+								childArray = [mFormulaPart.mPart1, mFormulaPart.mPart2, mFormulaPart.mPart3, mFormulaPart.mPart4, , mFormulaPart.mPart5]
+									.filter((subpart): subpart is Record<string, any> => !!subpart)
+							} else if (mFormulaPart.mSubparts) {
+								childArray = mFormulaPart.mSubparts as Record<string, any>[]
+							} else {
+								childArray = [mFormulaPart]
+							}
 							for (const child of childArray) {
 								const subPart = child.mSubpart != null ? child.mSubpart : child
 								const value = subPart.mDataValue as string

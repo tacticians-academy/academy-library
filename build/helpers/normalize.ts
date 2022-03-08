@@ -264,6 +264,7 @@ export const mSpellCalculationsSubstitutions: Record<string, string> = {
 	'{08a55045}': 'ModifiedDamageFinal',
 	'{446c04fa}': 'ModifiedDamagePerSecond',
 	'{605f22d8}': 'ModifiedHealAmount',
+	'{8def4efb}': 'ModifiedHealBonus',
 	'{822057e4}': 'ModifiedMagicDamage', //TODO unify with ModifiedDamage? ModifiedDamage already groups MagicDamage
 	'{3a39e14f}': 'ModifiedPercentHealing',
 	'{6fd94775}': 'ModifiedPercentHealth',
@@ -303,6 +304,7 @@ export const mDataValueSubstitutions: Record<string, string> = {
 	'{2dac49dd}': 'TransformHealth',
 	'{3118f99b}': 'ReducedDamageToCC', // Tahm Kench unused
 	'{a6febc4a}': 'ShieldDR',
+	'{54c91b1e}': 'HealBonus',
 }
 
 export const mStatSubstitutions: Record<number, BonusKey> = {

@@ -228,7 +228,7 @@
 							},
 							"mPart2": {
 								"mSubpart": {
-									"mDataValue": "{000f6884}",
+									"mDataValue": "ASBoost",
 									"__type": "NamedDataValueCalculationPart"
 								},
 								"mRatio": 0.009999999776482582,

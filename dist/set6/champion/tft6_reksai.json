@@ -427,11 +427,11 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{8def4efb}": {
+				"ModifiedHealBonus": {
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{54c91b1e}",
+								"mDataValue": "HealBonus",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
