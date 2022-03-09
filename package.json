@@ -1,8 +1,9 @@
 {
 	"name": "@tacticians-academy/academy-library",
-	"version": "0.7.1",
+	"version": "0.7.2",
 	"author": "Kyle Coburn",
 	"repository": "https://github.com/tacticians-academy/academy-library",
+	"website": "https://github.com/tacticians-academy/academy-library",
 	"type": "module",
 	"main": "dist/index.ts",
 	"types": "dist/index.ts",
