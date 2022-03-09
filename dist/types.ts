@@ -54,6 +54,7 @@ export enum BonusKey {
 	DodgeChance = 'DodgeChance',
 	HexRangeIncrease = 'HexRangeIncrease',
 	Health = 'HP',
+	CurrentHealth = 'CurrentHP',
 	MagicResist = 'MR',
 	Mana = 'Mana',
 	ManaRestore = 'ManaRestore',
