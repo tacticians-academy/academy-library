@@ -84,6 +84,10 @@ export interface ChampionSpellData {
 	uninterruptable?: true
 }
 
+export const enum DamageType {
+	physical, magic, true
+}
+
 export type SpellCalculations = Record<string, SpellCalculation>
 export interface SpellCalculationSubpart {
 	variable: string
@@ -96,6 +100,7 @@ export interface SpellCalculationPart {
 	subparts: SpellCalculationSubpart[]
 }
 export interface SpellCalculation {
+	damageType?: DamageType
 	parts: SpellCalculationPart[]
 	asPercent?: boolean
 }
