@@ -44,6 +44,7 @@ export interface ItemFlashcard {
 
 export enum BonusKey {
 	Armor = 'Armor',
+	AttackAccuracy = 'AttackAccuracy',
 	AttackDamage = 'AD',
 	AttackSpeed = 'AS',
 	AbilityPower = 'AP',
@@ -55,6 +56,7 @@ export enum BonusKey {
 	HexRangeIncrease = 'HexRangeIncrease',
 	Health = 'HP',
 	CurrentHealth = 'CurrentHP',
+	MissingHealth = 'MissingHP',
 	MagicResist = 'MR',
 	Mana = 'Mana',
 	ManaRestore = 'ManaRestore',
@@ -95,6 +97,7 @@ export interface SpellCalculationSubpart {
 	starValues: number[]
 	stat?: string
 	ratio?: number
+	max?: number
 }
 export interface SpellCalculationPart {
 	operator?: string
