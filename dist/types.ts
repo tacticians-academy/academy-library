@@ -61,6 +61,7 @@ export enum BonusKey {
 	Mana = 'Mana',
 	ManaRestore = 'ManaRestore',
 	ManaRestorePerAttack = 'FlatManaRestore',
+	ManaReductionPercent = 'PercentManaReduction',
 	VampOmni = 'VampAllSources',
 	VampPhysical = 'LifeSteal',
 	VampSpell = 'OmniVamp',

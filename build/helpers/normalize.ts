@@ -155,7 +155,7 @@ export const SUBSTITUTE_EFFECT_KEYS: Record<string, string> = {
 	'fa1ef605': '{MagicDamageReductionMultiplier}', //TODO unused? https://leagueoflegends.fandom.com/wiki/Dragon%27s_Claw_(Teamfight_Tactics)
 	'79a4455a': 'CritReduction',
 	'b1442c34': 'StealthDuration', //TODO verify
-	'5c51b509': '{Colossus/Mutant/Socialite}', //TODO ??
+	'5c51b509': 'TraitLevel', //TODO ??
 	'7f1304b2': 'AbilityPower',
 	'df962703': 'ADBoost',
 	'c9b0e3af': 'PercentOmnivamp',
