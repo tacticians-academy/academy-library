@@ -88,7 +88,7 @@ export interface ChampionSpellData {
 }
 
 export const enum DamageType {
-	physical, magic, true
+	physical, magic, true, heal
 }
 
 export type SpellCalculations = Record<string, SpellCalculation>
