@@ -1873,7 +1873,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`Scrap`, `Rivals`, `Twinshot`],
+		traits: [`Scrap`, `Rival`, `Twinshot`],
 		stats: {
 			armor: 45,
 			attackSpeed: 1,
@@ -4257,7 +4257,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`YordleLord`],
+		traits: [`Yordle-Lord`],
 		stats: {
 			armor: 25,
 			attackSpeed: 0.800000011920929,
@@ -4413,7 +4413,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`Enforcer`, `Rivals`, `Bruiser`],
+		traits: [`Enforcer`, `Rival`, `Bruiser`],
 		stats: {
 			armor: 50,
 			attackSpeed: 0.699999988079071,

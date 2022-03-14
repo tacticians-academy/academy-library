@@ -2,7 +2,7 @@ const MAX_STAR_LEVEL = 3
 
 import fs from 'fs/promises'
 
-import { getCurrentSetNumber, getPathTo, importItems, importSetData } from './helpers/files.js'
+import { getCurrentSetNumber, getPathTo, importItems, importTraits, importSetData } from './helpers/files.js'
 import { formatJS } from './helpers/formatting.js'
 import { BASE_UNIT_API_NAMES, UNRELEASED_ITEM_NAME_KEYS, NORMALIZE_EFFECT_KEYS, SUBSTITUTE_EFFECT_KEYS, mStatSubstitutions, spellCalculationOperatorSubstitutions } from './helpers/normalize.js'
 import { ChampionJSON, ChampionJSONType, ChampionJSONAttack, ChampionJSONSpell, ChampionJSONSpellAttack, ChampionJSONStats, ResponseJSON } from './helpers/types.js'
@@ -12,6 +12,10 @@ import { AugmentData, AugmentTier, BonusKey, ChampionSpellData, EffectVariables,
 
 function sortByName(a: {name: string}, b: {name: string}) {
 	return a.name.localeCompare(b.name)
+}
+
+function getEnumKeyFrom(apiName: string) {
+	return apiName.split('_')[1]
 }
 
 const BASE_AP_RATIO = 0.009999999776482582
@@ -41,13 +45,14 @@ for (const apiName of BASE_UNIT_API_NAMES) {
 	}
 }
 
+const { ItemKey } = await importItems(currentSetNumber)
+const { TraitKey } = await importTraits(currentSetNumber)
+
 // Items
 
-const { ItemKey } = await importItems(currentSetNumber)
 const { LOCKED_STAR_LEVEL, SPATULA_ITEM_IDS, RETIRED_AUGMENT_NAME_KEYS, UNUSED_AUGMENT_NAME_KEYS } = await importSetData(currentSetNumber)
 
 const currentItemsByType: Record<ItemTypeKey, ItemData[]> = {component: [], completed: [], spatula: [], duos: [], consumable: [], radiant: [], ornn: [], hexbuff: [], mercenaryDice: [], unreleased: []}
-
 
 const foundItemIDs: number[] = []
 itemsData.reverse().forEach(item => {
@@ -155,10 +160,7 @@ allItems.forEach((item: ItemData) => {
 traits.sort(sortByName)
 
 const traitKeys = (traits as TraitData[])
-	.map(trait => {
-		const nameKey = trait.apiName.split('_')[1]
-		return `${nameKey} = \`${trait.name}\``
-	})
+	.map(trait => `${getEnumKeyFrom(trait.apiName)} = \`${trait.name}\``)
 const traitKeysString = `export enum TraitKey {\n\t${traitKeys.join(', ')}\n}`
 
 traits.forEach((trait: TraitData) => {
@@ -622,7 +624,7 @@ const outputChampions = await Promise.all(playableChampions.map(async champion =
 		if (traitData.TraitData.startsWith('{')) {
 			console.log('ERR Unknown trait', apiName, traitData)
 		}
-		return traitData.TraitData.split('_')[1] //TODO
+		return TraitKey[getEnumKeyFrom(traitData.TraitData) as keyof typeof TraitKey]
 	}) ?? []
 	return {
 		apiName,
@@ -641,10 +643,7 @@ const outputChampions = await Promise.all(playableChampions.map(async champion =
 }))
 
 const championKeys = playableChampions
-	.map(champion => {
-		const nameKey = champion.apiName.split('_')[1]
-		return `${nameKey} = \`${champion.name}\``
-	})
+	.map(champion => `${getEnumKeyFrom(champion.apiName)} = \`${champion.name}\``)
 const championKeysString = `export enum ChampionKey {\n\t${championKeys.join(', ')}\n}`
 
 // Output
