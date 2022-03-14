@@ -157,7 +157,7 @@ traits.sort(sortByName)
 const traitKeys = (traits as TraitData[])
 	.map(trait => {
 		const nameKey = trait.apiName.split('_')[1]
-		return `${nameKey} = '${nameKey}'`
+		return `${nameKey} = \`${trait.name}\``
 	})
 const traitKeysString = `export enum TraitKey {\n\t${traitKeys.join(', ')}\n}`
 
@@ -643,7 +643,7 @@ const outputChampions = await Promise.all(playableChampions.map(async champion =
 const championKeys = playableChampions
 	.map(champion => {
 		const nameKey = champion.apiName.split('_')[1]
-		return `${nameKey} = '${nameKey}'`
+		return `${nameKey} = \`${champion.name}\``
 	})
 const championKeysString = `export enum ChampionKey {\n\t${championKeys.join(', ')}\n}`
 

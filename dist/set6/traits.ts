@@ -1,7 +1,7 @@
 import type { TraitData } from '../index'
 
 export enum TraitKey {
-	Arcanist = 'Arcanist', Assassin = 'Assassin', Bodyguard = 'Bodyguard', Bruiser = 'Bruiser', Challenger = 'Challenger', Chemtech = 'Chemtech', Clockwork = 'Clockwork', Colossus = 'Colossus', Debonair = 'Debonair', Enchanter = 'Enchanter', Enforcer = 'Enforcer', Glutton = 'Glutton', Hextech = 'Hextech', Innovator = 'Innovator', Mastermind = 'Mastermind', Mercenary = 'Mercenary', Mutant = 'Mutant', Rivals = 'Rivals', Scholar = 'Scholar', Scrap = 'Scrap', Sniper = 'Sniper', Socialite = 'Socialite', Striker = 'Striker', Syndicate = 'Syndicate', Transformer = 'Transformer', Twinshot = 'Twinshot', Yordle = 'Yordle', YordleLord = 'YordleLord'
+	Arcanist = `Arcanist`, Assassin = `Assassin`, Bodyguard = `Bodyguard`, Bruiser = `Bruiser`, Challenger = `Challenger`, Chemtech = `Chemtech`, Clockwork = `Clockwork`, Colossus = `Colossus`, Debonair = `Debonair`, Enchanter = `Enchanter`, Enforcer = `Enforcer`, Glutton = `Glutton`, Hextech = `Hextech`, Innovator = `Innovator`, Mastermind = `Mastermind`, Mercenary = `Mercenary`, Mutant = `Mutant`, Rivals = `Rival`, Scholar = `Scholar`, Scrap = `Scrap`, Sniper = `Sniper`, Socialite = `Socialite`, Striker = `Striker`, Syndicate = `Syndicate`, Transformer = `Transformer`, Twinshot = `Twinshot`, Yordle = `Yordle`, YordleLord = `Yordle-Lord`
 }
 
 export const traits: TraitData[] = [
