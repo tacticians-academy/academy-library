@@ -1,7 +1,7 @@
 import type { ChampionData } from '../index'
 
 export enum ChampionKey {
-	Ahri = 'Ahri', Alistar = 'Alistar', Ashe = 'Ashe', Blitzcrank = 'Blitzcrank', Brand = 'Brand', Braum = 'Braum', Caitlyn = 'Caitlyn', Camille = 'Camille', ChoGath = 'ChoGath', Corki = 'Corki', Darius = 'Darius', Draven = 'Draven', Ekko = 'Ekko', Ezreal = 'Ezreal', Galio = 'Galio', Gangplank = 'Gangplank', Gnar = 'Gnar', Illaoi = 'Illaoi', Irelia = 'Irelia', JarvanIV = 'JarvanIV', Jayce = 'Jayce', Jhin = 'Jhin', Jinx = 'Jinx', Kaisa = 'Kaisa', Kassadin = 'Kassadin', KhaZix = 'KhaZix', Leona = 'Leona', Lucian = 'Lucian', Lulu = 'Lulu', Malzahar = 'Malzahar', Tibbers = 'Tibbers', HexTechDragon = 'HexTechDragon', MalzaharVoidling = 'MalzaharVoidling', MissFortune = 'MissFortune', Morgana = 'Morgana', Nocturne = 'Nocturne', Orianna = 'Orianna', Poppy = 'Poppy', Quinn = 'Quinn', RekSai = 'RekSai', Renata = 'Renata', Sejuani = 'Sejuani', Senna = 'Senna', Seraphine = 'Seraphine', Silco = 'Silco', Singed = 'Singed', Sivir = 'Sivir', Swain = 'Swain', Syndra = 'Syndra', TahmKench = 'TahmKench', Talon = 'Talon', TrainingDummy = 'TrainingDummy', Tryndamere = 'Tryndamere', Twitch = 'Twitch', Veigar = 'Veigar', Vex = 'Vex', Vi = 'Vi', Viktor = 'Viktor', Warwick = 'Warwick', Zac = 'Zac', Zeri = 'Zeri', Ziggs = 'Ziggs', Zilean = 'Zilean', Zyra = 'Zyra'
+	Ahri = 'Ahri', Alistar = 'Alistar', Ashe = 'Ashe', Blitzcrank = 'Blitzcrank', Brand = 'Brand', Braum = 'Braum', Caitlyn = 'Caitlyn', Camille = 'Camille', ChoGath = 'ChoGath', Corki = 'Corki', Darius = 'Darius', Draven = 'Draven', Ekko = 'Ekko', Ezreal = 'Ezreal', Galio = 'Galio', Gangplank = 'Gangplank', Gnar = 'Gnar', Illaoi = 'Illaoi', Irelia = 'Irelia', JarvanIV = 'JarvanIV', Jayce = 'Jayce', Jhin = 'Jhin', Jinx = 'Jinx', Kaisa = 'Kaisa', Kassadin = 'Kassadin', KhaZix = 'KhaZix', Leona = 'Leona', Lucian = 'Lucian', Lulu = 'Lulu', Malzahar = 'Malzahar', Tibbers = 'Tibbers', HexTechDragon = 'HexTechDragon', MalzaharVoidling = 'MalzaharVoidling', MissFortune = 'MissFortune', Morgana = 'Morgana', Nocturne = 'Nocturne', Orianna = 'Orianna', Poppy = 'Poppy', Quinn = 'Quinn', RekSai = 'RekSai', Renata = 'Renata', Sejuani = 'Sejuani', Senna = 'Senna', Seraphine = 'Seraphine', Silco = 'Silco', Singed = 'Singed', Sivir = 'Sivir', Swain = 'Swain', Syndra = 'Syndra', TahmKench = 'TahmKench', Talon = 'Talon', TrainingDummy = 'TrainingDummy', Tryndamere = 'Tryndamere', Twitch = 'Twitch', Veigar = 'Veigar', Vex = 'Vex', Vi = 'Vi', Viktor = 'Viktor', VoidSpawn = 'VoidSpawn', Warwick = 'Warwick', Zac = 'Zac', Zeri = 'Zeri', Ziggs = 'Ziggs', Zilean = 'Zilean', Zyra = 'Zyra'
 }
 
 export const champions: ChampionData[] = [
@@ -4089,7 +4089,7 @@ export const champions: ChampionData[] = [
 	},
 	{
 		apiName: `TFT_TrainingDummy`,
-		name: `Training Dummy`,
+		name: `Target Dummy`,
 		icon: `ASSETS/UX/TFT/ChampionSplashes/TFTDebug_Dummy.dds`,
 		cost: undefined,
 		starLevel: undefined,
@@ -4563,6 +4563,32 @@ export const champions: ChampionData[] = [
 				uninterruptable: true,
 			},
 		],
+	},
+	{
+		apiName: `TFT_VoidSpawn`,
+		name: `Voidspawn`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT_Voidspawn.dds`,
+		cost: undefined,
+		starLevel: undefined,
+		teamSize: undefined,
+		isSpawn: true,
+		traits: [],
+		stats: {
+			armor: 20,
+			attackSpeed: 0.800000011920929,
+			critChance: 0.25,
+			critMultiplier: 1.2999999523162842,
+			damage: 0,
+			hp: undefined,
+			initialMana: 0,
+			magicResist: 20,
+			mana: 0,
+			moveSpeed: 550,
+			range: 1,
+		},
+		basicAttackMissileSpeed: undefined,
+		critAttackMissileSpeed: undefined,
+		spells: [],
 	},
 	{
 		apiName: `TFT6_Warwick`,

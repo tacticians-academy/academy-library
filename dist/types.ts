@@ -125,7 +125,7 @@ export interface ChampionData {
 		critChance: number | null
 		critMultiplier: number
 		damage: number
-		hp: number
+		hp: number | undefined
 		initialMana: number
 		magicResist: number
 		mana: number

@@ -1,5 +1,7 @@
 import { BonusKey } from '../../dist/index.js'
 
+export const BASE_UNIT_API_NAMES = ['TFT_TrainingDummy', 'TFT_VoidSpawn']
+
 // Traits/Items
 
 const CONSUMABLE_ITEM_IDS = [
@@ -146,10 +148,10 @@ export const SUBSTITUTE_EFFECT_KEYS: Record<string, string> = {
 	'cc9fefa7': 'ArmorBreakDuration',
 	'353ede36': 'CritDamageAmp',
 	'5200c406': 'TooltipBonusAP',
-	'19a89153': 'BaseAD', //TODO monitor. unverifiable BaseAP
-	'41cb628d': 'BaseAP', //TODO monitor. unverifiable BaseAD
-	'ae49cc70': 'AdditionalAD', //TODO actual name, monitor. unverifiable BonusAP
-	'c0c9af7f': 'AdditionalAP', //TODO actual name, monitor. unverifiable BonusAD
+	'19a89153': 'BaseAD', //TODO monitor, unverifiable BaseAP
+	'41cb628d': 'BaseAP', //TODO monitor, unverifiable BaseAD
+	'ae49cc70': 'AdditionalADAP', //TODO monitor, unverifiable
+	'c0c9af7f': 'AdditionalHeal', //TODO monitor, unverifiable
 	'f2474447': 'TooltipBonus',
 	'9fd37c1c': '{APTimer}', //TODO unused? https://leagueoflegends.fandom.com/wiki/Chalice_of_Power_(Teamfight_Tactics)
 	'fa1ef605': '{MagicDamageReductionMultiplier}', //TODO unused? https://leagueoflegends.fandom.com/wiki/Dragon%27s_Claw_(Teamfight_Tactics)

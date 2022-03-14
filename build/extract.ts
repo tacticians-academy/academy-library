@@ -5,7 +5,7 @@ import fs from 'fs/promises'
 import path from 'path'
 
 import { getPathTo, importSetData, etagPath, setNumberPath } from './helpers/files.js'
-import { mDataValueSubstitutions, mSpellCalculationsSubstitutions } from './helpers/normalize.js'
+import { BASE_UNIT_API_NAMES, mDataValueSubstitutions, mSpellCalculationsSubstitutions } from './helpers/normalize.js'
 import { ChampionJSON, ChampionJSONStats, ResponseJSON } from './helpers/types.js'
 
 const baseURL = `https://raw.communitydragon.org/${PATCH_LINE}`
@@ -60,9 +60,15 @@ const renameNormalizations: Record<string, Record<string, string>> = {
 
 const championsPath = getPathTo(currentSetNumber, 'champion')
 await fs.mkdir(championsPath, { recursive: true })
-await Promise.all(champions.map(async champion => {
-	const apiName = champion.apiName
-	const pathName = champion.apiName.toLowerCase()
+const apiNames = champions.map(champion => champion.apiName)
+for (const apiName of BASE_UNIT_API_NAMES) {
+	if (!apiNames.includes(apiName)) {
+		apiNames.push(apiName)
+	}
+}
+
+await Promise.all(apiNames.map(async apiName => {
+	const pathName = apiName.toLowerCase()
 	const outputPath = path.resolve(championsPath, pathName + '.json')
 	const url = `${baseURL}/game/data/characters/${pathName}/${pathName}.bin.json`
 	// console.log('Loading champion', apiName, url)

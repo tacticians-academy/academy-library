@@ -4,7 +4,7 @@ import fs from 'fs/promises'
 
 import { getCurrentSetNumber, getPathTo, importItems, importSetData } from './helpers/files.js'
 import { formatJS } from './helpers/formatting.js'
-import { UNRELEASED_ITEM_NAME_KEYS, NORMALIZE_EFFECT_KEYS, SUBSTITUTE_EFFECT_KEYS, mStatSubstitutions, spellCalculationOperatorSubstitutions } from './helpers/normalize.js'
+import { BASE_UNIT_API_NAMES, UNRELEASED_ITEM_NAME_KEYS, NORMALIZE_EFFECT_KEYS, SUBSTITUTE_EFFECT_KEYS, mStatSubstitutions, spellCalculationOperatorSubstitutions } from './helpers/normalize.js'
 import { ChampionJSON, ChampionJSONType, ChampionJSONAttack, ChampionJSONSpell, ChampionJSONSpellAttack, ChampionJSONStats, ResponseJSON } from './helpers/types.js'
 
 import { COMPONENT_ITEM_IDS, ItemTypeKey } from '../dist/index.js'
@@ -29,19 +29,16 @@ try {
 const { champions, traits } = responseJSON.sets[currentSetNumber]
 const itemsData = responseJSON.items as ItemData[]
 
-if (!champions.some(champion => champion.apiName === 'TFT_TrainingDummy')) {
-	champions.push({
-		apiName: 'TFT_TrainingDummy',
-		name: 'Training Dummy',
-		icon: 'ASSETS/UX/TFT/ChampionSplashes/TFTDebug_Dummy.dds',
-		isSpawn: true,
-		traits: [],
-		stats: {
-			hp: 500, armor: 40, magicResist: 40, attackSpeed: 0.20000000298023224,
-			initialMana: 0, critChance: 0, critMultiplier: 0, damage: 0, mana: 0, moveSpeed: 0, range: 0,
-		},
-		spells: [],
-	})
+const baseSet = responseJSON.sets['1']
+for (const apiName of BASE_UNIT_API_NAMES) {
+	if (!champions.some(champion => champion.apiName === apiName)) {
+		const baseUnit = baseSet.champions.find(champion => champion.apiName === apiName)
+		if (baseUnit) {
+			champions.push(baseUnit)
+		} else {
+			console.log('ERR', 'No base unit', apiName)
+		}
+	}
 }
 
 // Items
@@ -620,7 +617,7 @@ const outputChampions = await Promise.all(playableChampions.map(async champion =
 	const critAttacks = characterRecord.critAttacks
 	const critAttackMissileSpeed = critAttacks ? reduceAttacks(critAttacks.filter(attack => attack.mAttackName), json) : undefined
 
-	const isSpawn = characterRecord.isSpawn ?? false
+	const isSpawn = characterRecord.isSpawn ?? BASE_UNIT_API_NAMES.includes(apiName)
 	const traits = characterRecord.mLinkedTraits?.map(traitData => {
 		if (traitData.TraitData.startsWith('{')) {
 			console.log('ERR Unknown trait', apiName, traitData)
