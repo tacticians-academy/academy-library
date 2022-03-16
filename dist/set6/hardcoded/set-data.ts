@@ -69,6 +69,7 @@ export const UNUSED_AUGMENT_NAME_KEYS = [
 	`archangel's embrace i`,
 	`archangel's embrace iii`,
 	`second wind iii`,
+	`keepers iii`,
 ]
 
 export const TRAIT_DATA_SUBSTITUTIONS: Record<string, string> = {

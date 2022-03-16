@@ -9,6 +9,7 @@ Debonair Heart
 Enchanter Heart
 Enforcer Heart
 Hextech Heart
+High Five
 Innovator Heart
 Mercenary Heart
 Mutant Heart
@@ -203,7 +204,6 @@ Meditation III
 New Recruit
 Phalanx III
 Radiant Relics
-Second Wind III
 Share the Spotlight
 Stand United III
 The Golden Egg

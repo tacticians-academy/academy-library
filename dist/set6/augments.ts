@@ -133,16 +133,6 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Trade2.TFT_Set6.dds`,
 	},
 	{
-		tier: 3,
-		name: `Keepers III`,
-		desc: `At the start of combat, your units grant adjacent allies a @ShieldHealth@ health shield for @ShieldDuration@ seconds.`,
-		effects: {
-			'ShieldDuration': 8,
-			'ShieldHealth': 250,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Keepers-III.TFT_Set6_Stage2.dds`,
-	},
-	{
 		tier: 2,
 		name: `Keepers II`,
 		desc: `At the start of combat, your units grant adjacent allies a @ShieldHealth@ health shield for @ShieldDuration@ seconds.`,
@@ -1930,6 +1920,16 @@ export const activeAugments: AugmentData[] = [
 ]
 
 export const inactiveAugments: AugmentData[] = [
+	{
+		tier: 3,
+		name: `Keepers III`,
+		desc: `At the start of combat, your units grant adjacent allies a @ShieldHealth@ health shield for @ShieldDuration@ seconds.`,
+		effects: {
+			'ShieldDuration': 8,
+			'ShieldHealth': 250,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Keepers-III.TFT_Set6_Stage2.dds`,
+	},
 	{
 		tier: 3,
 		name: `Divine Intervention`,

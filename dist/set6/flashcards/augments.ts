@@ -438,9 +438,9 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 	{
 		id: `keepers`,
 		name: `Keepers`,
-		tiers: [1, 2, 3],
-		description: `At the start of combat, your units grant adjacent allies a 150/225/250 health shield for 8 seconds.`,
-		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/keepers-i.tft_set6_stage2`, `assets/maps/particles/tft/item_icons/augments/hexcore/keepers-ii.tft_set6_stage2`, `assets/maps/particles/tft/item_icons/augments/hexcore/keepers-iii.tft_set6_stage2`],
+		tiers: [1, 2],
+		description: `At the start of combat, your units grant adjacent allies a 150/225 health shield for 8 seconds.`,
+		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/keepers-i.tft_set6_stage2`, `assets/maps/particles/tft/item_icons/augments/hexcore/keepers-ii.tft_set6_stage2`],
 	},
 	{
 		id: `knifesedge`,
