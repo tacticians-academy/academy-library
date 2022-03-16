@@ -940,6 +940,15 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/ArcanistEmblem2.TFT_Set6.dds`,
 	},
 	{
+		tier: 3,
+		name: `High Five`,
+		desc: `Gain @NumChamps@ random 5-cost champions.`,
+		effects: {
+			'NumChamps': 5,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/High-Five.TFT_Set6_Stage2.dds`,
+	},
+	{
 		tier: 1,
 		name: `Mercenary Heart`,
 		desc: `Your team counts as having 1 additional Mercenary.`,
@@ -1325,16 +1334,6 @@ export const activeAugments: AugmentData[] = [
 			'Delay': 10,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Second--Wind-II.TFT_Set6_Stage2.dds`,
-	},
-	{
-		tier: 3,
-		name: `Second Wind III`,
-		desc: `After @Delay@ seconds of combat, your units heal @HealPercent@% of their missing Health.`,
-		effects: {
-			'HealPercent': 100,
-			'Delay': 10,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Second-Wind-III.TFT_Set6_Stage2.dds`,
 	},
 	{
 		tier: 2,
@@ -1958,12 +1957,13 @@ export const inactiveAugments: AugmentData[] = [
 	},
 	{
 		tier: 3,
-		name: `High Five`,
-		desc: `Gain @NumChamps@ random 5-cost champions.`,
+		name: `Second Wind III`,
+		desc: `After @Delay@ seconds of combat, your units heal @HealPercent@% of their missing Health.`,
 		effects: {
-			'NumChamps': 5,
+			'HealPercent': 100,
+			'Delay': 10,
 		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/High-Five.TFT_Set6_Stage2.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Second-Wind-III.TFT_Set6_Stage2.dds`,
 	},
 	{
 		tier: 2,

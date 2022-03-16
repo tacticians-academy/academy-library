@@ -373,6 +373,13 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/highend3.tft_set6`],
 	},
 	{
+		id: `highfive`,
+		name: `High Five`,
+		tiers: [3],
+		description: `Gain 5 random 5-cost champions.`,
+		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/high-five.tft_set6_stage2`],
+	},
+	{
 		id: `highroller`,
 		name: `High Roller`,
 		tiers: [3],
@@ -620,9 +627,9 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 	{
 		id: `secondwind`,
 		name: `Second Wind`,
-		tiers: [1, 2, 3],
-		description: `After 10 seconds of combat, your units heal 50/75/100% of their missing Health.`,
-		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/second--wind-i.tft_set6_stage2`, `assets/maps/particles/tft/item_icons/augments/hexcore/second--wind-ii.tft_set6_stage2`, `assets/maps/particles/tft/item_icons/augments/hexcore/second-wind-iii.tft_set6_stage2`],
+		tiers: [1, 2],
+		description: `After 10 seconds of combat, your units heal 50/75% of their missing Health.`,
+		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/second--wind-i.tft_set6_stage2`, `assets/maps/particles/tft/item_icons/augments/hexcore/second--wind-ii.tft_set6_stage2`],
 	},
 	{
 		id: `selfrepair`,

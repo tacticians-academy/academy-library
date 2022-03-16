@@ -66,9 +66,9 @@ export const UNUSED_AUGMENT_NAME_KEYS = [
 	'tft6_augment_infinitycane_name',
 	'scoped weapons',
 	'radiant grab bag',
-	'high five',
 	`archangel's embrace i`,
 	`archangel's embrace iii`,
+	`second wind iii`,
 ]
 
 export const TRAIT_DATA_SUBSTITUTIONS: Record<string, string> = {
