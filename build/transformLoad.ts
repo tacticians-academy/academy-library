@@ -412,7 +412,7 @@ const outputChampions = await Promise.all(playableChampions.map(async champion =
 	if (characterRecord.baseStaticHPRegen !== 0) {
 		console.log('ERR HP Regen', apiName, characterRecord.baseStaticHPRegen)
 	}
-	let totalMana = characterRecord.primaryAbilityResource.arBase
+	let totalMana = characterRecord.primaryAbilityResource.arBase ?? champion.stats.mana
 	let initialMana = characterRecord.mInitialMana ?? 0
 	if (totalMana == null) {
 		totalMana = initialMana
