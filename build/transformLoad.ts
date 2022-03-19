@@ -438,8 +438,11 @@ const outputChampions = await Promise.all(playableChampions.map(async champion =
 	// if (apiName === 'TFT6_Gnar') {
 	// }
 	let isFirstSpell = true
+	const passiveName = apiName + 'P'
+	const passiveSpell = getSpell(passiveName, json)
+	const passive = passiveSpell ? transformSpellData(passiveName, passiveSpell, json) : undefined
 	const spells = spellNames
-		.filter(name => name && name !== 'BaseSpell')
+		.filter(name => name && name !== 'BaseSpell' && name !== passiveName)
 		.map(spellName => {
 			const spell = getSpell(spellName, json)
 			return spell ? [spellName, spell] as [string, ChampionJSONSpell] : undefined
@@ -460,152 +463,7 @@ const outputChampions = await Promise.all(playableChampions.map(async champion =
 			}
 			return true
 		})
-		.map(([spellName, spellData]) => {
-			const missileName = spellName + 'Missile'
-			const missileSpell = getSpell(missileName, json)
-			const missileSpec = spellData.mMissileSpec ?? missileSpell?.mMissileSpec
-			const missileMovement = missileSpec?.movementComponent
-			// const variables: {name: string, values: number[]}[] = []
-			const variables: SpellVariables = {}
-			if (spellData.mDataValues) {
-				for (const dataValues of spellData.mDataValues) {
-					if (dataValues.mValues) {
-						// variables.push({ name: dataValues.mName, values: dataValues.mValues })
-						variables[dataValues.mName] = dataValues.mValues.slice(0, MAX_STAR_LEVEL + 1)
-					}
-				}
-			}
-			const calculations: SpellCalculations = {}
-			const sourceCalculations = spellData.mSpellCalculations
-			if (sourceCalculations) {
-				const prefixes = ['Tooltip', 'Modified', 'Total']
-				for (const calculationKey in sourceCalculations) {
-					const prefix = prefixes.find(prefix => calculationKey.startsWith(prefix))
-					if (!prefix) {
-						console.log('No prefix for', spellName, calculationKey)
-					}
-					const variableName = prefix ? calculationKey.replace(prefix, '') : calculationKey
-					const sourceCalculation = sourceCalculations[calculationKey]
-					if (!variables[variableName]) {
-						if (variableName !== 'UNUSED') {
-							console.log('ERR', 'Missing variable for calculation', spellName, variableName, Object.keys(variables))
-						}
-					}
-					const totalPrefix = 'Total'
-					if (prefix !== totalPrefix && sourceCalculations[`${totalPrefix}${variableName}`]) {
-						// console.log(sourceCalculation, sourceCalculations[`Total${variableName}`])
-						continue
-					}
-					const parts = sourceCalculation.mFormulaParts
-						.map((part): SpellCalculationPart => {
-							let sourceSubparts: Record<string, any>[]
-							const sourceOperator = part['__type'] as string
-							let operator: string | undefined
-							if (sourceOperator) {
-								operator = spellCalculationOperatorSubstitutions[sourceOperator]
-								if (!operator) {
-									console.log('ERR Unknown operator', spellName, sourceOperator)
-								}
-							}
-							if (part.mPart1) {
-								sourceSubparts = [part.mPart1, part.mPart2, part.mPart3, part.mPart4, , part.mPart5]
-									.filter((subpart): subpart is Record<string, any> => !!subpart)
-							} else if (part.mSubparts) {
-								sourceSubparts = part.mSubparts as Record<string, any>[]
-							} else {
-								sourceSubparts = [part]
-							}
-							const subparts: SpellCalculationSubpart[] = sourceSubparts
-								.map(subpart => {
-									const variable: string = subpart.mDataValue ?? subpart.mSubpart.mDataValue
-									if (variable.startsWith('{')) {
-										console.log('ERR', 'Unknown variable', spellName, calculationKey, subpart)
-									}
-									const mStat: number | undefined = subpart.mSubpart?.mStat ?? subpart.mStat
-									let stat: string | undefined = mStat ? mStatSubstitutions[mStat] : undefined
-									let ratio: number | undefined = subpart.mRatio
-									if (stat === undefined) {
-										if (spellName === 'TFT6_GnarR' && variable === 'ADPercent') {
-											ratio = 1
-											stat = BonusKey.AttackDamage
-										}
-										const scaleString = subpart['{a5749b52}']?.toLowerCase()
-										if (subpart.mRatio === BASE_AP_RATIO) {
-											if (scaleString === 'scaleap' || scaleString == null || (spellName === 'TFT6_DravenSpinning' && variable === 'Damage')) {
-												stat = BonusKey.AbilityPower
-											} else {
-												console.log('Unknown scale', spellName, calculationKey, subpart)
-											}
-										} else {
-											console.log('Unknown mRatio', spellName, calculationKey, subpart)
-										}
-									}
-									if (stat && !ratio) {
-										if (stat === BonusKey.AbilityPower) {
-											console.log('ERR', 'Assume base AP ratio', spellName, calculationKey, stat)
-											ratio = BASE_AP_RATIO
-										} else {
-											ratio = 1
-										}
-									}
-									if (!variables[variable]) {
-										console.log('ERR', 'Missing variable', spellName, calculationKey, variable, variables)
-									}
-									return {
-										variable,
-										starValues: variables[variable] ?? [],
-										stat,
-										ratio,
-									}
-								})
-							if (subparts.length > 1 && operator !== 'product' && operator !== 'sum') {
-								console.log('ERR', 'Multipart unsupported operator', spellName, calculationKey, operator, subparts)
-							}
-							return {
-								operator,
-								subparts,
-							}
-						})
-					calculations[variableName] = {
-						asPercent: !!sourceCalculation.mDisplayAsPercent,
-						parts,
-					}
-				}
-			}
-			const missileSpeed = spellData.missileSpeed
-			const missileMovementSpeed = missileMovement?.mInitialSpeed ?? missileMovement?.mSpeed ?? missileSpeed
-			const spell: ChampionSpellData = {
-				name: spellName,
-				castTime: spellData.mCastTime ?? missileSpell?.mCastTime,
-				missile: !missileSpec && missileSpeed == null
-					? undefined
-					: {
-						width: missileSpec?.mMissileWidth,
-						travelTime: missileMovement?.mTravelTime,
-						speedInitial: missileMovementSpeed ?? missileSpeed!,
-						speedMin: missileMovement?.mMinSpeed,
-						speedMax: missileMovement?.mMaxSpeed,
-						acceleration: missileMovement?.mAcceleration,
-						startDelay: missileMovement?.mStartDelay,
-						tracksTarget: missileMovement?.mTracksTarget !== false,
-					},
-				variables,
-				calculations,
-				cantCastWhileRooted: spellData.cantCastWhileRooted,
-				uninterruptable: spellData.mCantCancelWhileWindingUp,
-			}
-			if (spell.missile && missileSpeed && missileSpeed !== missileMovementSpeed) {
-				spell.missile._missileSpeed = missileSpeed
-			}
-			// if (spellData.mCastTime == null) { //TODO verify these aren't supposed to instacast?
-			// 	console.log('!mCastTime', spellName)
-			// }
-			// if (!spell.missile) { //TODO multipart spells (TFT6_ViktorE, TFT6_JhinR, etc)
-			// if (spell.missile && spell.missile.speedMin == null && spell.missile.travelTime == null) {
-			// 	console.log('!missile', spellName)
-			// }
-			return spell
-		})
+		.map(([spellName, spellData]) => transformSpellData(spellName, spellData, json))
 	if (!spells.length) {
 		console.log('No spells for', apiName)
 	} else if (spells.length > 1 && apiName !== 'TFT6_Jayce') {
@@ -644,6 +502,7 @@ const outputChampions = await Promise.all(playableChampions.map(async champion =
 		stats,
 		basicAttackMissileSpeed,
 		critAttackMissileSpeed,
+		passive,
 		spells,
 	}
 }))
@@ -660,3 +519,153 @@ await Promise.all([
 	fs.writeFile(getPathTo(currentSetNumber, 'traits.ts'), `import type { TraitData } from '../index'\n\n${traitKeysString}\n\nexport const traits: TraitData[] = ` + formatJS(traits)),
 	fs.writeFile(getPathTo(currentSetNumber, 'items.ts'), `import type { ItemData } from '../index'\n\n${itemKeysString}\n\n` + outputItemSections.join('\n\n')),
 ])
+
+// Transform
+
+function transformSpellData(spellName: string, spellData: ChampionJSONSpell, json: ChampionJSON) {
+	const missileName = spellName + 'Missile'
+	const missileSpell = getSpell(missileName, json)
+	const missileSpec = spellData.mMissileSpec ?? missileSpell?.mMissileSpec
+	const missileMovement = missileSpec?.movementComponent
+	// const variables: {name: string, values: number[]}[] = []
+	const variables: SpellVariables = {}
+	if (spellData.mDataValues) {
+		for (const dataValues of spellData.mDataValues) {
+			if (dataValues.mValues) {
+				// variables.push({ name: dataValues.mName, values: dataValues.mValues })
+				variables[dataValues.mName] = dataValues.mValues.slice(0, MAX_STAR_LEVEL + 1)
+			}
+		}
+	}
+	const calculations: SpellCalculations = {}
+	const sourceCalculations = spellData.mSpellCalculations
+	if (sourceCalculations) {
+		const prefixes = ['Tooltip', 'Modified', 'Total']
+		for (const calculationKey in sourceCalculations) {
+			const prefix = prefixes.find(prefix => calculationKey.startsWith(prefix))
+			if (!prefix) {
+				console.log('No prefix for', spellName, calculationKey)
+			}
+			const variableName = prefix ? calculationKey.replace(prefix, '') : calculationKey
+			const sourceCalculation = sourceCalculations[calculationKey]
+			if (!variables[variableName]) {
+				if (variableName !== 'UNUSED') {
+					console.log('ERR', 'Missing variable for calculation', spellName, variableName, Object.keys(variables))
+				}
+			}
+			const totalPrefix = 'Total'
+			if (prefix !== totalPrefix && sourceCalculations[`${totalPrefix}${variableName}`]) {
+				// console.log(sourceCalculation, sourceCalculations[`Total${variableName}`])
+				continue
+			}
+			const parts = sourceCalculation.mFormulaParts
+				.map((part): SpellCalculationPart => {
+					let sourceSubparts: Record<string, any>[]
+					const sourceOperator = part['__type'] as string
+					let operator: string | undefined
+					if (sourceOperator) {
+						operator = spellCalculationOperatorSubstitutions[sourceOperator]
+						if (!operator) {
+							console.log('ERR Unknown operator', spellName, sourceOperator)
+						}
+					}
+					if (part.mPart1) {
+						sourceSubparts = [part.mPart1, part.mPart2, part.mPart3, part.mPart4, , part.mPart5]
+							.filter((subpart): subpart is Record<string, any> => !!subpart)
+					} else if (part.mSubparts) {
+						sourceSubparts = part.mSubparts as Record<string, any>[]
+					} else {
+						sourceSubparts = [part]
+					}
+					const subparts: SpellCalculationSubpart[] = sourceSubparts
+						.map(subpart => {
+							const variable: string = subpart.mDataValue ?? subpart.mSubpart.mDataValue
+							if (variable.startsWith('{')) {
+								console.log('ERR', 'Unknown variable', spellName, calculationKey, subpart)
+							}
+							const mStat: number | undefined = subpart.mSubpart?.mStat ?? subpart.mStat
+							let stat: string | undefined = mStat ? mStatSubstitutions[mStat] : undefined
+							let ratio: number | undefined = subpart.mRatio
+							if (stat === undefined) {
+								if (spellName === 'TFT6_GnarR' && variable === 'ADPercent') {
+									ratio = 1
+									stat = BonusKey.AttackDamage
+								}
+								const scaleString = subpart['{a5749b52}']?.toLowerCase()
+								if (subpart.mRatio === BASE_AP_RATIO) {
+									if (scaleString === 'scaleap' || scaleString == null || (spellName === 'TFT6_DravenSpinning' && variable === 'Damage')) {
+										stat = BonusKey.AbilityPower
+									} else {
+										console.log('Unknown scale', spellName, calculationKey, subpart)
+									}
+								} else {
+									console.log('Unknown mRatio', spellName, calculationKey, subpart)
+								}
+							}
+							if (stat && !ratio) {
+								if (stat === BonusKey.AbilityPower) {
+									console.log('ERR', 'Assume base AP ratio', spellName, calculationKey, stat)
+									ratio = BASE_AP_RATIO
+								} else {
+									ratio = 1
+								}
+							}
+							if (!variables[variable]) {
+								console.log('ERR', 'Missing variable', spellName, calculationKey, variable, variables)
+							}
+							return {
+								variable,
+								starValues: variables[variable] ?? [],
+								stat,
+								ratio,
+							}
+						})
+					if (subparts.length > 1 && operator !== 'product' && operator !== 'sum') {
+						console.log('ERR', 'Multipart unsupported operator', spellName, calculationKey, operator, subparts)
+					}
+					return {
+						operator,
+						subparts,
+					}
+				})
+			calculations[variableName] = {
+				asPercent: !!sourceCalculation.mDisplayAsPercent,
+				parts,
+			}
+		}
+	}
+	const missileSpeed = spellData.missileSpeed
+	const missileMovementSpeed = missileMovement?.mInitialSpeed ?? missileMovement?.mSpeed ?? missileSpeed
+	const spell: ChampionSpellData = {
+		name: spellName,
+		castTime: spellData.mCastTime ?? missileSpell?.mCastTime,
+		missile: !missileSpec && missileSpeed == null
+			? undefined
+			: {
+				width: missileSpec?.mMissileWidth,
+				travelTime: missileMovement?.mTravelTime,
+				speedInitial: missileMovementSpeed ?? missileSpeed!,
+				speedMin: missileMovement?.mMinSpeed,
+				speedMax: missileMovement?.mMaxSpeed,
+				acceleration: missileMovement?.mAcceleration,
+				startDelay: missileMovement?.mStartDelay,
+				tracksTarget: missileMovement?.mTracksTarget !== false,
+			},
+		variables,
+		calculations,
+		cantCastWhileRooted: spellData.cantCastWhileRooted,
+		uninterruptable: spellData.mCantCancelWhileWindingUp,
+	}
+	if (spell.missile && missileSpeed && missileSpeed !== missileMovementSpeed) {
+		spell.missile._missileSpeed = missileSpeed
+	}
+	// if (spellData.mCastTime == null) { //TODO verify these aren't supposed to instacast?
+	// 	console.log('!mCastTime', spellName)
+	// }
+	// if (!spell.missile) { //TODO multipart spells (TFT6_ViktorE, TFT6_JhinR, etc)
+	// if (spell.missile && spell.missile.speedMin == null && spell.missile.travelTime == null) {
+	// 	console.log('!missile', spellName)
+	// }
+	return spell
+
+}

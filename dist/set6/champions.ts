@@ -29,6 +29,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 1750,
 		critAttackMissileSpeed: 1750,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_AhriQ`,
@@ -151,6 +152,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 0,
 		critAttackMissileSpeed: 0,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_AlistarWQ`,
@@ -218,6 +220,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 3500,
 		critAttackMissileSpeed: 3500,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_AsheW`,
@@ -301,6 +304,53 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 0,
 		critAttackMissileSpeed: 0,
+		passive: {
+			name: `TFT6_BlitzcrankP`,
+			castTime: 0.25,
+			missile: undefined,
+			variables: {
+				'ShieldAmount': [0, 400, 700, 1000],
+				'ShieldDuration': [8, 8, 8, 8],
+				'Damage': [0, 60, 80, 100],
+				'ManaAbsorbPercent': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
+			},
+			calculations: {
+				'Damage': {
+					asPercent: false,
+					parts: [
+						{
+							operator: `scale`,
+							subparts: [
+								{
+									variable: `Damage`,
+									starValues: [0, 60, 80, 100],
+									stat: `AP`,
+									ratio: 0.009999999776482582,
+								},
+							],
+						},
+					],
+				},
+				'ShieldAmount': {
+					asPercent: false,
+					parts: [
+						{
+							operator: `scale`,
+							subparts: [
+								{
+									variable: `ShieldAmount`,
+									starValues: [0, 400, 700, 1000],
+									stat: `AP`,
+									ratio: 0.009999999776482582,
+								},
+							],
+						},
+					],
+				},
+			},
+			cantCastWhileRooted: undefined,
+			uninterruptable: true,
+		},
 		spells: [
 			{
 				name: `TFT6_BlitzcrankRocketGrab`,
@@ -367,6 +417,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 2000,
 		critAttackMissileSpeed: 2000,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_BrandQ`,
@@ -457,6 +508,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 347.79998779296875,
 		critAttackMissileSpeed: 347.79998779296875,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_BraumR`,
@@ -540,6 +592,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 2500,
 		critAttackMissileSpeed: 2500,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_CaitlynR`,
@@ -604,6 +657,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 467,
 		critAttackMissileSpeed: 467,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_CamilleW`,
@@ -694,6 +748,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: undefined,
 		critAttackMissileSpeed: undefined,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_ChoGathR`,
@@ -751,6 +806,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 2000,
 		critAttackMissileSpeed: 2000,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_CorkiR`,
@@ -815,6 +871,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 0,
 		critAttackMissileSpeed: 0,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_DariusQ`,
@@ -897,6 +954,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 1600,
 		critAttackMissileSpeed: 1600,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_DravenSpinning`,
@@ -1031,6 +1089,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 0,
 		critAttackMissileSpeed: 0,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_EkkoW`,
@@ -1118,6 +1177,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 2000,
 		critAttackMissileSpeed: 2000,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_EzrealQ`,
@@ -1218,6 +1278,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 0,
 		critAttackMissileSpeed: 1000,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_GalioR`,
@@ -1308,6 +1369,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: undefined,
 		critAttackMissileSpeed: undefined,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_GangplankQ`,
@@ -1379,6 +1441,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 1500,
 		critAttackMissileSpeed: 1500,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_GnarR`,
@@ -1488,6 +1551,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: undefined,
 		critAttackMissileSpeed: undefined,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_IllaoiW`,
@@ -1545,6 +1609,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: undefined,
 		critAttackMissileSpeed: undefined,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_IreliaQ`,
@@ -1616,6 +1681,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 20,
 		critAttackMissileSpeed: 0,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_JarvanIVE`,
@@ -1682,6 +1748,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 347.79998779296875,
 		critAttackMissileSpeed: 2500,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_JayceRMelee`,
@@ -1824,6 +1891,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: undefined,
 		critAttackMissileSpeed: undefined,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_JhinR`,
@@ -1899,6 +1967,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 2750,
 		critAttackMissileSpeed: 2750,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_JinxR`,
@@ -1969,6 +2038,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 2000,
 		critAttackMissileSpeed: 2000,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_KaisaQ`,
@@ -2035,6 +2105,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 0,
 		critAttackMissileSpeed: 0,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_KassadinQ`,
@@ -2119,6 +2190,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: undefined,
 		critAttackMissileSpeed: undefined,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_KhaZixR`,
@@ -2192,6 +2264,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 347.79998779296875,
 		critAttackMissileSpeed: 347.79998779296875,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_LeonaW`,
@@ -2259,6 +2332,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 2800,
 		critAttackMissileSpeed: 2800,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_LucianE`,
@@ -2387,6 +2461,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: undefined,
 		critAttackMissileSpeed: undefined,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_LuluR`,
@@ -2454,6 +2529,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 2000,
 		critAttackMissileSpeed: 2000,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_MalzaharE`,
@@ -2513,83 +2589,64 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 0,
 		critAttackMissileSpeed: 0,
-		spells: [
-			{
-				name: `TFT6_TibbersP`,
-				castTime: 0.3499999940395355,
-				missile: {
-					width: undefined,
-					travelTime: undefined,
-					speedInitial: 3500,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {
-					'BuffDuration': [4, 4, 4, 4],
-					'PercentAD': [0.75, 0.75, 0.75, 0.75],
-					'AllyADAPBuff': [20, 20, 20, 20],
-					'AllyPercentAD': [0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645],
-					'AllyPercentASBase': [1, 1, 1, 1],
-				},
-				calculations: {
-					'UNUSED': {
-						asPercent: true,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `UNKNOWN`,
-										starValues: [],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-					'BuffDuration': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `BuffDuration`,
-										starValues: [4, 4, 4, 4],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-				},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
+		passive: {
+			name: `TFT6_TibbersP`,
+			castTime: 0.3499999940395355,
+			missile: {
+				width: undefined,
+				travelTime: undefined,
+				speedInitial: 3500,
+				speedMin: undefined,
+				speedMax: undefined,
+				acceleration: undefined,
+				startDelay: undefined,
+				tracksTarget: true,
 			},
-			{
-				name: `TFT6_TibbersMissileEffect`,
-				castTime: undefined,
-				missile: {
-					width: undefined,
-					travelTime: undefined,
-					speedInitial: 2000,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: undefined,
+			variables: {
+				'BuffDuration': [4, 4, 4, 4],
+				'PercentAD': [0.75, 0.75, 0.75, 0.75],
+				'AllyADAPBuff': [20, 20, 20, 20],
+				'AllyPercentAD': [0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645],
+				'AllyPercentASBase': [1, 1, 1, 1],
 			},
-		],
+			calculations: {
+				'UNUSED': {
+					asPercent: true,
+					parts: [
+						{
+							operator: `scale`,
+							subparts: [
+								{
+									variable: `UNKNOWN`,
+									starValues: [],
+									stat: `AP`,
+									ratio: 0.009999999776482582,
+								},
+							],
+						},
+					],
+				},
+				'BuffDuration': {
+					asPercent: false,
+					parts: [
+						{
+							operator: `scale`,
+							subparts: [
+								{
+									variable: `BuffDuration`,
+									starValues: [4, 4, 4, 4],
+									stat: `AP`,
+									ratio: 0.009999999776482582,
+								},
+							],
+						},
+					],
+				},
+			},
+			cantCastWhileRooted: undefined,
+			uninterruptable: true,
+		},
+		spells: [],
 	},
 	{
 		apiName: `TFT6_HexTechDragon`,
@@ -2615,6 +2672,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 1000,
 		critAttackMissileSpeed: 1000,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_HextechDragonQ`,
@@ -2694,6 +2752,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: undefined,
 		critAttackMissileSpeed: undefined,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_MalzaharVoidlingSpell`,
@@ -2751,6 +2810,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 2000,
 		critAttackMissileSpeed: 2000,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_MissFortuneE`,
@@ -2817,6 +2877,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 1600,
 		critAttackMissileSpeed: 1600,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_MorganaR`,
@@ -2902,6 +2963,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 0,
 		critAttackMissileSpeed: 0,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_NocturneE`,
@@ -2967,6 +3029,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 1450,
 		critAttackMissileSpeed: 1450,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_OriannaR`,
@@ -3051,63 +3114,62 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: undefined,
 		critAttackMissileSpeed: undefined,
-		spells: [
-			{
-				name: `TFT6_PoppyP`,
-				castTime: 0.10000000149011612,
-				missile: {
-					width: undefined,
-					travelTime: undefined,
-					speedInitial: 2000,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-					_missileSpeed: 1400,
-				},
-				variables: {
-					'PercentArmorDamage': [2, 1.7999999523162842, 2.0999999046325684, 2.4000000953674316],
-					'ShieldAmount': [100, 225, 275, 325],
-				},
-				calculations: {
-					'Damage': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `PercentArmorDamage`,
-										starValues: [2, 1.7999999523162842, 2.0999999046325684, 2.4000000953674316],
-										stat: `Armor`,
-										ratio: 1,
-									},
-								],
-							},
-						],
-					},
-					'Shield': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `ShieldAmount`,
-										starValues: [100, 225, 275, 325],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-				},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
+		passive: {
+			name: `TFT6_PoppyP`,
+			castTime: 0.10000000149011612,
+			missile: {
+				width: undefined,
+				travelTime: undefined,
+				speedInitial: 2000,
+				speedMin: undefined,
+				speedMax: undefined,
+				acceleration: undefined,
+				startDelay: undefined,
+				tracksTarget: true,
+				_missileSpeed: 1400,
 			},
-		],
+			variables: {
+				'PercentArmorDamage': [2, 1.7999999523162842, 2.0999999046325684, 2.4000000953674316],
+				'ShieldAmount': [100, 225, 275, 325],
+			},
+			calculations: {
+				'Damage': {
+					asPercent: false,
+					parts: [
+						{
+							operator: `scale`,
+							subparts: [
+								{
+									variable: `PercentArmorDamage`,
+									starValues: [2, 1.7999999523162842, 2.0999999046325684, 2.4000000953674316],
+									stat: `Armor`,
+									ratio: 1,
+								},
+							],
+						},
+					],
+				},
+				'Shield': {
+					asPercent: false,
+					parts: [
+						{
+							operator: `scale`,
+							subparts: [
+								{
+									variable: `ShieldAmount`,
+									starValues: [100, 225, 275, 325],
+									stat: `AP`,
+									ratio: 0.009999999776482582,
+								},
+							],
+						},
+					],
+				},
+			},
+			cantCastWhileRooted: undefined,
+			uninterruptable: true,
+		},
+		spells: [],
 	},
 	{
 		apiName: `TFT6_Quinn`,
@@ -3133,6 +3195,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 2000,
 		critAttackMissileSpeed: 2000,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_QuinnQ`,
@@ -3198,6 +3261,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: undefined,
 		critAttackMissileSpeed: undefined,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_RekSaiE`,
@@ -3304,6 +3368,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 1800,
 		critAttackMissileSpeed: 1800,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_RenataR`,
@@ -3371,48 +3436,38 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: undefined,
 		critAttackMissileSpeed: 0,
-		spells: [
-			{
-				name: `TFT6_SejuaniP`,
-				castTime: undefined,
-				missile: undefined,
-				variables: {
-					'DefensiveStats': [0, 50, 75, 125],
-					'Duration': [4, 4, 4, 4],
-					'StunDuration': [0, 1.5, 2, 3],
-					'MagicDamage': [0, 275, 400, 650],
-				},
-				calculations: {
-					'Damage': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `MagicDamage`,
-										starValues: [0, 275, 400, 650],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-				},
-				cantCastWhileRooted: undefined,
-				uninterruptable: undefined,
+		passive: {
+			name: `TFT6_SejuaniP`,
+			castTime: undefined,
+			missile: undefined,
+			variables: {
+				'DefensiveStats': [0, 50, 75, 125],
+				'Duration': [4, 4, 4, 4],
+				'StunDuration': [0, 1.5, 2, 3],
+				'MagicDamage': [0, 275, 400, 650],
 			},
-			{
-				name: `TFT6_SejuaniPStun`,
-				castTime: undefined,
-				missile: undefined,
-				variables: {},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
+			calculations: {
+				'Damage': {
+					asPercent: false,
+					parts: [
+						{
+							operator: `scale`,
+							subparts: [
+								{
+									variable: `MagicDamage`,
+									starValues: [0, 275, 400, 650],
+									stat: `AP`,
+									ratio: 0.009999999776482582,
+								},
+							],
+						},
+					],
+				},
 			},
-		],
+			cantCastWhileRooted: undefined,
+			uninterruptable: undefined,
+		},
+		spells: [],
 	},
 	{
 		apiName: `TFT6_Senna`,
@@ -3438,6 +3493,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 8000,
 		critAttackMissileSpeed: 8000,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_SennaQ`,
@@ -3543,6 +3599,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 1800,
 		critAttackMissileSpeed: 1800,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_SeraphineR`,
@@ -3626,6 +3683,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 2000,
 		critAttackMissileSpeed: 2000,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_SilcoR`,
@@ -3694,6 +3752,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 0,
 		critAttackMissileSpeed: 0,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_SingedE`,
@@ -3760,6 +3819,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: undefined,
 		critAttackMissileSpeed: undefined,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_SivirW`,
@@ -3844,6 +3904,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 1800,
 		critAttackMissileSpeed: 1800,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_SwainQ`,
@@ -3926,6 +3987,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 1800,
 		critAttackMissileSpeed: 1800,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_SyndraW`,
@@ -3992,6 +4054,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: undefined,
 		critAttackMissileSpeed: undefined,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_TahmKenchW`,
@@ -4068,47 +4131,46 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 0,
 		critAttackMissileSpeed: 0,
-		spells: [
-			{
-				name: `TFT6_TalonP`,
-				castTime: undefined,
-				missile: {
-					width: undefined,
-					travelTime: undefined,
-					speedInitial: 1200,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {
-					'Damage': [0, 450, 650, 950],
-					'BleedDuration': [7, 7, 7, 7],
-					'VIPBleedDurationBonus': [100, 100, 100, 100],
-				},
-				calculations: {
-					'Damage': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `Damage`,
-										starValues: [0, 450, 650, 950],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-				},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
+		passive: {
+			name: `TFT6_TalonP`,
+			castTime: undefined,
+			missile: {
+				width: undefined,
+				travelTime: undefined,
+				speedInitial: 1200,
+				speedMin: undefined,
+				speedMax: undefined,
+				acceleration: undefined,
+				startDelay: undefined,
+				tracksTarget: true,
 			},
-		],
+			variables: {
+				'Damage': [0, 450, 650, 950],
+				'BleedDuration': [7, 7, 7, 7],
+				'VIPBleedDurationBonus': [100, 100, 100, 100],
+			},
+			calculations: {
+				'Damage': {
+					asPercent: false,
+					parts: [
+						{
+							operator: `scale`,
+							subparts: [
+								{
+									variable: `Damage`,
+									starValues: [0, 450, 650, 950],
+									stat: `AP`,
+									ratio: 0.009999999776482582,
+								},
+							],
+						},
+					],
+				},
+			},
+			cantCastWhileRooted: undefined,
+			uninterruptable: true,
+		},
+		spells: [],
 	},
 	{
 		apiName: `TFT_TrainingDummy`,
@@ -4134,6 +4196,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: undefined,
 		critAttackMissileSpeed: undefined,
+		passive: undefined,
 		spells: [],
 	},
 	{
@@ -4160,6 +4223,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 347.79998779296875,
 		critAttackMissileSpeed: 347.79998779296875,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_TryndamereE`,
@@ -4223,6 +4287,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: undefined,
 		critAttackMissileSpeed: undefined,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_TwitchR`,
@@ -4296,6 +4361,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: undefined,
 		critAttackMissileSpeed: undefined,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_VeigarW`,
@@ -4352,6 +4418,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 2000,
 		critAttackMissileSpeed: 2000,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_VexW`,
@@ -4452,6 +4519,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 1000,
 		critAttackMissileSpeed: 1000,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6b_Vi_Spell`,
@@ -4552,6 +4620,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 2300,
 		critAttackMissileSpeed: 2300,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_ViktorE`,
@@ -4611,6 +4680,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: undefined,
 		critAttackMissileSpeed: undefined,
+		passive: undefined,
 		spells: [],
 	},
 	{
@@ -4637,62 +4707,61 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: undefined,
 		critAttackMissileSpeed: undefined,
-		spells: [
-			{
-				name: `TFT6_WarwickP`,
-				castTime: undefined,
-				missile: {
-					width: undefined,
-					travelTime: undefined,
-					speedInitial: 1200,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {
-					'PercentHealth': [0.05000000074505806, 0.07000000029802322, 0.09000000357627869, 0.11999999731779099],
-					'HealAmount': [0, 35, 50, 75],
-				},
-				calculations: {
-					'PercentHealth': {
-						asPercent: true,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `PercentHealth`,
-										starValues: [0.05000000074505806, 0.07000000029802322, 0.09000000357627869, 0.11999999731779099],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-					'HealAmount': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `HealAmount`,
-										starValues: [0, 35, 50, 75],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-				},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
+		passive: {
+			name: `TFT6_WarwickP`,
+			castTime: undefined,
+			missile: {
+				width: undefined,
+				travelTime: undefined,
+				speedInitial: 1200,
+				speedMin: undefined,
+				speedMax: undefined,
+				acceleration: undefined,
+				startDelay: undefined,
+				tracksTarget: true,
 			},
-		],
+			variables: {
+				'PercentHealth': [0.05000000074505806, 0.07000000029802322, 0.09000000357627869, 0.11999999731779099],
+				'HealAmount': [0, 35, 50, 75],
+			},
+			calculations: {
+				'PercentHealth': {
+					asPercent: true,
+					parts: [
+						{
+							operator: `scale`,
+							subparts: [
+								{
+									variable: `PercentHealth`,
+									starValues: [0.05000000074505806, 0.07000000029802322, 0.09000000357627869, 0.11999999731779099],
+									stat: `AP`,
+									ratio: 0.009999999776482582,
+								},
+							],
+						},
+					],
+				},
+				'HealAmount': {
+					asPercent: false,
+					parts: [
+						{
+							operator: `scale`,
+							subparts: [
+								{
+									variable: `HealAmount`,
+									starValues: [0, 35, 50, 75],
+									stat: `AP`,
+									ratio: 0.009999999776482582,
+								},
+							],
+						},
+					],
+				},
+			},
+			cantCastWhileRooted: undefined,
+			uninterruptable: true,
+		},
+		spells: [],
 	},
 	{
 		apiName: `TFT6_Zac`,
@@ -4718,6 +4787,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 1000,
 		critAttackMissileSpeed: 1000,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_ZacQ`,
@@ -4785,6 +4855,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 2300,
 		critAttackMissileSpeed: 2300,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_ZeriW`,
@@ -4899,6 +4970,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 1500,
 		critAttackMissileSpeed: 1500,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_ZiggsR`,
@@ -4963,6 +5035,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 1200,
 		critAttackMissileSpeed: 1200,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_ZileanQ`,
@@ -5030,6 +5103,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 1700,
 		critAttackMissileSpeed: 2000,
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_ZyraQ`,

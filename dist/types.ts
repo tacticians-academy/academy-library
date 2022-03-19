@@ -139,6 +139,7 @@ export interface ChampionData {
 	},
 	basicAttackMissileSpeed?: number
 	critAttackMissileSpeed?: number
+	passive: ChampionSpellData | undefined
 	spells: ChampionSpellData[]
 }
 
