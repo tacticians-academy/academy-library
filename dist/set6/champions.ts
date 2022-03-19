@@ -304,53 +304,7 @@ export const champions: ChampionData[] = [
 		},
 		basicAttackMissileSpeed: 0,
 		critAttackMissileSpeed: 0,
-		passive: {
-			name: `TFT6_BlitzcrankP`,
-			castTime: 0.25,
-			missile: undefined,
-			variables: {
-				'ShieldAmount': [0, 400, 700, 1000],
-				'ShieldDuration': [8, 8, 8, 8],
-				'Damage': [0, 60, 80, 100],
-				'ManaAbsorbPercent': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
-			},
-			calculations: {
-				'Damage': {
-					asPercent: false,
-					parts: [
-						{
-							operator: `scale`,
-							subparts: [
-								{
-									variable: `Damage`,
-									starValues: [0, 60, 80, 100],
-									stat: `AP`,
-									ratio: 0.009999999776482582,
-								},
-							],
-						},
-					],
-				},
-				'ShieldAmount': {
-					asPercent: false,
-					parts: [
-						{
-							operator: `scale`,
-							subparts: [
-								{
-									variable: `ShieldAmount`,
-									starValues: [0, 400, 700, 1000],
-									stat: `AP`,
-									ratio: 0.009999999776482582,
-								},
-							],
-						},
-					],
-				},
-			},
-			cantCastWhileRooted: undefined,
-			uninterruptable: true,
-		},
+		passive: undefined,
 		spells: [
 			{
 				name: `TFT6_BlitzcrankRocketGrab`,

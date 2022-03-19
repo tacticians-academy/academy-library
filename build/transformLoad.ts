@@ -439,7 +439,7 @@ const outputChampions = await Promise.all(playableChampions.map(async champion =
 	// }
 	let isFirstSpell = true
 	const passiveName = apiName + 'P'
-	const passiveSpell = getSpell(passiveName, json)
+	const passiveSpell = spellNames.includes(passiveName) ? getSpell(passiveName, json) : undefined
 	const passive = passiveSpell ? transformSpellData(passiveName, passiveSpell, json) : undefined
 	const spells = spellNames
 		.filter(name => name && name !== 'BaseSpell' && name !== passiveName)
