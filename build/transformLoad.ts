@@ -461,7 +461,9 @@ const outputChampions = await Promise.all(playableChampions.map(async champion =
 			return true
 		})
 		.map(([spellName, spellData]) => {
-			const missileSpec = spellData.mMissileSpec
+			const missileName = spellName + 'Missile'
+			const missileSpell = getSpell(missileName, json)
+			const missileSpec = spellData.mMissileSpec ?? missileSpell?.mMissileSpec
 			const missileMovement = missileSpec?.movementComponent
 			// const variables: {name: string, values: number[]}[] = []
 			const variables: SpellVariables = {}
@@ -571,15 +573,16 @@ const outputChampions = await Promise.all(playableChampions.map(async champion =
 				}
 			}
 			const missileSpeed = spellData.missileSpeed
+			const missileMovementSpeed = missileMovement?.mInitialSpeed ?? missileMovement?.mSpeed ?? missileSpeed
 			const spell: ChampionSpellData = {
 				name: spellName,
-				castTime: spellData.mCastTime,
+				castTime: spellData.mCastTime ?? missileSpell?.mCastTime,
 				missile: !missileSpec && missileSpeed == null
 					? undefined
 					: {
 						width: missileSpec?.mMissileWidth,
 						travelTime: missileMovement?.mTravelTime,
-						speedInitial: missileMovement?.mInitialSpeed ?? missileMovement?.mSpeed ?? missileSpeed!,
+						speedInitial: missileMovementSpeed ?? missileSpeed!,
 						speedMin: missileMovement?.mMinSpeed,
 						speedMax: missileMovement?.mMaxSpeed,
 						acceleration: missileMovement?.mAcceleration,
@@ -590,6 +593,9 @@ const outputChampions = await Promise.all(playableChampions.map(async champion =
 				calculations,
 				cantCastWhileRooted: spellData.cantCastWhileRooted,
 				uninterruptable: spellData.mCantCancelWhileWindingUp,
+			}
+			if (spell.missile && missileSpeed && missileSpeed !== missileMovementSpeed) {
+				spell.missile._missileSpeed = missileSpeed
 			}
 			// if (spellData.mCastTime == null) { //TODO verify these aren't supposed to instacast?
 			// 	console.log('!mCastTime', spellName)

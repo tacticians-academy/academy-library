@@ -75,6 +75,7 @@ export interface ChampionSpellMissileData {
 	width?: number
 	travelTime?: number
 	speedInitial?: number
+	_missileSpeed?: number
 	speedMin?: number
 	speedMax?: number
 	acceleration?: number

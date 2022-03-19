@@ -314,6 +314,7 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					_missileSpeed: 1800,
 				},
 				variables: {
 					'Damage': [200, 150, 300, 900],
@@ -460,7 +461,16 @@ export const champions: ChampionData[] = [
 			{
 				name: `TFT6_BraumR`,
 				castTime: 0.5,
-				missile: undefined,
+				missile: {
+					width: 115,
+					travelTime: undefined,
+					speedInitial: 1400,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: false,
+				},
 				variables: {
 					'Damage': [100, 100, 200, 600],
 					'StunDuration': [2.5, 2, 2.75, 8],
@@ -2651,6 +2661,7 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					_missileSpeed: 700,
 				},
 				variables: {},
 				calculations: {},
@@ -2969,6 +2980,7 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					_missileSpeed: 3500,
 				},
 				variables: {
 					'ShieldAmount': [0, 120, 170, 600],
@@ -3052,6 +3064,7 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					_missileSpeed: 1400,
 				},
 				variables: {
 					'PercentArmorDamage': [2, 1.7999999523162842, 2.0999999046325684, 2.4000000953674316],
@@ -3438,6 +3451,7 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: 0.05000000074505806,
 					tracksTarget: false,
+					_missileSpeed: 2000,
 				},
 				variables: {
 					'PercentAD': [1.600000023841858, 1.600000023841858, 1.600000023841858, 1.600000023841858],
@@ -3834,7 +3848,16 @@ export const champions: ChampionData[] = [
 			{
 				name: `TFT6_SwainQ`,
 				castTime: 0.5,
-				missile: undefined,
+				missile: {
+					width: 20,
+					travelTime: 0.20000000298023224,
+					speedInitial: undefined,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: false,
+				},
 				variables: {
 					'BaseDamage': [0, 225, 300, 450],
 					'Range': [660, 660, 660, 660],
@@ -4700,14 +4723,15 @@ export const champions: ChampionData[] = [
 				name: `TFT6_ZacQ`,
 				castTime: 0.2750000059604645,
 				missile: {
-					width: undefined,
+					width: 80,
 					travelTime: undefined,
-					speedInitial: 1450,
+					speedInitial: 3360,
 					speedMin: undefined,
 					speedMax: undefined,
 					acceleration: undefined,
 					startDelay: undefined,
-					tracksTarget: true,
+					tracksTarget: false,
+					_missileSpeed: 1450,
 				},
 				variables: {
 					'Damage': [50, 300, 400, 600],
