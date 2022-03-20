@@ -1,5 +1,5 @@
 export type SpellVariables = Record<string, number[]>
-export type EffectVariables = Record<string, number | null>
+export type EffectVariables = {[key in string]?: number | null}
 
 export type AugmentTier = 1 | 2 | 3
 
