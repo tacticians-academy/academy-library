@@ -6,6 +6,7 @@ export type AugmentTier = 1 | 2 | 3
 export interface AugmentData {
 	tier: AugmentTier,
 	name: string
+	groupID: string
 	desc: string
 	icon: string
 	effects: EffectVariables,

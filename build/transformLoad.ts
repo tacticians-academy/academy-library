@@ -9,6 +9,7 @@ import { ChampionJSON, ChampionJSONType, ChampionJSONAttack, ChampionJSONSpell, 
 
 import { COMPONENT_ITEM_IDS, ItemTypeKey } from '../dist/index.js'
 import { AugmentData, AugmentTier, BonusKey, ChampionSpellData, EffectVariables, ItemData, SpellCalculations, SpellCalculationPart, SpellCalculationSubpart, SpellVariables, TraitData } from '../dist/index.js'
+import { getAugmentNameKey } from './helpers/utils.js'
 
 function sortByName(a: {name: string}, b: {name: string}) {
 	return a.name.localeCompare(b.name)
@@ -189,14 +190,15 @@ traits.forEach((trait: TraitData) => {
 	})
 })
 
+function toKey(name: string) {
+	return name.replaceAll(/['.+\-!]/g, '').split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join('')
+}
+
 const itemKeys = currentItemsByType['component'].concat(currentItemsByType['completed'], currentItemsByType['spatula'])
 	.sort((a, b) => a.id - b.id)
-	.map(({name, id}) => {
-		const key = name.replaceAll(/['.\+-]/g, '').split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join('')
-		return `${key} = ${id}`
-	})
+	.map(({name, id}) => `${toKey(name)} = ${id}`)
 	.join(', ')
-const itemKeysString = `export enum ItemKey {\n\t${itemKeys}\n}`
+const itemKeysString = `export const enum ItemKey {\n\t${itemKeys}\n}`
 
 if (unreplacedIDs.size) {
 	console.log('Unused substitutions', unreplacedIDs)
@@ -310,9 +312,11 @@ for (const item of itemsData) {
 				delete effects[key]
 			}
 		}
+		const key = toKey(getAugmentNameKey(item))
 		const data: AugmentData = {
 			tier,
 			name: item.name,
+			groupID: key[0].toLowerCase() + key.slice(1),
 			desc: item.desc,
 			effects: effects as EffectVariables,
 			icon: item.icon,
@@ -325,8 +329,14 @@ for (const item of itemsData) {
 	}
 }
 
+const augmentKeys = activeAugments
+	.sort((a, b) => a.groupID.localeCompare(b.groupID))
+	.map(augment => `${toKey(getAugmentNameKey(augment))} = '${augment.groupID}'`)
+const augmentKeysString = `export const enum AugmentGroupKey {\n\t${Array.from(new Set(augmentKeys)).join(', ')}\n}`
+
 const outputAugmentSections = [
 	`import type { AugmentData } from '../index'`,
+	augmentKeysString,
 	`export const activeAugments: AugmentData[] = ` + formatJS(activeAugments),
 	`export const inactiveAugments: AugmentData[] = ` + formatJS(unreleasedAugments),
 ]
@@ -509,7 +519,7 @@ const outputChampions = await Promise.all(playableChampions.map(async champion =
 
 const championKeys = playableChampions
 	.map(champion => `${getEnumKeyFrom(champion.apiName)} = \`${champion.name}\``)
-const championKeysString = `export enum ChampionKey {\n\t${championKeys.join(', ')}\n}`
+const championKeysString = `export const enum ChampionKey {\n\t${championKeys.join(', ')}\n}`
 
 // Output
 

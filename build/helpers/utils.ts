@@ -1,6 +1,6 @@
-import type { AugmentData } from '../../dist/index.js'
+import type { AugmentData, ItemData } from '../../dist/index.js'
 
-export function getAugmentNameKey(item: AugmentData) {
+export function getAugmentNameKey(item: AugmentData | ItemData) {
 	if (item.name === 'Arcane Crest') {
 		return 'Arcanist Crest'
 	}

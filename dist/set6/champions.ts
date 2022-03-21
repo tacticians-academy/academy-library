@@ -1,6 +1,6 @@
 import type { ChampionData } from '../index'
 
-export enum ChampionKey {
+export const enum ChampionKey {
 	Ahri = `Ahri`, Alistar = `Alistar`, Ashe = `Ashe`, Blitzcrank = `Blitzcrank`, Brand = `Brand`, Braum = `Braum`, Caitlyn = `Caitlyn`, Camille = `Camille`, ChoGath = `Cho'Gath`, Corki = `Corki`, Darius = `Darius`, Draven = `Draven`, Ekko = `Ekko`, Ezreal = `Ezreal`, Galio = `Galio`, Gangplank = `Gangplank`, Gnar = `Gnar`, Illaoi = `Illaoi`, Irelia = `Irelia`, JarvanIV = `Jarvan IV`, Jayce = `Jayce`, Jhin = `Jhin`, Jinx = `Jinx`, Kaisa = `Kai'Sa`, Kassadin = `Kassadin`, KhaZix = `Kha'Zix`, Leona = `Leona`, Lucian = `Lucian`, Lulu = `Lulu`, Malzahar = `Malzahar`, Tibbers = `Mechanical Bear`, HexTechDragon = `Mechanical Dragon`, MalzaharVoidling = `Mechanical Scarab`, MissFortune = `Miss Fortune`, Morgana = `Morgana`, Nocturne = `Nocturne`, Orianna = `Orianna`, Poppy = `Poppy`, Quinn = `Quinn`, RekSai = `Rek'Sai`, Renata = `Renata Glasc`, Sejuani = `Sejuani`, Senna = `Senna`, Seraphine = `Seraphine`, Silco = `Silco`, Singed = `Singed`, Sivir = `Sivir`, Swain = `Swain`, Syndra = `Syndra`, TahmKench = `Tahm Kench`, Talon = `Talon`, TrainingDummy = `Target Dummy`, Tryndamere = `Tryndamere`, Twitch = `Twitch`, Veigar = `Veigar`, Vex = `Vex`, Vi = `Vi`, Viktor = `Viktor`, VoidSpawn = `Voidspawn`, Warwick = `Warwick`, Zac = `Zac`, Zeri = `Zeri`, Ziggs = `Ziggs`, Zilean = `Zilean`, Zyra = `Zyra`
 }
 
