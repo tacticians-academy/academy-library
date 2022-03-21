@@ -2,9 +2,12 @@ const IS_MID_SET = true
 
 import fetch from 'node-fetch'
 import fs from 'fs/promises'
+import process from 'process'
 
-import { getCurrentSetNumber, githubTokenPath, importItems, importTraits, importChampions } from './helpers/files.js'
-import { BonusKey } from '../dist/types.js'
+import { getCurrentSetNumber, githubTokenPath, importAugments, importItems, importTraits, importChampions, loadHardcodedTXT } from './helpers/files.js'
+import { AugmentData, BonusKey, EffectVariables } from '../dist/types.js'
+
+import { getAugmentNameKey } from './helpers/utils.js'
 
 const githubToken = (await fs.readFile(githubTokenPath, 'utf8')).trim()
 
@@ -17,6 +20,7 @@ interface GithubIssueData {
 
 async function createIssue(data: GithubIssueData) {
 	try {
+		// const repo = 'ky-is/TEST' //SAMPLE
 		const repo = 'tacticians-academy/teamfight-simulator'
 		const response = await fetch(`https://api.github.com/repos/${repo}/import/issues`, {
 			method: 'POST',
@@ -44,6 +48,32 @@ async function createIssue(data: GithubIssueData) {
 	return true
 }
 
+const bonusKeyEntries = Object.values(BonusKey)
+
+function getBulletEntriesFor(effectVariablesArray: (EffectVariables | null)[]) {
+	const output: Record<string, (number | null | undefined)[]> = {}
+	const effectVariablesRep = effectVariablesArray.find((effectVariables): effectVariables is EffectVariables => !!effectVariables)!
+	for (const key in effectVariablesRep) {
+		if (key.startsWith('{')) {
+			continue
+		}
+		const outputKey = key.replace(/[1-4]Star/, '')
+		output[outputKey] = effectVariablesArray.map(effectVariables => effectVariables?.[key] ?? null)
+	}
+	const outputEntries = Object.entries(output)
+	return !outputEntries.length ? [] : outputEntries.map(([key, values]) => {
+		const outputKey = bonusKeyEntries.includes(key.replace('Bonus', '') as BonusKey) ? `_${key}_` : key
+		const outputValues = values.map(value => `\`${value}\``).join(' | ')
+		return `${outputKey} | ${outputValues}`
+	})
+}
+
+function formatBulletEntries(bullets: string[], labels: string[]) {
+	return !bullets.length ? '' : `\nVariable | ${labels.join(' | ')}\n--- | ${labels.map(_ => '---').join(' | ')}` + bullets.map(line => `\n${line}`).join('')
+}
+
+// Set data
+
 const milestoneIDForSetString: Record<string, number> = {
 	'6.5': 1,
 }
@@ -51,76 +81,108 @@ const milestoneIDForSetString: Record<string, number> = {
 const currentSetNumber = await getCurrentSetNumber()
 const setString = IS_MID_SET ? `${currentSetNumber}.5` : currentSetNumber.toString()
 const milestone = milestoneIDForSetString[setString]
+if (!milestone) {
+	console.log('Unknown milestone', setString)
+	process.exit(0)
+}
 
-const { champions } = await importChampions(currentSetNumber)
-const { traits } = await importTraits(currentSetNumber)
+const { AugmentGroupKey, activeAugments } = await importAugments(currentSetNumber)
+const { ChampionKey, champions } = await importChampions(currentSetNumber)
+const { TraitKey, traits } = await importTraits(currentSetNumber)
 const { completedItems } = await importItems(currentSetNumber)
 
+// Champions
+
 for (const champion of champions) {
-	// if ([].includes(champion.name)) { continue }
-	if (!milestone) {
-		console.log('Unknown milestone', setString)
-		break
-	}
-	const canContinue = await createIssue({
-		title: `${champion.name} ability`,
-		body: `Implement ${champion.name} ability`,
-		labels: [`Champion Ability`, `Set ${setString}`],
-		milestone,
-	})
-	if (!canContinue) {
-		break
-	}
+	if (champion.name !== ChampionKey.Alistar) { continue } //SAMPLE
+	// const canContinue = await createIssue({
+	// 	title: `${champion.name} ability`,
+	// 	body: `Implement ${champion.name} ability`,
+	// 	labels: [`Champion Ability`, `Set ${setString}`],
+	// 	milestone,
+	// })
+	// if (!canContinue) {
+	// 	break
+	// }
 	// break //SAMPLE
 }
 
-const bonusKeyEntries = Object.values(BonusKey)
-
-function getBulletEntriesFor(variableKeys: string[]) {
-	const deduped = Array.from(new Set(variableKeys.map(key => key.replace(/[1-4]Star/, ''))))
-	return deduped
-		.filter(key => {
-			return !key.startsWith('{') && !bonusKeyEntries.includes(key.replace('Bonus', '') as BonusKey)
-		})
-}
+// Traits
 
 for (const trait of traits) {
-	if (!milestone) {
-		console.log('Unknown milestone', setString)
-		break
-	}
-	const bulletPoints = getBulletEntriesFor(trait.effects.flatMap(effect => Object.keys(effect.variables)))
+	// if (trait.name !== TraitKey.Hextech) { continue } //SAMPLE
+	const bulletPoints = getBulletEntriesFor(trait.effects.map(effect => effect.variables))
 	console.log(trait.name, bulletPoints)
 
-	const canContinue = await createIssue({
-		title: `${trait.name} trait`,
-		body: `Implement ${trait.name} trait` + bulletPoints.map(line => `\n- ${line}`).join(''),
-		labels: [`Trait`, `Set ${setString}`],
-		milestone,
-	})
-	if (!canContinue) {
-		break
-	}
+	// const canContinue = await createIssue({
+	// 	title: `${trait.name} trait`,
+	// 	body: `Implement ${trait.name} trait` + formatBulletEntries(bulletPoints, ['.', '.', '.', '.', '.']),
+	// 	labels: [`Trait`, `Set ${setString}`],
+	// 	milestone,
+	// })
+	// if (!canContinue) {
+	// 	break
+	// }
 	// break //SAMPLE
 }
 
+// Items
+
 for (const item of completedItems) {
-	if (!milestone) {
-		console.log('Unknown milestone', setString)
-		break
-	}
-	const bulletPoints = getBulletEntriesFor(Object.keys(item.effects))
+	const bulletPoints = getBulletEntriesFor([item.effects])
 		.filter(bulletPoint => !bulletPoint.includes('Tooltip'))
 	console.log(item.name, bulletPoints)
 
-	const canContinue = await createIssue({
-		title: `${item.name} item`,
-		body: `Implement ${item.name} item` + bulletPoints.map(line => `\n- ${line}`).join(''),
-		labels: [`Item`, `Set ${setString}`],
-		milestone,
-	})
-	if (!canContinue) {
-		break
+	// const canContinue = await createIssue({
+	// 	title: `${item.name} item`,
+	// 	body: `Implement ${item.name} item` + formatBulletEntries(bulletPoints, ['Value']),
+	// 	labels: [`Item`, `Set ${setString}`],
+	// 	milestone,
+	// })
+	// if (!canContinue) {
+	// 	break
+	// }
+	// break //SAMPLE
+}
+
+// Augments
+
+const emptyImplementationAugments = await loadHardcodedTXT(currentSetNumber, 'augments-empty')
+const augmentGroups: Record<string, [AugmentData?, AugmentData?, AugmentData?]> = {}
+for (const augment of activeAugments) {
+	if (!augmentGroups[augment.groupID]) {
+		augmentGroups[augment.groupID] = []
 	}
+	augmentGroups[augment.groupID][augment.tier - 1] = augment
+}
+const outputAugmentGroups = Object.values(augmentGroups)//.map(group => group.filter((entry): entry is AugmentData => !!entry))
+for (const augmentGroup of outputAugmentGroups) {
+	const augmentRep = augmentGroup.find(augment => !!augment)!
+	// if (augmentRep.groupID !== AugmentGroupKey.CelestialBlessing) { continue } //SAMPLE
+	if (emptyImplementationAugments.includes(augmentRep.groupID)) {
+		continue
+	}
+	if (augmentRep.groupID.endsWith('Heart') || augmentRep.groupID.endsWith('Crest') || augmentRep.groupID.endsWith('Crown') || augmentRep.groupID.endsWith('Soul')) {
+		continue
+	}
+	const bulletPoints = getBulletEntriesFor(augmentGroup.map(augment => augment?.effects ?? {}))
+		.filter(bulletPoint => !bulletPoint.includes('Tooltip'))
+	console.log(augmentRep.groupID, augmentRep.desc, bulletPoints)
+	const descriptions: string[] = []
+	augmentGroup.forEach(augment => {
+		if (augment && !descriptions.includes(augment.desc)) {
+			descriptions.push(augment.desc)
+		}
+	})
+
+	// const canContinue = await createIssue({
+	// 	title: `${getAugmentNameKey(augmentRep)} augment`,
+	// 	body: descriptions.join('\n').replaceAll('@', '`') + formatBulletEntries(bulletPoints, ['I', 'II', 'III']),
+	// 	labels: [`Augment`],
+	// 	milestone,
+	// })
+	// if (!canContinue) {
+	// 	break
+	// }
 	// break //SAMPLE
 }
