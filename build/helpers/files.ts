@@ -22,7 +22,6 @@ export function getPathTo(setNumber: number, filename: string) {
 
 export async function loadHardcodedTXT(currentSetNumber: number, name: string) {
 	return (await fs.readFile(getPathTo(currentSetNumber, `hardcoded/${name}.txt`), 'utf8'))
-		.toLowerCase()
 		.split('\n')
 		.filter(line => line)
 }

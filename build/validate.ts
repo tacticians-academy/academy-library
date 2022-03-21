@@ -1,8 +1,6 @@
-import fs from 'fs/promises'
-
 import type { AugmentData, AugmentTierProbability } from '../dist/index'
 
-import { getCurrentSetNumber, getPathTo, importAugments, importAugmentTiers, loadHardcodedTXT } from './helpers/files.js'
+import { getCurrentSetNumber, importAugments, importAugmentTiers, loadHardcodedTXT } from './helpers/files.js'
 import { getAugmentNameKey } from './helpers/utils.js'
 
 const currentSetNumber = await getCurrentSetNumber()
@@ -11,7 +9,8 @@ const { activeAugments, inactiveAugments } = await importAugments(currentSetNumb
 
 console.log('\n')
 
-const knownAugmentNames = await loadHardcodedTXT(currentSetNumber, 'augments-known')
+const knownAugmentNames = (await loadHardcodedTXT(currentSetNumber, 'augments-known'))
+	.map(line => line.toLowerCase())
 const remainingKnownAugmentNames = new Set(knownAugmentNames)
 const foundAugmentNames = activeAugments.map(augment => augment.name.toLowerCase())
 const remainingFoundAugmentNames = new Set(foundAugmentNames)

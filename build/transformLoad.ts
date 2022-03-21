@@ -2,7 +2,7 @@ const MAX_STAR_LEVEL = 3
 
 import fs from 'fs/promises'
 
-import { getCurrentSetNumber, getPathTo, importItems, importTraits, importSetData } from './helpers/files.js'
+import { getCurrentSetNumber, getPathTo, importItems, importTraits, importSetData, loadHardcodedTXT } from './helpers/files.js'
 import { formatJS } from './helpers/formatting.js'
 import { BASE_UNIT_API_NAMES, UNRELEASED_ITEM_NAME_KEYS, NORMALIZE_EFFECT_KEYS, SUBSTITUTE_EFFECT_KEYS, mStatSubstitutions, spellCalculationOperatorSubstitutions } from './helpers/normalize.js'
 import { ChampionJSON, ChampionJSONType, ChampionJSONAttack, ChampionJSONSpell, ChampionJSONSpellAttack, ChampionJSONStats, ResponseJSON } from './helpers/types.js'
@@ -332,11 +332,12 @@ for (const item of itemsData) {
 const augmentKeys = activeAugments
 	.sort((a, b) => a.groupID.localeCompare(b.groupID))
 	.map(augment => `${toKey(getAugmentNameKey(augment))} = '${augment.groupID}'`)
-const augmentKeysString = `export const enum AugmentGroupKey {\n\t${Array.from(new Set(augmentKeys)).join(', ')}\n}`
+const emptyImplementationAugments = await loadHardcodedTXT(currentSetNumber, 'augments-empty')
 
 const outputAugmentSections = [
 	`import type { AugmentData } from '../index'`,
-	augmentKeysString,
+	`export const enum AugmentGroupKey {\n\t${Array.from(new Set(augmentKeys)).join(', ')}\n}`,
+	`export const emptyImplementationAugments: AugmentGroupKey[] =  [${emptyImplementationAugments.map(id => `AugmentGroupKey.${id[0].toUpperCase() + id.slice(1)}`).join(', ')}]`,
 	`export const activeAugments: AugmentData[] = ` + formatJS(activeAugments),
 	`export const inactiveAugments: AugmentData[] = ` + formatJS(unreleasedAugments),
 ]
