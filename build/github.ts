@@ -162,7 +162,10 @@ for (const augmentGroup of outputAugmentGroups) {
 	if (emptyImplementationAugments.includes(augmentRep.groupID)) {
 		continue
 	}
-	if (augmentRep.groupID.endsWith('Heart') || augmentRep.groupID.endsWith('Crest') || augmentRep.groupID.endsWith('Crown') || augmentRep.groupID.endsWith('Soul')) {
+	// if (!augmentRep.groupID.endsWith('Heart') && !augmentRep.groupID.endsWith('Soul')) {
+	// 	continue
+	// }
+	if (augmentRep.groupID.endsWith('Crest') || augmentRep.groupID.endsWith('Crown')) {
 		continue
 	}
 	const bulletPoints = getBulletEntriesFor(augmentGroup.map(augment => augment?.effects ?? {}))

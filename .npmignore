@@ -3,3 +3,4 @@ dist/set*/champion/
 dist/set*/**/*.txt
 dist/set*/._.json
 pnpm-lock.yaml
+tsconfig.*json
