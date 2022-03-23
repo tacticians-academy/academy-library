@@ -103,6 +103,7 @@ export interface SpellCalculationSubpart {
 	variable: string
 	starValues: number[]
 	stat?: string
+	statFromTarget?: boolean
 	ratio?: number
 	max?: number
 }
