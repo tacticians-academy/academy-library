@@ -1,6 +1,6 @@
 import type { ItemData } from '../index'
 
-export const enum ItemKey {
+export enum ItemKey {
 	BFSword = 1, RecurveBow = 2, NeedlesslyLargeRod = 3, TearOfTheGoddess = 4, ChainVest = 5, NegatronCloak = 6, GiantsBelt = 7, Spatula = 8, SparringGloves = 9, Deathblade = 11, GiantSlayer = 12, HextechGunblade = 13, SpearOfShojin = 14, Bloodthirster = 16, ZekesHerald = 17, InfinityEdge = 19, RapidFirecannon = 22, GuinsoosRageblade = 23, StatikkShiv = 24, TitansResolve = 25, RunaansHurricane = 26, ZzRotPortal = 27, ChallengerEmblem = 28, LastWhisper = 29, RabadonsDeathcap = 33, ArchangelsStaff = 34, LocketOfTheIronSolari = 35, IonicSpark = 36, Morellonomicon = 37, ArcanistEmblem = 38, JeweledGauntlet = 39, BlueBuff = 44, FrozenHeart = 45, ChaliceOfPower = 46, Redemption = 47, HandOfJustice = 49, BrambleVest = 55, GargoyleStoneplate = 56, SunfireCape = 57, BodyguardEmblem = 58, ShroudOfStillness = 59, DragonsClaw = 66, Zephyr = 67, SyndicateEmblem = 68, Quicksilver = 69, DebonairEmblem = 70, StrikerEmblem = 71, HextechEmblem = 72, WarmogsArmor = 77, ChemtechEmblem = 78, BansheesClaw = 79, TacticiansCrown = 88, AssassinEmblem = 89, EdgeOfNight = 94, ThiefsGloves = 99, MutantEmblem = 2190, ClockworkEmblem = 2191, MercenaryEmblem = 2192, SocialiteEmblem = 2193, EnforcerEmblem = 2194, ScrapEmblem = 2195, BruiserEmblem = 2197, InnovatorEmblem = 2198, SniperEmblem = 2199, ScholarEmblem = 2200
 }
 

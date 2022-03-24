@@ -1,12 +1,15 @@
 import fs from 'fs/promises'
 import path from 'path'
 
-import { ASSET_PREFIX, substituteVariables, getIconURL } from '../dist/index.js'
+import { substituteVariables, getIconPath } from '../dist/index.js'
 import type { AugmentFlashcard, ItemFlashcard, AugmentTier, EffectVariables } from '../dist/index.js'
+import { importAugments, importItems } from '../dist/imports.js'
 
-import { getCurrentSetNumber, getPathTo, importAugments, importItems } from './helpers/files.js'
+import { getCurrentSetNumber, getPathTo } from './helpers/files.js'
 import { formatJS } from './helpers/formatting.js'
 import { getAugmentNameKey } from './helpers/utils.js'
+
+const REGEX_ASSET_PREFIX = /https:\/\/raw.communitydragon.org\/\w+?\/game\//
 
 const currentSetNumber = await getCurrentSetNumber()
 
@@ -54,7 +57,7 @@ if (activeAugments) {
 			entry[3][tierIndex] = augment.desc
 		}
 		entry[4][tierIndex] = getNormalizedEffects(augment.effects)
-		entry[5][tierIndex] = getIconURL(augment, true)
+		entry[5][tierIndex] = getIconPath(augment, true)
 	})
 
 	const outputAugmentsObject: AugmentFlashcard[] = []
@@ -81,7 +84,7 @@ if (activeAugments) {
 				name: extensions ? name + ' ' + extensions : name,
 				tiers: tiers.filter(e => e),
 				description,
-				icons: icons.filter(e => e).map(icon => icon.replace(ASSET_PREFIX, '').replace('.png', ''))
+				icons: icons.filter(e => e).map(icon => icon.replace(REGEX_ASSET_PREFIX, '').replace('.png', ''))
 			})
 		})
 
@@ -104,13 +107,13 @@ currentItems.forEach(item => {
 		.replaceAll(/<.+?>/g, ' ')
 		.trim()
 		.replaceAll(/ +/g, ' ')
-	const iconURL = getIconURL(item, true)
+	const iconURL = getIconPath(item, true)
 	outputItemsObject.push({
 		id: item.id,
 		name: item.name,
 		type,
 		description,
-		icon: iconURL.replace(ASSET_PREFIX, '').replace('.png', ''),
+		icon: iconURL.replace(REGEX_ASSET_PREFIX, '').replace('.png', ''),
 		from: item.from,
 		unique: item.unique,
 	})

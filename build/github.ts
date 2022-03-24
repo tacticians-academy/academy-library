@@ -4,7 +4,8 @@ import fetch from 'node-fetch'
 import fs from 'fs/promises'
 import process from 'process'
 
-import { getCurrentSetNumber, githubTokenPath, importAugments, importItems, importTraits, importChampions, loadHardcodedTXT } from './helpers/files.js'
+import { getCurrentSetNumber, githubTokenPath, loadHardcodedTXT } from './helpers/files.js'
+import { importAugments, importItems, importTraits, importChampions } from '../dist/imports.js'
 import { AugmentData, BonusKey, EffectVariables } from '../dist/types.js'
 
 import { getAugmentNameKey } from './helpers/utils.js'
@@ -94,7 +95,7 @@ const { completedItems } = await importItems(currentSetNumber)
 // Champions
 
 for (const champion of champions) {
-	if (champion.name !== ChampionKey.Alistar) { continue } //SAMPLE
+	// if (champion.name !== ChampionKey.Alistar) { continue } //SAMPLE
 	// const canContinue = await createIssue({
 	// 	title: `${champion.name} ability`,
 	// 	body: `Implement ${champion.name} ability`,

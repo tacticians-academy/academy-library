@@ -3,9 +3,10 @@ const MAX_STAR_LEVEL = 3
 import fs from 'fs/promises'
 
 import { COMPONENT_ITEM_IDS, ItemTypeKey } from '../dist/index.js'
+import { importItems, importTraits, importSetData } from '../dist/imports.js'
 import { AugmentData, AugmentTier, BonusKey, ChampionSpellData, EffectVariables, ItemData, SpellCalculations, SpellCalculationPart, SpellCalculationSubpart, SpellVariables, TraitData } from '../dist/index.js'
 
-import { getCurrentSetNumber, getPathTo, importItems, importTraits, importSetData, loadHardcodedTXT } from './helpers/files.js'
+import { getCurrentSetNumber, getPathTo, loadHardcodedTXT } from './helpers/files.js'
 import { formatJS } from './helpers/formatting.js'
 import { BASE_UNIT_API_NAMES, UNRELEASED_ITEM_NAME_KEYS, NORMALIZE_EFFECT_KEYS, SUBSTITUTE_EFFECT_KEYS, mStatSubstitutions, spellCalculationOperatorSubstitutions } from './helpers/normalize.js'
 import { ChampionJSON, ChampionJSONType, ChampionJSONAttack, ChampionJSONSpell, ChampionJSONSpellAttack, ChampionJSONStats, ResponseJSON } from './helpers/types.js'
@@ -47,12 +48,17 @@ for (const apiName of BASE_UNIT_API_NAMES) {
 	}
 }
 
-const { ItemKey } = await importItems(currentSetNumber)
+const { ItemKey, currentItems } = await importItems(currentSetNumber)
+console.log(ItemKey, currentItems)
 const { TraitKey } = await importTraits(currentSetNumber)
 
 // Items
 
-const { LOCKED_STAR_LEVEL, SPATULA_ITEM_IDS, RETIRED_AUGMENT_NAME_KEYS, UNUSED_AUGMENT_NAME_KEYS, TRAIT_DATA_SUBSTITUTIONS } = await importSetData(currentSetNumber)
+const setData = await importSetData(currentSetNumber)
+const { LOCKED_STAR_LEVEL, SPATULA_ITEM_IDS } = setData
+const RETIRED_AUGMENT_NAME_KEYS = setData.RETIRED_AUGMENT_NAME_KEYS ?? []
+const UNUSED_AUGMENT_NAME_KEYS = setData.UNUSED_AUGMENT_NAME_KEYS ?? []
+const TRAIT_DATA_SUBSTITUTIONS = setData.TRAIT_DATA_SUBSTITUTIONS ?? {}
 
 const currentItemsByType: Record<ItemTypeKey, ItemData[]> = {component: [], completed: [], spatula: [], duos: [], consumable: [], radiant: [], ornn: [], hexbuff: [], mercenaryDice: [], unreleased: []}
 
@@ -61,11 +67,12 @@ itemsData.reverse().forEach(item => {
 	if (foundItemIDs.includes(item.id)) {
 		return
 	}
-	const name = (item.name as string).toLowerCase()
+	const name = item.name.toLowerCase()
 	// if (name.startsWith('tft_')) {
 	// 	return
 	// }
-	const icon = (item.icon as string).toLowerCase()
+	const icon = item.icon.toLowerCase()//.replace('tft_item_', 'item_icons/standard/')
+	// item.icon = icon
 	if (icon.includes('/augments/')) {
 		return
 	}
@@ -202,7 +209,7 @@ const itemKeys = currentItemsByType['component'].concat(currentItemsByType['comp
 	.sort((a, b) => a.id - b.id)
 	.map(({name, id}) => `${toKey(name)} = ${id}`)
 	.join(', ')
-const itemKeysString = `export const enum ItemKey {\n\t${itemKeys}\n}`
+const itemKeysString = `export enum ItemKey {\n\t${itemKeys}\n}`
 
 const outputItemSections = []
 for (const key in currentItemsByType) {

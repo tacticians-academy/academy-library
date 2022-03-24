@@ -1,6 +1,7 @@
 import type { AugmentData, AugmentTierProbability } from '../dist/index'
+import { importAugments, importAugmentTiers } from '../dist/imports.js'
 
-import { getCurrentSetNumber, importAugments, importAugmentTiers, loadHardcodedTXT } from './helpers/files.js'
+import { getCurrentSetNumber, loadHardcodedTXT } from './helpers/files.js'
 import { getAugmentNameKey } from './helpers/utils.js'
 
 const currentSetNumber = await getCurrentSetNumber()

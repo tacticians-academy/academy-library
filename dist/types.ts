@@ -1,3 +1,5 @@
+export type SetNumber = 1 | 6
+
 export type SpellVariables = Record<string, number[]>
 export type EffectVariables = {[key in string]?: number | null}
 

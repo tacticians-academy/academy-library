@@ -1,10 +1,19 @@
-export const ASSET_PREFIX = 'https://raw.communitydragon.org/pbe/game/'
+import { PATCH_FOR_SET } from './index.js'
+import type { SetNumber } from './types.js'
 
-export function getIconURL(deriveAsset: {icon: string | null | undefined}, isRaw: boolean = true) {
+export function getAssetPrefixFor(set: SetNumber) {
+	return `https://raw.communitydragon.org/${PATCH_FOR_SET[set]}/game/`
+}
+
+export function getIconURL(set: SetNumber, deriveAsset: {icon: string | null | undefined}, isRaw: boolean = true) {
+	return getAssetPrefixFor(set) + getIconPath(deriveAsset, isRaw)
+}
+
+export function getIconPath(deriveAsset: {icon: string | null | undefined}, isRaw: boolean = true) {
 	if (deriveAsset.icon == null) {
-		console.warn('getIconURL', deriveAsset)
+		console.warn('getIconPath', deriveAsset)
 		return ''
 	}
 	const iconPath = isRaw ? deriveAsset.icon.toLowerCase().slice(0, -4) : deriveAsset.icon
-	return `${ASSET_PREFIX}${iconPath}.png`
+	return `${iconPath}.png`
 }

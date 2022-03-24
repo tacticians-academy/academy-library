@@ -1,12 +1,15 @@
-const PATCH_LINE = 'latest'
+// const PATCH_LINE = 'latest'
 // const PATCH_LINE = 'pbe'
-// const PATCH_LINE = '9.21' // '12.15'
+const PATCH_LINE = PATCH_FOR_SET[1]
 
 import fetch from 'node-fetch'
 import fs from 'fs/promises'
 import path from 'path'
 
-import { getPathTo, importSetData, etagPath, setNumberPath } from './helpers/files.js'
+import { PATCH_FOR_SET } from '../dist/index.js'
+import { importSetData } from '../dist/imports.js'
+
+import { getPathTo, etagPath, setNumberPath } from './helpers/files.js'
 import { BASE_UNIT_API_NAMES, mDataValueSubstitutions, mSpellCalculationsSubstitutions } from './helpers/normalize.js'
 import { ChampionJSON, ChampionJSONStats, ResponseJSON } from './helpers/types.js'
 import { getAPIName } from './helpers/utils.js'
