@@ -1,6 +1,6 @@
 export const PATCH_FOR_SET = {
 	1: '9.21',
-	6: '12.15',
+	6: '12.5',
 }
 
 export * from './assets.js'
