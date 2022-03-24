@@ -53,6 +53,25 @@ export const NORMALIZE_EFFECT_KEYS: Record<string, BonusKey> = {
 }
 
 export const SUBSTITUTE_EFFECT_KEYS: Record<string, string> = {
+	// Set 1
+	'6003afce': 'ProcPercent',
+	'df26ec52': 'ExtraTargetsHit',
+	'fb0b4533': 'HexSize',
+	'2bd7dcb7': 'DisableDuration',
+	'5eb5fde9': 'ADValue',
+	'fa127f0d': 'APValue',
+	'd05832ac': 'HPToSet',
+	'1b812333': 'ProcRate',
+	'2deb7544': 'TrueDamagePercent', //NOTE actual name
+	'cb42693f': 'VoidChampions', // NOTE actual name
+	'a8ca7859': 'ASPercent',
+	'1a14aa8a': 'ManaDrainDrain',
+	'0ebb5365': 'ManaDrainBurn',
+	'35bb0e0c': 'ManaDrainProcChance',
+	'': '',
+
+	// Set 6
+
 	'b4a90a5d': 'ProcChance',
 	'0acd95c2': 'ImperialBonusDamage',
 	'f469c9e6': 'TyrantTooltipBonusDamage',
@@ -250,6 +269,10 @@ export const SUBSTITUTE_EFFECT_KEYS: Record<string, string> = {
 // Abilities
 
 export const mSpellCalculationsSubstitutions: Record<string, string> = {
+	// Set 1
+	'{f24078df}': 'TotalDamage', // Prefix?
+
+	// Set 6
 	'{197fbc1c}': 'UNUSED', // Unused on Tibbers ModifiedAllyPercentASBase?
 	'{7ad6f313}': 'UNUSED', // Unused on Senna BaseHeal
 	'{5c260301}': 'TotalASBoost',
@@ -312,6 +335,8 @@ export const mDataValueSubstitutions: Record<string, string> = {
 export const mStatSubstitutions: Record<number, BonusKey> = {
 	1: BonusKey.Armor,
 	2: BonusKey.AttackDamage,
+	6: BonusKey.CritChance,
+	7: BonusKey.CritMultiplier,
 	11: BonusKey.Health,
 }
 

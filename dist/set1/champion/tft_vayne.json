@@ -1,0 +1,340 @@
+{
+	"Characters/TFT_Vayne/CharacterRecords/Root": {
+		"mLinkedTraits": [
+			{
+				"TraitData": "Noble"
+			},
+			{
+				"TraitData": "Ranger"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 720,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mCharacterName": "TFT_Vayne",
+		"baseHP": 550,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 0,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 40,
+		"baseArmor": 25,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 660,
+		"attackSpeed": 0.699999988079071,
+		"basicAttack": {
+			"mAttackCastTime": 0.75
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 0.5,
+				"mAttackName": "TFT_VayneBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackDelayCastOffsetPercent": -0.12456140667200089,
+				"mAttackName": "TFT_VayneCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT_VayneW",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"TFT_VayneQMissile",
+			"TFT_VayneEMissile",
+			"BaseSpell",
+			"TFT_VayneEMissileDummy",
+			"TFT_VayneRMissile",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"TFT_VayneWBasicAttack",
+			"TFT_VayneWBasicAttack2",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 2,
+		"unitTagsString": "Champion"
+	},
+	"Characters/TFT_Vayne/Spells/TFT_VayneBasicAttack": {
+		"mScriptName": "TFT_VayneBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "VayneBasicAttack",
+			"mDisplayName": "game_spell_displayname_BowmasterBasicAttack",
+			"mDescription": "game_spell_description_BowmasterBasicAttack",
+			"mDynamicTooltip": "game_spell_tooltip_BowmasterBasicAttack",
+			"mDynamicExtended": "game_spell_levelup_BowmasterBasicAttack",
+			"delayCastOffsetPercent": -0.029999999329447746,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2000,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{84faa39d}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Vayne/Spells/TFT_VayneCritAttack": {
+		"mScriptName": "TFT_VayneCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "VayneBasicAttack",
+			"mDisplayName": "game_spell_displayname_BowmasterBasicAttack",
+			"mDescription": "game_spell_description_BowmasterBasicAttack",
+			"mDynamicTooltip": "game_spell_tooltip_BowmasterBasicAttack",
+			"mDynamicExtended": "game_spell_levelup_BowmasterBasicAttack",
+			"delayCastOffsetPercent": -0.029999999329447746,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2000,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{d8650abe}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Vayne/Spells/TFT_VayneBasicAttack2": {
+		"mScriptName": "TFT_VayneBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "VayneBasicAttack",
+			"mDisplayName": "game_spell_displayname_VayneTumble",
+			"mDescription": "game_spell_description_VayneTumble",
+			"mDynamicTooltip": "game_spell_tooltip_VayneTumble",
+			"mDynamicExtended": "game_spell_levelup_VayneTumble",
+			"delayCastOffsetPercent": -0.029999999329447746,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2000,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{84faa39d}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Vayne/Spells/TFT_VayneW": {
+		"mScriptName": "TFT_VayneW",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 13327,
+			"mRequiredUnitTags": {
+				"mTagList": "Champion"
+			},
+			"mAlternateName": "VayneSilveredBolts",
+			"mDisplayName": "game_spell_displayname_VayneSilveredBolts",
+			"mDescription": "game_spell_description_VayneSilveredBolts",
+			"mEffectAmount": [],
+			"mDataValues": [
+				{
+					"mName": "PercentDamage",
+					"mValues": [
+						0.03999999910593033,
+						0.07999999821186066,
+						0.11999999731779099,
+						0.1599999964237213,
+						0.20000000298023224,
+						0.23999999463558197,
+						0.2800000011920929
+					],
+					"mBaseP": 0.03999999910593033,
+					"mFormula": "P + .04"
+				}
+			],
+			"mCoefficient": 0.009999999776482582,
+			"mImgIconName": [
+				"ASSETS/Characters/Vayne/HUD/Icons2D/Vayne_SilveredBolts.dds"
+			],
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.5,
+			"mCantCancelWhileWindingUp": true,
+			"bIsToggleSpell": true,
+			"castRange": [
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000
+			],
+			"castRangeDisplayOverride": [
+				750,
+				750,
+				750,
+				750,
+				750,
+				750,
+				750
+			],
+			"castRadius": [
+				210,
+				210,
+				210,
+				210,
+				210,
+				210,
+				210
+			],
+			"castConeDistance": 100,
+			"castFrame": 1.9800000190734863,
+			"missileSpeed": 1200,
+			"mLineWidth": 50,
+			"mHitBoneName": "head",
+			"mFloatVarsDecimals": [
+				1,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"selectionPriority": 2,
+			"mTargetingTypeData": {},
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"mDisplayAsPercent": true,
+					"mFormulaParts": [
+						{
+							"{a5749b52}": "scaleAP",
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"mSubpart": {
+								"mDataValue": "{43961cf7}"
+							}
+						}
+					]
+				}
+			}
+		}
+	},
+	"{fee1d309}": {
+		"useGDSBinaries": true
+	}
+}

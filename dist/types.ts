@@ -100,8 +100,8 @@ export const enum DamageType {
 
 export type SpellCalculations = Record<string, SpellCalculation>
 export interface SpellCalculationSubpart {
-	variable: string
-	starValues: number[]
+	variable?: string
+	starValues?: number[]
 	stat?: string
 	statFromTarget?: boolean
 	ratio?: number
@@ -118,7 +118,7 @@ export interface SpellCalculation {
 }
 
 export interface ChampionData {
-	apiName: string
+	apiName?: string
 	name: string
 	icon: string
 	cost?: number
@@ -148,11 +148,11 @@ export interface ChampionData {
 export interface TraitEffectData {
 	maxUnits: number
 	minUnits: number
-	style: number
+	style?: number
 	variables: EffectVariables
 }
 export interface TraitData {
-	apiName: string
+	apiName?: string
 	desc: string
 	effects: TraitEffectData[]
 	icon: string

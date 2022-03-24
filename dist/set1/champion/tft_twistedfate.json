@@ -1,0 +1,761 @@
+{
+	"{187706b6}": {
+		"useGDSBinaries": true
+	},
+	"Characters/TFT_TwistedFate/Spells/TFT_TwistedFateGoldCardPreAttack": {
+		"mScriptName": "TFT_TwistedFateGoldCardPreAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 6826,
+			"mAlternateName": "GoldCardPreAttack",
+			"mDisplayName": "game_spell_displayname_GoldCardAttack",
+			"mDescription": "game_spell_description_GoldCardAttack",
+			"mDynamicTooltip": "game_spell_tooltip_GoldCardAttack",
+			"mDynamicExtended": "game_spell_levelup_GoldCardAttack",
+			"mImgIconName": [
+				"ASSETS/Characters/TwistedFate/HUD/Icons2D/CardMaster_FatesGambit.dds"
+			],
+			"delayCastOffsetPercent": -0.75,
+			"delayTotalTimePercent": -0.75,
+			"canCastWhileDisabled": true,
+			"mCantCancelWhileWindingUp": true,
+			"mCantCancelWhileChanneling": true,
+			"mApplyAttackDamage": true,
+			"castRange": [
+				2000,
+				2000,
+				2000,
+				2000,
+				2000,
+				2000,
+				2000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9.9399995803833,
+			"missileSpeed": 1500
+		}
+	},
+	"Characters/TFT_TwistedFate/Spells/TFT_TwistedFateGoldCardAttack": {
+		"mScriptName": "TFT_TwistedFateGoldCardAttack",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6826,
+			"mAlternateName": "GoldCardAttack",
+			"mDisplayName": "game_spell_displayname_GoldCardAttack",
+			"mDescription": "game_spell_description_GoldCardAttack",
+			"mDynamicTooltip": "game_spell_tooltip_GoldCardAttack",
+			"mDynamicExtended": "game_spell_levelup_GoldCardAttack",
+			"mImgIconName": [
+				"ASSETS/Characters/TwistedFate/HUD/Icons2D/CardMaster_FatesGambit.dds"
+			],
+			"delayCastOffsetPercent": -0.75,
+			"delayTotalTimePercent": -0.75,
+			"canCastWhileDisabled": true,
+			"mCantCancelWhileWindingUp": true,
+			"mCantCancelWhileChanneling": true,
+			"castRange": [
+				2000,
+				2000,
+				2000,
+				2000,
+				2000,
+				2000,
+				2000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1500,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 10,
+			"missileSpeed": 1500,
+			"mMissileEffectKey": "{42909485}"
+		}
+	},
+	"Characters/TFT_TwistedFate/Spells/TFT_TwistedFateBlueCardAttack": {
+		"mScriptName": "TFT_TwistedFateBlueCardAttack",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6826,
+			"mAlternateName": "BlueCardAttack",
+			"mDisplayName": "game_spell_displayname_BlueCardAttack",
+			"mDescription": "game_spell_description_BlueCardAttack",
+			"mDynamicTooltip": "game_spell_tooltip_BlueCardAttack",
+			"mDynamicExtended": "game_spell_levelup_BlueCardAttack",
+			"mImgIconName": [
+				"ASSETS/Characters/TwistedFate/HUD/Icons2D/CardMaster_FatesGambit.dds"
+			],
+			"delayCastOffsetPercent": -0.75,
+			"delayTotalTimePercent": -0.75,
+			"canCastWhileDisabled": true,
+			"mCantCancelWhileWindingUp": true,
+			"mCantCancelWhileChanneling": true,
+			"castRange": [
+				2000,
+				2000,
+				2000,
+				2000,
+				2000,
+				2000,
+				2000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1500,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 10,
+			"missileSpeed": 1500,
+			"mMissileEffectKey": "{f7cbe9e9}"
+		}
+	},
+	"Characters/TFT_TwistedFate/Spells/TFT_TwistedFateBlueCardPreAttack": {
+		"mScriptName": "TFT_TwistedFateBlueCardPreAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 6826,
+			"mAlternateName": "BlueCardAttack",
+			"mDisplayName": "game_spell_displayname_BlueCardAttack",
+			"mDescription": "game_spell_description_BlueCardAttack",
+			"mDynamicTooltip": "game_spell_tooltip_BlueCardAttack",
+			"mDynamicExtended": "game_spell_levelup_BlueCardAttack",
+			"mImgIconName": [
+				"ASSETS/Characters/TwistedFate/HUD/Icons2D/CardMaster_FatesGambit.dds"
+			],
+			"delayCastOffsetPercent": -0.75,
+			"delayTotalTimePercent": -0.75,
+			"canCastWhileDisabled": true,
+			"mCantCancelWhileWindingUp": true,
+			"mCantCancelWhileChanneling": true,
+			"mApplyAttackDamage": true,
+			"castRange": [
+				2000,
+				2000,
+				2000,
+				2000,
+				2000,
+				2000,
+				2000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9.65999984741211,
+			"missileSpeed": 1500
+		}
+	},
+	"Characters/TFT_TwistedFate/Spells/TFT_TwistedFateBasicAttack3": {
+		"mScriptName": "TFT_TwistedFateBasicAttack3",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mDisplayName": "game_spell_displayname_CardMasterBasicAttack",
+			"mDescription": "game_spell_description_CardMasterBasicAttack",
+			"mDynamicTooltip": "game_spell_tooltip_CardMasterBasicAttack",
+			"mDynamicExtended": "game_spell_levelup_CardMasterBasicAttack",
+			"delayCastOffsetPercent": -0.23579999804496765,
+			"mApplyAttackDamage": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				284.6000061035156,
+				284.6000061035156,
+				284.6000061035156,
+				284.6000061035156,
+				284.6000061035156,
+				284.6000061035156,
+				284.6000061035156
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1500,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 9,
+			"missileSpeed": 1500,
+			"mMissileEffectKey": "{63bcc7da}",
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_TwistedFate/Spells/TFT_TwistedFateBasicAttack2": {
+		"mScriptName": "TFT_TwistedFateBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mDisplayName": "game_spell_displayname_CardMasterBasicAttack",
+			"mDescription": "game_spell_description_CardMasterBasicAttack",
+			"mDynamicTooltip": "game_spell_tooltip_CardMasterBasicAttack",
+			"mDynamicExtended": "game_spell_levelup_CardMasterBasicAttack",
+			"delayCastOffsetPercent": -0.23579999804496765,
+			"mApplyAttackDamage": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				284.6000061035156,
+				284.6000061035156,
+				284.6000061035156,
+				284.6000061035156,
+				284.6000061035156,
+				284.6000061035156,
+				284.6000061035156
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1500,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 1500,
+			"mMissileEffectKey": "{63bcc7da}",
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_TwistedFate/Spells/TFT_TwistedFateBasicAttack4": {
+		"mScriptName": "TFT_TwistedFateBasicAttack4",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mDisplayName": "game_spell_displayname_CardMasterBasicAttack",
+			"mDescription": "game_spell_description_CardMasterBasicAttack",
+			"mDynamicTooltip": "game_spell_tooltip_CardMasterBasicAttack",
+			"mDynamicExtended": "game_spell_levelup_CardMasterBasicAttack",
+			"delayCastOffsetPercent": -0.23579999804496765,
+			"mApplyAttackDamage": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				284.6000061035156,
+				284.6000061035156,
+				284.6000061035156,
+				284.6000061035156,
+				284.6000061035156,
+				284.6000061035156,
+				284.6000061035156
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1500,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "L_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 9,
+			"missileSpeed": 1500,
+			"mMissileEffectKey": "{63bcc7da}",
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_TwistedFate/Spells/TFT_TwistedFateW": {
+		"mScriptName": "TFT_TwistedFateW",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 9221,
+			"mRequiredUnitTags": {
+				"mTagList": "Champion"
+			},
+			"mDataValues": [
+				{
+					"mName": "RedCardDamage",
+					"mValues": [
+						50,
+						150,
+						250,
+						350,
+						450,
+						550,
+						650
+					],
+					"mBaseP": 50,
+					"mFormula": "P + 100"
+				},
+				{
+					"mName": "BlueCardDamage",
+					"mValues": [
+						50,
+						150,
+						250,
+						350,
+						450,
+						550,
+						650
+					],
+					"mBaseP": 50,
+					"mFormula": "P + 100"
+				},
+				{
+					"mName": "BlueCardManaRestore",
+					"mValues": [
+						10,
+						30,
+						50,
+						70,
+						90,
+						110,
+						130
+					],
+					"mBaseP": 10,
+					"mFormula": "P + 20"
+				},
+				{
+					"mName": "GoldCardStunDuration",
+					"mValues": [
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					],
+					"mBaseP": 1,
+					"mFormula": "P + 1"
+				},
+				{
+					"mName": "GoldCardDamage",
+					"mValues": [
+						50,
+						150,
+						250,
+						350,
+						450,
+						550,
+						650
+					],
+					"mBaseP": 50,
+					"mFormula": "P + 100"
+				}
+			],
+			"mImgIconName": [
+				"ASSETS/Characters/TwistedFate/HUD/Icons2D/CardMaster_FatesGambit.dds"
+			],
+			"delayCastOffsetPercent": -0.15000000596046448,
+			"delayTotalTimePercent": -0.5,
+			"mCantCancelWhileWindingUp": true,
+			"bIsToggleSpell": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				1000,
+				1000,
+				1000,
+				1000,
+				1000,
+				1000,
+				1000
+			],
+			"castConeDistance": 100,
+			"castFrame": 14.645000457763672,
+			"missileSpeed": 20,
+			"selectionPriority": 1,
+			"mTargetingTypeData": {},
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"{a5749b52}": "scaleAP",
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"mSubpart": {
+								"mDataValue": "{4c1db1bf}"
+							}
+						}
+					]
+				}
+			}
+		}
+	},
+	"Characters/TFT_TwistedFate/Spells/TFT_TwistedFateRedCardAttack": {
+		"mScriptName": "TFT_TwistedFateRedCardAttack",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6826,
+			"mAlternateName": "RedCardAttack",
+			"mDisplayName": "game_spell_displayname_RedCardAttack",
+			"mDescription": "game_spell_description_RedCardAttack",
+			"mDynamicTooltip": "game_spell_tooltip_RedCardAttack",
+			"mDynamicExtended": "game_spell_levelup_RedCardAttack",
+			"mImgIconName": [
+				"ASSETS/Characters/TwistedFate/HUD/Icons2D/CardMaster_FatesGambit.dds"
+			],
+			"delayCastOffsetPercent": -0.75,
+			"delayTotalTimePercent": -0.75,
+			"canCastWhileDisabled": true,
+			"mCantCancelWhileWindingUp": true,
+			"mCantCancelWhileChanneling": true,
+			"castRange": [
+				2000,
+				2000,
+				2000,
+				2000,
+				2000,
+				2000,
+				2000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1500,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 10,
+			"missileSpeed": 1500,
+			"mMissileEffectKey": "{648a694c}"
+		}
+	},
+	"Characters/TFT_TwistedFate/Spells/TFT_TwistedFateRedCardPreAttack": {
+		"mScriptName": "TFT_TwistedFateRedCardPreAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 6826,
+			"mAlternateName": "RedCardAttack",
+			"mDisplayName": "game_spell_displayname_RedCardAttack",
+			"mDescription": "game_spell_description_RedCardAttack",
+			"mDynamicTooltip": "game_spell_tooltip_RedCardAttack",
+			"mDynamicExtended": "game_spell_levelup_RedCardAttack",
+			"mImgIconName": [
+				"ASSETS/Characters/TwistedFate/HUD/Icons2D/CardMaster_FatesGambit.dds"
+			],
+			"delayCastOffsetPercent": -0.75,
+			"delayTotalTimePercent": -0.75,
+			"canCastWhileDisabled": true,
+			"mCantCancelWhileWindingUp": true,
+			"mCantCancelWhileChanneling": true,
+			"mApplyAttackDamage": true,
+			"castRange": [
+				2000,
+				2000,
+				2000,
+				2000,
+				2000,
+				2000,
+				2000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9.9399995803833,
+			"missileSpeed": 1500
+		}
+	},
+	"Characters/TFT_TwistedFate/Spells/TFT_TwistedFateBasicAttack": {
+		"mScriptName": "TFT_TwistedFateBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mDisplayName": "game_spell_displayname_CardMasterBasicAttack",
+			"mDescription": "game_spell_description_CardMasterBasicAttack",
+			"mDynamicTooltip": "game_spell_tooltip_CardMasterBasicAttack",
+			"mDynamicExtended": "game_spell_levelup_CardMasterBasicAttack",
+			"delayCastOffsetPercent": -0.23579999804496765,
+			"mApplyAttackDamage": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				284.6000061035156,
+				284.6000061035156,
+				284.6000061035156,
+				284.6000061035156,
+				284.6000061035156,
+				284.6000061035156,
+				284.6000061035156
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1500,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "L_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 1500,
+			"mMissileEffectKey": "{63bcc7da}",
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_TwistedFate/Spells/TFT_TwistedFateCritAttack": {
+		"mScriptName": "TFT_TwistedFateCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mDisplayName": "game_spell_displayname_CardMasterBasicAttack",
+			"mDescription": "game_spell_description_CardMasterBasicAttack",
+			"mDynamicTooltip": "game_spell_tooltip_CardMasterBasicAttack",
+			"mDynamicExtended": "game_spell_levelup_CardMasterBasicAttack",
+			"delayCastOffsetPercent": -0.23579999804496765,
+			"mApplyAttackDamage": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				284.6000061035156,
+				284.6000061035156,
+				284.6000061035156,
+				284.6000061035156,
+				284.6000061035156,
+				284.6000061035156,
+				284.6000061035156
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1500,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 9,
+			"missileSpeed": 1500,
+			"mMissileEffectKey": "{63bcc7da}",
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_TwistedFate/CharacterRecords/Root": {
+		"mLinkedTraits": [
+			{
+				"TraitData": "Pirate"
+			},
+			{
+				"TraitData": "Sorcerer"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 520,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mCharacterName": "TFT_TwistedFate",
+		"baseHP": 500,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 50,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 40,
+		"baseArmor": 20,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 660,
+		"attackSpeed": 0.699999988079071,
+		"basicAttack": {
+			"mAttackCastTime": 0.75,
+			"mAttackProbability": 0.25,
+			"mAttackName": "TFT_TwistedFateBasicAttack"
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 0.25,
+				"mAttackName": "TFT_TwistedFateBasicAttack2"
+			},
+			{
+				"mAttackProbability": 0.25,
+				"mAttackName": "TFT_TwistedFateBasicAttack3"
+			},
+			{
+				"mAttackProbability": 0.25,
+				"mAttackName": "TFT_TwistedFateBasicAttack4"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT_TwistedFateCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT_TwistedFateW",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"TFT_TwistedFateBlueCardAttack",
+			"TFT_TwistedFateRedCardAttack",
+			"TFT_TwistedFateGoldCardAttack",
+			"TFT_TwistedFateBlueCardPreAttack",
+			"TFT_TwistedFateRedCardPreAttack",
+			"TFT_TwistedFateGoldCardPreAttack",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion"
+	}
+}

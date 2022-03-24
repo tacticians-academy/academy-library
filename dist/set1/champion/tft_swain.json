@@ -1,0 +1,489 @@
+{
+	"Characters/TFT_Swain/Spells/TFT_SwainBasicAttack": {
+		"mScriptName": "TFT_SwainBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "SwainBasicAttack",
+			"mDisplayName": "SwainBasicAttack",
+			"bHaveHitEffect": true,
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1800,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "L_Hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 1800,
+			"mMissileEffectKey": "{72ef5180}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			]
+		}
+	},
+	"Characters/TFT_Swain/Spells/TFT_SwainBasicAttack2": {
+		"mScriptName": "TFT_SwainBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "SwainBasicAttack2",
+			"mDisplayName": "game_spell_displayname_LichBasicAttack",
+			"mDescription": "game_spell_description_LichBasicAttack",
+			"delayCastOffsetPercent": -0.33869999647140503,
+			"bHaveHitEffect": true,
+			"castRange": [
+				800,
+				800,
+				800,
+				800,
+				800,
+				800,
+				800
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1800,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "L_Hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 1800,
+			"mMissileEffectKey": "{72ef5180}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc"
+		}
+	},
+	"Characters/TFT_Swain/Spells/TFT_SwainRAbility": {
+		"mRootSpell": "{82507bd5}",
+		"mChildSpells": [
+			"{82507bd5}"
+		],
+		"{86ddaddb}": true,
+		"mName": "TFT_SwainRAbility"
+	},
+	"{82507bd5}": {
+		"mScriptName": "TFT_SwainR",
+		"mSpell": {
+			"mAffectsTypeFlags": 8192,
+			"mAlternateName": "TFT_SwainR",
+			"mDisplayName": "game_spell_displayname_TFT_SwainR",
+			"mDescription": "game_spell_description_TFT_SwainR",
+			"mSpellTags": [
+				"Trait_Ultimate"
+			],
+			"mEffectAmount": [],
+			"mDataValues": [
+				{
+					"mName": "TransformDuration",
+					"mValues": [
+						6,
+						6,
+						6,
+						6,
+						6,
+						6,
+						6
+					],
+					"mBaseP": 6,
+					"mFormula": "P"
+				},
+				{
+					"mName": "DamagePerTick",
+					"mValues": [
+						0,
+						40,
+						80,
+						120,
+						160,
+						200,
+						240
+					],
+					"mFormula": "P  + 40"
+				},
+				{
+					"mName": "HealPerTick",
+					"mValues": [
+						0,
+						30,
+						60,
+						90,
+						120,
+						150,
+						180
+					],
+					"mFormula": "P + 30"
+				},
+				{
+					"mName": "SoulFlareDamage",
+					"mValues": [
+						0,
+						300,
+						600,
+						900,
+						1200,
+						1500,
+						1800
+					],
+					"mFormula": "P + 300"
+				},
+				{
+					"mName": "HealthIncrease",
+					"mFormula": "P + 0"
+				},
+				{
+					"mName": "TotalDamage",
+					"mValues": [
+						0,
+						480,
+						960,
+						1440,
+						1920,
+						2400,
+						2880
+					],
+					"mFormula": "P + 480"
+				},
+				{
+					"mName": "TotalHeal",
+					"mValues": [
+						0,
+						360,
+						720,
+						1080,
+						1440,
+						1800,
+						2160
+					],
+					"mFormula": "P + 360"
+				}
+			],
+			"mImgIconName": [
+				"ASSETS/Characters/TFT_Swain/HUD/Icons2D/TFT_Swain_R.TFT.dds",
+				"ASSETS/Characters/TFT_Swain/HUD/Icons2D/TFT_Swain_R_No_Charge.TFT.dds",
+				"ASSETS/Characters/TFT_Swain/HUD/Icons2D/TFT_Swain_R2_No_Charge.TFT.dds"
+			],
+			"delayTotalTimePercent": -1,
+			"mAmmoUsed": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"mCantCancelWhileWindingUp": true,
+			"mCantCancelWhileChanneling": true,
+			"mChannelIsInterruptedByDisables": false,
+			"mChannelIsInterruptedByAttacking": false,
+			"mCanMoveWhileChanneling": true,
+			"mShowChannelBar": false,
+			"alwaysSnapFacing": true,
+			"useAnimatorFramerate": true,
+			"bIsToggleSpell": true,
+			"castRange": [
+				725,
+				725,
+				725,
+				725,
+				725,
+				725,
+				725
+			],
+			"castRangeDisplayOverride": [
+				650,
+				650,
+				650,
+				650,
+				650,
+				650,
+				650
+			],
+			"castRadius": [
+				725,
+				725,
+				725,
+				725,
+				725,
+				725,
+				725
+			],
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"mTargetingTypeData": {},
+			"mSpellCalculations": {
+				"{09bc1f54}": {
+					"mFormulaParts": [
+						{
+							"{a5749b52}": "scaleAP",
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"mSubpart": {
+								"mDataValue": "{3d3d6f53}"
+							}
+						}
+					]
+				},
+				"{3e7f80ce}": {
+					"mFormulaParts": [
+						{
+							"{a5749b52}": "scaleAP",
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"mSubpart": {
+								"mDataValue": "{6540d67b}"
+							}
+						}
+					]
+				},
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"{a5749b52}": "scaleAP",
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"mSubpart": {
+								"mDataValue": "{1ddee768}"
+							}
+						}
+					]
+				}
+			}
+		},
+		"mBuff": {
+			"mDescription": "game_buff_tooltip_TFT_SwainR",
+			"mFloatVarsDecimals": [
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			]
+		}
+	},
+	"Characters/TFT_Swain/Spells/TFT_SwainRMegaNovaMissile": {
+		"mScriptName": "TFT_SwainRMegaNovaMissile",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mAlternateName": "TFT_SwainW",
+			"mDisplayName": "game_spell_displayname_TFT_SwainW",
+			"mDescription": "game_spell_description_TFT_SwainW",
+			"mDynamicTooltip": "game_spell_tooltip_TFT_SwainE",
+			"mDynamicExtended": "game_spell_levelup_TFT_SwainW",
+			"mEffectAmount": [],
+			"mCoefficient": 0.5,
+			"mCoefficient2": 0.4000000059604645,
+			"mImgIconName": [
+				"ASSETS/Characters/TFT_Swain/HUD/Icons2D/TFT_Swain_R2.TFT.dds"
+			],
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.5,
+			"mCantCancelWhileWindingUp": true,
+			"mProjectTargetToCastRange": true,
+			"castRange": [
+				675,
+				675,
+				675,
+				675,
+				675,
+				675,
+				675
+			],
+			"castRangeDisplayOverride": [
+				850,
+				850,
+				850,
+				850,
+				850,
+				850,
+				850
+			],
+			"castRadius": [
+				210,
+				210,
+				210,
+				210,
+				210,
+				210,
+				210
+			],
+			"castConeDistance": 0,
+			"mMissileSpec": {
+				"mMissileWidth": 60,
+				"movementComponent": {
+					"mSpeed": 3000,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 7.5,
+			"missileSpeed": 599,
+			"mMissileEffectKey": "{9322147c}",
+			"mLineWidth": 60,
+			"bHaveHitBone": true,
+			"mHitBoneName": "head",
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"selectionPriority": 2,
+			"mTargetingTypeData": {}
+		}
+	},
+	"{5b3357d8}": {
+		"useGDSBinaries": true
+	},
+	"Characters/TFT_Swain/CharacterRecords/Root": {
+		"mLinkedTraits": [
+			{
+				"TraitData": "Imperial"
+			},
+			{
+				"TraitData": "Demon"
+			},
+			{
+				"TraitData": "Shapeshifter"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 520,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mCharacterName": "TFT_Swain",
+		"baseHP": 850,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 65,
+		"baseArmor": 25,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 420,
+		"attackSpeed": 0.6499999761581421,
+		"basicAttack": {
+			"mAttackCastTime": 0.800000011920929
+		},
+		"critAttacks": [
+			{
+				"mAttackDelayCastOffsetPercent": -0.1733333319425583,
+				"mAttackName": "TFT_SwainBasicAttack"
+			}
+		],
+		"spellNames": [
+			"TFT_SwainRAbility/TFT_SwainR",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"TFT_SwainPDummyCast",
+			"TFT_SwainEReturnMissile",
+			"BaseSpell",
+			"BaseSpell",
+			"TFT_SwainQDummyMissile",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 2,
+		"unitTagsString": "Champion",
+		"flags": 9446656
+	}
+}

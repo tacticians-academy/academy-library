@@ -1,0 +1,154 @@
+{
+	"Characters/TFT_Shen/Spells/TFT_ShenW": {
+		"mScriptName": "TFT_ShenW",
+		"mSpell": {
+			"mAffectsTypeFlags": 8192,
+			"mDisplayName": "game_spell_displayname_TFT_ShenW",
+			"mDescription": "game_spell_description_TFT_ShenW",
+			"mSpellTags": [
+				"PositiveEffect_Boon"
+			],
+			"mDataValues": [
+				{
+					"mName": "ZoneDuration",
+					"mValues": [
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"mBaseP": 2,
+					"mFormula": "P+1"
+				}
+			],
+			"mImgIconName": [
+				"ASSETS/Characters/TFT_Shen/HUD/Icons2D/TFT_Shen_W.TFT.dds"
+			],
+			"mCastTime": 0.5,
+			"mCantCancelWhileWindingUp": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				35000,
+				35000,
+				35000,
+				35000,
+				35000,
+				35000,
+				35000
+			],
+			"castRadiusSecondary": [
+				350,
+				350,
+				350,
+				350,
+				350,
+				350,
+				350
+			],
+			"castFrame": 23,
+			"mTargetingTypeData": {}
+		}
+	},
+	"Characters/TFT_Shen/Spells/TFT_ShenBasicAttack2": {
+		"mScriptName": "TFT_ShenBasicAttack2",
+		"mSpell": {
+			"bHaveHitEffect": true,
+			"castFrame": 8,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Shen/Spells/TFT_ShenBasicAttack": {
+		"mScriptName": "TFT_ShenBasicAttack",
+		"mSpell": {
+			"bHaveHitEffect": true,
+			"castFrame": 8,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Shen/Spells/TFT_ShenCritAttack": {
+		"mScriptName": "TFT_ShenCritAttack",
+		"mSpell": {
+			"bHaveHitEffect": true,
+			"castFrame": 8,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"{716d6d30}": {
+		"useGDSBinaries": true
+	},
+	"Characters/TFT_Shen/CharacterRecords/Root": {
+		"mLinkedTraits": [
+			{
+				"TraitData": "Ninja"
+			},
+			{
+				"TraitData": "Blademaster"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mInitialMana": 100,
+		"{ef57098f}": false,
+		"mCharacterName": "TFT_Shen",
+		"baseHP": 700,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 150,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 65,
+		"baseArmor": 30,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 180,
+		"attackSpeed": 0.699999988079071,
+		"basicAttack": {
+			"mAttackCastTime": 0.800000011920929
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT_ShenBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT_ShenCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT_ShenW",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 2,
+		"unitTagsString": "Champion",
+		"flags": 9446656,
+		"mPreferredPerkStyle": "Perks/Styles/Precision"
+	}
+}

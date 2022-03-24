@@ -148,44 +148,46 @@ for (const item of completedItems) {
 // Augments
 
 const emptyImplementationAugments = await loadHardcodedTXT(currentSetNumber, 'augments-empty')
-const augmentGroups: Record<string, [AugmentData?, AugmentData?, AugmentData?]> = {}
-for (const augment of activeAugments) {
-	if (!augmentGroups[augment.groupID]) {
-		augmentGroups[augment.groupID] = []
-	}
-	augmentGroups[augment.groupID][augment.tier - 1] = augment
-}
-const outputAugmentGroups = Object.values(augmentGroups)//.map(group => group.filter((entry): entry is AugmentData => !!entry))
-for (const augmentGroup of outputAugmentGroups) {
-	const augmentRep = augmentGroup.find(augment => !!augment)!
-	// if (augmentRep.groupID !== AugmentGroupKey.CelestialBlessing) { continue } //SAMPLE
-	if (emptyImplementationAugments.includes(augmentRep.groupID)) {
-		continue
-	}
-	// if (!augmentRep.groupID.endsWith('Heart') && !augmentRep.groupID.endsWith('Soul')) {
-	// 	continue
-	// }
-	if (augmentRep.groupID.endsWith('Crest') || augmentRep.groupID.endsWith('Crown')) {
-		continue
-	}
-	const bulletPoints = getBulletEntriesFor(augmentGroup.map(augment => augment?.effects ?? {}))
-		.filter(bulletPoint => !bulletPoint.includes('Tooltip'))
-	console.log(augmentRep.groupID, augmentRep.desc, bulletPoints)
-	const descriptions: string[] = []
-	augmentGroup.forEach(augment => {
-		if (augment && !descriptions.includes(augment.desc)) {
-			descriptions.push(augment.desc)
+if (emptyImplementationAugments) {
+	const augmentGroups: Record<string, [AugmentData?, AugmentData?, AugmentData?]> = {}
+	for (const augment of activeAugments) {
+		if (!augmentGroups[augment.groupID]) {
+			augmentGroups[augment.groupID] = []
 		}
-	})
+		augmentGroups[augment.groupID][augment.tier - 1] = augment
+	}
+	const outputAugmentGroups = Object.values(augmentGroups)//.map(group => group.filter((entry): entry is AugmentData => !!entry))
+	for (const augmentGroup of outputAugmentGroups) {
+		const augmentRep = augmentGroup.find(augment => !!augment)!
+		// if (augmentRep.groupID !== AugmentGroupKey.CelestialBlessing) { continue } //SAMPLE
+		if (emptyImplementationAugments.includes(augmentRep.groupID)) {
+			continue
+		}
+		// if (!augmentRep.groupID.endsWith('Heart') && !augmentRep.groupID.endsWith('Soul')) {
+		// 	continue
+		// }
+		if (augmentRep.groupID.endsWith('Crest') || augmentRep.groupID.endsWith('Crown')) {
+			continue
+		}
+		const bulletPoints = getBulletEntriesFor(augmentGroup.map(augment => augment?.effects ?? {}))
+			.filter(bulletPoint => !bulletPoint.includes('Tooltip'))
+		console.log(augmentRep.groupID, augmentRep.desc, bulletPoints)
+		const descriptions: string[] = []
+		augmentGroup.forEach(augment => {
+			if (augment && !descriptions.includes(augment.desc)) {
+				descriptions.push(augment.desc)
+			}
+		})
 
-	// const canContinue = await createIssue({
-	// 	title: `${getAugmentNameKey(augmentRep)} augment`,
-	// 	body: descriptions.join('\n').replaceAll('@', '`') + formatBulletEntries(bulletPoints, ['I', 'II', 'III']),
-	// 	labels: [`Augment`],
-	// 	milestone,
-	// })
-	// if (!canContinue) {
-	// 	break
-	// }
-	// break //SAMPLE
+		// const canContinue = await createIssue({
+		// 	title: `${getAugmentNameKey(augmentRep)} augment`,
+		// 	body: descriptions.join('\n').replaceAll('@', '`') + formatBulletEntries(bulletPoints, ['I', 'II', 'III']),
+		// 	labels: [`Augment`],
+		// 	milestone,
+		// })
+		// if (!canContinue) {
+		// 	break
+		// }
+		// break //SAMPLE
+	}
 }

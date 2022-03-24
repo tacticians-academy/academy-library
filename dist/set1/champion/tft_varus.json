@@ -1,0 +1,326 @@
+{
+	"Characters/TFT_Varus/Spells/TFT_VarusQMissile": {
+		"mScriptName": "TFT_VarusQMissile",
+		"mSpell": {
+			"flags": 32,
+			"mAffectsTypeFlags": 6154,
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						50,
+						300,
+						550,
+						800,
+						1050,
+						1300,
+						1550
+					],
+					"mBaseP": 50,
+					"mFormula": "P + 250"
+				},
+				{
+					"mName": "HexRange",
+					"mValues": [
+						8,
+						8,
+						8,
+						8,
+						8,
+						8,
+						8
+					],
+					"mBaseP": 8
+				}
+			],
+			"mImgIconName": [
+				"ASSETS/Characters/TFT_Varus/HUD/Icons2D/TFT_VarusQ.TFT916.dds"
+			],
+			"mCastTime": 1.5,
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.5,
+			"mCantCancelWhileWindingUp": true,
+			"mProjectTargetToCastRange": true,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"luaOnMissileUpdateDistanceInterval": 125,
+			"mMissileSpec": {
+				"mMissileWidth": 100,
+				"movementComponent": {
+					"mSpeed": 1900,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "root"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 15,
+			"missileSpeed": 1900,
+			"mLineWidth": 70,
+			"bHaveHitBone": true,
+			"mHitBoneName": "root",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {},
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"{a5749b52}": "scaleAP",
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"mSubpart": {
+								"mDataValue": "Damage"
+							}
+						}
+					]
+				}
+			}
+		}
+	},
+	"Characters/TFT_Varus/Spells/TFT_VarusCritAttack": {
+		"mScriptName": "TFT_VarusCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.029999999329447746,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2000,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "r_finger"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 10,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{e8c85b79}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Varus/Spells/TFT_VarusBasicAttack2": {
+		"mScriptName": "TFT_VarusBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.029999999329447746,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2000,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "r_finger"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 10,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{e8c85b79}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Varus/Spells/TFT_VarusBasicAttack": {
+		"mScriptName": "TFT_VarusBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.029999999329447746,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2000,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "r_finger"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 10,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{e8c85b79}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Varus/CharacterRecords/Root": {
+		"mLinkedTraits": [
+			{
+				"TraitData": "Demon"
+			},
+			{
+				"TraitData": "Ranger"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 960,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mCharacterName": "TFT_Varus",
+		"baseHP": 500,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 75,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 60,
+		"baseArmor": 25,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 890,
+		"attackSpeed": 0.699999988079071,
+		"basicAttack": {
+			"mAttackCastTime": 0.75
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 0.5,
+				"mAttackName": "TFT_VarusBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackDelayCastOffsetPercent": -0.12456140667200089,
+				"mAttackName": "TFT_VarusCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT_VarusQMissile",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"TFT_VarusQMissile",
+			"TFT_VarusEMissile",
+			"BaseSpell",
+			"TFT_VarusEMissileDummy",
+			"TFT_VarusRMissile",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"TFT_VarusWBasicAttack",
+			"TFT_VarusWBasicAttack2",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 2,
+		"unitTagsString": "Champion"
+	},
+	"{e90c56c9}": {
+		"useGDSBinaries": true
+	}
+}

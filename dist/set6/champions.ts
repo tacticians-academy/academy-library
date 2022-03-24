@@ -2572,7 +2572,7 @@ export const champions: ChampionData[] = [
 							subparts: [
 								{
 									variable: `UNKNOWN`,
-									starValues: [],
+									starValues: undefined,
 									stat: `AP`,
 									ratio: 0.009999999776482582,
 								},
@@ -3515,7 +3515,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `BaseHealing`,
-										starValues: [],
+										starValues: undefined,
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},

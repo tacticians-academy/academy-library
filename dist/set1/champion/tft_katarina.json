@@ -1,0 +1,529 @@
+{
+	"{14bfa28d}": {
+		"useGDSBinaries": true
+	},
+	"Characters/TFT_Katarina/Spells/TFT_KatarinaR": {
+		"mScriptName": "TFT_KatarinaR",
+		"mSpell": {
+			"mAffectsTypeFlags": 14347,
+			"mDisplayName": "game_spell_displayname_TFT_KatarinaR",
+			"mDescription": "game_spell_description_TFT_KatarinaR",
+			"mSpellTags": [
+				"Trait_Ultimate",
+				"Trait_ChannelSpell"
+			],
+			"mDataValues": [
+				{
+					"mName": "DamagePerTick",
+					"mValues": [
+						20,
+						45,
+						70,
+						95,
+						120,
+						145,
+						170
+					],
+					"mBaseP": 20,
+					"mFormula": "P+25"
+				},
+				{
+					"mName": "TicksPerSecond",
+					"mValues": [
+						6,
+						6,
+						6,
+						6,
+						6,
+						6,
+						6
+					],
+					"mBaseP": 6,
+					"mFormula": "P"
+				},
+				{
+					"mName": "Duration",
+					"mValues": [
+						2.5,
+						2.5,
+						2.5,
+						2.5,
+						2.5,
+						2.5,
+						2.5
+					],
+					"mBaseP": 2.5,
+					"mFormula": "P"
+				},
+				{
+					"mName": "GrievousWoundsDuration",
+					"mValues": [
+						3,
+						3,
+						3,
+						3,
+						3,
+						3,
+						3
+					],
+					"mBaseP": 3,
+					"mFormula": "P"
+				},
+				{
+					"mName": "NumberOfTargets",
+					"mValues": [
+						2,
+						4,
+						6,
+						8,
+						10,
+						12,
+						14
+					],
+					"mBaseP": 2,
+					"mFormula": "P + 2"
+				},
+				{
+					"mName": "TotalDamage",
+					"mValues": [
+						375,
+						750,
+						1125,
+						1500,
+						1875,
+						2250,
+						2625
+					],
+					"mBaseP": 375,
+					"mFormula": "P + 375"
+				}
+			],
+			"mImgIconName": [
+				"ASSETS/Characters/TFT_Katarina/HUD/Icons2D/TFT_Katarina_R.TFT.dds",
+				"ASSETS/Characters/TFT_Katarina/HUD/Icons2D/TFT_Katarina_R_CannotCast.TFT.dds"
+			],
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -0.5,
+			"mCantCancelWhileWindingUp": true,
+			"mCantCancelWhileChanneling": true,
+			"castRange": [
+				550,
+				550,
+				550,
+				550,
+				550,
+				550,
+				550
+			],
+			"castRadius": [
+				550,
+				550,
+				550,
+				550,
+				550,
+				550,
+				550
+			],
+			"castConeDistance": 100,
+			"castFrame": 5.400000095367432,
+			"missileSpeed": 1450,
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"selectionPriority": 1,
+			"mTargetingTypeData": {},
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"{a5749b52}": "scaleAP",
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"mSubpart": {
+								"mDataValue": "{1ddee768}"
+							}
+						}
+					]
+				}
+			}
+		}
+	},
+	"Characters/TFT_Katarina/Spells/TFT_KatarinaRMis": {
+		"mScriptName": "TFT_KatarinaRMis",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"mDisplayName": "game_spell_displayname_TFT_KatarinaR",
+			"mDescription": "game_spell_description_TFT_KatarinaR",
+			"mDynamicTooltip": "game_spell_tooltip_TFT_KatarinaR",
+			"mDynamicExtended": "game_spell_levelup_TFT_KatarinaR",
+			"mCoefficient": 0.5,
+			"mImgIconName": [
+				"ASSETS/Characters/TFT_Katarina/HUD/Textures/TFT_Katarina_DeathLotus.TFT.dds"
+			],
+			"delayCastOffsetPercent": -0.15000000596046448,
+			"delayTotalTimePercent": -0.6000000238418579,
+			"mCantCancelWhileWindingUp": true,
+			"castRange": [
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000
+			],
+			"castRadius": [
+				710,
+				710,
+				710,
+				710,
+				710,
+				710,
+				710
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2400,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "root"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 13.34000015258789,
+			"missileSpeed": 2400,
+			"mMissileEffectKey": "{5001d614}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "pelvis",
+			"selectionPriority": 1
+		}
+	},
+	"Characters/TFT_Katarina/Spells/TFT_KatarinaRTriggerSound": {
+		"mScriptName": "TFT_KatarinaRTriggerSound",
+		"mSpell": {
+			"flags": 4194316,
+			"mAffectsTypeFlags": 23567,
+			"mDisplayName": "game_spell_displayname_TFT_KatarinaR",
+			"mDescription": "game_spell_description_TFT_KatarinaR",
+			"mDynamicTooltip": "game_spell_tooltip_TFT_KatarinaR",
+			"mDynamicExtended": "game_spell_levelup_TFT_KatarinaR",
+			"mEffectAmount": [],
+			"mCoefficient": 0.4000000059604645,
+			"mImgIconName": [
+				"ASSETS/Characters/TFT_Katarina/HUD/Textures/TFT_Katarina_DeathLotus.TFT.dds"
+			],
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.5,
+			"cannotBeSuppressed": true,
+			"canCastWhileDisabled": true,
+			"mCantCancelWhileWindingUp": true,
+			"mIsDisabledWhileDead": false,
+			"castRange": [
+				11100,
+				11100,
+				11100,
+				11100,
+				11100,
+				11100,
+				11100
+			],
+			"castRadius": [
+				225,
+				225,
+				225,
+				225,
+				225,
+				225,
+				225
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 120,
+				"movementComponent": {
+					"mTravelTime": 0.20000000298023224,
+					"mTargetHeightAugment": 60,
+					"mOffsetInitialTargetHeight": 60
+				},
+				"heightSolver": {
+					"mGravity": 5000
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 7.974999904632568,
+			"missileSpeed": 1600,
+			"mLineWidth": 120,
+			"bHaveHitBone": true,
+			"mHitBoneName": "pelvis"
+		}
+	},
+	"Characters/TFT_Katarina/Spells/TFT_KatarinaBasicAttack": {
+		"mScriptName": "TFT_KatarinaBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 4234,
+			"delayCastOffsetPercent": -0.3506999909877777,
+			"bHaveHitEffect": true,
+			"castRange": [
+				125,
+				125,
+				125,
+				125,
+				125,
+				125,
+				125
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9.100000381469727,
+			"missileSpeed": 467,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Katarina/Spells/TFT_KatarinaRSound": {
+		"mScriptName": "TFT_KatarinaRSound",
+		"mBuff": {
+			"mDescription": "game_buff_tooltip_DeathLotusSound"
+		}
+	},
+	"Characters/TFT_Katarina/Spells/TFT_KatarinaBasicAttack2": {
+		"mScriptName": "TFT_KatarinaBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 4234,
+			"delayCastOffsetPercent": -0.3506999909877777,
+			"bHaveHitEffect": true,
+			"castRange": [
+				125,
+				125,
+				125,
+				125,
+				125,
+				125,
+				125
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9.100000381469727,
+			"missileSpeed": 467,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Katarina/Spells/TFT_KatarinaRTrigger": {
+		"mScriptName": "TFT_KatarinaRTrigger",
+		"mSpell": {
+			"flags": 4194316,
+			"mAffectsTypeFlags": 23567,
+			"mDisplayName": "game_spell_displayname_TFT_KatarinaR",
+			"mDescription": "game_spell_description_TFT_KatarinaR",
+			"mDynamicTooltip": "game_spell_tooltip_TFT_KatarinaR",
+			"mDynamicExtended": "game_spell_levelup_TFT_KatarinaR",
+			"mEffectAmount": [],
+			"mCoefficient": 0.4000000059604645,
+			"mImgIconName": [
+				"ASSETS/Characters/TFT_Katarina/HUD/Textures/TFT_Katarina_DeathLotus.TFT.dds"
+			],
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.5,
+			"cannotBeSuppressed": true,
+			"canCastWhileDisabled": true,
+			"mCantCancelWhileWindingUp": true,
+			"mIsDisabledWhileDead": false,
+			"castRange": [
+				11100,
+				11100,
+				11100,
+				11100,
+				11100,
+				11100,
+				11100
+			],
+			"castRadius": [
+				225,
+				225,
+				225,
+				225,
+				225,
+				225,
+				225
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 120,
+				"movementComponent": {
+					"mTravelTime": 0.20000000298023224,
+					"mTargetHeightAugment": 60,
+					"mOffsetInitialTargetHeight": 60
+				},
+				"heightSolver": {
+					"mGravity": 5000
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 7.974999904632568,
+			"missileSpeed": 1600,
+			"mLineWidth": 120,
+			"bHaveHitBone": true,
+			"mHitBoneName": "pelvis"
+		}
+	},
+	"Characters/TFT_Katarina/Spells/TFT_KatarinaCritAttack": {
+		"mScriptName": "TFT_KatarinaCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 4234,
+			"delayCastOffsetPercent": -0.3506999909877777,
+			"castRangeUseBoundingBoxes": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				125,
+				125,
+				125,
+				125,
+				125,
+				125,
+				125
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9.100000381469727,
+			"missileSpeed": 467,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Katarina/CharacterRecords/Root": {
+		"mLinkedTraits": [
+			{
+				"TraitData": "Imperial"
+			},
+			{
+				"TraitData": "Assassin"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mCharacterName": "TFT_Katarina",
+		"baseHP": 450,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 85,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 65,
+		"baseArmor": 20,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 180,
+		"attackSpeed": 0.6499999761581421,
+		"basicAttack": {
+			"mAttackCastTime": 0.75
+		},
+		"extraAttacks": [
+			{
+				"mAttackDelayCastOffsetPercent": -0.15000000596046448,
+				"mAttackProbability": 0.4000000059604645,
+				"mAttackName": "TFT_KatarinaBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackDelayCastOffsetPercent": -0.15000000596046448,
+				"mAttackName": "TFT_KatarinaCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT_KatarinaR",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"TFT_KatarinaRMis",
+			"TFT_KatarinaRTriggerSound",
+			"TFT_KatarinaQMis",
+			"TFT_KatarinaRTrigger",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 2,
+		"unitTagsString": "Champion",
+		"flags": 9446656,
+		"mPreferredPerkStyle": "Perks/Styles/Inspiration"
+	}
+}

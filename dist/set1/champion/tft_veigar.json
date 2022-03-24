@@ -1,0 +1,352 @@
+{
+	"Characters/TFT_Veigar/Spells/TFT_VeigarR": {
+		"mScriptName": "TFT_VeigarR",
+		"mSpell": {
+			"mAffectsTypeFlags": 4106,
+			"mRequiredUnitTags": {
+				"mTagList": "Champion | Minion_Summon"
+			},
+			"mDisplayName": "game_spell_displayname_TFT_VeigarR",
+			"mDescription": "game_spell_description_TFT_VeigarR",
+			"mSpellTags": [
+				"Trait_Ultimate"
+			],
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						50,
+						350,
+						650,
+						950,
+						1250,
+						1550,
+						1850
+					],
+					"mBaseP": 50,
+					"mFormula": "P + 300"
+				},
+				{
+					"mName": "LowerStarDamage",
+					"mValues": [
+						19999,
+						19999,
+						19999,
+						19999,
+						19999,
+						19999,
+						19999
+					],
+					"mBaseP": 19999,
+					"mFormula": "P"
+				}
+			],
+			"mImgIconName": [
+				"ASSETS/Characters/TFT_Veigar/HUD/Icons2D/TFT_VeigarPrimordialBurst.TFT.dds"
+			],
+			"delayTotalTimePercent": -0.5,
+			"mCantCancelWhileWindingUp": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mAcceleration": 4000,
+					"mMinSpeed": 500,
+					"mMaxSpeed": 4000,
+					"mInitialSpeed": 500,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 15,
+			"mMissileEffectKey": "{6630c6b4}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_LAYOUT_LOC",
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"selectionPriority": 1,
+			"mSpellCalculations": {
+				"{9802c392}": {
+					"mFormulaParts": [
+						{
+							"{a5749b52}": "scaleAP",
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"mSubpart": {
+								"mDataValue": "{a55806cf}"
+							}
+						}
+					]
+				},
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"{a5749b52}": "scaleAP",
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"mSubpart": {
+								"mDataValue": "Damage"
+							}
+						}
+					]
+				}
+			}
+		}
+	},
+	"Characters/TFT_Veigar/Spells/TFT_VeigarBasicAttack2": {
+		"mScriptName": "TFT_VeigarBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 512,
+			"mDisplayName": "game_spell_displayname_SorakaBasicAttack",
+			"mDescription": "game_spell_description_SorakaBasicAttack",
+			"delayCastOffsetPercent": -0.15279999375343323,
+			"bHaveHitEffect": true,
+			"castRange": [
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1100,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "L_Hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 9,
+			"missileSpeed": 1100,
+			"mMissileEffectKey": "{2eb71110}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Veigar/Spells/TFT_VeigarBasicAttack": {
+		"mScriptName": "TFT_VeigarBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 512,
+			"mDisplayName": "game_spell_displayname_SorakaBasicAttack",
+			"mDescription": "game_spell_description_SorakaBasicAttack",
+			"delayCastOffsetPercent": -0.15279999375343323,
+			"bHaveHitEffect": true,
+			"castRange": [
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1100,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "L_Hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 9,
+			"missileSpeed": 1100,
+			"mMissileEffectKey": "{2eb71110}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Veigar/Spells/TFT_VeigarCritAttack": {
+		"mScriptName": "TFT_VeigarCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 512,
+			"mDisplayName": "game_spell_displayname_SorakaBasicAttack",
+			"mDescription": "game_spell_description_SorakaBasicAttack",
+			"delayCastOffsetPercent": -0.15279999375343323,
+			"bHaveHitEffect": true,
+			"castRange": [
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1100,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "root"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 9,
+			"missileSpeed": 1100,
+			"mMissileEffectKey": "{2eb71110}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Veigar/CharacterRecords/Root": {
+		"mLinkedTraits": [
+			{
+				"TraitData": "Yordle"
+			},
+			{
+				"TraitData": "Sorcerer"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 720,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mCharacterName": "TFT_Veigar",
+		"baseHP": 500,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 75,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 50,
+		"baseArmor": 20,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 660,
+		"attackSpeed": 0.550000011920929,
+		"basicAttack": {
+			"mAttackCastTime": 0.75
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 0.5,
+				"mAttackName": "TFT_VeigarBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackDelayCastOffsetPercent": -0.10906250029802322,
+				"mAttackName": "TFT_VeigarCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT_VeigarR",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"TFT_VeigarBalefulStrikeMis",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 1,
+		"unitTagsString": "Champion",
+		"mPreferredPerkStyle": "Perks/Styles/Domination"
+	},
+	"{a0bb84ea}": {
+		"useGDSBinaries": true
+	}
+}

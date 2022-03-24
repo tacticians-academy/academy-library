@@ -1,0 +1,246 @@
+{
+	"{116add21}": {
+		"mScriptName": "TFT_GravesBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "TFT_GravesBasicAttack",
+			"mDisplayName": "game_spell_displayname_CardMasterBasicAttack",
+			"mDescription": "game_spell_description_CardMasterBasicAttack",
+			"mDynamicTooltip": "game_spell_tooltip_CardMasterBasicAttack",
+			"mDynamicExtended": "game_spell_levelup_CardMasterBasicAttack",
+			"delayCastOffsetPercent": -0.23579999804496765,
+			"mApplyAttackDamage": true,
+			"mApplyMaterialOnHitSound": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 3000,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "BUFFBONE_CSTM_WEAPONA"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 3.5,
+			"missileSpeed": 3000,
+			"mMissileEffectKey": "{cd2f33a8}",
+			"mLookAtPolicy": 1,
+			"mHitEffectOrientType": 2,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Graves/Spells/TFT_GravesBasicAttackSpread": {
+		"mScriptName": "TFT_GravesBasicAttackSpread",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6794,
+			"mAffectsStatusFlags": 8,
+			"mAlternateName": "TFT_GravesBasicAttack",
+			"mDisplayName": "game_spell_displayname_TFT_GravesBasicAttack",
+			"mDescription": "game_spell_description_TFT_GravesBasicAttack",
+			"mSpellTags": [
+				"Trait_MultiTargetAttack"
+			],
+			"mDataValues": [
+				{
+					"mName": "DamageMultiplier",
+					"mValues": [
+						0,
+						0.05000000074505806,
+						0.10000000149011612,
+						0.15000000596046448,
+						0.20000000298023224,
+						0.25,
+						0.30000001192092896
+					],
+					"mFormula": "P + .05"
+				}
+			],
+			"mProjectTargetToCastRange": true,
+			"mSpellRevealsChampion": false,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRangeDisplayOverride": [
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1
+			],
+			"castConeAngle": 1,
+			"castConeDistance": 10,
+			"mMissileSpec": {
+				"mMissileWidth": 20,
+				"movementComponent": {
+					"mSpeed": 3800,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "BUFFBONE_cstm_weapona"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"missileSpeed": 3800,
+			"mMissileEffectKey": "{e2d71a7c}",
+			"mLineWidth": 20,
+			"mLookAtPolicy": 0,
+			"mHitEffectOrientType": 2,
+			"mTargetingTypeData": {},
+			"mSpellCalculations": {
+				"BonusDamage": {
+					"mFormulaParts": [
+						{
+							"mDataValue": "DamageMultiplier",
+							"mStat": 2
+						}
+					]
+				}
+			}
+		}
+	},
+	"Characters/TFT_Graves/Spells/TFT_GravesBasicAttack": {
+		"mScriptName": "TFT_GravesBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "TFT_GravesBasicAttack",
+			"mDisplayName": "game_spell_displayname_CardMasterBasicAttack",
+			"mDescription": "game_spell_description_CardMasterBasicAttack",
+			"mDynamicTooltip": "game_spell_tooltip_CardMasterBasicAttack",
+			"mDynamicExtended": "game_spell_levelup_CardMasterBasicAttack",
+			"delayCastOffsetPercent": -0.23579999804496765,
+			"mApplyAttackDamage": true,
+			"mApplyMaterialOnHitSound": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 3000,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "BUFFBONE_CSTM_WEAPONA"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 3.5,
+			"missileSpeed": 3000,
+			"mMissileEffectKey": "{cd2f33a8}",
+			"mLookAtPolicy": 1,
+			"mHitEffectOrientType": 2,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Graves/CharacterRecords/Root": {
+		"mLinkedTraits": [
+			{
+				"TraitData": "Pirate"
+			},
+			{
+				"TraitData": "Gunslinger"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"{ef57098f}": false,
+		"mCharacterName": "TFT_Graves",
+		"baseHP": 450,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 0,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 55,
+		"baseArmor": 30,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 180,
+		"attackSpeed": 0.550000011920929,
+		"basicAttack": {
+			"mAttackCastTime": 0.10000000149011612
+		},
+		"critAttacks": [
+			{
+				"mAttackTotalTime": 2,
+				"mAttackCastTime": 0.10000000149011612,
+				"mAttackName": "TFT_GravesBasicAttack"
+			}
+		],
+		"spellNames": [
+			"TFT_GravesBasicAttackSpread",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 2,
+		"unitTagsString": "Champion"
+	},
+	"{a0ed011a}": {
+		"useGDSBinaries": true
+	}
+}

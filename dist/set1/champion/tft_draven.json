@@ -1,0 +1,956 @@
+{
+	"Characters/TFT_Draven/CharacterRecords/Root": {
+		"mLinkedTraits": [
+			{
+				"TraitData": "Imperial"
+			},
+			{
+				"TraitData": "Blademaster"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 720,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"{ef57098f}": false,
+		"mCharacterName": "TFT_Draven",
+		"baseHP": 650,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 50,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 65,
+		"baseArmor": 25,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 660,
+		"attackSpeed": 0.75,
+		"basicAttack": {
+			"mAttackCastTime": 0.6499999761581421
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 0.5,
+				"mAttackName": "TFT_DravenBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackDelayCastOffsetPercent": null,
+				"mAttackName": "TFT_DravenCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT_DravenSpinning",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"TFT_DravenDoubleShotMissile",
+			"TFT_DravenR",
+			"TFT_DravenSpinningAttack",
+			"TFT_DravenSpinningReturn",
+			"TFT_DravenSpinningAttackCrit",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion"
+	},
+	"Characters/TFT_Draven/Spells/TFT_DravenSpinningAttack2": {
+		"mScriptName": "TFT_DravenSpinningAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 24527,
+			"delayCastOffsetPercent": -1,
+			"canCastWhileDisabled": true,
+			"castRange": [
+				387.5,
+				387.5,
+				387.5,
+				387.5,
+				387.5,
+				387.5,
+				387.5
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1700,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "L_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 1700,
+			"mMissileEffectKey": "{c4c62700}",
+			"mAfterEffectKey": "{4651cd00}",
+			"mHitBoneName": "root",
+			"selectionPriority": 1
+		}
+	},
+	"Characters/TFT_Draven/Spells/TFT_DravenSpinningReturnCatch": {
+		"mScriptName": "TFT_DravenSpinningReturnCatch",
+		"mSpell": {
+			"flags": 4194308,
+			"mAffectsTypeFlags": 1029,
+			"mAlternateName": "UrgotPlasmaGrenadeBoom",
+			"mDisplayName": "game_spell_displayname_FlashFrost",
+			"mDescription": "game_spell_description_Flashfrost",
+			"mDynamicTooltip": "game_spell_tooltip_FlashFrost",
+			"mDynamicExtended": "game_spell_levelup_FlashFrost",
+			"mEffectAmount": [],
+			"mCoefficient": 0.4000000059604645,
+			"mImgIconName": [
+				"Cryophoenix_FrigidOrb.dds"
+			],
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.5,
+			"canCastWhileDisabled": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 120,
+				"movementComponent": {
+					"mTravelTime": 0.866599977016449,
+					"mTargetHeightAugment": 60,
+					"mOffsetInitialTargetHeight": 60,
+					"mStartBoneName": "L_weapon"
+				},
+				"heightSolver": {
+					"mGravity": 2500
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 7.974999904632568,
+			"missileSpeed": 700,
+			"mLineWidth": 120,
+			"bHaveHitBone": true,
+			"mHitBoneName": "pelvis",
+			"mTargetingTypeData": {}
+		}
+	},
+	"Characters/TFT_Draven/Spells/TFT_DravenAttackP_L": {
+		"mScriptName": "TFT_DravenAttackP_L",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 24575,
+			"mCastTime": 0.23330000042915344,
+			"delayCastOffsetPercent": -1,
+			"mApplyAttackEffect": true,
+			"mApplyMaterialOnHitSound": true,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1600,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "L_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 7.199999809265137,
+			"missileSpeed": 1600,
+			"mMissileEffectKey": "{42f77e9a}",
+			"mHitEffectKey": "{4651cd00}",
+			"mHitBoneName": "root",
+			"selectionPriority": 1
+		}
+	},
+	"Characters/TFT_Draven/Spells/TFT_DravenCritAttack": {
+		"mScriptName": "TFT_DravenCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 24575,
+			"delayCastOffsetPercent": -1,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				387.5,
+				387.5,
+				387.5,
+				387.5,
+				387.5,
+				387.5,
+				387.5
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 8,
+			"missileSpeed": 1600,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1
+		}
+	},
+	"Characters/TFT_Draven/Spells/TFT_DravenSpinningReturnLeftAxe": {
+		"mScriptName": "TFT_DravenSpinningReturnLeftAxe",
+		"mSpell": {
+			"flags": 4194308,
+			"mAffectsTypeFlags": 1029,
+			"mAlternateName": "UrgotPlasmaGrenadeBoom",
+			"mDisplayName": "game_spell_displayname_FlashFrost",
+			"mDescription": "game_spell_description_Flashfrost",
+			"mDynamicTooltip": "game_spell_tooltip_FlashFrost",
+			"mDynamicExtended": "game_spell_levelup_FlashFrost",
+			"mEffectAmount": [],
+			"mCoefficient": 0.4000000059604645,
+			"mImgIconName": [
+				"Cryophoenix_FrigidOrb.dds"
+			],
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.5,
+			"canCastWhileDisabled": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 120,
+				"movementComponent": {
+					"mTravelTime": 1.2000000476837158,
+					"mTargetHeightAugment": 60,
+					"mOffsetInitialTargetHeight": 60,
+					"mStartBoneName": "L_weapon"
+				},
+				"heightSolver": {
+					"mGravity": 2600
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 7.974999904632568,
+			"missileSpeed": 700,
+			"mMissileEffectKey": "{c4c62700}",
+			"mLineWidth": 120,
+			"bHaveHitBone": true,
+			"mHitBoneName": "pelvis",
+			"mTargetingTypeData": {}
+		}
+	},
+	"Characters/TFT_Draven/Spells/TFT_DravenAttackP_R": {
+		"mScriptName": "TFT_DravenAttackP_R",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 24575,
+			"mCastTime": 0.23330000042915344,
+			"delayCastOffsetPercent": -1,
+			"mApplyAttackEffect": true,
+			"mApplyMaterialOnHitSound": true,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1600,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 7.199999809265137,
+			"missileSpeed": 1600,
+			"mMissileEffectKey": "{be973964}",
+			"mHitEffectKey": "{4651cd00}",
+			"mHitBoneName": "root",
+			"selectionPriority": 1
+		}
+	},
+	"Characters/TFT_Draven/Spells/TFT_DravenSpinningAttack": {
+		"mScriptName": "TFT_DravenSpinningAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 24527,
+			"delayCastOffsetPercent": -1,
+			"canCastWhileDisabled": true,
+			"castRange": [
+				387.5,
+				387.5,
+				387.5,
+				387.5,
+				387.5,
+				387.5,
+				387.5
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1700,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 7.199999809265137,
+			"missileSpeed": 1700,
+			"mMissileEffectKey": "{d95c6d34}",
+			"mAfterEffectKey": "{4651cd00}",
+			"mHitBoneName": "root",
+			"selectionPriority": 1
+		}
+	},
+	"Characters/TFT_Draven/Spells/TFT_DravenSpinningAttack2Crit": {
+		"mScriptName": "TFT_DravenSpinningAttack2Crit",
+		"mSpell": {
+			"mAffectsTypeFlags": 24527,
+			"mCastTime": 0.23330000042915344,
+			"delayCastOffsetPercent": -1,
+			"canCastWhileDisabled": true,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				387.5,
+				387.5,
+				387.5,
+				387.5,
+				387.5,
+				387.5,
+				387.5
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1700,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "L_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 8.5,
+			"missileSpeed": 1700,
+			"mMissileEffectKey": "{c4c62700}",
+			"mAfterEffectKey": "{4651cd00}",
+			"mHitBoneName": "root",
+			"selectionPriority": 1
+		}
+	},
+	"Characters/TFT_Draven/Spells/TFT_DravenBasicAttack2": {
+		"mScriptName": "TFT_DravenBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 24575,
+			"delayCastOffsetPercent": -1,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				387.5,
+				387.5,
+				387.5,
+				387.5,
+				387.5,
+				387.5,
+				387.5
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 8,
+			"missileSpeed": 1600,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"mHitBoneName": "root",
+			"selectionPriority": 1
+		}
+	},
+	"Characters/TFT_Draven/Spells/TFT_DravenSpinning": {
+		"mScriptName": "TFT_DravenSpinning",
+		"mSpell": {
+			"flags": 36,
+			"mAffectsTypeFlags": 15567,
+			"mAlternateName": "TFT_DravenSpinning",
+			"mDisplayName": "game_spell_displayname_TFT_DravenSpinning",
+			"mDescription": "game_spell_description_TFT_DravenSpinning",
+			"mDataValues": [
+				{
+					"mName": "BuffDuration",
+					"mValues": [
+						5.75,
+						5.75,
+						5.75,
+						5.75,
+						5.75,
+						5.75,
+						5.75
+					],
+					"mBaseP": 5.75,
+					"mFormula": "P"
+				},
+				{
+					"mName": "ADMult",
+					"mValues": [
+						1,
+						1.5,
+						2,
+						2.5,
+						3,
+						3.5,
+						4
+					],
+					"mBaseP": 1,
+					"mFormula": "P + 0.5"
+				},
+				{
+					"mName": "ASBuff",
+					"mValues": [
+						1,
+						1,
+						1,
+						1,
+						1,
+						1,
+						1
+					],
+					"mBaseP": 1,
+					"mFormula": "P + 0"
+				}
+			],
+			"mCoefficient": 0.6000000238418579,
+			"mImgIconName": [
+				"ASSETS/Characters/TFT_Draven/HUD/Icons2D/TFT_Draven_SpinningAxe.TFT.dds"
+			],
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -0.5,
+			"mCantCancelWhileWindingUp": true,
+			"mSpellRevealsChampion": false,
+			"useAnimatorFramerate": true,
+			"bIsToggleSpell": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRangeDisplayOverride": [
+				300,
+				300,
+				300,
+				300,
+				300,
+				300,
+				300
+			],
+			"castRadius": [
+				210,
+				210,
+				210,
+				210,
+				210,
+				210,
+				210
+			],
+			"castConeDistance": 100,
+			"castFrame": 7.5,
+			"missileSpeed": 20,
+			"mLineWidth": 50,
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"mana": [
+				45,
+				45,
+				45,
+				45,
+				45,
+				45
+			],
+			"mTargetingTypeData": {},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"mSpellCalculations": {
+				"{4275312c}": {
+					"mFormulaParts": [
+						{
+							"mStat": 2,
+							"{a5749b52}": "scaleAD",
+							"mRatio": 1,
+							"mStyleTag": "noScale",
+							"mSubpart": {
+								"mDataValue": "ADMult"
+							}
+						}
+					]
+				}
+			}
+		},
+		"mBuff": {
+			"mDescription": "game_buff_tooltip_TFT_DravenSpinning"
+		}
+	},
+	"Characters/TFT_Draven/Spells/TFT_DravenAttackP_RC": {
+		"mScriptName": "TFT_DravenAttackP_RC",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 24575,
+			"mCastTime": 0.23330000042915344,
+			"delayCastOffsetPercent": -1,
+			"mApplyAttackEffect": true,
+			"mApplyMaterialOnHitSound": true,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1600,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 7.199999809265137,
+			"missileSpeed": 1600,
+			"mMissileEffectKey": "{28ef1671}",
+			"mHitEffectKey": "{81345075}",
+			"mHitBoneName": "root",
+			"selectionPriority": 1
+		}
+	},
+	"Characters/TFT_Draven/Spells/TFT_DravenAttackP_LQ": {
+		"mScriptName": "TFT_DravenAttackP_LQ",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 24575,
+			"mCastTime": 0.23330000042915344,
+			"delayCastOffsetPercent": -1,
+			"mApplyAttackEffect": true,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1600,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "L_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 7.199999809265137,
+			"missileSpeed": 1600,
+			"mMissileEffectKey": "{c4c62700}",
+			"mHitEffectKey": "{c61c0170}",
+			"mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
+			"selectionPriority": 1
+		}
+	},
+	"Characters/TFT_Draven/Spells/TFT_DravenAttackP_RQ": {
+		"mScriptName": "TFT_DravenAttackP_RQ",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 24575,
+			"mCastTime": 0.23330000042915344,
+			"delayCastOffsetPercent": -1,
+			"mApplyAttackEffect": true,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1600,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 7.199999809265137,
+			"missileSpeed": 1600,
+			"mMissileEffectKey": "{d95c6d34}",
+			"mHitEffectKey": "{c61c0170}",
+			"mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
+			"selectionPriority": 1
+		}
+	},
+	"Characters/TFT_Draven/Spells/TFT_DravenSpinningAttackCrit": {
+		"mScriptName": "TFT_DravenSpinningAttackCrit",
+		"mSpell": {
+			"mAffectsTypeFlags": 24527,
+			"mCastTime": 0.23330000042915344,
+			"delayCastOffsetPercent": -1,
+			"canCastWhileDisabled": true,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				387.5,
+				387.5,
+				387.5,
+				387.5,
+				387.5,
+				387.5,
+				387.5
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1700,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 1700,
+			"mMissileEffectKey": "{7fd30cfd}",
+			"mAfterEffectKey": "{4651cd00}",
+			"mHitBoneName": "root",
+			"selectionPriority": 1
+		}
+	},
+	"Characters/TFT_Draven/Spells/TFT_DravenSpinningReturn": {
+		"mScriptName": "TFT_DravenSpinningReturn",
+		"mSpell": {
+			"flags": 4194308,
+			"mAffectsTypeFlags": 1029,
+			"mAlternateName": "UrgotPlasmaGrenadeBoom",
+			"mDisplayName": "game_spell_displayname_FlashFrost",
+			"mDescription": "game_spell_description_Flashfrost",
+			"mDynamicTooltip": "game_spell_tooltip_FlashFrost",
+			"mDynamicExtended": "game_spell_levelup_FlashFrost",
+			"mEffectAmount": [],
+			"mCoefficient": 0.4000000059604645,
+			"mImgIconName": [
+				"Cryophoenix_FrigidOrb.dds"
+			],
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.5,
+			"canCastWhileDisabled": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 120,
+				"movementComponent": {
+					"mTravelTime": 1.2000000476837158,
+					"mTargetHeightAugment": 60,
+					"mOffsetInitialTargetHeight": 60,
+					"mStartBoneName": "L_weapon"
+				},
+				"heightSolver": {
+					"mGravity": 2600
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 7.974999904632568,
+			"missileSpeed": 700,
+			"mMissileEffectKey": "{d95c6d34}",
+			"mLineWidth": 120,
+			"bHaveHitBone": true,
+			"mHitBoneName": "pelvis",
+			"mTargetingTypeData": {}
+		}
+	},
+	"Characters/TFT_Draven/Spells/TFT_DravenBasicAttack": {
+		"mScriptName": "TFT_DravenBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 24575,
+			"delayCastOffsetPercent": -1,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				387.5,
+				387.5,
+				387.5,
+				387.5,
+				387.5,
+				387.5,
+				387.5
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 7.199999809265137,
+			"missileSpeed": 1600,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"mHitBoneName": "root",
+			"selectionPriority": 1
+		}
+	},
+	"{eb19246a}": {
+		"useGDSBinaries": true
+	}
+}

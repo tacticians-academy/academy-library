@@ -1,0 +1,494 @@
+{
+	"{22425c35}": {
+		"mScriptName": "TFT_JayceCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mCastTime": 0.10670000314712524,
+			"delayCastOffsetPercent": -0.05000000074505806,
+			"mApplyAttackDamage": true,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				485.6000061035156,
+				485.6000061035156,
+				485.6000061035156,
+				485.6000061035156,
+				485.6000061035156,
+				485.6000061035156,
+				284.6000061035156
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2500,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 10.5,
+			"missileSpeed": 2500,
+			"mMissileEffectName": "rampage.troy",
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"{29dd2165}": {
+		"mScriptName": "TFT_JayceBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9.5,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"{3e1b7bf5}": {
+		"mScriptName": "TFT_JayceBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9.5,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"{b2d6adf4}": {
+		"mScriptName": "TFT_JayceRangedAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mApplyAttackDamage": true,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				480,
+				480,
+				480,
+				480,
+				480,
+				480,
+				480
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2000,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "BUFFBONE_CSTM_WEAPON_1"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 5,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{a07e87e1}",
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"{bac62b5b}": {
+		"mScriptName": "TFT_JayceTransform",
+		"mSpell": {
+			"mAffectsTypeFlags": 6147,
+			"mSpellTags": [
+				"PositiveEffect_Boon"
+			],
+			"mDataValues": [
+				{
+					"mName": "RangeIncrease",
+					"mValues": [
+						3,
+						3,
+						3,
+						3,
+						3,
+						3,
+						3
+					],
+					"mBaseP": 3,
+					"mFormula": "P + 0"
+				},
+				{
+					"mName": "TransformDuration",
+					"mValues": [
+						60,
+						60,
+						60,
+						60,
+						60,
+						60,
+						60
+					],
+					"mBaseP": 60,
+					"mFormula": "P + 0"
+				},
+				{
+					"mName": "Damage",
+					"mValues": [
+						50,
+						200,
+						350,
+						500,
+						650,
+						800,
+						950
+					],
+					"mBaseP": 50,
+					"mFormula": "P + 150"
+				},
+				{
+					"mName": "CCDuration",
+					"mValues": [
+						0.75,
+						2.5,
+						4.25,
+						6,
+						7.75,
+						9.5,
+						11.25
+					],
+					"mBaseP": 0.75,
+					"mFormula": "P + 1.75"
+				},
+				{
+					"mName": "KnockbackDistance",
+					"mValues": [
+						3,
+						3,
+						3,
+						3,
+						3,
+						3,
+						3
+					],
+					"mBaseP": 3
+				},
+				{
+					"mName": "AAMax",
+					"mValues": [
+						1,
+						3,
+						5,
+						7,
+						9,
+						11,
+						13
+					],
+					"mBaseP": 1,
+					"mFormula": "P + 2"
+				},
+				{
+					"mName": "HexRange",
+					"mValues": [
+						1,
+						1,
+						1,
+						1,
+						1,
+						1,
+						1
+					],
+					"mBaseP": 1
+				}
+			],
+			"mImgIconName": [
+				"ASSETS/Characters/TFT_Jayce/HUD/Icons2D/TFT_Jayce_Spell.TFT_Hextech.dds"
+			],
+			"delayCastOffsetPercent": -0.3999999761581421,
+			"delayTotalTimePercent": -0.75,
+			"mCantCancelWhileWindingUp": true,
+			"mSpellRevealsChampion": false,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castFrame": 9.5,
+			"missileSpeed": 0,
+			"mFloatVarsDecimals": [
+				2,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"selectionPriority": 1,
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"{a5749b52}": "scaleAP",
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"mSubpart": {
+								"mDataValue": "Damage"
+							}
+						}
+					]
+				}
+			}
+		},
+		"mBuff": {
+			"mDescription": "game_buff_tooltip_PrimalSurge"
+		}
+	},
+	"{d2e0228e}": {
+		"mScriptName": "TFT_JayceRangedAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.1899999976158142,
+			"mApplyAttackDamage": true,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				480,
+				480,
+				480,
+				480,
+				480,
+				480,
+				480
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2000,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "BUFFBONE_CSTM_WEAPON_1"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 5,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{a07e87e1}",
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"{f576df05}": {
+		"mScriptName": "TFT_JayceCritAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mApplyAttackDamage": true,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				480,
+				480,
+				480,
+				480,
+				480,
+				480,
+				480
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2000,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "BUFFBONE_CSTM_WEAPON_1"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 7.5,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{a07e87e1}",
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"{a9a43e92}": {},
+	"{faed8b34}": {
+		"mLinkedTraits": [
+			{
+				"TraitData": "Hextech"
+			},
+			{
+				"TraitData": "Shapeshifter"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mInitialMana": 50,
+		"mCharacterName": "TFT_Jayce",
+		"baseHP": 600,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 60,
+		"baseArmor": 35,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 180,
+		"attackSpeed": 0.6499999761581421,
+		"basicAttack": {
+			"mAttackCastTime": 0.6000000238418579,
+			"mAttackName": "TFT_JayceBasicAttack"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT_JayceBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT_JayceCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT_JayceTransform",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"TFT_JayceRangedAttack",
+			"TFT_JayceRangedAttack2",
+			"TFT_JayceCritAttack2",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 3,
+		"unitTagsString": "Champion",
+		"flags": 9446656
+	}
+}

@@ -1,0 +1,340 @@
+{
+	"{01054185}": {
+		"useGDSBinaries": true
+	},
+	"Characters/TFT_Kennen/CharacterRecords/Root": {
+		"mLinkedTraits": [
+			{
+				"TraitData": "Ninja"
+			},
+			{
+				"TraitData": "Yordle"
+			},
+			{
+				"TraitData": "Elementalist"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 520,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mInitialMana": 50,
+		"mCharacterName": "TFT_Kennen",
+		"baseHP": 550,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 150,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 65,
+		"baseArmor": 20,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 420,
+		"attackSpeed": 0.6499999761581421,
+		"basicAttack": {
+			"mAttackCastTime": 0.699999988079071
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 0.5,
+				"mAttackName": "TFT_KennenBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackDelayCastOffsetPercent": -0.10000000149011612,
+				"mAttackName": "TFT_KennenCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT_KennenShurikenStorm",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"TFT_KennenShurikenHurl1",
+			"TFT_KennenMegaProc",
+			"TFT_KennenBringTheLight2",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 1,
+		"unitTagsString": "Champion",
+		"mPreferredPerkStyle": "Perks/Styles/Precision"
+	},
+	"Characters/TFT_Kennen/Spells/TFT_KennenShurikenStorm": {
+		"mScriptName": "TFT_KennenShurikenStorm",
+		"mSpell": {
+			"mAffectsTypeFlags": 9221,
+			"mRequiredUnitTags": {
+				"mTagList": "Champion"
+			},
+			"mDisplayName": "game_spell_displayname_TFT_KennenShurikenStorm",
+			"mDescription": "game_spell_description_TFT_KennenShurikenStorm",
+			"mSpellTags": [
+				"Trait_Ultimate"
+			],
+			"mDataValues": [
+				{
+					"mName": "TickRate",
+					"mValues": [
+						0.5,
+						0.5,
+						0.5,
+						0.5,
+						0.5,
+						0.5,
+						0.5
+					],
+					"mBaseP": 0.5,
+					"mFormula": "P"
+				},
+				{
+					"mName": "Duration",
+					"mValues": [
+						3,
+						3,
+						3,
+						3,
+						3,
+						3,
+						3
+					],
+					"mBaseP": 3,
+					"mFormula": "P"
+				},
+				{
+					"mName": "Damage",
+					"mValues": [
+						0,
+						225,
+						450,
+						675,
+						900,
+						1125,
+						1350
+					],
+					"mFormula": "P + 225"
+				},
+				{
+					"mName": "StunDuration",
+					"mValues": [
+						1.5,
+						1.5,
+						1.5,
+						1.5,
+						1.5,
+						1.5,
+						1.5
+					],
+					"mBaseP": 1.5,
+					"mFormula": "P"
+				}
+			],
+			"mImgIconName": [
+				"ASSETS/Characters/TFT_Kennen/HUD/Icons2D/TFT_Kennen_R.TFT.dds"
+			],
+			"delayTotalTimePercent": -0.5,
+			"mCantCancelWhileWindingUp": true,
+			"castRange": [
+				550,
+				550,
+				550,
+				550,
+				550,
+				550,
+				550
+			],
+			"castRadius": [
+				210,
+				210,
+				210,
+				210,
+				210,
+				210,
+				210
+			],
+			"castConeDistance": 100,
+			"castFrame": 20,
+			"missileSpeed": 779.9000244140625,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"mTargetingTypeData": {},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"{a5749b52}": "scaleAP",
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"mSubpart": {
+								"mDataValue": "Damage"
+							}
+						}
+					]
+				}
+			}
+		},
+		"mBuff": {
+			"mDescription": "game_buff_tooltip_TFT_KennenShurikenStorm"
+		}
+	},
+	"Characters/TFT_Kennen/Spells/TFT_KennenBasicAttack2": {
+		"mScriptName": "TFT_KennenBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 4234,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1700,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "BUFFBONE__HAND_R"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 12.5,
+			"missileSpeed": 1700,
+			"mMissileEffectKey": "{2ec4db93}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Kennen/Spells/TFT_KennenBasicAttack": {
+		"mScriptName": "TFT_KennenBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 4234,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1700,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "BUFFBONE__HAND_R"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 13.5,
+			"missileSpeed": 1700,
+			"mMissileEffectKey": "{2ec4db93}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Kennen/Spells/TFT_KennenCritAttack": {
+		"mScriptName": "TFT_KennenCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 4234,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1700,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 14.5,
+			"missileSpeed": 1700,
+			"mMissileEffectKey": "{cb3d9db4}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	}
+}

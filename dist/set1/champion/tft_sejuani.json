@@ -1,0 +1,283 @@
+{
+	"Characters/TFT_Sejuani/CharacterRecords/Root": {
+		"mLinkedTraits": [
+			{
+				"TraitData": "Glacial"
+			},
+			{
+				"TraitData": "Knight"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mInitialMana": 50,
+		"mCharacterName": "TFT_Sejuani",
+		"baseHP": 800,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 150,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 45,
+		"baseArmor": 40,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 180,
+		"attackSpeed": 0.550000011920929,
+		"basicAttack": {
+			"mAttackCastTime": 0.800000011920929,
+			"mAttackName": "TFT_SejuaniBasicAttack"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT_SejuaniBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackTotalTime": 1.600000023841858,
+				"mAttackCastTime": 0.30000001192092896,
+				"mAttackProbability": 1,
+				"mAttackName": "TFT_SejuaniCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT_SejuaniR",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"TFT_SejuaniEPassiveMissile",
+			"TFT_SejuaniRMissile",
+			"TFT_SejuaniE2",
+			"TFT_SejuaniWDummy",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 3,
+		"unitTagsString": "Champion",
+		"flags": 9446656,
+		"mPreferredPerkStyle": "Perks/Styles/Precision"
+	},
+	"Characters/TFT_Sejuani/Spells/TFT_SejuaniBasicAttack2": {
+		"mScriptName": "TFT_SejuaniBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -1,
+			"bHaveHitEffect": true,
+			"castRange": [
+				125,
+				125,
+				125,
+				125,
+				125,
+				125,
+				125
+			],
+			"castConeDistance": 100,
+			"castFrame": 13,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Sejuani/Spells/TFT_SejuaniR": {
+		"mScriptName": "TFT_SejuaniR",
+		"mSpell": {
+			"mAffectsTypeFlags": 4106,
+			"mRequiredUnitTags": {
+				"mTagList": "Champion"
+			},
+			"mDisplayName": "game_spell_displayname_TFT_SejuaniR",
+			"mDescription": "game_spell_description_TFT_SejuaniR",
+			"mSpellTags": [
+				"Trait_Ultimate"
+			],
+			"mDataValues": [
+				{
+					"mName": "ExplosionDelay",
+					"mValues": [
+						0,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2
+					],
+					"mFormula": "2"
+				},
+				{
+					"mName": "Damage",
+					"mValues": [
+						25,
+						100,
+						175,
+						250,
+						325,
+						400,
+						475
+					],
+					"mBaseP": 25,
+					"mFormula": "P + 75"
+				},
+				{
+					"mName": "StunDuration",
+					"mValues": [
+						0.5,
+						2,
+						3.5,
+						5,
+						6.5,
+						8,
+						9.5
+					],
+					"mBaseP": 0.5,
+					"mFormula": "P + 1.5"
+				}
+			],
+			"mImgIconName": [
+				"ASSETS/Characters/TFT_Sejuani/HUD/Icons2D/TFT_Sejuani_R.TFT.dds"
+			],
+			"mCastTime": 0.25,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mCantCancelWhileWindingUp": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRangeDisplayOverride": [
+				1300,
+				1300,
+				1300,
+				1300,
+				1300,
+				1300,
+				1300
+			],
+			"castRadius": [
+				550,
+				550,
+				550,
+				550,
+				550,
+				550,
+				550
+			],
+			"castConeAngle": 0,
+			"castConeDistance": 0,
+			"castFrame": 7,
+			"missileSpeed": 0,
+			"mLineWidth": 120,
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"selectionPriority": 1,
+			"mTargetingTypeData": {},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"{a5749b52}": "scaleAP",
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"mSubpart": {
+								"mDataValue": "Damage"
+							}
+						}
+					]
+				}
+			}
+		}
+	},
+	"Characters/TFT_Sejuani/Spells/TFT_SejuaniCritAttack": {
+		"mScriptName": "TFT_SejuaniCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.3999999761581421,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castConeAngle": 0,
+			"castConeDistance": 0,
+			"castFrame": 9,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Sejuani/Spells/TFT_SejuaniBasicAttack": {
+		"mScriptName": "TFT_SejuaniBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -1,
+			"bHaveHitEffect": true,
+			"castRange": [
+				125,
+				125,
+				125,
+				125,
+				125,
+				125,
+				125
+			],
+			"castConeDistance": 100,
+			"castFrame": 11,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"{c6e244bd}": {
+		"useGDSBinaries": true
+	}
+}

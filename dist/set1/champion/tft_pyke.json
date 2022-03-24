@@ -1,0 +1,344 @@
+{
+	"Characters/TFT_Pyke/Spells/TFT_PykeBasicAttack": {
+		"mScriptName": "TFT_PykeBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mDisplayName": "game_spell_displayname_DarkChampionBasicAttack",
+			"mDescription": "game_spell_description_DarkChampionBasicAttack",
+			"mDynamicTooltip": "game_spell_tooltip_DarkChampionBasicAttack",
+			"mDynamicExtended": "game_spell_levelup_DarkChampionBasicAttack",
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 11.5,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit"
+		}
+	},
+	"Characters/TFT_Pyke/Spells/TFT_PykeE": {
+		"mScriptName": "TFT_PykeE",
+		"mSpell": {
+			"mAffectsTypeFlags": 8192,
+			"mAlternateName": "TFT_PykeE",
+			"mDisplayName": "game_spell_displayname_TFT_PykeE",
+			"mDescription": "game_spell_description_TFT_PykeE",
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						100,
+						150,
+						200,
+						250,
+						300,
+						350,
+						400
+					],
+					"mBaseP": 100,
+					"mFormula": "P + 50"
+				},
+				{
+					"mName": "StunDuration",
+					"mValues": [
+						1,
+						1.5,
+						2,
+						2.5,
+						3,
+						3.5,
+						4
+					],
+					"mBaseP": 1,
+					"mFormula": "P + .5"
+				},
+				{
+					"mName": "StunDelay",
+					"mValues": [
+						1,
+						1,
+						1,
+						1,
+						1,
+						1,
+						1
+					],
+					"mBaseP": 1,
+					"mFormula": "P "
+				}
+			],
+			"mCoefficient": 1,
+			"mCoefficient2": 0.009999999776482582,
+			"mImgIconName": [
+				"ASSETS/Characters/TFT_Pyke/HUD/Icons2D/TFT_PykeE.TFT.dds"
+			],
+			"mCastTime": 0.2750000059604645,
+			"delayTotalTimePercent": -1,
+			"mCantCancelWhileWindingUp": true,
+			"cantCastWhileRooted": true,
+			"mDisableCastBar": true,
+			"mIgnoreRangeCheck": true,
+			"castRange": [
+				550,
+				550,
+				550,
+				550,
+				550,
+				550,
+				550
+			],
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"mana": [
+				40,
+				40,
+				40,
+				40,
+				40,
+				40
+			],
+			"mTargetingTypeData": {},
+			"mSpellCooldownOrSealedQueueThreshold": 0.2750000059604645,
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"{a5749b52}": "scaleAP",
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"mSubpart": {
+								"mDataValue": "Damage"
+							}
+						}
+					]
+				}
+			}
+		}
+	},
+	"Characters/TFT_Pyke/Spells/TFT_PykeEMissile": {
+		"mScriptName": "TFT_PykeEMissile",
+		"mSpell": {
+			"flags": 36,
+			"mAffectsTypeFlags": 14346,
+			"mImgIconName": [
+				"ASSETS/Characters/TFT_Pyke/HUD/Icons2D/TFT_PykeE.TFT.dds"
+			],
+			"mIsDisabledWhileDead": false,
+			"mIgnoreRangeCheck": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"luaOnMissileUpdateDistanceInterval": 51,
+			"mMissileSpec": {
+				"mMissileWidth": 150,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 3000,
+					"mUseHeightOffsetAtEnd": true,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Chest"
+				},
+				"visibilityComponent": {},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"missileSpeed": 3000,
+			"mMissileEffectKey": "{6c177f7d}",
+			"mLineWidth": 110,
+			"selectionPriority": 2,
+			"mTargetingTypeData": {}
+		}
+	},
+	"Characters/TFT_Pyke/Spells/TFT_PykeCritAttack": {
+		"mScriptName": "TFT_PykeCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mDisplayName": "game_spell_displayname_DarkChampionBasicAttack",
+			"mDescription": "game_spell_description_DarkChampionBasicAttack",
+			"mDynamicTooltip": "game_spell_tooltip_DarkChampionBasicAttack",
+			"mDynamicExtended": "game_spell_levelup_DarkChampionBasicAttack",
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 13,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true
+		}
+	},
+	"Characters/TFT_Pyke/Spells/TFT_PykeBasicAttack2": {
+		"mScriptName": "TFT_PykeBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mDisplayName": "game_spell_displayname_DarkChampionBasicAttack",
+			"mDescription": "game_spell_description_DarkChampionBasicAttack",
+			"mDynamicTooltip": "game_spell_tooltip_DarkChampionBasicAttack",
+			"mDynamicExtended": "game_spell_levelup_DarkChampionBasicAttack",
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 11.5,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit"
+		}
+	},
+	"Characters/TFT_Pyke/CharacterRecords/Root": {
+		"mLinkedTraits": [
+			{
+				"TraitData": "Pirate"
+			},
+			{
+				"TraitData": "Assassin"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mInitialMana": 50,
+		"mCharacterName": "TFT_Pyke",
+		"baseHP": 600,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 125,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 60,
+		"baseArmor": 25,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 180,
+		"attackSpeed": 0.6000000238418579,
+		"basicAttack": {
+			"mAttackCastTime": 0.75
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 0.5,
+				"mAttackName": "TFT_PykeBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackDelayCastOffsetPercent": null,
+				"mAttackName": "TFT_PykeCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT_PykeE",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"TFT_PykeQRange",
+			"TFT_PykeQMelee",
+			"TFT_PykeEMissile",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 2,
+		"unitTagsString": "Champion",
+		"flags": 9446656
+	},
+	"{eee8e3e5}": {
+		"useGDSBinaries": true
+	}
+}

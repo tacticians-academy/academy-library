@@ -1,0 +1,529 @@
+{
+	"Characters/TFT_Yasuo/Spells/TFT_YasuoBasicAttack": {
+		"mScriptName": "TFT_YasuoBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9.5,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Yasuo/Spells/TFT_YasuoQ2": {
+		"mScriptName": "TFT_YasuoQ2",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mCastTime": 0.3499999940395355,
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.5,
+			"mCantCancelWhileWindingUp": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 15,
+			"mLineWidth": 15,
+			"bHaveHitBone": true,
+			"mHitBoneName": "root",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5
+		}
+	},
+	"Characters/TFT_Yasuo/Spells/TFT_YasuoQ3": {
+		"mScriptName": "TFT_YasuoQ3",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mCastTime": 0.3499999940395355,
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.5,
+			"mCantCancelWhileWindingUp": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 250,
+				"movementComponent": {
+					"mSpeed": 1200,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "buffbone_glb_ground_loc"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 7,
+			"mMissileEffectKey": "{d4982ec8}",
+			"mLineWidth": 15,
+			"selectionPriority": 1,
+			"mTargetingTypeData": {},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5
+		}
+	},
+	"Characters/TFT_Yasuo/Spells/TFT_YasuoQ1": {
+		"mScriptName": "TFT_YasuoQ1",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mCastTime": 0.3499999940395355,
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.5,
+			"mCantCancelWhileWindingUp": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 12,
+			"missileSpeed": 8700,
+			"mLineWidth": 15,
+			"bHaveHitBone": true,
+			"mHitBoneName": "root",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		},
+		"mBuff": {
+			"mDescription": "game_buff_tooltip_TFT_YasuoQ"
+		}
+	},
+	"Characters/TFT_Yasuo/Spells/TFT_YasuoQWrapper": {
+		"mScriptName": "TFT_YasuoQWrapper",
+		"mSpell": {
+			"flags": 36,
+			"mAffectsTypeFlags": 6154,
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						-50,
+						150,
+						350,
+						550,
+						750,
+						950,
+						1150
+					],
+					"mBaseP": -50,
+					"mFormula": "P + 200"
+				},
+				{
+					"mName": "QHexRange",
+					"mValues": [
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2
+					],
+					"mBaseP": 2
+				},
+				{
+					"mName": "QEmpowerHexRange",
+					"mValues": [
+						6,
+						6,
+						6,
+						6,
+						6,
+						6,
+						6
+					],
+					"mBaseP": 6
+				},
+				{
+					"mName": "QCountForEmpower",
+					"mValues": [
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2
+					],
+					"mBaseP": 2
+				},
+				{
+					"mName": "QWidth",
+					"mValues": [
+						75,
+						75,
+						75,
+						75,
+						75,
+						75,
+						75
+					],
+					"mBaseP": 75
+				},
+				{
+					"mName": "QKnockupDuration",
+					"mValues": [
+						1.5,
+						1.5,
+						1.5,
+						1.5,
+						1.5,
+						1.5,
+						1.5
+					],
+					"mBaseP": 1.5
+				}
+			],
+			"mImgIconName": [
+				"ASSETS/Characters/TFT_Yasuo/HUD/Icons2D/TFT_Yasuo_Q1.TFT.dds"
+			],
+			"delayCastOffsetPercent": -0.75,
+			"delayTotalTimePercent": -0.75,
+			"useAnimatorFramerate": true,
+			"mDoNotNeedToFaceTarget": true,
+			"mUseAutoattackCastTime": true,
+			"{f589de4a}": {},
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRangeDisplayOverride": [
+				475,
+				475,
+				475,
+				475,
+				475,
+				475,
+				475
+			],
+			"castRadius": [
+				400,
+				400,
+				400,
+				400,
+				400,
+				400,
+				400
+			],
+			"castFrame": 7.5,
+			"missileSpeed": 1500,
+			"mLineWidth": 55,
+			"mFloatVarsDecimals": [
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1
+			],
+			"selectionPriority": 1,
+			"mTargetingTypeData": {},
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"{a5749b52}": "scaleAP",
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"mSubpart": {
+								"mDataValue": "Damage"
+							}
+						}
+					]
+				}
+			}
+		},
+		"mBuff": {
+			"mDescription": "game_buff_tooltip_TFT_YasuoQ"
+		}
+	},
+	"Characters/TFT_Yasuo/Spells/TFT_YasuoCritAttack": {
+		"mScriptName": "TFT_YasuoCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 8.5,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Yasuo/Spells/TFT_YasuoQ2W": {
+		"mScriptName": "TFT_YasuoQ2W",
+		"mSpell": {
+			"flags": 36,
+			"mAffectsTypeFlags": 6154,
+			"mAlternateName": "TFT_YasuoQW",
+			"mDisplayName": "game_spell_displayname_TFT_YasuoQW",
+			"mDescription": "game_spell_description_TFT_YasuoQW",
+			"mDynamicTooltip": "game_spell_tooltip_TFT_YasuoQW",
+			"mDynamicExtended": "game_spell_levelup_TFT_YasuoQW",
+			"mCoefficient": 1,
+			"mImgIconName": [
+				"ASSETS/Characters/TFT_Yasuo/HUD/Icons2D/TFT_Yasuo_Q2.TFT.dds",
+				"ASSETS/Characters/TFT_Yasuo/HUD/Icons2D/TFT_Yasuo_Q2.TFT.dds"
+			],
+			"delayCastOffsetPercent": -0.75,
+			"delayTotalTimePercent": -0.75,
+			"useAnimatorFramerate": true,
+			"mDoNotNeedToFaceTarget": true,
+			"mUseAutoattackCastTime": true,
+			"{f589de4a}": {},
+			"castRange": [
+				3250,
+				3250,
+				3250,
+				3250,
+				3250,
+				3250,
+				3250
+			],
+			"castRangeDisplayOverride": [
+				475,
+				475,
+				475,
+				475,
+				475,
+				475,
+				475
+			],
+			"castRadius": [
+				400,
+				400,
+				400,
+				400,
+				400,
+				400,
+				400
+			],
+			"castFrame": 7.5,
+			"missileSpeed": 1500,
+			"mLineWidth": 55,
+			"selectionPriority": 1,
+			"mTargetingTypeData": {},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5
+		}
+	},
+	"Characters/TFT_Yasuo/Spells/TFT_YasuoBasicAttack2": {
+		"mScriptName": "TFT_YasuoBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 8.5,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Yasuo/CharacterRecords/Root": {
+		"mLinkedTraits": [
+			{
+				"TraitData": "Exile"
+			},
+			{
+				"TraitData": "Blademaster"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mCharacterName": "TFT_Yasuo",
+		"baseHP": 750,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 25,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 75,
+		"baseArmor": 35,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 180,
+		"attackSpeed": 1,
+		"basicAttack": {
+			"mAttackCastTime": 0.8500000238418579,
+			"mAttackDelayCastOffsetPercent": -0.07999999821186066,
+			"mAttackDelayCastOffsetPercentAttackSpeedRatio": 1,
+			"mAttackProbability": 0.5,
+			"mAttackName": "TFT_YasuoBasicAttack"
+		},
+		"extraAttacks": [
+			{
+				"mAttackDelayCastOffsetPercent": null,
+				"mAttackProbability": 0.5,
+				"mAttackName": "TFT_YasuoBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackDelayCastOffsetPercentAttackSpeedRatio": 1,
+				"mAttackName": "TFT_YasuoCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT_YasuoQWrapper",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"TFT_YasuoQ1",
+			"TFT_YasuoQ2",
+			"TFT_YasuoQ3Mis",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 2,
+		"unitTagsString": "Champion"
+	},
+	"{fbe708eb}": {
+		"useGDSBinaries": true
+	}
+}

@@ -1,0 +1,358 @@
+{
+	"Characters/TFT_Evelynn/Spells/TFT_EvelynnBasicAttack2": {
+		"mScriptName": "TFT_EvelynnBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 4234,
+			"mDisplayName": "game_spell_displayname_EvelynnBasicAttack",
+			"mDescription": "game_spell_description_EvelynnBasicAttack",
+			"delayCastOffsetPercent": -0.3506999909877777,
+			"bHaveHitEffect": true,
+			"castRange": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9,
+			"missileSpeed": 467,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc"
+		}
+	},
+	"Characters/TFT_Evelynn/Spells/TFT_EvelynnCritAttack": {
+		"mScriptName": "TFT_EvelynnCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 4234,
+			"mDisplayName": "game_spell_displayname_EvelynnBasicAttack",
+			"mDescription": "game_spell_description_EvelynnBasicAttack",
+			"delayCastOffsetPercent": -0.3506999909877777,
+			"bHaveHitEffect": true,
+			"castRange": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9.5,
+			"missileSpeed": 467,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Evelynn/Spells/TFT_EvelynnR": {
+		"mScriptName": "TFT_EvelynnR",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mDisplayName": "game_spell_displayname_TFT_EvelynnR",
+			"mDescription": "game_spell_description_TFT_EvelynnR",
+			"mSpellTags": [
+				"Trait_Ultimate"
+			],
+			"mDataValues": [
+				{
+					"mName": "CritMultiplier",
+					"mValues": [
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"mBaseP": 2,
+					"mFormula": "P + 1"
+				},
+				{
+					"mName": "CritThreshold",
+					"mValues": [
+						0.5,
+						0.5,
+						0.5,
+						0.5,
+						0.5,
+						0.5,
+						0.5
+					],
+					"mBaseP": 0.5,
+					"mFormula": "P"
+				},
+				{
+					"mName": "Damage",
+					"mValues": [
+						100,
+						200,
+						300,
+						400,
+						500,
+						600,
+						700
+					],
+					"mBaseP": 100,
+					"mFormula": "P + 100"
+				},
+				{
+					"mName": "BlinkBackDistance",
+					"mValues": [
+						3,
+						3,
+						3,
+						3,
+						3,
+						3,
+						3
+					],
+					"mBaseP": 3,
+					"mFormula": "P"
+				}
+			],
+			"mCoefficient": 0.75,
+			"mCoefficient2": 0.029999999329447746,
+			"mImgIconName": [
+				"ASSETS/Characters/Evelynn/HUD/Icons2D/Evelynn_R.dds"
+			],
+			"mCastTime": 0.3499999940395355,
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.5,
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"alwaysSnapFacing": true,
+			"useAnimatorFramerate": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				350,
+				350,
+				350,
+				350,
+				350,
+				350,
+				350
+			],
+			"castConeDistance": 100,
+			"castFrame": 7.5,
+			"missileSpeed": 1300,
+			"mLineWidth": 80,
+			"mHitEffectKey": "{f5dbed2e}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1
+			],
+			"selectionPriority": 2,
+			"mTargetingTypeData": {},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"mSpellCalculations": {
+				"CritDamage": {
+					"mMultiplier": {
+						"mDataValue": "CritMultiplier"
+					},
+					"mFormulaParts": [
+						{
+							"mDataValue": "Damage"
+						}
+					]
+				},
+				"{f422c52b}": {
+					"mFormulaParts": [
+						{
+							"{a5749b52}": "scaleAP",
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"mSubpart": {
+								"mPart1": {
+									"mDataValue": "Damage"
+								},
+								"mPart2": {
+									"mDataValue": "CritMultiplier"
+								}
+							}
+						}
+					]
+				},
+				"{15e48114}": {
+					"mDisplayAsPercent": true,
+					"mFormulaParts": [
+						{
+							"mDataValue": "{7a3a34d0}"
+						}
+					]
+				},
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"{a5749b52}": "scaleAP",
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"mSubpart": {
+								"mDataValue": "Damage"
+							}
+						}
+					]
+				}
+			}
+		}
+	},
+	"Characters/TFT_Evelynn/Spells/TFT_EvelynnBasicAttack": {
+		"mScriptName": "TFT_EvelynnBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 4234,
+			"mDisplayName": "game_spell_displayname_EvelynnBasicAttack",
+			"mDescription": "game_spell_description_EvelynnBasicAttack",
+			"delayCastOffsetPercent": -0.3506999909877777,
+			"bHaveHitEffect": true,
+			"castRange": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9.5,
+			"missileSpeed": 467,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"{12529fdd}": {
+		"useGDSBinaries": true
+	},
+	"Characters/TFT_Evelynn/CharacterRecords/Root": {
+		"mLinkedTraits": [
+			{
+				"TraitData": "Demon"
+			},
+			{
+				"TraitData": "Assassin"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mCharacterName": "TFT_Evelynn",
+		"baseHP": 550,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 75,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 70,
+		"baseArmor": 20,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 180,
+		"attackSpeed": 0.6000000238418579,
+		"basicAttack": {
+			"mAttackCastTime": 0.75
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 0.10000000149011612,
+				"mAttackName": "TFT_EvelynnBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT_EvelynnCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT_EvelynnR",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"TFT_EvelynnQ2",
+			"TFT_EvelynnWMissile",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 2,
+		"unitTagsString": "Champion",
+		"flags": 9446656
+	}
+}

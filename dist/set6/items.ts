@@ -1683,7 +1683,7 @@ export const hexbuffItems: ItemData[] = [
 	{
 		desc: `tft_item_description_InfernoHex`,
 		effects: {
-			'{a8ca7859}': 30,
+			'AAPercent': 30,
 		},
 		from: [],
 		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_Hex_Inferno.dds`,

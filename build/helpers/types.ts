@@ -16,7 +16,7 @@ export interface ChampionJSONAttack {
 export interface ChampionJSONStats {
 	PortraitIcon: string
 	tier?: number
-	mLinkedTraits?: {TraitData: string}[]
+	mLinkedTraits?: {TraitData?: string, '{053a1f33}'?: string}[]
 	baseStaticHPRegen: number
 	baseCritChance: number
 	critDamageMultiplier: number

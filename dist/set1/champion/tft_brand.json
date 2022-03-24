@@ -1,0 +1,401 @@
+{
+	"Characters/TFT_Brand/Spells/TFT_BrandCritAttack": {
+		"mScriptName": "TFT_BrandCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 24527,
+			"mAlternateName": "BrandCritAttack",
+			"mDisplayName": "game_spell_displayname_AnnieBasicAttack",
+			"mDescription": "game_spell_description_AnnieBasicAttack",
+			"delayCastOffsetPercent": -0.13459999859333038,
+			"bHaveHitEffect": true,
+			"castRange": [
+				625,
+				625,
+				625,
+				625,
+				625,
+				625,
+				625
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2000,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 9.5,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{6481181a}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1
+		}
+	},
+	"Characters/TFT_Brand/Spells/TFT_BrandR": {
+		"mScriptName": "TFT_BrandR",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mAlternateName": "TFT_BrandR",
+			"mDisplayName": "game_spell_displayname_TFT_BrandR",
+			"mDescription": "game_spell_description_TFT_BrandR",
+			"mSpellTags": [
+				"Trait_Ultimate"
+			],
+			"mEffectAmount": [],
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						50,
+						250,
+						450,
+						650,
+						850,
+						1050,
+						1250
+					],
+					"mBaseP": 50,
+					"mFormula": "P + 200"
+				},
+				{
+					"mName": "MaxBounces",
+					"mValues": [
+						4,
+						4,
+						6,
+						20,
+						20,
+						20,
+						20
+					],
+					"{3f95426c}": false,
+					"mBaseP": 2,
+					"mFormula": "P"
+				}
+			],
+			"delayTotalTimePercent": -0.5,
+			"mCantCancelWhileWindingUp": true,
+			"castRange": [
+				2650,
+				2650,
+				2650,
+				2650,
+				2650,
+				2650,
+				2650
+			],
+			"castRangeDisplayOverride": [
+				750,
+				750,
+				750,
+				750,
+				750,
+				750,
+				750
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mAcceleration": 1000,
+					"mMinSpeed": 250,
+					"mMaxSpeed": 3000,
+					"mInitialSpeed": 1000,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 13,
+			"missileSpeed": 1000,
+			"mMissileEffectKey": "{f505c71f}",
+			"selectionPriority": 1,
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"{a5749b52}": "scaleAP",
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"mSubpart": {
+								"mDataValue": "Damage"
+							}
+						}
+					]
+				}
+			}
+		}
+	},
+	"Characters/TFT_Brand/Spells/TFT_BrandBasicAttack2": {
+		"mScriptName": "TFT_BrandBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 24527,
+			"mAlternateName": "BrandBasicAttack2",
+			"mDisplayName": "game_spell_displayname_AnnieBasicAttack",
+			"mDescription": "game_spell_description_AnnieBasicAttack",
+			"delayCastOffsetPercent": -0.13459999859333038,
+			"bHaveHitEffect": true,
+			"castRange": [
+				625,
+				625,
+				625,
+				625,
+				625,
+				625,
+				625
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2000,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "L_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 9.5,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{6481181a}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1
+		}
+	},
+	"Characters/TFT_Brand/Spells/TFT_BrandRMissile": {
+		"mScriptName": "TFT_BrandRMissile",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"mAffectsStatusFlags": 32,
+			"mAlternateName": "TFT_BrandR",
+			"mDisplayName": "game_spell_displayname_TFT_BrandR",
+			"mDescription": "game_spell_description_TFT_BrandR",
+			"mDynamicTooltip": "game_spell_tooltip_TFT_BrandR",
+			"mDynamicExtended": "game_spell_levelup_TFT_BrandR",
+			"mEffectAmount": [],
+			"mCoefficient": 0.6000000238418579,
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.5,
+			"mCantCancelWhileWindingUp": true,
+			"mIsDisabledWhileDead": false,
+			"castRange": [
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500
+			],
+			"castRadius": [
+				710,
+				710,
+				710,
+				710,
+				710,
+				710,
+				710
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mAcceleration": 250,
+					"mMinSpeed": 800,
+					"mMaxSpeed": 3000,
+					"mInitialSpeed": 800,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "C_BuffBone_Glb_Center_Loc"
+				},
+				"heightSolver": {
+					"mGravity": 4000
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 8.699999809265137,
+			"missileSpeed": 750,
+			"mMissileEffectKey": "{f505c71f}",
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"manaUiOverride": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"selectionPriority": 1
+		}
+	},
+	"Characters/TFT_Brand/Spells/TFT_BrandBasicAttack": {
+		"mScriptName": "TFT_BrandBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 24527,
+			"delayCastOffsetPercent": -0.13459999859333038,
+			"bHaveHitEffect": true,
+			"castRange": [
+				625,
+				625,
+				625,
+				625,
+				625,
+				625,
+				625
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2000,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 9.5,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{6481181a}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1
+		}
+	},
+	"{9fc4b8d9}": {
+		"useGDSBinaries": true
+	},
+	"Characters/TFT_Brand/CharacterRecords/Root": {
+		"mLinkedTraits": [
+			{
+				"TraitData": "Demon"
+			},
+			{
+				"TraitData": "Elementalist"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 720,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mInitialMana": 50,
+		"mCharacterName": "TFT_Brand",
+		"baseHP": 700,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 150,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 60,
+		"baseArmor": 25,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 660,
+		"attackSpeed": 0.6000000238418579,
+		"basicAttack": {
+			"mAttackCastTime": 0.699999988079071
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 0.25,
+				"mAttackName": "TFT_BrandBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT_BrandCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT_BrandR",
+			"BaseSpell",
+			"BaseSpell",
+			"TFT_BrandR"
+		],
+		"extraSpells": [
+			"TFT_BrandQMissile",
+			"TFT_BrandRMissile",
+			"TFT_BrandEMissile",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 2,
+		"unitTagsString": "Champion"
+	}
+}

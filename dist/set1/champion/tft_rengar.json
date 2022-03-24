@@ -1,0 +1,285 @@
+{
+	"Characters/TFT_Rengar/CharacterRecords/Root": {
+		"mLinkedTraits": [
+			{
+				"TraitData": "Wild"
+			},
+			{
+				"TraitData": "Assassin"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"{ef57098f}": false,
+		"mCharacterName": "TFT_Rengar",
+		"baseHP": 550,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 75,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 70,
+		"baseArmor": 20,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 180,
+		"attackSpeed": 0.6000000238418579,
+		"basicAttack": {
+			"mAttackCastTime": 0.75
+		},
+		"critAttacks": [
+			{
+				"mAttackDelayCastOffsetPercent": null,
+				"mAttackName": "TFT_RengarCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT_RengarPassiveBuffDash",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"TFT_RengarPassiveBuffDash",
+			"TFT_RengarQSound",
+			"TFT_RengarQ2Sound",
+			"TFT_RengarQ2",
+			"TFT_RengarEMis",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 2,
+		"unitTagsString": "Champion",
+		"flags": 9446656
+	},
+	"{1bb87d4f}": {
+		"useGDSBinaries": true
+	},
+	"Characters/TFT_Rengar/Spells/TFT_RengarBasicAttack": {
+		"mScriptName": "TFT_RengarBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 7375,
+			"mDisplayName": "game_spell_displayname_WolfmanBasicAttack",
+			"mDescription": "game_spell_description_WolfmanBasicAttack",
+			"delayCastOffsetPercent": -0.17389999330043793,
+			"bHaveHitEffect": true,
+			"castRange": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 8,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Rengar/Spells/TFT_RengarBasicAttack2": {
+		"mScriptName": "TFT_RengarBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 7375,
+			"mDisplayName": "game_spell_displayname_WolfmanBasicAttack",
+			"mDescription": "game_spell_description_WolfmanBasicAttack",
+			"delayCastOffsetPercent": -0.17389999330043793,
+			"bHaveHitEffect": true,
+			"castRange": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 8.399999618530273,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Rengar/Spells/TFT_RengarPassiveBuffDash": {
+		"mScriptName": "TFT_RengarPassiveBuffDash",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6826,
+			"mAlternateName": "TFT_RengarPassiveBuffDash",
+			"mDisplayName": "game_character_passiveName_TFT_Rengar",
+			"mDescription": "game_character_passiveDescription_TFT_Rengar",
+			"mEffectAmount": [],
+			"mDataValues": [
+				{
+					"mName": "ADMult",
+					"mValues": [
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					],
+					"mBaseP": 1,
+					"mFormula": "P + 1"
+				},
+				{
+					"mName": "ASBuff",
+					"mValues": [
+						0.10000000149011612,
+						0.30000001192092896,
+						0.5,
+						0.699999988079071,
+						0.8999999761581421,
+						1.100000023841858,
+						1.2999999523162842
+					],
+					"mBaseP": 0.10000000149011612,
+					"mFormula": "P + .2"
+				},
+				{
+					"mName": "CritBuff",
+					"mValues": [
+						0.25,
+						0.25,
+						0.25,
+						0.25,
+						0.25,
+						0.25,
+						0.25
+					],
+					"mBaseP": 0.25,
+					"mFormula": "P"
+				},
+				{
+					"mName": "BuffDuration",
+					"mValues": [
+						6,
+						6,
+						6,
+						6,
+						6,
+						6,
+						6
+					],
+					"mBaseP": 6,
+					"mFormula": "P"
+				}
+			],
+			"mImgIconName": [
+				"ASSETS/Characters/TFT_Rengar/HUD/Icons2D/TFT_Rengar_Passive.TFT.dds"
+			],
+			"castRange": [
+				1000,
+				1000,
+				1000,
+				1000,
+				1000,
+				1000,
+				1000
+			],
+			"castConeDistance": 100,
+			"mSpellCalculations": {
+				"{932aace2}": {
+					"mFormulaParts": [
+						{
+							"mDataValue": "ADMult",
+							"mStat": 2
+						}
+					]
+				},
+				"{609ded9d}": {
+					"mDisplayAsPercent": true,
+					"mFormulaParts": [
+						{
+							"mDataValue": "{f64fe0b4}"
+						}
+					]
+				},
+				"{7d85e49d}": {
+					"mDisplayAsPercent": true,
+					"mFormulaParts": [
+						{
+							"mDataValue": "{97c815b4}"
+						}
+					]
+				}
+			}
+		}
+	},
+	"Characters/TFT_Rengar/Spells/TFT_RengarCritAttack": {
+		"mScriptName": "TFT_RengarCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 7375,
+			"mDisplayName": "game_spell_displayname_WolfmanBasicAttack",
+			"mDescription": "game_spell_description_WolfmanBasicAttack",
+			"delayCastOffsetPercent": -0.17389999330043793,
+			"bHaveHitEffect": true,
+			"castRange": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 8.399999618530273,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	}
+}

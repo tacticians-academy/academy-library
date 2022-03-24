@@ -1,0 +1,513 @@
+{
+	"Characters/TFT_Shyvana/Spells/TFT_ShyvanaBasicAttack": {
+		"mScriptName": "TFT_ShyvanaBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 4234,
+			"mAlternateName": "ShyvanaBasicAttack",
+			"mDisplayName": "game_spell_displayname_EvelynnBasicAttack",
+			"mDescription": "game_spell_description_EvelynnBasicAttack",
+			"delayCastOffsetPercent": -0.3506999909877777,
+			"bHaveHitEffect": true,
+			"castRange": [
+				125,
+				125,
+				125,
+				125,
+				125,
+				125,
+				125
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9,
+			"missileSpeed": 467,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Shyvana/Spells/TFT_ShyvanaTransform": {
+		"mScriptName": "TFT_ShyvanaTransform",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 4106,
+			"mAlternateName": "ShyvanGodOfDeath",
+			"mDisplayName": "game_spell_displayname_ShyvanTransform",
+			"mDescription": "game_spell_description_ShyvanTransform",
+			"mDynamicTooltip": "game_spell_tooltip_ShyvanTransform",
+			"mDynamicExtended": "game_spell_levelup_ShyvanTransform",
+			"mEffectAmount": [],
+			"mCoefficient": 0.009999999776482582,
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.5,
+			"mCantCancelWhileWindingUp": true,
+			"castRange": [
+				20,
+				20,
+				20,
+				20,
+				20,
+				20,
+				20
+			],
+			"castRadius": [
+				350,
+				350,
+				350,
+				350,
+				350,
+				350,
+				350
+			],
+			"castConeDistance": 100,
+			"castFrame": 12.425000190734863,
+			"missileSpeed": 779.9000244140625,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"mTargetingTypeData": {}
+		},
+		"mBuff": {
+			"mDescription": "game_buff_tooltip_TFT_ShyvanaTransform"
+		}
+	},
+	"Characters/TFT_Shyvana/Spells/TFT_ShyvanaTransformLeap": {
+		"mScriptName": "TFT_ShyvanaTransformLeap",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mAlternateName": "TFT_ShyvanaTransformCast",
+			"mDisplayName": "game_spell_displayname_TFT_ShyvanaTransformCast",
+			"mDescription": "game_spell_description_TFT_ShyvanaTransformCast",
+			"mDynamicTooltip": "game_spell_tooltip_TFT_ShyvanaTransformCast",
+			"mDynamicExtended": "game_spell_levelup_TFT_ShyvanaTransformCast",
+			"mEffectAmount": [],
+			"mCoefficient": 0.699999988079071,
+			"mCoefficient2": 1.5,
+			"mCastTime": 0.25,
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.5,
+			"mCantCancelWhileWindingUp": true,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				20,
+				20,
+				20,
+				20,
+				20,
+				20,
+				20
+			],
+			"castConeDistance": 100,
+			"castFrame": 7.5,
+			"missileSpeed": 700,
+			"mLineWidth": 150,
+			"mFloatVarsDecimals": [
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"mTargetingTypeData": {}
+		}
+	},
+	"Characters/TFT_Shyvana/Spells/TFT_ShyvanaDragonBasicAttack": {
+		"mScriptName": "TFT_ShyvanaDragonBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mDisplayName": "game_spell_displayname_CardMasterBasicAttack",
+			"mDescription": "game_spell_description_CardMasterBasicAttack",
+			"mDynamicTooltip": "game_spell_tooltip_CardMasterBasicAttack",
+			"mDynamicExtended": "game_spell_levelup_CardMasterBasicAttack",
+			"delayCastOffsetPercent": -0.23579999804496765,
+			"mApplyAttackDamage": true,
+			"useAnimatorFramerate": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				550,
+				550,
+				550,
+				550,
+				550,
+				550,
+				550
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1300,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "neck_b"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 2500,
+			"mMissileEffectKey": "{045e460c}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "{67941f5b}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Shyvana/Spells/TFT_ShyvanaBasicAttack2": {
+		"mScriptName": "TFT_ShyvanaBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 4234,
+			"mAlternateName": "ShyvanaBasicAttack2",
+			"mDisplayName": "game_spell_displayname_EvelynnBasicAttack",
+			"mDescription": "game_spell_description_EvelynnBasicAttack",
+			"delayCastOffsetPercent": -0.3506999909877777,
+			"bHaveHitEffect": true,
+			"castRange": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9,
+			"missileSpeed": 467,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Shyvana/Spells/TFT_ShyvanaTransformCastAbility": {
+		"mRootSpell": "{d11ff9dd}",
+		"mChildSpells": [
+			"{d11ff9dd}"
+		],
+		"{86ddaddb}": true,
+		"mName": "TFT_ShyvanaTransformCastAbility"
+	},
+	"{d11ff9dd}": {
+		"mScriptName": "TFT_ShyvanaTransformCast",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"mDisplayName": "game_spell_displayname_TFT_ShyvanaTransformCast",
+			"mDescription": "game_spell_description_TFT_ShyvanaTransformCast",
+			"mSpellTags": [
+				"Trait_Ultimate",
+				"PositiveEffect_MoveBlock",
+				"Trait_Transformation"
+			],
+			"mDataValues": [
+				{
+					"mName": "TransformDuration",
+					"mValues": [
+						60,
+						60,
+						60,
+						60,
+						60,
+						60,
+						60
+					],
+					"mBaseP": 60,
+					"mFormula": "P"
+				},
+				{
+					"mName": "ADWhileDragon",
+					"mValues": [
+						50,
+						100,
+						150,
+						200,
+						250,
+						300,
+						350
+					],
+					"mBaseP": 50,
+					"mFormula": "P + 50"
+				},
+				{
+					"mName": "BurnDuration",
+					"mValues": [
+						3,
+						3,
+						3,
+						3,
+						3,
+						3,
+						3
+					],
+					"mBaseP": 3,
+					"mFormula": "P"
+				},
+				{
+					"mName": "BurnDamage",
+					"mValues": [
+						100,
+						200,
+						300,
+						400,
+						500,
+						600,
+						700
+					],
+					"mBaseP": 100,
+					"mFormula": "P + 100"
+				},
+				{
+					"mName": "ExtraAARange",
+					"mValues": [
+						480,
+						480,
+						480,
+						480,
+						480,
+						480,
+						480
+					],
+					"mBaseP": 480
+				}
+			],
+			"mImgIconName": [
+				"ASSETS/Characters/TFT_Shyvana/HUD/Icons2D/TFT_ShyvanaDragonsDescent.TFT.dds"
+			],
+			"mCantCancelWhileWindingUp": true,
+			"mProjectTargetToCastRange": true,
+			"castRange": [
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000
+			],
+			"castRadius": [
+				20,
+				20,
+				20,
+				20,
+				20,
+				20,
+				20
+			],
+			"castConeDistance": 100,
+			"castFrame": 9.75,
+			"missileSpeed": 700,
+			"mLineWidth": 160,
+			"mFloatVarsDecimals": [
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"mTargetingTypeData": {},
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"{a5749b52}": "scaleAP",
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"mSubpart": {
+								"mDataValue": "{82cb04b9}"
+							}
+						}
+					]
+				}
+			}
+		}
+	},
+	"Characters/TFT_Shyvana/Spells/TFT_ShyvanaCritAttack": {
+		"mScriptName": "TFT_ShyvanaCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 4234,
+			"mDisplayName": "game_spell_displayname_EvelynnBasicAttack",
+			"mDescription": "game_spell_description_EvelynnBasicAttack",
+			"delayCastOffsetPercent": -0.3506999909877777,
+			"bHaveHitEffect": true,
+			"castRange": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9,
+			"missileSpeed": 467,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"{83bffce4}": {
+		"useGDSBinaries": true
+	},
+	"Characters/TFT_Shyvana/CharacterRecords/Root": {
+		"mLinkedTraits": [
+			{
+				"TraitData": "Dragon"
+			},
+			{
+				"TraitData": "Shapeshifter"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mCharacterName": "TFT_Shyvana",
+		"baseHP": 650,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 85,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 50,
+		"baseArmor": 30,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 180,
+		"attackSpeed": 0.699999988079071,
+		"basicAttack": {
+			"mAttackCastTime": 0.800000011920929
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 0.30000001192092896,
+				"mAttackName": "TFT_ShyvanaBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackDelayCastOffsetPercent": -0.102631576359272,
+				"mAttackName": "TFT_ShyvanaCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT_ShyvanaTransformCastAbility/TFT_ShyvanaTransformCast",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"TFT_ShyvanaDoubleAttackHit",
+			"TFT_ShyvanaFireballMissile",
+			"TFT_ShyvanaTransformLeap",
+			"TFT_ShyvanaDoubleAttackHitDragon",
+			"TFT_ShyvanaFireballDragonMissile",
+			"TFT_ShyvanaFireballDragonMissileBig",
+			"TFT_ShyvanaFireballDragonMissileMax",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 2,
+		"unitTagsString": "Champion",
+		"flags": 9446656
+	}
+}

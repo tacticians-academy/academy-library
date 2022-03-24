@@ -1,0 +1,293 @@
+{
+	"Characters/TFT_Gangplank/Spells/TFT_GangplankSpell1": {
+		"mScriptName": "TFT_GangplankSpell1",
+		"mSpell": {
+			"mAffectsTypeFlags": 15567,
+			"mDisplayName": "game_spell_displayname_TFT_GangplankW",
+			"mDescription": "game_spell_description_TFT_GangplankW",
+			"mSpellTags": [
+				"SpecialCase_StasisLocked"
+			],
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						75,
+						200,
+						325,
+						450,
+						575,
+						700,
+						825
+					],
+					"mBaseP": 75,
+					"mFormula": "P + 125"
+				}
+			],
+			"mCoefficient": 0.8999999761581421,
+			"mImgIconName": [
+				"ASSETS/Characters/Gangplank/HUD/Icons2D/Gangplank_W.dds"
+			],
+			"mCastTime": 0.25,
+			"cannotBeSuppressed": true,
+			"canCastWhileDisabled": true,
+			"mCantCancelWhileWindingUp": true,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				2400,
+				2400,
+				2400,
+				2400,
+				2400,
+				2400,
+				2400
+			],
+			"castFrame": 10,
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"mTargetingTypeData": {}
+		}
+	},
+	"Characters/TFT_Gangplank/Spells/TFT_GangplankBasicAttack": {
+		"mScriptName": "TFT_GangplankBasicAttack",
+		"mSpell": {
+			"bHaveHitEffect": true,
+			"castFrame": 11,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Gangplank/Spells/TFT_GangplankQMis": {
+		"mScriptName": "TFT_GangplankQMis",
+		"mSpell": {
+			"mAffectsTypeFlags": 3076,
+			"mAffectsStatusFlags": 32,
+			"mImgIconName": [
+				"ASSETS/Characters/TFT_Gangplank/HUD/TFT_Gangplank_E.dds"
+			],
+			"delayCastOffsetPercent": -0.5,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2000,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 10,
+			"mMissileEffectKey": "{0bed117c}"
+		}
+	},
+	"Characters/TFT_Gangplank/Spells/TFT_GangplankQ": {
+		"mScriptName": "TFT_GangplankQ",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 8192,
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						50,
+						150,
+						250,
+						350,
+						450,
+						550,
+						650
+					],
+					"mBaseP": 50,
+					"mFormula": "P + 100"
+				}
+			],
+			"mImgIconName": [
+				"ASSETS/Characters/TFT_Gangplank/HUD/TFT_Gangplank_E.dds"
+			],
+			"delayCastOffsetPercent": -0.5,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"{a5749b52}": "scaleAP",
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"mSubpart": {
+								"mDataValue": "Damage"
+							}
+						}
+					]
+				}
+			}
+		}
+	},
+	"Characters/TFT_Gangplank/Spells/TFT_GangplankCritAttack": {
+		"mScriptName": "TFT_GangplankCritAttack",
+		"mSpell": {
+			"bHaveHitEffect": true,
+			"castFrame": 11,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Gangplank/Spells/TFT_GangplankBasicAttack2": {
+		"mScriptName": "TFT_GangplankBasicAttack2",
+		"mSpell": {
+			"bHaveHitEffect": true,
+			"castFrame": 10,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Gangplank/Spells/TFT_GangplankQFuseMis": {
+		"mScriptName": "TFT_GangplankQFuseMis",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 3076,
+			"mAffectsStatusFlags": 32,
+			"mImgIconName": [
+				"ASSETS/Characters/TFT_Gangplank/HUD/TFT_Gangplank_E.dds"
+			],
+			"delayCastOffsetPercent": -0.5,
+			"mIsDisabledWhileDead": false,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"mMissileSpec": {
+				"movementComponent": {
+					"mAcceleration": 4500,
+					"mMinSpeed": 500,
+					"mMaxSpeed": 4500,
+					"mTargetHeightAugment": 20,
+					"mOffsetInitialTargetHeight": 20
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"mMissileEffectKey": "{35cde3de}"
+		}
+	},
+	"{361076e9}": {
+		"useGDSBinaries": true
+	},
+	"Characters/TFT_Gangplank/CharacterRecords/Root": {
+		"mLinkedTraits": [
+			{
+				"TraitData": "Pirate"
+			},
+			{
+				"TraitData": "Gunslinger"
+			},
+			{
+				"TraitData": "Blademaster"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 240,
+		"mMoveHeight": 0,
+		"mCharacterName": "TFT_Gangplank",
+		"baseHP": 700,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 60,
+		"baseArmor": 20,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 180,
+		"attackSpeed": 0.6499999761581421,
+		"basicAttack": {
+			"mAttackCastTime": 0.75
+		},
+		"critAttacks": [
+			{
+				"mAttackName": "TFT_GangplankCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT_GangplankQ",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"TFT_GangplankQMis",
+			"TFT_GangplankQFuseMis",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 2,
+		"unitTagsString": "Champion",
+		"flags": 9446656
+	}
+}

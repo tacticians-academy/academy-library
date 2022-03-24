@@ -1,0 +1,442 @@
+{
+	"Characters/TFT_Karthus/CharacterRecords/Root": {
+		"mLinkedTraits": [
+			{
+				"TraitData": "Phantom"
+			},
+			{
+				"TraitData": "Sorcerer"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 720,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mInitialMana": 40,
+		"mCharacterName": "TFT_Karthus",
+		"baseHP": 850,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 125,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 65,
+		"baseArmor": 25,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 660,
+		"attackSpeed": 0.6499999761581421,
+		"basicAttack": {
+			"mAttackCastTime": 0.699999988079071
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 0.25,
+				"mAttackName": "TFT_KarthusBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackDelayCastOffsetPercent": 0.04374999925494194,
+				"mAttackName": "TFT_KarthusCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT_KarthusFallenOne",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"TFT_KarthusLayWasteExtra",
+			"TFT_KarthusWallOfPainExtra",
+			"TFT_KarthusFallenOneExtra",
+			"TFT_KarthusDeathDefiedBuff",
+			"TFT_KarthusDefileSoundDummy2",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 2,
+		"unitTagsString": "Champion",
+		"flags": 9446656
+	},
+	"Characters/TFT_Karthus/Spells/TFT_KarthusFallenOneExtra2": {
+		"mScriptName": "TFT_KarthusFallenOneExtra2",
+		"mSpell": {
+			"flags": 24,
+			"mAffectsTypeFlags": 15567,
+			"mDisplayName": "game_spell_displayname_FallenOne",
+			"mDescription": "game_spell_description_FallenOne",
+			"mDynamicTooltip": "game_spell_tooltip_FallenOne",
+			"mDynamicExtended": "game_spell_levelup_FallenOne",
+			"mEffectAmount": [],
+			"mCoefficient": 0.75,
+			"mAnimationLoopName": "Spell4_Loop",
+			"mAnimationWinddownName": "Spell4_Winddown",
+			"mImgIconName": [
+				""
+			],
+			"mCantCancelWhileWindingUp": true,
+			"mCantCancelWhileChanneling": true,
+			"mIsDisabledWhileDead": false,
+			"mSpellRevealsChampion": false,
+			"castRange": [
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000
+			],
+			"castRadius": [
+				1000,
+				1000,
+				1000,
+				1000,
+				1000,
+				1000,
+				1000
+			],
+			"castConeDistance": 100,
+			"castFrame": 10,
+			"missileSpeed": 0,
+			"selectionPriority": 2,
+			"mTargetingTypeData": {}
+		}
+	},
+	"Characters/TFT_Karthus/Spells/TFT_KarthusFallenOneExtra": {
+		"mScriptName": "TFT_KarthusFallenOneExtra",
+		"mSpell": {
+			"flags": 24,
+			"mAffectsTypeFlags": 15567,
+			"mDisplayName": "game_spell_displayname_TFT_KarthusFallenOne",
+			"mDescription": "game_spell_description_TFT_KarthusFallenOne",
+			"mDynamicTooltip": "game_spell_tooltip_TFT_KarthusFallenOne",
+			"mDynamicExtended": "game_spell_levelup_TFT_KarthusFallenOne",
+			"mEffectAmount": [],
+			"mCoefficient": 0.75,
+			"mAnimationLoopName": "Spell4_Loop",
+			"mAnimationWinddownName": "Spell4_Winddown",
+			"mImgIconName": [
+				""
+			],
+			"mCantCancelWhileWindingUp": true,
+			"mCantCancelWhileChanneling": true,
+			"mIsDisabledWhileDead": false,
+			"mSpellRevealsChampion": false,
+			"castRange": [
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000
+			],
+			"castRadius": [
+				1000,
+				1000,
+				1000,
+				1000,
+				1000,
+				1000,
+				1000
+			],
+			"castConeDistance": 100,
+			"castFrame": 10,
+			"missileSpeed": 0,
+			"selectionPriority": 2,
+			"mTargetingTypeData": {}
+		}
+	},
+	"Characters/TFT_Karthus/Spells/TFT_KarthusBasicAttack": {
+		"mScriptName": "TFT_KarthusBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.33869999647140503,
+			"bHaveHitEffect": true,
+			"castRange": [
+				800,
+				800,
+				800,
+				800,
+				800,
+				800,
+				800
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1200,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "snap_weapon2world"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 13,
+			"missileSpeed": 1200,
+			"mMissileEffectKey": "{673adbdf}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Karthus/Spells/TFT_KarthusFallenOne": {
+		"mScriptName": "TFT_KarthusFallenOne",
+		"mSpell": {
+			"flags": 24,
+			"mAffectsTypeFlags": 15567,
+			"mAlternateName": "TFT_KarthusFallenOne",
+			"mDisplayName": "game_spell_displayname_TFT_KarthusFallenOne",
+			"mDescription": "game_spell_description_TFT_KarthusFallenOne",
+			"mSpellTags": [
+				"Trait_Ultimate",
+				"Trait_ChannelSpell"
+			],
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						100,
+						350,
+						600,
+						850,
+						1100,
+						1350,
+						1600
+					],
+					"mBaseP": 100,
+					"mFormula": "P + 250"
+				},
+				{
+					"mName": "NumberOfTargets",
+					"mValues": [
+						3,
+						5,
+						7,
+						9,
+						11,
+						13,
+						15
+					],
+					"mBaseP": 3,
+					"mFormula": "P + 2"
+				}
+			],
+			"mCoefficient": 0.75,
+			"mAnimationLoopName": "Spell4_Loop",
+			"mAnimationWinddownName": "Spell4_Winddown",
+			"mImgIconName": [
+				"ASSETS/Characters/TFT_Karthus/HUD/Icons2D/TFT_Karthus_R.TFT.dds"
+			],
+			"mCastTime": 0.25,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mCantCancelWhileWindingUp": true,
+			"mCantCancelWhileChanneling": true,
+			"mSpellRevealsChampion": false,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000
+			],
+			"castRadius": [
+				1000,
+				1000,
+				1000,
+				1000,
+				1000,
+				1000,
+				1000
+			],
+			"castConeDistance": 100,
+			"castFrame": 4,
+			"missileSpeed": 0,
+			"selectionPriority": 2,
+			"mTargetingTypeData": {},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"{a5749b52}": "scaleAP",
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"mSubpart": {
+								"mDataValue": "Damage"
+							}
+						}
+					]
+				}
+			}
+		},
+		"mBuff": {
+			"mDescription": "game_buff_tooltip_TFT_KarthusFallenOne"
+		}
+	},
+	"Characters/TFT_Karthus/Spells/TFT_KarthusFallenOne2": {
+		"mScriptName": "TFT_KarthusFallenOne2",
+		"mSpell": {
+			"flags": 24,
+			"mAffectsTypeFlags": 15567,
+			"mAlternateName": "TFT_KarthusFallenOne",
+			"mDisplayName": "game_spell_displayname_TFT_KarthusFallenOne",
+			"mDescription": "game_spell_description_TFT_KarthusFallenOne",
+			"mSpellTags": [
+				"Trait_Ultimate"
+			],
+			"mDynamicTooltip": "game_spell_tooltip_TFT_KarthusFallenOne",
+			"mDynamicExtended": "game_spell_levelup_TFT_KarthusFallenOne",
+			"mEffectAmount": [],
+			"mCoefficient": 0.75,
+			"mImgIconName": [
+				"ASSETS/Characters/TFT_Karthus/HUD/Icons2D/TFT_Karthus_R.TFT.dds"
+			],
+			"mCastTime": 0.25,
+			"mCantCancelWhileWindingUp": true,
+			"mCantCancelWhileChanneling": true,
+			"mSpellRevealsChampion": false,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000
+			],
+			"castRadius": [
+				1000,
+				1000,
+				1000,
+				1000,
+				1000,
+				1000,
+				1000
+			],
+			"castConeDistance": 100,
+			"castFrame": 10,
+			"missileSpeed": 0,
+			"mana": [
+				150,
+				175,
+				200,
+				0,
+				0,
+				25
+			],
+			"selectionPriority": 2,
+			"mTargetingTypeData": {}
+		},
+		"mBuff": {
+			"mDescription": "game_buff_tooltip_TFT_KarthusFallenOne"
+		}
+	},
+	"Characters/TFT_Karthus/Spells/TFT_KarthusCritAttack": {
+		"mScriptName": "TFT_KarthusCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.33869999647140503,
+			"bHaveHitEffect": true,
+			"castRange": [
+				800,
+				800,
+				800,
+				800,
+				800,
+				800,
+				800
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1200,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "snap_weapon2world"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 13,
+			"missileSpeed": 1200,
+			"mMissileEffectKey": "{695d4035}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Karthus/Spells/TFT_KarthusBasicAttack2": {
+		"mScriptName": "TFT_KarthusBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.33869999647140503,
+			"bHaveHitEffect": true,
+			"castRange": [
+				800,
+				800,
+				800,
+				800,
+				800,
+				800,
+				800
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1200,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "snap_weapon2world"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 13,
+			"missileSpeed": 1200,
+			"mMissileEffectKey": "{673adbdf}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"{5abfa7dc}": {
+		"useGDSBinaries": true
+	}
+}

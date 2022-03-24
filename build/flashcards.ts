@@ -25,66 +25,68 @@ function getNormalizedEffects(variables: EffectVariables) {
 
 const { activeAugments } = await importAugments(currentSetNumber)
 
-type AugmentEntry = [name: string, nameExtensions: (string | undefined)[], tiers: AugmentTier[], descriptions: string[], effectsArray: EffectVariables[], icons: string[]]
+if (activeAugments) {
+	type AugmentEntry = [name: string, nameExtensions: (string | undefined)[], tiers: AugmentTier[], descriptions: string[], effectsArray: EffectVariables[], icons: string[]]
 
-const nameExtensions = ['Heart', 'Crest', 'Crown', 'Soul']
+	const nameExtensions = ['Heart', 'Crest', 'Crown', 'Soul']
 
-const results: AugmentEntry[] = []
-activeAugments.forEach(augment => {
-	let name = getAugmentNameKey(augment)
-	let nameKey = name.toLowerCase()
-	const nameExtension = nameExtensions.find(extension => {
-		const searchText = ` ${extension.toLowerCase()}`
-		if (nameKey.endsWith(searchText)) {
-			nameKey = nameKey.replace(searchText, '')
-			name = name.replace(` ${extension}`, '')
-			return true
-		}
-	})
-	let entry = results.find(entry => entry[0].toLowerCase() === nameKey)
-	if (!entry) {
-		entry = [name, [], [], [], [], []]
-		results.push(entry)
-	}
-	const tierIndex = augment.tier - 1
-	entry[1][tierIndex] = nameExtension
-	entry[2][tierIndex] = augment.tier
-	if (!entry[3].includes(augment.desc)) {
-		entry[3][tierIndex] = augment.desc
-	}
-	entry[4][tierIndex] = getNormalizedEffects(augment.effects)
-	entry[5][tierIndex] = getIconURL(augment, true)
-})
-
-const outputAugmentsObject: AugmentFlashcard[] = []
-results
-	.sort((a, b) => a[0].localeCompare(b[0]))
-	.forEach(([name, nameExtensions, tiers, descriptions, effectsArray, icons]) => {
-		const validDescriptions = descriptions.filter(description => description)
-		let description: string
-		if (validDescriptions.length > 1) {
-			description = descriptions
-				.map((description, index) => {
-					return description ? `${index + 1}: ${substituteVariables(description, [effectsArray[index]])}` : null
-				})
-				.filter((description): description is string => !!description)
-				.join('  ')
-		} else {
-			description = substituteVariables(validDescriptions[0], effectsArray)
-		}
-		const extensions = nameExtensions
-			.filter(extension => extension)
-			.join('/')
-		outputAugmentsObject.push({
-			id: name.toLowerCase().replaceAll(/[ '.+-]/g, ''),
-			name: extensions ? name + ' ' + extensions : name,
-			tiers: tiers.filter(e => e),
-			description,
-			icons: icons.filter(e => e).map(icon => icon.replace(ASSET_PREFIX, '').replace('.png', ''))
+	const results: AugmentEntry[] = []
+	activeAugments.forEach(augment => {
+		let name = getAugmentNameKey(augment)
+		let nameKey = name.toLowerCase()
+		const nameExtension = nameExtensions.find(extension => {
+			const searchText = ` ${extension.toLowerCase()}`
+			if (nameKey.endsWith(searchText)) {
+				nameKey = nameKey.replace(searchText, '')
+				name = name.replace(` ${extension}`, '')
+				return true
+			}
 		})
+		let entry = results.find(entry => entry[0].toLowerCase() === nameKey)
+		if (!entry) {
+			entry = [name, [], [], [], [], []]
+			results.push(entry)
+		}
+		const tierIndex = augment.tier - 1
+		entry[1][tierIndex] = nameExtension
+		entry[2][tierIndex] = augment.tier
+		if (!entry[3].includes(augment.desc)) {
+			entry[3][tierIndex] = augment.desc
+		}
+		entry[4][tierIndex] = getNormalizedEffects(augment.effects)
+		entry[5][tierIndex] = getIconURL(augment, true)
 	})
 
-await fs.writeFile(path.resolve(flashcardsPath, 'augments.ts'), `import type { AugmentFlashcard } from '../../index'\n\nexport const augmentFlashcards: AugmentFlashcard[] = ` + formatJS(outputAugmentsObject))
+	const outputAugmentsObject: AugmentFlashcard[] = []
+	results
+		.sort((a, b) => a[0].localeCompare(b[0]))
+		.forEach(([name, nameExtensions, tiers, descriptions, effectsArray, icons]) => {
+			const validDescriptions = descriptions.filter(description => description)
+			let description: string
+			if (validDescriptions.length > 1) {
+				description = descriptions
+					.map((description, index) => {
+						return description ? `${index + 1}: ${substituteVariables(description, [effectsArray[index]])}` : null
+					})
+					.filter((description): description is string => !!description)
+					.join('  ')
+			} else {
+				description = substituteVariables(validDescriptions[0], effectsArray)
+			}
+			const extensions = nameExtensions
+				.filter(extension => extension)
+				.join('/')
+			outputAugmentsObject.push({
+				id: name.toLowerCase().replaceAll(/[ '.+-]/g, ''),
+				name: extensions ? name + ' ' + extensions : name,
+				tiers: tiers.filter(e => e),
+				description,
+				icons: icons.filter(e => e).map(icon => icon.replace(ASSET_PREFIX, '').replace('.png', ''))
+			})
+		})
+
+	await fs.writeFile(path.resolve(flashcardsPath, 'augments.ts'), `import type { AugmentFlashcard } from '../../index'\n\nexport const augmentFlashcards: AugmentFlashcard[] = ` + formatJS(outputAugmentsObject))
+}
 
 // Items
 

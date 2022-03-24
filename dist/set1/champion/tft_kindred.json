@@ -1,0 +1,327 @@
+{
+	"Characters/TFT_Kindred/Spells/TFT_KindredR": {
+		"mScriptName": "TFT_KindredR",
+		"mSpell": {
+			"mAffectsTypeFlags": 8193,
+			"mAffectsStatusFlags": 3,
+			"mAlternateName": "TFT_KindredR",
+			"mDisplayName": "game_spell_displayname_TFT_KindredR",
+			"mDescription": "game_spell_description_TFT_KindredR",
+			"mSpellTags": [
+				"Trait_Ultimate",
+				"PositiveEffect_Boon"
+			],
+			"mDataValues": [
+				{
+					"mName": "Duration",
+					"mValues": [
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"mBaseP": 2,
+					"mFormula": "P + 1"
+				},
+				{
+					"mName": "MinHealth",
+					"mValues": [
+						0,
+						300,
+						600,
+						900,
+						1200,
+						1500,
+						1800
+					],
+					"mFormula": "P + 300"
+				}
+			],
+			"mImgIconName": [
+				"ASSETS/Characters/TFT_Kindred/HUD/Icons2D/TFT_Kindred_R.TFT.dds"
+			],
+			"mCastTime": 0.25,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mCantCancelWhileWindingUp": true,
+			"castRange": [
+				500,
+				500,
+				500,
+				500,
+				500,
+				500,
+				500
+			],
+			"castRangeDisplayOverride": [
+				500,
+				500,
+				500,
+				500,
+				500,
+				500,
+				500
+			],
+			"castRadius": [
+				1200,
+				1200,
+				1200,
+				1200,
+				1200,
+				1200,
+				1200
+			],
+			"castRadiusSecondary": [
+				530,
+				530,
+				530,
+				530,
+				530,
+				530,
+				530
+			],
+			"castConeDistance": 100,
+			"castFrame": 8,
+			"missileSpeed": 20,
+			"manaUiOverride": [
+				100,
+				100,
+				100,
+				-1,
+				-1,
+				-1
+			],
+			"selectionPriority": 2,
+			"mTargetingTypeData": {}
+		}
+	},
+	"Characters/TFT_Kindred/Spells/TFT_KindredCritAttack": {
+		"mScriptName": "TFT_KindredCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.029999999329447746,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2000,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 7.5,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{9da3fef6}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Kindred/Spells/TFT_KindredBasicAttack2": {
+		"mScriptName": "TFT_KindredBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.029999999329447746,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2000,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{2b7292c5}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Kindred/Spells/TFT_KindredBasicAttack": {
+		"mScriptName": "TFT_KindredBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.029999999329447746,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2000,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{2b7292c5}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"{970bfb8d}": {
+		"useGDSBinaries": true
+	},
+	"Characters/TFT_Kindred/CharacterRecords/Root": {
+		"mLinkedTraits": [
+			{
+				"TraitData": "Phantom"
+			},
+			{
+				"TraitData": "Ranger"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 720,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mInitialMana": 50,
+		"{ef57098f}": false,
+		"mCharacterName": "TFT_Kindred",
+		"baseHP": 600,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 150,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 60,
+		"baseArmor": 20,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 660,
+		"attackSpeed": 0.699999988079071,
+		"basicAttack": {
+			"mAttackCastTime": 0.699999988079071,
+			"mAttackDelayCastOffsetPercent": -0.125,
+			"mAttackProbability": 0.5,
+			"mAttackName": "TFT_KindredBasicAttack"
+		},
+		"extraAttacks": [
+			{
+				"mAttackDelayCastOffsetPercent": -0.125,
+				"mAttackProbability": 0.5,
+				"mAttackName": "TFT_KindredBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackDelayCastOffsetPercent": -0.12456139922142029,
+				"mAttackName": "TFT_KindredCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT_KindredR",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"TFT_KindredWPassiveHealMissile",
+			"TFT_KindredMarkoftheTFT_KindredSpell",
+			"TFT_KindredFakeCastTimeSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 2,
+		"unitTagsString": "Champion",
+		"flags": 9446656,
+		"mPreferredPerkStyle": "Perks/Styles/Inspiration"
+	}
+}

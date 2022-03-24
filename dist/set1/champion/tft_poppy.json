@@ -1,0 +1,292 @@
+{
+	"Characters/TFT_Poppy/Spells/TFT_PoppyRKnockUp": {
+		"mScriptName": "TFT_PoppyRKnockUp",
+		"mBuff": {
+			"mDescription": "game_buff_tooltip_TFT_PoppyRKnockUp"
+		}
+	},
+	"Characters/TFT_Poppy/Spells/TFT_PoppyBasicAttack": {
+		"mScriptName": "TFT_PoppyBasicAttack",
+		"mSpell": {
+			"bHaveHitEffect": true,
+			"castFrame": 15,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CENTER_LOC"
+		}
+	},
+	"Characters/TFT_Poppy/Spells/TFT_PoppyRNew": {
+		"mScriptName": "TFT_PoppyRNew",
+		"mSpell": {
+			"flags": 4194304,
+			"mAffectsTypeFlags": 6154,
+			"mDisplayName": "game_spell_displayname_TFT_EzrealSpell1",
+			"mDescription": "game_spell_description_TFT_EzrealSpell1",
+			"mSpellTags": [
+				"Trait_Ultimate"
+			],
+			"mDataValues": [
+				{
+					"mName": "DamagePart2",
+					"mValues": [
+						100,
+						300,
+						500,
+						700,
+						900,
+						1100,
+						1300
+					],
+					"mBaseP": 100,
+					"mFormula": "P + 200"
+				},
+				{
+					"mName": "KnockbackDurationPart2",
+					"mValues": [
+						1,
+						1,
+						1,
+						1,
+						1,
+						1,
+						1
+					],
+					"mBaseP": 1,
+					"mFormula": "P"
+				},
+				{
+					"mName": "StunDuration",
+					"mValues": [
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					],
+					"mBaseP": 1,
+					"mFormula": "P + 1"
+				},
+				{
+					"mName": "PoppyAnimLockDuration",
+					"mValues": [
+						0.75,
+						0.75,
+						0.75,
+						0.75,
+						0.75,
+						0.75,
+						0.75
+					],
+					"mBaseP": 0.75,
+					"mFormula": "P"
+				},
+				{
+					"mName": "NumberOfTargets",
+					"mValues": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"mFormula": "P + 1"
+				}
+			],
+			"mCoefficient": 0.8999999761581421,
+			"mCoefficient2": 1,
+			"mImgIconName": [
+				"ASSETS/Characters/TFT_Ezreal/HUD/Icons2D/TFT_Ezreal_R.TFT.dds"
+			],
+			"mCastTime": 0.5,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mCantCancelWhileWindingUp": true,
+			"mSpellRevealsChampion": false,
+			"mUseMinimapTargeting": true,
+			"alwaysSnapFacing": true,
+			"mMinimapIconDisplayFlag": 0,
+			"castRange": [
+				2650,
+				2650,
+				2650,
+				2650,
+				2650,
+				2650,
+				2650
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"castConeDistance": 100,
+			"luaOnMissileUpdateDistanceInterval": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 100,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 2000,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": ""
+				},
+				"visibilityComponent": {
+					"mPerceptionBubbleRadius": 650
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 22,
+			"missileSpeed": 2000,
+			"mLineWidth": 250,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"mFloatVarsDecimals": [
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"selectionPriority": 1,
+			"mTargetingTypeData": {},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"{a5749b52}": "scaleAP",
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"mSubpart": {
+								"mDataValue": "{88e72f65}"
+							}
+						}
+					]
+				}
+			}
+		}
+	},
+	"Characters/TFT_Poppy/Spells/TFT_PoppyBasicAttack2": {
+		"mScriptName": "TFT_PoppyBasicAttack2",
+		"mSpell": {
+			"bHaveHitEffect": true,
+			"castFrame": 15,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CENTER_LOC"
+		}
+	},
+	"Characters/TFT_Poppy/Spells/TFT_PoppyCritAttack": {
+		"mScriptName": "TFT_PoppyCritAttack",
+		"mSpell": {
+			"bHaveHitEffect": true,
+			"castFrame": 15,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CENTER_LOC"
+		}
+	},
+	"Characters/TFT_Poppy/CharacterRecords/Root": {
+		"mLinkedTraits": [
+			{
+				"TraitData": "Yordle"
+			},
+			{
+				"TraitData": "Knight"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mCharacterName": "TFT_Poppy",
+		"baseHP": 700,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 75,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 50,
+		"baseArmor": 40,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 180,
+		"attackSpeed": 0.5,
+		"basicAttack": {
+			"mAttackCastTime": 0.875,
+			"mAttackName": "TFT_PoppyBasicAttack"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT_PoppyBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT_PoppyCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT_PoppyRNew",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"TFT_PoppyPassiveAttack",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 2,
+		"unitTagsString": "Champion",
+		"flags": 9446656
+	},
+	"{bac6b292}": {
+		"useGDSBinaries": true
+	}
+}

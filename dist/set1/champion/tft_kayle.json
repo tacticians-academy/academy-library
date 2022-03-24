@@ -1,0 +1,319 @@
+{
+	"Characters/TFT_Kayle/Spells/TFT_KayleCritAttack": {
+		"mScriptName": "TFT_KayleCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 5000,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 9,
+			"missileSpeed": 2250,
+			"mMissileEffectKey": "{d2968cfb}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Kayle/Spells/TFT_KayleR": {
+		"mScriptName": "TFT_KayleR",
+		"mSpell": {
+			"mAffectsTypeFlags": 3077,
+			"mAffectsStatusFlags": 32,
+			"mDisplayName": "game_spell_displayname_JudicatorIntervention",
+			"mDescription": "game_spell_description_JudicatorIntervention",
+			"mSpellTags": [
+				"Trait_Ultimate",
+				"PositiveEffect_Boon"
+			],
+			"mDataValues": [
+				{
+					"mName": "ShieldDuration",
+					"mValues": [
+						1.5,
+						2,
+						2.5,
+						3,
+						3.5,
+						4,
+						4.5
+					],
+					"mBaseP": 1.5,
+					"mFormula": "P + 0.5"
+				},
+				{
+					"mName": "Targets",
+					"mValues": [
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"mFormula": "P + 1"
+				}
+			],
+			"mImgIconName": [
+				"ASSETS/Characters/TFT_Kayle/HUD/Icons2D/TFT_Kayle_R.TFT.dds"
+			],
+			"mCastTime": 0.5,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mCantCancelWhileWindingUp": true,
+			"mChannelIsInterruptedByDisables": false,
+			"mChannelIsInterruptedByAttacking": false,
+			"mCanMoveWhileChanneling": true,
+			"mShowChannelBar": false,
+			"mDoesNotConsumeCooldown": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				475,
+				475,
+				475,
+				475,
+				475,
+				475,
+				475
+			],
+			"castConeAngle": 0,
+			"castConeDistance": 0,
+			"castFrame": 15,
+			"missileSpeed": 0,
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"selectionPriority": 2
+		},
+		"mBuff": {
+			"mTooltipData": {
+				"mObjectName": "TFT_KayleR",
+				"mFormat": "{10f01d27}"
+			}
+		}
+	},
+	"Characters/TFT_Kayle/Spells/TFT_KayleBasicAttack": {
+		"mScriptName": "TFT_KayleBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 5000,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 9,
+			"missileSpeed": 2250,
+			"mMissileEffectKey": "{d2968cfb}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Kayle/Spells/TFT_KayleBasicAttack2": {
+		"mScriptName": "TFT_KayleBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 5000,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 9,
+			"missileSpeed": 2250,
+			"mMissileEffectKey": "{d2968cfb}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Kayle/CharacterRecords/Root": {
+		"mLinkedTraits": [
+			{
+				"TraitData": "Noble"
+			},
+			{
+				"TraitData": "Knight"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mInitialMana": 50,
+		"{ef57098f}": false,
+		"mCharacterName": "TFT_Kayle",
+		"baseHP": 750,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 125,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 70,
+		"baseArmor": 40,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 660,
+		"attackSpeed": 1,
+		"basicAttack": {
+			"mAttackTotalTime": 1.399999976158142,
+			"mAttackCastTime": 0.699999988079071,
+			"mAttackName": "TFT_KayleBasicAttack"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT_KayleBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackDelayCastOffsetPercent": null,
+				"mAttackName": "TFT_KayleCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT_KayleR",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"TFT_KayleWHeal",
+			"TFT_KayleWHeal",
+			"TFT_KayleWHeal",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 2,
+		"unitTagsString": "Champion",
+		"flags": 9446656
+	},
+	"{f88c7132}": {
+		"useGDSBinaries": true
+	}
+}

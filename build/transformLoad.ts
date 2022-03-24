@@ -2,21 +2,21 @@ const MAX_STAR_LEVEL = 3
 
 import fs from 'fs/promises'
 
+import { COMPONENT_ITEM_IDS, ItemTypeKey } from '../dist/index.js'
+import { AugmentData, AugmentTier, BonusKey, ChampionSpellData, EffectVariables, ItemData, SpellCalculations, SpellCalculationPart, SpellCalculationSubpart, SpellVariables, TraitData } from '../dist/index.js'
+
 import { getCurrentSetNumber, getPathTo, importItems, importTraits, importSetData, loadHardcodedTXT } from './helpers/files.js'
 import { formatJS } from './helpers/formatting.js'
 import { BASE_UNIT_API_NAMES, UNRELEASED_ITEM_NAME_KEYS, NORMALIZE_EFFECT_KEYS, SUBSTITUTE_EFFECT_KEYS, mStatSubstitutions, spellCalculationOperatorSubstitutions } from './helpers/normalize.js'
 import { ChampionJSON, ChampionJSONType, ChampionJSONAttack, ChampionJSONSpell, ChampionJSONSpellAttack, ChampionJSONStats, ResponseJSON } from './helpers/types.js'
-
-import { COMPONENT_ITEM_IDS, ItemTypeKey } from '../dist/index.js'
-import { AugmentData, AugmentTier, BonusKey, ChampionSpellData, EffectVariables, ItemData, SpellCalculations, SpellCalculationPart, SpellCalculationSubpart, SpellVariables, TraitData } from '../dist/index.js'
-import { getAugmentNameKey } from './helpers/utils.js'
+import { getAPIName, getAugmentNameKey } from './helpers/utils.js'
 
 function sortByName(a: {name: string}, b: {name: string}) {
 	return a.name.localeCompare(b.name)
 }
 
 function getEnumKeyFrom(apiName: string) {
-	return apiName.split('_')[1]
+	return apiName.includes('_') ? apiName.split('_')[1] : apiName
 }
 
 const BASE_AP_RATIO = 0.009999999776482582
@@ -27,7 +27,8 @@ const currentSetNumber = await getCurrentSetNumber()
 
 let responseJSON: ResponseJSON
 try {
-	responseJSON = JSON.parse(await fs.readFile(getPathTo(currentSetNumber, '._.json'), 'utf8'))
+	const raw = await fs.readFile(getPathTo(currentSetNumber, '._.json'), 'utf8')
+	responseJSON = JSON.parse(raw)
 } catch {
 	throw 'Missing cache.local. Erase the `cache` directory and re-run `prepare`.'
 }
@@ -51,7 +52,7 @@ const { TraitKey } = await importTraits(currentSetNumber)
 
 // Items
 
-const { LOCKED_STAR_LEVEL, SPATULA_ITEM_IDS, RETIRED_AUGMENT_NAME_KEYS, UNUSED_AUGMENT_NAME_KEYS } = await importSetData(currentSetNumber)
+const { LOCKED_STAR_LEVEL, SPATULA_ITEM_IDS, RETIRED_AUGMENT_NAME_KEYS, UNUSED_AUGMENT_NAME_KEYS, TRAIT_DATA_SUBSTITUTIONS } = await importSetData(currentSetNumber)
 
 const currentItemsByType: Record<ItemTypeKey, ItemData[]> = {component: [], completed: [], spatula: [], duos: [], consumable: [], radiant: [], ornn: [], hexbuff: [], mercenaryDice: [], unreleased: []}
 
@@ -74,10 +75,10 @@ itemsData.reverse().forEach(item => {
 		typeKey = 'unreleased'
 	} else if (from.length) {
 		if (item.id !== 88 && from.includes(8)) {
-			if (SPATULA_ITEM_IDS.includes(item.id)) {
+			if (!SPATULA_ITEM_IDS || SPATULA_ITEM_IDS.includes(item.id)) {
 				typeKey = 'spatula'
 			} else {
-				// console.log('Unknown spatula item', item)
+				console.log('Unknown spatula item', item.id)
 				return
 			}
 		} else if (from.every(itemID => COMPONENT_ITEM_IDS.includes(itemID))) {
@@ -87,7 +88,7 @@ itemsData.reverse().forEach(item => {
 		if (icon.includes('/hexcore/')) {
 			return false
 		}
-		if (SPATULA_ITEM_IDS.includes(item.id)) {
+		if (SPATULA_ITEM_IDS?.includes(item.id)) {
 			typeKey = 'spatula'
 		} else if (item.desc === 'tft_item_description_Mercenary_Dice') {
 			typeKey = 'mercenaryDice'
@@ -103,8 +104,10 @@ itemsData.reverse().forEach(item => {
 			typeKey = 'consumable'
 		} else if (icon.includes('_hex_')) {
 			typeKey = 'hexbuff'
-		} else {
-			// console.log('Unknown spatula item', item)
+		} else if (!typeKey) {
+			if (!SPATULA_ITEM_IDS) {
+				console.log('Unknown spatula item', item)
+			}
 			return false
 		}
 	}
@@ -124,6 +127,7 @@ for (const key in currentItemsByType) {
 }
 
 allItems.forEach((item: ItemData) => {
+	item.unique = item.unique ?? false
 	if (item.id === ItemKey.HandOfJustice) {
 		const invalidKey = 'BonusAD'
 		if (item.effects[invalidKey] != null) {
@@ -161,7 +165,7 @@ allItems.forEach((item: ItemData) => {
 traits.sort(sortByName)
 
 const traitKeys = (traits as TraitData[])
-	.map(trait => `${getEnumKeyFrom(trait.apiName)} = \`${trait.name}\``)
+	.map(trait => `${getEnumKeyFrom(trait.apiName ?? trait.name)} = \`${trait.name}\``)
 const traitKeysString = `export enum TraitKey {\n\t${traitKeys.join(', ')}\n}`
 
 traits.forEach((trait: TraitData) => {
@@ -200,15 +204,12 @@ const itemKeys = currentItemsByType['component'].concat(currentItemsByType['comp
 	.join(', ')
 const itemKeysString = `export const enum ItemKey {\n\t${itemKeys}\n}`
 
-if (unreplacedIDs.size) {
-	console.log('Unused substitutions', unreplacedIDs)
-}
-
 const outputItemSections = []
 for (const key in currentItemsByType) {
 	const itemKey = key as ItemTypeKey
 	currentItemsByType[itemKey].sort((a, b) => a.id - b.id)
-	outputItemSections.push(`export const ${itemKey}Items: ItemData[] = ` + formatJS(currentItemsByType[itemKey]))
+	const itemsData = currentItemsByType[itemKey]
+	outputItemSections.push(`export const ${itemKey}Items: ItemData[] = ` + (itemsData.length ? formatJS(itemsData) : '[]'))
 }
 outputItemSections.push(`export const currentItems: ItemData[] = componentItems.concat(completedItems, spatulaItems)`)
 
@@ -329,31 +330,33 @@ for (const item of itemsData) {
 	}
 }
 
-const augmentKeys = activeAugments
-	.sort((a, b) => a.groupID.localeCompare(b.groupID))
-	.map(augment => `${toKey(getAugmentNameKey(augment))} = '${augment.groupID}'`)
-const emptyImplementationAugments = await loadHardcodedTXT(currentSetNumber, 'augments-empty')
-
-const outputAugmentSections = [
-	`import type { AugmentData } from '../index'`,
-	`export const enum AugmentGroupKey {\n\t${Array.from(new Set(augmentKeys)).join(', ')}\n}`,
-	`export const emptyImplementationAugments: AugmentGroupKey[] =  [${emptyImplementationAugments.map(id => `AugmentGroupKey.${id[0].toUpperCase() + id.slice(1)}`).join(', ')}]`,
-	`export const activeAugments: AugmentData[] = ` + formatJS(activeAugments),
-	`export const inactiveAugments: AugmentData[] = ` + formatJS(unreleasedAugments),
-]
+if (activeAugments.length) {
+	const augmentKeys = activeAugments
+		.sort((a, b) => a.groupID.localeCompare(b.groupID))
+		.map(augment => `${toKey(getAugmentNameKey(augment))} = '${augment.groupID}'`)
+	const emptyImplementationAugments = await loadHardcodedTXT(currentSetNumber, 'augments-empty')
+	const outputAugmentSections = [
+		`import type { AugmentData } from '../index'`,
+		`export const enum AugmentGroupKey {\n\t${Array.from(new Set(augmentKeys)).join(', ')}\n}`,
+		`export const emptyImplementationAugments: AugmentGroupKey[] =  [${emptyImplementationAugments?.map(id => `AugmentGroupKey.${id[0].toUpperCase() + id.slice(1)}`).join(', ')}]`,
+		`export const activeAugments: AugmentData[] = ` + formatJS(activeAugments),
+		`export const inactiveAugments: AugmentData[] = ` + formatJS(unreleasedAugments),
+	]
+	fs.writeFile(getPathTo(currentSetNumber, 'augments.ts'), outputAugmentSections.join('\n\n'))
+}
 
 // Champions
 
-function getByType(type: ChampionJSONType, json: ChampionJSON) {
+function getByType(type: ChampionJSONType, alternateKey: string, json: ChampionJSON) {
 	for (const key in json) {
 		const entry = json[key]
-		if (entry.__type === type) {
+		if (entry.__type ? entry.__type === type : alternateKey in entry) {
 			return entry
 		}
 	}
 }
 function getCharacterRecord(json: ChampionJSON) {
-	return getByType('TFTCharacterRecord', json) as ChampionJSONStats
+	return getByType('TFTCharacterRecord', 'mLinkedTraits', json) as ChampionJSONStats
 }
 
 function parseAttack(attack: ChampionJSONAttack, json: ChampionJSON) {
@@ -398,11 +401,12 @@ function getSpell(name: string, json: ChampionJSON): ChampionJSONSpell | undefin
 	return spellContainer.mSpell
 }
 
-const unplayableNames = ['TFT5_EmblemArmoryKey', 'TFT6_MercenaryChest', 'TFT6_TheGoldenEgg']
+const unplayableAPINames = ['TFT5_EmblemArmoryKey', 'TFT6_MercenaryChest', 'TFT6_TheGoldenEgg']
 
 const playableChampions = champions
 	.filter(champion => {
-		if (unplayableNames.includes(champion.apiName)) {
+		champion.apiName = getAPIName(champion)
+		if (unplayableAPINames.includes(champion.apiName)) {
 			return false
 		}
 		if (!champion.icon) {
@@ -416,7 +420,7 @@ const playableChampions = champions
 	.sort(sortByName)
 
 const outputChampions = await Promise.all(playableChampions.map(async champion => {
-	const apiName = champion.apiName
+	const apiName = champion.apiName!
 	const path = getPathTo(currentSetNumber, `champion/${apiName.toLowerCase()}.json`)
 	const json = JSON.parse(await fs.readFile(path, 'utf8')) as ResponseJSON
 	const characterRecord = getCharacterRecord(json)
@@ -477,8 +481,6 @@ const outputChampions = await Promise.all(playableChampions.map(async champion =
 		.map(([spellName, spellData]) => transformSpellData(spellName, spellData, json))
 	if (!spells.length) {
 		console.log('No spells for', apiName)
-	} else if (spells.length > 1 && apiName !== 'TFT6_Jayce') {
-		console.log('Multiple spells for', apiName, spells.map(spell => spell.name))
 	}
 	const basicAttacks = []
 	if (characterRecord.basicAttack) {
@@ -494,19 +496,25 @@ const outputChampions = await Promise.all(playableChampions.map(async champion =
 	const critAttacks = characterRecord.critAttacks
 	const critAttackMissileSpeed = critAttacks ? reduceAttacks(critAttacks.filter(attack => attack.mAttackName), json) : undefined
 
+	const knownTraits = Object.values(TRAIT_DATA_SUBSTITUTIONS)
 	const isSpawn = characterRecord.isSpawn ?? BASE_UNIT_API_NAMES.includes(apiName)
 	const traits = characterRecord.mLinkedTraits?.map(traitData => {
-		if (traitData.TraitData.startsWith('{')) {
-			console.log('ERR Unknown trait', apiName, traitData)
+		const traitAPIName = traitData.TraitData!
+		if (traitAPIName.startsWith('{')) {
+			console.log('ERR Unknown trait', apiName, traitAPIName, champion.traits.filter(t => !knownTraits.includes(t)))
+			return traitAPIName
 		}
-		return TraitKey[getEnumKeyFrom(traitData.TraitData) as keyof typeof TraitKey]
+		const enumKey = getEnumKeyFrom(traitData.TraitData!)
+		return TraitKey ? TraitKey[enumKey as keyof typeof TraitKey] : enumKey
+
+		return getEnumKeyFrom(traitAPIName)
 	}) ?? []
 	return {
 		apiName,
 		name: champion.name,
 		icon: champion.icon,
 		cost: characterRecord.tier,
-		starLevel: LOCKED_STAR_LEVEL[apiName],
+		starLevel: LOCKED_STAR_LEVEL?.[apiName],
 		teamSize: characterRecord.teamSize,
 		isSpawn,
 		traits,
@@ -519,13 +527,12 @@ const outputChampions = await Promise.all(playableChampions.map(async champion =
 }))
 
 const championKeys = playableChampions
-	.map(champion => `${getEnumKeyFrom(champion.apiName)} = \`${champion.name}\``)
+	.map(champion => `${getEnumKeyFrom(champion.apiName!)} = \`${champion.name}\``)
 const championKeysString = `export const enum ChampionKey {\n\t${championKeys.join(', ')}\n}`
 
 // Output
 
 await Promise.all([
-	fs.writeFile(getPathTo(currentSetNumber, 'augments.ts'), outputAugmentSections.join('\n\n')),
 	fs.writeFile(getPathTo(currentSetNumber, 'champions.ts'), `import type { ChampionData } from '../index'\n\n${championKeysString}\n\nexport const champions: ChampionData[] = ` + formatJS(outputChampions)),
 	fs.writeFile(getPathTo(currentSetNumber, 'traits.ts'), `import type { TraitData } from '../index'\n\n${traitKeysString}\n\nexport const traits: TraitData[] = ` + formatJS(traits)),
 	fs.writeFile(getPathTo(currentSetNumber, 'items.ts'), `import type { ItemData } from '../index'\n\n${itemKeysString}\n\n` + outputItemSections.join('\n\n')),
@@ -576,9 +583,7 @@ function transformSpellData(spellName: string, spellData: ChampionJSONSpell, jso
 					let operator: string | undefined
 					if (sourceOperator) {
 						operator = spellCalculationOperatorSubstitutions[sourceOperator]
-						if (!operator) {
-							console.log('ERR Unknown operator', spellName, sourceOperator)
-						}
+						if (!operator) { console.log('ERR Unknown operator', spellName, sourceOperator) }
 					}
 					if (part.mPart1) {
 						sourceSubparts = [part.mPart1, part.mPart2, part.mPart3, part.mPart4, , part.mPart5]
@@ -590,21 +595,24 @@ function transformSpellData(spellName: string, spellData: ChampionJSONSpell, jso
 					}
 					const subparts: SpellCalculationSubpart[] = sourceSubparts
 						.map(subpart => {
-							const variable: string = subpart.mDataValue ?? subpart.mSubpart.mDataValue
-							if (variable.startsWith('{')) {
-								console.log('ERR', 'Unknown variable', spellName, calculationKey, subpart)
+							const variableName: string | undefined = subpart.mDataValue ?? subpart.mSubpart?.mDataValue
+							if (!variableName) {
+								console.log('ERR', 'Missing variableName', spellName, calculationKey, subpart)
+							}
+							if (variableName?.startsWith('{')) {
+								console.log('ERR', 'Unknown variableName', spellName, calculationKey, subpart)
 							}
 							const mStat: number | undefined = subpart.mSubpart?.mStat ?? subpart.mStat
 							let stat: string | undefined = mStat ? mStatSubstitutions[mStat] : undefined
-							let ratio: number | undefined = subpart.mRatio
+							let ratio: number | undefined = subpart.mRatio ?? subpart.mCoefficient
 							if (stat === undefined) {
-								if (spellName === 'TFT6_GnarR' && variable === 'ADPercent') {
+								if (spellName === 'TFT6_GnarR' && variableName === 'ADPercent') {
 									ratio = 1
 									stat = BonusKey.AttackDamage
 								}
 								const scaleString = subpart['{a5749b52}']?.toLowerCase()
 								if (subpart.mRatio === BASE_AP_RATIO) {
-									if (scaleString === 'scaleap' || scaleString == null || (spellName === 'TFT6_DravenSpinning' && variable === 'Damage')) {
+									if (scaleString === 'scaleap' || scaleString == null || (spellName === 'TFT6_DravenSpinning' && variableName === 'Damage')) {
 										stat = BonusKey.AbilityPower
 									} else {
 										console.log('Unknown scale', spellName, calculationKey, subpart)
@@ -621,12 +629,13 @@ function transformSpellData(spellName: string, spellData: ChampionJSONSpell, jso
 									ratio = 1
 								}
 							}
-							if (!variables[variable]) {
-								console.log('ERR', 'Missing variable', spellName, calculationKey, variable, variables)
+							const starValues = variableName ? variables[variableName] : undefined
+							if (variableName && !starValues) {
+								console.log('ERR', 'Missing variable', spellName, calculationKey, variableName, variables)
 							}
 							return {
-								variable,
-								starValues: variables[variable] ?? [],
+								variable: variableName,
+								starValues,
 								stat,
 								ratio,
 							}

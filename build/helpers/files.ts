@@ -21,13 +21,22 @@ export function getPathTo(setNumber: number, filename: string) {
 }
 
 export async function loadHardcodedTXT(currentSetNumber: number, name: string) {
-	return (await fs.readFile(getPathTo(currentSetNumber, `hardcoded/${name}.txt`), 'utf8'))
-		.split('\n')
-		.filter(line => line)
+	try {
+		const text = await fs.readFile(getPathTo(currentSetNumber, `hardcoded/${name}.txt`), 'utf8')
+		return text
+			.split('\n')
+			.filter(line => line)
+	} catch {
+		return null
+	}
 }
 
 async function importPath(setNumber: number, fileName: string) {
-	return await import(path.resolve(getOutputFolder(setNumber), `${fileName}.js`))
+	try {
+		return await import(path.resolve(getOutputFolder(setNumber), `${fileName}.js`))
+	} catch {
+		return []
+	}
 }
 
 export async function importAugments(setNumber: number) {

@@ -1,0 +1,459 @@
+{
+	"Characters/TFT_Lucian/Spells/TFT_LucianBasicAttack": {
+		"mScriptName": "TFT_LucianBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "LucianBasicAttack",
+			"mDisplayName": "game_spell_displayname_LucianBasicAttack",
+			"mDescription": "game_spell_description_LucianBasicAttack",
+			"mDynamicTooltip": "game_spell_tooltip_LucianBasicAttack",
+			"mDynamicExtended": "game_spell_levelup_LucianBasicAttack",
+			"mApplyAttackDamage": true,
+			"useAnimatorFramerate": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2800,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "buffbone_cstm_Darkgun"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{773b37d5}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Lucian/Spells/TFT_LucianBasicAttack2": {
+		"mScriptName": "TFT_LucianBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "LucianBasicAttack",
+			"mDisplayName": "game_spell_displayname_LucianBasicAttack",
+			"mDescription": "game_spell_description_LucianBasicAttack",
+			"mDynamicTooltip": "game_spell_tooltip_LucianBasicAttack",
+			"mDynamicExtended": "game_spell_levelup_LucianBasicAttack",
+			"mApplyAttackDamage": true,
+			"useAnimatorFramerate": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2800,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "buffbone_cstm_Lightgun"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{773b37d5}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Lucian/Spells/TFT_LucianPassiveAttack": {
+		"mScriptName": "TFT_LucianPassiveAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "TFT_LucianBasicAttack",
+			"mDisplayName": "game_spell_displayname_TFT_LucianBasicAttack",
+			"mDescription": "game_spell_description_TFT_LucianBasicAttack",
+			"mDynamicTooltip": "game_spell_tooltip_TFT_LucianBasicAttack",
+			"mDynamicExtended": "game_spell_levelup_TFT_LucianBasicAttack",
+			"mImgIconName": [
+				"ASSETS/Spells/Icons2D/1041_Long_Staff.dds"
+			],
+			"mCantCancelWhileWindingUp": true,
+			"mApplyAttackDamage": true,
+			"bHaveHitEffect": true,
+			"{898fbad4}": true,
+			"castRange": [
+				1200,
+				1200,
+				1200,
+				1200,
+				1200,
+				1200,
+				1200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2800,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "buffbone_cstm_Darkgun"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 9,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{773b37d5}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "{38470fc9}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Lucian/Spells/TFT_LucianPassiveShot": {
+		"mScriptName": "TFT_LucianPassiveShot",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 15018,
+			"mAlternateName": "_BasicAttack",
+			"mDisplayName": "game_spell_displayname_TFT_LucianBasicAttack",
+			"mDescription": "game_spell_description_TFT_LucianBasicAttack",
+			"mDynamicTooltip": "game_spell_tooltip_TFT_LucianBasicAttack",
+			"mDynamicExtended": "game_spell_levelup_TFT_LucianBasicAttack",
+			"mCoefficient": 1.2000000476837158,
+			"mImgIconName": [
+				"ASSETS/Spells/Icons2D/1041_Long_Staff.dds"
+			],
+			"mCantCancelWhileWindingUp": true,
+			"bHaveHitEffect": true,
+			"{898fbad4}": true,
+			"castRange": [
+				1200,
+				1200,
+				1200,
+				1200,
+				1200,
+				1200,
+				1200
+			],
+			"mMissileSpec": {
+				"mMissileWidth": 50,
+				"movementComponent": {
+					"mSpeed": 2800,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "buffbone_cstm_Lightgun"
+				},
+				"visibilityComponent": {
+					"mPerceptionBubbleRadius": 100
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{773b37d5}",
+			"mLineWidth": 50,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "{38470fc9}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Lucian/Spells/TFT_LucianCritAttack": {
+		"mScriptName": "TFT_LucianCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "LucianCritAttack",
+			"mDisplayName": "game_spell_displayname_LucianCritAttack",
+			"mDescription": "game_spell_description_LucianCritAttack",
+			"mDynamicTooltip": "game_spell_tooltip_LucianCritAttack",
+			"mDynamicExtended": "game_spell_levelup_LucianCritAttack",
+			"useAnimatorFramerate": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2800,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "buffbone_cstm_Darkgun"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{03d6e712}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT_Lucian/Spells/TFT_LucianE": {
+		"mScriptName": "TFT_LucianE",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 15567,
+			"mAlternateName": "TFT_LucianE",
+			"mDisplayName": "game_spell_displayname_TFT_LucianE",
+			"mDescription": "game_spell_description_TFT_LucianE",
+			"mSpellTags": [
+				"PositiveEffect_MoveBlock",
+				"Trait_AttackReset"
+			],
+			"mEffectAmount": [],
+			"mDataValues": [
+				{
+					"mName": "FirstShotRatio",
+					"mValues": [
+						1,
+						1,
+						1,
+						1,
+						1,
+						1,
+						1
+					],
+					"mBaseP": 1
+				},
+				{
+					"mName": "SecondShotDamage",
+					"mValues": [
+						0,
+						125,
+						250,
+						375,
+						500,
+						625,
+						750
+					],
+					"mFormula": "P + 125"
+				}
+			],
+			"mCoefficient": 0.6000000238418579,
+			"mImgIconName": [
+				"ASSETS/Characters/TFT_Lucian/HUD/Icons2D/TFT_Lucian_E.TFT.dds"
+			],
+			"delayCastOffsetPercent": -0.699999988079071,
+			"delayTotalTimePercent": -0.699999988079071,
+			"mCantCancelWhileWindingUp": true,
+			"mCantCancelWhileChanneling": true,
+			"mDoesntBreakChannels": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRangeDisplayOverride": [
+				445,
+				445,
+				445,
+				445,
+				445,
+				445,
+				445
+			],
+			"castConeDistance": 100,
+			"mLineWidth": 50,
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"selectionPriority": 1,
+			"mTargetingTypeData": {},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"{a5749b52}": "scaleAP",
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"mSubpart": {
+								"mDataValue": "{30233e78}"
+							}
+						}
+					]
+				}
+			}
+		},
+		"mBuff": {
+			"mDescription": "game_buff_tooltip_TFT_LucianE"
+		}
+	},
+	"Characters/TFT_Lucian/CharacterRecords/Root": {
+		"mLinkedTraits": [
+			{
+				"TraitData": "Noble"
+			},
+			{
+				"TraitData": "Gunslinger"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 720,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mCharacterName": "TFT_Lucian",
+		"baseHP": 600,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 35,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 65,
+		"baseArmor": 25,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 660,
+		"attackSpeed": 0.6499999761581421,
+		"basicAttack": {
+			"mAttackCastTime": 0.6499999761581421
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 1,
+				"mAttackName": "TFT_LucianBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackDelayCastOffsetPercent": -0.15000000596046448,
+				"mAttackName": "TFT_LucianCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT_LucianE",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"BaseSpell",
+			"BaseSpell",
+			"TFT_LucianBasicAttack",
+			"TFT_LucianBasicAttack2",
+			"TFT_LucianCritAttack",
+			"TFT_LucianCritAttack2",
+			"TFT_LucianPassiveShot",
+			"BaseSpell",
+			"TFT_LucianPassiveAttack",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 2,
+		"unitTagsString": "Champion",
+		"flags": 9446656
+	},
+	"{57cd249c}": {
+		"useGDSBinaries": true
+	}
+}

@@ -1,4 +1,6 @@
-const PATCH_LINE = 'latest' // 'latest' 'pbe' '12.4'
+const PATCH_LINE = 'latest'
+// const PATCH_LINE = 'pbe'
+// const PATCH_LINE = '9.21' // '12.15'
 
 import fetch from 'node-fetch'
 import fs from 'fs/promises'
@@ -7,12 +9,12 @@ import path from 'path'
 import { getPathTo, importSetData, etagPath, setNumberPath } from './helpers/files.js'
 import { BASE_UNIT_API_NAMES, mDataValueSubstitutions, mSpellCalculationsSubstitutions } from './helpers/normalize.js'
 import { ChampionJSON, ChampionJSONStats, ResponseJSON } from './helpers/types.js'
+import { getAPIName } from './helpers/utils.js'
 
 const baseURL = `https://raw.communitydragon.org/${PATCH_LINE}`
 const url = `${baseURL}/cdragon/tft/en_us.json`
 const response = await fetch(url)
 if (!response.ok) { throw response }
-console.log(url)
 
 let oldEtag: string | undefined
 try {
@@ -24,7 +26,7 @@ const newEtag = response.headers.get('etag')
 if (newEtag != null) {
 	if (newEtag === oldEtag) {
 		console.log('Cached etag unchanged. Terminating.\n')
-		process.exit(0)
+		process.exit(0) //SAMPLE
 	}
 	if (oldEtag !== undefined) {
 		console.log('File updated! Rebuilding data.', newEtag, oldEtag)
@@ -38,6 +40,10 @@ console.log('')
 const responseJSON = await response.json() as ResponseJSON
 const currentSetNumber = Object.keys(responseJSON.sets).reduce((previous, current) => Math.max(previous, parseInt(current, 10)), 0)
 const { champions } = responseJSON.sets[currentSetNumber]
+
+const championsPath = getPathTo(currentSetNumber, 'champion')
+await fs.mkdir(championsPath, { recursive: true })
+await fs.mkdir(getPathTo(currentSetNumber, 'hardcoded'), { recursive: true })
 
 fs.writeFile(getPathTo(currentSetNumber, '._.json'), JSON.stringify(responseJSON, undefined, '\t'))
 fs.writeFile(setNumberPath, currentSetNumber.toString())
@@ -58,12 +64,19 @@ const renameNormalizations: Record<string, Record<string, string>> = {
 	},
 }
 
-const championsPath = getPathTo(currentSetNumber, 'champion')
-await fs.mkdir(championsPath, { recursive: true })
-const apiNames = champions.map(champion => champion.apiName)
-for (const apiName of BASE_UNIT_API_NAMES) {
-	if (!apiNames.includes(apiName)) {
-		apiNames.push(apiName)
+const apiNames = champions.map(champion => getAPIName(champion))
+if (currentSetNumber > 1) {
+	for (const apiName of BASE_UNIT_API_NAMES) {
+		if (!apiNames.includes(apiName)) {
+			apiNames.push(apiName)
+		}
+	}
+}
+
+function replaceKey(object: Record<string, any>, key: string, substituted: string) {
+	if (!object[key] && substituted in object) {
+		object[key] = object[substituted]
+		delete object[substituted]
 	}
 }
 
@@ -84,14 +97,16 @@ await Promise.all(apiNames.map(async apiName => {
 			continue
 		}
 
-		const deleting = deleteNormalizations[entry.__type]
+		const entryKey = entry.__type ?? ('mSpell' in entry ? 'SpellObject' : ('mLinkedTraits' in entry ? 'TFTCharacterRecord' : undefined))
+		const deleting = deleteNormalizations[entryKey]
 		if (deleting != null) {
 			let deleteFrom = entry
-			if (entry.__type === 'SpellObject') {
+			if (entryKey === 'SpellObject') {
 				deleteFrom = deleteFrom.mSpell
 				if (deleteFrom == null) {
 					delete json[rootKey]
 				} else {
+					replaceKey(deleteFrom, 'mSpellCalculations', '{94572284}')
 					if (deleteFrom.mEffectAmount != null) {
 						deleteFrom.mEffectAmount = deleteFrom.mEffectAmount.filter((effect: Object) => Object.keys(effect).length > 1)
 					}
@@ -99,6 +114,7 @@ await Promise.all(apiNames.map(async apiName => {
 					for (const key in spellCalculations) {
 						const mSpellCalculationsSubstitution = mSpellCalculationsSubstitutions[key]
 						const value = spellCalculations[key]
+						replaceKey(value, 'mFormulaParts', '{50f145c0}')
 						if (mSpellCalculationsSubstitution != null) {
 							delete spellCalculations[key]
 							spellCalculations[mSpellCalculationsSubstitution] = value
@@ -106,6 +122,9 @@ await Promise.all(apiNames.map(async apiName => {
 							console.log('UNKNOWN mSpellCalculationsSubstitution', key, 'for', apiName)
 						}
 						for (const mFormulaPart of value.mFormulaParts) {
+							replaceKey(mFormulaPart, 'mRatio', '{b8dcfcbb}')
+							replaceKey(mFormulaPart, 'mStyleTag', '{992cd7eb}')
+							replaceKey(mFormulaPart, 'mSubpart', '{1cd83c4b}')
 							let childArray: any[]
 							if (mFormulaPart.mPart1) {
 								childArray = [mFormulaPart.mPart1, mFormulaPart.mPart2, mFormulaPart.mPart3, mFormulaPart.mPart4, , mFormulaPart.mPart5]
@@ -117,6 +136,9 @@ await Promise.all(apiNames.map(async apiName => {
 							}
 							for (const child of childArray) {
 								const subPart = child.mSubpart != null ? child.mSubpart : child
+								replaceKey(subPart, 'mRatio', '{b8dcfcbb}')
+								replaceKey(subPart, 'mStyleTag', '{992cd7eb}')
+								replaceKey(subPart, 'mSubpart', '{1cd83c4b}')
 								const value = subPart.mDataValue as string
 								if (value !== undefined) {
 									const mDataValueSubstitution = mDataValueSubstitutions[value]
@@ -137,7 +159,7 @@ await Promise.all(apiNames.map(async apiName => {
 				}
 			}
 		}
-		const renaming = renameNormalizations[entry.__type]
+		const renaming = renameNormalizations[entryKey]
 		if (renaming != null) {
 			for (const renameKey in renaming) {
 				const value = entry[renameKey]
@@ -145,11 +167,12 @@ await Promise.all(apiNames.map(async apiName => {
 				entry[renaming[renameKey]] = value
 			}
 		}
-		if (entry.__type === 'TFTCharacterRecord') {
+		if (entryKey === 'TFTCharacterRecord') {
 			const stats = entry as ChampionJSONStats
 			stats.mLinkedTraits?.forEach(traitEntry => {
-				const rawTrait = traitEntry.TraitData
-				traitEntry.TraitData = TRAIT_DATA_SUBSTITUTIONS[rawTrait]
+				const rawTrait = traitEntry.TraitData ?? traitEntry['{053a1f33}']!
+				traitEntry.TraitData = TRAIT_DATA_SUBSTITUTIONS[rawTrait] ?? rawTrait
+				delete traitEntry['{053a1f33}']
 			})
 		}
 	}

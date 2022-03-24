@@ -1,0 +1,25 @@
+{
+	"Characters/TFT_VoidSpawn/CharacterRecords/Root": {
+		"mLinkedTraits": [
+			"{6c4915df}"
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mCharacterName": "TFT_VoidSpawn",
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBaseStaticRegen": 0
+		},
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 180,
+		"attackSpeed": 0.800000011920929,
+		"attackSpeedRatio": 0.800000011920929,
+		"expGivenOnDeath": 0,
+		"goldGivenOnDeath": 0
+	},
+	"{b1515e15}": {}
+}

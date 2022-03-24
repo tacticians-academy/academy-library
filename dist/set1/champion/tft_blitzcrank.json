@@ -1,0 +1,329 @@
+{
+	"Characters/TFT_Blitzcrank/Spells/TFT_BlitzcrankBasicAttack2": {
+		"mScriptName": "TFT_BlitzcrankBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 8143,
+			"delayCastOffsetPercent": -0.31220000982284546,
+			"bHaveHitEffect": true,
+			"castRange": [
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 13,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"Characters/TFT_Blitzcrank/Spells/TFT_BlitzcrankBasicAttack": {
+		"mScriptName": "TFT_BlitzcrankBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 8143,
+			"delayCastOffsetPercent": -0.31220000982284546,
+			"bHaveHitEffect": true,
+			"castRange": [
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 13,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"Characters/TFT_Blitzcrank/Spells/TFT_BlitzcrankPowerFist": {
+		"mScriptName": "TFT_BlitzcrankPowerFist",
+		"mSpell": {
+			"mAffectsTypeFlags": 8143,
+			"delayCastOffsetPercent": -0.31220000982284546,
+			"mCantCancelWhileWindingUp": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 12.960000038146973,
+			"missileSpeed": 0,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"Characters/TFT_Blitzcrank/Spells/TFT_BlitzcrankRocketGrab": {
+		"mScriptName": "TFT_BlitzcrankRocketGrab",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mAlternateName": "TFT_Blitzcrank_RocketGrabMissile",
+			"mDisplayName": "game_spell_displayname_RocketGrab",
+			"mDescription": "game_spell_description_RocketGrab",
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						-50,
+						250,
+						550,
+						850,
+						1150,
+						1450,
+						1750
+					],
+					"mBaseP": -50,
+					"mFormula": "P + 300"
+				},
+				{
+					"mName": "StunDuration",
+					"mValues": [
+						2.5,
+						2.5,
+						2.5,
+						2.5,
+						2.5,
+						2.5,
+						2.5
+					],
+					"mBaseP": 2.5,
+					"mFormula": "P"
+				}
+			],
+			"mCoefficient": 0.800000011920929,
+			"mImgIconName": [
+				"ASSETS/Characters/TFT_Blitzcrank/HUD/Icons2D/TFT_Blitzcrank_RocketGrab.TFT.dds"
+			],
+			"delayTotalTimePercent": -0.5,
+			"mCantCancelWhileWindingUp": true,
+			"castRange": [
+				2650,
+				2650,
+				2650,
+				2650,
+				2650,
+				2650,
+				2650
+			],
+			"castRangeDisplayOverride": [
+				1050,
+				1050,
+				1050,
+				1050,
+				1050,
+				1050,
+				1050
+			],
+			"castRadius": [
+				210,
+				210,
+				210,
+				210,
+				210,
+				210,
+				210
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 70,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 3000,
+					"mUseHeightOffsetAtEnd": true,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"heightSolver": {
+					"mGravity": 10000
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 6.75,
+			"missileSpeed": 1800,
+			"mMissileEffectKey": "{90805e1c}",
+			"mLineWidth": 70,
+			"bHaveHitBone": true,
+			"mHitBoneName": "root",
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"{a5749b52}": "scaleAP",
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"mSubpart": {
+								"mDataValue": "Damage"
+							}
+						}
+					]
+				}
+			}
+		}
+	},
+	"Characters/TFT_Blitzcrank/Spells/TFT_BlitzcrankCritAttack": {
+		"mScriptName": "TFT_BlitzcrankCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 8143,
+			"delayCastOffsetPercent": -0.31220000982284546,
+			"bHaveHitEffect": true,
+			"castRange": [
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 14,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"{63c84966}": {
+		"useGDSBinaries": true
+	},
+	"Characters/TFT_Blitzcrank/CharacterRecords/Root": {
+		"mLinkedTraits": [
+			{
+				"TraitData": "Robot"
+			},
+			{
+				"TraitData": "Brawler"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mCharacterName": "TFT_Blitzcrank",
+		"baseHP": 650,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 125,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 50,
+		"baseArmor": 35,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 180,
+		"attackSpeed": 0.5,
+		"basicAttack": {
+			"mAttackCastTime": 0.8999999761581421
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 0.5,
+				"mAttackName": "TFT_BlitzcrankBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackDelayCastOffsetPercent": -0.029999999329447746,
+				"mAttackName": "TFT_BlitzcrankCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT_BlitzcrankRocketGrab",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"TFT_Blitzcrank_RocketGrab",
+			"TFT_BlitzcrankPowerFist",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 3,
+		"unitTagsString": "Champion",
+		"flags": 9446656
+	}
+}
