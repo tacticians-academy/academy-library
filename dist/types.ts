@@ -150,7 +150,7 @@ export interface ChampionData {
 export interface TraitEffectData {
 	maxUnits: number
 	minUnits: number
-	style?: number
+	style: number
 	variables: EffectVariables
 }
 export interface TraitData {

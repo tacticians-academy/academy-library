@@ -15,6 +15,7 @@ export const traits: TraitData[] = [
 					'CritDamage': 75,
 					'CritChance': 5,
 				},
+				style: 1,
 			},
 			{
 				maxUnits: 8,
@@ -23,6 +24,7 @@ export const traits: TraitData[] = [
 					'CritDamage': 150,
 					'CritChance': 20,
 				},
+				style: 2,
 			},
 			{
 				maxUnits: 25000,
@@ -31,6 +33,7 @@ export const traits: TraitData[] = [
 					'CritDamage': 225,
 					'CritChance': 30,
 				},
+				style: 3,
 			},
 		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_Assassin.dds`,
@@ -46,6 +49,7 @@ export const traits: TraitData[] = [
 					'ExtraAttacks': 1,
 					'ProcChance': 45,
 				},
+				style: 1,
 			},
 			{
 				maxUnits: 8,
@@ -54,6 +58,7 @@ export const traits: TraitData[] = [
 					'ExtraAttacks': 2,
 					'ProcChance': 45,
 				},
+				style: 2,
 			},
 			{
 				maxUnits: 25000,
@@ -62,6 +67,7 @@ export const traits: TraitData[] = [
 					'ExtraAttacks': 4,
 					'ProcChance': 45,
 				},
+				style: 3,
 			},
 		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_Blademaster.dds`,
@@ -76,6 +82,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'BonusHP': 250,
 				},
+				style: 1,
 			},
 			{
 				maxUnits: 5,
@@ -83,6 +90,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'BonusHP': 500,
 				},
+				style: 2,
 			},
 			{
 				maxUnits: 25000,
@@ -90,6 +98,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'BonusHP': 900,
 				},
+				style: 3,
 			},
 		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_Brawler.dds`,
@@ -106,6 +115,7 @@ export const traits: TraitData[] = [
 					'ManaDrainDrain': 15,
 					'ManaDrainProcChance': 40,
 				},
+				style: 1,
 			},
 			{
 				maxUnits: 5,
@@ -115,6 +125,7 @@ export const traits: TraitData[] = [
 					'ManaDrainDrain': 30,
 					'ManaDrainProcChance': 40,
 				},
+				style: 2,
 			},
 			{
 				maxUnits: 25000,
@@ -124,6 +135,7 @@ export const traits: TraitData[] = [
 					'ManaDrainDrain': 45,
 					'ManaDrainProcChance': 40,
 				},
+				style: 3,
 			},
 		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_Demon.dds`,
@@ -138,6 +150,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'MagicReduction': 75,
 				},
+				style: 1,
 			},
 		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_Dragon.dds`,
@@ -154,6 +167,7 @@ export const traits: TraitData[] = [
 					'SizeCoefficient': null,
 					'{558229df}': null,
 				},
+				style: 1,
 			},
 		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_Elementalist.dds`,
@@ -168,6 +182,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'ShieldPercent': 100,
 				},
+				style: 1,
 			},
 		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_Exile.dds`,
@@ -183,6 +198,7 @@ export const traits: TraitData[] = [
 					'StunDuration': 1.5,
 					'ProcPercent': 20,
 				},
+				style: 1,
 			},
 			{
 				maxUnits: 5,
@@ -191,6 +207,7 @@ export const traits: TraitData[] = [
 					'StunDuration': 1.5,
 					'ProcPercent': 33,
 				},
+				style: 2,
 			},
 			{
 				maxUnits: 25000,
@@ -199,6 +216,7 @@ export const traits: TraitData[] = [
 					'StunDuration': 1.5,
 					'ProcPercent': 50,
 				},
+				style: 3,
 			},
 		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_Glacial.dds`,
@@ -213,6 +231,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'Armor': 40,
 				},
+				style: 1,
 			},
 		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_Guardian.dds`,
@@ -229,6 +248,7 @@ export const traits: TraitData[] = [
 					'ExtraTargetsHit': 1,
 					'{f768e185}': 1,
 				},
+				style: 1,
 			},
 			{
 				maxUnits: 5,
@@ -238,6 +258,7 @@ export const traits: TraitData[] = [
 					'ExtraTargetsHit': 2,
 					'{f768e185}': 2,
 				},
+				style: 2,
 			},
 			{
 				maxUnits: 25000,
@@ -247,6 +268,7 @@ export const traits: TraitData[] = [
 					'ExtraTargetsHit': 4,
 					'{f768e185}': 3,
 				},
+				style: 3,
 			},
 		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_Gunslinger.dds`,
@@ -263,6 +285,7 @@ export const traits: TraitData[] = [
 					'{a004f927}': 1.25,
 					'HexSize': 1,
 				},
+				style: 1,
 			},
 			{
 				maxUnits: 25000,
@@ -272,6 +295,7 @@ export const traits: TraitData[] = [
 					'{a004f927}': 1.25,
 					'HexSize': 2,
 				},
+				style: 2,
 			},
 		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_Hextech.dds`,
@@ -286,6 +310,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'DamageMultiplier': 2,
 				},
+				style: 1,
 			},
 			{
 				maxUnits: 25000,
@@ -293,6 +318,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'DamageMultiplier': 2,
 				},
+				style: 2,
 			},
 		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_Imperial.dds`,
@@ -307,6 +333,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'BlockAmount': 15,
 				},
+				style: 1,
 			},
 			{
 				maxUnits: 5,
@@ -314,6 +341,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'BlockAmount': 30,
 				},
+				style: 2,
 			},
 			{
 				maxUnits: 25000,
@@ -321,6 +349,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'BlockAmount': 60,
 				},
+				style: 3,
 			},
 		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_Knight.dds`,
@@ -336,6 +365,7 @@ export const traits: TraitData[] = [
 					'ADValue': 50,
 					'APValue': 50,
 				},
+				style: 1,
 			},
 			{
 				maxUnits: 4,
@@ -344,6 +374,7 @@ export const traits: TraitData[] = [
 					'ADValue': 80,
 					'APValue': 80,
 				},
+				style: 2,
 			},
 		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_Ninja.dds`,
@@ -360,6 +391,7 @@ export const traits: TraitData[] = [
 					'Heal': 30,
 					'MR': 50,
 				},
+				style: 1,
 			},
 			{
 				maxUnits: 25000,
@@ -369,6 +401,7 @@ export const traits: TraitData[] = [
 					'Heal': 30,
 					'MR': 50,
 				},
+				style: 2,
 			},
 		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_Noble.dds`,
@@ -383,6 +416,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'HPToSet': 100,
 				},
+				style: 1,
 			},
 		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_Phantom.dds`,
@@ -395,6 +429,7 @@ export const traits: TraitData[] = [
 				maxUnits: 25000,
 				minUnits: 3,
 				variables: {},
+				style: 1,
 			},
 		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_Pirate.dds`,
@@ -411,6 +446,7 @@ export const traits: TraitData[] = [
 					'ProcRate': 3,
 					'ProcPercent': 40,
 				},
+				style: 1,
 			},
 			{
 				maxUnits: 25000,
@@ -420,6 +456,7 @@ export const traits: TraitData[] = [
 					'ProcRate': 3,
 					'ProcPercent': 70,
 				},
+				style: 2,
 			},
 		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_Ranger.dds`,
@@ -432,6 +469,7 @@ export const traits: TraitData[] = [
 				maxUnits: 25000,
 				minUnits: 1,
 				variables: {},
+				style: 1,
 			},
 		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_Robot.dds`,
@@ -446,6 +484,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'HPPercent': 60,
 				},
+				style: 1,
 			},
 			{
 				maxUnits: 25000,
@@ -453,6 +492,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'HPPercent': 100,
 				},
+				style: 2,
 			},
 		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_Shapeshifter.dds`,
@@ -467,6 +507,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'AP': 40,
 				},
+				style: 1,
 			},
 			{
 				maxUnits: 8,
@@ -474,6 +515,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'AP': 120,
 				},
+				style: 2,
 			},
 			{
 				maxUnits: 25000,
@@ -481,6 +523,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'AP': 200,
 				},
+				style: 3,
 			},
 		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_Sorcerer.dds`,
@@ -496,6 +539,7 @@ export const traits: TraitData[] = [
 					'TrueDamagePercent': 100,
 					'VoidChampions': 1,
 				},
+				style: 1,
 			},
 			{
 				maxUnits: 25000,
@@ -504,6 +548,7 @@ export const traits: TraitData[] = [
 					'TrueDamagePercent': 100,
 					'VoidChampions': 1,
 				},
+				style: 2,
 			},
 		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_Void.dds`,
@@ -518,6 +563,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'AAPercent': 10,
 				},
+				style: 1,
 			},
 			{
 				maxUnits: 25000,
@@ -525,6 +571,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'AAPercent': 10,
 				},
+				style: 2,
 			},
 		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_Wild.dds`,
@@ -539,6 +586,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'MissPercent': 30,
 				},
+				style: 1,
 			},
 			{
 				maxUnits: 8,
@@ -546,6 +594,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'MissPercent': 60,
 				},
+				style: 2,
 			},
 			{
 				maxUnits: 25000,
@@ -553,6 +602,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'MissPercent': 90,
 				},
+				style: 3,
 			},
 		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_Yordle.dds`,

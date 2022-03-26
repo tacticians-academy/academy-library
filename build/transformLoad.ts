@@ -179,7 +179,10 @@ traits.forEach((trait: TraitData) => {
 	for (const normalize in NORMALIZE_EFFECT_KEYS) {
 		trait.desc = trait.desc.replaceAll(normalize, NORMALIZE_EFFECT_KEYS[normalize])
 	}
-	trait.effects.forEach(effect => {
+	trait.effects.forEach((effect, index) => {
+		if (effect.style == null) {
+			effect.style = index + 1
+		}
 		Object.keys(effect.variables).forEach(key => {
 			const originalValue = effect.variables[key]
 			if (key.startsWith('{')) {
