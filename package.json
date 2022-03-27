@@ -1,6 +1,6 @@
 {
 	"name": "@tacticians-academy/academy-library",
-	"version": "0.14.3",
+	"version": "0.14.4",
 	"author": "Kyle Coburn",
 	"repository": "https://github.com/tacticians-academy/academy-library",
 	"website": "https://github.com/tacticians-academy/academy-library",
@@ -14,10 +14,10 @@
 	"devDependencies": {
 		"@ky-is/eslint-config": "^2.3.6",
 		"@types/node": "^16.11.26",
-		"eslint": "^8.11.0",
+		"eslint": "^8.12.0",
 		"node-fetch": "^3.2.3",
 		"ts-node": "^10.7.0",
-		"typescript": "^4.6.2"
+		"typescript": "^4.6.3"
 	},
 	"eslintConfig": {
 		"extends": "@ky-is/eslint-config/typescript",

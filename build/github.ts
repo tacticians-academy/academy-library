@@ -92,6 +92,10 @@ const { ChampionKey, champions } = await importChampions(currentSetNumber)
 const { TraitKey, traits } = await importTraits(currentSetNumber)
 const { completedItems } = await importItems(currentSetNumber)
 
+function wikiUrlFor({ name }: { name: string }) {
+	return `https://leagueoflegends.fandom.com/wiki/${name.replace(' ', '_')}/TFT#Set_${setString}`
+}
+
 // Champions
 
 for (const champion of champions) {
