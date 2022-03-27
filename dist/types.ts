@@ -47,6 +47,7 @@ export interface ItemFlashcard {
 
 export enum BonusKey {
 	Armor = 'Armor',
+	ArmorShred = 'ArmorShred',
 	AttackAccuracy = 'AttackAccuracy',
 	AttackDamage = 'AD',
 	AttackSpeed = 'AS',
@@ -63,6 +64,7 @@ export enum BonusKey {
 	CurrentHealth = 'CurrentHP',
 	MissingHealth = 'MissingHP',
 	MagicResist = 'MR',
+	MagicResistShred = 'MRShred',
 	Mana = 'Mana',
 	ManaRestore = 'ManaRestore',
 	ManaRestorePerAttack = 'FlatManaRestore',
