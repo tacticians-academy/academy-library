@@ -4,11 +4,11 @@ import fetch from 'node-fetch'
 import fs from 'fs/promises'
 import process from 'process'
 
-import { getCurrentSetNumber, githubTokenPath, loadHardcodedTXT } from './helpers/files.js'
-import { importAugments, importItems, importTraits, importChampions } from '../dist/imports.js'
-import { AugmentData, BonusKey, EffectVariables } from '../dist/types.js'
+import { getCurrentSetNumber, githubTokenPath, loadHardcodedTXT } from '../helpers/files.js'
+import { importAugments, importItems, importTraits, importChampions } from '../../dist/imports.js'
+import { AugmentData, BonusKey, EffectVariables } from '../../dist/types.js'
 
-import { getAugmentNameKey } from './helpers/utils.js'
+import { getAugmentNameKey } from '../helpers/utils.js'
 
 const githubToken = (await fs.readFile(githubTokenPath, 'utf8')).trim()
 
@@ -21,8 +21,8 @@ interface GithubIssueData {
 
 async function createIssue(data: GithubIssueData) {
 	try {
-		// const repo = 'ky-is/TEST' //SAMPLE
-		const repo = 'tacticians-academy/teamfight-simulator'
+		const repo = 'ky-is/TEST' //SAMPLE
+		// const repo = 'tacticians-academy/teamfight-simulator'
 		const response = await fetch(`https://api.github.com/repos/${repo}/import/issues`, {
 			method: 'POST',
 			body: JSON.stringify({ issue: data }),

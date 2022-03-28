@@ -1,13 +1,13 @@
 import fs from 'fs/promises'
 import path from 'path'
 
-import { substituteVariables, getIconPath } from '../dist/index.js'
-import type { AugmentFlashcard, ItemFlashcard, AugmentTier, EffectVariables } from '../dist/index.js'
-import { importAugments, importItems } from '../dist/imports.js'
+import { substituteVariables, getIconPath } from '../../dist/index.js'
+import type { AugmentFlashcard, ItemFlashcard, AugmentTier, EffectVariables } from '../../dist/index.js'
+import { importAugments, importItems } from '../../dist/imports.js'
 
-import { getCurrentSetNumber, getPathTo } from './helpers/files.js'
-import { formatJS } from './helpers/formatting.js'
-import { getAugmentNameKey } from './helpers/utils.js'
+import { getCurrentSetNumber, getPathTo } from '../helpers/files.js'
+import { formatJS } from '../helpers/formatting.js'
+import { getAugmentNameKey } from '../helpers/utils.js'
 
 const REGEX_ASSET_PREFIX = /https:\/\/raw.communitydragon.org\/\w+?\/game\//
 
