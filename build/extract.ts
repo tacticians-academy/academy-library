@@ -1,12 +1,11 @@
-const PATCH_LINE = 'latest'
-// const PATCH_LINE = 'pbe'
-// const PATCH_LINE = PATCH_FOR_SET[1]
+const LOAD_SET: SetNumber = 6.5
+const LOAD_PBE = false
 
 import fetch from 'node-fetch'
 import fs from 'fs/promises'
 import path from 'path'
 
-import { PATCH_FOR_SET } from '../dist/index.js'
+import { PATCH_FOR_SET, SetNumber } from '../dist/index.js'
 import { importSetData } from '../dist/imports.js'
 
 import { getPathTo, etagPath, setNumberPath } from './helpers/files.js'
@@ -14,7 +13,8 @@ import { BASE_UNIT_API_NAMES, mDataValueSubstitutions, mSpellCalculationsSubstit
 import { ChampionJSON, ChampionJSONStats, ResponseJSON } from './helpers/types.js'
 import { getAPIName } from './helpers/utils.js'
 
-const baseURL = `https://raw.communitydragon.org/${PATCH_LINE}`
+const patchLine = LOAD_PBE ? 'pbe' : (PATCH_FOR_SET[LOAD_SET] ?? 'latest')
+const baseURL = `https://raw.communitydragon.org/${patchLine}`
 const url = `${baseURL}/cdragon/tft/en_us.json`
 const response = await fetch(url)
 if (!response.ok) { throw response }
@@ -41,8 +41,12 @@ if (newEtag != null) {
 console.log('')
 
 const responseJSON = await response.json() as ResponseJSON
-const currentSetNumber = Object.keys(responseJSON.sets).reduce((previous, current) => Math.max(previous, parseInt(current, 10)), 0)
-const { champions } = responseJSON.sets[currentSetNumber]
+const parentSetNumber = Object.keys(responseJSON.sets).reduce((previous, current) => Math.max(previous, parseInt(current, 10)), 0)
+const currentSetNumber = parentSetNumber === Math.floor(LOAD_SET) ? LOAD_SET : parentSetNumber as SetNumber
+if (PATCH_FOR_SET[currentSetNumber] == null) {
+	throw 'New Set!! ' + currentSetNumber
+}
+const { champions } = responseJSON.sets[parentSetNumber]
 
 const championsPath = getPathTo(currentSetNumber, 'champion')
 await fs.mkdir(championsPath, { recursive: true })
@@ -50,7 +54,7 @@ await fs.mkdir(getPathTo(currentSetNumber, 'hardcoded'), { recursive: true })
 
 fs.writeFile(getPathTo(currentSetNumber, '._.json'), JSON.stringify(responseJSON, undefined, '\t'))
 fs.writeFile(setNumberPath, currentSetNumber.toString())
-console.log('Loading set', currentSetNumber, 'from', PATCH_LINE.toUpperCase(), '...', 'Units:', champions.length, '\n')
+console.log('Loading set', currentSetNumber, 'from', patchLine.toUpperCase(), '...', 'Units:', champions.length, '\n')
 
 const { TRAIT_DATA_SUBSTITUTIONS } = await importSetData(currentSetNumber)
 
@@ -68,7 +72,7 @@ const renameNormalizations: Record<string, Record<string, string>> = {
 }
 
 const apiNames = champions.map(champion => getAPIName(champion))
-if (currentSetNumber > 1) {
+if (parentSetNumber > 1) {
 	for (const apiName of BASE_UNIT_API_NAMES) {
 		if (!apiNames.includes(apiName)) {
 			apiNames.push(apiName)

@@ -1,13 +1,12 @@
-const IS_MID_SET = true
-
 import fetch from 'node-fetch'
 import fs from 'fs/promises'
 import process from 'process'
 
-import { getCurrentSetNumber, githubTokenPath, loadHardcodedTXT } from '../helpers/files.js'
+import { SetNumber } from '../../dist/index.js'
 import { importAugments, importItems, importTraits, importChampions } from '../../dist/imports.js'
 import { AugmentData, BonusKey, EffectVariables } from '../../dist/types.js'
 
+import { getCurrentSetNumber, githubTokenPath, loadHardcodedTXT } from '../helpers/files.js'
 import { getAugmentNameKey } from '../helpers/utils.js'
 
 const githubToken = (await fs.readFile(githubTokenPath, 'utf8')).trim()
@@ -75,15 +74,15 @@ function formatBulletEntries(bullets: string[], labels: string[]) {
 
 // Set data
 
-const milestoneIDForSetString: Record<string, number> = {
-	'6.5': 1,
+const milestoneIDForSetString: Record<SetNumber, number | undefined> = {
+	1: undefined,
+	6.5: 1,
 }
 
 const currentSetNumber = await getCurrentSetNumber()
-const setString = IS_MID_SET ? `${currentSetNumber}.5` : currentSetNumber.toString()
-const milestone = milestoneIDForSetString[setString]
+const milestone = milestoneIDForSetString[currentSetNumber]
 if (!milestone) {
-	console.log('Unknown milestone', setString)
+	console.log('Unknown milestone', currentSetNumber)
 	process.exit(0)
 }
 
@@ -93,7 +92,7 @@ const { TraitKey, traits } = await importTraits(currentSetNumber)
 const { completedItems } = await importItems(currentSetNumber)
 
 function wikiUrlFor({ name }: { name: string }) {
-	return `https://leagueoflegends.fandom.com/wiki/${name.replace(' ', '_')}/TFT#Set_${setString}`
+	return `https://leagueoflegends.fandom.com/wiki/${name.replace(' ', '_')}/TFT#Set_${currentSetNumber}`
 }
 
 // Champions
@@ -103,7 +102,7 @@ for (const champion of champions) {
 	// const canContinue = await createIssue({
 	// 	title: `${champion.name} ability`,
 	// 	body: `Implement ${champion.name} ability`,
-	// 	labels: [`Champion Ability`, `Set ${setString}`],
+	// 	labels: [`Champion Ability`, `Set ${currentSetNumber}`],
 	// 	milestone,
 	// })
 	// if (!canContinue) {
@@ -122,7 +121,7 @@ for (const trait of traits) {
 	// const canContinue = await createIssue({
 	// 	title: `${trait.name} trait`,
 	// 	body: `Implement ${trait.name} trait` + formatBulletEntries(bulletPoints, ['.', '.', '.', '.', '.']),
-	// 	labels: [`Trait`, `Set ${setString}`],
+	// 	labels: [`Trait`, `Set ${currentSetNumber}`],
 	// 	milestone,
 	// })
 	// if (!canContinue) {
@@ -141,7 +140,7 @@ for (const item of completedItems) {
 	// const canContinue = await createIssue({
 	// 	title: `${item.name} item`,
 	// 	body: `Implement ${item.name} item` + formatBulletEntries(bulletPoints, ['Value']),
-	// 	labels: [`Item`, `Set ${setString}`],
+	// 	labels: [`Item`, `Set ${currentSetNumber}`],
 	// 	milestone,
 	// })
 	// if (!canContinue) {

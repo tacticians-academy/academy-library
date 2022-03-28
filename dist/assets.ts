@@ -1,5 +1,5 @@
 import { PATCH_FOR_SET } from './index.js'
-import type { SetNumber } from './types.js'
+import type { SetNumber } from './index.js'
 
 export function getAssetPrefixFor(set: SetNumber) {
 	return `https://raw.communitydragon.org/${PATCH_FOR_SET[set]}/game/`

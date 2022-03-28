@@ -1,7 +1,10 @@
 export const PATCH_FOR_SET = {
 	1: '9.21',
-	6: '12.5',
+	// 6: '12.3',
+	6.5: 'latest',
 }
+
+export type SetNumber = keyof typeof PATCH_FOR_SET
 
 export * from './assets.js'
 export * from './imports.js'

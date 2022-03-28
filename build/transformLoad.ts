@@ -25,15 +25,18 @@ const BASE_AP_RATIO = 0.009999999776482582
 // Load
 
 const currentSetNumber = await getCurrentSetNumber()
+const parentSetNumber = Math.floor(currentSetNumber)
+console.log(currentSetNumber, parentSetNumber)
 
 let responseJSON: ResponseJSON
 try {
 	const raw = await fs.readFile(getPathTo(currentSetNumber, '._.json'), 'utf8')
 	responseJSON = JSON.parse(raw)
-} catch {
+} catch(error) {
+	console.log(error)
 	throw 'Missing cache.local. Erase the `cache` directory and re-run `prepare`.'
 }
-const { champions, traits } = responseJSON.sets[currentSetNumber]
+const { champions, traits } = responseJSON.sets[parentSetNumber]
 const itemsData = responseJSON.items as ItemData[]
 
 const baseSet = responseJSON.sets['1']
@@ -228,7 +231,7 @@ outputItemSections.push(`export const currentItems: ItemData[] = componentItems.
 const activeAugments: AugmentData[] = []
 const unreleasedAugments: AugmentData[] = []
 
-const currentSetName = `tft_set${currentSetNumber}`
+const parentSetName = `tft_set${parentSetNumber}`
 
 function getTierFromWord(word: string): AugmentTier | undefined {
 	if (word === 'i') {
@@ -254,7 +257,7 @@ for (const item of itemsData) {
 	const pathCategoryComponent = pathComponents[pathComponents.length - 3]
 	const isAugment = pathCategoryComponent === 'augments'
 	const [ pathName, setKey ] = pathNameComponent.split('.')
-	if (!setKey.startsWith(currentSetName)) {
+	if (!setKey.startsWith(parentSetName)) {
 		if (isAugment) {
 			console.log('Augment with invalid set marker', pathNameComponent)
 		}

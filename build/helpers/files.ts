@@ -11,7 +11,8 @@ export const etagPath = path.resolve(cachePath, 'cdragon_etag.local')
 export const githubTokenPath = path.resolve(cachePath, 'github_token.local')
 
 export async function getCurrentSetNumber() {
-	return parseInt(await fs.readFile(setNumberPath, 'utf8'), 10) as SetNumber
+	console.log(setNumberPath)
+	return parseFloat(await fs.readFile(setNumberPath, 'utf8')) as SetNumber
 }
 
 function getOutputFolder(setNumber: number) {
