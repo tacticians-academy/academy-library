@@ -5,7 +5,7 @@ import fetch from 'node-fetch'
 import fs from 'fs/promises'
 import path from 'path'
 
-import { PATCH_FOR_SET, SetNumber } from '../dist/index.js'
+import { SET_DATA, SetNumber } from '../dist/index.js'
 import { importSetData } from '../dist/imports.js'
 
 import { getPathTo, etagPath, setNumberPath } from './helpers/files.js'
@@ -13,7 +13,7 @@ import { BASE_UNIT_API_NAMES, mDataValueSubstitutions, mSpellCalculationsSubstit
 import { ChampionJSON, ChampionJSONStats, ResponseJSON } from './helpers/types.js'
 import { getAPIName } from './helpers/utils.js'
 
-const patchLine = LOAD_PBE ? 'pbe' : (PATCH_FOR_SET[LOAD_SET] ?? 'latest')
+const patchLine = LOAD_PBE ? 'pbe' : (SET_DATA[LOAD_SET]?.patchLine ?? 'latest')
 const baseURL = `https://raw.communitydragon.org/${patchLine}`
 const url = `${baseURL}/cdragon/tft/en_us.json`
 const response = await fetch(url)
@@ -43,7 +43,7 @@ console.log('')
 const responseJSON = await response.json() as ResponseJSON
 const parentSetNumber = Object.keys(responseJSON.sets).reduce((previous, current) => Math.max(previous, parseInt(current, 10)), 0)
 const currentSetNumber = parentSetNumber === Math.floor(LOAD_SET) ? LOAD_SET : parentSetNumber as SetNumber
-if (PATCH_FOR_SET[currentSetNumber] == null) {
+if (SET_DATA[currentSetNumber] == null) {
 	throw 'New Set!! ' + currentSetNumber
 }
 const { champions } = responseJSON.sets[parentSetNumber]
@@ -56,7 +56,8 @@ fs.writeFile(getPathTo(currentSetNumber, '._.json'), JSON.stringify(responseJSON
 fs.writeFile(setNumberPath, currentSetNumber.toString())
 console.log('Loading set', currentSetNumber, 'from', patchLine.toUpperCase(), '...', 'Units:', champions.length, '\n')
 
-const { TRAIT_DATA_SUBSTITUTIONS } = await importSetData(currentSetNumber)
+const setData = await importSetData(currentSetNumber)
+const TRAIT_DATA_SUBSTITUTIONS = setData?.TRAIT_DATA_SUBSTITUTIONS ?? {}
 
 // Champions
 

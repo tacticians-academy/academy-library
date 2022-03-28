@@ -3,7 +3,7 @@ const MAX_STAR_LEVEL = 3
 import fs from 'fs/promises'
 
 import { COMPONENT_ITEM_IDS, ItemTypeKey } from '../dist/index.js'
-import { importItems, importTraits, importSetData } from '../dist/imports.js'
+import { importAugments, importItems, importTraits, importSetData } from '../dist/imports.js'
 import { AugmentData, AugmentTier, BonusKey, ChampionData, ChampionSpellData, EffectVariables, ItemData, SpellCalculations, SpellCalculationPart, SpellCalculationSubpart, SpellVariables, TraitData } from '../dist/index.js'
 
 import { getCurrentSetNumber, getPathTo, loadHardcodedTXT } from './helpers/files.js'
@@ -26,7 +26,6 @@ const BASE_AP_RATIO = 0.009999999776482582
 
 const currentSetNumber = await getCurrentSetNumber()
 const parentSetNumber = Math.floor(currentSetNumber)
-console.log(currentSetNumber, parentSetNumber)
 
 let responseJSON: ResponseJSON
 try {
@@ -51,14 +50,15 @@ for (const apiName of BASE_UNIT_API_NAMES) {
 	}
 }
 
-const { ItemKey, currentItems } = await importItems(currentSetNumber)
-console.log(ItemKey, currentItems)
+const { AugmentGroupKey } = await importAugments(currentSetNumber)
+const { ItemKey } = await importItems(currentSetNumber)
 const { TraitKey } = await importTraits(currentSetNumber)
 
 // Items
 
 const setData = await importSetData(currentSetNumber)
 const { LOCKED_STAR_LEVEL, SPATULA_ITEM_IDS } = setData
+const RETIRED_SPATULA_ITEM_IDS = setData.RETIRED_SPATULA_ITEM_IDS ?? []
 const RETIRED_AUGMENT_NAME_KEYS = setData.RETIRED_AUGMENT_NAME_KEYS ?? []
 const UNUSED_AUGMENT_NAME_KEYS = setData.UNUSED_AUGMENT_NAME_KEYS ?? []
 const TRAIT_DATA_SUBSTITUTIONS = setData.TRAIT_DATA_SUBSTITUTIONS ?? {}
@@ -88,7 +88,9 @@ itemsData.reverse().forEach(item => {
 			if (!SPATULA_ITEM_IDS || SPATULA_ITEM_IDS.includes(item.id)) {
 				typeKey = 'spatula'
 			} else {
-				console.log('Unknown spatula item', item.id)
+				if (!RETIRED_SPATULA_ITEM_IDS.includes(item.id)) {
+					console.log('Unknown spatula item (RETIRED_SPATULA_ITEM_IDS)', item.id + ', //', item.name)
+				}
 				return
 			}
 		} else if (from.every(itemID => COMPONENT_ITEM_IDS.includes(itemID))) {
@@ -116,7 +118,7 @@ itemsData.reverse().forEach(item => {
 			typeKey = 'hexbuff'
 		} else if (!typeKey) {
 			if (!SPATULA_ITEM_IDS) {
-				console.log('Unknown spatula item', item)
+				console.log('Unknown emblem item', item)
 			}
 			return false
 		}
@@ -148,9 +150,6 @@ allItems.forEach((item: ItemData) => {
 	}
 	for (const normalize in NORMALIZE_EFFECT_KEYS) {
 		item.desc = item.desc.replaceAll(normalize, NORMALIZE_EFFECT_KEYS[normalize])
-		if (item.id === ItemKey.WarmogsArmor) {
-			console.log(normalize, item.desc)
-		}
 	}
 	Object.keys(item.effects).forEach(key => {
 		const originalValue = item.effects[key]
@@ -347,11 +346,17 @@ if (activeAugments.length) {
 	const augmentKeys = activeAugments
 		.sort((a, b) => a.groupID.localeCompare(b.groupID))
 		.map(augment => `${toKey(getAugmentNameKey(augment))} = '${augment.groupID}'`)
-	const emptyImplementationAugments = await loadHardcodedTXT(currentSetNumber, 'augments-empty')
+	const emptyImplementationAugments = (await loadHardcodedTXT(currentSetNumber, 'augments-empty'))
+		?.filter(id => {
+			const exists = Object.values(AugmentGroupKey).includes(id as keyof typeof AugmentGroupKey)
+			if (!exists) { console.log('ERR', 'augments-empty', 'invalid', id) }
+			return exists
+		})
+		.map(id => `AugmentGroupKey.${id[0].toUpperCase() + id.slice(1)}`).join(', ')
 	const outputAugmentSections = [
 		`import type { AugmentData } from '../index'`,
-		`export const enum AugmentGroupKey {\n\t${Array.from(new Set(augmentKeys)).join(', ')}\n}`,
-		`export const emptyImplementationAugments: AugmentGroupKey[] =  [${emptyImplementationAugments?.map(id => `AugmentGroupKey.${id[0].toUpperCase() + id.slice(1)}`).join(', ')}]`,
+		`export enum AugmentGroupKey {\n\t${Array.from(new Set(augmentKeys)).join(', ')}\n}`,
+		`export const emptyImplementationAugments: AugmentGroupKey[] =  [${emptyImplementationAugments}]`,
 		`export const activeAugments: AugmentData[] = ` + formatJS(activeAugments),
 		`export const inactiveAugments: AugmentData[] = ` + formatJS(unreleasedAugments),
 	]
@@ -405,11 +410,6 @@ function getSpell(name: string, json: ChampionJSON): ChampionJSONSpell | undefin
 	if (!spellContainer) {
 		// console.log('No spell', name)
 		return undefined
-	}
-	for (const key in spellContainer) {
-		if (key !== 'mScriptName' && key !== 'mSpell' && key !== 'mBuff' && key !== 'mScript' && key !== '__type') {
-			console.log('Unknown spell key', key, name)
-		}
 	}
 	return spellContainer.mSpell
 }

@@ -4,11 +4,46 @@ export const LOCKED_STAR_LEVEL: Record<string, number> = {
 	TFT6_HexTechDragon: 3,
 }
 
+export const RETIRED_SPATULA_ITEM_IDS = [
+	48, // Academy Emblem
+	18, // Imperial Emblem
+	126, // Renewer Emblem
+	1128, // Hellion Emblem
+	125, // Assassin Emblem
+	124, // Dawnbringer Emblem
+	1158, // Cavalier Emblem
+	105, // Spellweaver Emblem
+	123, // Skirmisher Emblem
+	104, // Redeemed Emblem
+	111, // Elderwood Sprout
+	112, //Youmuu's Ghostblade
+	115, //Spirit of the Dragon
+	113, //Mage's Hat
+	110, //Warlord's Banner
+	109, //Duelist's Zeal
+	114, //Vanguard's Cuirass
+	108, //Sword of the Divine
+	130, //Youmuu's Ghostblade
+	132, //Talisman of Light
+	133, //TFT_item_name_FrozenMallet
+	134, //Warden's Mail
+	129, //tft_item_name_SteelSphere
+	107, //TFT_item_name_BladeOfTheRuinedKing
+	122, //Inferno's Cinder
+	131, //Berserker's Axe
+	128, //Battlecast Plating
+	136, //tft_item_name_RebelSpatulaItem
+	118, //tft_item_name_DarkStarSpatulaItem
+	120, //Protector's Chestguard
+	116, //tft_item_name_CelestialSpatulaItem
+	117, //tft_item_name_InfiltratorSpatulaItem
+	135, //tft_item_name_UmbralGlaive
+	119, //tft_item_name_StarGuardianSpatulaItem
+]
+
 export const SPATULA_ITEM_IDS = [
-	// 18, Imperial
 	28, // Challenger
 	38, // Arcanist
-	// 48, // Academy
 	58, // Bodyguard
 	68, // Syndicate
 	70, // Debonair
@@ -22,7 +57,6 @@ export const SPATULA_ITEM_IDS = [
 	2193, // Socialite
 	2194, // Enforcer
 	2195, // Scrap
-	// 2196, // Protector
 	2197, // Bruiser
 	2198, // Innovator
 	2199, // Sniper

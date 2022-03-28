@@ -1,10 +1,16 @@
-export const PATCH_FOR_SET = {
-	1: '9.21',
-	// 6: '12.3',
-	6.5: 'latest',
+export const SET_DATA = {
+	1: {
+		patchLine: '9.21',
+	},
+	6: {
+		patchLine: '12.2',
+	},
+	6.5: {
+		patchLine: 'latest',
+	},
 }
-
-export type SetNumber = keyof typeof PATCH_FOR_SET
+export type SetNumber = keyof typeof SET_DATA
+export const SET_NUMBERS = Object.keys(SET_DATA).map(setKey => parseFloat(setKey) as SetNumber)
 
 export * from './assets.js'
 export * from './imports.js'

@@ -76,6 +76,7 @@ function formatBulletEntries(bullets: string[], labels: string[]) {
 
 const milestoneIDForSetString: Record<SetNumber, number | undefined> = {
 	1: undefined,
+	6: undefined,
 	6.5: 1,
 }
 

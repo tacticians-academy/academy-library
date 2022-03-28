@@ -1,8 +1,8 @@
-import { PATCH_FOR_SET } from './index.js'
+import { SET_DATA } from './index.js'
 import type { SetNumber } from './index.js'
 
 export function getAssetPrefixFor(set: SetNumber) {
-	return `https://raw.communitydragon.org/${PATCH_FOR_SET[set]}/game/`
+	return `https://raw.communitydragon.org/${SET_DATA[set].patchLine}/game/`
 }
 
 export function getIconURL(set: SetNumber, deriveAsset: {icon: string | null | undefined}, isRaw: boolean = true) {
