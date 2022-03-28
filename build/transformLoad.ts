@@ -4,7 +4,7 @@ import fs from 'fs/promises'
 
 import { COMPONENT_ITEM_IDS, ItemTypeKey } from '../dist/index.js'
 import { importItems, importTraits, importSetData } from '../dist/imports.js'
-import { AugmentData, AugmentTier, BonusKey, ChampionSpellData, EffectVariables, ItemData, SpellCalculations, SpellCalculationPart, SpellCalculationSubpart, SpellVariables, TraitData } from '../dist/index.js'
+import { AugmentData, AugmentTier, BonusKey, ChampionData, ChampionSpellData, EffectVariables, ItemData, SpellCalculations, SpellCalculationPart, SpellCalculationSubpart, SpellVariables, TraitData } from '../dist/index.js'
 
 import { getCurrentSetNumber, getPathTo, loadHardcodedTXT } from './helpers/files.js'
 import { formatJS } from './helpers/formatting.js'
@@ -429,10 +429,10 @@ const playableChampions = champions
 	})
 	.sort(sortByName)
 
-const outputChampions = await Promise.all(playableChampions.map(async champion => {
+const outputChampions = await Promise.all(playableChampions.map(async (champion): Promise<ChampionData> => {
 	const apiName = champion.apiName!
 	const path = getPathTo(currentSetNumber, `champion/${apiName.toLowerCase()}.json`)
-	const json = JSON.parse(await fs.readFile(path, 'utf8')) as ResponseJSON
+	const json = JSON.parse(await fs.readFile(path, 'utf8')) as ChampionJSON
 	const characterRecord = getCharacterRecord(json)
 	if (characterRecord.baseStaticHPRegen !== 0) {
 		console.log('ERR HP Regen', apiName, characterRecord.baseStaticHPRegen)
@@ -492,7 +492,7 @@ const outputChampions = await Promise.all(playableChampions.map(async champion =
 	if (!spells.length) {
 		console.log('No spells for', apiName)
 	}
-	const basicAttacks = []
+	let basicAttacks: ChampionJSONAttack[] = []
 	if (characterRecord.basicAttack) {
 		if (characterRecord.basicAttack.mAttackName == null) {
 			characterRecord.basicAttack.mAttackName = `${apiName}BasicAttack`
@@ -502,9 +502,49 @@ const outputChampions = await Promise.all(playableChampions.map(async champion =
 	if (characterRecord.extraAttacks) {
 		basicAttacks.push(...characterRecord.extraAttacks)
 	}
-	const basicAttackMissileSpeed = reduceAttacks(basicAttacks.filter(attack => attack.mAttackName), json)
-	const critAttacks = characterRecord.critAttacks
-	const critAttackMissileSpeed = critAttacks ? reduceAttacks(critAttacks.filter(attack => attack.mAttackName), json) : undefined
+	let critAttacks = characterRecord.critAttacks ?? []
+
+	basicAttacks = basicAttacks.filter(attack => attack.mAttackName)
+	critAttacks = critAttacks.filter(attack => attack.mAttackName)
+
+	const needsBasicAttacks = !basicAttacks.length
+	const needsCritAttacks = !basicAttacks.length
+	for (const key in json) {
+		const entry = json[key as keyof typeof json]
+		const scriptName = entry.mScriptName
+		if (!scriptName) {
+			continue
+		}
+		if (scriptName.startsWith(`${apiName}BasicAttack`)) {
+			if (needsBasicAttacks) {
+				basicAttacks.push({ mAttackName: scriptName })
+			}
+		} else if (scriptName.startsWith(`${apiName}CritAttack`)) {
+			if (needsCritAttacks) {
+				critAttacks.push({ mAttackName: scriptName })
+			}
+		}
+	}
+
+	const basicAttackMissileSpeed = reduceAttacks(basicAttacks, json)
+	const critAttackMissileSpeed = critAttacks.length ? reduceAttacks(critAttacks, json) : undefined
+
+	const missiles: ChampionSpellData[] = []
+	for (const key in json) {
+		const entry = json[key as keyof typeof json]
+		const scriptName = entry.mScriptName
+		if (passiveName === scriptName || spells.some(spell => spell.name === scriptName)) {
+			continue
+		}
+		if ([...basicAttacks, ...critAttacks].some(attack => attack.mAttackName === scriptName)) {
+			continue
+		}
+
+		const spellData = getSpell(scriptName, json)
+		if (spellData) {
+			missiles.push(transformSpellData(scriptName, spellData, json))
+		}
+	}
 
 	const knownTraits = Object.values(TRAIT_DATA_SUBSTITUTIONS)
 	const isSpawn = characterRecord.isSpawn ?? BASE_UNIT_API_NAMES.includes(apiName)
@@ -533,6 +573,7 @@ const outputChampions = await Promise.all(playableChampions.map(async champion =
 		critAttackMissileSpeed,
 		passive,
 		spells,
+		missiles,
 	}
 }))
 

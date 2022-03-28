@@ -1,6 +1,6 @@
-// const PATCH_LINE = 'latest'
+const PATCH_LINE = 'latest'
 // const PATCH_LINE = 'pbe'
-const PATCH_LINE = PATCH_FOR_SET[1]
+// const PATCH_LINE = PATCH_FOR_SET[1]
 
 import fetch from 'node-fetch'
 import fs from 'fs/promises'

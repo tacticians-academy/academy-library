@@ -147,6 +147,7 @@ export interface ChampionData {
 	critAttackMissileSpeed?: number
 	passive: ChampionSpellData | undefined
 	spells: ChampionSpellData[]
+	missiles: ChampionSpellData[]
 }
 
 export interface TraitEffectData {
