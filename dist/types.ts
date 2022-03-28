@@ -63,6 +63,8 @@ export enum BonusKey {
 	HealShieldBoost = 'HealShieldBoost',
 	CurrentHealth = 'CurrentHP',
 	MissingHealth = 'MissingHP',
+	CurrentHealthPercent = 'CurrentHPPercent',
+	MissingHealthPercent = 'MissingHPPercent',
 	MagicResist = 'MR',
 	MagicResistShred = 'MRShred',
 	Mana = 'Mana',
