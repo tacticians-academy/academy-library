@@ -1,8 +1,5 @@
+import { ItemKey } from '../index.js'
 import type { ItemData } from '../index'
-
-export enum ItemKey {
-	BFSword = 1, RecurveBow = 2, NeedlesslyLargeRod = 3, TearOfTheGoddess = 4, ChainVest = 5, NegatronCloak = 6, GiantsBelt = 7, Spatula = 8, SparringGloves = 9, Deathblade = 11, GiantSlayer = 12, HextechGunblade = 13, SpearOfShojin = 14, GuardianAngel = 15, Bloodthirster = 16, ZekesHerald = 17, Tft_item_name_UmbralGlaive = 18, InfinityEdge = 19, RapidFirecannon = 22, GuinsoosRageblade = 23, StatikkShiv = 24, TitansResolve = 25, RunaansHurricane = 26, ZzRotPortal = 27, TFT_item_name_BladeOfTheRuinedKing = 28, LastWhisper = 29, RabadonsDeathcap = 33, ArchangelsStaff = 34, LocketOfTheIronSolari = 35, IonicSpark = 36, Morellonomicon = 37, SpellweaverEmblem = 38, JeweledGauntlet = 39, BlueBuff = 44, FrozenHeart = 45, ChaliceOfPower = 46, Redemption = 47, AcademyEmblem = 48, HandOfJustice = 49, BrambleVest = 55, GargoyleStoneplate = 56, SunfireCape = 57, Tft_item_name_RebelSpatulaItem = 58, ShroudOfStillness = 59, DragonsClaw = 66, Zephyr = 67, SyndicateEmblem = 68, Quicksilver = 69, WarmogsArmor = 77, ChemtechEmblem = 78, BansheesClaw = 79, TacticiansCrown = 88, AssassinEmblem = 89, ThiefsGloves = 99, MutantEmblem = 2190, ClockworkEmblem = 2191, MercenaryEmblem = 2192, SocialiteEmblem = 2193, EnforcerEmblem = 2194, ScrapEmblem = 2195, ProtectorEmblem = 2196, BruiserEmblem = 2197, InnovatorEmblem = 2198, SniperEmblem = 2199, ScholarEmblem = 2200
-}
 
 export const componentItems: ItemData[] = [
 	{
@@ -659,36 +656,14 @@ export const completedItems: ItemData[] = [
 
 export const spatulaItems: ItemData[] = [
 	{
-		desc: `tft_item_description_SlicerSpatulaItem`,
-		effects: {
-			'AD': 15,
-		},
-		from: [1, 8],
-		icon: `ASSETS/Maps/Particles/TFT/TFT3_Item_Blademaster.dds`,
-		id: 18,
-		name: `tft_item_name_UmbralGlaive`,
-		unique: true,
-	},
-	{
-		desc: `TFT_item_description_BladeOfTheRuinedKing`,
-		effects: {
-			'AS': 15,
-		},
-		from: [2, 8],
-		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_BladeOfTheRuinedKing.dds`,
-		id: 28,
-		name: `TFT_item_name_BladeOfTheRuinedKing`,
-		unique: true,
-	},
-	{
-		desc: `The holder gains the Spellweaver trait.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>`,
+		desc: `The holder gains the Arcanist trait.<br><br><tftitemrules>[Unique - only 1 per champion</tftitemrules>`,
 		effects: {
 			'AP': 10,
 		},
 		from: [3, 8],
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Spellweaver.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Set6/Arcanist.TFT_Set6.dds`,
 		id: 38,
-		name: `Spellweaver Emblem`,
+		name: `Arcanist Emblem`,
 		unique: true,
 	},
 	{
@@ -700,17 +675,6 @@ export const spatulaItems: ItemData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Set6/Academy.TFT_Set6.dds`,
 		id: 48,
 		name: `Academy Emblem`,
-		unique: true,
-	},
-	{
-		desc: `tft_item_description_RebelSpatulaItem`,
-		effects: {
-			'Armor': 25,
-		},
-		from: [5, 8],
-		icon: `ASSETS/Maps/Particles/TFT/TFT3_Item_Rebel.dds`,
-		id: 58,
-		name: `tft_item_name_RebelSpatulaItem`,
 		unique: true,
 	},
 	{
@@ -1903,6 +1867,39 @@ export const unreleasedItems: ItemData[] = [
 		unique: false,
 	},
 	{
+		desc: `tft_item_description_SlicerSpatulaItem`,
+		effects: {
+			'AD': 15,
+		},
+		from: [1, 8],
+		icon: `ASSETS/Maps/Particles/TFT/TFT3_Item_Blademaster.dds`,
+		id: 18,
+		name: `tft_item_name_UmbralGlaive`,
+		unique: true,
+	},
+	{
+		desc: `TFT_item_description_BladeOfTheRuinedKing`,
+		effects: {
+			'AS': 15,
+		},
+		from: [2, 8],
+		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_BladeOfTheRuinedKing.dds`,
+		id: 28,
+		name: `TFT_item_name_BladeOfTheRuinedKing`,
+		unique: true,
+	},
+	{
+		desc: `tft_item_description_RebelSpatulaItem`,
+		effects: {
+			'Armor': 25,
+		},
+		from: [5, 8],
+		icon: `ASSETS/Maps/Particles/TFT/TFT3_Item_Rebel.dds`,
+		id: 58,
+		name: `tft_item_name_RebelSpatulaItem`,
+		unique: true,
+	},
+	{
 		desc: `TFT_item_description_Catalyst`,
 		effects: {
 			'Mana': 20,
@@ -1924,6 +1921,37 @@ export const unreleasedItems: ItemData[] = [
 		unique: false,
 	},
 	{
+		desc: `tft_item_description_EmblemArmoryConsumable`,
+		effects: {},
+		from: [],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/PrismaticKey.dds`,
+		id: 305,
+		name: `tft_item_name_EmblemArmoryConsumable`,
+		unique: false,
+	},
+	{
+		desc: `tft_item_description_Set5Skirmisher_RadiantSpat`,
+		effects: {
+			'AD': 10,
+		},
+		from: [555, 1],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Skirmisher_Radiant.dds`,
+		id: 518,
+		name: `tft_item_name_Set5Skirmisher_RadiantSpat`,
+		unique: true,
+	},
+	{
+		desc: `tft_item_description_Set5Legionnaire_RadiantSpat`,
+		effects: {
+			'AS': 10,
+		},
+		from: [2, 555],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Legionnaire_Radiant.dds`,
+		id: 528,
+		name: `tft_item_name_Set5Legionnaire_RadiantSpat`,
+		unique: true,
+	},
+	{
 		desc: `tft_item_description_SpellThiefsEdge`,
 		effects: {
 			'{0cc88d45}': 10,
@@ -1935,6 +1963,17 @@ export const unreleasedItems: ItemData[] = [
 		unique: false,
 	},
 	{
+		desc: `tft_item_description_Set5Spellweaver_RadiantSpat`,
+		effects: {
+			'AP': 10,
+		},
+		from: [3, 555],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Spellweaver_Radiant.dds`,
+		id: 538,
+		name: `tft_item_name_Set5Spellweaver_RadiantSpat`,
+		unique: true,
+	},
+	{
 		desc: `TFT_item_description_MortalReminder`,
 		effects: {},
 		from: [],
@@ -1944,6 +1983,73 @@ export const unreleasedItems: ItemData[] = [
 		unique: false,
 	},
 	{
+		desc: `tft_item_description_Set5Renewer_RadiantSpat`,
+		effects: {
+			'Mana': 15,
+		},
+		from: [555, 4],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Renewer_Radiant.dds`,
+		id: 548,
+		name: `tft_item_name_Set5Renewer_RadiantSpat`,
+		unique: true,
+	},
+	{
+		desc: `tft_item_description_RadiantSpatula`,
+		effects: {
+			'{fe9818ef}': 5,
+		},
+		from: [],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Spatula_Radiant.dds`,
+		id: 555,
+		name: `tft_item_name_RadiantSpatula`,
+		unique: false,
+	},
+	{
+		desc: `tft_item_description_Set5Ironclad_RadiantSpat`,
+		effects: {
+			'Armor': 20,
+		},
+		from: [5, 555],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Ironclad_Radiant.dds`,
+		id: 558,
+		name: `tft_item_name_Set5Ironclad_RadiantSpat`,
+		unique: true,
+	},
+	{
+		desc: `tft_item_description_Set5Redeemed_RadiantSpat`,
+		effects: {
+			'MR': 20,
+		},
+		from: [6, 555],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Redeemed_Radiant.dds`,
+		id: 568,
+		name: `tft_item_name_Set5Redeemed_RadiantSpat`,
+		unique: true,
+	},
+	{
+		desc: `tft_item_description_Set5Dawnbringer_RadiantSpat`,
+		effects: {
+			'HP': 150,
+		},
+		from: [7, 555],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Dawnbringer_Radiant.dds`,
+		id: 578,
+		name: `tft_item_name_Set5Dawnbringer_RadiantSpat`,
+		unique: true,
+	},
+	{
+		desc: `tft_item_description_Set5Assassin_RadiantSpat`,
+		effects: {
+			'CritChance': 10,
+			'DodgeChance': 5,
+		},
+		from: [9, 555],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Assassin_Radiant.dds`,
+		id: 589,
+		name: `tft_item_name_Set5Assassin_RadiantSpat`,
+		unique: true,
+	},
+	{
 		desc: `This slot can't hold an item.`,
 		effects: {},
 		from: [],
@@ -1951,6 +2057,84 @@ export const unreleasedItems: ItemData[] = [
 		id: 999,
 		name: `Unusable Slot`,
 		unique: false,
+	},
+	{
+		desc: `tft_item_description_Set5Forgotten_RadiantSpat`,
+		effects: {
+			'AD': 10,
+		},
+		from: [555, 1001],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Forgotten_Radiant.dds`,
+		id: 2118,
+		name: `tft_item_name_Set5Forgotten_RadiantSpat`,
+		unique: true,
+	},
+	{
+		desc: `tft_item_description_Set5Hellion_RadiantSpat`,
+		effects: {
+			'AS': 10,
+		},
+		from: [1002, 555],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Hellion_Radiant.dds`,
+		id: 2128,
+		name: `tft_item_name_Set5Hellion_RadiantSpat`,
+		unique: true,
+	},
+	{
+		desc: `tft_item_description_Set5Coven_RadiantSpat`,
+		effects: {
+			'Mana': 15,
+		},
+		from: [1004, 555],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Coven_Radiant.dds`,
+		id: 2148,
+		name: `tft_item_name_Set5Coven_RadiantSpat`,
+		unique: true,
+	},
+	{
+		desc: `tft_item_description_Set5Cavalier_RadiantSpat`,
+		effects: {
+			'Armor': 20,
+		},
+		from: [1005, 555],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Cavalier_Radiant.dds`,
+		id: 2158,
+		name: `tft_item_name_Set5Cavalier_RadiantSpat`,
+		unique: true,
+	},
+	{
+		desc: `tft_item_description_Set5Revenant_RadiantSpat`,
+		effects: {
+			'MR': 20,
+		},
+		from: [1006, 555],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Revenant_Radiant.dds`,
+		id: 2168,
+		name: `tft_item_name_Set5Revenant_RadiantSpat`,
+		unique: true,
+	},
+	{
+		desc: `tft_item_description_Set5Nightbringer_RadiantSpat`,
+		effects: {
+			'HP': 150,
+		},
+		from: [555, 1007],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Nightbringer_Radiant.dds`,
+		id: 2178,
+		name: `tft_item_name_Set5Nightbringer_RadiantSpat`,
+		unique: true,
+	},
+	{
+		desc: `tft_item_description_Set5Abomination_RadiantSpat`,
+		effects: {
+			'CritChance': 10,
+			'DodgeChance': 5,
+		},
+		from: [1009, 555],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Abomination_Radiant.dds`,
+		id: 2189,
+		name: `tft_item_name_Set5Abomination_RadiantSpat`,
+		unique: true,
 	},
 	{
 		desc: `Two 1-Cost & One 2-Cost Units`,
@@ -2080,6 +2264,20 @@ export const unreleasedItems: ItemData[] = [
 		id: 10002,
 		name: `Jammed!`,
 		unique: false,
+	},
+	{
+		desc: `tft_item_description_SwordOfTheDivine2`,
+		effects: {
+			'AS': 15,
+			'ASPerStack': 30,
+			'CritChance': 20,
+			'{cb57edb0}': 30,
+		},
+		from: [],
+		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_RepeatingCrossbow.dds`,
+		id: 10005,
+		name: `tft_item_name_SwordOfTheDivine2`,
+		unique: true,
 	},
 	{
 		desc: `Loot goes here`,

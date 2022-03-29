@@ -1,8 +1,5 @@
+import { ChampionKey } from '../index.js'
 import type { ChampionData } from '../index'
-
-export const enum ChampionKey {
-	Aatrox = `Aatrox`, Ahri = `Ahri`, Akali = `Akali`, Anivia = `Anivia`, Ashe = `Ashe`, AurelionSol = `Aurelion Sol`, Blitzcrank = `Blitzcrank`, Brand = `Brand`, Braum = `Braum`, Camille = `Camille`, ChoGath = `Cho'Gath`, Darius = `Darius`, Draven = `Draven`, Elise = `Elise`, Evelynn = `Evelynn`, Fiora = `Fiora`, Gangplank = `Gangplank`, Garen = `Garen`, Gnar = `Gnar`, Graves = `Graves`, Jayce = `Jayce`, Jinx = `Jinx`, KaiSa = `Kai'Sa`, Karthus = `Karthus`, Kassadin = `Kassadin`, Katarina = `Katarina`, Kayle = `Kayle`, Kennen = `Kennen`, KhaZix = `Kha'Zix`, Kindred = `Kindred`, Leona = `Leona`, Lissandra = `Lissandra`, Lucian = `Lucian`, Lulu = `Lulu`, MissFortune = `Miss Fortune`, Mordekaiser = `Mordekaiser`, Morgana = `Morgana`, Nidalee = `Nidalee`, Pantheon = `Pantheon`, Poppy = `Poppy`, Pyke = `Pyke`, RekSai = `Rek'Sai`, Rengar = `Rengar`, Sejuani = `Sejuani`, Shen = `Shen`, Shyvana = `Shyvana`, Swain = `Swain`, Tristana = `Tristana`, TwistedFate = `Twisted Fate`, Varus = `Varus`, Vayne = `Vayne`, Veigar = `Veigar`, Vi = `Vi`, Volibear = `Volibear`, Warwick = `Warwick`, Yasuo = `Yasuo`, Zed = `Zed`
-}
 
 export const champions: ChampionData[] = [
 	{

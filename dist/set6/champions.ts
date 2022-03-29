@@ -1,8 +1,5 @@
+import { ChampionKey } from '../index.js'
 import type { ChampionData } from '../index'
-
-export const enum ChampionKey {
-	Akali = `Akali`, Blitzcrank = `Blitzcrank`, Braum = `Braum`, Caitlyn = `Caitlyn`, Camille = `Camille`, ChoGath = `Cho'Gath`, Darius = `Darius`, DrMundo = `Dr. Mundo`, Ekko = `Ekko`, Ezreal = `Ezreal`, Fiora = `Fiora`, Galio = `Galio`, Gangplank = `Gangplank`, Garen = `Garen`, Graves = `Graves`, Heimerdinger = `Heimerdinger`, Illaoi = `Illaoi`, Janna = `Janna`, Jayce = `Jayce`, Jhin = `Jhin`, Jinx = `Jinx`, Kaisa = `Kai'Sa`, Kassadin = `Kassadin`, Katarina = `Katarina`, KogMaw = `Kog'Maw`, Leona = `Leona`, Lissandra = `Lissandra`, Lulu = `Lulu`, Lux = `Lux`, Malzahar = `Malzahar`, Tibbers = `Mechanical Bear`, HexTechDragon = `Mechanical Dragon`, MalzaharVoidling = `Mechanical Scarab`, MissFortune = `Miss Fortune`, Orianna = `Orianna`, Poppy = `Poppy`, Quinn = `Quinn`, Samira = `Samira`, Seraphine = `Seraphine`, Shaco = `Shaco`, Singed = `Singed`, Sion = `Sion`, Swain = `Swain`, TahmKench = `Tahm Kench`, Talon = `Talon`, TrainingDummy = `Target Dummy`, Taric = `Taric`, Tristana = `Tristana`, Trundle = `Trundle`, TwistedFate = `Twisted Fate`, Twitch = `Twitch`, Urgot = `Urgot`, Veigar = `Veigar`, Vex = `Vex`, Vi = `Vi`, Viktor = `Viktor`, VoidSpawn = `Voidspawn`, Warwick = `Warwick`, Yone = `Yone`, Yuumi = `Yuumi`, Zac = `Zac`, Ziggs = `Ziggs`, Zilean = `Zilean`, Zyra = `Zyra`
-}
 
 export const champions: ChampionData[] = [
 	{
@@ -99,7 +96,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`Scrap`, `{030bcf19}`, `Bodyguard`],
+		traits: [`Scrap`, `Protector`, `Bodyguard`],
 		stats: {
 			armor: 45,
 			attackSpeed: 0.5,
@@ -1171,7 +1168,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{b6a10f15}`, `{030bcf19}`],
+		traits: [`Academy `, `Protector`],
 		stats: {
 			armor: 40,
 			attackSpeed: 0.550000011920929,
@@ -1264,7 +1261,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{b6a10f15}`, `Twinshot`],
+		traits: [`Academy `, `Twinshot`],
 		stats: {
 			armor: 40,
 			attackSpeed: 0.550000011920929,
@@ -1975,7 +1972,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`Scrap`, `{56e6ca09}`, `Twinshot`],
+		traits: [`Scrap`, `Sister`, `Twinshot`],
 		stats: {
 			armor: 35,
 			attackSpeed: 1,
@@ -2280,7 +2277,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`Mutant`, `{030bcf19}`],
+		traits: [`Mutant`, `Protector`],
 		stats: {
 			armor: 35,
 			attackSpeed: 0.6499999761581421,
@@ -2349,7 +2346,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{b6a10f15}`, `Assassin`],
+		traits: [`Academy `, `Assassin`],
 		stats: {
 			armor: 25,
 			attackSpeed: 0.699999988079071,
@@ -2524,7 +2521,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{b6a10f15}`, `Bodyguard`],
+		traits: [`Academy `, `Bodyguard`],
 		stats: {
 			armor: 50,
 			attackSpeed: 0.6000000238418579,
@@ -2755,7 +2752,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{b6a10f15}`, `Arcanist`],
+		traits: [`Academy `, `Arcanist`],
 		stats: {
 			armor: 25,
 			attackSpeed: 0.75,
@@ -3619,7 +3616,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{3ddd1ef4}`, `Challenger`],
+		traits: [`Imperial`, `Challenger`],
 		stats: {
 			armor: 25,
 			attackSpeed: 0.699999988079071,
@@ -3992,7 +3989,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: 2,
 		isSpawn: false,
-		traits: [`{3ddd1ef4}`, `{030bcf19}`, `Colossus`],
+		traits: [`Imperial`, `Protector`, `Colossus`],
 		stats: {
 			armor: 60,
 			attackSpeed: 0.6000000238418579,
@@ -4079,7 +4076,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{3ddd1ef4}`, `Arcanist`],
+		traits: [`Imperial`, `Arcanist`],
 		stats: {
 			armor: 45,
 			attackSpeed: 0.6000000238418579,
@@ -4260,7 +4257,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{3ddd1ef4}`, `Assassin`],
+		traits: [`Imperial`, `Assassin`],
 		stats: {
 			armor: 25,
 			attackSpeed: 0.699999988079071,
@@ -5128,7 +5125,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`Enforcer`, `{56e6ca09}`, `Bruiser`],
+		traits: [`Enforcer`, `Sister`, `Bruiser`],
 		stats: {
 			armor: 40,
 			attackSpeed: 0.6499999761581421,
@@ -5432,7 +5429,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{b6a10f15}`, `Challenger`],
+		traits: [`Academy `, `Challenger`],
 		stats: {
 			armor: 40,
 			attackSpeed: 0.8500000238418579,
@@ -5491,7 +5488,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{05d7de9e}`, `{b6a10f15}`, `Scholar`],
+		traits: [`Cuddly`, `Academy `, `Scholar`],
 		stats: {
 			armor: 30,
 			attackSpeed: 0.800000011920929,

@@ -269,11 +269,11 @@
 		"tier": 5,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{05d7de9e}",
+				"TraitData": "TFT6_Cuddly",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{b6a10f15}",
+				"TraitData": "TFT6_Academy",
 				"__type": "TFTTraitContributionData"
 			},
 			{

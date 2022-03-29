@@ -1,8 +1,5 @@
+import { ItemKey } from '../index.js'
 import type { ItemData } from '../index'
-
-export enum ItemKey {
-	BFSword = 1, RecurveBow = 2, NeedlesslyLargeRod = 3, TearOfTheGoddess = 4, ChainVest = 5, NegatronCloak = 6, GiantsBelt = 7, Spatula = 8, SparringGloves = 9, Deathblade = 11, GiantSlayer = 12, HextechGunblade = 13, SpearOfShojin = 14, GuardianAngel = 15, Bloodthirster = 16, ZekesHerald = 17, YoumuusGhostblade = 18, InfinityEdge = 19, RapidFirecannon = 22, GuinsoosRageblade = 23, StatikkShiv = 24, PhantomDancer = 25, CursedBlade = 26, TitanicHydra = 27, BladeOfTheRuinedKing = 28, RepeatingCrossbow = 29, RabadonsDeathcap = 33, LudensEcho = 34, LocketOfTheIronSolari = 35, IonicSpark = 36, Morellonomicon = 37, Yuumi = 38, JeweledGauntlet = 39, SeraphsEmbrace = 44, FrozenHeart = 45, Hush = 46, Redemption = 47, Darkin = 48, HandOfJustice = 49, Thornmail = 55, SwordBreaker = 56, RedBuff = 57, KnightsVow = 58, IcebornGauntlet = 59, DragonsClaw = 66, Zephyr = 67, RunaansHurricane = 68, Quicksilver = 69, WarmogsArmor = 77, FrozenMallet = 78, TrapClaw = 79, ForceOfNature = 88, Mittens = 89, ThiefsGloves = 99
-}
 
 export const componentItems: ItemData[] = [
 	{

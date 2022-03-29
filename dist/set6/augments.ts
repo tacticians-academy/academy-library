@@ -1,8 +1,5 @@
+import { AugmentGroupKey } from '../index.js'
 import type { AugmentData } from '../index'
-
-export enum AugmentGroupKey {
-	AcademyCrest = 'academyCrest', AcademyCrown = 'academyCrown', AcademyHeart = 'academyHeart', AllForOne = 'allForOne', AncientArchives = 'ancientArchives', ArcanistCrest = 'arcanistCrest', ArcanistCrown = 'arcanistCrown', ArcanistHeart = 'arcanistHeart', ArdentCenser = 'ardentCenser', ArmorPlating = 'armorPlating', Ascension = 'ascension', AssassinCrest = 'assassinCrest', AssassinCrown = 'assassinCrown', AssassinHeart = 'assassinHeart', BandOfThieves = 'bandOfThieves', BinaryAirdrop = 'binaryAirdrop', BodyguardCrest = 'bodyguardCrest', BodyguardCrown = 'bodyguardCrown', BodyguardHeart = 'bodyguardHeart', BrokenStopwatch = 'brokenStopwatch', BruiserCrest = 'bruiserCrest', BruiserCrown = 'bruiserCrown', BruiserHeart = 'bruiserHeart', BuiltDifferent = 'builtDifferent', CalculatedLoss = 'calculatedLoss', CelestialBlessing = 'celestialBlessing', ChallengerCrest = 'challengerCrest', ChallengerCrown = 'challengerCrown', ChallengerHeart = 'challengerHeart', ChemicalOverload = 'chemicalOverload', ChemtechCrest = 'chemtechCrest', ChemtechCrown = 'chemtechCrown', ChemtechHeart = 'chemtechHeart', ClearMind = 'clearMind', ClockworkHeart = 'clockworkHeart', ClockworkSoul = 'clockworkSoul', CramSession = 'cramSession', Cutthroat = 'cutthroat', CyberneticImplants = 'cyberneticImplants', Dominance = 'dominance', DualRule = 'dualRule', Duet = 'duet', EnchanterHeart = 'enchanterHeart', EnchanterSoul = 'enchanterSoul', EnforcerHeart = 'enforcerHeart', EnforcerSoul = 'enforcerSoul', EnGarde = 'enGarde', Exiles = 'exiles', Featherweights = 'featherweights', FirstAidKit = 'firstAidKit', GoldenTicket = 'goldenTicket', GoldReserves = 'goldReserves', HighEndShopping = 'highEndShopping', HighRoller = 'highRoller', HyperRoll = 'hyperRoll', ImperialCrest = 'imperialCrest', ImperialCrown = 'imperialCrown', ImperialHeart = 'imperialHeart', InnovatorHeart = 'innovatorHeart', InnovatorSoul = 'innovatorSoul', InstantInjection = 'instantInjection', ItemGrabBag = 'itemGrabBag', Junkyard = 'junkyard', KnifesEdge = 'knifesEdge', LevelUp = 'levelUp', LifelongLearning = 'lifelongLearning', MakeshiftArmor = 'makeshiftArmor', MarchOfProgress = 'marchOfProgress', MercenaryCrest = 'mercenaryCrest', MercenaryHeart = 'mercenaryHeart', MercenarySoul = 'mercenarySoul', MetabolicAccelerator = 'metabolicAccelerator', MutantCrest = 'mutantCrest', MutantCrown = 'mutantCrown', MutantHeart = 'mutantHeart', NewRecruit = 'newRecruit', OneForAll = 'oneForAll', PandorasItems = 'pandorasItems', Payday = 'payday', PhonyFrontline = 'phonyFrontline', Pirates = 'pirates', PortableForge = 'portableForge', ProtectorCrest = 'protectorCrest', ProtectorCrown = 'protectorCrown', ProtectorHeart = 'protectorHeart', RichGetRicher = 'richGetRicher', RunicShield = 'runicShield', SalvageBin = 'salvageBin', ScholarCrest = 'scholarCrest', ScholarHeart = 'scholarHeart', ScholarSoul = 'scholarSoul', ScrapCrest = 'scrapCrest', ScrapHeart = 'scrapHeart', ScrapSoul = 'scrapSoul', SelfRepair = 'selfRepair', ShareTheSpotlight = 'shareTheSpotlight', Sharpshooter = 'sharpshooter', ShrugItOff = 'shrugItOff', SmokeBomb = 'smokeBomb', SniperCrest = 'sniperCrest', SniperCrown = 'sniperCrown', SniperHeart = 'sniperHeart', SnipersNest = 'snipersNest', SocialiteHeart = 'socialiteHeart', SocialiteSoul = 'socialiteSoul', SoSmall = 'soSmall', SpellBlade = 'spellBlade', StandBehindMe = 'standBehindMe', StandUnited = 'standUnited', SunfireBoard = 'sunfireBoard', SyndicateCrest = 'syndicateCrest', SyndicateCrown = 'syndicateCrown', SyndicateHeart = 'syndicateHeart', ThrillOfTheHunt = 'thrillOfTheHunt', TitanicForce = 'titanicForce', TradeSector = 'tradeSector', TwinshotHeart = 'twinshotHeart', TwinshotSoul = 'twinshotSoul', Underdogs = 'underdogs', UnstableEvolution = 'unstableEvolution', Weakspot = 'weakspot', Windfall = 'windfall', WiseSpending = 'wiseSpending', WoodlandCharm = 'woodlandCharm'
-}
 
 export const emptyImplementationAugments: AugmentGroupKey[] =  [AugmentGroupKey.AncientArchives, AugmentGroupKey.BandOfThieves, AugmentGroupKey.BinaryAirdrop, AugmentGroupKey.CalculatedLoss, AugmentGroupKey.ClearMind, AugmentGroupKey.Dominance, AugmentGroupKey.GoldenTicket, AugmentGroupKey.HighEndShopping, AugmentGroupKey.HighRoller, AugmentGroupKey.HyperRoll, AugmentGroupKey.ItemGrabBag, AugmentGroupKey.Junkyard, AugmentGroupKey.LevelUp, AugmentGroupKey.MarchOfProgress, AugmentGroupKey.MercenaryHeart, AugmentGroupKey.MercenaryCrest, AugmentGroupKey.MercenarySoul, AugmentGroupKey.MetabolicAccelerator, AugmentGroupKey.NewRecruit, AugmentGroupKey.PandorasItems, AugmentGroupKey.Payday, AugmentGroupKey.PhonyFrontline, AugmentGroupKey.Pirates, AugmentGroupKey.RichGetRicher, AugmentGroupKey.SalvageBin, AugmentGroupKey.TradeSector, AugmentGroupKey.Windfall, AugmentGroupKey.WiseSpending]
 
@@ -209,15 +206,15 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/BruiserHeart1.TFT_Set6.dds`,
 	},
 	{
-		tier: 3,
-		name: `Built Different III`,
+		tier: 1,
+		name: `Built Different I`,
 		groupID: `builtDifferent`,
 		desc: `Your units with no Traits active gain @HP@ Health and @AS@% Attack Speed.`,
 		effects: {
-			'AS': 70,
-			'HP': 500,
+			'AS': 50,
+			'HP': 300,
 		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/BuiltDifferent3.TFT_Set6.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/BuiltDifferent1.TFT_Set6.dds`,
 	},
 	{
 		tier: 2,
@@ -231,15 +228,15 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/BuiltDifferent2.TFT_Set6.dds`,
 	},
 	{
-		tier: 1,
-		name: `Built Different I`,
+		tier: 3,
+		name: `Built Different III`,
 		groupID: `builtDifferent`,
 		desc: `Your units with no Traits active gain @HP@ Health and @AS@% Attack Speed.`,
 		effects: {
-			'AS': 50,
-			'HP': 300,
+			'AS': 70,
+			'HP': 500,
 		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/BuiltDifferent1.TFT_Set6.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/BuiltDifferent3.TFT_Set6.dds`,
 	},
 	{
 		tier: 1,
@@ -263,17 +260,6 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/CelestialBlessing1.TFT_Set6.dds`,
 	},
 	{
-		tier: 3,
-		name: `Celestial Blessing III`,
-		groupID: `celestialBlessing`,
-		desc: `Your units heal for @Omnivamp@% of the damage dealt by attacks and Abilities. Excess healing is converted to a shield up to @MaxShield@ Health.`,
-		effects: {
-			'MaxShield': 600,
-			'Omnivamp': 25,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/CelestialBlessing3.TFT_Set6.dds`,
-	},
-	{
 		tier: 2,
 		name: `Celestial Blessing II`,
 		groupID: `celestialBlessing`,
@@ -283,6 +269,17 @@ export const activeAugments: AugmentData[] = [
 			'Omnivamp': 20,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/CelestialBlessing2.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `Celestial Blessing III`,
+		groupID: `celestialBlessing`,
+		desc: `Your units heal for @Omnivamp@% of the damage dealt by attacks and Abilities. Excess healing is converted to a shield up to @MaxShield@ Health.`,
+		effects: {
+			'MaxShield': 600,
+			'Omnivamp': 25,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/CelestialBlessing3.TFT_Set6.dds`,
 	},
 	{
 		tier: 2,
@@ -309,14 +306,14 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/ChallengerHeart1.TFT_Set6.dds`,
 	},
 	{
-		tier: 3,
-		name: `Chemical Overload III`,
+		tier: 1,
+		name: `Chemical Overload I`,
 		groupID: `chemicalOverload`,
 		desc: `Chemtechs explode on death, dealing @HP@% of their max Health as magic damage to enemies within 2 hexes.`,
 		effects: {
-			'HP': 40,
+			'HP': 20,
 		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/ChemicalOverlord3.TFT_Set6.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/ChemicalOverlord1.TFT_Set6.dds`,
 	},
 	{
 		tier: 2,
@@ -329,14 +326,14 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/ChemicalOverlord2.TFT_Set6.dds`,
 	},
 	{
-		tier: 1,
-		name: `Chemical Overload I`,
+		tier: 3,
+		name: `Chemical Overload III`,
 		groupID: `chemicalOverload`,
 		desc: `Chemtechs explode on death, dealing @HP@% of their max Health as magic damage to enemies within 2 hexes.`,
 		effects: {
-			'HP': 20,
+			'HP': 40,
 		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/ChemicalOverlord1.TFT_Set6.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/ChemicalOverlord3.TFT_Set6.dds`,
 	},
 	{
 		tier: 2,
@@ -476,6 +473,16 @@ export const activeAugments: AugmentData[] = [
 	},
 	{
 		tier: 1,
+		name: `En Garde`,
+		groupID: `enGarde`,
+		desc: `The first time an enemy is attacked by a Challenger, they are Disarmed for @DisarmDuration@ seconds.`,
+		effects: {
+			'DisarmDuration': 3,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/EnGuarde1.TFT_Set6.dds`,
+	},
+	{
+		tier: 1,
 		name: `Enchanter Heart`,
 		groupID: `enchanterHeart`,
 		desc: `Your team counts as having 1 additional Enchanter. Gain a Taric.`,
@@ -509,16 +516,6 @@ export const activeAugments: AugmentData[] = [
 			'Gold': 8,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/EnforcerSoul3.TFT_Set6.dds`,
-	},
-	{
-		tier: 1,
-		name: `En Garde`,
-		groupID: `enGarde`,
-		desc: `The first time an enemy is attacked by a Challenger, they are Disarmed for @DisarmDuration@ seconds.`,
-		effects: {
-			'DisarmDuration': 3,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/EnGuarde1.TFT_Set6.dds`,
 	},
 	{
 		tier: 1,
@@ -597,16 +594,6 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/FirstAidKit1.TFT_Set6.dds`,
 	},
 	{
-		tier: 3,
-		name: `Golden Ticket`,
-		groupID: `goldenTicket`,
-		desc: `Each time your Shop is refreshed, you have a @RerollPercent@% chance to gain a free refresh.`,
-		effects: {
-			'RerollPercent': 40,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/GoldenTicket3.TFT_Set6.dds`,
-	},
-	{
 		tier: 2,
 		name: `Gold Reserves`,
 		groupID: `goldReserves`,
@@ -617,6 +604,16 @@ export const activeAugments: AugmentData[] = [
 			'GoldIncrement': 1,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/GoldReserves2.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `Golden Ticket`,
+		groupID: `goldenTicket`,
+		desc: `Each time your Shop is refreshed, you have a @RerollPercent@% chance to gain a free refresh.`,
+		effects: {
+			'RerollPercent': 40,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/GoldenTicket3.TFT_Set6.dds`,
 	},
 	{
 		tier: 3,
@@ -697,16 +694,6 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/InstantInjection2.TFT_Set6.dds`,
 	},
 	{
-		tier: 3,
-		name: `Item Grab Bag II`,
-		groupID: `itemGrabBag`,
-		desc: `Gain @NumItems@ random completed items and a Reforger.`,
-		effects: {
-			'NumItems': 2,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/ItemGrabBag3.TFT_Set6.dds`,
-	},
-	{
 		tier: 1,
 		name: `Item Grab Bag I`,
 		groupID: `itemGrabBag`,
@@ -717,6 +704,16 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/ItemGrabBag1.TFT_Set6.dds`,
 	},
 	{
+		tier: 3,
+		name: `Item Grab Bag II`,
+		groupID: `itemGrabBag`,
+		desc: `Gain @NumItems@ random completed items and a Reforger.`,
+		effects: {
+			'NumItems': 2,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/ItemGrabBag3.TFT_Set6.dds`,
+	},
+	{
 		tier: 2,
 		name: `Junkyard`,
 		groupID: `junkyard`,
@@ -725,6 +722,16 @@ export const activeAugments: AugmentData[] = [
 			'Combats': 3,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Junkyard2.TFT_Set6.dds`,
+	},
+	{
+		tier: 1,
+		name: `Knife's Edge I`,
+		groupID: `knifesEdge`,
+		desc: `Your units that start combat in the front 2 rows gain @ADPerStarLevel@ Attack Damage.`,
+		effects: {
+			'ADPerStarLevel': 25,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/CQCTraining1.TFT_Set6.dds`,
 	},
 	{
 		tier: 2,
@@ -745,16 +752,6 @@ export const activeAugments: AugmentData[] = [
 			'ADPerStarLevel': 55,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/CQCTraining3.TFT_Set6.dds`,
-	},
-	{
-		tier: 1,
-		name: `Knife's Edge I`,
-		groupID: `knifesEdge`,
-		desc: `Your units that start combat in the front 2 rows gain @ADPerStarLevel@ Attack Damage.`,
-		effects: {
-			'ADPerStarLevel': 25,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/CQCTraining1.TFT_Set6.dds`,
 	},
 	{
 		tier: 3,
@@ -788,16 +785,6 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Makeshift1.TFT_Set6.dds`,
 	},
 	{
-		tier: 3,
-		name: `Makeshift Armor III`,
-		groupID: `makeshiftArmor`,
-		desc: `Your units with no items gain @Resists@ Armor and Magic Resist.`,
-		effects: {
-			'Resists': 75,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Makeshift3.TFT_Set6.dds`,
-	},
-	{
 		tier: 2,
 		name: `Makeshift Armor II`,
 		groupID: `makeshiftArmor`,
@@ -806,6 +793,16 @@ export const activeAugments: AugmentData[] = [
 			'Resists': 55,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Makeshift2.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `Makeshift Armor III`,
+		groupID: `makeshiftArmor`,
+		desc: `Your units with no items gain @Resists@ Armor and Magic Resist.`,
+		effects: {
+			'Resists': 75,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Makeshift3.TFT_Set6.dds`,
 	},
 	{
 		tier: 3,
@@ -993,17 +990,6 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/RunicShield1.TFT_Set6.dds`,
 	},
 	{
-		tier: 3,
-		name: `Runic Shield III`,
-		groupID: `runicShield`,
-		desc: `Arcanists start combat with a shield equal to @APShield@% of their Ability Power for @ShieldDuration@ seconds.`,
-		effects: {
-			'ShieldDuration': 8,
-			'APShield': 600,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/RunicShield3.TFT_Set6.dds`,
-	},
-	{
 		tier: 2,
 		name: `Runic Shield II`,
 		groupID: `runicShield`,
@@ -1013,6 +999,17 @@ export const activeAugments: AugmentData[] = [
 			'APShield': 450,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/RunicShield2.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `Runic Shield III`,
+		groupID: `runicShield`,
+		desc: `Arcanists start combat with a shield equal to @APShield@% of their Ability Power for @ShieldDuration@ seconds.`,
+		effects: {
+			'ShieldDuration': 8,
+			'APShield': 600,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/RunicShield3.TFT_Set6.dds`,
 	},
 	{
 		tier: 2,
@@ -1164,6 +1161,16 @@ export const activeAugments: AugmentData[] = [
 	},
 	{
 		tier: 1,
+		name: `So Small`,
+		groupID: `soSmall`,
+		desc: `Yordles gain @DodgeIncrease@% Dodge Chance.`,
+		effects: {
+			'DodgeIncrease': 35,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/SoSmall1.TFT_Set6.dds`,
+	},
+	{
+		tier: 1,
 		name: `Socialite Heart`,
 		groupID: `socialiteHeart`,
 		desc: `Your team counts as having 1 additional Socialite. Gain @Gold@ gold.`,
@@ -1179,16 +1186,6 @@ export const activeAugments: AugmentData[] = [
 		desc: `Your team counts as having 2 additional Socialites.`,
 		effects: {},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/SocialiteSoul3.TFT_Set6.dds`,
-	},
-	{
-		tier: 1,
-		name: `So Small`,
-		groupID: `soSmall`,
-		desc: `Yordles gain @DodgeIncrease@% Dodge Chance.`,
-		effects: {
-			'DodgeIncrease': 35,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/SoSmall1.TFT_Set6.dds`,
 	},
 	{
 		tier: 2,
@@ -1212,14 +1209,14 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/StandBehind1.TFT_Set6.dds`,
 	},
 	{
-		tier: 3,
-		name: `Stand United III`,
+		tier: 1,
+		name: `Stand United I`,
 		groupID: `standUnited`,
 		desc: `Your units gain @Resists@ Attack Damage and Ability Power per Trait active across your army.`,
 		effects: {
-			'Resists': 5,
+			'Resists': 2,
 		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/StandUnited3.TFT_Set6.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/StandUnited1.TFT_Set6.dds`,
 	},
 	{
 		tier: 2,
@@ -1232,14 +1229,14 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/StandUnited2.TFT_Set6.dds`,
 	},
 	{
-		tier: 1,
-		name: `Stand United I`,
+		tier: 3,
+		name: `Stand United III`,
 		groupID: `standUnited`,
 		desc: `Your units gain @Resists@ Attack Damage and Ability Power per Trait active across your army.`,
 		effects: {
-			'Resists': 2,
+			'Resists': 5,
 		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/StandUnited1.TFT_Set6.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/StandUnited3.TFT_Set6.dds`,
 	},
 	{
 		tier: 2,
@@ -1418,16 +1415,6 @@ export const activeAugments: AugmentData[] = [
 export const inactiveAugments: AugmentData[] = [
 	{
 		tier: 1,
-		name: `Tinker`,
-		groupID: `tinker`,
-		desc: `Gain a Magnetic Remover or Reforger every @Combats@ combat round(s) with the Scrap trait active.`,
-		effects: {
-			'Combats': 1,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Tinker1.TFT_Set6.dds`,
-	},
-	{
-		tier: 1,
 		name: `Scoped Weapons`,
 		groupID: `scopedWeapons`,
 		desc: `Double the hex range of your <b>ranged</b> units, and their attacks cannot miss.`,
@@ -1435,5 +1422,15 @@ export const inactiveAugments: AugmentData[] = [
 			'{16394c87}': 100,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/ScopedWeapons1.TFT_Set6.dds`,
+	},
+	{
+		tier: 1,
+		name: `Tinker`,
+		groupID: `tinker`,
+		desc: `Gain a Magnetic Remover or Reforger every @Combats@ combat round(s) with the Scrap trait active.`,
+		effects: {
+			'Combats': 1,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Tinker1.TFT_Set6.dds`,
 	},
 ]

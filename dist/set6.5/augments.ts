@@ -1,8 +1,5 @@
+import { AugmentGroupKey } from '../index.js'
 import type { AugmentData } from '../index'
-
-export enum AugmentGroupKey {
-	AncientArchives = 'ancientArchives', ArcaneNullifier = 'arcaneNullifier', ArcanistCrest = 'arcanistCrest', ArcanistCrown = 'arcanistCrown', ArcanistHeart = 'arcanistHeart', ArchangelsEmbrace = 'archangelsEmbrace', ArdentCenser = 'ardentCenser', ArmorPlating = 'armorPlating', Ascension = 'ascension', AssassinCrest = 'assassinCrest', AssassinCrown = 'assassinCrown', AssassinHeart = 'assassinHeart', Backfoot = 'backfoot', BandOfThieves = 'bandOfThieves', Battlemage = 'battlemage', BinaryAirdrop = 'binaryAirdrop', BlueBattery = 'blueBattery', BodyguardCrest = 'bodyguardCrest', BodyguardCrown = 'bodyguardCrown', BodyguardHeart = 'bodyguardHeart', BrokenStopwatch = 'brokenStopwatch', BruiserCrest = 'bruiserCrest', BruiserCrown = 'bruiserCrown', BruiserHeart = 'bruiserHeart', BuiltDifferent = 'builtDifferent', CalculatedLoss = 'calculatedLoss', CelestialBlessing = 'celestialBlessing', ChallengerCrest = 'challengerCrest', ChallengerCrown = 'challengerCrown', ChallengerHeart = 'challengerHeart', ChallengerUnity = 'challengerUnity', ChemicalOverload = 'chemicalOverload', ChemtechCrest = 'chemtechCrest', ChemtechCrown = 'chemtechCrown', ChemtechHeart = 'chemtechHeart', ChemtechUnity = 'chemtechUnity', ClearMind = 'clearMind', ClockworkHeart = 'clockworkHeart', ClockworkSoul = 'clockworkSoul', ComponentGrabBag = 'componentGrabBag', ConcussiveBlows = 'concussiveBlows', Cutthroat = 'cutthroat', CyberneticImplants = 'cyberneticImplants', CyberneticShell = 'cyberneticShell', CyberneticUplink = 'cyberneticUplink', DebonairCrest = 'debonairCrest', DebonairCrown = 'debonairCrown', DebonairHeart = 'debonairHeart', Disintegrator = 'disintegrator', Dominance = 'dominance', DoubleTrouble = 'doubleTrouble', Duet = 'duet', Electrocharge = 'electrocharge', EnchanterHeart = 'enchanterHeart', EnchanterSoul = 'enchanterSoul', EnforcerHeart = 'enforcerHeart', EnGarde = 'enGarde', Exiles = 'exiles', Featherweights = 'featherweights', FirstAidKit = 'firstAidKit', FourScore = 'fourScore', FutureSight = 'futureSight', GoldenGifts = 'goldenGifts', GoldenTicket = 'goldenTicket', GoldReserves = 'goldReserves', Hexnova = 'hexnova', HextechCrest = 'hextechCrest', HextechCrown = 'hextechCrown', HextechHeart = 'hextechHeart', HextechUnity = 'hextechUnity', HighEndShopping = 'highEndShopping', HighFive = 'highFive', HighRoller = 'highRoller', HyperRoll = 'hyperRoll', InnovatorHeart = 'innovatorHeart', InnovatorSoul = 'innovatorSoul', InstantInjection = 'instantInjection', IrresistibleCharm = 'irresistibleCharm', ItemGrabBag = 'itemGrabBag', JeweledLotus = 'jeweledLotus', Junkyard = 'junkyard', Keepers = 'keepers', KnifesEdge = 'knifesEdge', LevelUp = 'levelUp', LifelongLearning = 'lifelongLearning', LudensEcho = 'ludensEcho', MakeshiftArmor = 'makeshiftArmor', MarchOfProgress = 'marchOfProgress', Meditation = 'meditation', MercenaryCrest = 'mercenaryCrest', MercenaryHeart = 'mercenaryHeart', MercenarySoul = 'mercenarySoul', MetabolicAccelerator = 'metabolicAccelerator', MutantCrest = 'mutantCrest', MutantCrown = 'mutantCrown', MutantHeart = 'mutantHeart', NewRecruit = 'newRecruit', OneForAll = 'oneForAll', Overpower = 'overpower', PandorasItems = 'pandorasItems', Payday = 'payday', Phalanx = 'phalanx', PhonyFrontline = 'phonyFrontline', Pirates = 'pirates', PortableForge = 'portableForge', RadiantRelics = 'radiantRelics', Recombobulator = 'recombobulator', RichGetRicher = 'richGetRicher', RunicShield = 'runicShield', SalvageBin = 'salvageBin', ScholarCrest = 'scholarCrest', ScholarHeart = 'scholarHeart', ScholarSoul = 'scholarSoul', ScrapCrest = 'scrapCrest', ScrapHeart = 'scrapHeart', ScrapSoul = 'scrapSoul', SecondWind = 'secondWind', SelfRepair = 'selfRepair', ShareTheSpotlight = 'shareTheSpotlight', Sharpshooter = 'sharpshooter', ShrugItOff = 'shrugItOff', SmokeBomb = 'smokeBomb', SniperCrest = 'sniperCrest', SniperCrown = 'sniperCrown', SniperHeart = 'sniperHeart', SnipersNest = 'snipersNest', SocialiteHeart = 'socialiteHeart', SocialiteSoul = 'socialiteSoul', SoSmall = 'soSmall', SpellBlade = 'spellBlade', StandBehindMe = 'standBehindMe', StandUnited = 'standUnited', StoredPower = 'storedPower', StrikerCrest = 'strikerCrest', StrikerCrown = 'strikerCrown', StrikerHeart = 'strikerHeart', SunfireBoard = 'sunfireBoard', SyndicateCrest = 'syndicateCrest', SyndicateCrown = 'syndicateCrown', SyndicateHeart = 'syndicateHeart', TheGoldenEgg = 'theGoldenEgg', ThievingRascals = 'thievingRascals', ThreesCompany = 'threesCompany', ThrillOfTheHunt = 'thrillOfTheHunt', Tinker = 'tinker', TinyTitans = 'tinyTitans', TitanicForce = 'titanicForce', TradeSector = 'tradeSector', TreasureTrove = 'treasureTrove', TriForce = 'triForce', TrueJustice = 'trueJustice', TrueTwos = 'trueTwos', TwinshotHeart = 'twinshotHeart', TwinshotSoul = 'twinshotSoul', Underdogs = 'underdogs', UnstableEvolution = 'unstableEvolution', VerdantVeil = 'verdantVeil', VeryVIP = 'veryVIP', Weakspot = 'weakspot', Windfall = 'windfall', WiseSpending = 'wiseSpending', WoodlandCharm = 'woodlandCharm', WoodlandTrinket = 'woodlandTrinket'
-}
 
 export const emptyImplementationAugments: AugmentGroupKey[] =  [AugmentGroupKey.AncientArchives, AugmentGroupKey.BandOfThieves, AugmentGroupKey.BinaryAirdrop, AugmentGroupKey.CalculatedLoss, AugmentGroupKey.ClearMind, AugmentGroupKey.ComponentGrabBag, AugmentGroupKey.Dominance, AugmentGroupKey.FourScore, AugmentGroupKey.FutureSight, AugmentGroupKey.GoldenGifts, AugmentGroupKey.GoldenTicket, AugmentGroupKey.HighEndShopping, AugmentGroupKey.HighFive, AugmentGroupKey.HighRoller, AugmentGroupKey.HyperRoll, AugmentGroupKey.ItemGrabBag, AugmentGroupKey.Junkyard, AugmentGroupKey.LevelUp, AugmentGroupKey.MarchOfProgress, AugmentGroupKey.MercenaryHeart, AugmentGroupKey.MercenaryCrest, AugmentGroupKey.MercenarySoul, AugmentGroupKey.MetabolicAccelerator, AugmentGroupKey.NewRecruit, AugmentGroupKey.PandorasItems, AugmentGroupKey.Payday, AugmentGroupKey.PhonyFrontline, AugmentGroupKey.Pirates, AugmentGroupKey.Recombobulator, AugmentGroupKey.RichGetRicher, AugmentGroupKey.SalvageBin, AugmentGroupKey.TheGoldenEgg, AugmentGroupKey.ThievingRascals, AugmentGroupKey.ThreesCompany, AugmentGroupKey.Tinker, AugmentGroupKey.TinyTitans, AugmentGroupKey.TradeSector, AugmentGroupKey.TreasureTrove, AugmentGroupKey.TrueTwos, AugmentGroupKey.Windfall, AugmentGroupKey.WiseSpending]
 
@@ -16,6 +13,26 @@ export const activeAugments: AugmentData[] = [
 			'NumTomes': 1,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/AncientArchives1.TFT_Set6.dds`,
+	},
+	{
+		tier: 2,
+		name: `Arcane Crest`,
+		groupID: `arcanistCrest`,
+		desc: `Gain an Arcanist Emblem and a Swain.`,
+		effects: {},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/ArcanistEmblem2.TFT_Set6.dds`,
+	},
+	{
+		tier: 1,
+		name: `Arcane Nullifier I`,
+		groupID: `arcaneNullifier`,
+		desc: `Your units' Abilities ignore @MagicPen@% of the target's Magic Resist and reduce healing received by @HealingReduction@% for @Duration@ seconds.`,
+		effects: {
+			'Duration': 8,
+			'HealingReduction': 50,
+			'MagicPen': 20,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Arcane-Nullifier-I.TFT_Set6_Stage2.dds`,
 	},
 	{
 		tier: 2,
@@ -40,26 +57,6 @@ export const activeAugments: AugmentData[] = [
 			'MagicPen': 60,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Arcane-Nullifier-III.TFT_Set6_Stage2.dds`,
-	},
-	{
-		tier: 1,
-		name: `Arcane Nullifier I`,
-		groupID: `arcaneNullifier`,
-		desc: `Your units' Abilities ignore @MagicPen@% of the target's Magic Resist and reduce healing received by @HealingReduction@% for @Duration@ seconds.`,
-		effects: {
-			'Duration': 8,
-			'HealingReduction': 50,
-			'MagicPen': 20,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Arcane-Nullifier-I.TFT_Set6_Stage2.dds`,
-	},
-	{
-		tier: 2,
-		name: `Arcane Crest`,
-		groupID: `arcanistCrest`,
-		desc: `Gain an Arcanist Emblem and a Swain.`,
-		effects: {},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/ArcanistEmblem2.TFT_Set6.dds`,
 	},
 	{
 		tier: 3,
@@ -145,14 +142,14 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/AssassinHeart1.TFT_Set6.dds`,
 	},
 	{
-		tier: 3,
-		name: `Backfoot III`,
+		tier: 1,
+		name: `Backfoot I`,
 		groupID: `backfoot`,
 		desc: `Your units that start combat in the back 2 rows gain @AS*100@% Attack Speed.`,
 		effects: {
-			'AS': 0.44999998807907104,
+			'AS': 0.20000000298023224,
 		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Backfoot-III-B.TFT_Set6_Stage2.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Backfoot-I-B.TFT_Set6_Stage2.dds`,
 	},
 	{
 		tier: 2,
@@ -165,14 +162,14 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Backfoot-II-B.TFT_Set6_Stage2.dds`,
 	},
 	{
-		tier: 1,
-		name: `Backfoot I`,
+		tier: 3,
+		name: `Backfoot III`,
 		groupID: `backfoot`,
 		desc: `Your units that start combat in the back 2 rows gain @AS*100@% Attack Speed.`,
 		effects: {
-			'AS': 0.20000000298023224,
+			'AS': 0.44999998807907104,
 		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Backfoot-I-B.TFT_Set6_Stage2.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Backfoot-III-B.TFT_Set6_Stage2.dds`,
 	},
 	{
 		tier: 3,
@@ -223,16 +220,6 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/BinaryAirdrop2.TFT_Set6.dds`,
 	},
 	{
-		tier: 3,
-		name: `Blue Battery II`,
-		groupID: `blueBattery`,
-		desc: `After casting their Ability, your units restore @ManaRestore@ Mana.`,
-		effects: {
-			'ManaRestore': 20,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Blue-Battery-III.TFT_Set6_Stage2.dds`,
-	},
-	{
 		tier: 1,
 		name: `Blue Battery I`,
 		groupID: `blueBattery`,
@@ -241,6 +228,16 @@ export const activeAugments: AugmentData[] = [
 			'ManaRestore': 10,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Blue-Battery-I.TFT_Set6_Stage2.dds`,
+	},
+	{
+		tier: 3,
+		name: `Blue Battery II`,
+		groupID: `blueBattery`,
+		desc: `After casting their Ability, your units restore @ManaRestore@ Mana.`,
+		effects: {
+			'ManaRestore': 20,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Blue-Battery-III.TFT_Set6_Stage2.dds`,
 	},
 	{
 		tier: 2,
@@ -302,15 +299,15 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/BruiserHeart1.TFT_Set6.dds`,
 	},
 	{
-		tier: 3,
-		name: `Built Different III`,
+		tier: 1,
+		name: `Built Different I`,
 		groupID: `builtDifferent`,
 		desc: `Your units with no Traits active gain @HP@ Health and @AS@% Attack Speed.`,
 		effects: {
-			'AS': 70,
-			'HP': 500,
+			'AS': 50,
+			'HP': 300,
 		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/BuiltDifferent3.TFT_Set6.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/BuiltDifferent1.TFT_Set6.dds`,
 	},
 	{
 		tier: 2,
@@ -324,15 +321,15 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/BuiltDifferent2.TFT_Set6.dds`,
 	},
 	{
-		tier: 1,
-		name: `Built Different I`,
+		tier: 3,
+		name: `Built Different III`,
 		groupID: `builtDifferent`,
 		desc: `Your units with no Traits active gain @HP@ Health and @AS@% Attack Speed.`,
 		effects: {
-			'AS': 50,
-			'HP': 300,
+			'AS': 70,
+			'HP': 500,
 		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/BuiltDifferent1.TFT_Set6.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/BuiltDifferent3.TFT_Set6.dds`,
 	},
 	{
 		tier: 1,
@@ -356,17 +353,6 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/CelestialBlessing1.TFT_Set6.dds`,
 	},
 	{
-		tier: 3,
-		name: `Celestial Blessing III`,
-		groupID: `celestialBlessing`,
-		desc: `Your units heal for @Omnivamp@% of the damage dealt by attacks and Abilities. Excess healing is converted to a shield up to @MaxShield@ Health.`,
-		effects: {
-			'MaxShield': 600,
-			'Omnivamp': 35,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/CelestialBlessing3.TFT_Set6.dds`,
-	},
-	{
 		tier: 2,
 		name: `Celestial Blessing II`,
 		groupID: `celestialBlessing`,
@@ -376,6 +362,17 @@ export const activeAugments: AugmentData[] = [
 			'Omnivamp': 20,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/CelestialBlessing2.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `Celestial Blessing III`,
+		groupID: `celestialBlessing`,
+		desc: `Your units heal for @Omnivamp@% of the damage dealt by attacks and Abilities. Excess healing is converted to a shield up to @MaxShield@ Health.`,
+		effects: {
+			'MaxShield': 600,
+			'Omnivamp': 35,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/CelestialBlessing3.TFT_Set6.dds`,
 	},
 	{
 		tier: 2,
@@ -410,16 +407,6 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Study-the-Blade-I.TFT_Set6_Stage2.dds`,
 	},
 	{
-		tier: 2,
-		name: `Chemical Overload II`,
-		groupID: `chemicalOverload`,
-		desc: `Chemtechs explode on death, dealing @HP@% of their max Health as magic damage to enemies within 2 hexes. Gain a Zac.`,
-		effects: {
-			'HP': 30,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/ChemicalOverlord2.TFT_Set6.dds`,
-	},
-	{
 		tier: 1,
 		name: `Chemical Overload I`,
 		groupID: `chemicalOverload`,
@@ -428,6 +415,16 @@ export const activeAugments: AugmentData[] = [
 			'HP': 20,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/ChemicalOverlord1.TFT_Set6.dds`,
+	},
+	{
+		tier: 2,
+		name: `Chemical Overload II`,
+		groupID: `chemicalOverload`,
+		desc: `Chemtechs explode on death, dealing @HP@% of their max Health as magic damage to enemies within 2 hexes. Gain a Zac.`,
+		effects: {
+			'HP': 30,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/ChemicalOverlord2.TFT_Set6.dds`,
 	},
 	{
 		tier: 2,
@@ -598,17 +595,6 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Cybernetic-Uplink-I.TFT_Set6_Stage2.dds`,
 	},
 	{
-		tier: 3,
-		name: `Cybernetic Uplink III`,
-		groupID: `cyberneticUplink`,
-		desc: `Your champions holding an item gain @Health@ Health and restore @ManaRegen@ Mana per second.`,
-		effects: {
-			'Health': 350,
-			'ManaRegen': 4,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Cybernetic-Uplink-III.TFT_Set6_Stage2.dds`,
-	},
-	{
 		tier: 2,
 		name: `Cybernetic Uplink II`,
 		groupID: `cyberneticUplink`,
@@ -618,6 +604,17 @@ export const activeAugments: AugmentData[] = [
 			'ManaRegen': 3,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Cybernetic-Uplink-II.TFT_Set6_Stage2.dds`,
+	},
+	{
+		tier: 3,
+		name: `Cybernetic Uplink III`,
+		groupID: `cyberneticUplink`,
+		desc: `Your champions holding an item gain @Health@ Health and restore @ManaRegen@ Mana per second.`,
+		effects: {
+			'Health': 350,
+			'ManaRegen': 4,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Cybernetic-Uplink-III.TFT_Set6_Stage2.dds`,
 	},
 	{
 		tier: 2,
@@ -644,14 +641,14 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Debonair-Heart.TFT_Set6_Stage2.dds`,
 	},
 	{
-		tier: 3,
-		name: `Disintegrator III`,
+		tier: 1,
+		name: `Disintegrator I`,
 		groupID: `disintegrator`,
 		desc: `Your units' attacks deal bonus magic damage equal to @MaxHPDamage@% of the target's maximum Health.`,
 		effects: {
-			'MaxHPDamage': 4,
+			'MaxHPDamage': 1.5,
 		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Disintegrator-III.TFT_Set6_Stage2.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Disintegrator-I.TFT_Set6_Stage2.dds`,
 	},
 	{
 		tier: 2,
@@ -664,14 +661,14 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Disintegrator-II.TFT_Set6_Stage2.dds`,
 	},
 	{
-		tier: 1,
-		name: `Disintegrator I`,
+		tier: 3,
+		name: `Disintegrator III`,
 		groupID: `disintegrator`,
 		desc: `Your units' attacks deal bonus magic damage equal to @MaxHPDamage@% of the target's maximum Health.`,
 		effects: {
-			'MaxHPDamage': 1.5,
+			'MaxHPDamage': 4,
 		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Disintegrator-I.TFT_Set6_Stage2.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Disintegrator-III.TFT_Set6_Stage2.dds`,
 	},
 	{
 		tier: 1,
@@ -695,16 +692,6 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Double-Trouble-I.TFT_Set6_Stage2.dds`,
 	},
 	{
-		tier: 3,
-		name: `Double Trouble III`,
-		groupID: `doubleTrouble`,
-		desc: `If you have exactly 2 copies of a champion on your board, they both gain @BonusStats@ Attack Damage, Ability Power, Armor, and Magic Resist. When you 3-star, gain a 2-star copy.`,
-		effects: {
-			'BonusStats': 60,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Double-Trouble-III.TFT_Set6_Stage2.dds`,
-	},
-	{
 		tier: 2,
 		name: `Double Trouble II`,
 		groupID: `doubleTrouble`,
@@ -715,6 +702,16 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Double-Trouble-II.TFT_Set6_Stage2.dds`,
 	},
 	{
+		tier: 3,
+		name: `Double Trouble III`,
+		groupID: `doubleTrouble`,
+		desc: `If you have exactly 2 copies of a champion on your board, they both gain @BonusStats@ Attack Damage, Ability Power, Armor, and Magic Resist. When you 3-star, gain a 2-star copy.`,
+		effects: {
+			'BonusStats': 60,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Double-Trouble-III.TFT_Set6_Stage2.dds`,
+	},
+	{
 		tier: 1,
 		name: `Duet`,
 		groupID: `duet`,
@@ -723,6 +720,17 @@ export const activeAugments: AugmentData[] = [
 			'BonusHealth': 200,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Duet1.TFT_Set6.dds`,
+	},
+	{
+		tier: 1,
+		name: `Electrocharge I`,
+		groupID: `electrocharge`,
+		desc: `When your units receive critical strikes, they deal @Damage@ magic damage to nearby enemies. (@ICD@ second cooldown).`,
+		effects: {
+			'Damage': 60,
+			'ICD': 1,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Electrocharge-I.TFT_Set6_Stage2.dds`,
 	},
 	{
 		tier: 2,
@@ -748,14 +756,13 @@ export const activeAugments: AugmentData[] = [
 	},
 	{
 		tier: 1,
-		name: `Electrocharge I`,
-		groupID: `electrocharge`,
-		desc: `When your units receive critical strikes, they deal @Damage@ magic damage to nearby enemies. (@ICD@ second cooldown).`,
+		name: `En Garde`,
+		groupID: `enGarde`,
+		desc: `The first time an enemy is attacked by a Challenger, they are Disarmed for @DisarmDuration@ seconds. Gain a Warwick.`,
 		effects: {
-			'Damage': 60,
-			'ICD': 1,
+			'DisarmDuration': 2.5,
 		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Electrocharge-I.TFT_Set6_Stage2.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/EnGuarde1.TFT_Set6.dds`,
 	},
 	{
 		tier: 1,
@@ -782,16 +789,6 @@ export const activeAugments: AugmentData[] = [
 		desc: `Your team counts as having 1 additional Enforcer. Gain a Sejuani.`,
 		effects: {},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/EnforcerHeart1.TFT_Set6.dds`,
-	},
-	{
-		tier: 1,
-		name: `En Garde`,
-		groupID: `enGarde`,
-		desc: `The first time an enemy is attacked by a Challenger, they are Disarmed for @DisarmDuration@ seconds. Gain a Warwick.`,
-		effects: {
-			'DisarmDuration': 2.5,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/EnGuarde1.TFT_Set6.dds`,
 	},
 	{
 		tier: 1,
@@ -880,14 +877,6 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Four-Score-II.TFT_Set6_Stage2.dds`,
 	},
 	{
-		tier: 3,
-		name: `Future Sight II`,
-		groupID: `futureSight`,
-		desc: `Know who you will fight next. Gain a Radiant Zephyr.`,
-		effects: {},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Future-Sight-III.TFT_Set6_Stage2.dds`,
-	},
-	{
 		tier: 2,
 		name: `Future Sight`,
 		groupID: `futureSight`,
@@ -897,14 +886,23 @@ export const activeAugments: AugmentData[] = [
 	},
 	{
 		tier: 3,
-		name: `Golden Gifts II`,
-		groupID: `goldenGifts`,
-		desc: `Gain @NumGoldOrbs@ golden and @NumGrayOrbs@ gray loot orb(s).`,
+		name: `Future Sight II`,
+		groupID: `futureSight`,
+		desc: `Know who you will fight next. Gain a Radiant Zephyr.`,
+		effects: {},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Future-Sight-III.TFT_Set6_Stage2.dds`,
+	},
+	{
+		tier: 2,
+		name: `Gold Reserves`,
+		groupID: `goldReserves`,
+		desc: `Mercenaries deal @PercentDamage*100@% more damage per @GoldIncrement@ gold you have (Maximum +@DamageCap@%). Gain a Quinn.`,
 		effects: {
-			'NumGrayOrbs': 3,
-			'NumGoldOrbs': 2,
+			'PercentDamage': 0.019999999552965164,
+			'DamageCap': 50,
+			'GoldIncrement': 1,
 		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Golden-Gifts-III.TFT_Set6_Stage2.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/GoldReserves2.TFT_Set6.dds`,
 	},
 	{
 		tier: 2,
@@ -919,6 +917,17 @@ export const activeAugments: AugmentData[] = [
 	},
 	{
 		tier: 3,
+		name: `Golden Gifts II`,
+		groupID: `goldenGifts`,
+		desc: `Gain @NumGoldOrbs@ golden and @NumGrayOrbs@ gray loot orb(s).`,
+		effects: {
+			'NumGrayOrbs': 3,
+			'NumGoldOrbs': 2,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Golden-Gifts-III.TFT_Set6_Stage2.dds`,
+	},
+	{
+		tier: 3,
 		name: `Golden Ticket`,
 		groupID: `goldenTicket`,
 		desc: `Each time your Shop is refreshed, you have a @RerollPercent@% chance to gain a free refresh.`,
@@ -926,18 +935,6 @@ export const activeAugments: AugmentData[] = [
 			'RerollPercent': 40,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/GoldenTicket3.TFT_Set6.dds`,
-	},
-	{
-		tier: 2,
-		name: `Gold Reserves`,
-		groupID: `goldReserves`,
-		desc: `Mercenaries deal @PercentDamage*100@% more damage per @GoldIncrement@ gold you have (Maximum +@DamageCap@%). Gain a Quinn.`,
-		effects: {
-			'PercentDamage': 0.019999999552965164,
-			'DamageCap': 50,
-			'GoldIncrement': 1,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/GoldReserves2.TFT_Set6.dds`,
 	},
 	{
 		tier: 1,
@@ -1060,16 +1057,6 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Irresistible-Charm-I.TFT_Set6_Stage2.dds`,
 	},
 	{
-		tier: 3,
-		name: `Item Grab Bag II`,
-		groupID: `itemGrabBag`,
-		desc: `Gain @NumItems@ random completed items and a Reforger.`,
-		effects: {
-			'NumItems': 2,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/ItemGrabBag3.TFT_Set6.dds`,
-	},
-	{
 		tier: 1,
 		name: `Item Grab Bag I`,
 		groupID: `itemGrabBag`,
@@ -1078,6 +1065,16 @@ export const activeAugments: AugmentData[] = [
 			'NumItems': 1,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/ItemGrabBag1.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `Item Grab Bag II`,
+		groupID: `itemGrabBag`,
+		desc: `Gain @NumItems@ random completed items and a Reforger.`,
+		effects: {
+			'NumItems': 2,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/ItemGrabBag3.TFT_Set6.dds`,
 	},
 	{
 		tier: 2,
@@ -1122,6 +1119,16 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Keepers-II.TFT_Set6_Stage2.dds`,
 	},
 	{
+		tier: 1,
+		name: `Knife's Edge I`,
+		groupID: `knifesEdge`,
+		desc: `Your units that start combat in the front 2 rows gain @ADPerStarLevel@ Attack Damage.`,
+		effects: {
+			'ADPerStarLevel': 30,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/CQCTraining1.TFT_Set6.dds`,
+	},
+	{
 		tier: 2,
 		name: `Knife's Edge II`,
 		groupID: `knifesEdge`,
@@ -1140,16 +1147,6 @@ export const activeAugments: AugmentData[] = [
 			'ADPerStarLevel': 55,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/CQCTraining3.TFT_Set6.dds`,
-	},
-	{
-		tier: 1,
-		name: `Knife's Edge I`,
-		groupID: `knifesEdge`,
-		desc: `Your units that start combat in the front 2 rows gain @ADPerStarLevel@ Attack Damage.`,
-		effects: {
-			'ADPerStarLevel': 30,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/CQCTraining1.TFT_Set6.dds`,
 	},
 	{
 		tier: 3,
@@ -1171,6 +1168,17 @@ export const activeAugments: AugmentData[] = [
 			'BonusAP': 2,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/LifelongLearner1.TFT_Set6.dds`,
+	},
+	{
+		tier: 1,
+		name: `Luden's Echo I`,
+		groupID: `ludensEcho`,
+		desc: `When your units cast and deal Ability damage, the first target hit and a nearby enemy take @MagicDamage@ bonus magic damage.`,
+		effects: {
+			'MagicDamage': 100,
+			'{26a9a9b1}': 1,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Ludens-Echo-I.TFT_Set6_Stage2.dds`,
 	},
 	{
 		tier: 2,
@@ -1196,17 +1204,6 @@ export const activeAugments: AugmentData[] = [
 	},
 	{
 		tier: 1,
-		name: `Luden's Echo I`,
-		groupID: `ludensEcho`,
-		desc: `When your units cast and deal Ability damage, the first target hit and a nearby enemy take @MagicDamage@ bonus magic damage.`,
-		effects: {
-			'MagicDamage': 100,
-			'{26a9a9b1}': 1,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Ludens-Echo-I.TFT_Set6_Stage2.dds`,
-	},
-	{
-		tier: 1,
 		name: `Makeshift Armor I`,
 		groupID: `makeshiftArmor`,
 		desc: `Your units without items equipped gain @Resists@ Armor and Magic Resist.`,
@@ -1214,16 +1211,6 @@ export const activeAugments: AugmentData[] = [
 			'Resists': 35,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Makeshift1.TFT_Set6.dds`,
-	},
-	{
-		tier: 3,
-		name: `Makeshift Armor III`,
-		groupID: `makeshiftArmor`,
-		desc: `Your units without items equipped gain @Resists@ Armor and Magic Resist.`,
-		effects: {
-			'Resists': 80,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Makeshift3.TFT_Set6.dds`,
 	},
 	{
 		tier: 2,
@@ -1234,6 +1221,16 @@ export const activeAugments: AugmentData[] = [
 			'Resists': 55,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Makeshift2.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `Makeshift Armor III`,
+		groupID: `makeshiftArmor`,
+		desc: `Your units without items equipped gain @Resists@ Armor and Magic Resist.`,
+		effects: {
+			'Resists': 80,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Makeshift3.TFT_Set6.dds`,
 	},
 	{
 		tier: 3,
@@ -1559,17 +1556,6 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/ScrapSoul3.TFT_Set6.dds`,
 	},
 	{
-		tier: 2,
-		name: `Second Wind II`,
-		groupID: `secondWind`,
-		desc: `After @Delay@ seconds of combat, your units heal @HealPercent@% of their missing Health.`,
-		effects: {
-			'HealPercent': 75,
-			'Delay': 10,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Second--Wind-II.TFT_Set6_Stage2.dds`,
-	},
-	{
 		tier: 1,
 		name: `Second Wind I`,
 		groupID: `secondWind`,
@@ -1579,6 +1565,17 @@ export const activeAugments: AugmentData[] = [
 			'Delay': 10,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Second--Wind-I.TFT_Set6_Stage2.dds`,
+	},
+	{
+		tier: 2,
+		name: `Second Wind II`,
+		groupID: `secondWind`,
+		desc: `After @Delay@ seconds of combat, your units heal @HealPercent@% of their missing Health.`,
+		effects: {
+			'HealPercent': 75,
+			'Delay': 10,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Second--Wind-II.TFT_Set6_Stage2.dds`,
 	},
 	{
 		tier: 1,
@@ -1670,6 +1667,16 @@ export const activeAugments: AugmentData[] = [
 	},
 	{
 		tier: 1,
+		name: `So Small`,
+		groupID: `soSmall`,
+		desc: `Yordles gain @DodgeIncrease@% Dodge Chance. Gain a Corki.`,
+		effects: {
+			'DodgeIncrease': 35,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/SoSmall1.TFT_Set6.dds`,
+	},
+	{
+		tier: 1,
 		name: `Socialite Heart`,
 		groupID: `socialiteHeart`,
 		desc: `Your team counts as having 1 additional Socialite. `,
@@ -1685,16 +1692,6 @@ export const activeAugments: AugmentData[] = [
 			'Gold': 8,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/SocialiteSoul3.TFT_Set6.dds`,
-	},
-	{
-		tier: 1,
-		name: `So Small`,
-		groupID: `soSmall`,
-		desc: `Yordles gain @DodgeIncrease@% Dodge Chance. Gain a Corki.`,
-		effects: {
-			'DodgeIncrease': 35,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/SoSmall1.TFT_Set6.dds`,
 	},
 	{
 		tier: 2,
@@ -1718,14 +1715,14 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/StandBehind1.TFT_Set6.dds`,
 	},
 	{
-		tier: 3,
-		name: `Stand United III`,
+		tier: 1,
+		name: `Stand United I`,
 		groupID: `standUnited`,
 		desc: `Your units gain @Resists@ Attack Damage and Ability Power per Trait active across your army.`,
 		effects: {
-			'Resists': 5,
+			'Resists': 2,
 		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/StandUnited3.TFT_Set6.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/StandUnited1.TFT_Set6.dds`,
 	},
 	{
 		tier: 2,
@@ -1738,14 +1735,14 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/StandUnited2.TFT_Set6.dds`,
 	},
 	{
-		tier: 1,
-		name: `Stand United I`,
+		tier: 3,
+		name: `Stand United III`,
 		groupID: `standUnited`,
 		desc: `Your units gain @Resists@ Attack Damage and Ability Power per Trait active across your army.`,
 		effects: {
-			'Resists': 2,
+			'Resists': 5,
 		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/StandUnited1.TFT_Set6.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/StandUnited3.TFT_Set6.dds`,
 	},
 	{
 		tier: 1,
@@ -1910,15 +1907,15 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Trade2.TFT_Set6.dds`,
 	},
 	{
-		tier: 3,
-		name: `Treasure Trove III`,
+		tier: 1,
+		name: `Treasure Trove I`,
 		groupID: `treasureTrove`,
 		desc: `Gain @NumBlueOrbs@ blue and @NumGrayOrbs@ gray loot orb(s).`,
 		effects: {
-			'NumGrayOrbs': 2,
-			'NumBlueOrbs': 3,
+			'NumGrayOrbs': 1,
+			'NumBlueOrbs': 1,
 		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Treasure-Trove-III.TFT_Set6_Stage2.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Treasure-Trove-I.TFT_Set6_Stage2.dds`,
 	},
 	{
 		tier: 2,
@@ -1932,15 +1929,15 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Treasure-Trove-II.TFT_Set6_Stage2.dds`,
 	},
 	{
-		tier: 1,
-		name: `Treasure Trove I`,
+		tier: 3,
+		name: `Treasure Trove III`,
 		groupID: `treasureTrove`,
 		desc: `Gain @NumBlueOrbs@ blue and @NumGrayOrbs@ gray loot orb(s).`,
 		effects: {
-			'NumGrayOrbs': 1,
-			'NumBlueOrbs': 1,
+			'NumGrayOrbs': 2,
+			'NumBlueOrbs': 3,
 		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Treasure-Trove-I.TFT_Set6_Stage2.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Treasure-Trove-III.TFT_Set6_Stage2.dds`,
 	},
 	{
 		tier: 1,
@@ -2061,6 +2058,18 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/VVIP-II.TFT_Set6_Stage2.dds`,
 	},
 	{
+		tier: 1,
+		name: `Weakspot I`,
+		groupID: `weakspot`,
+		desc: `Your units' attacks ignore @ArmorPenPercent@% of the target's Armor and reduce healing received by @HealReductionPercent@% for @Duration@ seconds.`,
+		effects: {
+			'Duration': 5,
+			'HealReductionPercent': 50,
+			'ArmorPenPercent': 20,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Weakspot1.TFT_Set6.dds`,
+	},
+	{
 		tier: 2,
 		name: `Weakspot II`,
 		groupID: `weakspot`,
@@ -2083,18 +2092,6 @@ export const activeAugments: AugmentData[] = [
 			'ArmorPenPercent': 60,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Weakspot3.TFT_Set6.dds`,
-	},
-	{
-		tier: 1,
-		name: `Weakspot I`,
-		groupID: `weakspot`,
-		desc: `Your units' attacks ignore @ArmorPenPercent@% of the target's Armor and reduce healing received by @HealReductionPercent@% for @Duration@ seconds.`,
-		effects: {
-			'Duration': 5,
-			'HealReductionPercent': 50,
-			'ArmorPenPercent': 20,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Weakspot1.TFT_Set6.dds`,
 	},
 	{
 		tier: 3,
@@ -2143,23 +2140,14 @@ export const activeAugments: AugmentData[] = [
 
 export const inactiveAugments: AugmentData[] = [
 	{
-		tier: 3,
-		name: `Keepers III`,
-		groupID: `keepers`,
-		desc: `At the start of combat, your units grant adjacent allies a @ShieldHealth@ health shield for @ShieldDuration@ seconds.`,
+		tier: 1,
+		name: `Archangel's Embrace I`,
+		groupID: `archangelsEmbrace`,
+		desc: `Upon casting their Ability, your units gain Ability Power equal to @ManaPercent@% of their maximum Mana.`,
 		effects: {
-			'ShieldDuration': 8,
-			'ShieldHealth': 250,
+			'ManaPercent': 15,
 		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Keepers-III.TFT_Set6_Stage2.dds`,
-	},
-	{
-		tier: 3,
-		name: `Divine Intervention`,
-		groupID: `divineIntervention`,
-		desc: `Gain a Radiant Blessing loot orb.`,
-		effects: {},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Missing-T3.TFT_Set6.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Archangel-I.TFT_Set6_Stage2.dds`,
 	},
 	{
 		tier: 3,
@@ -2173,24 +2161,82 @@ export const inactiveAugments: AugmentData[] = [
 	},
 	{
 		tier: 1,
-		name: `Archangel's Embrace I`,
-		groupID: `archangelsEmbrace`,
-		desc: `Upon casting their Ability, your units gain Ability Power equal to @ManaPercent@% of their maximum Mana.`,
+		name: `At Odds I`,
+		groupID: `atOdds`,
+		desc: `Your 1, 3, and 5-cost units gain @Stats@ Attack Damage and Ability Power.`,
 		effects: {
-			'ManaPercent': 15,
+			'Stats': 20,
 		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Archangel-I.TFT_Set6_Stage2.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Missing-T1.TFT_Set6.dds`,
 	},
 	{
 		tier: 3,
-		name: `Second Wind III`,
-		groupID: `secondWind`,
-		desc: `After @Delay@ seconds of combat, your units heal @HealPercent@% of their missing Health.`,
+		name: `At Odds II`,
+		groupID: `atOdds`,
+		desc: `Your 1, 3, and 5-cost units gain @Stats@ Attack Damage and Ability Power.`,
 		effects: {
-			'HealPercent': 100,
-			'Delay': 10,
+			'Stats': 40,
 		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Second-Wind-III.TFT_Set6_Stage2.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Missing-T3.TFT_Set6.dds`,
+	},
+	{
+		tier: 2,
+		name: `At Odds II`,
+		groupID: `atOdds`,
+		desc: `Your 1, 3, and 5-cost units gain @Stats@ Attack Damage and Ability Power.`,
+		effects: {
+			'Stats': 30,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Missing-T2.TFT_Set6.dds`,
+	},
+	{
+		tier: 1,
+		name: `Break Even I`,
+		groupID: `breakEven`,
+		desc: `Your 2 and 4-cost units gain @Stats@ Attack Damage and Ability Power.`,
+		effects: {
+			'Stats': 20,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Missing-T1.TFT_Set6.dds`,
+	},
+	{
+		tier: 2,
+		name: `Break Even II`,
+		groupID: `breakEven`,
+		desc: `Your 2 and 4-cost units gain @Stats@ Attack Damage and Ability Power.`,
+		effects: {
+			'Stats': 30,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Missing-T2.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `Break Even III`,
+		groupID: `breakEven`,
+		desc: `Your 2 and 4-cost units gain @Stats@ Attack Damage and Ability Power.`,
+		effects: {
+			'Stats': 40,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Missing-T3.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `Divine Intervention`,
+		groupID: `divineIntervention`,
+		desc: `Gain a Radiant Blessing loot orb.`,
+		effects: {},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Missing-T3.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `Keepers III`,
+		groupID: `keepers`,
+		desc: `At the start of combat, your units grant adjacent allies a @ShieldHealth@ health shield for @ShieldDuration@ seconds.`,
+		effects: {
+			'ShieldDuration': 8,
+			'ShieldHealth': 250,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Keepers-III.TFT_Set6_Stage2.dds`,
 	},
 	{
 		tier: 2,
@@ -2214,62 +2260,13 @@ export const inactiveAugments: AugmentData[] = [
 	},
 	{
 		tier: 3,
-		name: `At Odds II`,
-		groupID: `atOdds`,
-		desc: `Your 1, 3, and 5-cost units gain @Stats@ Attack Damage and Ability Power.`,
+		name: `Second Wind III`,
+		groupID: `secondWind`,
+		desc: `After @Delay@ seconds of combat, your units heal @HealPercent@% of their missing Health.`,
 		effects: {
-			'Stats': 40,
+			'HealPercent': 100,
+			'Delay': 10,
 		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Missing-T3.TFT_Set6.dds`,
-	},
-	{
-		tier: 2,
-		name: `At Odds II`,
-		groupID: `atOdds`,
-		desc: `Your 1, 3, and 5-cost units gain @Stats@ Attack Damage and Ability Power.`,
-		effects: {
-			'Stats': 30,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Missing-T2.TFT_Set6.dds`,
-	},
-	{
-		tier: 1,
-		name: `At Odds I`,
-		groupID: `atOdds`,
-		desc: `Your 1, 3, and 5-cost units gain @Stats@ Attack Damage and Ability Power.`,
-		effects: {
-			'Stats': 20,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Missing-T1.TFT_Set6.dds`,
-	},
-	{
-		tier: 1,
-		name: `Break Even I`,
-		groupID: `breakEven`,
-		desc: `Your 2 and 4-cost units gain @Stats@ Attack Damage and Ability Power.`,
-		effects: {
-			'Stats': 20,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Missing-T1.TFT_Set6.dds`,
-	},
-	{
-		tier: 3,
-		name: `Break Even III`,
-		groupID: `breakEven`,
-		desc: `Your 2 and 4-cost units gain @Stats@ Attack Damage and Ability Power.`,
-		effects: {
-			'Stats': 40,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Missing-T3.TFT_Set6.dds`,
-	},
-	{
-		tier: 2,
-		name: `Break Even II`,
-		groupID: `breakEven`,
-		desc: `Your 2 and 4-cost units gain @Stats@ Attack Damage and Ability Power.`,
-		effects: {
-			'Stats': 30,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Missing-T2.TFT_Set6.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Second-Wind-III.TFT_Set6_Stage2.dds`,
 	},
 ]

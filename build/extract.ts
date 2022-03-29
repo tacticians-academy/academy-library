@@ -1,4 +1,4 @@
-const LOAD_SET: SetNumber = 6.5
+const LOAD_SET: SetNumber = 1
 const LOAD_PBE = false
 
 import fetch from 'node-fetch'

@@ -333,11 +333,11 @@
 		"tier": 1,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{b6a10f15}",
+				"TraitData": "TFT6_Academy",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{030bcf19}",
+				"TraitData": "TFT6_Protector",
 				"__type": "TFTTraitContributionData"
 			}
 		],

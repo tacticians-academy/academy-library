@@ -4,10 +4,17 @@ export const LOCKED_STAR_LEVEL: Record<string, number> = {
 	TFT6_HexTechDragon: 3,
 }
 
-export const RETIRED_SPATULA_ITEM_IDS = [
-	1128, // Hellion
-	1158, // Cavalier
+export const RETIRED_ITEM_NAMES = [
+	`Battlecast Plating`,
+	`Inferno's Cinder`,
+	`Ironclad Emblem`,
+	`Legionnaire Emblem`,
+	`Spellweaver Emblem`,
+	`Spirit of the Dragon`,
+	`Vanguard's Cuirass`,
 ]
+
+export const RETIRED_SPATULA_ITEM_IDS = []
 
 export const SPATULA_ITEM_IDS = [
 	18, // Imperial
@@ -53,8 +60,10 @@ export const UNUSED_AUGMENT_NAME_KEYS = [
 ]
 
 export const TRAIT_DATA_SUBSTITUTIONS: Record<string, string> = {
+	'{b6a10f15}': 'TFT6_Academy',
 	'{e41d146c}': 'TFT6_Arcanist',
 	'{568f4f5c}': 'TFT6_Assassin',
+	'{05d7de9e}': 'TFT6_Cuddly',
 	'{161a5685}': 'TFT6_Syndicate',
 	'{b7403726}': 'TFT6_Bodyguard',
 	'{dbb82b57}': 'TFT6_Bruiser',
@@ -65,12 +74,15 @@ export const TRAIT_DATA_SUBSTITUTIONS: Record<string, string> = {
 	'{4f6f1a9d}': 'TFT6_Enchanter',
 	'{0907e6f1}': 'TFT6_Enforcer',
 	'{7a7004b4}': 'TFT6_Glutton',
+	'{3ddd1ef4}': 'TFT6_Imperial',
 	'{cac372b9}': 'TFT6_Innovator',
 	'{de28b133}': 'TFT6_Mercenary',
 	'{5dfaa4aa}': 'TFT6_Mutant',
+	'{030bcf19}': 'TFT6_Protector',
 	'{e6a2f180}': 'TFT6_Rivals',
 	'{bd30b5b9}': 'TFT6_Scholar',
 	'{8b9f7f1a}': 'TFT6_Scrap',
+	'{56e6ca09}': 'TFT6_Sister',
 	'{3e362a6e}': 'TFT6_Sniper',
 	'{8e9af226}': 'TFT6_Socialite',
 	'{69d4c0d0}': 'TFT6_Transformer',

@@ -289,11 +289,11 @@
 		"tier": 4,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{3ddd1ef4}",
+				"TraitData": "TFT6_Imperial",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{030bcf19}",
+				"TraitData": "TFT6_Protector",
 				"__type": "TFTTraitContributionData"
 			},
 			{

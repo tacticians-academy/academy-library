@@ -12,6 +12,7 @@ export const SET_DATA = {
 export type SetNumber = keyof typeof SET_DATA
 export const SET_NUMBERS = Object.keys(SET_DATA).map(setKey => parseFloat(setKey) as SetNumber)
 
+export * from './aggregated.js'
 export * from './assets.js'
 export * from './imports.js'
 export * from './types.js'

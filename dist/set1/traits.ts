@@ -1,8 +1,5 @@
+import { TraitKey } from '../index.js'
 import type { TraitData } from '../index'
-
-export enum TraitKey {
-	Assassin = `Assassin`, Blademaster = `Blademaster`, Brawler = `Brawler`, Demon = `Demon`, Dragon = `Dragon`, Elementalist = `Elementalist`, Exile = `Exile`, Glacial = `Glacial`, Guardian = `Guardian`, Gunslinger = `Gunslinger`, Hextech = `Hextech`, Imperial = `Imperial`, Knight = `Knight`, Ninja = `Ninja`, Noble = `Noble`, Phantom = `Phantom`, Pirate = `Pirate`, Ranger = `Ranger`, Robot = `Robot`, Shapeshifter = `Shapeshifter`, Sorcerer = `Sorcerer`, Void = `Void`, Wild = `Wild`, Yordle = `Yordle`
-}
 
 export const traits: TraitData[] = [
 	{
