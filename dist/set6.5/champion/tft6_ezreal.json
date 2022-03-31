@@ -141,15 +141,15 @@
 				{
 					"mName": "ASBoost",
 					"mValues": [
-						0.20000000298023224,
-						0.20000000298023224,
-						0.20000000298023224,
-						0.20000000298023224,
-						0.20000000298023224,
-						0.20000000298023224,
-						0.20000000298023224
+						0.18000000715255737,
+						0.18000000715255737,
+						0.18000000715255737,
+						0.18000000715255737,
+						0.18000000715255737,
+						0.18000000715255737,
+						0.18000000715255737
 					],
-					"mBaseP": 0.20000000298023224,
+					"mBaseP": 0.18000000715255737,
 					"mFormula": "P + 0",
 					"__type": "SpellDataValue"
 				},
@@ -385,9 +385,10 @@
 			"arType": 0,
 			"arBase": 40,
 			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 50,
+		"baseDamage": 45,
 		"baseArmor": 15,
 		"baseSpellBlock": 15,
 		"baseCritChance": 0.25,

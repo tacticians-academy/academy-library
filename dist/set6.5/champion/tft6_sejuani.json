@@ -212,12 +212,13 @@
 		"mMoveHeight": 0,
 		"mInitialMana": 20,
 		"mCharacterName": "TFT6_Sejuani",
-		"baseHP": 750,
+		"baseHP": 800,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
 			"arBase": 80,
 			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 55,

@@ -273,15 +273,15 @@
 				{
 					"mName": "MultiOrbDamage",
 					"mValues": [
-						0.800000011920929,
-						0.800000011920929,
-						0.800000011920929,
-						0.800000011920929,
-						0.800000011920929,
-						0.800000011920929,
-						0.800000011920929
+						0.6000000238418579,
+						0.6000000238418579,
+						0.6000000238418579,
+						0.6000000238418579,
+						0.6000000238418579,
+						0.6000000238418579,
+						0.6000000238418579
 					],
-					"mBaseP": 0.800000011920929,
+					"mBaseP": 0.6000000238418579,
 					"__type": "SpellDataValue"
 				},
 				{
@@ -673,7 +673,7 @@
 				"movementComponent": {
 					"mAngularVelocity": -2.6500000953674316,
 					"mLinearVelocity": 900,
-					"mLifetime": 6,
+					"mLifetime": -1,
 					"mStartBoneName": "chest",
 					"__type": "CircleMovement"
 				},
@@ -684,12 +684,6 @@
 				"verticalFacing": {
 					"__type": "VeritcalFacingMatchVelocity"
 				},
-				"behaviors": [
-					{
-						"mDelay": 2,
-						"__type": "DestroyOnMovementComplete"
-					}
-				],
 				"__type": "MissileSpecification"
 			},
 			"mCastType": 4,
@@ -727,6 +721,7 @@
 			"arType": 0,
 			"arBase": 50,
 			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 45,

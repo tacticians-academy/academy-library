@@ -82,9 +82,9 @@
 					"mName": "RocketDamage",
 					"mValues": [
 						0,
-						220,
-						275,
-						350,
+						190,
+						245,
+						315,
 						0,
 						0,
 						0
@@ -396,9 +396,10 @@
 			"arType": 0,
 			"arBase": 50,
 			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 65,
+		"baseDamage": 55,
 		"baseArmor": 25,
 		"baseSpellBlock": 25,
 		"baseCritChance": 0.25,

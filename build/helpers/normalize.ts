@@ -264,6 +264,16 @@ export const SUBSTITUTE_EFFECT_KEYS: Record<string, string> = {
 	'{962760a9}': 'PercentAbilityPower',
 	'{a13cb3fa}': 'EggTurns',
 	'{b300068b}': 'ArmoryChoiceCount',
+	'{f49783e7}': 'BonusPercentPerAugment',
+
+	'{fb4355e3}': 'Damage1',
+	'{fc435776}': 'Damage2',
+	'{fd435909}': 'Damage3',
+	'{fe435a9c}': 'Damage4',
+	'{57271994}': 'MagicDamage1',
+	'{5a271e4d}': 'MagicDamage2',
+	'{59271cba}': 'MagicDamage3',
+	'{542714db}': 'MagicDamage4',
 }
 
 // Abilities

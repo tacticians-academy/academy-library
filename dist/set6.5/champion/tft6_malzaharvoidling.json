@@ -25,15 +25,15 @@
 				{
 					"mName": "DamageReducedPercent",
 					"mValues": [
-						0.25,
-						0.25,
-						0.25,
-						0.25,
-						0.25,
-						0.25,
-						0.25
+						0.20000000298023224,
+						0.20000000298023224,
+						0.20000000298023224,
+						0.20000000298023224,
+						0.20000000298023224,
+						0.20000000298023224,
+						0.20000000298023224
 					],
-					"mBaseP": 0.25,
+					"mBaseP": 0.20000000298023224,
 					"__type": "SpellDataValue"
 				},
 				{
@@ -182,6 +182,7 @@
 			"arType": 0,
 			"arBase": 80,
 			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 40,

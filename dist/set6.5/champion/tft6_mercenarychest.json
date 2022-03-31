@@ -13,6 +13,7 @@
 			"arType": 0,
 			"arBase": 12,
 			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 0,

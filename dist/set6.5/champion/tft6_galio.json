@@ -101,8 +101,8 @@
 					"mName": "Damage",
 					"mValues": [
 						200,
-						150,
-						225,
+						125,
+						175,
 						9001,
 						200,
 						200,
@@ -133,7 +133,7 @@
 					"mName": "StunDuration",
 					"mValues": [
 						1,
-						1,
+						1.5,
 						1.5,
 						10,
 						1.5,
@@ -162,15 +162,15 @@
 				{
 					"mName": "MaxHealthPercent",
 					"mValues": [
-						0.05999999865889549,
-						0.05999999865889549,
-						0.05999999865889549,
-						0.05999999865889549,
-						0.05999999865889549,
-						0.05999999865889549,
-						0.05999999865889549
+						0.07999999821186066,
+						0.07999999821186066,
+						0.07999999821186066,
+						0.07999999821186066,
+						0.07999999821186066,
+						0.07999999821186066,
+						0.07999999821186066
 					],
-					"mBaseP": 0.05999999865889549,
+					"mBaseP": 0.07999999821186066,
 					"__type": "SpellDataValue"
 				}
 			],
@@ -371,12 +371,13 @@
 		"mMoveHeight": 0,
 		"mInitialMana": 200,
 		"mCharacterName": "TFT6_Galio",
-		"baseHP": 1200,
+		"baseHP": 1300,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
 			"arBase": 300,
 			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 110,

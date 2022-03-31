@@ -645,8 +645,8 @@
 					"mName": "ADMult",
 					"mValues": [
 						1,
-						1.5,
-						1.600000023841858,
+						1.7000000476837158,
+						1.7999999523162842,
 						4,
 						3,
 						3.5,
@@ -661,9 +661,9 @@
 					"mName": "Damage",
 					"mValues": [
 						0,
-						150,
-						200,
-						500,
+						100,
+						125,
+						400,
 						0,
 						0,
 						0
@@ -1173,9 +1173,10 @@
 			"arType": 0,
 			"arBase": 40,
 			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 80,
+		"baseDamage": 70,
 		"baseArmor": 30,
 		"baseSpellBlock": 30,
 		"baseCritChance": 0.25,

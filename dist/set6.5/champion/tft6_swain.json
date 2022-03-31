@@ -338,9 +338,9 @@
 					"mName": "BaseDamage",
 					"mValues": [
 						0,
-						225,
-						300,
-						450,
+						250,
+						350,
+						500,
 						0,
 						0,
 						0
@@ -366,8 +366,8 @@
 					"mName": "Healing",
 					"mValues": [
 						80,
-						225,
 						250,
+						300,
 						350,
 						80,
 						80,
@@ -520,9 +520,10 @@
 			"arType": 0,
 			"arBase": 85,
 			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 45,
+		"baseDamage": 40,
 		"baseArmor": 45,
 		"baseSpellBlock": 45,
 		"baseCritChance": 0.25,

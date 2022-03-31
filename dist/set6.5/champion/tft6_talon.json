@@ -123,7 +123,7 @@
 						0,
 						450,
 						650,
-						950,
+						850,
 						0,
 						0,
 						0
@@ -264,9 +264,10 @@
 		"primaryAbilityResource": {
 			"arBase": 0,
 			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 50,
+		"baseDamage": 45,
 		"baseArmor": 25,
 		"baseSpellBlock": 25,
 		"baseCritChance": 0.25,

@@ -274,6 +274,7 @@
 		"primaryAbilityResource": {
 			"arType": 0,
 			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 55,

@@ -208,8 +208,8 @@
 					"mValues": [
 						0,
 						225,
-						325,
-						500,
+						300,
+						425,
 						0,
 						0,
 						0
@@ -302,6 +302,7 @@
 		"primaryAbilityResource": {
 			"arType": 0,
 			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 40,

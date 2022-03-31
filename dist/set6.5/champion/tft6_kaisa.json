@@ -573,8 +573,8 @@
 					"mName": "Damage",
 					"mValues": [
 						50,
-						70,
-						90,
+						75,
+						100,
 						180,
 						50,
 						50,
@@ -1155,6 +1155,7 @@
 			"arType": 0,
 			"arBase": 150,
 			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 60,
@@ -1164,7 +1165,7 @@
 		"critDamageMultiplier": 1.2999999523162842,
 		"baseMoveSpeed": 500,
 		"attackRange": 660,
-		"attackSpeed": 1.100000023841858,
+		"attackSpeed": 1.2000000476837158,
 		"basicAttack": {
 			"mAttackName": "TFT6_KaisaBasicAttack",
 			"__type": "AttackSlotData"

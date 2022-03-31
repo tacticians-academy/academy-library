@@ -10,11 +10,12 @@
 		"primaryAbilityResource": {
 			"arType": 0,
 			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 50,
-		"baseArmor": 70,
-		"baseSpellBlock": 70,
+		"baseArmor": 55,
+		"baseSpellBlock": 55,
 		"baseCritChance": 0.25,
 		"critDamageMultiplier": 1.5,
 		"baseMoveSpeed": 500,
@@ -138,15 +139,15 @@
 				{
 					"mName": "AllyADAPBuff",
 					"mValues": [
-						20,
-						20,
-						20,
-						20,
-						20,
-						20,
-						20
+						15,
+						15,
+						15,
+						15,
+						15,
+						15,
+						15
 					],
-					"mBaseP": 20,
+					"mBaseP": 15,
 					"__type": "SpellDataValue"
 				},
 				{

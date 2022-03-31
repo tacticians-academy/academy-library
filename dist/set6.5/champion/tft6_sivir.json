@@ -320,15 +320,15 @@
 				{
 					"mName": "PercentDamage",
 					"mValues": [
-						0.33000001311302185,
-						0.33000001311302185,
-						0.33000001311302185,
-						0.33000001311302185,
-						0.33000001311302185,
-						0.33000001311302185,
-						0.33000001311302185
+						0.4000000059604645,
+						0.4000000059604645,
+						0.4000000059604645,
+						0.4000000059604645,
+						0.4000000059604645,
+						0.4000000059604645,
+						0.4000000059604645
 					],
-					"mBaseP": 0.33000001311302185,
+					"mBaseP": 0.4000000059604645,
 					"mFormula": "P",
 					"__type": "SpellDataValue"
 				},
@@ -702,16 +702,17 @@
 			"arType": 0,
 			"arBase": 60,
 			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 70,
+		"baseDamage": 65,
 		"baseArmor": 30,
 		"baseSpellBlock": 30,
 		"baseCritChance": 0.25,
 		"critDamageMultiplier": 1.2999999523162842,
 		"baseMoveSpeed": 500,
 		"attackRange": 890,
-		"attackSpeed": 0.699999988079071,
+		"attackSpeed": 0.800000011920929,
 		"spellNames": [
 			"TFT6_SivirW",
 			"BaseSpell",

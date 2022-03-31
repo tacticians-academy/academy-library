@@ -1,5 +1,5 @@
-const LOAD_SET: SetNumber = 1
 const LOAD_PBE = false
+const LOAD_SET: SetNumber = 6.5
 
 import fetch from 'node-fetch'
 import fs from 'fs/promises'

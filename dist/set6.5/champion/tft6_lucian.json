@@ -380,9 +380,9 @@
 					"mName": "Damage",
 					"mValues": [
 						0,
-						185,
-						295,
-						315,
+						175,
+						275,
+						300,
 						500,
 						625,
 						750
@@ -567,9 +567,10 @@
 			"arType": 0,
 			"arBase": 40,
 			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 60,
+		"baseDamage": 55,
 		"baseArmor": 30,
 		"baseSpellBlock": 30,
 		"baseCritChance": 0.25,

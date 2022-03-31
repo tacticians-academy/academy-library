@@ -120,12 +120,13 @@
 					"mValues": [
 						6,
 						6,
-						6,
-						6,
+						7,
+						10,
 						6,
 						6,
 						6
 					],
+					"{3f95426c}": false,
 					"mBaseP": 6,
 					"__type": "SpellDataValue"
 				},
@@ -432,6 +433,7 @@
 			"arType": 0,
 			"arBase": 40,
 			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 60,

@@ -1,1654 +1,6 @@
 {
 	"items": [
 		{
-			"desc": "tft_item_description_StarGuardianSpatulaItem",
-			"effects": {
-				"Mana": 15
-			},
-			"from": [
-				4,
-				8
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/TFT3_Item_StarGuardian.dds",
-			"id": 119,
-			"name": "tft_item_name_StarGuardianSpatulaItem",
-			"unique": true
-		},
-		{
-			"desc": "tft_item_description_SlicerSpatulaItem",
-			"effects": {
-				"AD": 15
-			},
-			"from": [
-				1,
-				8
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/TFT3_Item_Blademaster.dds",
-			"id": 135,
-			"name": "tft_item_name_UmbralGlaive",
-			"unique": true
-		},
-		{
-			"desc": "tft_item_description_InfiltratorSpatulaItem",
-			"effects": {
-				"AS": 15
-			},
-			"from": [
-				2,
-				8
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/TFT3_Item_Infiltrator.dds",
-			"id": 117,
-			"name": "tft_item_name_InfiltratorSpatulaItem",
-			"unique": true
-		},
-		{
-			"desc": "tft_item_description_CelestialSpatulaItem",
-			"effects": {
-				"MagicResist": 25
-			},
-			"from": [
-				8,
-				6
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/TFT3_Item_Celestial.dds",
-			"id": 116,
-			"name": "tft_item_name_CelestialSpatulaItem",
-			"unique": true
-		},
-		{
-			"desc": "The holder gains the Protector trait.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>",
-			"effects": {
-				"Health": 200
-			},
-			"from": [
-				8,
-				7
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/TFT3_Item_Protector.dds",
-			"id": 120,
-			"name": "Protector's Chestguard",
-			"unique": true
-		},
-		{
-			"desc": "tft_item_description_DarkStarSpatulaItem",
-			"effects": {
-				"CritChance": 10,
-				"{c4b5579c}": 10
-			},
-			"from": [
-				9,
-				8
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/TFT3_Item_DarkStar.dds",
-			"id": 118,
-			"name": "tft_item_name_DarkStarSpatulaItem",
-			"unique": true
-		},
-		{
-			"desc": "tft_item_description_RebelSpatulaItem",
-			"effects": {
-				"Armor": 25
-			},
-			"from": [
-				5,
-				8
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/TFT3_Item_Rebel.dds",
-			"id": 136,
-			"name": "tft_item_name_RebelSpatulaItem",
-			"unique": true
-		},
-		{
-			"desc": "tft_item_description_DemolitionistSpatulaItem",
-			"effects": {
-				"AP": 20
-			},
-			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/TFT3_Item_Demolitionist.dds",
-			"id": 127,
-			"name": "tft_item_name_DemolitionistSpatulaItem",
-			"unique": true
-		},
-		{
-			"desc": "The wearer gains the Battlecast trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
-			"effects": {
-				"AP": 20
-			},
-			"from": [
-				3,
-				8
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/TFT_Item_Battlecast.dds",
-			"id": 128,
-			"name": "Battlecast Plating",
-			"unique": true
-		},
-		{
-			"desc": "The wearer is also a Berserker.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
-			"effects": {
-				"CritChance": 10,
-				"{c4b5579c}": 10
-			},
-			"from": [
-				9,
-				8
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/TFT_Item_BerserkerAxe.dds",
-			"id": 131,
-			"name": "Berserker's Axe",
-			"unique": true
-		},
-		{
-			"desc": "The wearer is also an Inferno.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
-			"effects": {
-				"AP": 20
-			},
-			"from": [
-				3,
-				8
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/TFT_Item_InfernoCinder.dds",
-			"id": 122,
-			"name": "Inferno's Cinder",
-			"unique": true
-		},
-		{
-			"desc": "TFT_item_description_BladeOfTheRuinedKing",
-			"effects": {
-				"AS": 15
-			},
-			"from": [
-				2,
-				8
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/TFT_Item_BladeOfTheRuinedKing.dds",
-			"id": 107,
-			"name": "TFT_item_name_BladeOfTheRuinedKing",
-			"unique": true
-		},
-		{
-			"desc": "tft_item_description_SteelSphere",
-			"effects": {
-				"Mana": 20
-			},
-			"from": [
-				4,
-				8
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/TFT_Item_MagesCap.dds",
-			"id": 129,
-			"name": "tft_item_name_SteelSphere",
-			"unique": true
-		},
-		{
-			"desc": "The wearer is also a Warden.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
-			"effects": {
-				"Armor": 25
-			},
-			"from": [
-				5,
-				8
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/TFT_Item_WardensMail.dds",
-			"id": 134,
-			"name": "Warden's Mail",
-			"unique": true
-		},
-		{
-			"desc": "TFT_item_description_FrozenMallet",
-			"effects": {
-				"Health": 200
-			},
-			"from": [
-				8,
-				7
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/TFT_Item_FrozenMallet.dds",
-			"id": 133,
-			"name": "TFT_item_name_FrozenMallet",
-			"unique": true
-		},
-		{
-			"desc": "The wearer is also Light.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
-			"effects": {
-				"MagicResist": 25
-			},
-			"from": [
-				6,
-				8
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/TFT_Item_TalismanofLight.dds",
-			"id": 132,
-			"name": "Talisman of Light",
-			"unique": true
-		},
-		{
-			"desc": "The holder is also an Assassin.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>",
-			"effects": {
-				"AD": 15
-			},
-			"from": [
-				1,
-				8
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/TFT_Item_YoumuusGhostblade.dds",
-			"id": 130,
-			"name": "Youmuu's Ghostblade",
-			"unique": true
-		},
-		{
-			"desc": "The holder gains the Divine trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
-			"effects": {
-				"AD": 15
-			},
-			"from": [
-				8,
-				1
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/TFT_Item_Set4Divine.TFT_Set4.dds",
-			"id": 108,
-			"name": "Sword of the Divine",
-			"unique": true
-		},
-		{
-			"desc": "The holder gains the Vanguard trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
-			"effects": {
-				"Armor": 25
-			},
-			"from": [
-				5,
-				8
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/TFT_Item_Set4Vanguard.TFT_Set4.dds",
-			"id": 114,
-			"name": "Vanguard's Cuirass",
-			"unique": true
-		},
-		{
-			"desc": "The holder gains the Duelist trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
-			"effects": {
-				"AS": 15
-			},
-			"from": [
-				2,
-				8
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/TFT_Item_Set4Duelist.TFT_Set4.dds",
-			"id": 109,
-			"name": "Duelist's Zeal",
-			"unique": true
-		},
-		{
-			"desc": "The holder gains the Dusk trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
-			"effects": {
-				"AP": 15
-			},
-			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/TFT_Item_Set4Dusk.TFT_Set4.dds",
-			"id": 121,
-			"name": "Aspect of Dusk",
-			"unique": true
-		},
-		{
-			"desc": "The wearer gains the Warlord trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
-			"effects": {
-				"Health": 200
-			},
-			"from": [
-				8,
-				7
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/TFT_Item_Set4Warlord.TFT_Set4.dds",
-			"id": 110,
-			"name": "Warlord's Banner",
-			"unique": true
-		},
-		{
-			"desc": "The holder gains the Mage trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
-			"effects": {
-				"Mana": 15
-			},
-			"from": [
-				4,
-				8
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/TFT_Item_Set4MageCap.TFT_Set4.dds",
-			"id": 113,
-			"name": "Mage's Hat",
-			"unique": true
-		},
-		{
-			"desc": "The holder gains the Dragonsoul trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
-			"effects": {
-				"AP": 15
-			},
-			"from": [
-				3,
-				8
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/TFT4_Item_DragonsoulSpatula.TFT_Set4_Act2.dds",
-			"id": 115,
-			"name": "Spirit of the Dragon",
-			"unique": true
-		},
-		{
-			"desc": "The wearer gains the Assassin trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
-			"effects": {
-				"CritChance": 10,
-				"{c4b5579c}": 10
-			},
-			"from": [
-				9,
-				8
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/TFT_Item_YoumuusGhostblade.dds",
-			"id": 112,
-			"name": "Youmuu's Ghostblade",
-			"unique": true
-		},
-		{
-			"desc": "The holder gains the Elderwood trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
-			"effects": {
-				"MagicResist": 25
-			},
-			"from": [
-				6,
-				8
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/TFT_Item_Set4Elderwood.TFT_Set4.dds",
-			"id": 111,
-			"name": "Elderwood Sprout",
-			"unique": true
-		},
-		{
-			"desc": "When combat begins, all of the holder's allies within @HexRange@ hex in the same row gain %i:scaleAP% <TFTShadowItemBonus>@BonusAP@ Ability Power</TFTShadowItemBonus> for the rest of combat. <TFTShadowItemPenalty>The holder loses %i:scaleAP% @APLost@ Ability Power instead of gaining any.</TFTShadowItemPenalty>",
-			"effects": {
-				"MagicResist": 20,
-				"Mana": 15,
-				"ManaRestore": 10,
-				"{4ab45fc2}": 20,
-				"{9b1e8f37}": 1,
-				"{d49caf5d}": 60
-			},
-			"from": [
-				1006,
-				1004
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Chalice_of_Power.dds",
-			"id": 1046,
-			"name": "Chalice of Malice",
-			"unique": false
-		},
-		{
-			"desc": "The holder's attacks restore %i:scaleMana% <TFTShadowItemBonus>@FlatManaRestore@ additional Mana.</TFTShadowItemBonus>",
-			"effects": {
-				"AD": 10,
-				"Mana": 15,
-				"{4b9a3b61}": 16,
-				"{f30a4313}": "null"
-			},
-			"from": [
-				1001,
-				1004
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Spear_of_Shojin.dds",
-			"id": 1014,
-			"name": "Spectral Spear of Shojin",
-			"unique": false
-		},
-		{
-			"desc": "After casting their Ability, the holder gains %i:scaleMana% <TFTShadowItemBonus>@PostCastMana@</TFTShadowItemBonus> Mana.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
-			"effects": {
-				"HealthThreshold": 60,
-				"Mana": 30,
-				"ManaRestore": 20,
-				"{7f7f2c03}": 50,
-				"{b7559647}": 40
-			},
-			"from": [
-				1004,
-				1004
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Blue_Buff.dds",
-			"id": 1044,
-			"name": "Very Dark Blue Buff",
-			"unique": true
-		},
-		{
-			"desc": "When combat begins, the holder <TFTShadowItemPenalty>reduces the Attack Speed of all allies within @HexRange@ hexes in the same row by %i:scaleAS% @AttackSpeedReduction@%.</TFTShadowItemPenalty> <TFTShadowItemBonus>The holder then gains %i:scaleAS% @AttackSpeed@% Attack Speed for each affected ally.</TFTShadowItemBonus>",
-			"effects": {
-				"AD": 10,
-				"AttackSpeed": 60,
-				"Health": 150,
-				"{9b1e8f37}": 1,
-				"{ab417ff9}": 20
-			},
-			"from": [
-				1001,
-				1007
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Zekes_Herald.dds",
-			"id": 1017,
-			"name": "Zeke's Bleak Herald",
-			"unique": false
-		},
-		{
-			"desc": "The holder heals themself for @HealingPerEnemy@ Health every @SecondsBetweenHeals@ seconds for each unit targeting them.",
-			"effects": {
-				"Armor": 20,
-				"MagicResist": 20,
-				"{b5fbe7e0}": 70,
-				"{becd2915}": 2
-			},
-			"from": [
-				1005,
-				1006
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Gargoyle_Stoneplate.dds",
-			"id": 1056,
-			"name": "Gargoyle Stoneplate Of Immortality",
-			"unique": false
-		},
-		{
-			"desc": "Grants %i:scaleArmor% @TooltipDisplayArmor@ bonus Armor (including components).",
-			"effects": {
-				"Armor": 40,
-				"BonusArmor": 460,
-				"{1ae1b8b1}": 50,
-				"{89ed4f7d}": 500
-			},
-			"from": [
-				1005,
-				1005
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Bramble_Vest.dds",
-			"id": 1055,
-			"name": "Refracted Bramble Vest",
-			"unique": false
-		},
-		{
-			"desc": "Grants %i:scaleAP% <TFTShadowItemBonus>@TooltipDisplayAP@</TFTShadowItemBonus> bonus Ability Power (including components). ",
-			"effects": {
-				"AP": 20,
-				"{446bf6cd}": "null",
-				"{59b19467}": 120,
-				"{d49caf5d}": 100
-			},
-			"from": [
-				1003,
-				1003
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Rabadons_Deathcap.dds",
-			"id": 1033,
-			"name": "Rabadon's Caustic Deathcap",
-			"unique": false
-		},
-		{
-			"desc": "It must do <i>something <TFTShadowItemBonus>evil</TFTShadowItemBonus></i>...",
-			"effects": {
-				"{fe9818ef}": 5
-			},
-			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Spatula.dds",
-			"id": 1008,
-			"name": "Shadow Spatula",
-			"unique": false
-		},
-		{
-			"desc": "%i:scaleMR% +@MagicResist@ Magic Resist",
-			"effects": {
-				"MagicResist": 20
-			},
-			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Negatron_Cloak.dds",
-			"id": 1006,
-			"name": "Shadow Cloak",
-			"unique": false
-		},
-		{
-			"desc": "<TFTShadowItemBonus>Every other</TFTShadowItemBonus> attack from the holder unleashes chain lightning that strikes @1StarBounces@ enemies, dealing @Damage@ magic damage and reducing their Magic Resist by @MRShred@% for @MRShredDuration@ seconds. ",
-			"effects": {
-				"AS": 10,
-				"Damage": 70,
-				"Mana": 15,
-				"{12a15e9e}": 4,
-				"{15144cec}": 4,
-				"{440f813d}": 4,
-				"{79e2ec7b}": 4,
-				"{84a41a6e}": "null",
-				"{b223097c}": 5,
-				"{fe079f34}": 50
-			},
-			"from": [
-				1002,
-				1004
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Statikk_Shiv.dds",
-			"id": 1024,
-			"name": "Statikk Stiletto",
-			"unique": false
-		},
-		{
-			"desc": "The holder radiates an aura to <TFTShadowItemBonus>all allies on the board</TFTShadowItemBonus> except themself, and heals them for <TFTShadowItemPenalty>@MissingHealthHeal@%</TFTShadowItemPenalty> of their missing Health every @HealTickRate@ seconds.",
-			"effects": {
-				"Health": 150,
-				"Mana": 15,
-				"{2f031c0f}": "null",
-				"{5cc52ba8}": 8,
-				"{7b6cc2f7}": 30,
-				"{c9f222c0}": 5
-			},
-			"from": [
-				1004,
-				1007
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Redemption.dds",
-			"id": 1047,
-			"name": "Sacrificial Redemption",
-			"unique": false
-		},
-		{
-			"desc": "The holder gains immunity to crowd control <TFTShadowItemBonus>for the entirety of combat</TFTShadowItemBonus>.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
-			"effects": {
-				"MagicResist": 20,
-				"{446bf6cd}": "null",
-				"{a2b76524}": 500,
-				"{c4b5579c}": 15
-			},
-			"from": [
-				1009,
-				1006
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Quicksilver.dds",
-			"id": 1069,
-			"name": "Caustic Quicksilver",
-			"unique": true
-		},
-		{
-			"desc": "%i:scaleAS% +@AS@ Attack Speed",
-			"effects": {
-				"AS": 10
-			},
-			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Recurve_Bow.dds",
-			"id": 1002,
-			"name": "Shadow Bow",
-			"unique": false
-		},
-		{
-			"desc": "When combat begins, the holder and all allies within @HexRange@ hexes in the same row gain <TFTShadowItemBonus>@BonusDefenses@ bonus Armor and Magic Resist</TFTShadowItemBonus>.",
-			"effects": {
-				"AP": 10,
-				"Armor": 20,
-				"DamageReduction": 25,
-				"{084b548f}": "null",
-				"{6b668596}": "null",
-				"{9b1e8f37}": 2,
-				"{bd072701}": 60
-			},
-			"from": [
-				1003,
-				1005
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Locket_of_the_Iron_Solari.dds",
-			"id": 1035,
-			"name": "Locket of the Silver Lunari",
-			"unique": false
-		},
-		{
-			"desc": "<TFTShadowItemBonus>At the beginning of combat, the holder gains both of the following:</TFTShadowItemBonus><li>+@BonusAD@ Attack Damage and +@BonusSP@ Ability Power.</li> <li>Attacks and Abilities heal for @TraitMultiplier@% of damage dealt.</li><br><TFTShadowItemPenalty>These bonuses expire after each takedown, and renew on the next.</TFTShadowItemPenalty>",
-			"effects": {
-				"BonusAD": 60,
-				"CritChance": 15,
-				"Mana": 15,
-				"{a60806db}": 66.66699981689453,
-				"{ae49cc70}": 60,
-				"{c0c9af7f}": 60
-			},
-			"from": [
-				1004,
-				1009
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Hand_of_Justice.dds",
-			"id": 1049,
-			"name": "Hand of Vengeance",
-			"unique": false
-		},
-		{
-			"desc": "When combat begins, the holder summons a whirlwind on the opposite side of the arena that removes the closest enemy from combat for <TFTShadowItemBonus>@BanishDuration@ seconds.</TFTShadowItemBonus><br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
-			"effects": {
-				"Health": 150,
-				"MagicResist": 20,
-				"{510fdb6a}": 10,
-				"{8a44b335}": "null"
-			},
-			"from": [
-				1006,
-				1007
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Zephyr.dds",
-			"id": 1067,
-			"name": "Turbulent Zephyr",
-			"unique": true
-		},
-		{
-			"desc": "Grants @CritChance@% Critical Strike Chance (including components). Each point of Critical Strike Chance above 100% becomes +@BonusCritDmgPerCritAbove100@% Critical Strike Damage. <br><br><TFTShadowItemBonus>The holder also gains @BonusCritDamage@% Critical Strike Damage.</TFTShadowItemBonus><br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
-			"effects": {
-				"AD": 10,
-				"CritChance": 75,
-				"{174c0f45}": "null",
-				"{45c7ed6b}": 1,
-				"{d34ac151}": 50
-			},
-			"from": [
-				1001,
-				1009
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Infinity_Edge.dds",
-			"id": 1019,
-			"name": "Sacrificial Infinity Edge",
-			"unique": true
-		},
-		{
-			"desc": "Reduces incoming magic damage by @MagicReduction@%.<br><br><TFTShadowItemBonus>Negates bonus damage from incoming critical hits.</TFTShadowItemBonus>",
-			"effects": {
-				"MagicReduction": 50,
-				"MagicResist": 40
-			},
-			"from": [
-				1006,
-				1006
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Dragons_Claw.dds",
-			"id": 1066,
-			"name": "Refracted Dragon's Claw",
-			"unique": false
-		},
-		{
-			"desc": "The holder's attacks and abilities reduce the target's Armor <TFTShadowItemBonus>and Magic Resist</TFTShadowItemBonus> by @ArmorMRReductionPercent@% for the rest of combat.<br><br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
-			"effects": {
-				"AS": 10,
-				"CritChance": 15,
-				"{43b05566}": "null",
-				"{ab66ee6d}": 70,
-				"{cc9fefa7}": 60,
-				"{e6eb5174}": "null"
-			},
-			"from": [
-				1002,
-				1009
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Last_Whisper.dds",
-			"id": 1029,
-			"name": "Final Whisper",
-			"unique": true
-		},
-		{
-			"desc": "Each time the holder casts their Ability, they gain empty maximum Health equal to @ManaRatio@% of their maximum Mana. The holder then heals for that amount.<br>",
-			"effects": {
-				"AP": 10,
-				"Mana": 15,
-				"{df6f64b9}": 700
-			},
-			"from": [
-				1003,
-				1004
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Archangel_Staff.dds",
-			"id": 1034,
-			"name": "Archdemon's Staff Of Immortality",
-			"unique": false
-		},
-		{
-			"desc": "The holder gains @CritDamageAmp@% Critical Strike Damage, and magic and true damage from their Ability can critically strike. <br><br><TFTShadowItemBonus>The first time they cast their Ability each combat, they gain an additional @BonusCritChance@% Critical Strike Chance for the remainder of combat (applies to that Ability cast).</TFTShadowItemBonus>",
-			"effects": {
-				"AP": 10,
-				"CritChance": 15,
-				"{353ede36}": 50,
-				"{8460b11d}": "null",
-				"{c34a89ec}": 30
-			},
-			"from": [
-				1003,
-				1009
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/TFT5_Item_Jeweled_Gauntlet_Shadow.dds",
-			"id": 1039,
-			"name": "Sacrificial Gauntlet",
-			"unique": false
-		},
-		{
-			"desc": "Physical damage heals the holder for @Lifesteal@% of the damage dealt. <TFTShadowItemBonus>Each time the holder heals to @HealthThresholdPercent@% Health, they gain @BonusAS@% Attack Speed for @BonusASDuration@ seconds.</TFTShadowItemBonus> <TFTShadowItemPenalty>The holder takes @HealthLossPercent@% of their maximum Health in true damage at the beginning of combat or upon being equipped.</TFTShadowItemPenalty>",
-			"effects": {
-				"AD": 10,
-				"BonusAS": 60,
-				"LifeSteal": 40,
-				"MagicResist": 20,
-				"{349474cc}": 4,
-				"{6e176c5b}": 90,
-				"{a603b641}": 10
-			},
-			"from": [
-				1001,
-				1006
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Bloodthirster.dds",
-			"id": 1016,
-			"name": "Riskthirster",
-			"unique": false
-		},
-		{
-			"desc": "%i:scaleHealth% +@Health@ Health",
-			"effects": {
-				"Health": 150
-			},
-			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Gaints_Belt.dds",
-			"id": 1007,
-			"name": "Shadow Belt",
-			"unique": false
-		},
-		{
-			"desc": "Contributing to a kill grants the holder %i:scaleAD% <TFTShadowItemBonus>@ADPerStack@ Attack Damage</TFTShadowItemBonus> for the rest of combat. This effect can stack any number of times (starting at @StartingStacks@).",
-			"effects": {
-				"AD": 20,
-				"ADPerStack": 20,
-				"{446bf6cd}": "null",
-				"{ad68ce80}": 4
-			},
-			"from": [
-				1001,
-				1001
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Death_Blade.dds",
-			"id": 1011,
-			"name": "Caustic Deathblade",
-			"unique": false
-		},
-		{
-			"desc": "At the beginning of each planning phase, the holder equips 2 temporary items. These are always full shadow items.<br><br><tftitemrules>[Consumes Three Item Slots]</tftitemrules>",
-			"effects": {
-				"CritChance": 15,
-				"{c4b5579c}": 15
-			},
-			"from": [
-				1009,
-				1009
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Thieves_Gloves.dds",
-			"id": 1099,
-			"name": "Trickster's Gloves",
-			"unique": false
-		},
-		{
-			"desc": "Increases the holder's Attack Range by @HexRangeIncrease@ hex. Additionally, the holder gains %i:scaleAS% <TFTShadowItemBonus>+@BonusAS@% bonus Attack Speed</TFTShadowItemBonus> <TFTShadowItemPenalty>when there are no enemies within @HexRequirement@ hex.</TFTShadowItemPenalty><br><br>The holder's attacks can no longer miss.<br><br>",
-			"effects": {
-				"AS": 20,
-				"BonusAS": 60,
-				"{16394c87}": 1,
-				"{c4a58dad}": 1
-			},
-			"from": [
-				1002,
-				1002
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Rapid_Fire_Cannon.dds",
-			"id": 1022,
-			"name": "Rapid Deathcannon",
-			"unique": false
-		},
-		{
-			"desc": "%i:scaleAP% +@AP@ Ability Power",
-			"effects": {
-				"AP": 10
-			},
-			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Needlessly_Large_Rod.dds",
-			"id": 1003,
-			"name": "Shadow Rod",
-			"unique": false
-		},
-		{
-			"desc": "@PercentDamage@% of incoming damage is stored. Every @SecondsBetweenProcs@ seconds, the holder's next attack unleashes this stored damage as true damage.",
-			"effects": {
-				"AS": 10,
-				"Armor": 20,
-				"PercentDamage": 50,
-				"{52bbe087}": 3
-			},
-			"from": [
-				1005,
-				1002
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Titans_Resolve.dds",
-			"id": 1025,
-			"name": "Titan's Revenge",
-			"unique": false
-		},
-		{
-			"desc": "Reduces the Attack Speed of all enemies within @HexRadius@ hexes by <TFTShadowItemBonus>@AttackSpeedSlow@%</TFTShadowItemBonus>.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
-			"effects": {
-				"Armor": 20,
-				"AttackSpeedSlow": 50,
-				"Mana": 15,
-				"{5cc52ba8}": 2,
-				"{5d62a2fb}": 35,
-				"{646772d6}": 1
-			},
-			"from": [
-				1004,
-				1005
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Frozen_Heart.dds",
-			"id": 1045,
-			"name": "Frozen Dark Heart",
-			"unique": true
-		},
-		{
-			"desc": "Enemies within @HexRange@ hexes have their Magic Resist reduced by @MRShred@%. When they cast an Ability, they are zapped taking magic damage equal to @ManaRatio@% of their max Mana.",
-			"effects": {
-				"AP": 10,
-				"MagicResist": 20,
-				"{431f8eab}": 50,
-				"{654f6457}": 20,
-				"{88070267}": 200,
-				"{9b1e8f37}": 2,
-				"{afc693e5}": 2,
-				"{fe079f34}": 40
-			},
-			"from": [
-				1003,
-				1006
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Ionic_Spark.dds",
-			"id": 1036,
-			"name": "Ionic Dark-Spark",
-			"unique": false
-		},
-		{
-			"desc": "Every <TFTShadowItemBonus>@ICD@ second(s)</TFTShadowItemBonus>, a random enemy within <TFTShadowItemBonus>@HexRange@ hexes</TFTShadowItemBonus> is burned for @BurnPercent@% of their maximum Health as true damage over @BurnDuration@ seconds. Any healing they receive is reduced by @GrievousWoundsPercent@%.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
-			"effects": {
-				"Armor": 20,
-				"Health": 150,
-				"ICD": 1,
-				"MonsterCap": 100,
-				"{2161bfa2}": 50,
-				"{3e22d4a2}": 8,
-				"{57706a69}": 25,
-				"{8bfdb3fa}": 2,
-				"{97e52ce8}": 10,
-				"{9b1e8f37}": 8,
-				"{ae5321a7}": 25
-			},
-			"from": [
-				1005,
-				1007
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Sunfire_Cape.dds",
-			"id": 1057,
-			"name": "Eclipse Cape",
-			"unique": true
-		},
-		{
-			"desc": "When combat begins, the holder shoots a beam straight ahead <TFTShadowItemPenalty>and behind</TFTShadowItemPenalty> that delays affected enemies' first ability cast, increasing their maximum Mana by <TFTShadowItemBonus>@CostIncrease@%</TFTShadowItemBonus> until they cast.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
-			"effects": {
-				"Armor": 20,
-				"{4516a18d}": 60,
-				"{a861afa0}": 65,
-				"{c4b5579c}": 15
-			},
-			"from": [
-				1005,
-				1009
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Shroud_of_Stillness.dds",
-			"id": 1059,
-			"name": "Dark Shroud of Stillness",
-			"unique": true
-		},
-		{
-			"desc": "The holder's attacks fire bolts at <TFTShadowItemBonus>@AdditionalTargets@ nearby enemies</TFTShadowItemBonus>, dealing <TFTShadowItemPenalty>@MultiplierForDamage@% of the holder's Attack Damage.</TFTShadowItemPenalty> These bolts can critically strike but do not apply on-hit effects. ",
-			"effects": {
-				"AS": 10,
-				"AdditionalTargets": 3,
-				"MagicResist": 20,
-				"{276ba2c8}": 50,
-				"{84a41a6e}": "null"
-			},
-			"from": [
-				1006,
-				1002
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Runaans_Hurricane.dds",
-			"id": 1026,
-			"name": "Runaan's Untamed Hurricane ",
-			"unique": false
-		},
-		{
-			"desc": "The holder's team gains <TFTShadowItemBonus>+@MaxArmySizeIncrease@</TFTShadowItemBonus> maximum team size, but <TFTShadowItemPenalty>the player's Little Legend takes +@PercentDamageIncrease@% damage after losing a battle</TFTShadowItemPenalty>.",
-			"effects": {
-				"{75994f47}": 100,
-				"{ec9a04d1}": 2
-			},
-			"from": [
-				1008,
-				1008
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Force_of_Nature.dds",
-			"id": 1088,
-			"name": "Force of Darkness",
-			"unique": false
-		},
-		{
-			"desc": "Prevents the holder's first death, placing them in stasis instead. After @StasisDuration@ seconds, they return with <TFTShadowItemBonus>@HealthRestorePercent@% Health</TFTShadowItemBonus> and shed all negative effects.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
-			"effects": {
-				"AD": 10,
-				"Armor": 20,
-				"{44ff9822}": "null",
-				"{c425872e}": 2,
-				"{e40a23df}": 1,
-				"{f304adec}": 100
-			},
-			"from": [
-				1001,
-				1005
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Guardian_Angel.dds",
-			"id": 1015,
-			"name": "Fallen Guardian Angel",
-			"unique": true
-		},
-		{
-			"desc": "%i:scaleArmor% +@Armor@ Armor",
-			"effects": {
-				"Armor": 20
-			},
-			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Chain_Vest.dds",
-			"id": 1005,
-			"name": "Shadow Vest",
-			"unique": false
-		},
-		{
-			"desc": "%i:scaleMana% +@Mana@ Mana",
-			"effects": {
-				"Mana": 15
-			},
-			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Tear_of_the_Goddess.dds",
-			"id": 1004,
-			"name": "Shadow Tear",
-			"unique": false
-		},
-		{
-			"desc": "+@CritChance@ Critical Strike Chance<br>+@DodgeChance@ Dodge Chance",
-			"effects": {
-				"CritChance": 5,
-				"{c4b5579c}": 10
-			},
-			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Sparring_Gloves.dds",
-			"id": 1009,
-			"name": "Shadow Gloves",
-			"unique": false
-		},
-		{
-			"desc": "The holder's Abilities and attacks do @SmallBonusPct@% bonus damage. If the target has more than @HealthThreshold@ maximum Health, the bonus increases to @LargeBonusPct@%.",
-			"effects": {
-				"AD": 10,
-				"AS": 10,
-				"HealthThreshold": 1100,
-				"{b8ae7546}": 80,
-				"{deada01e}": 10
-			},
-			"from": [
-				1001,
-				1002
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Giant_Slayer.dds",
-			"id": 1012,
-			"name": "Spectral Giantslayer",
-			"unique": false
-		},
-		{
-			"desc": "At the start of combat, the holder taunts enemies within @HexRadius@ hexes.<br><br>When the holder dies, an Unstable Voidspawn with <TFTShadowItemPenalty>@ZombieHealth@ Health</TFTShadowItemPenalty> arises and taunts enemies again. When it dies <TFTShadowItemBonus>it deals @ExplosionDamage@ true damage to enemies within @ExplosionHexRange@ hex(es).</TFTShadowItemBonus><br><br>Voidspawns that arise from summoned units are @SummonedStatReduction@% effective.",
-			"effects": {
-				"AS": 10,
-				"ExplosionDamage": 1000,
-				"Health": 150,
-				"{0707495a}": 100,
-				"{29ffd8fa}": 1,
-				"{55909259}": 500,
-				"{5cc52ba8}": 2,
-				"{7ff4f3b6}": 50,
-				"{f207284b}": 0.75
-			},
-			"from": [
-				1002,
-				1007
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_ZZRot_Portal.dds",
-			"id": 1027,
-			"name": "Unstable Zz'Rot Portal",
-			"unique": false
-		},
-		{
-			"desc": "tft_item_description_RadiantSpatula",
-			"effects": {
-				"{fe9818ef}": 5
-			},
-			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Spatula_Radiant.dds",
-			"id": 555,
-			"name": "tft_item_name_RadiantSpatula",
-			"unique": false
-		},
-		{
-			"desc": "Grants %i:scaleHealth% <TFTShadowItemBonus>@TooltipDisplayHealth@ bonus Health</TFTShadowItemBonus> (including components).",
-			"effects": {
-				"BonusHealth": 1700,
-				"Health": 300,
-				"{293eb6b0}": "null",
-				"{452fd23c}": 2000
-			},
-			"from": [
-				1007,
-				1007
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Warmogs_Armor.dds",
-			"id": 1077,
-			"name": "Warmog's Sacrificial Armor",
-			"unique": false
-		},
-		{
-			"desc": "The holder's magic and true damage from Abilities heals the ally with lowest percent Health for <TFTShadowItemBonus>@OmniVamp@% of the damage dealt.</TFTShadowItemBonus> <TFTShadowItemPenalty>This heal cannot affect the holder.</TFTShadowItemPenalty>",
-			"effects": {
-				"AD": 10,
-				"AP": 10,
-				"ShieldMax": 300,
-				"{ad16f688}": 100
-			},
-			"from": [
-				1001,
-				1003
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Hextech_Gunblade.dds",
-			"id": 1013,
-			"name": "Hextech Gunblade Of Immortality",
-			"unique": false
-		},
-		{
-			"desc": "When combat begins, the holder and all allies within @HexRange@ hexes in the same row gain a shield that blocks the first enemy Ability.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
-			"effects": {
-				"BonusPercentDamage": 25,
-				"Health": 150,
-				"{9b1e8f37}": 2,
-				"{c4b5579c}": 15
-			},
-			"from": [
-				1007,
-				1009
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Trap_Claw.dds",
-			"id": 1079,
-			"name": "Banshee's Claw",
-			"unique": true
-		},
-		{
-			"desc": "Attacks grant <TFTShadowItemBonus>+@AttackSpeedPerStack@%</TFTShadowItemBonus> bonus Attack Speed for the rest of combat. The bonus Attack Speed can stack any number of times.",
-			"effects": {
-				"AP": 10,
-				"AS": 10,
-				"AttackSpeedPerStack": 12,
-				"{8460b11d}": "null"
-			},
-			"from": [
-				1002,
-				1003
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Guinsoos_Rageblade.dds",
-			"id": 1023,
-			"name": "Guinsoo's Sacrificial Rageblade",
-			"unique": false
-		},
-		{
-			"desc": "When the holder deals magic or true damage with their Ability, they burn the target, dealing <TFTShadowItemBonus>@BurnPercent@% of the target's maximum Health</TFTShadowItemBonus> as true damage over @BurnDuration@ seconds, and reducing healing by @GrievousWoundsPercent@% for the duration of the burn.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
-			"effects": {
-				"AP": 10,
-				"Health": 150,
-				"MonsterCap": 100,
-				"TicksPerSecond": 1,
-				"{2161bfa2}": 50,
-				"{5064373e}": "null",
-				"{57706a69}": 100,
-				"{97e52ce8}": 25
-			},
-			"from": [
-				1003,
-				1007
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_Morellonomicon.dds",
-			"id": 1037,
-			"name": "Mor-evil-lonomicon",
-			"unique": true
-		},
-		{
-			"desc": "%i:scaleAD% +@AD@ Attack Damage",
-			"effects": {
-				"AD": 10
-			},
-			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Shadow/S_BF_Sword.dds",
-			"id": 1001,
-			"name": "Shadow Sword",
-			"unique": false
-		},
-		{
-			"desc": "The holder gains the Ironclad trait.<br><br><tftitemrules>[Unique - only one per champion.<br>Elusive - cannot be crafted.]</tftitemrules>",
-			"effects": {
-				"Health": 150
-			},
-			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Ironclad.dds",
-			"id": 106,
-			"name": "Ironclad Emblem",
-			"unique": true
-		},
-		{
-			"desc": "The holder gains the Redeemed trait.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
-			"effects": {
-				"MagicResist": 20
-			},
-			"from": [
-				6,
-				8
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Redeemed.dds",
-			"id": 104,
-			"name": "Redeemed Emblem",
-			"unique": true
-		},
-		{
-			"desc": "The holder gains the Coven trait.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
-			"effects": {
-				"Mana": 15
-			},
-			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Coven.dds",
-			"id": 1148,
-			"name": "Coven Emblem",
-			"unique": true
-		},
-		{
-			"desc": "The holder gains the Cannoneer trait.<br><br><tftitemrules>[Unique - only one per champion.<br>Elusive - cannot be crafted.]</tftitemrules>",
-			"effects": {
-				"Health": 150
-			},
-			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Cannoneer.dds",
-			"id": 1195,
-			"name": "Cannoneer Emblem",
-			"unique": true
-		},
-		{
-			"desc": "The holder gains the Skirmisher trait.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
-			"effects": {
-				"AD": 10
-			},
-			"from": [
-				8,
-				1
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Skirmisher.dds",
-			"id": 123,
-			"name": "Skirmisher Emblem",
-			"unique": true
-		},
-		{
-			"desc": "tft_item_description_Set5Skirmisher_RadiantSpat",
-			"effects": {
-				"AD": 10
-			},
-			"from": [
-				555,
-				1
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Skirmisher_Radiant.dds",
-			"id": 518,
-			"name": "tft_item_name_Set5Skirmisher_RadiantSpat",
-			"unique": true
-		},
-		{
-			"desc": "tft_item_description_Set5Forgotten_RadiantSpat",
-			"effects": {
-				"AD": 10
-			},
-			"from": [
-				555,
-				1001
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Forgotten_Radiant.dds",
-			"id": 2118,
-			"name": "tft_item_name_Set5Forgotten_RadiantSpat",
-			"unique": true
-		},
-		{
-			"desc": "The holder gains the Spellweaver trait.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
-			"effects": {
-				"AP": 10
-			},
-			"from": [
-				3,
-				8
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Spellweaver.dds",
-			"id": 105,
-			"name": "Spellweaver Emblem",
-			"unique": true
-		},
-		{
-			"desc": "tft_item_description_Set5Nightbringer_RadiantSpat",
-			"effects": {
-				"Health": 150
-			},
-			"from": [
-				555,
-				1007
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Nightbringer_Radiant.dds",
-			"id": 2178,
-			"name": "tft_item_name_Set5Nightbringer_RadiantSpat",
-			"unique": true
-		},
-		{
-			"desc": "The holder gains the Cavalier trait.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>",
-			"effects": {
-				"Armor": 20
-			},
-			"from": [
-				8,
-				5
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Cavalry.dds",
-			"id": 1158,
-			"name": "Cavalier Emblem",
-			"unique": true
-		},
-		{
-			"desc": "tft_item_description_Set5Spellweaver_RadiantSpat",
-			"effects": {
-				"AP": 10
-			},
-			"from": [
-				3,
-				555
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Spellweaver_Radiant.dds",
-			"id": 538,
-			"name": "tft_item_name_Set5Spellweaver_RadiantSpat",
-			"unique": true
-		},
-		{
-			"desc": "The holder gains the Dawnbringer trait.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
-			"effects": {
-				"Health": 150
-			},
-			"from": [
-				7,
-				8
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Dawnbringer.dds",
-			"id": 124,
-			"name": "Dawnbringer Emblem",
-			"unique": true
-		},
-		{
-			"desc": "tft_item_description_Set5Redeemed_RadiantSpat",
-			"effects": {
-				"MagicResist": 20
-			},
-			"from": [
-				6,
-				555
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Redeemed_Radiant.dds",
-			"id": 568,
-			"name": "tft_item_name_Set5Redeemed_RadiantSpat",
-			"unique": true
-		},
-		{
-			"desc": "The holder gains the Assassin trait.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
-			"effects": {
-				"CritChance": 10,
-				"{c4b5579c}": 5
-			},
-			"from": [
-				9,
-				8
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Assassin.dds",
-			"id": 125,
-			"name": "Assassin Emblem",
-			"unique": true
-		},
-		{
-			"desc": "tft_item_description_Set5Revenant_RadiantSpat",
-			"effects": {
-				"MagicResist": 20
-			},
-			"from": [
-				1006,
-				555
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Revenant_Radiant.dds",
-			"id": 2168,
-			"name": "tft_item_name_Set5Revenant_RadiantSpat",
-			"unique": true
-		},
-		{
-			"desc": "tft_item_description_Set5Abomination_RadiantSpat",
-			"effects": {
-				"CritChance": 10,
-				"{c4b5579c}": 5
-			},
-			"from": [
-				1009,
-				555
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Abomination_Radiant.dds",
-			"id": 2189,
-			"name": "tft_item_name_Set5Abomination_RadiantSpat",
-			"unique": true
-		},
-		{
-			"desc": "tft_item_description_Set5Renewer_RadiantSpat",
-			"effects": {
-				"Mana": 15
-			},
-			"from": [
-				555,
-				4
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Renewer_Radiant.dds",
-			"id": 548,
-			"name": "tft_item_name_Set5Renewer_RadiantSpat",
-			"unique": true
-		},
-		{
-			"desc": "The holder gains the Hellion trait.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
-			"effects": {
-				"AS": 10
-			},
-			"from": [
-				2,
-				8
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Hellion.dds",
-			"id": 1128,
-			"name": "Hellion Emblem",
-			"unique": true
-		},
-		{
-			"desc": "The holder gains the Nightbringer trait.<br><br><tftitemrules>[Unique - only one per champion.<br>Elusive - cannot be crafted.]</tftitemrules>",
-			"effects": {
-				"Health": 150
-			},
-			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Nightbringer.dds",
-			"id": 1178,
-			"name": "Nightbringer Emblem",
-			"unique": true
-		},
-		{
-			"desc": "The holder gains the Brawler trait.<br><br><tftitemrules>[Unique - only one per champion.<br>Elusive - cannot be crafted.]</tftitemrules>",
-			"effects": {
-				"Health": 150
-			},
-			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Brawler.dds",
-			"id": 1193,
-			"name": "Brawler Emblem",
-			"unique": true
-		},
-		{
-			"desc": "The holder gains the Invoker trait.<br><br><tftitemrules>[Unique - only one per champion.<br>Elusive - cannot be crafted.]</tftitemrules>",
-			"effects": {
-				"Health": 150
-			},
-			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Invoker.dds",
-			"id": 1192,
-			"name": "Invoker Emblem",
-			"unique": true
-		},
-		{
-			"desc": "The holder gains the Renewer trait.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>",
-			"effects": {
-				"Mana": 15
-			},
-			"from": [
-				8,
-				4
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Rejuvenator.dds",
-			"id": 126,
-			"name": "Renewer Emblem",
-			"unique": true
-		},
-		{
-			"desc": "The holder gains the Dragonslayer trait.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
-			"effects": {
-				"AP": 10
-			},
-			"from": [
-				1003,
-				1008
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Dragonslayer.dds",
-			"id": 1138,
-			"name": "Dragonslayer Emblem",
-			"unique": true
-		},
-		{
-			"desc": "The holder gains the Forgotten trait.<br><br><tftitemrules>[Unique - only one per champion.<br>Elusive - cannot be crafted.]</tftitemrules>",
-			"effects": {
-				"Health": 150
-			},
-			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Forgotten.dds",
-			"id": 1118,
-			"name": "Forgotten Emblem",
-			"unique": true
-		},
-		{
-			"desc": "tft_item_description_Set5Assassin_RadiantSpat",
-			"effects": {
-				"CritChance": 10,
-				"{c4b5579c}": 5
-			},
-			"from": [
-				9,
-				555
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Assassin_Radiant.dds",
-			"id": 589,
-			"name": "tft_item_name_Set5Assassin_RadiantSpat",
-			"unique": true
-		},
-		{
-			"desc": "The holder gains the Ranger trait.<br><br><tftitemrules>[Unique - only one per champion.<br>Elusive - cannot be crafted.]</tftitemrules>",
-			"effects": {
-				"Health": 150
-			},
-			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Ranger.dds",
-			"id": 1190,
-			"name": "Ranger Emblem",
-			"unique": true
-		},
-		{
-			"desc": "The holder gains the Abomination trait.<br><br><tftitemrules>[Unique - only one per champion.<br>Elusive - cannot be crafted.]</tftitemrules>",
-			"effects": {
-				"Health": 150
-			},
-			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Aberration.dds",
-			"id": 1189,
-			"name": "Abomination Emblem",
-			"unique": true
-		},
-		{
-			"desc": "tft_item_description_Set5Ironclad_RadiantSpat",
-			"effects": {
-				"Armor": 20
-			},
-			"from": [
-				5,
-				555
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Ironclad_Radiant.dds",
-			"id": 558,
-			"name": "tft_item_name_Set5Ironclad_RadiantSpat",
-			"unique": true
-		},
-		{
-			"desc": "The holder gains the Knight trait.<br><br><tftitemrules>[Unique - only one per champion.<br>Elusive - cannot be crafted.]</tftitemrules>",
-			"effects": {
-				"Health": 150
-			},
-			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Knight.dds",
-			"id": 1196,
-			"name": "Knight Emblem",
-			"unique": true
-		},
-		{
-			"desc": "The holder gains the Mystic trait.<br><br><tftitemrules>[Unique - only one per champion.<br>Elusive - cannot be crafted.]</tftitemrules>",
-			"effects": {
-				"Health": 150
-			},
-			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Mystic.dds",
-			"id": 1197,
-			"name": "Mystic Emblem",
-			"unique": true
-		},
-		{
-			"desc": "tft_item_description_Set5Dawnbringer_RadiantSpat",
-			"effects": {
-				"Health": 150
-			},
-			"from": [
-				7,
-				555
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Dawnbringer_Radiant.dds",
-			"id": 578,
-			"name": "tft_item_name_Set5Dawnbringer_RadiantSpat",
-			"unique": true
-		},
-		{
-			"desc": "tft_item_description_Set5Legionnaire_RadiantSpat",
-			"effects": {
-				"AS": 10
-			},
-			"from": [
-				2,
-				555
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Legionnaire_Radiant.dds",
-			"id": 528,
-			"name": "tft_item_name_Set5Legionnaire_RadiantSpat",
-			"unique": true
-		},
-		{
-			"desc": "tft_item_description_Set5Hellion_RadiantSpat",
-			"effects": {
-				"AS": 10
-			},
-			"from": [
-				1002,
-				555
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Hellion_Radiant.dds",
-			"id": 2128,
-			"name": "tft_item_name_Set5Hellion_RadiantSpat",
-			"unique": true
-		},
-		{
-			"desc": "The holder gains the Legionnaire trait.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>",
-			"effects": {
-				"Health": 150
-			},
-			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Vanquisher.dds",
-			"id": 103,
-			"name": "Legionnaire Emblem",
-			"unique": true
-		},
-		{
-			"desc": "tft_item_description_Set5Cavalier_RadiantSpat",
-			"effects": {
-				"Armor": 20
-			},
-			"from": [
-				1005,
-				555
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Cavalier_Radiant.dds",
-			"id": 2158,
-			"name": "tft_item_name_Set5Cavalier_RadiantSpat",
-			"unique": true
-		},
-		{
-			"desc": "The holder gains the Draconic trait.<br><br><tftitemrules>[Unique - only one per champion.<br>Elusive - cannot be crafted.]</tftitemrules>",
-			"effects": {
-				"Health": 150
-			},
-			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Draconic.dds",
-			"id": 1191,
-			"name": "Draconic Emblem",
-			"unique": true
-		},
-		{
-			"desc": "tft_item_description_Set5Coven_RadiantSpat",
-			"effects": {
-				"Mana": 15
-			},
-			"from": [
-				1004,
-				555
-			],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Coven_Radiant.dds",
-			"id": 2148,
-			"name": "tft_item_name_Set5Coven_RadiantSpat",
-			"unique": true
-		},
-		{
-			"desc": "The holder gains the Sentinel trait.<br><br><tftitemrules>[Unique - only one per champion.<br>Elusive - cannot be crafted.]</tftitemrules>",
-			"effects": {
-				"Health": 150
-			},
-			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Sentinel.dds",
-			"id": 1194,
-			"name": "Sentinel Emblem",
-			"unique": true
-		},
-		{
-			"desc": "The holder gains the Revenant trait.<br><br><tftitemrules>[Unique - only one per champion.<br>Elusive - cannot be crafted.]</tftitemrules>",
-			"effects": {
-				"Health": 150
-			},
-			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Revenant.dds",
-			"id": 1168,
-			"name": "Revenant Emblem",
-			"unique": true
-		},
-		{
 			"desc": "Mercenary units have a @Chance@% chance to drop @Gold@ gold when they kill an enemy. Gain a Quinn.",
 			"effects": {
 				"Gold": 1,
@@ -1781,7 +133,7 @@
 		{
 			"desc": "Debonair champions take @DamageReduction@% less damage. Gain a Leona.",
 			"effects": {
-				"DamageReduction": 20
+				"DamageReduction": 15
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Irresistible-Charm-I.TFT_Set6_Stage2.dds",
@@ -1883,7 +235,7 @@
 		{
 			"desc": "Your Enforcers deal true damage to enemies below @HealthThreshold@% Health. Gain a Sejuani.",
 			"effects": {
-				"HealthThreshold": 50
+				"HealthThreshold": 80
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Swift-Justice-I.TFT_Set6_Stage2.dds",
@@ -1983,7 +335,7 @@
 			"desc": "The first time an Assassin drops to @HealthThreshold@% health, they briefly enter stealth, becoming untargetable and shedding all negative effects. Any excess damage is reduced by @DamageReduction@%. Gain a Talon.",
 			"effects": {
 				"DamageReduction": 80,
-				"HealthThreshold": 60,
+				"HealthThreshold": 70,
 				"{b1442c34}": 1.5
 			},
 			"from": [],
@@ -2144,7 +496,7 @@
 			"desc": "Your team counts as having 1 additional Innovator.",
 			"effects": {},
 			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/InnovatorHeart1.TFT_Set6.dds",
+			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/InnovatorHeart2.TFT_Set6.dds",
 			"id": 680,
 			"name": "Innovator Heart",
 			"unique": false
@@ -2280,10 +632,10 @@
 		{
 			"desc": "Yordles gain @DodgeIncrease@% Dodge Chance. Gain a Corki.",
 			"effects": {
-				"{cb270598}": 35
+				"{cb270598}": 30
 			},
 			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/SoSmall1.TFT_Set6.dds",
+			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/SoSmall2.TFT_Set6.dds",
 			"id": 845,
 			"name": "So Small",
 			"unique": false
@@ -2320,7 +672,7 @@
 		{
 			"desc": "Each time your Shop is refreshed, you have a @RerollPercent@% chance to gain a free refresh.",
 			"effects": {
-				"{c43e4438}": 40
+				"{c43e4438}": 45
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/GoldenTicket3.TFT_Set6.dds",
@@ -2333,7 +685,7 @@
 			"effects": {
 				"HealthThreshold": 60,
 				"{57de426e}": 50,
-				"{5cc52ba8}": 1
+				"{5cc52ba8}": 2
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Hexnova-I.TFT_Set6_Stage2.dds",
@@ -2444,7 +796,7 @@
 		{
 			"desc": "Twinshot's ranged attacks and Abilities can bounce once, dealing @BounceReduction@% less damage. Gain a Corki.",
 			"effects": {
-				"{4d2cb08a}": 50
+				"{4d2cb08a}": 66
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Sharpshooter2.TFT_Set6.dds",
@@ -2568,7 +920,7 @@
 		{
 			"desc": "Your units with more than @HealthThreshold@ maximum Health gain Attack Damage equal to @HealthPercent*100@% of their maximum Health.",
 			"effects": {
-				"HealthPercent": 0.029999999329447746,
+				"HealthPercent": 0.02500000037252903,
 				"HealthThreshold": 1400
 			},
 			"from": [],
@@ -2621,8 +973,8 @@
 		{
 			"desc": "Your Tactician heals @Heal@ Health, grows larger, and has @TooltipMaxHealth@ maximum Health.",
 			"effects": {
-				"Heal": 40,
-				"{4bff7d1c}": 140
+				"Heal": 35,
+				"{4bff7d1c}": 135
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Tiny-Titans-II.TFT_Set6_Stage2.dds",
@@ -2941,8 +1293,8 @@
 		{
 			"desc": "Snipers gain +@DamageAmp@% damage for each round fought from the same starting hex (Maximum +@MaxAmp@%). Gain an Ashe.",
 			"effects": {
-				"DamageAmp": 10,
-				"{9c9fe9fd}": 40
+				"DamageAmp": 8,
+				"{9c9fe9fd}": 32
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/SnipersNest1.TFT_Set6.dds",
@@ -2953,7 +1305,7 @@
 		{
 			"desc": "Champions appear in your Shop as if you were 1 level higher. Gain @Gold@ gold.",
 			"effects": {
-				"Gold": 5
+				"Gold": 8
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/HighEnd3.TFT_Set6.dds",
@@ -2975,7 +1327,7 @@
 		{
 			"desc": "Your units with no Traits active gain @HP@ Health and @AS@% Attack Speed.",
 			"effects": {
-				"AS": 50,
+				"AS": 60,
 				"{513ad265}": 300
 			},
 			"from": [],
@@ -2996,7 +1348,7 @@
 		{
 			"desc": "Your units with no Traits active gain @HP@ Health and @AS@% Attack Speed.",
 			"effects": {
-				"AS": 60,
+				"AS": 70,
 				"{513ad265}": 400
 			},
 			"from": [],
@@ -3008,7 +1360,7 @@
 		{
 			"desc": "Allies adjacent to a spotlight at the start of combat gain @PercentStats@% of its bonuses. Gain a Senna.",
 			"effects": {
-				"{b15c83f9}": 125
+				"{b15c83f9}": 100
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/ShareSpotlight3.TFT_Set6.dds",
@@ -3031,7 +1383,7 @@
 		{
 			"desc": "Your units with no Traits active gain @HP@ Health and @AS@% Attack Speed.",
 			"effects": {
-				"AS": 70,
+				"AS": 80,
 				"{513ad265}": 500
 			},
 			"from": [],
@@ -3043,7 +1395,7 @@
 		{
 			"desc": "At the start of combat, your highest Attack Speed champion creates two @CloneHealth@ Health copies of themself (excluding items).",
 			"effects": {
-				"{35be99a8}": 300
+				"{35be99a8}": 360
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Woodland-Trinket-II.TFT_Set6_Stage2.dds",
@@ -3098,10 +1450,13 @@
 			"unique": false
 		},
 		{
-			"desc": "When your units cast and deal Ability damage, the first target hit and a nearby enemy take @MagicDamage@ bonus magic damage.",
+			"desc": "When your units cast and deal Ability damage, the first target hit and a nearby enemy take @MagicDamage1@-@MagicDamage4@ (based on current Stage) magic damage.",
 			"effects": {
-				"MagicDamage": 100,
-				"{26a9a9b1}": 1
+				"{26a9a9b1}": 1,
+				"{542714db}": 130,
+				"{57271994}": 70,
+				"{59271cba}": 110,
+				"{5a271e4d}": 90
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Ludens-Echo-I.TFT_Set6_Stage2.dds",
@@ -3112,7 +1467,7 @@
 		{
 			"desc": "When your Syndicates die, they grant your other Syndicates @Stats@ Attack Damage and Ability Power. Gain an Ashe.",
 			"effects": {
-				"{6a311cec}": 20
+				"{6a311cec}": 15
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/OneForAll1.TFT_Set6.dds",
@@ -3121,10 +1476,13 @@
 			"unique": false
 		},
 		{
-			"desc": "When your units cast and deal Ability damage, the first target hit and a nearby enemy take @MagicDamage@ bonus magic damage.",
+			"desc": "When your units cast and deal Ability damage, the first target hit and a nearby enemy take @MagicDamage1@-@MagicDamage4@ (based on current Stage) magic damage.",
 			"effects": {
-				"MagicDamage": 200,
-				"{26a9a9b1}": 1
+				"{26a9a9b1}": 1,
+				"{542714db}": 260,
+				"{57271994}": 140,
+				"{59271cba}": 220,
+				"{5a271e4d}": 180
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Ludens-Echo-III.TFT_Set6_Stage2.dds",
@@ -3133,10 +1491,13 @@
 			"unique": false
 		},
 		{
-			"desc": "When your units cast and deal Ability damage, the first target hit and a nearby enemy take @MagicDamage@ bonus magic damage.",
+			"desc": "When your units cast and deal Ability damage, the first target hit and a nearby enemy take @MagicDamage1@-@MagicDamage4@ (based on current Stage) magic damage.",
 			"effects": {
-				"MagicDamage": 150,
-				"{26a9a9b1}": 1
+				"{26a9a9b1}": 1,
+				"{542714db}": 175,
+				"{57271994}": 100,
+				"{59271cba}": 150,
+				"{5a271e4d}": 125
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Ludens-Echo-II.TFT_Set6_Stage2.dds",
@@ -3649,7 +2010,7 @@
 			"desc": "Your 3-cost units gain @Health@ Health, @Mana@ starting Mana, and @AttackSpeed@% Attack Speed.",
 			"effects": {
 				"AttackSpeed": 43,
-				"Health": 433,
+				"Health": 333,
 				"Mana": 33
 			},
 			"from": [],
@@ -3673,7 +2034,7 @@
 			"desc": "Your 3-cost units gain @Health@ Health, @Mana@ starting Mana, and @AttackSpeed@% Attack Speed.",
 			"effects": {
 				"AttackSpeed": 33,
-				"Health": 333,
+				"Health": 233,
 				"Mana": 23
 			},
 			"from": [],
@@ -3686,7 +2047,7 @@
 			"desc": "Your 3-cost units gain @Health@ Health, @Mana@ starting Mana, and @AttackSpeed@% Attack Speed.",
 			"effects": {
 				"AttackSpeed": 23,
-				"Health": 233,
+				"Health": 133,
 				"Mana": 13
 			},
 			"from": [],
@@ -3729,7 +2090,7 @@
 		{
 			"desc": "Gain @Gold@ gold. Your maximum interest is increased to @InterestCap@.",
 			"effects": {
-				"Gold": 12,
+				"Gold": 14,
 				"{9e368069}": 7
 			},
 			"from": [],
@@ -3782,7 +2143,7 @@
 			"desc": "Scholars permanently gain @AP@ Ability Power after each combat, and an additional @BonusAP@ if they survived. Gain a Syndra.",
 			"effects": {
 				"AP": 2,
-				"{d49caf5d}": 2
+				"{d49caf5d}": 3
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/LifelongLearner1.TFT_Set6.dds",
@@ -3976,10 +2337,13 @@
 			"unique": false
 		},
 		{
-			"desc": "When your units receive critical strikes, they deal @Damage@ magic damage to nearby enemies. (@ICD@ second cooldown).",
+			"desc": "When your units receive critical strikes, they deal @Damage1@-@Damage4@ (based on current Stage) magic damage  to nearby enemies (@ICD@ second cooldown).",
 			"effects": {
-				"Damage": 60,
-				"ICD": 1
+				"ICD": 1,
+				"{fb4355e3}": 50,
+				"{fc435776}": 65,
+				"{fd435909}": 80,
+				"{fe435a9c}": 95
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Electrocharge-I.TFT_Set6_Stage2.dds",
@@ -4010,10 +2374,13 @@
 			"unique": false
 		},
 		{
-			"desc": "When your units receive critical strikes, they deal @Damage@ magic damage to nearby enemies. (@ICD@ second cooldown).",
+			"desc": "When your units receive critical strikes, they deal @Damage1@-@Damage4@ (based on current Stage) magic damage  to nearby enemies (@ICD@ second cooldown).",
 			"effects": {
-				"Damage": 160,
-				"ICD": 1
+				"ICD": 1,
+				"{fb4355e3}": 90,
+				"{fc435776}": 120,
+				"{fd435909}": 150,
+				"{fe435a9c}": 180
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Electrocharge-III.TFT_Set6_Stage2.dds",
@@ -4035,10 +2402,13 @@
 			"unique": false
 		},
 		{
-			"desc": "When your units receive critical strikes, they deal @Damage@ magic damage to nearby enemies. (@ICD@ second cooldown).",
+			"desc": "When your units receive critical strikes, they deal @Damage1@-@Damage4@ (based on current Stage) magic damage  to nearby enemies (@ICD@ second cooldown).",
 			"effects": {
-				"Damage": 100,
-				"ICD": 1
+				"ICD": 1,
+				"{fb4355e3}": 75,
+				"{fc435776}": 95,
+				"{fd435909}": 115,
+				"{fe435a9c}": 135
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Electrocharge-II.TFT_Set6_Stage2.dds",
@@ -4093,7 +2463,7 @@
 		{
 			"desc": "If you have exactly 2 copies of a champion on your board, they both gain @BonusStats@ Attack Damage, Ability Power, Armor, and Magic Resist. When you 3-star, gain a 2-star copy.",
 			"effects": {
-				"{83e12d6f}": 45
+				"{83e12d6f}": 40
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Double-Trouble-II.TFT_Set6_Stage2.dds",
@@ -4115,7 +2485,7 @@
 		{
 			"desc": "If you have exactly 2 copies of a champion on your board, they both gain @BonusStats@ Attack Damage, Ability Power, Armor, and Magic Resist. When you 3-star, gain a 2-star copy.",
 			"effects": {
-				"{83e12d6f}": 60
+				"{83e12d6f}": 50
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Double-Trouble-III.TFT_Set6_Stage2.dds",
@@ -4160,7 +2530,7 @@
 		{
 			"desc": "If you have exactly 2 copies of a champion on your board, they both gain @BonusStats@ Attack Damage, Ability Power, Armor, and Magic Resist. When you 3-star, gain a 2-star copy.",
 			"effects": {
-				"{83e12d6f}": 35
+				"{83e12d6f}": 30
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Double-Trouble-I.TFT_Set6_Stage2.dds",
@@ -4442,7 +2812,7 @@
 			"desc": "Your champions holding an item gain @Health@ Health and @Resists@ Armor.",
 			"effects": {
 				"Health": 350,
-				"Resists": 60
+				"Resists": 50
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Cybernetic-Shell-III.TFT_Set6_Stage2.dds",
@@ -4454,7 +2824,7 @@
 			"desc": "Your champions holding an item gain @Health@ Health and @Resists@ Armor.",
 			"effects": {
 				"Health": 250,
-				"Resists": 45
+				"Resists": 35
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Cybernetic-Shell-II.TFT_Set6_Stage2.dds",
@@ -4466,7 +2836,7 @@
 			"desc": "Your champions holding an item gain @Health@ Health and @Resists@ Armor.",
 			"effects": {
 				"Health": 150,
-				"Resists": 30
+				"Resists": 25
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Cybernetic-Shell-I.TFT_Set6_Stage2.dds",
@@ -5753,7 +4123,7 @@
 				"Health": 150,
 				"MagicResist": 20,
 				"{510fdb6a}": 8,
-				"{c67a1046}": 20
+				"{c67a1046}": 10
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Radiant/Zephyr_Radiant.dds",
@@ -5903,7 +4273,7 @@
 			"unique": false
 		},
 		{
-			"desc": "When the holder first drops below @HealthThreshold@% Health, they briefly enter stealth, becoming untargetable and shedding negative effects. After coming out of stealth, the holder gains an additional <TFTRadiantItemBonus>%i:scaleAS% @AttackSpeed@%</TFTRadiantItemBonus> bonus Attack Speed.<br><br><TFTRadiantItemBonus>Radiant Bonus: Triggers again at @HealthThreshold2@% Health.</TFTRadiantItemBonus><br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>",
+			"desc": "When the holder first drops below @HealthThreshold@% Health, they briefly enter stealth, becoming untargetable and shedding damage and negative effects. After coming out of stealth, the holder gains an additional <TFTRadiantItemBonus>%i:scaleAS% @AttackSpeed@%</TFTRadiantItemBonus> bonus Attack Speed.<br><br><TFTRadiantItemBonus>Radiant Bonus: Triggers again at @HealthThreshold2@% Health.</TFTRadiantItemBonus><br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>",
 			"effects": {
 				"AD": 10,
 				"Armor": 20,
@@ -6901,7 +5271,7 @@
 			"unique": false
 		},
 		{
-			"desc": "When the holder first drops below @HealthThreshold@% health, they briefly enter stealth, becoming untargetable and shedding negative effects. After coming out of stealth, the holder gains an additional %i:scaleAS% @AttackSpeed@% bonus Attack Speed.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>",
+			"desc": "When the holder first drops below @HealthThreshold@% Health, they briefly enter stealth, becoming untargetable and shedding damage and negative effects. After coming out of stealth, the holder gains an additional %i:scaleAS% @AttackSpeed@% bonus Attack Speed.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>",
 			"effects": {
 				"AD": 10,
 				"Armor": 20,
@@ -7829,7 +6199,7 @@
 			"desc": "This slot can't hold an item.",
 			"effects": {},
 			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/TFT_Item_UnusableSlot.TFT3_1013_GameVariations.dds",
+			"icon": "ASSETS/Maps/Particles/TFT/TFT_Item_UnusableSlot.dds",
 			"id": 999,
 			"name": "Unusable Slot",
 			"unique": false
@@ -7873,102 +6243,6 @@
 		}
 	],
 	"setData": [
-		{
-			"champions": [
-				{
-					"ability": {
-						"desc": "The Voidspawn gains bonus Health and Attack Damage based on the current Stage. ",
-						"icon": "ASSETS/Characters/TFT_VoidSpawn/HUD/Voidspawn_square.dds",
-						"name": "Voidborn",
-						"variables": []
-					},
-					"apiName": "TFT_VoidSpawn",
-					"cost": 1,
-					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT_Voidspawn.dds",
-					"name": "Voidspawn",
-					"stats": {
-						"armor": 20,
-						"attackSpeed": 0.800000011920929,
-						"critChance": 0.25,
-						"critMultiplier": 1.2999999523162842,
-						"damage": 0,
-						"hp": null,
-						"initialMana": 0,
-						"magicResist": 20,
-						"mana": 0,
-						"range": 1
-					},
-					"traits": []
-				},
-				{
-					"ability": {
-						"desc": "The Training Dummy cannot move or attack. It is also dressed like a devilishly handsome Yordle.",
-						"icon": "ASSETS/Characters/TFTDebug_Dummy/HUD/Icons2D/TFTDebug_Dummy_DoNothing.dds",
-						"name": "On Duty!",
-						"variables": []
-					},
-					"apiName": "TFT_TrainingDummy",
-					"cost": 1,
-					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFTDebug_Dummy.dds",
-					"name": "Target Dummy",
-					"stats": {
-						"armor": 40,
-						"attackSpeed": 0.20000000298023224,
-						"critChance": null,
-						"critMultiplier": 0,
-						"damage": 0,
-						"hp": 500,
-						"initialMana": 0,
-						"magicResist": 40,
-						"mana": 0,
-						"range": 0
-					},
-					"traits": []
-				},
-				{
-					"ability": {
-						"desc": "Drag this Tome to the Shop to open an Armory full of emblems! You will have 30 seconds to choose.",
-						"icon": "ASSETS/Characters/TFT5_EmblemArmoryKey/HUD/TFT5_EmblemArmoryKey_Square.dds",
-						"name": "Tome of Traits",
-						"variables": [
-							{
-								"name": "RoundsToHatch",
-								"value": [
-									2,
-									2,
-									2,
-									2,
-									2,
-									2,
-									2
-								]
-							}
-						]
-					},
-					"apiName": "TFT5_EmblemArmoryKey",
-					"cost": 5,
-					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT5_EmblemArmoryKey.dds",
-					"name": "Tome of Traits",
-					"stats": {
-						"armor": 10,
-						"attackSpeed": 1,
-						"critChance": null,
-						"critMultiplier": 0,
-						"damage": null,
-						"hp": 10,
-						"initialMana": 0,
-						"magicResist": 10,
-						"mana": 100,
-						"range": 0
-					},
-					"traits": []
-				}
-			],
-			"mutator": "TFTSet3",
-			"name": "Galaxies",
-			"number": 3,
-			"traits": []
-		},
 		{
 			"champions": [
 				{
@@ -8156,297 +6430,9 @@
 					"traits": []
 				}
 			],
-			"mutator": "TFTSet2",
-			"name": "War of the Elements",
-			"number": 2,
-			"traits": []
-		},
-		{
-			"champions": [
-				{
-					"ability": {
-						"desc": "The Voidspawn gains bonus Health and Attack Damage based on the current Stage. ",
-						"icon": "ASSETS/Characters/TFT_VoidSpawn/HUD/Voidspawn_square.dds",
-						"name": "Voidborn",
-						"variables": []
-					},
-					"apiName": "TFT_VoidSpawn",
-					"cost": 1,
-					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT_Voidspawn.dds",
-					"name": "Voidspawn",
-					"stats": {
-						"armor": 20,
-						"attackSpeed": 0.800000011920929,
-						"critChance": 0.25,
-						"critMultiplier": 1.2999999523162842,
-						"damage": 0,
-						"hp": null,
-						"initialMana": 0,
-						"magicResist": 20,
-						"mana": 0,
-						"range": 1
-					},
-					"traits": []
-				},
-				{
-					"ability": {
-						"desc": "The Training Dummy cannot move or attack. It is also dressed like a devilishly handsome Yordle.",
-						"icon": "ASSETS/Characters/TFTDebug_Dummy/HUD/Icons2D/TFTDebug_Dummy_DoNothing.dds",
-						"name": "On Duty!",
-						"variables": []
-					},
-					"apiName": "TFT_TrainingDummy",
-					"cost": 1,
-					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFTDebug_Dummy.dds",
-					"name": "Target Dummy",
-					"stats": {
-						"armor": 40,
-						"attackSpeed": 0.20000000298023224,
-						"critChance": null,
-						"critMultiplier": 0,
-						"damage": 0,
-						"hp": 500,
-						"initialMana": 0,
-						"magicResist": 40,
-						"mana": 0,
-						"range": 0
-					},
-					"traits": []
-				},
-				{
-					"ability": {
-						"desc": "Drag this Tome to the Shop to open an Armory full of emblems! You will have 30 seconds to choose.",
-						"icon": "ASSETS/Characters/TFT5_EmblemArmoryKey/HUD/TFT5_EmblemArmoryKey_Square.dds",
-						"name": "Tome of Traits",
-						"variables": [
-							{
-								"name": "RoundsToHatch",
-								"value": [
-									2,
-									2,
-									2,
-									2,
-									2,
-									2,
-									2
-								]
-							}
-						]
-					},
-					"apiName": "TFT5_EmblemArmoryKey",
-					"cost": 5,
-					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT5_EmblemArmoryKey.dds",
-					"name": "Tome of Traits",
-					"stats": {
-						"armor": 10,
-						"attackSpeed": 1,
-						"critChance": null,
-						"critMultiplier": 0,
-						"damage": null,
-						"hp": 10,
-						"initialMana": 0,
-						"magicResist": 10,
-						"mana": 100,
-						"range": 0
-					},
-					"traits": []
-				}
-			],
-			"mutator": "TFTSet4",
-			"name": "Journeys",
-			"number": 4,
-			"traits": []
-		},
-		{
-			"champions": [
-				{
-					"ability": {
-						"desc": "The Voidspawn gains bonus Health and Attack Damage based on the current Stage. ",
-						"icon": "ASSETS/Characters/TFT_VoidSpawn/HUD/Voidspawn_square.dds",
-						"name": "Voidborn",
-						"variables": []
-					},
-					"apiName": "TFT_VoidSpawn",
-					"cost": 1,
-					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT_Voidspawn.dds",
-					"name": "Voidspawn",
-					"stats": {
-						"armor": 20,
-						"attackSpeed": 0.800000011920929,
-						"critChance": 0.25,
-						"critMultiplier": 1.2999999523162842,
-						"damage": 0,
-						"hp": null,
-						"initialMana": 0,
-						"magicResist": 20,
-						"mana": 0,
-						"range": 1
-					},
-					"traits": []
-				},
-				{
-					"ability": {
-						"desc": "The Training Dummy cannot move or attack. It is also dressed like a devilishly handsome Yordle.",
-						"icon": "ASSETS/Characters/TFTDebug_Dummy/HUD/Icons2D/TFTDebug_Dummy_DoNothing.dds",
-						"name": "On Duty!",
-						"variables": []
-					},
-					"apiName": "TFT_TrainingDummy",
-					"cost": 1,
-					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFTDebug_Dummy.dds",
-					"name": "Target Dummy",
-					"stats": {
-						"armor": 40,
-						"attackSpeed": 0.20000000298023224,
-						"critChance": null,
-						"critMultiplier": 0,
-						"damage": 0,
-						"hp": 500,
-						"initialMana": 0,
-						"magicResist": 40,
-						"mana": 0,
-						"range": 0
-					},
-					"traits": []
-				},
-				{
-					"ability": {
-						"desc": "Drag this Tome to the Shop to open an Armory full of emblems! You will have 30 seconds to choose.",
-						"icon": "ASSETS/Characters/TFT5_EmblemArmoryKey/HUD/TFT5_EmblemArmoryKey_Square.dds",
-						"name": "Tome of Traits",
-						"variables": [
-							{
-								"name": "RoundsToHatch",
-								"value": [
-									2,
-									2,
-									2,
-									2,
-									2,
-									2,
-									2
-								]
-							}
-						]
-					},
-					"apiName": "TFT5_EmblemArmoryKey",
-					"cost": 5,
-					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT5_EmblemArmoryKey.dds",
-					"name": "Tome of Traits",
-					"stats": {
-						"armor": 10,
-						"attackSpeed": 1,
-						"critChance": null,
-						"critMultiplier": 0,
-						"damage": null,
-						"hp": 10,
-						"initialMana": 0,
-						"magicResist": 10,
-						"mana": 100,
-						"range": 0
-					},
-					"traits": []
-				}
-			],
 			"mutator": "TFT_Set6",
 			"name": "Set6",
 			"number": 6,
-			"traits": []
-		},
-		{
-			"champions": [
-				{
-					"ability": {
-						"desc": "The Voidspawn gains bonus Health and Attack Damage based on the current Stage. ",
-						"icon": "ASSETS/Characters/TFT_VoidSpawn/HUD/Voidspawn_square.dds",
-						"name": "Voidborn",
-						"variables": []
-					},
-					"apiName": "TFT_VoidSpawn",
-					"cost": 1,
-					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT_Voidspawn.dds",
-					"name": "Voidspawn",
-					"stats": {
-						"armor": 20,
-						"attackSpeed": 0.800000011920929,
-						"critChance": 0.25,
-						"critMultiplier": 1.2999999523162842,
-						"damage": 0,
-						"hp": null,
-						"initialMana": 0,
-						"magicResist": 20,
-						"mana": 0,
-						"range": 1
-					},
-					"traits": []
-				},
-				{
-					"ability": {
-						"desc": "The Training Dummy cannot move or attack. It is also dressed like a devilishly handsome Yordle.",
-						"icon": "ASSETS/Characters/TFTDebug_Dummy/HUD/Icons2D/TFTDebug_Dummy_DoNothing.dds",
-						"name": "On Duty!",
-						"variables": []
-					},
-					"apiName": "TFT_TrainingDummy",
-					"cost": 1,
-					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFTDebug_Dummy.dds",
-					"name": "Target Dummy",
-					"stats": {
-						"armor": 40,
-						"attackSpeed": 0.20000000298023224,
-						"critChance": null,
-						"critMultiplier": 0,
-						"damage": 0,
-						"hp": 500,
-						"initialMana": 0,
-						"magicResist": 40,
-						"mana": 0,
-						"range": 0
-					},
-					"traits": []
-				},
-				{
-					"ability": {
-						"desc": "Drag this Tome to the Shop to open an Armory full of emblems! You will have 30 seconds to choose.",
-						"icon": "ASSETS/Characters/TFT5_EmblemArmoryKey/HUD/TFT5_EmblemArmoryKey_Square.dds",
-						"name": "Tome of Traits",
-						"variables": [
-							{
-								"name": "RoundsToHatch",
-								"value": [
-									2,
-									2,
-									2,
-									2,
-									2,
-									2,
-									2
-								]
-							}
-						]
-					},
-					"apiName": "TFT5_EmblemArmoryKey",
-					"cost": 5,
-					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT5_EmblemArmoryKey.dds",
-					"name": "Tome of Traits",
-					"stats": {
-						"armor": 10,
-						"attackSpeed": 1,
-						"critChance": null,
-						"critMultiplier": 0,
-						"damage": null,
-						"hp": 10,
-						"initialMana": 0,
-						"magicResist": 10,
-						"mana": 100,
-						"range": 0
-					},
-					"traits": []
-				}
-			],
-			"mutator": "TFT_Set5",
-			"name": "Set5",
-			"number": 5,
 			"traits": []
 		},
 		{
@@ -8730,7 +6716,7 @@
 						"attackSpeed": 0.800000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 50,
+						"damage": 45,
 						"hp": 750,
 						"initialMana": 0,
 						"magicResist": 40,
@@ -8775,13 +6761,13 @@
 							{
 								"name": "DamageReduction",
 								"value": [
-									50,
-									50,
-									50,
-									50,
-									50,
-									50,
-									50
+									60,
+									60,
+									60,
+									60,
+									60,
+									60,
+									60
 								]
 							}
 						]
@@ -8795,7 +6781,7 @@
 						"attackSpeed": 0.6000000238418579,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 70,
+						"damage": 60,
 						"hp": 800,
 						"initialMana": 60,
 						"magicResist": 45,
@@ -8961,7 +6947,7 @@
 						"attackSpeed": 0.6000000238418579,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 50,
+						"damage": 45,
 						"hp": 700,
 						"initialMana": 0,
 						"magicResist": 40,
@@ -9204,7 +7190,7 @@
 						"attackSpeed": 2,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 90,
+						"damage": 85,
 						"hp": 700,
 						"initialMana": 0,
 						"magicResist": 30,
@@ -9269,7 +7255,7 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 60,
+						"damage": 55,
 						"hp": 650,
 						"initialMana": 40,
 						"magicResist": 25,
@@ -9334,7 +7320,7 @@
 						"attackSpeed": 0.550000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 70,
+						"damage": 60,
 						"hp": 700,
 						"initialMana": 40,
 						"magicResist": 40,
@@ -9387,7 +7373,7 @@
 						"attackSpeed": 0.75,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 75,
+						"damage": 65,
 						"hp": 750,
 						"initialMana": 0,
 						"magicResist": 40,
@@ -9488,7 +7474,7 @@
 						"attackSpeed": 0.550000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 80,
+						"damage": 70,
 						"hp": 1000,
 						"initialMana": 30,
 						"magicResist": 60,
@@ -9588,9 +7574,9 @@
 								"name": "Damage",
 								"value": [
 									0,
-									325,
-									450,
-									675,
+									275,
+									375,
+									575,
 									0,
 									0,
 									0
@@ -9619,7 +7605,7 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 50,
+						"damage": 40,
 						"hp": 600,
 						"initialMana": 60,
 						"magicResist": 20,
@@ -9773,7 +7759,7 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 80,
+						"damage": 70,
 						"hp": 900,
 						"initialMana": 0,
 						"magicResist": 50,
@@ -9812,10 +7798,10 @@
 					"name": "Caitlyn",
 					"stats": {
 						"armor": 15,
-						"attackSpeed": 0.75,
+						"attackSpeed": 0.800000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 50,
+						"damage": 45,
 						"hp": 500,
 						"initialMana": 0,
 						"magicResist": 15,
@@ -9843,7 +7829,7 @@
 						"attackSpeed": 0.75,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 90,
+						"damage": 85,
 						"hp": 1000,
 						"initialMana": 0,
 						"magicResist": 30,
@@ -9866,9 +7852,9 @@
 								"name": "Damage",
 								"value": [
 									0,
-									600,
-									825,
-									950,
+									650,
+									900,
+									1025,
 									0,
 									0,
 									0
@@ -9930,14 +7916,14 @@
 					"name": "Malzahar",
 					"stats": {
 						"armor": 30,
-						"attackSpeed": 0.6499999761581421,
+						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
 						"damage": 40,
 						"hp": 650,
-						"initialMana": 30,
+						"initialMana": 50,
 						"magicResist": 30,
-						"mana": 60,
+						"mana": 80,
 						"range": 4
 					},
 					"traits": [
@@ -10021,8 +8007,8 @@
 								"name": "Damage",
 								"value": [
 									200,
-									150,
-									225,
+									125,
+									175,
 									9001,
 									200,
 									200,
@@ -10045,7 +8031,7 @@
 								"name": "StunDuration",
 								"value": [
 									1,
-									1,
+									1.5,
 									1.5,
 									10,
 									1.5,
@@ -10068,13 +8054,13 @@
 							{
 								"name": "MaxHealthPercent",
 								"value": [
-									0.05999999865889549,
-									0.05999999865889549,
-									0.05999999865889549,
-									0.05999999865889549,
-									0.05999999865889549,
-									0.05999999865889549,
-									0.05999999865889549
+									0.07999999821186066,
+									0.07999999821186066,
+									0.07999999821186066,
+									0.07999999821186066,
+									0.07999999821186066,
+									0.07999999821186066,
+									0.07999999821186066
 								]
 							}
 						]
@@ -10089,7 +8075,7 @@
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
 						"damage": 110,
-						"hp": 1200,
+						"hp": 1300,
 						"initialMana": 200,
 						"magicResist": 70,
 						"mana": 300,
@@ -10122,13 +8108,13 @@
 							{
 								"name": "ASBoost",
 								"value": [
-									0.20000000298023224,
-									0.20000000298023224,
-									0.20000000298023224,
-									0.20000000298023224,
-									0.20000000298023224,
-									0.20000000298023224,
-									0.20000000298023224
+									0.18000000715255737,
+									0.18000000715255737,
+									0.18000000715255737,
+									0.18000000715255737,
+									0.18000000715255737,
+									0.18000000715255737,
+									0.18000000715255737
 								]
 							},
 							{
@@ -10166,7 +8152,7 @@
 						"attackSpeed": 0.6499999761581421,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 50,
+						"damage": 45,
 						"hp": 500,
 						"initialMana": 0,
 						"magicResist": 15,
@@ -10344,7 +8330,7 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 65,
+						"damage": 55,
 						"hp": 700,
 						"initialMana": 60,
 						"magicResist": 40,
@@ -10500,7 +8486,7 @@
 						"attackSpeed": 1,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 88,
+						"damage": 80,
 						"hp": 888,
 						"initialMana": 0,
 						"magicResist": 45,
@@ -10722,9 +8708,9 @@
 						"critMultiplier": 1.2999999523162842,
 						"damage": 50,
 						"hp": 850,
-						"initialMana": 40,
+						"initialMana": 50,
 						"magicResist": 50,
-						"mana": 80,
+						"mana": 90,
 						"range": 2
 					},
 					"traits": [
@@ -10854,13 +8840,13 @@
 							{
 								"name": "AllyADAPBuff",
 								"value": [
-									20,
-									20,
-									20,
-									20,
-									20,
-									20,
-									20
+									15,
+									15,
+									15,
+									15,
+									15,
+									15,
+									15
 								]
 							},
 							{
@@ -10894,14 +8880,14 @@
 					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT6_Tibbers.TFT_Set6.dds",
 					"name": "Mechanical Bear",
 					"stats": {
-						"armor": 70,
+						"armor": 55,
 						"attackSpeed": 0.6000000238418579,
 						"critChance": 0.25,
 						"critMultiplier": 1.5,
 						"damage": 50,
 						"hp": 775,
 						"initialMana": 0,
-						"magicResist": 70,
+						"magicResist": 55,
 						"mana": 100,
 						"range": 1
 					},
@@ -10956,7 +8942,7 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 60,
+						"damage": 55,
 						"hp": 550,
 						"initialMana": 70,
 						"magicResist": 20,
@@ -10980,7 +8966,7 @@
 									0,
 									450,
 									650,
-									950,
+									850,
 									0,
 									0,
 									0
@@ -11021,7 +9007,7 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 50,
+						"damage": 45,
 						"hp": 650,
 						"initialMana": 0,
 						"magicResist": 25,
@@ -11067,8 +9053,8 @@
 								"name": "Damage",
 								"value": [
 									50,
-									70,
-									90,
+									75,
+									100,
 									180,
 									50,
 									50,
@@ -11083,7 +9069,7 @@
 					"name": "Kai'Sa",
 					"stats": {
 						"armor": 30,
-						"attackSpeed": 1.100000023841858,
+						"attackSpeed": 1.2000000476837158,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
 						"damage": 60,
@@ -11160,13 +9146,13 @@
 							{
 								"name": "DamageReducedPercent",
 								"value": [
-									0.25,
-									0.25,
-									0.25,
-									0.25,
-									0.25,
-									0.25,
-									0.25
+									0.20000000298023224,
+									0.20000000298023224,
+									0.20000000298023224,
+									0.20000000298023224,
+									0.20000000298023224,
+									0.20000000298023224,
+									0.20000000298023224
 								]
 							},
 							{
@@ -11388,14 +9374,14 @@
 					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT6_HextechDragon.TFT_Set6.dds",
 					"name": "Mechanical Dragon",
 					"stats": {
-						"armor": 100,
+						"armor": 90,
 						"attackSpeed": 0.800000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
 						"damage": 65,
 						"hp": 1125,
 						"initialMana": 200,
-						"magicResist": 100,
+						"magicResist": 90,
 						"mana": 300,
 						"range": 2
 					},
@@ -11480,7 +9466,7 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 50,
+						"damage": 45,
 						"hp": 600,
 						"initialMana": 40,
 						"magicResist": 25,
@@ -11549,13 +9535,13 @@
 							{
 								"name": "VIPBonusReducedDamage",
 								"value": [
-									30,
-									30,
-									30,
-									30,
-									30,
-									30,
-									30
+									45,
+									45,
+									45,
+									45,
+									45,
+									45,
+									45
 								]
 							}
 						]
@@ -11709,7 +9695,7 @@
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
 						"damage": 55,
-						"hp": 750,
+						"hp": 800,
 						"initialMana": 20,
 						"magicResist": 45,
 						"mana": 80,
@@ -11732,8 +9718,8 @@
 								"value": [
 									0,
 									225,
-									325,
-									500,
+									300,
+									425,
 									0,
 									0,
 									0
@@ -11832,9 +9818,9 @@
 								"name": "Heal",
 								"value": [
 									0,
-									150,
 									200,
-									350,
+									225,
+									400,
 									0,
 									0,
 									0
@@ -11844,9 +9830,9 @@
 								"name": "HealBonus",
 								"value": [
 									0,
-									250,
+									275,
 									350,
-									500,
+									600,
 									0,
 									0,
 									0
@@ -11863,11 +9849,11 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 60,
+						"damage": 55,
 						"hp": 750,
 						"initialMana": 60,
 						"magicResist": 45,
-						"mana": 90,
+						"mana": 80,
 						"range": 1
 					},
 					"traits": [
@@ -11941,11 +9927,11 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 70,
+						"damage": 60,
 						"hp": 600,
 						"initialMana": 30,
 						"magicResist": 20,
-						"mana": 60,
+						"mana": 55,
 						"range": 4
 					},
 					"traits": [
@@ -11962,13 +9948,13 @@
 							{
 								"name": "PercentDamage",
 								"value": [
-									0.33000001311302185,
-									0.33000001311302185,
-									0.33000001311302185,
-									0.33000001311302185,
-									0.33000001311302185,
-									0.33000001311302185,
-									0.33000001311302185
+									0.4000000059604645,
+									0.4000000059604645,
+									0.4000000059604645,
+									0.4000000059604645,
+									0.4000000059604645,
+									0.4000000059604645,
+									0.4000000059604645
 								]
 							},
 							{
@@ -12027,10 +10013,10 @@
 					"name": "Sivir",
 					"stats": {
 						"armor": 30,
-						"attackSpeed": 0.699999988079071,
+						"attackSpeed": 0.800000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 70,
+						"damage": 65,
 						"hp": 700,
 						"initialMana": 0,
 						"magicResist": 30,
@@ -12156,13 +10142,13 @@
 							{
 								"name": "ADPercent",
 								"value": [
-									0,
-									1.850000023841858,
-									1.850000023841858,
-									1.850000023841858,
-									1.850000023841858,
-									250,
-									300
+									1.75,
+									1.75,
+									1.75,
+									1.75,
+									1.75,
+									1.75,
+									1.75
 								]
 							},
 							{
@@ -12200,7 +10186,7 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 70,
+						"damage": 60,
 						"hp": 700,
 						"initialMana": 0,
 						"magicResist": 40,
@@ -12223,9 +10209,9 @@
 								"name": "ShieldAmount",
 								"value": [
 									50,
-									500,
-									600,
-									750,
+									475,
+									575,
+									675,
 									550,
 									675,
 									800
@@ -12304,9 +10290,9 @@
 						"critMultiplier": 1.2999999523162842,
 						"damage": 50,
 						"hp": 800,
-						"initialMana": 60,
+						"initialMana": 70,
 						"magicResist": 50,
-						"mana": 120,
+						"mana": 130,
 						"range": 2
 					},
 					"traits": [
@@ -12324,9 +10310,9 @@
 								"name": "Damage",
 								"value": [
 									0,
-									185,
-									295,
-									315,
+									175,
+									275,
+									300,
 									500,
 									625,
 									750
@@ -12355,7 +10341,7 @@
 						"attackSpeed": 0.75,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 60,
+						"damage": 55,
 						"hp": 700,
 						"initialMana": 0,
 						"magicResist": 30,
@@ -12389,8 +10375,8 @@
 								"name": "ADMult",
 								"value": [
 									1,
-									1.5,
-									1.600000023841858,
+									1.7000000476837158,
+									1.7999999523162842,
 									4,
 									3,
 									3.5,
@@ -12401,9 +10387,9 @@
 								"name": "Damage",
 								"value": [
 									0,
-									150,
-									200,
-									500,
+									100,
+									125,
+									400,
 									0,
 									0,
 									0
@@ -12456,7 +10442,7 @@
 						"attackSpeed": 0.800000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 80,
+						"damage": 70,
 						"hp": 800,
 						"initialMana": 0,
 						"magicResist": 30,
@@ -12533,7 +10519,7 @@
 						"attackSpeed": 0.8999999761581421,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 90,
+						"damage": 85,
 						"hp": 800,
 						"initialMana": 0,
 						"magicResist": 35,
@@ -12590,13 +10576,13 @@
 							{
 								"name": "MultiOrbDamage",
 								"value": [
-									0.800000011920929,
-									0.800000011920929,
-									0.800000011920929,
-									0.800000011920929,
-									0.800000011920929,
-									0.800000011920929,
-									0.800000011920929
+									0.6000000238418579,
+									0.6000000238418579,
+									0.6000000238418579,
+									0.6000000238418579,
+									0.6000000238418579,
+									0.6000000238418579,
+									0.6000000238418579
 								]
 							},
 							{
@@ -12656,9 +10642,9 @@
 								"name": "BaseDamage",
 								"value": [
 									0,
-									75,
-									100,
-									600,
+									60,
+									90,
+									550,
 									0,
 									0,
 									0
@@ -12675,11 +10661,11 @@
 						"attackSpeed": 0.800000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 90,
+						"damage": 70,
 						"hp": 900,
 						"initialMana": 0,
 						"magicResist": 50,
-						"mana": 30,
+						"mana": 40,
 						"range": 1
 					},
 					"traits": [
@@ -12697,9 +10683,9 @@
 								"name": "RocketDamage",
 								"value": [
 									0,
-									220,
-									275,
-									350,
+									190,
+									245,
+									315,
 									0,
 									0,
 									0
@@ -12716,7 +10702,7 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 65,
+						"damage": 55,
 						"hp": 650,
 						"initialMana": 25,
 						"magicResist": 25,
@@ -12737,13 +10723,13 @@
 							{
 								"name": "PercentAD",
 								"value": [
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858
+									1.5,
+									1.5,
+									1.5,
+									1.5,
+									1.5,
+									1.5,
+									1.5
 								]
 							},
 							{
@@ -12767,8 +10753,8 @@
 								"value": [
 									0,
 									80,
-									125,
-									200,
+									120,
+									180,
 									0,
 									0,
 									0
@@ -12782,10 +10768,10 @@
 					"name": "Senna",
 					"stats": {
 						"armor": 25,
-						"attackSpeed": 0.75,
+						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 70,
+						"damage": 60,
 						"hp": 650,
 						"initialMana": 30,
 						"magicResist": 25,
@@ -12862,7 +10848,7 @@
 						"attackSpeed": 0.6000000238418579,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 100,
+						"damage": 90,
 						"hp": 1400,
 						"initialMana": 85,
 						"magicResist": 80,
@@ -12884,9 +10870,9 @@
 								"name": "DamagePerSecond",
 								"value": [
 									1,
-									45,
-									70,
-									240,
+									40,
+									65,
+									220,
 									2,
 									2.25,
 									2.5
@@ -12998,8 +10984,8 @@
 								"value": [
 									6,
 									6,
-									6,
-									6,
+									7,
+									10,
 									6,
 									6,
 									6
@@ -13086,9 +11072,9 @@
 								"name": "BonusOnHit",
 								"value": [
 									0,
-									11,
-									22,
-									44,
+									10,
+									20,
+									40,
 									0,
 									0,
 									0
@@ -13153,7 +11139,7 @@
 						"attackSpeed": 0.800000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 85,
+						"damage": 75,
 						"hp": 850,
 						"initialMana": 0,
 						"magicResist": 30,
@@ -13174,13 +11160,13 @@
 							{
 								"name": "PercentAttackDamage",
 								"value": [
-									0,
 									1.25,
-									1.2999999523162842,
-									1.399999976158142,
-									0,
-									0,
-									0
+									1.25,
+									1.25,
+									1.25,
+									1.25,
+									1.25,
+									1.25
 								]
 							},
 							{
@@ -13230,7 +11216,7 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 50,
+						"damage": 45,
 						"hp": 450,
 						"initialMana": 0,
 						"magicResist": 15,
@@ -13252,9 +11238,9 @@
 								"name": "BaseDamage",
 								"value": [
 									0,
-									225,
-									300,
-									450,
+									250,
+									350,
+									500,
 									0,
 									0,
 									0
@@ -13276,8 +11262,8 @@
 								"name": "Healing",
 								"value": [
 									80,
-									225,
 									250,
+									300,
 									350,
 									80,
 									80,
@@ -13295,7 +11281,7 @@
 						"attackSpeed": 0.6000000238418579,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 45,
+						"damage": 40,
 						"hp": 800,
 						"initialMana": 40,
 						"magicResist": 45,
@@ -13405,8 +11391,8 @@
 							"minUnits": 3,
 							"style": 1,
 							"variables": {
-								"Armor": 55,
-								"MagicResist": 55,
+								"Armor": 50,
+								"MagicResist": 50,
 								"{5c51b509}": 1,
 								"{c9b0e3af}": 20
 							}
@@ -13416,8 +11402,8 @@
 							"minUnits": 5,
 							"style": 3,
 							"variables": {
-								"Armor": 55,
-								"MagicResist": 55,
+								"Armor": 50,
+								"MagicResist": 50,
 								"{5c51b509}": 2,
 								"{c9b0e3af}": 20
 							}
@@ -13427,10 +11413,10 @@
 							"minUnits": 7,
 							"style": 4,
 							"variables": {
-								"Armor": 55,
-								"MagicResist": 55,
+								"Armor": 50,
+								"MagicResist": 50,
 								"{5c51b509}": 3,
-								"{867bc055}": 0.6000000238418579,
+								"{867bc055}": 0.5,
 								"{c9b0e3af}": 20
 							}
 						}
@@ -13664,7 +11650,7 @@
 							"minUnits": 2,
 							"style": 2,
 							"variables": {
-								"DamagePercent": 0.25,
+								"DamagePercent": 0.15000000596046448,
 								"{5064373e}": "null",
 								"{5c51b509}": 2,
 								"{6c155e99}": "null",
@@ -13676,7 +11662,7 @@
 							"minUnits": 3,
 							"style": 3,
 							"variables": {
-								"DamagePercent": 0.25,
+								"DamagePercent": 0.15000000596046448,
 								"{5064373e}": "null",
 								"{5c51b509}": 3,
 								"{6c155e99}": 0.33000001311302185,
@@ -13688,7 +11674,7 @@
 							"minUnits": 5,
 							"style": 4,
 							"variables": {
-								"DamagePercent": 0.5,
+								"DamagePercent": 0.30000001192092896,
 								"{5064373e}": "null",
 								"{5c51b509}": 4,
 								"{6c155e99}": 0.6600000262260437,
@@ -13910,7 +11896,7 @@
 				},
 				{
 					"apiName": "Set6_Hextech",
-					"desc": "At the start of combat and every @Frequency@ seconds afterwards, the Hexcore sends out a pulse that charges up allied Hextech champions with a shield for @ShieldDuration@ seconds. While the shield is active, attacks deal bonus magic damage on hit. This shield does not stack.<br><br><expandRow>(@MinUnits@) @ShieldAmount@ shield, @MagicDamage@ magic damage</expandRow>",
+					"desc": "At the start of combat and every @Frequency@ seconds afterwards, the Hexcore sends out a pulse that charges up allied Hextech champions with a shield for @ShieldDuration@ seconds (does not stack). While the shield is active, attacks deal bonus magic damage on hit. Additionally, the shield and bonus magic damage are @BonusPercentPerAugment@% stronger for each augment in the Hexcore.<br><br><expandRow>(@MinUnits@) @ShieldAmount@ shield, @MagicDamage@ magic damage</expandRow>",
 					"effects": [
 						{
 							"maxUnits": 3,
@@ -13920,7 +11906,8 @@
 								"MagicDamage": 15,
 								"ShieldAmount": 100,
 								"ShieldDuration": 4,
-								"{2fb31c01}": 6
+								"{2fb31c01}": 6,
+								"{f49783e7}": 20
 							}
 						},
 						{
@@ -13928,10 +11915,11 @@
 							"minUnits": 4,
 							"style": 2,
 							"variables": {
-								"MagicDamage": 30,
+								"MagicDamage": 25,
 								"ShieldAmount": 150,
 								"ShieldDuration": 4,
-								"{2fb31c01}": 6
+								"{2fb31c01}": 6,
+								"{f49783e7}": 20
 							}
 						},
 						{
@@ -13939,10 +11927,11 @@
 							"minUnits": 6,
 							"style": 3,
 							"variables": {
-								"MagicDamage": 60,
+								"MagicDamage": 50,
 								"ShieldAmount": 300,
 								"ShieldDuration": 4,
-								"{2fb31c01}": 6
+								"{2fb31c01}": 6,
+								"{f49783e7}": 20
 							}
 						},
 						{
@@ -13950,10 +11939,11 @@
 							"minUnits": 8,
 							"style": 4,
 							"variables": {
-								"MagicDamage": 120,
-								"ShieldAmount": 600,
+								"MagicDamage": 80,
+								"ShieldAmount": 400,
 								"ShieldDuration": 4,
-								"{2fb31c01}": 6
+								"{2fb31c01}": 6,
+								"{f49783e7}": 20
 							}
 						}
 					],
@@ -14129,8 +12119,8 @@
 							"minUnits": 5,
 							"style": 3,
 							"variables": {
-								"Health": 450,
-								"{7f1304b2}": 45
+								"Health": 400,
+								"{7f1304b2}": 40
 							}
 						},
 						{
@@ -14138,8 +12128,8 @@
 							"minUnits": 7,
 							"style": 4,
 							"variables": {
-								"Health": 800,
-								"{7f1304b2}": 80
+								"Health": 700,
+								"{7f1304b2}": 70
 							}
 						}
 					],
@@ -14242,7 +12232,7 @@
 							"minUnits": 4,
 							"style": 3,
 							"variables": {
-								"{df962703}": 65
+								"{df962703}": 70
 							}
 						},
 						{
@@ -14250,7 +12240,7 @@
 							"minUnits": 6,
 							"style": 4,
 							"variables": {
-								"{df962703}": 110
+								"{df962703}": 120
 							}
 						}
 					],
@@ -14276,7 +12266,7 @@
 							"style": 3,
 							"variables": {
 								"{51aec5d2}": 0.10000000149011612,
-								"{cbb3a34f}": 0.4000000059604645
+								"{cbb3a34f}": 0.3499999940395355
 							}
 						},
 						{
@@ -14294,26 +12284,16 @@
 				},
 				{
 					"apiName": "Set6_Enforcer",
-					"desc": "Enforcers stun enemies at the start of combat. The target breaks free after @DetainDuration@ seconds, or after losing @HPPercent*100@% of their maximum Health. Enforcers will not try to stun enemies who are immune to crowd control effects.<br><br><row>(@MinUnits@) The enemy who has the most Health</row><br><row>(@MinUnits@) And the enemy who dealt the most damage last combat</row>",
+					"desc": "<row>(@MinUnits@) At the start of combat, Enforcers stun the enemy who has the most Health. The target breaks free after @DetainDuration@ seconds, or after losing @HPPercent*100@% of their maximum Health. Enforcers will not try to stun enemies who are immune to crowd control effects.</row>",
 					"effects": [
 						{
-							"maxUnits": 3,
-							"minUnits": 2,
-							"style": 1,
-							"variables": {
-								"HPPercent": 0.4000000059604645,
-								"{70ed38c6}": 3,
-								"{d2b7f6f1}": 1
-							}
-						},
-						{
 							"maxUnits": 25000,
-							"minUnits": 4,
+							"minUnits": 3,
 							"style": 3,
 							"variables": {
 								"HPPercent": 0.4000000059604645,
 								"{70ed38c6}": 4,
-								"{d2b7f6f1}": 2
+								"{d2b7f6f1}": 1
 							}
 						}
 					],
@@ -14330,7 +12310,7 @@
 							"style": 1,
 							"variables": {
 								"AttackSpeed": 15,
-								"DamageReduction": 15,
+								"DamageReduction": 20,
 								"Duration": 8,
 								"HealthRegen": 4,
 								"HealthThreshold": 75
@@ -14342,7 +12322,7 @@
 							"style": 2,
 							"variables": {
 								"AttackSpeed": 40,
-								"DamageReduction": 15,
+								"DamageReduction": 20,
 								"Duration": 8,
 								"HealthRegen": 7,
 								"HealthThreshold": 75
@@ -14354,7 +12334,7 @@
 							"style": 3,
 							"variables": {
 								"AttackSpeed": 80,
-								"DamageReduction": 15,
+								"DamageReduction": 20,
 								"Duration": 8,
 								"HealthRegen": 10,
 								"HealthThreshold": 75
@@ -14366,7 +12346,7 @@
 							"style": 4,
 							"variables": {
 								"AttackSpeed": 150,
-								"DamageReduction": 15,
+								"DamageReduction": 20,
 								"Duration": 8,
 								"HealthRegen": 18,
 								"HealthThreshold": 75
@@ -14377,27 +12357,6 @@
 					"name": "Chemtech"
 				}
 			]
-		},
-		{
-			"champions": [],
-			"mutator": "TFTSet4_Act2",
-			"name": "Journeys",
-			"number": 4,
-			"traits": []
-		},
-		{
-			"champions": [],
-			"mutator": "TFTTURBOSet5",
-			"name": "Set 5",
-			"number": 5,
-			"traits": []
-		},
-		{
-			"champions": [],
-			"mutator": "TFTTURBOSet4",
-			"name": "Fates II",
-			"number": 4,
-			"traits": []
 		},
 		{
 			"champions": [
@@ -14493,102 +12452,6 @@
 			"mutator": "TFTTURBOSet6",
 			"name": "Set6",
 			"number": 6,
-			"traits": []
-		},
-		{
-			"champions": [
-				{
-					"ability": {
-						"desc": "The Voidspawn gains bonus Health and Attack Damage based on the current Stage. ",
-						"icon": "ASSETS/Characters/TFT_VoidSpawn/HUD/Voidspawn_square.dds",
-						"name": "Voidborn",
-						"variables": []
-					},
-					"apiName": "TFT_VoidSpawn",
-					"cost": 1,
-					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT_Voidspawn.dds",
-					"name": "Voidspawn",
-					"stats": {
-						"armor": 20,
-						"attackSpeed": 0.800000011920929,
-						"critChance": 0.25,
-						"critMultiplier": 1.2999999523162842,
-						"damage": 0,
-						"hp": null,
-						"initialMana": 0,
-						"magicResist": 20,
-						"mana": 0,
-						"range": 1
-					},
-					"traits": []
-				},
-				{
-					"ability": {
-						"desc": "The Training Dummy cannot move or attack. It is also dressed like a devilishly handsome Yordle.",
-						"icon": "ASSETS/Characters/TFTDebug_Dummy/HUD/Icons2D/TFTDebug_Dummy_DoNothing.dds",
-						"name": "On Duty!",
-						"variables": []
-					},
-					"apiName": "TFT_TrainingDummy",
-					"cost": 1,
-					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFTDebug_Dummy.dds",
-					"name": "Target Dummy",
-					"stats": {
-						"armor": 40,
-						"attackSpeed": 0.20000000298023224,
-						"critChance": null,
-						"critMultiplier": 0,
-						"damage": 0,
-						"hp": 500,
-						"initialMana": 0,
-						"magicResist": 40,
-						"mana": 0,
-						"range": 0
-					},
-					"traits": []
-				},
-				{
-					"ability": {
-						"desc": "Drag this Tome to the Shop to open an Armory full of emblems! You will have 30 seconds to choose.",
-						"icon": "ASSETS/Characters/TFT5_EmblemArmoryKey/HUD/TFT5_EmblemArmoryKey_Square.dds",
-						"name": "Tome of Traits",
-						"variables": [
-							{
-								"name": "RoundsToHatch",
-								"value": [
-									2,
-									2,
-									2,
-									2,
-									2,
-									2,
-									2
-								]
-							}
-						]
-					},
-					"apiName": "TFT5_EmblemArmoryKey",
-					"cost": 5,
-					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT5_EmblemArmoryKey.dds",
-					"name": "Tome of Traits",
-					"stats": {
-						"armor": 10,
-						"attackSpeed": 1,
-						"critChance": null,
-						"critMultiplier": 0,
-						"damage": null,
-						"hp": 10,
-						"initialMana": 0,
-						"magicResist": 10,
-						"mana": 100,
-						"range": 0
-					},
-					"traits": []
-				}
-			],
-			"mutator": "TFT_Set5_Stage2",
-			"name": "Set5",
-			"number": 5,
 			"traits": []
 		},
 		{
@@ -14872,7 +12735,7 @@
 						"attackSpeed": 0.800000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 50,
+						"damage": 45,
 						"hp": 750,
 						"initialMana": 0,
 						"magicResist": 40,
@@ -14917,13 +12780,13 @@
 							{
 								"name": "DamageReduction",
 								"value": [
-									50,
-									50,
-									50,
-									50,
-									50,
-									50,
-									50
+									60,
+									60,
+									60,
+									60,
+									60,
+									60,
+									60
 								]
 							}
 						]
@@ -14937,7 +12800,7 @@
 						"attackSpeed": 0.6000000238418579,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 70,
+						"damage": 60,
 						"hp": 800,
 						"initialMana": 60,
 						"magicResist": 45,
@@ -15103,7 +12966,7 @@
 						"attackSpeed": 0.6000000238418579,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 50,
+						"damage": 45,
 						"hp": 700,
 						"initialMana": 0,
 						"magicResist": 40,
@@ -15346,7 +13209,7 @@
 						"attackSpeed": 2,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 90,
+						"damage": 85,
 						"hp": 700,
 						"initialMana": 0,
 						"magicResist": 30,
@@ -15411,7 +13274,7 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 60,
+						"damage": 55,
 						"hp": 650,
 						"initialMana": 40,
 						"magicResist": 25,
@@ -15476,7 +13339,7 @@
 						"attackSpeed": 0.550000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 70,
+						"damage": 60,
 						"hp": 700,
 						"initialMana": 40,
 						"magicResist": 40,
@@ -15529,7 +13392,7 @@
 						"attackSpeed": 0.75,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 75,
+						"damage": 65,
 						"hp": 750,
 						"initialMana": 0,
 						"magicResist": 40,
@@ -15630,7 +13493,7 @@
 						"attackSpeed": 0.550000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 80,
+						"damage": 70,
 						"hp": 1000,
 						"initialMana": 30,
 						"magicResist": 60,
@@ -15730,9 +13593,9 @@
 								"name": "Damage",
 								"value": [
 									0,
-									325,
-									450,
-									675,
+									275,
+									375,
+									575,
 									0,
 									0,
 									0
@@ -15761,7 +13624,7 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 50,
+						"damage": 40,
 						"hp": 600,
 						"initialMana": 60,
 						"magicResist": 20,
@@ -15915,7 +13778,7 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 80,
+						"damage": 70,
 						"hp": 900,
 						"initialMana": 0,
 						"magicResist": 50,
@@ -15954,10 +13817,10 @@
 					"name": "Caitlyn",
 					"stats": {
 						"armor": 15,
-						"attackSpeed": 0.75,
+						"attackSpeed": 0.800000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 50,
+						"damage": 45,
 						"hp": 500,
 						"initialMana": 0,
 						"magicResist": 15,
@@ -15985,7 +13848,7 @@
 						"attackSpeed": 0.75,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 90,
+						"damage": 85,
 						"hp": 1000,
 						"initialMana": 0,
 						"magicResist": 30,
@@ -16008,9 +13871,9 @@
 								"name": "Damage",
 								"value": [
 									0,
-									600,
-									825,
-									950,
+									650,
+									900,
+									1025,
 									0,
 									0,
 									0
@@ -16072,14 +13935,14 @@
 					"name": "Malzahar",
 					"stats": {
 						"armor": 30,
-						"attackSpeed": 0.6499999761581421,
+						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
 						"damage": 40,
 						"hp": 650,
-						"initialMana": 30,
+						"initialMana": 50,
 						"magicResist": 30,
-						"mana": 60,
+						"mana": 80,
 						"range": 4
 					},
 					"traits": [
@@ -16163,8 +14026,8 @@
 								"name": "Damage",
 								"value": [
 									200,
-									150,
-									225,
+									125,
+									175,
 									9001,
 									200,
 									200,
@@ -16187,7 +14050,7 @@
 								"name": "StunDuration",
 								"value": [
 									1,
-									1,
+									1.5,
 									1.5,
 									10,
 									1.5,
@@ -16210,13 +14073,13 @@
 							{
 								"name": "MaxHealthPercent",
 								"value": [
-									0.05999999865889549,
-									0.05999999865889549,
-									0.05999999865889549,
-									0.05999999865889549,
-									0.05999999865889549,
-									0.05999999865889549,
-									0.05999999865889549
+									0.07999999821186066,
+									0.07999999821186066,
+									0.07999999821186066,
+									0.07999999821186066,
+									0.07999999821186066,
+									0.07999999821186066,
+									0.07999999821186066
 								]
 							}
 						]
@@ -16231,7 +14094,7 @@
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
 						"damage": 110,
-						"hp": 1200,
+						"hp": 1300,
 						"initialMana": 200,
 						"magicResist": 70,
 						"mana": 300,
@@ -16264,13 +14127,13 @@
 							{
 								"name": "ASBoost",
 								"value": [
-									0.20000000298023224,
-									0.20000000298023224,
-									0.20000000298023224,
-									0.20000000298023224,
-									0.20000000298023224,
-									0.20000000298023224,
-									0.20000000298023224
+									0.18000000715255737,
+									0.18000000715255737,
+									0.18000000715255737,
+									0.18000000715255737,
+									0.18000000715255737,
+									0.18000000715255737,
+									0.18000000715255737
 								]
 							},
 							{
@@ -16308,7 +14171,7 @@
 						"attackSpeed": 0.6499999761581421,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 50,
+						"damage": 45,
 						"hp": 500,
 						"initialMana": 0,
 						"magicResist": 15,
@@ -16486,7 +14349,7 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 65,
+						"damage": 55,
 						"hp": 700,
 						"initialMana": 60,
 						"magicResist": 40,
@@ -16642,7 +14505,7 @@
 						"attackSpeed": 1,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 88,
+						"damage": 80,
 						"hp": 888,
 						"initialMana": 0,
 						"magicResist": 45,
@@ -16864,9 +14727,9 @@
 						"critMultiplier": 1.2999999523162842,
 						"damage": 50,
 						"hp": 850,
-						"initialMana": 40,
+						"initialMana": 50,
 						"magicResist": 50,
-						"mana": 80,
+						"mana": 90,
 						"range": 2
 					},
 					"traits": [
@@ -16996,13 +14859,13 @@
 							{
 								"name": "AllyADAPBuff",
 								"value": [
-									20,
-									20,
-									20,
-									20,
-									20,
-									20,
-									20
+									15,
+									15,
+									15,
+									15,
+									15,
+									15,
+									15
 								]
 							},
 							{
@@ -17036,14 +14899,14 @@
 					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT6_Tibbers.TFT_Set6.dds",
 					"name": "Mechanical Bear",
 					"stats": {
-						"armor": 70,
+						"armor": 55,
 						"attackSpeed": 0.6000000238418579,
 						"critChance": 0.25,
 						"critMultiplier": 1.5,
 						"damage": 50,
 						"hp": 775,
 						"initialMana": 0,
-						"magicResist": 70,
+						"magicResist": 55,
 						"mana": 100,
 						"range": 1
 					},
@@ -17098,7 +14961,7 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 60,
+						"damage": 55,
 						"hp": 550,
 						"initialMana": 70,
 						"magicResist": 20,
@@ -17122,7 +14985,7 @@
 									0,
 									450,
 									650,
-									950,
+									850,
 									0,
 									0,
 									0
@@ -17163,7 +15026,7 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 50,
+						"damage": 45,
 						"hp": 650,
 						"initialMana": 0,
 						"magicResist": 25,
@@ -17209,8 +15072,8 @@
 								"name": "Damage",
 								"value": [
 									50,
-									70,
-									90,
+									75,
+									100,
 									180,
 									50,
 									50,
@@ -17225,7 +15088,7 @@
 					"name": "Kai'Sa",
 					"stats": {
 						"armor": 30,
-						"attackSpeed": 1.100000023841858,
+						"attackSpeed": 1.2000000476837158,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
 						"damage": 60,
@@ -17302,13 +15165,13 @@
 							{
 								"name": "DamageReducedPercent",
 								"value": [
-									0.25,
-									0.25,
-									0.25,
-									0.25,
-									0.25,
-									0.25,
-									0.25
+									0.20000000298023224,
+									0.20000000298023224,
+									0.20000000298023224,
+									0.20000000298023224,
+									0.20000000298023224,
+									0.20000000298023224,
+									0.20000000298023224
 								]
 							},
 							{
@@ -17530,14 +15393,14 @@
 					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT6_HextechDragon.TFT_Set6.dds",
 					"name": "Mechanical Dragon",
 					"stats": {
-						"armor": 100,
+						"armor": 90,
 						"attackSpeed": 0.800000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
 						"damage": 65,
 						"hp": 1125,
 						"initialMana": 200,
-						"magicResist": 100,
+						"magicResist": 90,
 						"mana": 300,
 						"range": 2
 					},
@@ -17622,7 +15485,7 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 50,
+						"damage": 45,
 						"hp": 600,
 						"initialMana": 40,
 						"magicResist": 25,
@@ -17691,13 +15554,13 @@
 							{
 								"name": "VIPBonusReducedDamage",
 								"value": [
-									30,
-									30,
-									30,
-									30,
-									30,
-									30,
-									30
+									45,
+									45,
+									45,
+									45,
+									45,
+									45,
+									45
 								]
 							}
 						]
@@ -17851,7 +15714,7 @@
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
 						"damage": 55,
-						"hp": 750,
+						"hp": 800,
 						"initialMana": 20,
 						"magicResist": 45,
 						"mana": 80,
@@ -17874,8 +15737,8 @@
 								"value": [
 									0,
 									225,
-									325,
-									500,
+									300,
+									425,
 									0,
 									0,
 									0
@@ -17974,9 +15837,9 @@
 								"name": "Heal",
 								"value": [
 									0,
-									150,
 									200,
-									350,
+									225,
+									400,
 									0,
 									0,
 									0
@@ -17986,9 +15849,9 @@
 								"name": "HealBonus",
 								"value": [
 									0,
-									250,
+									275,
 									350,
-									500,
+									600,
 									0,
 									0,
 									0
@@ -18005,11 +15868,11 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 60,
+						"damage": 55,
 						"hp": 750,
 						"initialMana": 60,
 						"magicResist": 45,
-						"mana": 90,
+						"mana": 80,
 						"range": 1
 					},
 					"traits": [
@@ -18083,11 +15946,11 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 70,
+						"damage": 60,
 						"hp": 600,
 						"initialMana": 30,
 						"magicResist": 20,
-						"mana": 60,
+						"mana": 55,
 						"range": 4
 					},
 					"traits": [
@@ -18104,13 +15967,13 @@
 							{
 								"name": "PercentDamage",
 								"value": [
-									0.33000001311302185,
-									0.33000001311302185,
-									0.33000001311302185,
-									0.33000001311302185,
-									0.33000001311302185,
-									0.33000001311302185,
-									0.33000001311302185
+									0.4000000059604645,
+									0.4000000059604645,
+									0.4000000059604645,
+									0.4000000059604645,
+									0.4000000059604645,
+									0.4000000059604645,
+									0.4000000059604645
 								]
 							},
 							{
@@ -18169,10 +16032,10 @@
 					"name": "Sivir",
 					"stats": {
 						"armor": 30,
-						"attackSpeed": 0.699999988079071,
+						"attackSpeed": 0.800000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 70,
+						"damage": 65,
 						"hp": 700,
 						"initialMana": 0,
 						"magicResist": 30,
@@ -18298,13 +16161,13 @@
 							{
 								"name": "ADPercent",
 								"value": [
-									0,
-									1.850000023841858,
-									1.850000023841858,
-									1.850000023841858,
-									1.850000023841858,
-									250,
-									300
+									1.75,
+									1.75,
+									1.75,
+									1.75,
+									1.75,
+									1.75,
+									1.75
 								]
 							},
 							{
@@ -18342,7 +16205,7 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 70,
+						"damage": 60,
 						"hp": 700,
 						"initialMana": 0,
 						"magicResist": 40,
@@ -18365,9 +16228,9 @@
 								"name": "ShieldAmount",
 								"value": [
 									50,
-									500,
-									600,
-									750,
+									475,
+									575,
+									675,
 									550,
 									675,
 									800
@@ -18446,9 +16309,9 @@
 						"critMultiplier": 1.2999999523162842,
 						"damage": 50,
 						"hp": 800,
-						"initialMana": 60,
+						"initialMana": 70,
 						"magicResist": 50,
-						"mana": 120,
+						"mana": 130,
 						"range": 2
 					},
 					"traits": [
@@ -18466,9 +16329,9 @@
 								"name": "Damage",
 								"value": [
 									0,
-									185,
-									295,
-									315,
+									175,
+									275,
+									300,
 									500,
 									625,
 									750
@@ -18497,7 +16360,7 @@
 						"attackSpeed": 0.75,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 60,
+						"damage": 55,
 						"hp": 700,
 						"initialMana": 0,
 						"magicResist": 30,
@@ -18531,8 +16394,8 @@
 								"name": "ADMult",
 								"value": [
 									1,
-									1.5,
-									1.600000023841858,
+									1.7000000476837158,
+									1.7999999523162842,
 									4,
 									3,
 									3.5,
@@ -18543,9 +16406,9 @@
 								"name": "Damage",
 								"value": [
 									0,
-									150,
-									200,
-									500,
+									100,
+									125,
+									400,
 									0,
 									0,
 									0
@@ -18598,7 +16461,7 @@
 						"attackSpeed": 0.800000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 80,
+						"damage": 70,
 						"hp": 800,
 						"initialMana": 0,
 						"magicResist": 30,
@@ -18675,7 +16538,7 @@
 						"attackSpeed": 0.8999999761581421,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 90,
+						"damage": 85,
 						"hp": 800,
 						"initialMana": 0,
 						"magicResist": 35,
@@ -18732,13 +16595,13 @@
 							{
 								"name": "MultiOrbDamage",
 								"value": [
-									0.800000011920929,
-									0.800000011920929,
-									0.800000011920929,
-									0.800000011920929,
-									0.800000011920929,
-									0.800000011920929,
-									0.800000011920929
+									0.6000000238418579,
+									0.6000000238418579,
+									0.6000000238418579,
+									0.6000000238418579,
+									0.6000000238418579,
+									0.6000000238418579,
+									0.6000000238418579
 								]
 							},
 							{
@@ -18798,9 +16661,9 @@
 								"name": "BaseDamage",
 								"value": [
 									0,
-									75,
-									100,
-									600,
+									60,
+									90,
+									550,
 									0,
 									0,
 									0
@@ -18817,11 +16680,11 @@
 						"attackSpeed": 0.800000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 90,
+						"damage": 70,
 						"hp": 900,
 						"initialMana": 0,
 						"magicResist": 50,
-						"mana": 30,
+						"mana": 40,
 						"range": 1
 					},
 					"traits": [
@@ -18839,9 +16702,9 @@
 								"name": "RocketDamage",
 								"value": [
 									0,
-									220,
-									275,
-									350,
+									190,
+									245,
+									315,
 									0,
 									0,
 									0
@@ -18858,7 +16721,7 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 65,
+						"damage": 55,
 						"hp": 650,
 						"initialMana": 25,
 						"magicResist": 25,
@@ -18879,13 +16742,13 @@
 							{
 								"name": "PercentAD",
 								"value": [
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858
+									1.5,
+									1.5,
+									1.5,
+									1.5,
+									1.5,
+									1.5,
+									1.5
 								]
 							},
 							{
@@ -18909,8 +16772,8 @@
 								"value": [
 									0,
 									80,
-									125,
-									200,
+									120,
+									180,
 									0,
 									0,
 									0
@@ -18924,10 +16787,10 @@
 					"name": "Senna",
 					"stats": {
 						"armor": 25,
-						"attackSpeed": 0.75,
+						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 70,
+						"damage": 60,
 						"hp": 650,
 						"initialMana": 30,
 						"magicResist": 25,
@@ -19004,7 +16867,7 @@
 						"attackSpeed": 0.6000000238418579,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 100,
+						"damage": 90,
 						"hp": 1400,
 						"initialMana": 85,
 						"magicResist": 80,
@@ -19026,9 +16889,9 @@
 								"name": "DamagePerSecond",
 								"value": [
 									1,
-									45,
-									70,
-									240,
+									40,
+									65,
+									220,
 									2,
 									2.25,
 									2.5
@@ -19140,8 +17003,8 @@
 								"value": [
 									6,
 									6,
-									6,
-									6,
+									7,
+									10,
 									6,
 									6,
 									6
@@ -19228,9 +17091,9 @@
 								"name": "BonusOnHit",
 								"value": [
 									0,
-									11,
-									22,
-									44,
+									10,
+									20,
+									40,
 									0,
 									0,
 									0
@@ -19295,7 +17158,7 @@
 						"attackSpeed": 0.800000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 85,
+						"damage": 75,
 						"hp": 850,
 						"initialMana": 0,
 						"magicResist": 30,
@@ -19316,13 +17179,13 @@
 							{
 								"name": "PercentAttackDamage",
 								"value": [
-									0,
 									1.25,
-									1.2999999523162842,
-									1.399999976158142,
-									0,
-									0,
-									0
+									1.25,
+									1.25,
+									1.25,
+									1.25,
+									1.25,
+									1.25
 								]
 							},
 							{
@@ -19372,7 +17235,7 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 50,
+						"damage": 45,
 						"hp": 450,
 						"initialMana": 0,
 						"magicResist": 15,
@@ -19394,9 +17257,9 @@
 								"name": "BaseDamage",
 								"value": [
 									0,
-									225,
-									300,
-									450,
+									250,
+									350,
+									500,
 									0,
 									0,
 									0
@@ -19418,8 +17281,8 @@
 								"name": "Healing",
 								"value": [
 									80,
-									225,
 									250,
+									300,
 									350,
 									80,
 									80,
@@ -19437,7 +17300,7 @@
 						"attackSpeed": 0.6000000238418579,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 45,
+						"damage": 40,
 						"hp": 800,
 						"initialMana": 40,
 						"magicResist": 45,
@@ -19547,8 +17410,8 @@
 							"minUnits": 3,
 							"style": 1,
 							"variables": {
-								"Armor": 55,
-								"MagicResist": 55,
+								"Armor": 50,
+								"MagicResist": 50,
 								"{5c51b509}": 1,
 								"{c9b0e3af}": 20
 							}
@@ -19558,8 +17421,8 @@
 							"minUnits": 5,
 							"style": 3,
 							"variables": {
-								"Armor": 55,
-								"MagicResist": 55,
+								"Armor": 50,
+								"MagicResist": 50,
 								"{5c51b509}": 2,
 								"{c9b0e3af}": 20
 							}
@@ -19569,10 +17432,10 @@
 							"minUnits": 7,
 							"style": 4,
 							"variables": {
-								"Armor": 55,
-								"MagicResist": 55,
+								"Armor": 50,
+								"MagicResist": 50,
 								"{5c51b509}": 3,
-								"{867bc055}": 0.6000000238418579,
+								"{867bc055}": 0.5,
 								"{c9b0e3af}": 20
 							}
 						}
@@ -19806,7 +17669,7 @@
 							"minUnits": 2,
 							"style": 2,
 							"variables": {
-								"DamagePercent": 0.25,
+								"DamagePercent": 0.15000000596046448,
 								"{5064373e}": "null",
 								"{5c51b509}": 2,
 								"{6c155e99}": "null",
@@ -19818,7 +17681,7 @@
 							"minUnits": 3,
 							"style": 3,
 							"variables": {
-								"DamagePercent": 0.25,
+								"DamagePercent": 0.15000000596046448,
 								"{5064373e}": "null",
 								"{5c51b509}": 3,
 								"{6c155e99}": 0.33000001311302185,
@@ -19830,7 +17693,7 @@
 							"minUnits": 5,
 							"style": 4,
 							"variables": {
-								"DamagePercent": 0.5,
+								"DamagePercent": 0.30000001192092896,
 								"{5064373e}": "null",
 								"{5c51b509}": 4,
 								"{6c155e99}": 0.6600000262260437,
@@ -20052,7 +17915,7 @@
 				},
 				{
 					"apiName": "Set6_Hextech",
-					"desc": "At the start of combat and every @Frequency@ seconds afterwards, the Hexcore sends out a pulse that charges up allied Hextech champions with a shield for @ShieldDuration@ seconds. While the shield is active, attacks deal bonus magic damage on hit. This shield does not stack.<br><br><expandRow>(@MinUnits@) @ShieldAmount@ shield, @MagicDamage@ magic damage</expandRow>",
+					"desc": "At the start of combat and every @Frequency@ seconds afterwards, the Hexcore sends out a pulse that charges up allied Hextech champions with a shield for @ShieldDuration@ seconds (does not stack). While the shield is active, attacks deal bonus magic damage on hit. Additionally, the shield and bonus magic damage are @BonusPercentPerAugment@% stronger for each augment in the Hexcore.<br><br><expandRow>(@MinUnits@) @ShieldAmount@ shield, @MagicDamage@ magic damage</expandRow>",
 					"effects": [
 						{
 							"maxUnits": 3,
@@ -20062,7 +17925,8 @@
 								"MagicDamage": 15,
 								"ShieldAmount": 100,
 								"ShieldDuration": 4,
-								"{2fb31c01}": 6
+								"{2fb31c01}": 6,
+								"{f49783e7}": 20
 							}
 						},
 						{
@@ -20070,10 +17934,11 @@
 							"minUnits": 4,
 							"style": 2,
 							"variables": {
-								"MagicDamage": 30,
+								"MagicDamage": 25,
 								"ShieldAmount": 150,
 								"ShieldDuration": 4,
-								"{2fb31c01}": 6
+								"{2fb31c01}": 6,
+								"{f49783e7}": 20
 							}
 						},
 						{
@@ -20081,10 +17946,11 @@
 							"minUnits": 6,
 							"style": 3,
 							"variables": {
-								"MagicDamage": 60,
+								"MagicDamage": 50,
 								"ShieldAmount": 300,
 								"ShieldDuration": 4,
-								"{2fb31c01}": 6
+								"{2fb31c01}": 6,
+								"{f49783e7}": 20
 							}
 						},
 						{
@@ -20092,10 +17958,11 @@
 							"minUnits": 8,
 							"style": 4,
 							"variables": {
-								"MagicDamage": 120,
-								"ShieldAmount": 600,
+								"MagicDamage": 80,
+								"ShieldAmount": 400,
 								"ShieldDuration": 4,
-								"{2fb31c01}": 6
+								"{2fb31c01}": 6,
+								"{f49783e7}": 20
 							}
 						}
 					],
@@ -20271,8 +18138,8 @@
 							"minUnits": 5,
 							"style": 3,
 							"variables": {
-								"Health": 450,
-								"{7f1304b2}": 45
+								"Health": 400,
+								"{7f1304b2}": 40
 							}
 						},
 						{
@@ -20280,8 +18147,8 @@
 							"minUnits": 7,
 							"style": 4,
 							"variables": {
-								"Health": 800,
-								"{7f1304b2}": 80
+								"Health": 700,
+								"{7f1304b2}": 70
 							}
 						}
 					],
@@ -20384,7 +18251,7 @@
 							"minUnits": 4,
 							"style": 3,
 							"variables": {
-								"{df962703}": 65
+								"{df962703}": 70
 							}
 						},
 						{
@@ -20392,7 +18259,7 @@
 							"minUnits": 6,
 							"style": 4,
 							"variables": {
-								"{df962703}": 110
+								"{df962703}": 120
 							}
 						}
 					],
@@ -20418,7 +18285,7 @@
 							"style": 3,
 							"variables": {
 								"{51aec5d2}": 0.10000000149011612,
-								"{cbb3a34f}": 0.4000000059604645
+								"{cbb3a34f}": 0.3499999940395355
 							}
 						},
 						{
@@ -20436,26 +18303,16 @@
 				},
 				{
 					"apiName": "Set6_Enforcer",
-					"desc": "Enforcers stun enemies at the start of combat. The target breaks free after @DetainDuration@ seconds, or after losing @HPPercent*100@% of their maximum Health. Enforcers will not try to stun enemies who are immune to crowd control effects.<br><br><row>(@MinUnits@) The enemy who has the most Health</row><br><row>(@MinUnits@) And the enemy who dealt the most damage last combat</row>",
+					"desc": "<row>(@MinUnits@) At the start of combat, Enforcers stun the enemy who has the most Health. The target breaks free after @DetainDuration@ seconds, or after losing @HPPercent*100@% of their maximum Health. Enforcers will not try to stun enemies who are immune to crowd control effects.</row>",
 					"effects": [
 						{
-							"maxUnits": 3,
-							"minUnits": 2,
-							"style": 1,
-							"variables": {
-								"HPPercent": 0.4000000059604645,
-								"{70ed38c6}": 3,
-								"{d2b7f6f1}": 1
-							}
-						},
-						{
 							"maxUnits": 25000,
-							"minUnits": 4,
+							"minUnits": 3,
 							"style": 3,
 							"variables": {
 								"HPPercent": 0.4000000059604645,
 								"{70ed38c6}": 4,
-								"{d2b7f6f1}": 2
+								"{d2b7f6f1}": 1
 							}
 						}
 					],
@@ -20472,7 +18329,7 @@
 							"style": 1,
 							"variables": {
 								"AttackSpeed": 15,
-								"DamageReduction": 15,
+								"DamageReduction": 20,
 								"Duration": 8,
 								"HealthRegen": 4,
 								"HealthThreshold": 75
@@ -20484,7 +18341,7 @@
 							"style": 2,
 							"variables": {
 								"AttackSpeed": 40,
-								"DamageReduction": 15,
+								"DamageReduction": 20,
 								"Duration": 8,
 								"HealthRegen": 7,
 								"HealthThreshold": 75
@@ -20496,7 +18353,7 @@
 							"style": 3,
 							"variables": {
 								"AttackSpeed": 80,
-								"DamageReduction": 15,
+								"DamageReduction": 20,
 								"Duration": 8,
 								"HealthRegen": 10,
 								"HealthThreshold": 75
@@ -20508,7 +18365,7 @@
 							"style": 4,
 							"variables": {
 								"AttackSpeed": 150,
-								"DamageReduction": 15,
+								"DamageReduction": 20,
 								"Duration": 8,
 								"HealthRegen": 18,
 								"HealthThreshold": 75
@@ -20614,293 +18471,6 @@
 				}
 			],
 			"name": "Base",
-			"traits": []
-		},
-		"2": {
-			"champions": [
-				{
-					"ability": {
-						"desc": "The Voidspawn gains bonus Health and Attack Damage based on the current Stage. ",
-						"icon": "ASSETS/Characters/TFT_VoidSpawn/HUD/Voidspawn_square.dds",
-						"name": "Voidborn",
-						"variables": []
-					},
-					"apiName": "TFT_VoidSpawn",
-					"cost": 1,
-					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT_Voidspawn.dds",
-					"name": "Voidspawn",
-					"stats": {
-						"armor": 20,
-						"attackSpeed": 0.800000011920929,
-						"critChance": 0.25,
-						"critMultiplier": 1.2999999523162842,
-						"damage": 0,
-						"hp": null,
-						"initialMana": 0,
-						"magicResist": 20,
-						"mana": 0,
-						"range": 1
-					},
-					"traits": []
-				},
-				{
-					"ability": {
-						"desc": "The Training Dummy cannot move or attack. It is also dressed like a devilishly handsome Yordle.",
-						"icon": "ASSETS/Characters/TFTDebug_Dummy/HUD/Icons2D/TFTDebug_Dummy_DoNothing.dds",
-						"name": "On Duty!",
-						"variables": []
-					},
-					"apiName": "TFT_TrainingDummy",
-					"cost": 1,
-					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFTDebug_Dummy.dds",
-					"name": "Target Dummy",
-					"stats": {
-						"armor": 40,
-						"attackSpeed": 0.20000000298023224,
-						"critChance": null,
-						"critMultiplier": 0,
-						"damage": 0,
-						"hp": 500,
-						"initialMana": 0,
-						"magicResist": 40,
-						"mana": 0,
-						"range": 0
-					},
-					"traits": []
-				},
-				{
-					"ability": {
-						"desc": "Drag this Tome to the Shop to open an Armory full of emblems! You will have 30 seconds to choose.",
-						"icon": "ASSETS/Characters/TFT5_EmblemArmoryKey/HUD/TFT5_EmblemArmoryKey_Square.dds",
-						"name": "Tome of Traits",
-						"variables": [
-							{
-								"name": "RoundsToHatch",
-								"value": [
-									2,
-									2,
-									2,
-									2,
-									2,
-									2,
-									2
-								]
-							}
-						]
-					},
-					"apiName": "TFT5_EmblemArmoryKey",
-					"cost": 5,
-					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT5_EmblemArmoryKey.dds",
-					"name": "Tome of Traits",
-					"stats": {
-						"armor": 10,
-						"attackSpeed": 1,
-						"critChance": null,
-						"critMultiplier": 0,
-						"damage": null,
-						"hp": 10,
-						"initialMana": 0,
-						"magicResist": 10,
-						"mana": 100,
-						"range": 0
-					},
-					"traits": []
-				}
-			],
-			"name": "War of the Elements",
-			"traits": []
-		},
-		"3": {
-			"champions": [
-				{
-					"ability": {
-						"desc": "The Voidspawn gains bonus Health and Attack Damage based on the current Stage. ",
-						"icon": "ASSETS/Characters/TFT_VoidSpawn/HUD/Voidspawn_square.dds",
-						"name": "Voidborn",
-						"variables": []
-					},
-					"apiName": "TFT_VoidSpawn",
-					"cost": 1,
-					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT_Voidspawn.dds",
-					"name": "Voidspawn",
-					"stats": {
-						"armor": 20,
-						"attackSpeed": 0.800000011920929,
-						"critChance": 0.25,
-						"critMultiplier": 1.2999999523162842,
-						"damage": 0,
-						"hp": null,
-						"initialMana": 0,
-						"magicResist": 20,
-						"mana": 0,
-						"range": 1
-					},
-					"traits": []
-				},
-				{
-					"ability": {
-						"desc": "The Training Dummy cannot move or attack. It is also dressed like a devilishly handsome Yordle.",
-						"icon": "ASSETS/Characters/TFTDebug_Dummy/HUD/Icons2D/TFTDebug_Dummy_DoNothing.dds",
-						"name": "On Duty!",
-						"variables": []
-					},
-					"apiName": "TFT_TrainingDummy",
-					"cost": 1,
-					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFTDebug_Dummy.dds",
-					"name": "Target Dummy",
-					"stats": {
-						"armor": 40,
-						"attackSpeed": 0.20000000298023224,
-						"critChance": null,
-						"critMultiplier": 0,
-						"damage": 0,
-						"hp": 500,
-						"initialMana": 0,
-						"magicResist": 40,
-						"mana": 0,
-						"range": 0
-					},
-					"traits": []
-				},
-				{
-					"ability": {
-						"desc": "Drag this Tome to the Shop to open an Armory full of emblems! You will have 30 seconds to choose.",
-						"icon": "ASSETS/Characters/TFT5_EmblemArmoryKey/HUD/TFT5_EmblemArmoryKey_Square.dds",
-						"name": "Tome of Traits",
-						"variables": [
-							{
-								"name": "RoundsToHatch",
-								"value": [
-									2,
-									2,
-									2,
-									2,
-									2,
-									2,
-									2
-								]
-							}
-						]
-					},
-					"apiName": "TFT5_EmblemArmoryKey",
-					"cost": 5,
-					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT5_EmblemArmoryKey.dds",
-					"name": "Tome of Traits",
-					"stats": {
-						"armor": 10,
-						"attackSpeed": 1,
-						"critChance": null,
-						"critMultiplier": 0,
-						"damage": null,
-						"hp": 10,
-						"initialMana": 0,
-						"magicResist": 10,
-						"mana": 100,
-						"range": 0
-					},
-					"traits": []
-				}
-			],
-			"name": "Galaxies",
-			"traits": []
-		},
-		"4": {
-			"champions": [],
-			"name": "Fates II",
-			"traits": []
-		},
-		"5": {
-			"champions": [
-				{
-					"ability": {
-						"desc": "The Voidspawn gains bonus Health and Attack Damage based on the current Stage. ",
-						"icon": "ASSETS/Characters/TFT_VoidSpawn/HUD/Voidspawn_square.dds",
-						"name": "Voidborn",
-						"variables": []
-					},
-					"apiName": "TFT_VoidSpawn",
-					"cost": 1,
-					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT_Voidspawn.dds",
-					"name": "Voidspawn",
-					"stats": {
-						"armor": 20,
-						"attackSpeed": 0.800000011920929,
-						"critChance": 0.25,
-						"critMultiplier": 1.2999999523162842,
-						"damage": 0,
-						"hp": null,
-						"initialMana": 0,
-						"magicResist": 20,
-						"mana": 0,
-						"range": 1
-					},
-					"traits": []
-				},
-				{
-					"ability": {
-						"desc": "The Training Dummy cannot move or attack. It is also dressed like a devilishly handsome Yordle.",
-						"icon": "ASSETS/Characters/TFTDebug_Dummy/HUD/Icons2D/TFTDebug_Dummy_DoNothing.dds",
-						"name": "On Duty!",
-						"variables": []
-					},
-					"apiName": "TFT_TrainingDummy",
-					"cost": 1,
-					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFTDebug_Dummy.dds",
-					"name": "Target Dummy",
-					"stats": {
-						"armor": 40,
-						"attackSpeed": 0.20000000298023224,
-						"critChance": null,
-						"critMultiplier": 0,
-						"damage": 0,
-						"hp": 500,
-						"initialMana": 0,
-						"magicResist": 40,
-						"mana": 0,
-						"range": 0
-					},
-					"traits": []
-				},
-				{
-					"ability": {
-						"desc": "Drag this Tome to the Shop to open an Armory full of emblems! You will have 30 seconds to choose.",
-						"icon": "ASSETS/Characters/TFT5_EmblemArmoryKey/HUD/TFT5_EmblemArmoryKey_Square.dds",
-						"name": "Tome of Traits",
-						"variables": [
-							{
-								"name": "RoundsToHatch",
-								"value": [
-									2,
-									2,
-									2,
-									2,
-									2,
-									2,
-									2
-								]
-							}
-						]
-					},
-					"apiName": "TFT5_EmblemArmoryKey",
-					"cost": 5,
-					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT5_EmblemArmoryKey.dds",
-					"name": "Tome of Traits",
-					"stats": {
-						"armor": 10,
-						"attackSpeed": 1,
-						"critChance": null,
-						"critMultiplier": 0,
-						"damage": null,
-						"hp": 10,
-						"initialMana": 0,
-						"magicResist": 10,
-						"mana": 100,
-						"range": 0
-					},
-					"traits": []
-				}
-			],
-			"name": "Set5",
 			"traits": []
 		},
 		"6": {
@@ -21088,7 +18658,7 @@
 						"attackSpeed": 0.800000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 50,
+						"damage": 45,
 						"hp": 750,
 						"initialMana": 0,
 						"magicResist": 40,
@@ -21133,13 +18703,13 @@
 							{
 								"name": "DamageReduction",
 								"value": [
-									50,
-									50,
-									50,
-									50,
-									50,
-									50,
-									50
+									60,
+									60,
+									60,
+									60,
+									60,
+									60,
+									60
 								]
 							}
 						]
@@ -21153,7 +18723,7 @@
 						"attackSpeed": 0.6000000238418579,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 70,
+						"damage": 60,
 						"hp": 800,
 						"initialMana": 60,
 						"magicResist": 45,
@@ -21319,7 +18889,7 @@
 						"attackSpeed": 0.6000000238418579,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 50,
+						"damage": 45,
 						"hp": 700,
 						"initialMana": 0,
 						"magicResist": 40,
@@ -21562,7 +19132,7 @@
 						"attackSpeed": 2,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 90,
+						"damage": 85,
 						"hp": 700,
 						"initialMana": 0,
 						"magicResist": 30,
@@ -21627,7 +19197,7 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 60,
+						"damage": 55,
 						"hp": 650,
 						"initialMana": 40,
 						"magicResist": 25,
@@ -21692,7 +19262,7 @@
 						"attackSpeed": 0.550000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 70,
+						"damage": 60,
 						"hp": 700,
 						"initialMana": 40,
 						"magicResist": 40,
@@ -21745,7 +19315,7 @@
 						"attackSpeed": 0.75,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 75,
+						"damage": 65,
 						"hp": 750,
 						"initialMana": 0,
 						"magicResist": 40,
@@ -21846,7 +19416,7 @@
 						"attackSpeed": 0.550000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 80,
+						"damage": 70,
 						"hp": 1000,
 						"initialMana": 30,
 						"magicResist": 60,
@@ -21946,9 +19516,9 @@
 								"name": "Damage",
 								"value": [
 									0,
-									325,
-									450,
-									675,
+									275,
+									375,
+									575,
 									0,
 									0,
 									0
@@ -21977,7 +19547,7 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 50,
+						"damage": 40,
 						"hp": 600,
 						"initialMana": 60,
 						"magicResist": 20,
@@ -22131,7 +19701,7 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 80,
+						"damage": 70,
 						"hp": 900,
 						"initialMana": 0,
 						"magicResist": 50,
@@ -22170,10 +19740,10 @@
 					"name": "Caitlyn",
 					"stats": {
 						"armor": 15,
-						"attackSpeed": 0.75,
+						"attackSpeed": 0.800000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 50,
+						"damage": 45,
 						"hp": 500,
 						"initialMana": 0,
 						"magicResist": 15,
@@ -22201,7 +19771,7 @@
 						"attackSpeed": 0.75,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 90,
+						"damage": 85,
 						"hp": 1000,
 						"initialMana": 0,
 						"magicResist": 30,
@@ -22224,9 +19794,9 @@
 								"name": "Damage",
 								"value": [
 									0,
-									600,
-									825,
-									950,
+									650,
+									900,
+									1025,
 									0,
 									0,
 									0
@@ -22288,14 +19858,14 @@
 					"name": "Malzahar",
 					"stats": {
 						"armor": 30,
-						"attackSpeed": 0.6499999761581421,
+						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
 						"damage": 40,
 						"hp": 650,
-						"initialMana": 30,
+						"initialMana": 50,
 						"magicResist": 30,
-						"mana": 60,
+						"mana": 80,
 						"range": 4
 					},
 					"traits": [
@@ -22379,8 +19949,8 @@
 								"name": "Damage",
 								"value": [
 									200,
-									150,
-									225,
+									125,
+									175,
 									9001,
 									200,
 									200,
@@ -22403,7 +19973,7 @@
 								"name": "StunDuration",
 								"value": [
 									1,
-									1,
+									1.5,
 									1.5,
 									10,
 									1.5,
@@ -22426,13 +19996,13 @@
 							{
 								"name": "MaxHealthPercent",
 								"value": [
-									0.05999999865889549,
-									0.05999999865889549,
-									0.05999999865889549,
-									0.05999999865889549,
-									0.05999999865889549,
-									0.05999999865889549,
-									0.05999999865889549
+									0.07999999821186066,
+									0.07999999821186066,
+									0.07999999821186066,
+									0.07999999821186066,
+									0.07999999821186066,
+									0.07999999821186066,
+									0.07999999821186066
 								]
 							}
 						]
@@ -22447,7 +20017,7 @@
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
 						"damage": 110,
-						"hp": 1200,
+						"hp": 1300,
 						"initialMana": 200,
 						"magicResist": 70,
 						"mana": 300,
@@ -22480,13 +20050,13 @@
 							{
 								"name": "ASBoost",
 								"value": [
-									0.20000000298023224,
-									0.20000000298023224,
-									0.20000000298023224,
-									0.20000000298023224,
-									0.20000000298023224,
-									0.20000000298023224,
-									0.20000000298023224
+									0.18000000715255737,
+									0.18000000715255737,
+									0.18000000715255737,
+									0.18000000715255737,
+									0.18000000715255737,
+									0.18000000715255737,
+									0.18000000715255737
 								]
 							},
 							{
@@ -22524,7 +20094,7 @@
 						"attackSpeed": 0.6499999761581421,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 50,
+						"damage": 45,
 						"hp": 500,
 						"initialMana": 0,
 						"magicResist": 15,
@@ -22702,7 +20272,7 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 65,
+						"damage": 55,
 						"hp": 700,
 						"initialMana": 60,
 						"magicResist": 40,
@@ -22858,7 +20428,7 @@
 						"attackSpeed": 1,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 88,
+						"damage": 80,
 						"hp": 888,
 						"initialMana": 0,
 						"magicResist": 45,
@@ -23080,9 +20650,9 @@
 						"critMultiplier": 1.2999999523162842,
 						"damage": 50,
 						"hp": 850,
-						"initialMana": 40,
+						"initialMana": 50,
 						"magicResist": 50,
-						"mana": 80,
+						"mana": 90,
 						"range": 2
 					},
 					"traits": [
@@ -23212,13 +20782,13 @@
 							{
 								"name": "AllyADAPBuff",
 								"value": [
-									20,
-									20,
-									20,
-									20,
-									20,
-									20,
-									20
+									15,
+									15,
+									15,
+									15,
+									15,
+									15,
+									15
 								]
 							},
 							{
@@ -23252,14 +20822,14 @@
 					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT6_Tibbers.TFT_Set6.dds",
 					"name": "Mechanical Bear",
 					"stats": {
-						"armor": 70,
+						"armor": 55,
 						"attackSpeed": 0.6000000238418579,
 						"critChance": 0.25,
 						"critMultiplier": 1.5,
 						"damage": 50,
 						"hp": 775,
 						"initialMana": 0,
-						"magicResist": 70,
+						"magicResist": 55,
 						"mana": 100,
 						"range": 1
 					},
@@ -23314,7 +20884,7 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 60,
+						"damage": 55,
 						"hp": 550,
 						"initialMana": 70,
 						"magicResist": 20,
@@ -23338,7 +20908,7 @@
 									0,
 									450,
 									650,
-									950,
+									850,
 									0,
 									0,
 									0
@@ -23379,7 +20949,7 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 50,
+						"damage": 45,
 						"hp": 650,
 						"initialMana": 0,
 						"magicResist": 25,
@@ -23425,8 +20995,8 @@
 								"name": "Damage",
 								"value": [
 									50,
-									70,
-									90,
+									75,
+									100,
 									180,
 									50,
 									50,
@@ -23441,7 +21011,7 @@
 					"name": "Kai'Sa",
 					"stats": {
 						"armor": 30,
-						"attackSpeed": 1.100000023841858,
+						"attackSpeed": 1.2000000476837158,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
 						"damage": 60,
@@ -23518,13 +21088,13 @@
 							{
 								"name": "DamageReducedPercent",
 								"value": [
-									0.25,
-									0.25,
-									0.25,
-									0.25,
-									0.25,
-									0.25,
-									0.25
+									0.20000000298023224,
+									0.20000000298023224,
+									0.20000000298023224,
+									0.20000000298023224,
+									0.20000000298023224,
+									0.20000000298023224,
+									0.20000000298023224
 								]
 							},
 							{
@@ -23746,14 +21316,14 @@
 					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT6_HextechDragon.TFT_Set6.dds",
 					"name": "Mechanical Dragon",
 					"stats": {
-						"armor": 100,
+						"armor": 90,
 						"attackSpeed": 0.800000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
 						"damage": 65,
 						"hp": 1125,
 						"initialMana": 200,
-						"magicResist": 100,
+						"magicResist": 90,
 						"mana": 300,
 						"range": 2
 					},
@@ -23838,7 +21408,7 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 50,
+						"damage": 45,
 						"hp": 600,
 						"initialMana": 40,
 						"magicResist": 25,
@@ -23907,13 +21477,13 @@
 							{
 								"name": "VIPBonusReducedDamage",
 								"value": [
-									30,
-									30,
-									30,
-									30,
-									30,
-									30,
-									30
+									45,
+									45,
+									45,
+									45,
+									45,
+									45,
+									45
 								]
 							}
 						]
@@ -24067,7 +21637,7 @@
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
 						"damage": 55,
-						"hp": 750,
+						"hp": 800,
 						"initialMana": 20,
 						"magicResist": 45,
 						"mana": 80,
@@ -24090,8 +21660,8 @@
 								"value": [
 									0,
 									225,
-									325,
-									500,
+									300,
+									425,
 									0,
 									0,
 									0
@@ -24190,9 +21760,9 @@
 								"name": "Heal",
 								"value": [
 									0,
-									150,
 									200,
-									350,
+									225,
+									400,
 									0,
 									0,
 									0
@@ -24202,9 +21772,9 @@
 								"name": "HealBonus",
 								"value": [
 									0,
-									250,
+									275,
 									350,
-									500,
+									600,
 									0,
 									0,
 									0
@@ -24221,11 +21791,11 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 60,
+						"damage": 55,
 						"hp": 750,
 						"initialMana": 60,
 						"magicResist": 45,
-						"mana": 90,
+						"mana": 80,
 						"range": 1
 					},
 					"traits": [
@@ -24299,11 +21869,11 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 70,
+						"damage": 60,
 						"hp": 600,
 						"initialMana": 30,
 						"magicResist": 20,
-						"mana": 60,
+						"mana": 55,
 						"range": 4
 					},
 					"traits": [
@@ -24320,13 +21890,13 @@
 							{
 								"name": "PercentDamage",
 								"value": [
-									0.33000001311302185,
-									0.33000001311302185,
-									0.33000001311302185,
-									0.33000001311302185,
-									0.33000001311302185,
-									0.33000001311302185,
-									0.33000001311302185
+									0.4000000059604645,
+									0.4000000059604645,
+									0.4000000059604645,
+									0.4000000059604645,
+									0.4000000059604645,
+									0.4000000059604645,
+									0.4000000059604645
 								]
 							},
 							{
@@ -24385,10 +21955,10 @@
 					"name": "Sivir",
 					"stats": {
 						"armor": 30,
-						"attackSpeed": 0.699999988079071,
+						"attackSpeed": 0.800000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 70,
+						"damage": 65,
 						"hp": 700,
 						"initialMana": 0,
 						"magicResist": 30,
@@ -24514,13 +22084,13 @@
 							{
 								"name": "ADPercent",
 								"value": [
-									0,
-									1.850000023841858,
-									1.850000023841858,
-									1.850000023841858,
-									1.850000023841858,
-									250,
-									300
+									1.75,
+									1.75,
+									1.75,
+									1.75,
+									1.75,
+									1.75,
+									1.75
 								]
 							},
 							{
@@ -24558,7 +22128,7 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 70,
+						"damage": 60,
 						"hp": 700,
 						"initialMana": 0,
 						"magicResist": 40,
@@ -24581,9 +22151,9 @@
 								"name": "ShieldAmount",
 								"value": [
 									50,
-									500,
-									600,
-									750,
+									475,
+									575,
+									675,
 									550,
 									675,
 									800
@@ -24662,9 +22232,9 @@
 						"critMultiplier": 1.2999999523162842,
 						"damage": 50,
 						"hp": 800,
-						"initialMana": 60,
+						"initialMana": 70,
 						"magicResist": 50,
-						"mana": 120,
+						"mana": 130,
 						"range": 2
 					},
 					"traits": [
@@ -24682,9 +22252,9 @@
 								"name": "Damage",
 								"value": [
 									0,
-									185,
-									295,
-									315,
+									175,
+									275,
+									300,
 									500,
 									625,
 									750
@@ -24713,7 +22283,7 @@
 						"attackSpeed": 0.75,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 60,
+						"damage": 55,
 						"hp": 700,
 						"initialMana": 0,
 						"magicResist": 30,
@@ -24747,8 +22317,8 @@
 								"name": "ADMult",
 								"value": [
 									1,
-									1.5,
-									1.600000023841858,
+									1.7000000476837158,
+									1.7999999523162842,
 									4,
 									3,
 									3.5,
@@ -24759,9 +22329,9 @@
 								"name": "Damage",
 								"value": [
 									0,
-									150,
-									200,
-									500,
+									100,
+									125,
+									400,
 									0,
 									0,
 									0
@@ -24814,7 +22384,7 @@
 						"attackSpeed": 0.800000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 80,
+						"damage": 70,
 						"hp": 800,
 						"initialMana": 0,
 						"magicResist": 30,
@@ -24891,7 +22461,7 @@
 						"attackSpeed": 0.8999999761581421,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 90,
+						"damage": 85,
 						"hp": 800,
 						"initialMana": 0,
 						"magicResist": 35,
@@ -24948,13 +22518,13 @@
 							{
 								"name": "MultiOrbDamage",
 								"value": [
-									0.800000011920929,
-									0.800000011920929,
-									0.800000011920929,
-									0.800000011920929,
-									0.800000011920929,
-									0.800000011920929,
-									0.800000011920929
+									0.6000000238418579,
+									0.6000000238418579,
+									0.6000000238418579,
+									0.6000000238418579,
+									0.6000000238418579,
+									0.6000000238418579,
+									0.6000000238418579
 								]
 							},
 							{
@@ -25014,9 +22584,9 @@
 								"name": "BaseDamage",
 								"value": [
 									0,
-									75,
-									100,
-									600,
+									60,
+									90,
+									550,
 									0,
 									0,
 									0
@@ -25033,11 +22603,11 @@
 						"attackSpeed": 0.800000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 90,
+						"damage": 70,
 						"hp": 900,
 						"initialMana": 0,
 						"magicResist": 50,
-						"mana": 30,
+						"mana": 40,
 						"range": 1
 					},
 					"traits": [
@@ -25055,9 +22625,9 @@
 								"name": "RocketDamage",
 								"value": [
 									0,
-									220,
-									275,
-									350,
+									190,
+									245,
+									315,
 									0,
 									0,
 									0
@@ -25074,7 +22644,7 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 65,
+						"damage": 55,
 						"hp": 650,
 						"initialMana": 25,
 						"magicResist": 25,
@@ -25095,13 +22665,13 @@
 							{
 								"name": "PercentAD",
 								"value": [
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858
+									1.5,
+									1.5,
+									1.5,
+									1.5,
+									1.5,
+									1.5,
+									1.5
 								]
 							},
 							{
@@ -25125,8 +22695,8 @@
 								"value": [
 									0,
 									80,
-									125,
-									200,
+									120,
+									180,
 									0,
 									0,
 									0
@@ -25140,10 +22710,10 @@
 					"name": "Senna",
 					"stats": {
 						"armor": 25,
-						"attackSpeed": 0.75,
+						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 70,
+						"damage": 60,
 						"hp": 650,
 						"initialMana": 30,
 						"magicResist": 25,
@@ -25220,7 +22790,7 @@
 						"attackSpeed": 0.6000000238418579,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 100,
+						"damage": 90,
 						"hp": 1400,
 						"initialMana": 85,
 						"magicResist": 80,
@@ -25242,9 +22812,9 @@
 								"name": "DamagePerSecond",
 								"value": [
 									1,
-									45,
-									70,
-									240,
+									40,
+									65,
+									220,
 									2,
 									2.25,
 									2.5
@@ -25356,8 +22926,8 @@
 								"value": [
 									6,
 									6,
-									6,
-									6,
+									7,
+									10,
 									6,
 									6,
 									6
@@ -25444,9 +23014,9 @@
 								"name": "BonusOnHit",
 								"value": [
 									0,
-									11,
-									22,
-									44,
+									10,
+									20,
+									40,
 									0,
 									0,
 									0
@@ -25511,7 +23081,7 @@
 						"attackSpeed": 0.800000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 85,
+						"damage": 75,
 						"hp": 850,
 						"initialMana": 0,
 						"magicResist": 30,
@@ -25532,13 +23102,13 @@
 							{
 								"name": "PercentAttackDamage",
 								"value": [
-									0,
 									1.25,
-									1.2999999523162842,
-									1.399999976158142,
-									0,
-									0,
-									0
+									1.25,
+									1.25,
+									1.25,
+									1.25,
+									1.25,
+									1.25
 								]
 							},
 							{
@@ -25588,7 +23158,7 @@
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 50,
+						"damage": 45,
 						"hp": 450,
 						"initialMana": 0,
 						"magicResist": 15,
@@ -25610,9 +23180,9 @@
 								"name": "BaseDamage",
 								"value": [
 									0,
-									225,
-									300,
-									450,
+									250,
+									350,
+									500,
 									0,
 									0,
 									0
@@ -25634,8 +23204,8 @@
 								"name": "Healing",
 								"value": [
 									80,
-									225,
 									250,
+									300,
 									350,
 									80,
 									80,
@@ -25653,7 +23223,7 @@
 						"attackSpeed": 0.6000000238418579,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 45,
+						"damage": 40,
 						"hp": 800,
 						"initialMana": 40,
 						"magicResist": 45,
@@ -25761,8 +23331,8 @@
 							"minUnits": 3,
 							"style": 1,
 							"variables": {
-								"Armor": 55,
-								"MagicResist": 55,
+								"Armor": 50,
+								"MagicResist": 50,
 								"{5c51b509}": 1,
 								"{c9b0e3af}": 20
 							}
@@ -25772,8 +23342,8 @@
 							"minUnits": 5,
 							"style": 3,
 							"variables": {
-								"Armor": 55,
-								"MagicResist": 55,
+								"Armor": 50,
+								"MagicResist": 50,
 								"{5c51b509}": 2,
 								"{c9b0e3af}": 20
 							}
@@ -25783,10 +23353,10 @@
 							"minUnits": 7,
 							"style": 4,
 							"variables": {
-								"Armor": 55,
-								"MagicResist": 55,
+								"Armor": 50,
+								"MagicResist": 50,
 								"{5c51b509}": 3,
-								"{867bc055}": 0.6000000238418579,
+								"{867bc055}": 0.5,
 								"{c9b0e3af}": 20
 							}
 						}
@@ -26020,7 +23590,7 @@
 							"minUnits": 2,
 							"style": 2,
 							"variables": {
-								"DamagePercent": 0.25,
+								"DamagePercent": 0.15000000596046448,
 								"{5064373e}": "null",
 								"{5c51b509}": 2,
 								"{6c155e99}": "null",
@@ -26032,7 +23602,7 @@
 							"minUnits": 3,
 							"style": 3,
 							"variables": {
-								"DamagePercent": 0.25,
+								"DamagePercent": 0.15000000596046448,
 								"{5064373e}": "null",
 								"{5c51b509}": 3,
 								"{6c155e99}": 0.33000001311302185,
@@ -26044,7 +23614,7 @@
 							"minUnits": 5,
 							"style": 4,
 							"variables": {
-								"DamagePercent": 0.5,
+								"DamagePercent": 0.30000001192092896,
 								"{5064373e}": "null",
 								"{5c51b509}": 4,
 								"{6c155e99}": 0.6600000262260437,
@@ -26266,7 +23836,7 @@
 				},
 				{
 					"apiName": "Set6_Hextech",
-					"desc": "At the start of combat and every @Frequency@ seconds afterwards, the Hexcore sends out a pulse that charges up allied Hextech champions with a shield for @ShieldDuration@ seconds. While the shield is active, attacks deal bonus magic damage on hit. This shield does not stack.<br><br><expandRow>(@MinUnits@) @ShieldAmount@ shield, @MagicDamage@ magic damage</expandRow>",
+					"desc": "At the start of combat and every @Frequency@ seconds afterwards, the Hexcore sends out a pulse that charges up allied Hextech champions with a shield for @ShieldDuration@ seconds (does not stack). While the shield is active, attacks deal bonus magic damage on hit. Additionally, the shield and bonus magic damage are @BonusPercentPerAugment@% stronger for each augment in the Hexcore.<br><br><expandRow>(@MinUnits@) @ShieldAmount@ shield, @MagicDamage@ magic damage</expandRow>",
 					"effects": [
 						{
 							"maxUnits": 3,
@@ -26276,7 +23846,8 @@
 								"MagicDamage": 15,
 								"ShieldAmount": 100,
 								"ShieldDuration": 4,
-								"{2fb31c01}": 6
+								"{2fb31c01}": 6,
+								"{f49783e7}": 20
 							}
 						},
 						{
@@ -26284,10 +23855,11 @@
 							"minUnits": 4,
 							"style": 2,
 							"variables": {
-								"MagicDamage": 30,
+								"MagicDamage": 25,
 								"ShieldAmount": 150,
 								"ShieldDuration": 4,
-								"{2fb31c01}": 6
+								"{2fb31c01}": 6,
+								"{f49783e7}": 20
 							}
 						},
 						{
@@ -26295,10 +23867,11 @@
 							"minUnits": 6,
 							"style": 3,
 							"variables": {
-								"MagicDamage": 60,
+								"MagicDamage": 50,
 								"ShieldAmount": 300,
 								"ShieldDuration": 4,
-								"{2fb31c01}": 6
+								"{2fb31c01}": 6,
+								"{f49783e7}": 20
 							}
 						},
 						{
@@ -26306,10 +23879,11 @@
 							"minUnits": 8,
 							"style": 4,
 							"variables": {
-								"MagicDamage": 120,
-								"ShieldAmount": 600,
+								"MagicDamage": 80,
+								"ShieldAmount": 400,
 								"ShieldDuration": 4,
-								"{2fb31c01}": 6
+								"{2fb31c01}": 6,
+								"{f49783e7}": 20
 							}
 						}
 					],
@@ -26485,8 +24059,8 @@
 							"minUnits": 5,
 							"style": 3,
 							"variables": {
-								"Health": 450,
-								"{7f1304b2}": 45
+								"Health": 400,
+								"{7f1304b2}": 40
 							}
 						},
 						{
@@ -26494,8 +24068,8 @@
 							"minUnits": 7,
 							"style": 4,
 							"variables": {
-								"Health": 800,
-								"{7f1304b2}": 80
+								"Health": 700,
+								"{7f1304b2}": 70
 							}
 						}
 					],
@@ -26598,7 +24172,7 @@
 							"minUnits": 4,
 							"style": 3,
 							"variables": {
-								"{df962703}": 65
+								"{df962703}": 70
 							}
 						},
 						{
@@ -26606,7 +24180,7 @@
 							"minUnits": 6,
 							"style": 4,
 							"variables": {
-								"{df962703}": 110
+								"{df962703}": 120
 							}
 						}
 					],
@@ -26632,7 +24206,7 @@
 							"style": 3,
 							"variables": {
 								"{51aec5d2}": 0.10000000149011612,
-								"{cbb3a34f}": 0.4000000059604645
+								"{cbb3a34f}": 0.3499999940395355
 							}
 						},
 						{
@@ -26650,26 +24224,16 @@
 				},
 				{
 					"apiName": "Set6_Enforcer",
-					"desc": "Enforcers stun enemies at the start of combat. The target breaks free after @DetainDuration@ seconds, or after losing @HPPercent*100@% of their maximum Health. Enforcers will not try to stun enemies who are immune to crowd control effects.<br><br><row>(@MinUnits@) The enemy who has the most Health</row><br><row>(@MinUnits@) And the enemy who dealt the most damage last combat</row>",
+					"desc": "<row>(@MinUnits@) At the start of combat, Enforcers stun the enemy who has the most Health. The target breaks free after @DetainDuration@ seconds, or after losing @HPPercent*100@% of their maximum Health. Enforcers will not try to stun enemies who are immune to crowd control effects.</row>",
 					"effects": [
 						{
-							"maxUnits": 3,
-							"minUnits": 2,
-							"style": 1,
-							"variables": {
-								"HPPercent": 0.4000000059604645,
-								"{70ed38c6}": 3,
-								"{d2b7f6f1}": 1
-							}
-						},
-						{
 							"maxUnits": 25000,
-							"minUnits": 4,
+							"minUnits": 3,
 							"style": 3,
 							"variables": {
 								"HPPercent": 0.4000000059604645,
 								"{70ed38c6}": 4,
-								"{d2b7f6f1}": 2
+								"{d2b7f6f1}": 1
 							}
 						}
 					],
@@ -26686,7 +24250,7 @@
 							"style": 1,
 							"variables": {
 								"AttackSpeed": 15,
-								"DamageReduction": 15,
+								"DamageReduction": 20,
 								"Duration": 8,
 								"HealthRegen": 4,
 								"HealthThreshold": 75
@@ -26698,7 +24262,7 @@
 							"style": 2,
 							"variables": {
 								"AttackSpeed": 40,
-								"DamageReduction": 15,
+								"DamageReduction": 20,
 								"Duration": 8,
 								"HealthRegen": 7,
 								"HealthThreshold": 75
@@ -26710,7 +24274,7 @@
 							"style": 3,
 							"variables": {
 								"AttackSpeed": 80,
-								"DamageReduction": 15,
+								"DamageReduction": 20,
 								"Duration": 8,
 								"HealthRegen": 10,
 								"HealthThreshold": 75
@@ -26722,7 +24286,7 @@
 							"style": 4,
 							"variables": {
 								"AttackSpeed": 150,
-								"DamageReduction": 15,
+								"DamageReduction": 20,
 								"Duration": 8,
 								"HealthRegen": 18,
 								"HealthThreshold": 75

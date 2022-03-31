@@ -181,9 +181,9 @@
 					"mName": "DamagePerSecond",
 					"mValues": [
 						1,
-						45,
-						70,
-						240,
+						40,
+						65,
+						220,
 						2,
 						2.25,
 						2.5
@@ -356,6 +356,7 @@
 			"arType": 0,
 			"arBase": 60,
 			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 40,

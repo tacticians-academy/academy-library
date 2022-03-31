@@ -398,6 +398,77 @@
 		},
 		"__type": "SpellObject"
 	},
+	"{a743e620}": {
+		"mScriptName": "TFT6_ZeriQEmpoweredBasicAttack",
+		"mSpell": {
+			"flags": 32,
+			"mAffectsTypeFlags": 16384,
+			"delayCastOffsetPercent": -0.13500000536441803,
+			"mCantCancelWhileWindingUp": true,
+			"mIgnoreRangeCheck": true,
+			"mMinimapIconDisplayFlag": 0,
+			"castRange": [
+				825,
+				825,
+				825,
+				825,
+				825,
+				825,
+				825
+			],
+			"castRangeDisplayOverride": [
+				1175,
+				1175,
+				1175,
+				1175,
+				1175,
+				1175,
+				1175
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"luaOnMissileUpdateDistanceInterval": 51,
+			"mMissileSpec": {
+				"mMissileWidth": 10,
+				"movementComponent": {
+					"mInferDirectionFromFacingIfNeeded": false,
+					"mUseGroundHeightAtTarget": false,
+					"mTravelTime": 10,
+					"mStartBoneName": "root",
+					"__type": "FixedTimeMovement"
+				},
+				"behaviors": [
+					{
+						"mDelay": 1240,
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 3,
+			"missileSpeed": 2000,
+			"mLineWidth": 10,
+			"mLookAtPolicy": 0,
+			"mHitEffectOrientType": 2,
+			"bHaveHitBone": true,
+			"mHitBoneName": "root",
+			"selectionPriority": 2,
+			"mTargetingTypeData": {
+				"__type": "Location"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
 	"{c06a1454}": {
 		"mScriptName": "TFT6_ZeriRMis",
 		"mSpell": {
@@ -606,12 +677,7 @@
 			"mAffectsTypeFlags": 16384,
 			"delayCastOffsetPercent": -0.13500000536441803,
 			"mCantCancelWhileWindingUp": true,
-			"useAnimatorFramerate": true,
 			"mIgnoreRangeCheck": true,
-			"mOverrideAttackTime": {
-				"mCastTimePercent": 0.10000000149011612,
-				"__type": "OverrideAttackTimeData"
-			},
 			"mMinimapIconDisplayFlag": 0,
 			"castRange": [
 				825,
@@ -660,7 +726,7 @@
 				"__type": "MissileSpecification"
 			},
 			"mCastType": 1,
-			"castFrame": 3,
+			"castFrame": 1,
 			"missileSpeed": 2000,
 			"mLineWidth": 10,
 			"mLookAtPolicy": 0,
@@ -795,9 +861,9 @@
 					"mName": "BonusOnHit",
 					"mValues": [
 						0,
-						11,
-						22,
-						44,
+						10,
+						20,
+						40,
 						0,
 						0,
 						0
@@ -1115,9 +1181,10 @@
 			"arType": 0,
 			"arBase": 60,
 			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 85,
+		"baseDamage": 75,
 		"baseArmor": 30,
 		"baseSpellBlock": 30,
 		"baseCritChance": 0.25,
@@ -1144,7 +1211,7 @@
 		"extraSpells": [
 			"TFT6_ZeriWMis",
 			"TFT6_ZeriQParentBasicAttack",
-			"BaseSpell",
+			"TFT6_ZeriQEmpoweredBasicAttack",
 			"BaseSpell",
 			"BaseSpell",
 			"BaseSpell",

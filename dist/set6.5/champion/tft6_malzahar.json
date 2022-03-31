@@ -8,9 +8,9 @@
 					"mName": "Damage",
 					"mValues": [
 						0,
-						600,
-						825,
-						950,
+						650,
+						900,
+						1025,
 						0,
 						0,
 						0
@@ -358,14 +358,15 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 30,
+		"mInitialMana": 50,
 		"mCharacterName": "TFT6_Malzahar",
 		"baseHP": 650,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 60,
+			"arBase": 80,
 			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 40,
@@ -375,7 +376,7 @@
 		"critDamageMultiplier": 1.2999999523162842,
 		"baseMoveSpeed": 500,
 		"attackRange": 890,
-		"attackSpeed": 0.6499999761581421,
+		"attackSpeed": 0.699999988079071,
 		"basicAttack": {
 			"mAttackName": "TFT6_MalzaharBasicAttack",
 			"__type": "AttackSlotData"

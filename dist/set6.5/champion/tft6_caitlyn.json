@@ -385,16 +385,17 @@
 			"arType": 0,
 			"arBase": 110,
 			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 50,
+		"baseDamage": 45,
 		"baseArmor": 15,
 		"baseSpellBlock": 15,
 		"baseCritChance": 0.25,
 		"critDamageMultiplier": 1.2999999523162842,
 		"baseMoveSpeed": 500,
 		"attackRange": 890,
-		"attackSpeed": 0.75,
+		"attackSpeed": 0.800000011920929,
 		"basicAttack": {
 			"mAttackName": "TFT6_CaitlynBasicAttack",
 			"__type": "AttackSlotData"

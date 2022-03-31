@@ -26,11 +26,12 @@
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 90,
+			"arBase": 80,
 			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 60,
+		"baseDamage": 55,
 		"baseArmor": 45,
 		"baseSpellBlock": 45,
 		"baseCritChance": 0.25,
@@ -347,9 +348,9 @@
 					"mName": "Heal",
 					"mValues": [
 						0,
-						150,
 						200,
-						350,
+						225,
+						400,
 						0,
 						0,
 						0
@@ -361,9 +362,9 @@
 					"mName": "HealBonus",
 					"mValues": [
 						0,
-						250,
+						275,
 						350,
-						500,
+						600,
 						0,
 						0,
 						0

@@ -401,7 +401,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 		id: 94,
 		name: `Edge of Night`,
 		type: `completed`,
-		description: `When the holder first drops below 60% health, they briefly enter stealth, becoming untargetable and shedding negative effects. After coming out of stealth, the holder gains an additional 40% bonus Attack Speed. [Unique - only 1 per champion]`,
+		description: `When the holder first drops below 60% HP, they briefly enter stealth, becoming untargetable and shedding damage and negative effects. After coming out of stealth, the holder gains an additional 40% bonus Attack Speed. [Unique - only 1 per champion]`,
 		icon: `assets/maps/particles/tft/item_icons/standard_new/edge_of_night`,
 		from: [1, 5],
 		unique: true,

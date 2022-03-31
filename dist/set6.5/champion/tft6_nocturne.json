@@ -241,9 +241,10 @@
 			"arType": 0,
 			"arBase": 80,
 			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 50,
+		"baseDamage": 45,
 		"baseArmor": 25,
 		"baseSpellBlock": 25,
 		"baseCritChance": 0.25,

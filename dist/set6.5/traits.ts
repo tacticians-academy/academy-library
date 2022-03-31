@@ -219,7 +219,7 @@ export const traits: TraitData[] = [
 				style: 1,
 				variables: {
 					'AS': 15,
-					'DamageReduction': 15,
+					'DamageReduction': 20,
 					'Duration': 8,
 					'HPRegen': 4,
 					'HPThreshold': 75,
@@ -231,7 +231,7 @@ export const traits: TraitData[] = [
 				style: 2,
 				variables: {
 					'AS': 40,
-					'DamageReduction': 15,
+					'DamageReduction': 20,
 					'Duration': 8,
 					'HPRegen': 7,
 					'HPThreshold': 75,
@@ -243,7 +243,7 @@ export const traits: TraitData[] = [
 				style: 3,
 				variables: {
 					'AS': 80,
-					'DamageReduction': 15,
+					'DamageReduction': 20,
 					'Duration': 8,
 					'HPRegen': 10,
 					'HPThreshold': 75,
@@ -255,7 +255,7 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'AS': 150,
-					'DamageReduction': 15,
+					'DamageReduction': 20,
 					'Duration': 8,
 					'HPRegen': 18,
 					'HPThreshold': 75,
@@ -284,7 +284,7 @@ export const traits: TraitData[] = [
 				style: 3,
 				variables: {
 					'BonusPerAugment': 0.10000000149011612,
-					'ASBonus': 0.4000000059604645,
+					'ASBonus': 0.3499999940395355,
 				},
 			},
 			{
@@ -336,8 +336,8 @@ export const traits: TraitData[] = [
 				minUnits: 5,
 				style: 3,
 				variables: {
-					'HP': 450,
-					'AP': 45,
+					'HP': 400,
+					'AP': 40,
 				},
 			},
 			{
@@ -345,8 +345,8 @@ export const traits: TraitData[] = [
 				minUnits: 7,
 				style: 4,
 				variables: {
-					'HP': 800,
-					'AP': 80,
+					'HP': 700,
+					'AP': 70,
 				},
 			},
 		],
@@ -399,26 +399,16 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Set6_Enforcer`,
-		desc: `Enforcers stun enemies at the start of combat. The target breaks free after @DetainDuration@ seconds, or after losing @HPPercent*100@% of their maximum HP. Enforcers will not try to stun enemies who are immune to crowd control effects.<br><br><row>(@MinUnits@) The enemy who has the most HP</row><br><row>(@MinUnits@) And the enemy who dealt the most damage last combat</row>`,
+		desc: `<row>(@MinUnits@) At the start of combat, Enforcers stun the enemy who has the most HP. The target breaks free after @DetainDuration@ seconds, or after losing @HPPercent*100@% of their maximum HP. Enforcers will not try to stun enemies who are immune to crowd control effects.</row>`,
 		effects: [
 			{
-				maxUnits: 3,
-				minUnits: 2,
-				style: 1,
-				variables: {
-					'HPPercent': 0.4000000059604645,
-					'DetainDuration': 3,
-					'DetainCount': 1,
-				},
-			},
-			{
 				maxUnits: 25000,
-				minUnits: 4,
+				minUnits: 3,
 				style: 3,
 				variables: {
 					'HPPercent': 0.4000000059604645,
 					'DetainDuration': 4,
-					'DetainCount': 2,
+					'DetainCount': 1,
 				},
 			},
 		],
@@ -441,7 +431,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Set6_Hextech`,
-		desc: `At the start of combat and every @Frequency@ seconds afterwards, the Hexcore sends out a pulse that charges up allied Hextech champions with a shield for @ShieldDuration@ seconds. While the shield is active, attacks deal bonus magic damage on hit. This shield does not stack.<br><br><expandRow>(@MinUnits@) @ShieldAmount@ shield, @MagicDamage@ magic damage</expandRow>`,
+		desc: `At the start of combat and every @Frequency@ seconds afterwards, the Hexcore sends out a pulse that charges up allied Hextech champions with a shield for @ShieldDuration@ seconds (does not stack). While the shield is active, attacks deal bonus magic damage on hit. Additionally, the shield and bonus magic damage are @BonusPercentPerAugment@% stronger for each augment in the Hexcore.<br><br><expandRow>(@MinUnits@) @ShieldAmount@ shield, @MagicDamage@ magic damage</expandRow>`,
 		effects: [
 			{
 				maxUnits: 3,
@@ -452,6 +442,7 @@ export const traits: TraitData[] = [
 					'ShieldAmount': 100,
 					'ShieldDuration': 4,
 					'Frequency': 6,
+					'{f49783e7}': 20,
 				},
 			},
 			{
@@ -459,10 +450,11 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 2,
 				variables: {
-					'MagicDamage': 30,
+					'MagicDamage': 25,
 					'ShieldAmount': 150,
 					'ShieldDuration': 4,
 					'Frequency': 6,
+					'{f49783e7}': 20,
 				},
 			},
 			{
@@ -470,10 +462,11 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 3,
 				variables: {
-					'MagicDamage': 60,
+					'MagicDamage': 50,
 					'ShieldAmount': 300,
 					'ShieldDuration': 4,
 					'Frequency': 6,
+					'{f49783e7}': 20,
 				},
 			},
 			{
@@ -481,10 +474,11 @@ export const traits: TraitData[] = [
 				minUnits: 8,
 				style: 4,
 				variables: {
-					'MagicDamage': 120,
-					'ShieldAmount': 600,
+					'MagicDamage': 80,
+					'ShieldAmount': 400,
 					'ShieldDuration': 4,
 					'Frequency': 6,
+					'{f49783e7}': 20,
 				},
 			},
 		],
@@ -796,7 +790,7 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 2,
 				variables: {
-					'DamagePercent': 0.25,
+					'DamagePercent': 0.15000000596046448,
 					'{5064373e}': null,
 					'TraitLevel': 2,
 					'OmnivampPercent': null,
@@ -808,7 +802,7 @@ export const traits: TraitData[] = [
 				minUnits: 3,
 				style: 3,
 				variables: {
-					'DamagePercent': 0.25,
+					'DamagePercent': 0.15000000596046448,
 					'{5064373e}': null,
 					'TraitLevel': 3,
 					'OmnivampPercent': 0.33000001311302185,
@@ -820,7 +814,7 @@ export const traits: TraitData[] = [
 				minUnits: 5,
 				style: 4,
 				variables: {
-					'DamagePercent': 0.5,
+					'DamagePercent': 0.30000001192092896,
 					'{5064373e}': null,
 					'TraitLevel': 4,
 					'OmnivampPercent': 0.6600000262260437,
@@ -848,7 +842,7 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 3,
 				variables: {
-					'BonusAD': 65,
+					'BonusAD': 70,
 				},
 			},
 			{
@@ -856,7 +850,7 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 4,
 				variables: {
-					'BonusAD': 110,
+					'BonusAD': 120,
 				},
 			},
 		],
@@ -872,8 +866,8 @@ export const traits: TraitData[] = [
 				minUnits: 3,
 				style: 1,
 				variables: {
-					'Armor': 55,
-					'MR': 55,
+					'Armor': 50,
+					'MR': 50,
 					'TraitLevel': 1,
 					'PercentOmnivamp': 20,
 				},
@@ -883,8 +877,8 @@ export const traits: TraitData[] = [
 				minUnits: 5,
 				style: 3,
 				variables: {
-					'Armor': 55,
-					'MR': 55,
+					'Armor': 50,
+					'MR': 50,
 					'TraitLevel': 2,
 					'PercentOmnivamp': 20,
 				},
@@ -894,10 +888,10 @@ export const traits: TraitData[] = [
 				minUnits: 7,
 				style: 4,
 				variables: {
-					'Armor': 55,
-					'MR': 55,
+					'Armor': 50,
+					'MR': 50,
 					'TraitLevel': 3,
-					'SyndicateIncrease': 0.6000000238418579,
+					'SyndicateIncrease': 0.5,
 					'PercentOmnivamp': 20,
 				},
 			},

@@ -306,7 +306,7 @@
 					"mValues": [
 						0,
 						1.7000000476837158,
-						1.7999999523162842,
+						1.75,
 						5,
 						0,
 						0,
@@ -348,8 +348,8 @@
 					"mValues": [
 						50,
 						45,
-						70,
-						1000,
+						60,
+						500,
 						50,
 						50,
 						50
@@ -802,9 +802,10 @@
 			"arType": 0,
 			"arBase": 60,
 			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 90,
+		"baseDamage": 85,
 		"baseArmor": 30,
 		"baseSpellBlock": 30,
 		"baseCritChance": 0.25,

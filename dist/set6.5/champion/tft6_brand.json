@@ -243,15 +243,15 @@
 				{
 					"mName": "VIPBonusReducedDamage",
 					"mValues": [
-						30,
-						30,
-						30,
-						30,
-						30,
-						30,
-						30
+						45,
+						45,
+						45,
+						45,
+						45,
+						45,
+						45
 					],
-					"mBaseP": 30,
+					"mBaseP": 45,
 					"__type": "SpellDataValue"
 				}
 			],
@@ -386,6 +386,7 @@
 			"arType": 0,
 			"arBase": 20,
 			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 40,

@@ -27,9 +27,10 @@
 			"arType": 0,
 			"arBase": 80,
 			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 70,
+		"baseDamage": 60,
 		"baseArmor": 40,
 		"baseSpellBlock": 40,
 		"baseCritChance": 0.25,
@@ -98,13 +99,13 @@
 			"delayTotalTimePercent": -0.5,
 			"mCantCancelWhileWindingUp": true,
 			"castRange": [
-				700,
-				700,
-				700,
-				700,
-				700,
-				700,
-				700
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000
 			],
 			"castRangeDisplayOverride": [
 				1100,
@@ -287,17 +288,16 @@
 			"delayTotalTimePercent": -0.5,
 			"mCantCancelWhileWindingUp": true,
 			"mIsDisabledWhileDead": false,
-			"mProjectTargetToCastRange": true,
 			"useAnimatorFramerate": true,
 			"bHaveHitEffect": true,
 			"castRange": [
-				850,
-				850,
-				850,
-				850,
-				850,
-				850,
-				850
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000
 			],
 			"castRangeDisplayOverride": [
 				2000,
@@ -322,7 +322,6 @@
 			"mMissileSpec": {
 				"mMissileWidth": 90,
 				"movementComponent": {
-					"mProjectTargetToCastRange": true,
 					"mSpeed": 2100,
 					"mUseHeightOffsetAtEnd": true,
 					"mTracksTarget": false,
@@ -351,11 +350,13 @@
 			"missileSpeed": 2100,
 			"mMissileEffectKey": "{dcad4750}",
 			"mLineWidth": 90,
+			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "{501929b2}",
 			"bHaveHitBone": true,
 			"mHitBoneName": "root",
+			"selectionPriority": 1,
 			"mTargetingTypeData": {
-				"__type": "TargetOrLocation"
+				"__type": "Location"
 			},
 			"__type": "SpellDataResource"
 		},
@@ -486,16 +487,16 @@
 				{
 					"mName": "ADPercent",
 					"mValues": [
-						0,
-						1.850000023841858,
-						1.850000023841858,
-						1.850000023841858,
-						1.850000023841858,
-						250,
-						300
+						1.75,
+						1.75,
+						1.75,
+						1.75,
+						1.75,
+						1.75,
+						1.75
 					],
-					"{3f95426c}": false,
-					"mFormula": "P + 50",
+					"mBaseP": 1.75,
+					"mFormula": "P + 0",
 					"__type": "SpellDataValue"
 				},
 				{
