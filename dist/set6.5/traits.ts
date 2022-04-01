@@ -442,7 +442,7 @@ export const traits: TraitData[] = [
 					'ShieldAmount': 100,
 					'ShieldDuration': 4,
 					'Frequency': 6,
-					'{f49783e7}': 20,
+					'BonusPercentPerAugment': 20,
 				},
 			},
 			{
@@ -454,7 +454,7 @@ export const traits: TraitData[] = [
 					'ShieldAmount': 150,
 					'ShieldDuration': 4,
 					'Frequency': 6,
-					'{f49783e7}': 20,
+					'BonusPercentPerAugment': 20,
 				},
 			},
 			{
@@ -466,7 +466,7 @@ export const traits: TraitData[] = [
 					'ShieldAmount': 300,
 					'ShieldDuration': 4,
 					'Frequency': 6,
-					'{f49783e7}': 20,
+					'BonusPercentPerAugment': 20,
 				},
 			},
 			{
@@ -478,7 +478,7 @@ export const traits: TraitData[] = [
 					'ShieldAmount': 400,
 					'ShieldDuration': 4,
 					'Frequency': 6,
-					'{f49783e7}': 20,
+					'BonusPercentPerAugment': 20,
 				},
 			},
 		],

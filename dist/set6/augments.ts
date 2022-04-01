@@ -255,7 +255,7 @@ export const activeAugments: AugmentData[] = [
 		desc: `Your units heal for @Omnivamp@% of the damage dealt by attacks and Abilities. Excess healing is converted to a shield up to @MaxShield@ Health.`,
 		effects: {
 			'MaxShield': 300,
-			'Omnivamp': 12,
+			'OmniVamp': 12,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/CelestialBlessing1.TFT_Set6.dds`,
 	},
@@ -266,7 +266,7 @@ export const activeAugments: AugmentData[] = [
 		desc: `Your units heal for @Omnivamp@% of the damage dealt by attacks and Abilities. Excess healing is converted to a shield up to @MaxShield@ Health.`,
 		effects: {
 			'MaxShield': 450,
-			'Omnivamp': 20,
+			'OmniVamp': 20,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/CelestialBlessing2.TFT_Set6.dds`,
 	},
@@ -277,7 +277,7 @@ export const activeAugments: AugmentData[] = [
 		desc: `Your units heal for @Omnivamp@% of the damage dealt by attacks and Abilities. Excess healing is converted to a shield up to @MaxShield@ Health.`,
 		effects: {
 			'MaxShield': 600,
-			'Omnivamp': 25,
+			'OmniVamp': 25,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/CelestialBlessing3.TFT_Set6.dds`,
 	},
@@ -1077,7 +1077,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `selfRepair`,
 		desc: `When the Innovation dies, it will become untargetable and repair itself if an Innovator is still alive.`,
 		effects: {
-			'{357f0e55}': 6,
+			'RepairDuration': 6,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/SelfRepair1.TFT_Set6.dds`,
 	},
@@ -1107,7 +1107,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `shrugItOff`,
 		desc: `Bruisers regenerate @RegenPerTick@% of their maximum Health each second.`,
 		effects: {
-			'{471b1a16}': 1,
+			'TickRate': 1,
 			'RegenPerTick': 3,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/ShrugOff1.TFT_Set6.dds`,
@@ -1120,7 +1120,7 @@ export const activeAugments: AugmentData[] = [
 		effects: {
 			'DamageReduction': 80,
 			'HealthThreshold': 60,
-			'{b1442c34}': 1.5,
+			'StealthDuration': 1.5,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Smokebomb2.TFT_Set6.dds`,
 	},
@@ -1419,7 +1419,7 @@ export const inactiveAugments: AugmentData[] = [
 		groupID: `scopedWeapons`,
 		desc: `Double the hex range of your <b>ranged</b> units, and their attacks cannot miss.`,
 		effects: {
-			'{16394c87}': 100,
+			'HexRangeIncrease': 100,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/ScopedWeapons1.TFT_Set6.dds`,
 	},

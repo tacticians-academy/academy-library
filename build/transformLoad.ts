@@ -294,7 +294,8 @@ for (const item of itemsData.sort((a, b) => a.name.localeCompare(b.name))) {
 		}
 		const effects = item.effects
 		for (const key in effects) {
-			const substitution = SUBSTITUTE_EFFECT_KEYS[key]
+			const keyHash = key.slice(1, -1)
+			const substitution = SUBSTITUTE_EFFECT_KEYS[keyHash]
 			if (substitution) {
 				const value = effects[key]
 				delete effects[key]

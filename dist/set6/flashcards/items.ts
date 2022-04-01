@@ -401,7 +401,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 		id: 88,
 		name: `Tactician's Crown`,
 		type: `completed`,
-		description: `The holder's team gains +{MaxArmySizeIncrease} maximum team size.`,
+		description: `The holder's team gains +1 maximum team size.`,
 		icon: `assets/maps/particles/tft/item_icons/standard_new/tacticians_crown`,
 		from: [8, 8],
 		unique: false,

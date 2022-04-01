@@ -620,7 +620,7 @@ export const completedItems: ItemData[] = [
 			'HP': 150,
 			'StunDuration': 4,
 			'HexRange': 1,
-			'DamageCap': 600,
+			'ShieldHP': 600,
 			'DodgeChance': 15,
 		},
 		from: [7, 9],
@@ -632,7 +632,7 @@ export const completedItems: ItemData[] = [
 	{
 		desc: `The holder's team gains +@MaxArmySizeIncrease@ maximum team size.`,
 		effects: {
-			'{ec9a04d1}': 1,
+			'MaxArmySizeIncrease': 1,
 		},
 		from: [8, 8],
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard_New/Tacticians_Crown.dds`,
@@ -1604,7 +1604,7 @@ export const ornnItems: ItemData[] = [
 			'Armor': 35,
 			'MR': 35,
 			'{046e3023}': 40,
-			'{69247755}': 2.5,
+			'InvulnDuration': 2.5,
 		},
 		from: [],
 		icon: `ASSETS/Maps/Particles/TFT/TFT4_OrnnItem_Mage_T3_ZhonyasHourglass.dds`,
