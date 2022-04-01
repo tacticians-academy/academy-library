@@ -488,7 +488,7 @@ export const completedItems: ItemData[] = [
 			'Mana': 15,
 			'AD': 10,
 			'AP': 10,
-			'{a60806db}': 66.66699981689453,
+			'TraitMultiplier': 66.66699981689453,
 			'AdditionalADAP': 23,
 			'AdditionalHeal': 23,
 			'TooltipBonus': 33,
@@ -552,7 +552,7 @@ export const completedItems: ItemData[] = [
 		desc: `When combat begins, the holder shoots a beam straight ahead that delays affected enemies' first cast, increasing their max Mana by @CostIncrease@% until they cast.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>`,
 		effects: {
 			'Armor': 20,
-			'{4516a18d}': 60,
+			'SilenceDuration': 60,
 			'CostIncrease': 35,
 			'DodgeChance': 15,
 		},
@@ -918,7 +918,7 @@ export const radiantItems: ItemData[] = [
 		effects: {
 			'AD': 20,
 			'ADPerStack': 15,
-			'{ad68ce80}': 4,
+			'StartingStacks': 4,
 		},
 		from: [],
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Radiant/Death_Blade_Radiant.dds`,
@@ -1368,7 +1368,7 @@ export const radiantItems: ItemData[] = [
 		desc: `When combat begins, the holder shoots a <TFTRadiantItemBonus>wider beam</TFTRadiantItemBonus> straight ahead that delays affected enemies' first spellcast, increasing their max Mana by <TFTRadiantItemBonus>@CostIncrease@%</TFTRadiantItemBonus> until they cast.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@AllyBonusMana@ Starting Mana for all allies</TFTRadiantItemBonus> at the start of combat.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>`,
 		effects: {
 			'Armor': 20,
-			'{4516a18d}': 60,
+			'SilenceDuration': 60,
 			'CostIncrease': 50,
 			'{ba272485}': 15,
 			'DodgeChance': 15,
@@ -1761,9 +1761,8 @@ export const unreleasedItems: ItemData[] = [
 		effects: {
 			'MR': 25,
 			'Mana': 20,
+			'ChanceOnHitToSilence': 20,
 			'SilenceDuration': 4,
-			'{2275757b}': 20,
-			'{4516a18d}': 4,
 		},
 		from: [],
 		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_Hush.dds`,
@@ -1826,7 +1825,7 @@ export const unreleasedItems: ItemData[] = [
 		effects: {
 			'AS': 15,
 			'MR': 25,
-			'{a56e0a21}': 20,
+			'ChanceOnHitToShrink': 20,
 		},
 		from: [-26, -26],
 		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_CursedBlade.dds`,

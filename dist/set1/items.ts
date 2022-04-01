@@ -5,7 +5,7 @@ export const componentItems: ItemData[] = [
 	{
 		desc: ` +@AD@ Attack Damage`,
 		effects: {
-			'{4724fc58}': 15,
+			'AD': 15,
 		},
 		from: [],
 		icon: `ASSETS/Maps/Particles/TFT/Icon_BFSword.TFT.dds`,
@@ -93,7 +93,7 @@ export const componentItems: ItemData[] = [
 	{
 		desc: `+@CritChance@% Critical Strike Chance<br>+@DodgeChance@% Dodge Chance`,
 		effects: {
-			'{3abb8549}': 10,
+			'CritChance': 10,
 			'DodgeChance': 10,
 		},
 		from: [],
@@ -108,8 +108,8 @@ export const completedItems: ItemData[] = [
 	{
 		desc: `Whenever the wearer kills or participates in killing an enemy, gain +@ADPerStack@ Attack Damage for the remainder of combat.<br><br>This effect can stack any number of times. Starts with @StartingStacks@ stacks.`,
 		effects: {
-			'{ad68ce80}': 1,
-			'{f1d43b01}': 15,
+			'StartingStacks': 1,
+			'ADPerStack': 15,
 		},
 		from: [1, 1],
 		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_DeathBlade.TFT.dds`,
@@ -120,7 +120,7 @@ export const completedItems: ItemData[] = [
 	{
 		desc: `The wearer's basic attacks deal an additional @MaxHPTrueDamage@% of the target's Maximum HP as true damage.`,
 		effects: {
-			'{0c633edc}': 5,
+			'MaxHPTrueDamage': 5,
 		},
 		from: [1, 2],
 		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_GiantSlayer.dds`,
@@ -142,7 +142,7 @@ export const completedItems: ItemData[] = [
 	{
 		desc: `After casting their spell, the wearer's Basic Attacks restore @ManaPercentRestore@% of their Maximum Mana.`,
 		effects: {
-			'{69fff1ab}': 18,
+			'ManaPercentRestore': 18,
 		},
 		from: [1, 4],
 		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_SpearOfShojin.TFT.dds`,
@@ -154,7 +154,7 @@ export const completedItems: ItemData[] = [
 		desc: `When the wearer dies, they cleanse negative effects and revive with up to @HPRestore@ HP after a @StasisDuration@ second delay.<br><br>This effect can trigger once per combat.`,
 		effects: {
 			'StasisDuration': 2,
-			'{dc44b1d7}': 500,
+			'HPRestore': 500,
 		},
 		from: [1, 5],
 		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_GuardianAngel.TFT.dds`,
@@ -186,11 +186,11 @@ export const completedItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		desc: `The wearer gains +@CriticalStrikeAmp@% Critical Strike Damage.`,
+		desc: `The wearer gains +@CritDamage@% Critical Strike Damage.`,
 		effects: {
-			'{3abb8549}': 20,
-			'{4724fc58}': 15,
-			'{eac3d5c4}': 125,
+			'CritChance': 20,
+			'AD': 15,
+			'CritDamage': 125,
 		},
 		from: [1, 9],
 		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_InfinityEdge.TFT.dds`,
@@ -210,7 +210,7 @@ export const completedItems: ItemData[] = [
 	{
 		desc: `Basic Attacks grant the wearer +@ASPerStack@% bonus Attack Speed for the rest of combat.<br><br>This effect can stack any number of times.`,
 		effects: {
-			'{aa03e0b1}': 5,
+			'AAPerStack': 5,
 		},
 		from: [2, 3],
 		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_GuinsoosRageblade.TFT.dds`,
@@ -243,7 +243,7 @@ export const completedItems: ItemData[] = [
 	{
 		desc: `Basic Attacks have a @ChanceOnHitToShrink@% chance on-hit to decrease the target's star level by 1 for the rest of combat.`,
 		effects: {
-			'{a56e0a21}': 20,
+			'ChanceOnHitToShrink': 20,
 		},
 		from: [2, 6],
 		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_CursedBlade.TFT.dds`,
@@ -266,8 +266,8 @@ export const completedItems: ItemData[] = [
 		desc: `When the wearer dies, Repeating Crossbow is re-equipped to a new ally. Each time Repeating Crossbow is re-equipped, it grants an additional +@ASPerStack@% Attack Speed and +@CritChancePerStack@% Critical Strike Chance for the remainder of combat.<br><br>This effect can stack any number of times.`,
 		effects: {
 			'AS': 20,
-			'{3abb8549}': 20,
-			'{aa03e0b1}': 30,
+			'CritChance': 20,
+			'AAPerStack': 30,
 			'{cb57edb0}': 30,
 		},
 		from: [2, 9],
@@ -279,7 +279,7 @@ export const completedItems: ItemData[] = [
 	{
 		desc: `Wearer gains +@APPercentAmp@% Spell Power Amplification.<br><br>(All sources of Spell Power are @APPercentAmp@% more effective)`,
 		effects: {
-			'{ce132611}': 50,
+			'APPercentAmp': 50,
 		},
 		from: [3, 3],
 		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_RabadonsDeathcap.TFT.dds`,
@@ -343,7 +343,7 @@ export const completedItems: ItemData[] = [
 		desc: `The wearer's spells can critically strike.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>`,
 		effects: {
 			'AP': 20,
-			'{3abb8549}': 20,
+			'CritChance': 20,
 		},
 		from: [3, 9],
 		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_Jeweled_Gauntlet.TFT.dds`,
@@ -354,7 +354,7 @@ export const completedItems: ItemData[] = [
 	{
 		desc: `After casting their spell, the wearer restores @ManaRestore@ Mana.`,
 		effects: {
-			'{03494ad0}': 20,
+			'ManaRestore': 20,
 		},
 		from: [4, 4],
 		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_SeraphsEmbrace.TFT.dds`,
@@ -366,7 +366,7 @@ export const completedItems: ItemData[] = [
 		desc: `Reduces the Attack Speed of adjacent enemies by @ASSlow@%.`,
 		effects: {
 			'ASSlow': 35,
-			'{0020f716}': 1,
+			'HexRange': 1,
 		},
 		from: [4, 5],
 		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_FrozenHeart.TFT.dds`,
@@ -377,9 +377,8 @@ export const completedItems: ItemData[] = [
 	{
 		desc: `Basic Attacks have a @ChanceOnHitToSilence@% chance to silence the target on-hit, preventing the enemy from gaining mana for @SilenceDuration@ seconds.`,
 		effects: {
+			'ChanceOnHitToSilence': 33,
 			'SilenceDuration': 4,
-			'{2275757b}': 33,
-			'{4516a18d}': 4,
 		},
 		from: [4, 6],
 		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_Hush.TFT.dds`,
@@ -393,7 +392,7 @@ export const completedItems: ItemData[] = [
 			'{1e0630e9}': 25,
 			'{5ffbbd48}': 50,
 			'{8f954b18}': 30,
-			'{dc44b1d7}': 1200,
+			'HPRestore': 1200,
 		},
 		from: [4, 7],
 		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_Redemption.TFT.dds`,
@@ -405,8 +404,8 @@ export const completedItems: ItemData[] = [
 		desc: `At the beginning of each planning phase, the wearer gains one of the following:<li>Basic attacks and spells deal +@TraitMultiplier@% Damage</li> <li>Basic attacks heal @TraitMultiplier@ HP on-hit</li>`,
 		effects: {
 			'Mana': 20,
-			'{3abb8549}': 10,
-			'{a60806db}': 66.66699981689453,
+			'CritChance': 10,
+			'TraitMultiplier': 66.66699981689453,
 			'AdditionalADAP': 40,
 			'DodgeChance': 10,
 		},
@@ -431,7 +430,7 @@ export const completedItems: ItemData[] = [
 		desc: `Wearer's Basic Attacks have a @ChanceOnHitToDisarm@% chance to disarm the target for @DisarmDuration@ seconds, preventing that enemy from Basic Attacking.`,
 		effects: {
 			'DisarmDuration': 3,
-			'{2426ea7e}': 33,
+			'ChanceOnHitToDisarm': 33,
 		},
 		from: [5, 6],
 		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_SwordBreaker.TFT.dds`,
@@ -458,7 +457,7 @@ export const completedItems: ItemData[] = [
 		effects: {
 			'Armor': 20,
 			'DodgeChance': 20,
-			'{d0088170}': 35,
+			'ASSlowPercentage': 35,
 		},
 		from: [5, 9],
 		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_IcebornGauntlet.TFT.dds`,
@@ -540,7 +539,7 @@ export const completedItems: ItemData[] = [
 	{
 		desc: `At the beginning of each planning phase, the wearer equips 2 temporary items. Temporary items increase in power based on your player level.<br><br><tftitemrules>[Consumes Three Item Slots]</tftitemrules>`,
 		effects: {
-			'{3abb8549}': 20,
+			'CritChance': 20,
 			'DodgeChance': 20,
 		},
 		from: [9, 9],
@@ -555,7 +554,7 @@ export const spatulaItems: ItemData[] = [
 	{
 		desc: `Extra %i:scaleAD% +@AD@<br>Wearer is also an Assassin<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>`,
 		effects: {
-			'{4724fc58}': 15,
+			'AD': 15,
 		},
 		from: [1, 8],
 		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_YoumuusGhostblade.TFT.dds`,
@@ -634,7 +633,7 @@ export const spatulaItems: ItemData[] = [
 	{
 		desc: `Wearer is also a Yordle<br>Extra +10% Critical Strike Chance, +10% Dodge Chance<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>`,
 		effects: {
-			'{3abb8549}': 10,
+			'CritChance': 10,
 			'DodgeChance': 10,
 		},
 		from: [9, 8],

@@ -50,10 +50,15 @@ export const NORMALIZE_EFFECT_KEYS: Record<string, BonusKey> = {
 	CritChanceAmpPercent: BonusKey.CritChance,
 	CritDamageAmp: BonusKey.CritMultiplier,
 	CritAmpPercent: BonusKey.CritMultiplier,
+	CriticalStrikeAmp: BonusKey.CritMultiplier,
 }
 
 export const SUBSTITUTE_EFFECT_KEYS: Record<string, string> = {
 	// Set 1
+	'4724fc58': BonusKey.AttackDamage,
+	'3abb8549': BonusKey.CritChance,
+	'eac3d5c4': BonusKey.CritMultiplier,
+	'03494ad0': BonusKey.ManaRestore,
 	'6003afce': 'ProcPercent',
 	'df26ec52': 'ExtraTargetsHit',
 	'fb0b4533': 'HexSize',
@@ -68,7 +73,20 @@ export const SUBSTITUTE_EFFECT_KEYS: Record<string, string> = {
 	'1a14aa8a': 'ManaDrainDrain',
 	'0ebb5365': 'ManaDrainBurn',
 	'35bb0e0c': 'ManaDrainProcChance',
-	'': '',
+	'ad68ce80': 'StartingStacks',
+	'f1d43b01': 'ADPerStack',
+	'0c633edc': 'MaxHPTrueDamage',
+	'69fff1ab': 'ManaPercentRestore',
+	'dc44b1d7': 'HPRestore',
+	'0020f716': 'HexRange',
+	'aa03e0b1': 'ASPerStack',
+	'ce132611': 'APPercentAmp',
+	'2275757b': 'ChanceOnHitToSilence',
+	'4516a18d': 'SilenceDuration',
+	'a60806db': 'TraitMultiplier',
+	'2426ea7e': 'ChanceOnHitToDisarm',
+	'd0088170': 'ASSlowPercentage',
+	'a56e0a21': 'ChanceOnHitToShrink',
 
 	// Set 6
 
