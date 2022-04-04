@@ -268,19 +268,24 @@ for (const item of itemsData.sort((a, b) => a.name.localeCompare(b.name))) {
 		}
 		if (nameKey.endsWith(' heart')) {
 			if (tier && tier !== 1) {
-				console.log('Multiple tier designations for heart', tier, 1, item)
+				if (nameKey !== 'innovator heart') {
+					console.log('ERR Multiple tier designations for heart', tier, 1, item)
+				}
+			} else {
+				tier = 1
 			}
-			tier = 1
 		} else if (nameKey.endsWith(' crest')) {
 			if (tier && tier !== 2) {
-				console.log('Multiple tier designations for crest', tier, 2, item)
+				console.log('ERR Multiple tier designations for crest', tier, 2, item)
+			} else {
+				tier = 2
 			}
-			tier = 2
 		} else if (nameKey.endsWith(' crown')) {
 			if (tier && tier !== 3) {
-				console.log('Multiple tier designations for crown', tier, 3, item)
+				console.log('ERR Multiple tier designations for crown', tier, 3, item)
+			} else {
+				tier = 3
 			}
-			tier = 3
 		}
 		const manualTier = MANUAL_TIER_DESIGNATIONS[item.name]
 		if (manualTier) {
