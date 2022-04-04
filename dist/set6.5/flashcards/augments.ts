@@ -396,8 +396,8 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 	{
 		id: `innovator`,
 		name: `Innovator Heart/Soul`,
-		tiers: [1, 3],
-		description: `1: Your team counts as having 1 additional Innovator.  3: Your team counts as having 2 additional Innovators.`,
+		tiers: [2, 3],
+		description: `2: Your team counts as having 1 additional Innovator.  3: Your team counts as having 2 additional Innovators.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/innovatorheart2.tft_set6`, `assets/maps/particles/tft/item_icons/augments/hexcore/innovatorsoul3.tft_set6`],
 	},
 	{

@@ -1032,7 +1032,7 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Hyperroll1.TFT_Set6.dds`,
 	},
 	{
-		tier: 1,
+		tier: 2,
 		name: `Innovator Heart`,
 		groupID: `innovatorHeart`,
 		desc: `Your team counts as having 1 additional Innovator.`,

@@ -4079,8 +4079,8 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'BonusDamage': [0, 200, 300, 700],
-					'DisarmDuration': [3, 2, 2.5, 3],
+					'BonusDamage': [0, 200, 300, 650],
+					'DisarmDuration': [3, 1.5, 2, 2.5],
 				},
 				calculations: {
 					'Damage': {
@@ -4091,7 +4091,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `BonusDamage`,
-										starValues: [0, 200, 300, 700],
+										starValues: [0, 200, 300, 650],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4805,7 +4805,7 @@ export const champions: ChampionData[] = [
 			attackSpeed: 0.800000011920929,
 			critChance: 0.25,
 			critMultiplier: 1.2999999523162842,
-			damage: 65,
+			damage: 60,
 			hp: 700,
 			initialMana: 0,
 			magicResist: 30,
@@ -5537,7 +5537,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'ShieldAmount': [400, 550, 700, 900],
+					'ShieldAmount': [400, 500, 650, 850],
 					'ShieldDuration': [4, 4, 4, 4],
 					'ShieldAmp': [0.15000000596046448, 0.15000000596046448, 0.15000000596046448, 0.15000000596046448],
 					'ShieldDamage': [125, 100, 135, 175],
@@ -5552,7 +5552,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `ShieldAmount`,
-										starValues: [400, 550, 700, 900],
+										starValues: [400, 500, 650, 850],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -5913,7 +5913,7 @@ export const champions: ChampionData[] = [
 			},
 			variables: {
 				'PercentHealth': [0.05000000074505806, 0.07000000029802322, 0.09000000357627869, 0.11999999731779099],
-				'HealAmount': [0, 35, 50, 75],
+				'HealAmount': [0, 35, 45, 65],
 			},
 			calculations: {
 				'PercentHealth': {
@@ -5940,7 +5940,7 @@ export const champions: ChampionData[] = [
 							subparts: [
 								{
 									variable: `HealAmount`,
-									starValues: [0, 35, 50, 75],
+									starValues: [0, 35, 45, 65],
 									stat: `AP`,
 									ratio: 0.009999999776482582,
 								},
