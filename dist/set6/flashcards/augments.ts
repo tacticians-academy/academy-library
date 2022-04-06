@@ -40,7 +40,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `armorplating`,
 		name: `Armor Plating`,
 		tiers: [2],
-		description: `Colossus become invulnerable for 2 seconds when their Health drops to 60% and 30%.`,
+		description: `Colossus become invulnerable for 2 seconds when their HP drops to 60% and 30%.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/armorplating2.tft_set6`],
 	},
 	{
@@ -96,7 +96,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `builtdifferent`,
 		name: `Built Different`,
 		tiers: [1, 2, 3],
-		description: `Your units with no Traits active gain 300/400/500 Health and 50/60/70% Attack Speed.`,
+		description: `Your units with no Traits active gain 300/400/500 HP and 50/60/70% Attack Speed.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/builtdifferent1.tft_set6`, `assets/maps/particles/tft/item_icons/augments/hexcore/builtdifferent2.tft_set6`, `assets/maps/particles/tft/item_icons/augments/hexcore/builtdifferent3.tft_set6`],
 	},
 	{
@@ -110,7 +110,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `celestialblessing`,
 		name: `Celestial Blessing`,
 		tiers: [1, 2, 3],
-		description: `Your units heal for 12/20/25% of the damage dealt by attacks and Abilities. Excess healing is converted to a shield up to 300/450/600 Health.`,
+		description: `Your units heal for 12/20/25% of the damage dealt by attacks and Abilities. Excess healing is converted to a shield up to 300/450/600 HP.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/celestialblessing1.tft_set6`, `assets/maps/particles/tft/item_icons/augments/hexcore/celestialblessing2.tft_set6`, `assets/maps/particles/tft/item_icons/augments/hexcore/celestialblessing3.tft_set6`],
 	},
 	{
@@ -124,7 +124,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `chemicaloverload`,
 		name: `Chemical Overload`,
 		tiers: [1, 2, 3],
-		description: `Chemtechs explode on death, dealing 20/30/40% of their max Health as magic damage to enemies within 2 hexes.`,
+		description: `Chemtechs explode on death, dealing 20/30/40% of their max HP as magic damage to enemies within 2 hexes.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/chemicaloverlord1.tft_set6`, `assets/maps/particles/tft/item_icons/augments/hexcore/chemicaloverlord2.tft_set6`, `assets/maps/particles/tft/item_icons/augments/hexcore/chemicaloverlord3.tft_set6`],
 	},
 	{
@@ -166,7 +166,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `cyberneticimplants`,
 		name: `Cybernetic Implants`,
 		tiers: [1, 2, 3],
-		description: `Your champions holding an item gain 150/250/350 Health and 10/20/30 Attack Damage.`,
+		description: `Your champions holding an item gain 150/250/350 HP and 10/20/30 Attack Damage.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/cybernetic1.tft_set6`, `assets/maps/particles/tft/item_icons/augments/hexcore/cybernetic2.tft_set6`, `assets/maps/particles/tft/item_icons/augments/hexcore/cybernetic3.tft_set6`],
 	},
 	{
@@ -187,7 +187,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `duet`,
 		name: `Duet`,
 		tiers: [1],
-		description: `Summon 1 additional Socialite spotlight. Spotlighted units gain 400 Health.`,
+		description: `Summon 1 additional Socialite spotlight. Spotlighted units gain 400 HP.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/duet1.tft_set6`],
 	},
 	{
@@ -215,7 +215,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `exiles`,
 		name: `Exiles`,
 		tiers: [1, 2, 3],
-		description: `Your units that start combat with no adjacent allies gain a 35/50/70% maximum Health shield for 8 seconds.`,
+		description: `Your units that start combat with no adjacent allies gain a 35/50/70% maximum HP shield for 8 seconds.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/exiles1.tft_set6`, `assets/maps/particles/tft/item_icons/augments/hexcore/exiles2.tft_set6`, `assets/maps/particles/tft/item_icons/augments/hexcore/exiles3.tft_set6`],
 	},
 	{
@@ -348,7 +348,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `metabolicaccelerator`,
 		name: `Metabolic Accelerator`,
 		tiers: [2],
-		description: `Your Tactician moves faster and heals 2 Health after a PvP round.`,
+		description: `Your Tactician moves faster and heals 2 HP after a PvP round.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/metabolicaccel2.tft_set6`],
 	},
 	{
@@ -474,7 +474,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `shrugitoff`,
 		name: `Shrug It Off`,
 		tiers: [1],
-		description: `Bruisers regenerate 3% of their maximum Health each second.`,
+		description: `Bruisers regenerate 3% of their maximum HP each second.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/shrugoff1.tft_set6`],
 	},
 	{
@@ -537,7 +537,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `sunfireboard`,
 		name: `Sunfire Board`,
 		tiers: [2],
-		description: `At the start of combat, burn all enemies for 16% of their maximum Health over 8 seconds and reduce healing received by 50%.`,
+		description: `At the start of combat, burn all enemies for 16% of their maximum HP over 8 seconds and reduce healing received by 50%.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/sunfireboard2.tft_set6`],
 	},
 	{
@@ -551,14 +551,14 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `thrillofthehunt`,
 		name: `Thrill of the Hunt`,
 		tiers: [1, 2, 3],
-		description: `Your units heal 300/600/900 Health on kill.`,
+		description: `Your units heal 300/600/900 HP on kill.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/thrillhunt1.tft_set6`, `assets/maps/particles/tft/item_icons/augments/hexcore/thrillhunt2.tft_set6`, `assets/maps/particles/tft/item_icons/augments/hexcore/thrillhunt3.tft_set6`],
 	},
 	{
 		id: `titanicforce`,
 		name: `Titanic Force`,
 		tiers: [2],
-		description: `Your units with more than 1400 maximum Health gain Attack Damage equal to 3% of their maximum Health.`,
+		description: `Your units with more than 1400 maximum HP gain Attack Damage equal to 3% of their maximum HP.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/titanicforce2.tft_set6`],
 	},
 	{
@@ -579,14 +579,14 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `underdogs`,
 		name: `Underdogs`,
 		tiers: [1],
-		description: `Whenever your team has fewer units alive than your opponent, your units regenerate 10% Health each second (maximum: 150).`,
+		description: `Whenever your team has fewer units alive than your opponent, your units regenerate 10% HP each second (maximum: 150).`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/underdogs1.tft_set6`],
 	},
 	{
 		id: `unstableevolution`,
 		name: `Unstable Evolution`,
 		tiers: [1],
-		description: `Mutants randomly gain one of the following when they reach 2 star: 500 Health, 30% Attack Speed, 30 Attack Damage, or 30 Ability Power. These bonuses stack.`,
+		description: `Mutants randomly gain one of the following when they reach 2 star: 500 HP, 30% Attack Speed, 30 Attack Damage, or 30 Ability Power. These bonuses stack.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/unstableevolution1.tft_set6`],
 	},
 	{
@@ -614,7 +614,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `woodlandcharm`,
 		name: `Woodland Charm`,
 		tiers: [3],
-		description: `At the start of combat, your highest Health Champion creates a 1600 Health copy of themself (excluding items).`,
+		description: `At the start of combat, your highest HP Champion creates a 1600 HP copy of themself (excluding items).`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/woodlandcharm3.tft_set6`],
 	},
 ]

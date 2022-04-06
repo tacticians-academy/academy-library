@@ -1,4 +1,4 @@
-import { BonusKey } from '../../dist/index.js'
+import { BonusKey, EffectVariables } from '../../dist/index.js'
 
 export const BASE_UNIT_API_NAMES = ['TFT_TrainingDummy', 'TFT_VoidSpawn']
 
@@ -370,4 +370,25 @@ export const spellCalculationOperatorSubstitutions: Record<string, string> = {
 	StatBySubPartCalculationPart: 'scale',
 	SubPartScaledProportionalToStat: 'scale',
 	SumOfSubPartsCalculationPart: 'sum',
+}
+
+export function normalizeEffects(effects: EffectVariables, unreplacedIDs: Set<string>) {
+	Object.keys(effects).forEach(key => {
+		const originalValue = effects[key]
+		if (key.startsWith('{')) {
+			const keyHash = key.slice(1, -1)
+			const replacement = SUBSTITUTE_EFFECT_KEYS[keyHash]
+			if (replacement) {
+				unreplacedIDs.delete(keyHash)
+				delete effects[key]
+				key = replacement
+				effects[key] = originalValue
+			}
+		}
+		for (const normalize in NORMALIZE_EFFECT_KEYS) {
+			delete effects[key]
+			key = key.replaceAll(normalize, NORMALIZE_EFFECT_KEYS[normalize])
+			effects[key] = originalValue
+		}
+	})
 }

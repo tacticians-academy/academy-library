@@ -8,9 +8,13 @@ import { importSetData } from '../dist/imports.js'
 
 import { getCurrentSetNumber, getPathTo, loadHardcodedTXT } from './helpers/files.js'
 import { formatJS } from './helpers/formatting.js'
-import { BASE_UNIT_API_NAMES, UNRELEASED_ITEM_NAME_KEYS, NORMALIZE_EFFECT_KEYS, SUBSTITUTE_EFFECT_KEYS, mStatSubstitutions, spellCalculationOperatorSubstitutions } from './helpers/normalize.js'
+import { BASE_UNIT_API_NAMES, UNRELEASED_ITEM_NAME_KEYS, NORMALIZE_EFFECT_KEYS, SUBSTITUTE_EFFECT_KEYS, normalizeEffects, mStatSubstitutions, spellCalculationOperatorSubstitutions } from './helpers/normalize.js'
 import { ChampionJSON, ChampionJSONType, ChampionJSONAttack, ChampionJSONSpell, ChampionJSONSpellAttack, ChampionJSONStats, ResponseJSON } from './helpers/types.js'
 import { getAPIName, getAugmentNameKey } from './helpers/utils.js'
+
+const BASE_AP_RATIO = 0.009999999776482582
+
+const unreplacedIDs = new Set(Object.keys(SUBSTITUTE_EFFECT_KEYS))
 
 function sortByName(a: {name: string}, b: {name: string}) {
 	return a.name.localeCompare(b.name)
@@ -19,8 +23,6 @@ function sortByName(a: {name: string}, b: {name: string}) {
 function getEnumKeyFrom(apiName: string) {
 	return apiName.includes('_') ? apiName.split('_')[1] : apiName
 }
-
-const BASE_AP_RATIO = 0.009999999776482582
 
 // Load
 
@@ -66,6 +68,10 @@ itemsData.reverse().forEach(item => {
 	if (RETIRED_ITEM_NAMES.includes(item.name) || foundItemIDs.includes(item.id)) {
 		return
 	}
+	for (const normalize in NORMALIZE_EFFECT_KEYS) {
+		item.desc = item.desc.replaceAll(normalize, NORMALIZE_EFFECT_KEYS[normalize])
+	}
+	normalizeEffects(item.effects, unreplacedIDs)
 	const name = item.name.toLowerCase()
 	const icon = item.icon.toLowerCase()
 	if (icon.includes('/augments/')) {
@@ -119,8 +125,6 @@ itemsData.reverse().forEach(item => {
 
 // Normalize Traits/Items
 
-const unreplacedIDs = new Set(Object.keys(SUBSTITUTE_EFFECT_KEYS))
-
 const allItems = []
 for (const key in currentItemsByType) {
 	allItems.push(...currentItemsByType[key as ItemTypeKey])
@@ -136,27 +140,6 @@ allItems.forEach((item: ItemData) => {
 			console.log('Normalize', ItemKey.HandOfJustice, invalidKey, 'missing', item.effects)
 		}
 	}
-	for (const normalize in NORMALIZE_EFFECT_KEYS) {
-		item.desc = item.desc.replaceAll(normalize, NORMALIZE_EFFECT_KEYS[normalize])
-	}
-	Object.keys(item.effects).forEach(key => {
-		const originalValue = item.effects[key]
-		if (key.startsWith('{')) {
-			const keyHash = key.slice(1, -1)
-			const replacement = SUBSTITUTE_EFFECT_KEYS[keyHash]
-			if (replacement) {
-				unreplacedIDs.delete(keyHash)
-				delete item.effects[key]
-				key = replacement
-				item.effects[key] = originalValue
-			}
-		}
-		for (const normalize in NORMALIZE_EFFECT_KEYS) {
-			delete item.effects[key]
-			key = key.replaceAll(normalize, NORMALIZE_EFFECT_KEYS[normalize])
-			item.effects[key] = originalValue
-		}
-	})
 })
 
 traits.sort(sortByName)
@@ -169,24 +152,7 @@ traits.forEach((trait: TraitData) => {
 		if (effect.style == null) {
 			effect.style = index + 1
 		}
-		Object.keys(effect.variables).forEach(key => {
-			const originalValue = effect.variables[key]
-			if (key.startsWith('{')) {
-				const keyHash = key.slice(1, -1)
-				const replacement = SUBSTITUTE_EFFECT_KEYS[keyHash]
-				if (replacement) {
-					unreplacedIDs.delete(keyHash)
-					delete effect.variables[key]
-					key = replacement
-					effect.variables[key] = originalValue
-				}
-			}
-			for (const normalize in NORMALIZE_EFFECT_KEYS) {
-				delete effect.variables[key]
-				key = key.replaceAll(normalize, NORMALIZE_EFFECT_KEYS[normalize])
-				effect.variables[key] = originalValue
-			}
-		})
+		normalizeEffects(effect.variables, unreplacedIDs)
 	})
 })
 
