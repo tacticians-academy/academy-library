@@ -131,7 +131,7 @@ for (const key in currentItemsByType) {
 }
 
 allItems.forEach((item: ItemData) => {
-	item.unique = item.unique ?? false
+	item.unique = item.unique || item.desc.toLowerCase().includes('[unique - only')
 	if (item.name === ItemKey.HandOfJustice) {
 		const invalidKey = 'BonusAD'
 		if (item.effects[invalidKey] != null) {

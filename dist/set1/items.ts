@@ -238,7 +238,7 @@ export const completedItems: ItemData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_PhantomDancer.TFT.dds`,
 		id: 25,
 		name: `Phantom Dancer`,
-		unique: false,
+		unique: true,
 	},
 	{
 		desc: `Basic Attacks have a @ChanceOnHitToShrink@% chance on-hit to decrease the target's star level by 1 for the rest of combat.`,
@@ -337,7 +337,7 @@ export const completedItems: ItemData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_Morellonomicon.TFT.dds`,
 		id: 37,
 		name: `Morellonomicon`,
-		unique: false,
+		unique: true,
 	},
 	{
 		desc: `The wearer's spells can critically strike.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>`,
@@ -349,7 +349,7 @@ export const completedItems: ItemData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_Jeweled_Gauntlet.TFT.dds`,
 		id: 39,
 		name: `Jeweled Gauntlet`,
-		unique: false,
+		unique: true,
 	},
 	{
 		desc: `After casting their spell, the wearer restores @ManaRestore@ Mana.`,
@@ -450,7 +450,7 @@ export const completedItems: ItemData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_RedBuff.TFT.dds`,
 		id: 57,
 		name: `Red Buff`,
-		unique: false,
+		unique: true,
 	},
 	{
 		desc: `When the wearer dodges, they create a zone of ice. Enemies inside the zone have their Attack Speed reduced by @ASSlowPercentage@%.`,
@@ -485,7 +485,7 @@ export const completedItems: ItemData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_Zephyr.TFT.dds`,
 		id: 67,
 		name: `Zephyr`,
-		unique: false,
+		unique: true,
 	},
 	{
 		desc: `The wearer gains a shield that prevents the next crowd control effect from applying. This shield refreshes after @CleanseICD@ seconds.`,
@@ -528,7 +528,7 @@ export const completedItems: ItemData[] = [
 	{
 		desc: `Wearer's team gains +@MaxArmySizeIncrease@ maximum team size.`,
 		effects: {
-			'{ec9a04d1}': 1,
+			'MaxArmySizeIncrease': 1,
 		},
 		from: [8, 8],
 		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_ForceOfNature.TFT.dds`,
@@ -560,7 +560,7 @@ export const spatulaItems: ItemData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_YoumuusGhostblade.TFT.dds`,
 		id: 18,
 		name: `Youmuu's Ghostblade`,
-		unique: false,
+		unique: true,
 	},
 	{
 		desc: `Extra %i:scaleAS% +@AS@<br>Wearer is also a Blademaster<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>`,
@@ -571,7 +571,7 @@ export const spatulaItems: ItemData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_BladeOfTheRuinedKing.TFT.dds`,
 		id: 28,
 		name: `Blade of the Ruined King`,
-		unique: false,
+		unique: true,
 	},
 	{
 		desc: `Extra %i:scaleAP% +@AP@<br>Wearer is also a Sorcerer<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>`,
@@ -582,7 +582,7 @@ export const spatulaItems: ItemData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_Yuumi.TFT.dds`,
 		id: 38,
 		name: `Yuumi`,
-		unique: false,
+		unique: true,
 	},
 	{
 		desc: `Extra %i:scaleMana% +@Mana@<br>Wearer is also a Demon<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>`,
@@ -593,7 +593,7 @@ export const spatulaItems: ItemData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_Darkin.TFT.dds`,
 		id: 48,
 		name: `Darkin`,
-		unique: false,
+		unique: true,
 	},
 	{
 		desc: `Extra %i:scaleArmor% +@Armor@<br>Wearer is also a Knight<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>`,
@@ -604,7 +604,7 @@ export const spatulaItems: ItemData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_KnightsVow.TFT.dds`,
 		id: 58,
 		name: `Knight's Vow`,
-		unique: false,
+		unique: true,
 	},
 	{
 		desc: `Extra %i:scaleMR% +@ExtraMR@<br>Basic Attack fire an additional missile at another nearby enemy, dealing @MultiplierForDamage@% of the wearer's Attack Damage and applying on-hit effects.`,
@@ -628,7 +628,7 @@ export const spatulaItems: ItemData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_FrozenMallet.TFT.dds`,
 		id: 78,
 		name: `Frozen Mallet`,
-		unique: false,
+		unique: true,
 	},
 	{
 		desc: `Wearer is also a Yordle<br>Extra +10% Critical Strike Chance, +10% Dodge Chance<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>`,
@@ -640,7 +640,7 @@ export const spatulaItems: ItemData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_Mittens.TFT.dds`,
 		id: 89,
 		name: `Mittens`,
-		unique: false,
+		unique: true,
 	},
 ]
 

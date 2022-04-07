@@ -188,7 +188,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 		description: `Wearer dodges all critical strikes. [Unique - Only One Per Champion]`,
 		icon: `assets/maps/particles/tft/tft_item_phantomdancer.tft`,
 		from: [2, 5],
-		unique: false,
+		unique: true,
 	},
 	{
 		id: 26,
@@ -260,7 +260,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 		description: `When the wearer deals damage with their spell, they burn the target, dealing 20% of the target's Maximum HP as true damage over 10 seconds and reducing healing by 80% for the duration of the burn. A champion can only have one burn effect at a time, preferring the strongest. [Unique - Only One Per Champion]`,
 		icon: `assets/maps/particles/tft/tft_item_morellonomicon.tft`,
 		from: [3, 7],
-		unique: false,
+		unique: true,
 	},
 	{
 		id: 39,
@@ -269,7 +269,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 		description: `The wearer's spells can critically strike. [Unique - Only One Per Champion]`,
 		icon: `assets/maps/particles/tft/tft_item_jeweled_gauntlet.tft`,
 		from: [3, 9],
-		unique: false,
+		unique: true,
 	},
 	{
 		id: 44,
@@ -341,7 +341,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 		description: `Wearer's Basic Attacks burn the target on-hit, dealing 20% of the target's Maximum HP as true damage over 10 seconds and reducing healing by 80% for the duration of the burn. A champion can only have one burn effect at a time, preferring the strongest. [Unique - Only One Per Champion]`,
 		icon: `assets/maps/particles/tft/tft_item_redbuff.tft`,
 		from: [5, 7],
-		unique: false,
+		unique: true,
 	},
 	{
 		id: 59,
@@ -368,7 +368,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 		description: `When combat begins, the wearer summons a whirlwind on the opposite side of the arena that removes the closest enemy from combat for 6 seconds. [Unique - Only One Per Champion]`,
 		icon: `assets/maps/particles/tft/tft_item_zephyr.tft`,
 		from: [6, 7],
-		unique: false,
+		unique: true,
 	},
 	{
 		id: 69,
@@ -401,7 +401,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 		id: 88,
 		name: `Force of Nature`,
 		type: `completed`,
-		description: `Wearer's team gains +{MaxArmySizeIncrease} maximum team size.`,
+		description: `Wearer's team gains +1 maximum team size.`,
 		icon: `assets/maps/particles/tft/tft_item_forceofnature.tft`,
 		from: [8, 8],
 		unique: false,
@@ -422,7 +422,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 		description: `Extra +15 Wearer is also an Assassin [Unique - Only One Per Champion]`,
 		icon: `assets/maps/particles/tft/tft_item_youmuusghostblade.tft`,
 		from: [1, 8],
-		unique: false,
+		unique: true,
 	},
 	{
 		id: 28,
@@ -431,7 +431,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 		description: `Extra +20 Wearer is also a Blademaster [Unique - Only One Per Champion]`,
 		icon: `assets/maps/particles/tft/tft_item_bladeoftheruinedking.tft`,
 		from: [2, 8],
-		unique: false,
+		unique: true,
 	},
 	{
 		id: 38,
@@ -440,7 +440,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 		description: `Extra +20 Wearer is also a Sorcerer [Unique - Only One Per Champion]`,
 		icon: `assets/maps/particles/tft/tft_item_yuumi.tft`,
 		from: [3, 8],
-		unique: false,
+		unique: true,
 	},
 	{
 		id: 48,
@@ -449,7 +449,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 		description: `Extra +20 Wearer is also a Demon [Unique - Only One Per Champion]`,
 		icon: `assets/maps/particles/tft/tft_item_darkin.tft`,
 		from: [4, 8],
-		unique: false,
+		unique: true,
 	},
 	{
 		id: 58,
@@ -458,7 +458,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 		description: `Extra +20 Wearer is also a Knight [Unique - Only One Per Champion]`,
 		icon: `assets/maps/particles/tft/tft_item_knightsvow.tft`,
 		from: [5, 8],
-		unique: false,
+		unique: true,
 	},
 	{
 		id: 68,
@@ -476,7 +476,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 		description: `Extra +200 Wearer is also glacial [Unique - Only One Per Champion]`,
 		icon: `assets/maps/particles/tft/tft_item_frozenmallet.tft`,
 		from: [8, 7],
-		unique: false,
+		unique: true,
 	},
 	{
 		id: 89,
@@ -485,6 +485,6 @@ export const itemFlashcards: ItemFlashcard[] = [
 		description: `Wearer is also a Yordle Extra +10% Critical Strike Chance, +10% Dodge Chance [Unique - Only One Per Champion]`,
 		icon: `assets/maps/particles/tft/tft_item_mittens.tft`,
 		from: [9, 8],
-		unique: false,
+		unique: true,
 	},
 ]
