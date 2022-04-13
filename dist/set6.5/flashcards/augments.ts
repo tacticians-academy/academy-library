@@ -250,7 +250,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `doubletrouble`,
 		name: `Double Trouble`,
 		tiers: [1, 2, 3],
-		description: `If you have exactly 2 copies of a champion on your board, they both gain 30/40/50 Attack Damage, Ability Power, Armor, and Magic Resist. When you 3-star, gain a 2-star copy.`,
+		description: `If you have exactly 2 copies of a champion on your board, they both gain 25/35/45 Attack Damage, Ability Power, Armor, and Magic Resist. When you 3-star, gain a 2-star copy.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/double-trouble-i.tft_set6_stage2`, `assets/maps/particles/tft/item_icons/augments/hexcore/double-trouble-ii.tft_set6_stage2`, `assets/maps/particles/tft/item_icons/augments/hexcore/double-trouble-iii.tft_set6_stage2`],
 	},
 	{
@@ -264,7 +264,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `electrocharge`,
 		name: `Electrocharge`,
 		tiers: [1, 2, 3],
-		description: `When your units receive critical strikes, they deal 50/75/90-95/135/180 (based on current Stage) magic damage  to nearby enemies (1 second cooldown).`,
+		description: `When your units receive critical strikes, they deal 60/85/105-105/145/200 (based on current Stage) magic damage  to nearby enemies (1 second cooldown).`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/electrocharge-i.tft_set6_stage2`, `assets/maps/particles/tft/item_icons/augments/hexcore/electrocharge-ii.tft_set6_stage2`, `assets/maps/particles/tft/item_icons/augments/hexcore/electrocharge-iii.tft_set6_stage2`],
 	},
 	{
@@ -278,7 +278,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `enchanter`,
 		name: `Enchanter Heart/Soul`,
 		tiers: [1, 3],
-		description: `1: Your team counts as having 1 additional Enchanter. Gain a Lulu.  3: Your team counts as having 2 additional Enchanters. Gain 8 gold.`,
+		description: `1: Your team counts as having 1 additional Enchanter. Gain a Lulu.  3: Your team counts as having 2 additional Enchanters. Gain 12 gold.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/enchanterheart1.tft_set6`, `assets/maps/particles/tft/item_icons/augments/hexcore/enchantersoul3.tft_set6`],
 	},
 	{
@@ -312,9 +312,9 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 	{
 		id: `fourscore`,
 		name: `Four Score`,
-		tiers: [2],
+		tiers: [1],
 		description: `Gain 4 random 4-cost champions.`,
-		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/four-score-ii.tft_set6_stage2`],
+		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/four-score-i.tft_set6_stage2`],
 	},
 	{
 		id: `futuresight`,
@@ -341,7 +341,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `goldenticket`,
 		name: `Golden Ticket`,
 		tiers: [3],
-		description: `Each time your Shop is refreshed, you have a 45% chance to gain a free refresh.`,
+		description: `Each time your Shop is refreshed, you have a 50% chance to gain a free refresh.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/goldenticket3.tft_set6`],
 	},
 	{
@@ -353,10 +353,10 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 	},
 	{
 		id: `hextech`,
-		name: `Hextech Heart/Crest/Crown`,
-		tiers: [1, 2, 3],
-		description: `1: Your team counts as having 1 additional Hextech. Gain a Swain.  2: Gain a Hextech Emblem and a Nocturne.  3: Gain 2 Hextech Emblems.`,
-		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/hextech-heart.tft_set6_stage2`, `assets/maps/particles/tft/item_icons/augments/hexcore/hextech-crest.tft_set6_stage2`, `assets/maps/particles/tft/item_icons/augments/hexcore/hextech-crown.tft_set6_stage2`],
+		name: `Hextech Heart/Crown`,
+		tiers: [2, 3],
+		description: `2: Your team counts as having 1 additional Hextech. Gain a Swain.  3: Gain 2 Hextech Emblems.`,
+		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/hextech-heart-ii.tft_set6_stage2`, `assets/maps/particles/tft/item_icons/augments/hexcore/hextech-crown.tft_set6_stage2`],
 	},
 	{
 		id: `hextechunity`,
@@ -377,7 +377,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		name: `High Five`,
 		tiers: [3],
 		description: `Gain 5 random 5-cost champions.`,
-		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/high-five.tft_set6_stage2`],
+		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/high-five-ii.tft_set6_stage2`],
 	},
 	{
 		id: `highroller`,
@@ -410,9 +410,9 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 	{
 		id: `irresistiblecharm`,
 		name: `Irresistible Charm`,
-		tiers: [1],
+		tiers: [2],
 		description: `Debonair champions take 15% less damage. Gain a Leona.`,
-		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/irresistible-charm-i.tft_set6_stage2`],
+		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/irresistible-charm-ii.tft_set6_stage2`],
 	},
 	{
 		id: `itemgrabbag`,
@@ -432,14 +432,14 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `junkyard`,
 		name: `Junkyard`,
 		tiers: [2],
-		description: `Gain a random component every 3 combat rounds with the Scrap Trait active. Gain an Ezreal.`,
+		description: `Gain a random component every 4 combat rounds with the Scrap Trait active. Gain an Ezreal.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/junkyard2.tft_set6`],
 	},
 	{
 		id: `keepers`,
 		name: `Keepers`,
 		tiers: [1, 2],
-		description: `At the start of combat, your units grant adjacent allies a 150/225 health shield for 8 seconds.`,
+		description: `At the start of combat, your units grant adjacent allies a 160/240 health shield for 8 seconds.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/keepers-i.tft_set6_stage2`, `assets/maps/particles/tft/item_icons/augments/hexcore/keepers-ii.tft_set6_stage2`],
 	},
 	{
@@ -474,7 +474,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `makeshiftarmor`,
 		name: `Makeshift Armor`,
 		tiers: [1, 2, 3],
-		description: `Your units without items equipped gain 35/55/80 Armor and Magic Resist.`,
+		description: `Your units without items equipped gain 35/55/75 Armor and Magic Resist.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/makeshift1.tft_set6`, `assets/maps/particles/tft/item_icons/augments/hexcore/makeshift2.tft_set6`, `assets/maps/particles/tft/item_icons/augments/hexcore/makeshift3.tft_set6`],
 	},
 	{
@@ -565,7 +565,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `pirates`,
 		name: `Pirates`,
 		tiers: [1],
-		description: `Mercenary units have a 50% chance to drop 1 gold when they kill an enemy. Gain a Quinn.`,
+		description: `Mercenary units have a 66% chance to drop 1 gold when they kill an enemy. Gain a Quinn.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/pirates1.tft_set6`],
 	},
 	{
@@ -648,9 +648,9 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 	{
 		id: `sharpshooter`,
 		name: `Sharpshooter`,
-		tiers: [2],
+		tiers: [3],
 		description: `Twinshot's ranged attacks and Abilities can bounce once, dealing 66% less damage. Gain a Corki.`,
-		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/sharpshooter2.tft_set6`],
+		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/sharpshooter3.tft_set6`],
 	},
 	{
 		id: `shrugitoff`,
@@ -663,7 +663,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `smokebomb`,
 		name: `Smoke Bomb`,
 		tiers: [2],
-		description: `The first time an Assassin drops to 70% health, they briefly enter stealth, becoming untargetable and shedding all negative effects. Any excess damage is reduced by 80%. Gain a Talon.`,
+		description: `The first time an Assassin drops to 70% health, they briefly enter stealth, becoming untargetable and shedding all negative effects. Any excess damage is reduced by 60%. Gain a Talon.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/smokebomb2.tft_set6`],
 	},
 	{
@@ -676,15 +676,15 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 	{
 		id: `snipersnest`,
 		name: `Sniper's Nest`,
-		tiers: [1],
+		tiers: [2],
 		description: `Snipers gain +8% damage for each round fought from the same starting hex (Maximum +32%). Gain an Ashe.`,
-		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/snipersnest1.tft_set6`],
+		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/snipersnest2.tft_set6`],
 	},
 	{
 		id: `sosmall`,
 		name: `So Small`,
 		tiers: [2],
-		description: `Yordles gain 30% Dodge Chance. Gain a Corki.`,
+		description: `Yordles gain 25% Dodge Chance. Gain a Corki.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/sosmall2.tft_set6`],
 	},
 	{
@@ -698,7 +698,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `spellblade`,
 		name: `Spell Blade`,
 		tiers: [2],
-		description: `After casting their Ability, Arcanists' next attack deals bonus magic damage equal to 200% of their Ability Power. Gain a Swain.`,
+		description: `After casting their Ability, Arcanists' next attack deals bonus magic damage equal to 180% of their Ability Power. Gain a Swain.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/spellblade2.tft_set6`],
 	},
 	{
@@ -754,7 +754,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `thievingrascals`,
 		name: `Thieving Rascals`,
 		tiers: [2],
-		description: `Free Yordles from the portal have a 40% chance to arrive holding an item component. Gain a Lulu.`,
+		description: `Free Yordles from the portal have a 33% chance to arrive holding an item component. Gain a Lulu.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/thieving-rascals-ii.tft_set6_stage2`],
 	},
 	{
@@ -781,9 +781,9 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 	{
 		id: `tinytitans`,
 		name: `Tiny Titans`,
-		tiers: [2],
+		tiers: [1],
 		description: `Your Tactician heals 35 HP, grows larger, and has 135 maximum HP.`,
-		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/tiny-titans-ii.tft_set6_stage2`],
+		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/tiny-titans-i.tft_set6_stage2`],
 	},
 	{
 		id: `titanicforce`,
@@ -810,7 +810,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `triforce`,
 		name: `Tri Force`,
 		tiers: [1, 2, 3],
-		description: `Your 3-cost units gain 133/233/333 HP, 13/23/33 starting Mana, and 23/33/43% Attack Speed.`,
+		description: `Your 3-cost units gain 133/233/333 HP, 13/23/33 starting Mana, and 13/23/33% Attack Speed.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/tri-force-i.tft_set6_stage2`, `assets/maps/particles/tft/item_icons/augments/hexcore/tri-force-ii.tft_set6_stage2`, `assets/maps/particles/tft/item_icons/augments/hexcore/tri-force-iii.tft_set6_stage2`],
 	},
 	{
@@ -831,7 +831,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `twinshot`,
 		name: `Twinshot Heart/Soul`,
 		tiers: [1, 3],
-		description: `1: Your team counts as having 1 additional Twinshot. Gain a Corki.  3: Your team counts as having 2 additional Twinshots. Gain 8 gold.`,
+		description: `1: Your team counts as having 1 additional Twinshot. Gain a Corki.  3: Your team counts as having 2 additional Twinshots. Gain 4 gold.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/twinshotheart1.tft_set6`, `assets/maps/particles/tft/item_icons/augments/hexcore/twinshotsoul3.tft_set6`],
 	},
 	{
@@ -873,7 +873,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `windfall`,
 		name: `Windfall`,
 		tiers: [3],
-		description: `Gain gold based on the number of augments you have now.<br>0 = 18g, 1 = 30g, 2 = 45g`,
+		description: `Gain gold based on the number of augments you have now.<br>0 = 20g, 1 = 35g, 2 = 55g`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/windfall3.tft_set6`],
 	},
 	{
@@ -887,7 +887,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `woodlandcharm`,
 		name: `Woodland Charm`,
 		tiers: [3],
-		description: `At the start of combat, your highest HP Champion creates a 1600 HP copy of themself (excluding items).`,
+		description: `At the start of combat, your highest HP Champion creates a 1800 HP copy of themself (excluding items).`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/woodlandcharm3.tft_set6`],
 	},
 	{

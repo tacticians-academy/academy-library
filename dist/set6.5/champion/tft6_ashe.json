@@ -22,7 +22,7 @@
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 55,
+			"arBase": 60,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
@@ -338,15 +338,15 @@
 				{
 					"mName": "ADPercent",
 					"mValues": [
-						1,
-						1,
-						1,
-						1,
-						1,
-						1,
-						1
+						1.100000023841858,
+						1.100000023841858,
+						1.100000023841858,
+						1.100000023841858,
+						1.100000023841858,
+						1.100000023841858,
+						1.100000023841858
 					],
-					"mBaseP": 1,
+					"mBaseP": 1.100000023841858,
 					"__type": "SpellDataValue"
 				},
 				{

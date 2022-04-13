@@ -131,9 +131,9 @@
 					"mName": "BaseSpinDamage",
 					"mValues": [
 						0,
-						50,
-						75,
-						100,
+						70,
+						90,
+						110,
 						0,
 						0,
 						0

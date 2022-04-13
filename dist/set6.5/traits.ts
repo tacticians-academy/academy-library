@@ -21,7 +21,7 @@ export const traits: TraitData[] = [
 				style: 2,
 				variables: {
 					'TeamAP': 20,
-					'ArcanistAP': 40,
+					'ArcanistAP': 30,
 				},
 			},
 			{
@@ -30,7 +30,7 @@ export const traits: TraitData[] = [
 				style: 3,
 				variables: {
 					'TeamAP': 50,
-					'ArcanistAP': 50,
+					'ArcanistAP': 40,
 				},
 			},
 			{
@@ -38,7 +38,7 @@ export const traits: TraitData[] = [
 				minUnits: 8,
 				style: 4,
 				variables: {
-					'TeamAP': 145,
+					'TeamAP': 135,
 					'ArcanistAP': null,
 				},
 			},
@@ -183,7 +183,7 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 2,
 				variables: {
-					'BonusAS': 55,
+					'BonusAS': 50,
 					'BurstDuration': 2.5,
 				},
 			},
@@ -192,7 +192,7 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 3,
 				variables: {
-					'BonusAS': 90,
+					'BonusAS': 80,
 					'BurstDuration': 2.5,
 				},
 			},
@@ -219,7 +219,7 @@ export const traits: TraitData[] = [
 				style: 1,
 				variables: {
 					'AS': 15,
-					'DamageReduction': 20,
+					'DamageReduction': 15,
 					'Duration': 8,
 					'HPRegen': 4,
 					'HPThreshold': 75,
@@ -231,7 +231,7 @@ export const traits: TraitData[] = [
 				style: 2,
 				variables: {
 					'AS': 40,
-					'DamageReduction': 20,
+					'DamageReduction': 15,
 					'Duration': 8,
 					'HPRegen': 7,
 					'HPThreshold': 75,
@@ -243,7 +243,7 @@ export const traits: TraitData[] = [
 				style: 3,
 				variables: {
 					'AS': 80,
-					'DamageReduction': 20,
+					'DamageReduction': 15,
 					'Duration': 8,
 					'HPRegen': 10,
 					'HPThreshold': 75,
@@ -255,7 +255,7 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'AS': 150,
-					'DamageReduction': 20,
+					'DamageReduction': 15,
 					'Duration': 8,
 					'HPRegen': 18,
 					'HPThreshold': 75,
@@ -451,7 +451,7 @@ export const traits: TraitData[] = [
 				style: 2,
 				variables: {
 					'MagicDamage': 25,
-					'ShieldAmount': 150,
+					'ShieldAmount': 135,
 					'ShieldDuration': 4,
 					'Frequency': 6,
 					'BonusPercentPerAugment': 20,
@@ -462,8 +462,8 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 3,
 				variables: {
-					'MagicDamage': 50,
-					'ShieldAmount': 300,
+					'MagicDamage': 45,
+					'ShieldAmount': 250,
 					'ShieldDuration': 4,
 					'Frequency': 6,
 					'BonusPercentPerAugment': 20,
@@ -474,8 +474,8 @@ export const traits: TraitData[] = [
 				minUnits: 8,
 				style: 4,
 				variables: {
-					'MagicDamage': 80,
-					'ShieldAmount': 400,
+					'MagicDamage': 75,
+					'ShieldAmount': 350,
 					'ShieldDuration': 4,
 					'Frequency': 6,
 					'BonusPercentPerAugment': 20,
@@ -683,7 +683,7 @@ export const traits: TraitData[] = [
 				style: 3,
 				variables: {
 					'TickRate': 2,
-					'ManaPerTick': 10,
+					'ManaPerTick': 15,
 				},
 			},
 			{
@@ -692,7 +692,7 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'TickRate': 2,
-					'ManaPerTick': 20,
+					'ManaPerTick': 25,
 				},
 			},
 		],
@@ -940,7 +940,7 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 3,
 				variables: {
-					'BonusAD': 45,
+					'BonusAD': 40,
 					'ProcChance': 70,
 				},
 			},
@@ -949,7 +949,7 @@ export const traits: TraitData[] = [
 				minUnits: 5,
 				style: 4,
 				variables: {
-					'BonusAD': 80,
+					'BonusAD': 70,
 					'ProcChance': 100,
 				},
 			},
@@ -974,7 +974,7 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 3,
 				variables: {
-					'PercentManaReduction': 25,
+					'PercentManaReduction': 30,
 				},
 			},
 		],

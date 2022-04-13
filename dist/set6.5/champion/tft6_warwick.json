@@ -400,7 +400,7 @@
 		"critDamageMultiplier": 1.2999999523162842,
 		"baseMoveSpeed": 500,
 		"attackRange": 180,
-		"attackSpeed": 0.800000011920929,
+		"attackSpeed": 0.75,
 		"spellNames": [
 			"TFT6_WarwickP",
 			"BaseSpell",

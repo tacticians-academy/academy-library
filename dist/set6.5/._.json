@@ -4,7 +4,7 @@
 			"desc": "Mercenary units have a @Chance@% chance to drop @Gold@ gold when they kill an enemy. Gain a Quinn.",
 			"effects": {
 				"Gold": 1,
-				"{9292a6c1}": 50
+				"{9292a6c1}": 66
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Pirates1.TFT_Set6.dds",
@@ -38,7 +38,7 @@
 				"{78bc82ef}": 4
 			},
 			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Four-Score-II.TFT_Set6_Stage2.dds",
+			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Four-Score-I.TFT_Set6_Stage2.dds",
 			"id": 858,
 			"name": "Four Score",
 			"unique": false
@@ -136,7 +136,7 @@
 				"DamageReduction": 15
 			},
 			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Irresistible-Charm-I.TFT_Set6_Stage2.dds",
+			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Irresistible-Charm-II.TFT_Set6_Stage2.dds",
 			"id": 748,
 			"name": "Irresistible Charm",
 			"unique": false
@@ -334,7 +334,7 @@
 		{
 			"desc": "The first time an Assassin drops to @HealthThreshold@% health, they briefly enter stealth, becoming untargetable and shedding all negative effects. Any excess damage is reduced by @DamageReduction@%. Gain a Talon.",
 			"effects": {
-				"DamageReduction": 80,
+				"DamageReduction": 60,
 				"HealthThreshold": 70,
 				"{b1442c34}": 1.5
 			},
@@ -410,7 +410,7 @@
 		{
 			"desc": "Your team counts as having 2 additional Twinshots. Gain @Gold@ gold.",
 			"effects": {
-				"Gold": 8
+				"Gold": 4
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/TwinshotSoul3.TFT_Set6.dds",
@@ -422,7 +422,7 @@
 			"desc": "Your team counts as having 1 additional Hextech. Gain a Swain.",
 			"effects": {},
 			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Hextech-Heart.TFT_Set6_Stage2.dds",
+			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Hextech-Heart-II.TFT_Set6_Stage2.dds",
 			"id": 801,
 			"name": "Hextech Heart",
 			"unique": false
@@ -632,7 +632,7 @@
 		{
 			"desc": "Yordles gain @DodgeIncrease@% Dodge Chance. Gain a Corki.",
 			"effects": {
-				"{cb270598}": 30
+				"{cb270598}": 25
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/SoSmall2.TFT_Set6.dds",
@@ -672,7 +672,7 @@
 		{
 			"desc": "Each time your Shop is refreshed, you have a @RerollPercent@% chance to gain a free refresh.",
 			"effects": {
-				"{c43e4438}": 45
+				"{c43e4438}": 50
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/GoldenTicket3.TFT_Set6.dds",
@@ -764,7 +764,7 @@
 		{
 			"desc": "Your units without items equipped gain @Resists@ Armor and Magic Resist.",
 			"effects": {
-				"Resists": 80
+				"Resists": 75
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Makeshift3.TFT_Set6.dds",
@@ -799,7 +799,7 @@
 				"{4d2cb08a}": 66
 			},
 			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Sharpshooter2.TFT_Set6.dds",
+			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Sharpshooter3.TFT_Set6.dds",
 			"id": 718,
 			"name": "Sharpshooter",
 			"unique": false
@@ -807,9 +807,9 @@
 		{
 			"desc": "Gain gold based on the number of augments you have now.<br>0 = @Augment1Gold@g, 1 = @Augment2Gold@g, 2 = @Augment3Gold@g",
 			"effects": {
-				"{248fb55f}": 45,
-				"{682e31d9}": 18,
-				"{8e9f969c}": 30
+				"{248fb55f}": 55,
+				"{682e31d9}": 20,
+				"{8e9f969c}": 35
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Windfall3.TFT_Set6.dds",
@@ -977,7 +977,7 @@
 				"{4bff7d1c}": 135
 			},
 			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Tiny-Titans-II.TFT_Set6_Stage2.dds",
+			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Tiny-Titans-I.TFT_Set6_Stage2.dds",
 			"id": 868,
 			"name": "Tiny Titans",
 			"unique": false
@@ -1159,7 +1159,7 @@
 		{
 			"desc": "At the start of combat, your highest Health Champion creates a @CloneHealth@ Health copy of themself (excluding items).",
 			"effects": {
-				"{35be99a8}": 1600
+				"{35be99a8}": 1800
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/WoodlandCharm3.TFT_Set6.dds",
@@ -1297,7 +1297,7 @@
 				"{9c9fe9fd}": 32
 			},
 			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/SnipersNest1.TFT_Set6.dds",
+			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/SnipersNest2.TFT_Set6.dds",
 			"id": 717,
 			"name": "Sniper's Nest",
 			"unique": false
@@ -1520,7 +1520,7 @@
 				"{78bc82ef}": 5
 			},
 			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/High-Five.TFT_Set6_Stage2.dds",
+			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/High-Five-II.TFT_Set6_Stage2.dds",
 			"id": 853,
 			"name": "High Five",
 			"unique": false
@@ -1765,7 +1765,7 @@
 		{
 			"desc": "After casting their Ability, Arcanists' next attack deals bonus magic damage equal to @PercentAbilityPower@% of their Ability Power. Gain a Swain.",
 			"effects": {
-				"{962760a9}": 200
+				"{962760a9}": 180
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/SpellBlade2.TFT_Set6.dds",
@@ -1889,7 +1889,7 @@
 		{
 			"desc": "Gain a random component every @Combats@ combat rounds with the Scrap Trait active. Gain an Ezreal.",
 			"effects": {
-				"{cc06ab16}": 3
+				"{cc06ab16}": 4
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Junkyard2.TFT_Set6.dds",
@@ -1925,7 +1925,7 @@
 			"effects": {
 				"{54c3c993}": 10,
 				"{5f7516f7}": 4,
-				"{ea6108de}": 40
+				"{ea6108de}": 33
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Thieving-Rascals-II.TFT_Set6_Stage2.dds",
@@ -2009,7 +2009,7 @@
 		{
 			"desc": "Your 3-cost units gain @Health@ Health, @Mana@ starting Mana, and @AttackSpeed@% Attack Speed.",
 			"effects": {
-				"AttackSpeed": 43,
+				"AttackSpeed": 33,
 				"Health": 333,
 				"Mana": 33
 			},
@@ -2033,7 +2033,7 @@
 		{
 			"desc": "Your 3-cost units gain @Health@ Health, @Mana@ starting Mana, and @AttackSpeed@% Attack Speed.",
 			"effects": {
-				"AttackSpeed": 33,
+				"AttackSpeed": 23,
 				"Health": 233,
 				"Mana": 23
 			},
@@ -2046,7 +2046,7 @@
 		{
 			"desc": "Your 3-cost units gain @Health@ Health, @Mana@ starting Mana, and @AttackSpeed@% Attack Speed.",
 			"effects": {
-				"AttackSpeed": 23,
+				"AttackSpeed": 13,
 				"Health": 133,
 				"Mana": 13
 			},
@@ -2340,10 +2340,10 @@
 			"desc": "When your units receive critical strikes, they deal @Damage1@-@Damage4@ (based on current Stage) magic damage  to nearby enemies (@ICD@ second cooldown).",
 			"effects": {
 				"ICD": 1,
-				"{fb4355e3}": 50,
-				"{fc435776}": 65,
-				"{fd435909}": 80,
-				"{fe435a9c}": 95
+				"{fb4355e3}": 60,
+				"{fc435776}": 75,
+				"{fd435909}": 90,
+				"{fe435a9c}": 105
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Electrocharge-I.TFT_Set6_Stage2.dds",
@@ -2377,10 +2377,10 @@
 			"desc": "When your units receive critical strikes, they deal @Damage1@-@Damage4@ (based on current Stage) magic damage  to nearby enemies (@ICD@ second cooldown).",
 			"effects": {
 				"ICD": 1,
-				"{fb4355e3}": 90,
-				"{fc435776}": 120,
-				"{fd435909}": 150,
-				"{fe435a9c}": 180
+				"{fb4355e3}": 105,
+				"{fc435776}": 135,
+				"{fd435909}": 165,
+				"{fe435a9c}": 200
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Electrocharge-III.TFT_Set6_Stage2.dds",
@@ -2405,10 +2405,10 @@
 			"desc": "When your units receive critical strikes, they deal @Damage1@-@Damage4@ (based on current Stage) magic damage  to nearby enemies (@ICD@ second cooldown).",
 			"effects": {
 				"ICD": 1,
-				"{fb4355e3}": 75,
-				"{fc435776}": 95,
-				"{fd435909}": 115,
-				"{fe435a9c}": 135
+				"{fb4355e3}": 85,
+				"{fc435776}": 105,
+				"{fd435909}": 125,
+				"{fe435a9c}": 145
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Electrocharge-II.TFT_Set6_Stage2.dds",
@@ -2441,7 +2441,7 @@
 		{
 			"desc": "Your team counts as having 2 additional Enchanters. Gain @Gold@ gold.",
 			"effects": {
-				"Gold": 8
+				"Gold": 12
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/EnchanterSoul3.TFT_Set6.dds",
@@ -2463,7 +2463,7 @@
 		{
 			"desc": "If you have exactly 2 copies of a champion on your board, they both gain @BonusStats@ Attack Damage, Ability Power, Armor, and Magic Resist. When you 3-star, gain a 2-star copy.",
 			"effects": {
-				"{83e12d6f}": 40
+				"{83e12d6f}": 35
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Double-Trouble-II.TFT_Set6_Stage2.dds",
@@ -2485,7 +2485,7 @@
 		{
 			"desc": "If you have exactly 2 copies of a champion on your board, they both gain @BonusStats@ Attack Damage, Ability Power, Armor, and Magic Resist. When you 3-star, gain a 2-star copy.",
 			"effects": {
-				"{83e12d6f}": 50
+				"{83e12d6f}": 45
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Double-Trouble-III.TFT_Set6_Stage2.dds",
@@ -2530,7 +2530,7 @@
 		{
 			"desc": "If you have exactly 2 copies of a champion on your board, they both gain @BonusStats@ Attack Damage, Ability Power, Armor, and Magic Resist. When you 3-star, gain a 2-star copy.",
 			"effects": {
-				"{83e12d6f}": 30
+				"{83e12d6f}": 25
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Double-Trouble-I.TFT_Set6_Stage2.dds",
@@ -2663,7 +2663,7 @@
 			"desc": "At the start of combat, your units grant adjacent allies a @ShieldHealth@ health shield for @ShieldDuration@ seconds.",
 			"effects": {
 				"ShieldDuration": 8,
-				"{c3360f16}": 225
+				"{c3360f16}": 240
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Keepers-II.TFT_Set6_Stage2.dds",
@@ -2705,7 +2705,7 @@
 			"desc": "At the start of combat, your units grant adjacent allies a @ShieldHealth@ health shield for @ShieldDuration@ seconds.",
 			"effects": {
 				"ShieldDuration": 8,
-				"{c3360f16}": 150
+				"{c3360f16}": 160
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Keepers-I.TFT_Set6_Stage2.dds",
@@ -4483,7 +4483,7 @@
 			"desc": "Place on Kayn to free him from Rhaast, permanently improving his Reaping Slash spell to deal bonus damage at the start of combat.<br><br><tftitemrules>[KAYN CONSUMABLE - This item disappears when used and DESTROYS Rhaast's Embrace]</tftitemrules><br><br><tftitemrules>[Can only be used during the Planning Phase]</tftitemrules>",
 			"effects": {},
 			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/TFT4_Consumable_KaynBlue.TFT_Set4.dds",
+			"icon": "ASSETS/Maps/Particles/TFT/TFT4_Consumable_KaynBlue.dds",
 			"id": 210,
 			"name": "Kayn's Liberation",
 			"unique": false
@@ -4796,7 +4796,7 @@
 			"desc": "Place on Kayn to force Rhaast to overtake him, permanently improving his Reaping Slash spell to heal him.<br><br><tftitemrules>[KAYN CONSUMABLE - This item disappears when used and DESTROYS Kayn's Liberation]</tftitemrules><br><br><tftitemrules>[Can only be used during the Planning Phase]</tftitemrules>",
 			"effects": {},
 			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/TFT4_Consumable_KaynRed.TFT_Set4.dds",
+			"icon": "ASSETS/Maps/Particles/TFT/TFT4_Consumable_KaynRed.dds",
 			"id": 208,
 			"name": "Rhaast's Embrace",
 			"unique": false
@@ -6713,7 +6713,7 @@
 					"name": "Warwick",
 					"stats": {
 						"armor": 40,
-						"attackSpeed": 0.800000011920929,
+						"attackSpeed": 0.75,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
 						"damage": 45,
@@ -6874,7 +6874,7 @@
 						"hp": 850,
 						"initialMana": 0,
 						"magicResist": 35,
-						"mana": 140,
+						"mana": 145,
 						"range": 4
 					},
 					"traits": [
@@ -7194,7 +7194,7 @@
 						"hp": 700,
 						"initialMana": 0,
 						"magicResist": 30,
-						"mana": 70,
+						"mana": 60,
 						"range": 4
 					},
 					"traits": [
@@ -7554,9 +7554,9 @@
 						"critMultiplier": 1.2999999523162842,
 						"damage": 40,
 						"hp": 750,
-						"initialMana": 80,
+						"initialMana": 70,
 						"magicResist": 30,
-						"mana": 150,
+						"mana": 130,
 						"range": 4
 					},
 					"traits": [
@@ -7805,7 +7805,7 @@
 						"hp": 500,
 						"initialMana": 0,
 						"magicResist": 15,
-						"mana": 110,
+						"mana": 100,
 						"range": 4
 					},
 					"traits": [
@@ -7985,7 +7985,7 @@
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
 						"damage": 90,
-						"hp": 700,
+						"hp": 750,
 						"initialMana": 100,
 						"magicResist": 50,
 						"mana": 165,
@@ -8054,13 +8054,13 @@
 							{
 								"name": "MaxHealthPercent",
 								"value": [
-									0.07999999821186066,
-									0.07999999821186066,
-									0.07999999821186066,
-									0.07999999821186066,
-									0.07999999821186066,
-									0.07999999821186066,
-									0.07999999821186066
+									0.10000000149011612,
+									0.10000000149011612,
+									0.10000000149011612,
+									0.10000000149011612,
+									0.10000000149011612,
+									0.10000000149011612,
+									0.10000000149011612
 								]
 							}
 						]
@@ -8965,8 +8965,8 @@
 								"value": [
 									0,
 									450,
-									650,
-									850,
+									575,
+									800,
 									0,
 									0,
 									0
@@ -9871,13 +9871,13 @@
 							{
 								"name": "ADPercent",
 								"value": [
-									1,
-									1,
-									1,
-									1,
-									1,
-									1,
-									1
+									1.100000023841858,
+									1.100000023841858,
+									1.100000023841858,
+									1.100000023841858,
+									1.100000023841858,
+									1.100000023841858,
+									1.100000023841858
 								]
 							},
 							{
@@ -9931,7 +9931,7 @@
 						"hp": 600,
 						"initialMana": 30,
 						"magicResist": 20,
-						"mana": 55,
+						"mana": 60,
 						"range": 4
 					},
 					"traits": [
@@ -9997,8 +9997,8 @@
 								"name": "BonusAttackSpeed",
 								"value": [
 									0,
-									0.6000000238418579,
-									0.800000011920929,
+									0.5,
+									0.699999988079071,
 									2.5,
 									0,
 									0,
@@ -10050,9 +10050,9 @@
 								"name": "BaseSpinDamage",
 								"value": [
 									0,
-									50,
-									75,
-									100,
+									70,
+									90,
+									110,
 									0,
 									0,
 									0
@@ -10209,9 +10209,9 @@
 								"name": "ShieldAmount",
 								"value": [
 									50,
-									475,
-									575,
-									675,
+									500,
+									600,
+									700,
 									550,
 									675,
 									800
@@ -10310,9 +10310,9 @@
 								"name": "Damage",
 								"value": [
 									0,
-									175,
-									275,
-									300,
+									170,
+									260,
+									295,
 									500,
 									625,
 									750
@@ -10442,7 +10442,7 @@
 						"attackSpeed": 0.800000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 70,
+						"damage": 75,
 						"hp": 800,
 						"initialMana": 0,
 						"magicResist": 30,
@@ -10463,13 +10463,13 @@
 							{
 								"name": "MSBuff",
 								"value": [
-									1350,
-									1350,
-									1350,
-									1350,
-									1350,
-									1350,
-									1350
+									1500,
+									1500,
+									1500,
+									1500,
+									1500,
+									1500,
+									1500
 								]
 							},
 							{
@@ -10541,8 +10541,8 @@
 								"name": "Damage",
 								"value": [
 									150,
-									125,
-									190,
+									135,
+									200,
 									450,
 									500,
 									400,
@@ -10752,9 +10752,9 @@
 								"name": "Damage",
 								"value": [
 									0,
-									80,
-									120,
-									180,
+									100,
+									140,
+									200,
 									0,
 									0,
 									0
@@ -11136,7 +11136,7 @@
 					"name": "Zeri",
 					"stats": {
 						"armor": 30,
-						"attackSpeed": 0.800000011920929,
+						"attackSpeed": 0.8999999761581421,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
 						"damage": 75,
@@ -11220,7 +11220,7 @@
 						"hp": 450,
 						"initialMana": 0,
 						"magicResist": 15,
-						"mana": 35,
+						"mana": 45,
 						"range": 3
 					},
 					"traits": [
@@ -11441,7 +11441,7 @@
 							"minUnits": 6,
 							"style": 3,
 							"variables": {
-								"{ed1f9fc2}": 25
+								"{ed1f9fc2}": 30
 							}
 						}
 					],
@@ -11501,7 +11501,7 @@
 							"minUnits": 4,
 							"style": 2,
 							"variables": {
-								"BonusAS": 55,
+								"BonusAS": 50,
 								"{17cfa971}": 2.5
 							}
 						},
@@ -11510,7 +11510,7 @@
 							"minUnits": 6,
 							"style": 3,
 							"variables": {
-								"BonusAS": 90,
+								"BonusAS": 80,
 								"{17cfa971}": 2.5
 							}
 						},
@@ -11843,7 +11843,7 @@
 							"style": 3,
 							"variables": {
 								"{471b1a16}": 2,
-								"{d0539890}": 10
+								"{d0539890}": 15
 							}
 						},
 						{
@@ -11852,7 +11852,7 @@
 							"style": 4,
 							"variables": {
 								"{471b1a16}": 2,
-								"{d0539890}": 20
+								"{d0539890}": 25
 							}
 						}
 					],
@@ -11916,7 +11916,7 @@
 							"style": 2,
 							"variables": {
 								"MagicDamage": 25,
-								"ShieldAmount": 150,
+								"ShieldAmount": 135,
 								"ShieldDuration": 4,
 								"{2fb31c01}": 6,
 								"{f49783e7}": 20
@@ -11927,8 +11927,8 @@
 							"minUnits": 6,
 							"style": 3,
 							"variables": {
-								"MagicDamage": 50,
-								"ShieldAmount": 300,
+								"MagicDamage": 45,
+								"ShieldAmount": 250,
 								"ShieldDuration": 4,
 								"{2fb31c01}": 6,
 								"{f49783e7}": 20
@@ -11939,8 +11939,8 @@
 							"minUnits": 8,
 							"style": 4,
 							"variables": {
-								"MagicDamage": 80,
-								"ShieldAmount": 400,
+								"MagicDamage": 75,
+								"ShieldAmount": 350,
 								"ShieldDuration": 4,
 								"{2fb31c01}": 6,
 								"{f49783e7}": 20
@@ -11977,7 +11977,7 @@
 							"minUnits": 4,
 							"style": 3,
 							"variables": {
-								"BonusAD": 45,
+								"BonusAD": 40,
 								"{b4a90a5d}": 70
 							}
 						},
@@ -11986,7 +11986,7 @@
 							"minUnits": 5,
 							"style": 4,
 							"variables": {
-								"BonusAD": 80,
+								"BonusAD": 70,
 								"{b4a90a5d}": 100
 							}
 						}
@@ -12155,7 +12155,7 @@
 							"style": 2,
 							"variables": {
 								"{2f744e2b}": 20,
-								"{faa12163}": 40
+								"{faa12163}": 30
 							}
 						},
 						{
@@ -12164,7 +12164,7 @@
 							"style": 3,
 							"variables": {
 								"{2f744e2b}": 50,
-								"{faa12163}": 50
+								"{faa12163}": 40
 							}
 						},
 						{
@@ -12172,7 +12172,7 @@
 							"minUnits": 8,
 							"style": 4,
 							"variables": {
-								"{2f744e2b}": 145,
+								"{2f744e2b}": 135,
 								"{faa12163}": "null"
 							}
 						}
@@ -12310,7 +12310,7 @@
 							"style": 1,
 							"variables": {
 								"AttackSpeed": 15,
-								"DamageReduction": 20,
+								"DamageReduction": 15,
 								"Duration": 8,
 								"HealthRegen": 4,
 								"HealthThreshold": 75
@@ -12322,7 +12322,7 @@
 							"style": 2,
 							"variables": {
 								"AttackSpeed": 40,
-								"DamageReduction": 20,
+								"DamageReduction": 15,
 								"Duration": 8,
 								"HealthRegen": 7,
 								"HealthThreshold": 75
@@ -12334,7 +12334,7 @@
 							"style": 3,
 							"variables": {
 								"AttackSpeed": 80,
-								"DamageReduction": 20,
+								"DamageReduction": 15,
 								"Duration": 8,
 								"HealthRegen": 10,
 								"HealthThreshold": 75
@@ -12346,7 +12346,7 @@
 							"style": 4,
 							"variables": {
 								"AttackSpeed": 150,
-								"DamageReduction": 20,
+								"DamageReduction": 15,
 								"Duration": 8,
 								"HealthRegen": 18,
 								"HealthThreshold": 75
@@ -12732,7 +12732,7 @@
 					"name": "Warwick",
 					"stats": {
 						"armor": 40,
-						"attackSpeed": 0.800000011920929,
+						"attackSpeed": 0.75,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
 						"damage": 45,
@@ -12893,7 +12893,7 @@
 						"hp": 850,
 						"initialMana": 0,
 						"magicResist": 35,
-						"mana": 140,
+						"mana": 145,
 						"range": 4
 					},
 					"traits": [
@@ -13213,7 +13213,7 @@
 						"hp": 700,
 						"initialMana": 0,
 						"magicResist": 30,
-						"mana": 70,
+						"mana": 60,
 						"range": 4
 					},
 					"traits": [
@@ -13573,9 +13573,9 @@
 						"critMultiplier": 1.2999999523162842,
 						"damage": 40,
 						"hp": 750,
-						"initialMana": 80,
+						"initialMana": 70,
 						"magicResist": 30,
-						"mana": 150,
+						"mana": 130,
 						"range": 4
 					},
 					"traits": [
@@ -13824,7 +13824,7 @@
 						"hp": 500,
 						"initialMana": 0,
 						"magicResist": 15,
-						"mana": 110,
+						"mana": 100,
 						"range": 4
 					},
 					"traits": [
@@ -14004,7 +14004,7 @@
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
 						"damage": 90,
-						"hp": 700,
+						"hp": 750,
 						"initialMana": 100,
 						"magicResist": 50,
 						"mana": 165,
@@ -14073,13 +14073,13 @@
 							{
 								"name": "MaxHealthPercent",
 								"value": [
-									0.07999999821186066,
-									0.07999999821186066,
-									0.07999999821186066,
-									0.07999999821186066,
-									0.07999999821186066,
-									0.07999999821186066,
-									0.07999999821186066
+									0.10000000149011612,
+									0.10000000149011612,
+									0.10000000149011612,
+									0.10000000149011612,
+									0.10000000149011612,
+									0.10000000149011612,
+									0.10000000149011612
 								]
 							}
 						]
@@ -14984,8 +14984,8 @@
 								"value": [
 									0,
 									450,
-									650,
-									850,
+									575,
+									800,
 									0,
 									0,
 									0
@@ -15890,13 +15890,13 @@
 							{
 								"name": "ADPercent",
 								"value": [
-									1,
-									1,
-									1,
-									1,
-									1,
-									1,
-									1
+									1.100000023841858,
+									1.100000023841858,
+									1.100000023841858,
+									1.100000023841858,
+									1.100000023841858,
+									1.100000023841858,
+									1.100000023841858
 								]
 							},
 							{
@@ -15950,7 +15950,7 @@
 						"hp": 600,
 						"initialMana": 30,
 						"magicResist": 20,
-						"mana": 55,
+						"mana": 60,
 						"range": 4
 					},
 					"traits": [
@@ -16016,8 +16016,8 @@
 								"name": "BonusAttackSpeed",
 								"value": [
 									0,
-									0.6000000238418579,
-									0.800000011920929,
+									0.5,
+									0.699999988079071,
 									2.5,
 									0,
 									0,
@@ -16069,9 +16069,9 @@
 								"name": "BaseSpinDamage",
 								"value": [
 									0,
-									50,
-									75,
-									100,
+									70,
+									90,
+									110,
 									0,
 									0,
 									0
@@ -16228,9 +16228,9 @@
 								"name": "ShieldAmount",
 								"value": [
 									50,
-									475,
-									575,
-									675,
+									500,
+									600,
+									700,
 									550,
 									675,
 									800
@@ -16329,9 +16329,9 @@
 								"name": "Damage",
 								"value": [
 									0,
-									175,
-									275,
-									300,
+									170,
+									260,
+									295,
 									500,
 									625,
 									750
@@ -16461,7 +16461,7 @@
 						"attackSpeed": 0.800000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 70,
+						"damage": 75,
 						"hp": 800,
 						"initialMana": 0,
 						"magicResist": 30,
@@ -16482,13 +16482,13 @@
 							{
 								"name": "MSBuff",
 								"value": [
-									1350,
-									1350,
-									1350,
-									1350,
-									1350,
-									1350,
-									1350
+									1500,
+									1500,
+									1500,
+									1500,
+									1500,
+									1500,
+									1500
 								]
 							},
 							{
@@ -16560,8 +16560,8 @@
 								"name": "Damage",
 								"value": [
 									150,
-									125,
-									190,
+									135,
+									200,
 									450,
 									500,
 									400,
@@ -16771,9 +16771,9 @@
 								"name": "Damage",
 								"value": [
 									0,
-									80,
-									120,
-									180,
+									100,
+									140,
+									200,
 									0,
 									0,
 									0
@@ -17155,7 +17155,7 @@
 					"name": "Zeri",
 					"stats": {
 						"armor": 30,
-						"attackSpeed": 0.800000011920929,
+						"attackSpeed": 0.8999999761581421,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
 						"damage": 75,
@@ -17239,7 +17239,7 @@
 						"hp": 450,
 						"initialMana": 0,
 						"magicResist": 15,
-						"mana": 35,
+						"mana": 45,
 						"range": 3
 					},
 					"traits": [
@@ -17460,7 +17460,7 @@
 							"minUnits": 6,
 							"style": 3,
 							"variables": {
-								"{ed1f9fc2}": 25
+								"{ed1f9fc2}": 30
 							}
 						}
 					],
@@ -17520,7 +17520,7 @@
 							"minUnits": 4,
 							"style": 2,
 							"variables": {
-								"BonusAS": 55,
+								"BonusAS": 50,
 								"{17cfa971}": 2.5
 							}
 						},
@@ -17529,7 +17529,7 @@
 							"minUnits": 6,
 							"style": 3,
 							"variables": {
-								"BonusAS": 90,
+								"BonusAS": 80,
 								"{17cfa971}": 2.5
 							}
 						},
@@ -17862,7 +17862,7 @@
 							"style": 3,
 							"variables": {
 								"{471b1a16}": 2,
-								"{d0539890}": 10
+								"{d0539890}": 15
 							}
 						},
 						{
@@ -17871,7 +17871,7 @@
 							"style": 4,
 							"variables": {
 								"{471b1a16}": 2,
-								"{d0539890}": 20
+								"{d0539890}": 25
 							}
 						}
 					],
@@ -17935,7 +17935,7 @@
 							"style": 2,
 							"variables": {
 								"MagicDamage": 25,
-								"ShieldAmount": 150,
+								"ShieldAmount": 135,
 								"ShieldDuration": 4,
 								"{2fb31c01}": 6,
 								"{f49783e7}": 20
@@ -17946,8 +17946,8 @@
 							"minUnits": 6,
 							"style": 3,
 							"variables": {
-								"MagicDamage": 50,
-								"ShieldAmount": 300,
+								"MagicDamage": 45,
+								"ShieldAmount": 250,
 								"ShieldDuration": 4,
 								"{2fb31c01}": 6,
 								"{f49783e7}": 20
@@ -17958,8 +17958,8 @@
 							"minUnits": 8,
 							"style": 4,
 							"variables": {
-								"MagicDamage": 80,
-								"ShieldAmount": 400,
+								"MagicDamage": 75,
+								"ShieldAmount": 350,
 								"ShieldDuration": 4,
 								"{2fb31c01}": 6,
 								"{f49783e7}": 20
@@ -17996,7 +17996,7 @@
 							"minUnits": 4,
 							"style": 3,
 							"variables": {
-								"BonusAD": 45,
+								"BonusAD": 40,
 								"{b4a90a5d}": 70
 							}
 						},
@@ -18005,7 +18005,7 @@
 							"minUnits": 5,
 							"style": 4,
 							"variables": {
-								"BonusAD": 80,
+								"BonusAD": 70,
 								"{b4a90a5d}": 100
 							}
 						}
@@ -18174,7 +18174,7 @@
 							"style": 2,
 							"variables": {
 								"{2f744e2b}": 20,
-								"{faa12163}": 40
+								"{faa12163}": 30
 							}
 						},
 						{
@@ -18183,7 +18183,7 @@
 							"style": 3,
 							"variables": {
 								"{2f744e2b}": 50,
-								"{faa12163}": 50
+								"{faa12163}": 40
 							}
 						},
 						{
@@ -18191,7 +18191,7 @@
 							"minUnits": 8,
 							"style": 4,
 							"variables": {
-								"{2f744e2b}": 145,
+								"{2f744e2b}": 135,
 								"{faa12163}": "null"
 							}
 						}
@@ -18329,7 +18329,7 @@
 							"style": 1,
 							"variables": {
 								"AttackSpeed": 15,
-								"DamageReduction": 20,
+								"DamageReduction": 15,
 								"Duration": 8,
 								"HealthRegen": 4,
 								"HealthThreshold": 75
@@ -18341,7 +18341,7 @@
 							"style": 2,
 							"variables": {
 								"AttackSpeed": 40,
-								"DamageReduction": 20,
+								"DamageReduction": 15,
 								"Duration": 8,
 								"HealthRegen": 7,
 								"HealthThreshold": 75
@@ -18353,7 +18353,7 @@
 							"style": 3,
 							"variables": {
 								"AttackSpeed": 80,
-								"DamageReduction": 20,
+								"DamageReduction": 15,
 								"Duration": 8,
 								"HealthRegen": 10,
 								"HealthThreshold": 75
@@ -18365,7 +18365,7 @@
 							"style": 4,
 							"variables": {
 								"AttackSpeed": 150,
-								"DamageReduction": 20,
+								"DamageReduction": 15,
 								"Duration": 8,
 								"HealthRegen": 18,
 								"HealthThreshold": 75
@@ -18655,7 +18655,7 @@
 					"name": "Warwick",
 					"stats": {
 						"armor": 40,
-						"attackSpeed": 0.800000011920929,
+						"attackSpeed": 0.75,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
 						"damage": 45,
@@ -18816,7 +18816,7 @@
 						"hp": 850,
 						"initialMana": 0,
 						"magicResist": 35,
-						"mana": 140,
+						"mana": 145,
 						"range": 4
 					},
 					"traits": [
@@ -19136,7 +19136,7 @@
 						"hp": 700,
 						"initialMana": 0,
 						"magicResist": 30,
-						"mana": 70,
+						"mana": 60,
 						"range": 4
 					},
 					"traits": [
@@ -19496,9 +19496,9 @@
 						"critMultiplier": 1.2999999523162842,
 						"damage": 40,
 						"hp": 750,
-						"initialMana": 80,
+						"initialMana": 70,
 						"magicResist": 30,
-						"mana": 150,
+						"mana": 130,
 						"range": 4
 					},
 					"traits": [
@@ -19747,7 +19747,7 @@
 						"hp": 500,
 						"initialMana": 0,
 						"magicResist": 15,
-						"mana": 110,
+						"mana": 100,
 						"range": 4
 					},
 					"traits": [
@@ -19927,7 +19927,7 @@
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
 						"damage": 90,
-						"hp": 700,
+						"hp": 750,
 						"initialMana": 100,
 						"magicResist": 50,
 						"mana": 165,
@@ -19996,13 +19996,13 @@
 							{
 								"name": "MaxHealthPercent",
 								"value": [
-									0.07999999821186066,
-									0.07999999821186066,
-									0.07999999821186066,
-									0.07999999821186066,
-									0.07999999821186066,
-									0.07999999821186066,
-									0.07999999821186066
+									0.10000000149011612,
+									0.10000000149011612,
+									0.10000000149011612,
+									0.10000000149011612,
+									0.10000000149011612,
+									0.10000000149011612,
+									0.10000000149011612
 								]
 							}
 						]
@@ -20907,8 +20907,8 @@
 								"value": [
 									0,
 									450,
-									650,
-									850,
+									575,
+									800,
 									0,
 									0,
 									0
@@ -21813,13 +21813,13 @@
 							{
 								"name": "ADPercent",
 								"value": [
-									1,
-									1,
-									1,
-									1,
-									1,
-									1,
-									1
+									1.100000023841858,
+									1.100000023841858,
+									1.100000023841858,
+									1.100000023841858,
+									1.100000023841858,
+									1.100000023841858,
+									1.100000023841858
 								]
 							},
 							{
@@ -21873,7 +21873,7 @@
 						"hp": 600,
 						"initialMana": 30,
 						"magicResist": 20,
-						"mana": 55,
+						"mana": 60,
 						"range": 4
 					},
 					"traits": [
@@ -21939,8 +21939,8 @@
 								"name": "BonusAttackSpeed",
 								"value": [
 									0,
-									0.6000000238418579,
-									0.800000011920929,
+									0.5,
+									0.699999988079071,
 									2.5,
 									0,
 									0,
@@ -21992,9 +21992,9 @@
 								"name": "BaseSpinDamage",
 								"value": [
 									0,
-									50,
-									75,
-									100,
+									70,
+									90,
+									110,
 									0,
 									0,
 									0
@@ -22151,9 +22151,9 @@
 								"name": "ShieldAmount",
 								"value": [
 									50,
-									475,
-									575,
-									675,
+									500,
+									600,
+									700,
 									550,
 									675,
 									800
@@ -22252,9 +22252,9 @@
 								"name": "Damage",
 								"value": [
 									0,
-									175,
-									275,
-									300,
+									170,
+									260,
+									295,
 									500,
 									625,
 									750
@@ -22384,7 +22384,7 @@
 						"attackSpeed": 0.800000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 70,
+						"damage": 75,
 						"hp": 800,
 						"initialMana": 0,
 						"magicResist": 30,
@@ -22405,13 +22405,13 @@
 							{
 								"name": "MSBuff",
 								"value": [
-									1350,
-									1350,
-									1350,
-									1350,
-									1350,
-									1350,
-									1350
+									1500,
+									1500,
+									1500,
+									1500,
+									1500,
+									1500,
+									1500
 								]
 							},
 							{
@@ -22483,8 +22483,8 @@
 								"name": "Damage",
 								"value": [
 									150,
-									125,
-									190,
+									135,
+									200,
 									450,
 									500,
 									400,
@@ -22694,9 +22694,9 @@
 								"name": "Damage",
 								"value": [
 									0,
-									80,
-									120,
-									180,
+									100,
+									140,
+									200,
 									0,
 									0,
 									0
@@ -23078,7 +23078,7 @@
 					"name": "Zeri",
 					"stats": {
 						"armor": 30,
-						"attackSpeed": 0.800000011920929,
+						"attackSpeed": 0.8999999761581421,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
 						"damage": 75,
@@ -23162,7 +23162,7 @@
 						"hp": 450,
 						"initialMana": 0,
 						"magicResist": 15,
-						"mana": 35,
+						"mana": 45,
 						"range": 3
 					},
 					"traits": [
@@ -23381,7 +23381,7 @@
 							"minUnits": 6,
 							"style": 3,
 							"variables": {
-								"{ed1f9fc2}": 25
+								"{ed1f9fc2}": 30
 							}
 						}
 					],
@@ -23441,7 +23441,7 @@
 							"minUnits": 4,
 							"style": 2,
 							"variables": {
-								"BonusAS": 55,
+								"BonusAS": 50,
 								"{17cfa971}": 2.5
 							}
 						},
@@ -23450,7 +23450,7 @@
 							"minUnits": 6,
 							"style": 3,
 							"variables": {
-								"BonusAS": 90,
+								"BonusAS": 80,
 								"{17cfa971}": 2.5
 							}
 						},
@@ -23783,7 +23783,7 @@
 							"style": 3,
 							"variables": {
 								"{471b1a16}": 2,
-								"{d0539890}": 10
+								"{d0539890}": 15
 							}
 						},
 						{
@@ -23792,7 +23792,7 @@
 							"style": 4,
 							"variables": {
 								"{471b1a16}": 2,
-								"{d0539890}": 20
+								"{d0539890}": 25
 							}
 						}
 					],
@@ -23856,7 +23856,7 @@
 							"style": 2,
 							"variables": {
 								"MagicDamage": 25,
-								"ShieldAmount": 150,
+								"ShieldAmount": 135,
 								"ShieldDuration": 4,
 								"{2fb31c01}": 6,
 								"{f49783e7}": 20
@@ -23867,8 +23867,8 @@
 							"minUnits": 6,
 							"style": 3,
 							"variables": {
-								"MagicDamage": 50,
-								"ShieldAmount": 300,
+								"MagicDamage": 45,
+								"ShieldAmount": 250,
 								"ShieldDuration": 4,
 								"{2fb31c01}": 6,
 								"{f49783e7}": 20
@@ -23879,8 +23879,8 @@
 							"minUnits": 8,
 							"style": 4,
 							"variables": {
-								"MagicDamage": 80,
-								"ShieldAmount": 400,
+								"MagicDamage": 75,
+								"ShieldAmount": 350,
 								"ShieldDuration": 4,
 								"{2fb31c01}": 6,
 								"{f49783e7}": 20
@@ -23917,7 +23917,7 @@
 							"minUnits": 4,
 							"style": 3,
 							"variables": {
-								"BonusAD": 45,
+								"BonusAD": 40,
 								"{b4a90a5d}": 70
 							}
 						},
@@ -23926,7 +23926,7 @@
 							"minUnits": 5,
 							"style": 4,
 							"variables": {
-								"BonusAD": 80,
+								"BonusAD": 70,
 								"{b4a90a5d}": 100
 							}
 						}
@@ -24095,7 +24095,7 @@
 							"style": 2,
 							"variables": {
 								"{2f744e2b}": 20,
-								"{faa12163}": 40
+								"{faa12163}": 30
 							}
 						},
 						{
@@ -24104,7 +24104,7 @@
 							"style": 3,
 							"variables": {
 								"{2f744e2b}": 50,
-								"{faa12163}": 50
+								"{faa12163}": 40
 							}
 						},
 						{
@@ -24112,7 +24112,7 @@
 							"minUnits": 8,
 							"style": 4,
 							"variables": {
-								"{2f744e2b}": 145,
+								"{2f744e2b}": 135,
 								"{faa12163}": "null"
 							}
 						}
@@ -24250,7 +24250,7 @@
 							"style": 1,
 							"variables": {
 								"AttackSpeed": 15,
-								"DamageReduction": 20,
+								"DamageReduction": 15,
 								"Duration": 8,
 								"HealthRegen": 4,
 								"HealthThreshold": 75
@@ -24262,7 +24262,7 @@
 							"style": 2,
 							"variables": {
 								"AttackSpeed": 40,
-								"DamageReduction": 20,
+								"DamageReduction": 15,
 								"Duration": 8,
 								"HealthRegen": 7,
 								"HealthThreshold": 75
@@ -24274,7 +24274,7 @@
 							"style": 3,
 							"variables": {
 								"AttackSpeed": 80,
-								"DamageReduction": 20,
+								"DamageReduction": 15,
 								"Duration": 8,
 								"HealthRegen": 10,
 								"HealthThreshold": 75
@@ -24286,7 +24286,7 @@
 							"style": 4,
 							"variables": {
 								"AttackSpeed": 150,
-								"DamageReduction": 20,
+								"DamageReduction": 15,
 								"Duration": 8,
 								"HealthRegen": 18,
 								"HealthThreshold": 75

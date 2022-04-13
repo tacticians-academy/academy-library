@@ -166,7 +166,7 @@
 		"mMoveHeight": 0,
 		"mInitialMana": 100,
 		"mCharacterName": "TFT6_ChoGath",
-		"baseHP": 700,
+		"baseHP": 750,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,

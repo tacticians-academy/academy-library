@@ -687,7 +687,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `doubleTrouble`,
 		desc: `If you have exactly 2 copies of a champion on your board, they both gain @BonusStats@ Attack Damage, Ability Power, Armor, and Magic Resist. When you 3-star, gain a 2-star copy.`,
 		effects: {
-			'BonusStats': 30,
+			'BonusStats': 25,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Double-Trouble-I.TFT_Set6_Stage2.dds`,
 	},
@@ -697,7 +697,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `doubleTrouble`,
 		desc: `If you have exactly 2 copies of a champion on your board, they both gain @BonusStats@ Attack Damage, Ability Power, Armor, and Magic Resist. When you 3-star, gain a 2-star copy.`,
 		effects: {
-			'BonusStats': 40,
+			'BonusStats': 35,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Double-Trouble-II.TFT_Set6_Stage2.dds`,
 	},
@@ -707,7 +707,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `doubleTrouble`,
 		desc: `If you have exactly 2 copies of a champion on your board, they both gain @BonusStats@ Attack Damage, Ability Power, Armor, and Magic Resist. When you 3-star, gain a 2-star copy.`,
 		effects: {
-			'BonusStats': 50,
+			'BonusStats': 45,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Double-Trouble-III.TFT_Set6_Stage2.dds`,
 	},
@@ -728,10 +728,10 @@ export const activeAugments: AugmentData[] = [
 		desc: `When your units receive critical strikes, they deal @Damage1@-@Damage4@ (based on current Stage) magic damage  to nearby enemies (@ICD@ second cooldown).`,
 		effects: {
 			'ICD': 1,
-			'Damage1': 50,
-			'Damage2': 65,
-			'Damage3': 80,
-			'Damage4': 95,
+			'Damage1': 60,
+			'Damage2': 75,
+			'Damage3': 90,
+			'Damage4': 105,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Electrocharge-I.TFT_Set6_Stage2.dds`,
 	},
@@ -742,10 +742,10 @@ export const activeAugments: AugmentData[] = [
 		desc: `When your units receive critical strikes, they deal @Damage1@-@Damage4@ (based on current Stage) magic damage  to nearby enemies (@ICD@ second cooldown).`,
 		effects: {
 			'ICD': 1,
-			'Damage1': 75,
-			'Damage2': 95,
-			'Damage3': 115,
-			'Damage4': 135,
+			'Damage1': 85,
+			'Damage2': 105,
+			'Damage3': 125,
+			'Damage4': 145,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Electrocharge-II.TFT_Set6_Stage2.dds`,
 	},
@@ -756,10 +756,10 @@ export const activeAugments: AugmentData[] = [
 		desc: `When your units receive critical strikes, they deal @Damage1@-@Damage4@ (based on current Stage) magic damage  to nearby enemies (@ICD@ second cooldown).`,
 		effects: {
 			'ICD': 1,
-			'Damage1': 90,
-			'Damage2': 120,
-			'Damage3': 150,
-			'Damage4': 180,
+			'Damage1': 105,
+			'Damage2': 135,
+			'Damage3': 165,
+			'Damage4': 200,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Electrocharge-III.TFT_Set6_Stage2.dds`,
 	},
@@ -787,7 +787,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `enchanterSoul`,
 		desc: `Your team counts as having 2 additional Enchanters. Gain @Gold@ gold.`,
 		effects: {
-			'Gold': 8,
+			'Gold': 12,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/EnchanterSoul3.TFT_Set6.dds`,
 	},
@@ -876,14 +876,14 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/FirstAidKit1.TFT_Set6.dds`,
 	},
 	{
-		tier: 2,
+		tier: 1,
 		name: `Four Score`,
 		groupID: `fourScore`,
 		desc: `Gain @NumChamps@ random 4-cost champions.`,
 		effects: {
 			'NumChamps': 4,
 		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Four-Score-II.TFT_Set6_Stage2.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Four-Score-I.TFT_Set6_Stage2.dds`,
 	},
 	{
 		tier: 2,
@@ -941,7 +941,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `goldenTicket`,
 		desc: `Each time your Shop is refreshed, you have a @RerollPercent@% chance to gain a free refresh.`,
 		effects: {
-			'RerollPercent': 45,
+			'RerollPercent': 50,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/GoldenTicket3.TFT_Set6.dds`,
 	},
@@ -974,12 +974,12 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Hextech-Crown.TFT_Set6_Stage2.dds`,
 	},
 	{
-		tier: 1,
+		tier: 2,
 		name: `Hextech Heart`,
 		groupID: `hextechHeart`,
 		desc: `Your team counts as having 1 additional Hextech. Gain a Swain.`,
 		effects: {},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Hextech-Heart.TFT_Set6_Stage2.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Hextech-Heart-II.TFT_Set6_Stage2.dds`,
 	},
 	{
 		tier: 1,
@@ -1007,7 +1007,7 @@ export const activeAugments: AugmentData[] = [
 		effects: {
 			'NumChamps': 5,
 		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/High-Five.TFT_Set6_Stage2.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/High-Five-II.TFT_Set6_Stage2.dds`,
 	},
 	{
 		tier: 3,
@@ -1056,14 +1056,14 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/InstantInjection2.TFT_Set6.dds`,
 	},
 	{
-		tier: 1,
+		tier: 2,
 		name: `Irresistible Charm`,
 		groupID: `irresistibleCharm`,
 		desc: `Debonair champions take @DamageReduction@% less damage. Gain a Leona.`,
 		effects: {
 			'DamageReduction': 15,
 		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Irresistible-Charm-I.TFT_Set6_Stage2.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Irresistible-Charm-II.TFT_Set6_Stage2.dds`,
 	},
 	{
 		tier: 1,
@@ -1101,7 +1101,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `junkyard`,
 		desc: `Gain a random component every @Combats@ combat rounds with the Scrap Trait active. Gain an Ezreal.`,
 		effects: {
-			'Combats': 3,
+			'Combats': 4,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Junkyard2.TFT_Set6.dds`,
 	},
@@ -1112,7 +1112,7 @@ export const activeAugments: AugmentData[] = [
 		desc: `At the start of combat, your units grant adjacent allies a @ShieldHP@ health shield for @ShieldDuration@ seconds.`,
 		effects: {
 			'ShieldDuration': 8,
-			'ShieldHP': 150,
+			'ShieldHP': 160,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Keepers-I.TFT_Set6_Stage2.dds`,
 	},
@@ -1123,7 +1123,7 @@ export const activeAugments: AugmentData[] = [
 		desc: `At the start of combat, your units grant adjacent allies a @ShieldHP@ health shield for @ShieldDuration@ seconds.`,
 		effects: {
 			'ShieldDuration': 8,
-			'ShieldHP': 225,
+			'ShieldHP': 240,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Keepers-II.TFT_Set6_Stage2.dds`,
 	},
@@ -1246,7 +1246,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `makeshiftArmor`,
 		desc: `Your units without items equipped gain @Resists@ Armor and Magic Resist.`,
 		effects: {
-			'Resists': 80,
+			'Resists': 75,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Makeshift3.TFT_Set6.dds`,
 	},
@@ -1446,7 +1446,7 @@ export const activeAugments: AugmentData[] = [
 		desc: `Mercenary units have a @Chance@% chance to drop @Gold@ gold when they kill an enemy. Gain a Quinn.`,
 		effects: {
 			'Gold': 1,
-			'Chance': 50,
+			'Chance': 66,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Pirates1.TFT_Set6.dds`,
 	},
@@ -1616,14 +1616,14 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/ShareSpotlight3.TFT_Set6.dds`,
 	},
 	{
-		tier: 2,
+		tier: 3,
 		name: `Sharpshooter`,
 		groupID: `sharpshooter`,
 		desc: `Twinshot's ranged attacks and Abilities can bounce once, dealing @BounceReduction@% less damage. Gain a Corki.`,
 		effects: {
 			'BounceReduction': 66,
 		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Sharpshooter2.TFT_Set6.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Sharpshooter3.TFT_Set6.dds`,
 	},
 	{
 		tier: 1,
@@ -1642,7 +1642,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `smokeBomb`,
 		desc: `The first time an Assassin drops to @HPThreshold@% health, they briefly enter stealth, becoming untargetable and shedding all negative effects. Any excess damage is reduced by @DamageReduction@%. Gain a Talon.`,
 		effects: {
-			'DamageReduction': 80,
+			'DamageReduction': 60,
 			'HPThreshold': 70,
 			'StealthDuration': 1.5,
 		},
@@ -1673,7 +1673,7 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/SniperHeart1.TFT_Set6.dds`,
 	},
 	{
-		tier: 1,
+		tier: 2,
 		name: `Sniper's Nest`,
 		groupID: `snipersNest`,
 		desc: `Snipers gain +@DamageAmp@% damage for each round fought from the same starting hex (Maximum +@MaxAmp@%). Gain an Ashe.`,
@@ -1681,7 +1681,7 @@ export const activeAugments: AugmentData[] = [
 			'DamageAmp': 8,
 			'MaxAmp': 32,
 		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/SnipersNest1.TFT_Set6.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/SnipersNest2.TFT_Set6.dds`,
 	},
 	{
 		tier: 2,
@@ -1689,7 +1689,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `soSmall`,
 		desc: `Yordles gain @DodgeIncrease@% Dodge Chance. Gain a Corki.`,
 		effects: {
-			'DodgeIncrease': 30,
+			'DodgeIncrease': 25,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/SoSmall2.TFT_Set6.dds`,
 	},
@@ -1717,7 +1717,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `spellBlade`,
 		desc: `After casting their Ability, Arcanists' next attack deals bonus magic damage equal to @PercentAP@% of their Ability Power. Gain a Swain.`,
 		effects: {
-			'PercentAP': 200,
+			'PercentAP': 180,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/SpellBlade2.TFT_Set6.dds`,
 	},
@@ -1850,7 +1850,7 @@ export const activeAugments: AugmentData[] = [
 		effects: {
 			'{54c3c993}': 10,
 			'{5f7516f7}': 4,
-			'ItemChance': 40,
+			'ItemChance': 33,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Thieving-Rascals-II.TFT_Set6_Stage2.dds`,
 	},
@@ -1895,7 +1895,7 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Tinker1.TFT_Set6.dds`,
 	},
 	{
-		tier: 2,
+		tier: 1,
 		name: `Tiny Titans`,
 		groupID: `tinyTitans`,
 		desc: `Your Tactician heals @Heal@ HP, grows larger, and has @TooltipMaxHP@ maximum HP.`,
@@ -1903,7 +1903,7 @@ export const activeAugments: AugmentData[] = [
 			'Heal': 35,
 			'TooltipMaxHP': 135,
 		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Tiny-Titans-II.TFT_Set6_Stage2.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Tiny-Titans-I.TFT_Set6_Stage2.dds`,
 	},
 	{
 		tier: 2,
@@ -1963,7 +1963,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `triForce`,
 		desc: `Your 3-cost units gain @HP@ HP, @Mana@ starting Mana, and @AS@% Attack Speed.`,
 		effects: {
-			'AS': 23,
+			'AS': 13,
 			'HP': 133,
 			'Mana': 13,
 		},
@@ -1975,7 +1975,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `triForce`,
 		desc: `Your 3-cost units gain @HP@ HP, @Mana@ starting Mana, and @AS@% Attack Speed.`,
 		effects: {
-			'AS': 33,
+			'AS': 23,
 			'HP': 233,
 			'Mana': 23,
 		},
@@ -1987,7 +1987,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `triForce`,
 		desc: `Your 3-cost units gain @HP@ HP, @Mana@ starting Mana, and @AS@% Attack Speed.`,
 		effects: {
-			'AS': 43,
+			'AS': 33,
 			'HP': 333,
 			'Mana': 33,
 		},
@@ -2027,7 +2027,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `twinshotSoul`,
 		desc: `Your team counts as having 2 additional Twinshots. Gain @Gold@ gold.`,
 		effects: {
-			'Gold': 8,
+			'Gold': 4,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/TwinshotSoul3.TFT_Set6.dds`,
 	},
@@ -2117,9 +2117,9 @@ export const activeAugments: AugmentData[] = [
 		groupID: `windfall`,
 		desc: `Gain gold based on the number of augments you have now.<br>0 = @Augment1Gold@g, 1 = @Augment2Gold@g, 2 = @Augment3Gold@g`,
 		effects: {
-			'Augment3Gold': 45,
-			'Augment1Gold': 18,
-			'Augment2Gold': 30,
+			'Augment3Gold': 55,
+			'Augment1Gold': 20,
+			'Augment2Gold': 35,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Windfall3.TFT_Set6.dds`,
 	},
@@ -2140,7 +2140,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `woodlandCharm`,
 		desc: `At the start of combat, your highest HP Champion creates a @CloneHP@ HP copy of themself (excluding items).`,
 		effects: {
-			'CloneHP': 1600,
+			'CloneHP': 1800,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/WoodlandCharm3.TFT_Set6.dds`,
 	},

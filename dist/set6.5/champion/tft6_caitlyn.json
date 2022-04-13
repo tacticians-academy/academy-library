@@ -383,7 +383,6 @@
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 110,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
