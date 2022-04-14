@@ -368,6 +368,7 @@ export const spellCalculationOperatorSubstitutions: Record<string, string> = {
 	NamedDataValueCalculationPart: 'identity',
 	ProductOfSubPartsCalculationPart: 'product',
 	StatBySubPartCalculationPart: 'scale',
+	StatByCoefficientCalculationPart: 'scale', //TODO verify
 	SubPartScaledProportionalToStat: 'scale',
 	SumOfSubPartsCalculationPart: 'sum',
 }

@@ -375,7 +375,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 	{
 		id: `highfive`,
 		name: `High Five`,
-		tiers: [3],
+		tiers: [2],
 		description: `Gain 5 random 5-cost champions.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/high-five-ii.tft_set6_stage2`],
 	},

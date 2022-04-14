@@ -190,7 +190,6 @@ function getTierFromWord(word: string): AugmentTier | undefined {
 }
 
 const MANUAL_TIER_DESIGNATIONS: Record<string, AugmentTier> = {
-	'High Five': 3,
 }
 
 for (const item of itemsData.sort((a, b) => a.name.localeCompare(b.name))) {
@@ -234,7 +233,7 @@ for (const item of itemsData.sort((a, b) => a.name.localeCompare(b.name))) {
 		}
 		if (nameKey.endsWith(' heart')) {
 			if (tier && tier !== 1) {
-				if (nameKey !== 'innovator heart') {
+				if (nameKey !== 'innovator heart' && nameKey !== 'hextech heart') {
 					console.log('ERR Multiple tier designations for heart', tier, 1, item)
 				}
 			} else {
@@ -411,36 +410,35 @@ const outputChampions = await Promise.all(playableChampions.map(async (champion)
 	}
 	// if (apiName === 'TFT6_Gnar') {
 	// }
-	let isFirstSpell = true
 	const passiveName = apiName + 'P'
 	const passiveSpell = spellNames.includes(passiveName) ? getSpell(passiveName, json) : undefined
 	const passive = passiveSpell ? transformSpellData(passiveName, passiveSpell, json) : undefined
+	let isFirstSpell = !passive
 	const spells = spellNames
 		.filter(name => name && name !== 'BaseSpell' && name !== passiveName)
 		.map(spellName => {
 			const spell = getSpell(spellName, json)
 			return spell ? [spellName, spell] as [string, ChampionJSONSpell] : undefined
 		})
-		.filter((spellData): spellData is [string, ChampionJSONSpell] => {
-			if (!spellData) {
+		.filter((spellNameEntry): spellNameEntry is [string, ChampionJSONSpell] => {
+			if (!spellNameEntry) {
 				return false
 			}
 			if (isFirstSpell) {
 				isFirstSpell = false
-				if (spellData[1]?.mDataValues == null) {
-					const spellName = spellData[0]
-					if (spellName !== 'TFT6_JayceR') {
-						console.log('!mDataValues', spellName)
-					}
+			}
+			const [spellName, spellData] = spellNameEntry
+			if (spellData.mDataValues == null) {
+				if (isFirstSpell && spellName !== 'TFT6_JayceR' && spellName !== 'TFT6_TibbersMissileEffect' && spellName !== 'TFT_TrainingDummy_Spell' && spellName !== 'TFT_VoidSpawn_Passive') {
+					console.log('!mDataValues', spellName)
+				}
+				if (isFirstSpell || spellData.mCastTime == null) {
 					return false
 				}
 			}
 			return true
 		})
 		.map(([spellName, spellData]) => transformSpellData(spellName, spellData, json))
-	if (!spells.length) {
-		console.log('No spells for', apiName)
-	}
 	let basicAttacks: ChampionJSONAttack[] = []
 	if (characterRecord.basicAttack) {
 		if (characterRecord.basicAttack.mAttackName == null) {
@@ -600,16 +598,17 @@ function transformSpellData(spellName: string, spellData: ChampionJSONSpell, jso
 								if (spellName === 'TFT6_GnarR' && variableName === 'ADPercent') {
 									ratio = 1
 									stat = BonusKey.AttackDamage
-								}
-								const scaleString = subpart['{a5749b52}']?.toLowerCase()
-								if (subpart.mRatio === BASE_AP_RATIO) {
-									if (scaleString === 'scaleap' || scaleString == null || (spellName === 'TFT6_DravenSpinning' && variableName === 'Damage')) {
-										stat = BonusKey.AbilityPower
-									} else {
-										console.log('Unknown scale', spellName, calculationKey, subpart)
-									}
 								} else {
-									console.log('Unknown mRatio', spellName, calculationKey, subpart)
+									const scaleString = subpart['{a5749b52}']?.toLowerCase()
+									if (subpart.mRatio === BASE_AP_RATIO) {
+										if (scaleString === 'scaleap' || scaleString == null || (spellName === 'TFT6_DravenSpinning' && variableName === 'Damage')) {
+											stat = BonusKey.AbilityPower
+										} else {
+											console.log('Unknown scale', spellName, calculationKey, subpart)
+										}
+									} else if (operator !== 'identity') {
+										console.log('Unknown stat for ratio', spellName, calculationKey, operator, stat, ratio, subpart)
+									}
 								}
 							}
 							if (stat && !ratio) {
@@ -621,7 +620,7 @@ function transformSpellData(spellName: string, spellData: ChampionJSONSpell, jso
 								}
 							}
 							const starValues = variableName ? variables[variableName] : undefined
-							if (variableName && !starValues) {
+							if (variableName && !starValues && calculationKey !== 'UNUSED') {
 								console.log('ERR', 'Missing variable', spellName, calculationKey, variableName, variables)
 							}
 							return {

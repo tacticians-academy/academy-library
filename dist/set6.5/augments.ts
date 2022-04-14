@@ -1000,7 +1000,7 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/HighEnd3.TFT_Set6.dds`,
 	},
 	{
-		tier: 3,
+		tier: 2,
 		name: `High Five`,
 		groupID: `highFive`,
 		desc: `Gain @NumChamps@ random 5-cost champions.`,
