@@ -408,8 +408,8 @@ const outputChampions = await Promise.all(playableChampions.map(async (champion)
 	if (characterRecord.extraSpells) {
 		spellNames.push(...characterRecord.extraSpells)
 	}
-	// if (apiName === 'TFT6_Gnar') {
-	// }
+	spellNames.push('TFT6b_Vi_Spell_ThirdCast')
+
 	const passiveName = apiName + 'P'
 	const passiveSpell = spellNames.includes(passiveName) ? getSpell(passiveName, json) : undefined
 	const passive = passiveSpell ? transformSpellData(passiveName, passiveSpell, json) : undefined
@@ -432,7 +432,7 @@ const outputChampions = await Promise.all(playableChampions.map(async (champion)
 				if (isFirstSpell && spellName !== 'TFT6_JayceR' && spellName !== 'TFT6_TibbersMissileEffect' && spellName !== 'TFT_TrainingDummy_Spell' && spellName !== 'TFT_VoidSpawn_Passive') {
 					console.log('!mDataValues', spellName)
 				}
-				if (isFirstSpell || spellData.mCastTime == null) {
+				if (spellData.mCastTime == null) {
 					return false
 				}
 			}
