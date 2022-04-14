@@ -390,14 +390,14 @@ const outputChampions = await Promise.all(playableChampions.map(async (champion)
 		initialMana = 0
 	}
 	const stats = {
-		armor: characterRecord.baseArmor,
+		armor: characterRecord.baseArmor ?? 0,
 		attackSpeed: characterRecord.attackSpeed,
 		critChance: characterRecord.baseCritChance ?? null,
 		critMultiplier: characterRecord.critDamageMultiplier,
-		damage: characterRecord.baseDamage,
+		damage: characterRecord.baseDamage ?? 10,
 		hp: characterRecord.baseHP,
 		initialMana,
-		magicResist: characterRecord.baseSpellBlock,
+		magicResist: characterRecord.baseSpellBlock ?? 0,
 		mana: totalMana,
 		moveSpeed: characterRecord.baseMoveSpeed,
 		range: Math.floor(characterRecord.attackRange / 180),
