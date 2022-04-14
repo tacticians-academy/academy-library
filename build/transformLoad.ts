@@ -354,7 +354,7 @@ function getSpell(name: string, json: ChampionJSON): ChampionJSONSpell | undefin
 	return spellContainer.mSpell
 }
 
-const unplayableAPINames = ['TFT5_EmblemArmoryKey', 'TFT6_MercenaryChest', 'TFT6_TheGoldenEgg']
+const unplayableAPINames = ['TFT5_EmblemArmoryKey', 'TFT5_DraconicEgg', 'TFT6_MercenaryChest', 'TFT6_TheGoldenEgg']
 
 const playableChampions = champions
 	.filter(champion => {
