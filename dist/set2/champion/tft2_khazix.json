@@ -1,0 +1,258 @@
+{
+	"Characters/TFT2_Khazix/Spells/TFT2_KhazixR": {
+		"mScriptName": "TFT2_KhazixR",
+		"mSpell": {
+			"flags": 36,
+			"mAffectsTypeFlags": 6154,
+			"mSpellTags": [
+				"Trait_Ultimate"
+			],
+			"mDataValues": [
+				{
+					"mName": "Duration",
+					"mValues": [
+						2.75,
+						2,
+						1.25,
+						0.5,
+						-0.25,
+						-1,
+						-1.75
+					],
+					"mBaseP": 2.75,
+					"mFormula": "P-0.75"
+				},
+				{
+					"mName": "MSBuff",
+					"mValues": [
+						500,
+						1000,
+						1500,
+						2000,
+						2500,
+						3000,
+						3500
+					],
+					"mBaseP": 500,
+					"mFormula": "P + 500"
+				},
+				{
+					"mName": "Damage",
+					"mValues": [
+						0,
+						100,
+						200,
+						500,
+						500,
+						500,
+						500
+					],
+					"{3f95426c}": false,
+					"mFormula": "P + 100"
+				},
+				{
+					"mName": "ManaRefund",
+					"mValues": [
+						0,
+						5,
+						10,
+						15,
+						20,
+						25,
+						30
+					],
+					"mFormula": "P+5"
+				}
+			],
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"mUseMinimapTargeting": true,
+			"useAnimatorFramerate": true,
+			"bIsToggleSpell": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				300,
+				300,
+				300,
+				300,
+				300,
+				300,
+				300
+			],
+			"castConeDistance": 100,
+			"castFrame": 7.5,
+			"missileSpeed": 2200,
+			"mFloatVarsDecimals": [
+				2,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"selectionPriority": 1,
+			"mTargetingTypeData": {},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage"
+							},
+							"mRatio": 0.009999999776482582,
+							"{a5749b52}": "scaleAP",
+							"mStyleTag": "noScale"
+						},
+						{
+							"mCoefficient": 1,
+							"mStat": 2
+						}
+					]
+				}
+			}
+		},
+		"mBuff": {
+			"mDescription": "game_buff_tooltip_KhazixR"
+		}
+	},
+	"Characters/TFT2_Khazix/Spells/TFT2_KhazixRAttack": {
+		"mScriptName": "TFT2_KhazixRAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.3077000081539154,
+			"mApplyMaterialOnHitSound": true,
+			"useAnimatorFramerate": true,
+			"bHaveHitEffect": true,
+			"castConeDistance": 100,
+			"castFrame": 9.25,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT2_Khazix_Q_SingleEnemy_Tar",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_GROUND_LOC"
+		}
+	},
+	"Characters/TFT2_Khazix/Spells/TFT2_KhazixBasicAttack": {
+		"mScriptName": "TFT2_KhazixBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.3077000081539154,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castConeDistance": 100,
+			"castFrame": 9.25,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT2_Khazix/Spells/TFT2_KhazixCritAttack": {
+		"mScriptName": "TFT2_KhazixCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.3077000081539154,
+			"bHaveHitEffect": true,
+			"castConeDistance": 100,
+			"castFrame": 7,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT2_Khazix/Spells/TFT2_KhazixBasicAttack2": {
+		"mScriptName": "TFT2_KhazixBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.3077000081539154,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castConeDistance": 100,
+			"castFrame": 9.25,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"{62648055}": {
+		"useGDSBinaries": true
+	},
+	"Characters/TFT2_Khazix/CharacterRecords/Root": {
+		"{f2c13b77}": "ASSETS/Characters/TFT2_Khazix/HUD/TFT2_Khazix_Square.TFT_Set2.dds",
+		"tier": 4,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{c022a071}"
+			},
+			{
+				"TraitData": "{6b64c936}"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 240,
+		"mMoveHeight": 0,
+		"mCharacterName": "TFT2_Khazix",
+		"baseHP": 750,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 40,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 75,
+		"baseArmor": 25,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 180,
+		"attackSpeed": 0.800000011920929,
+		"basicAttack": {
+			"mAttackCastTime": null,
+			"mAttackName": "TFT2_KhazixBasicAttack"
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": null,
+				"mAttackName": "TFT2_KhazixBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackDelayCastOffsetPercent": null,
+				"mAttackName": "TFT2_KhazixCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT2_KhazixR",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 2,
+		"unitTagsString": "Champion",
+		"flags": 9446656,
+		"mPreferredPerkStyle": "Perks/Styles/Inspiration"
+	}
+}

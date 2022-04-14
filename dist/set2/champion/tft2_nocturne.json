@@ -1,0 +1,229 @@
+{
+	"Characters/TFT2_Nocturne/Spells/TFT2_NocturneP": {
+		"mScriptName": "TFT2_NocturneP",
+		"mSpell": {
+			"mDataValues": [
+				{
+					"mName": "HealPercent",
+					"mValues": [
+						0.4000000059604645,
+						0.5,
+						0.6000000238418579,
+						0.699999988079071,
+						0.800000011920929,
+						0.8999999761581421,
+						1
+					],
+					"mBaseP": 0.4000000059604645,
+					"mFormula": "P+0.10"
+				}
+			],
+			"mMissileEffectKey": "TFT2_Nocturne_P_Swipe",
+			"mSpellCalculations": {
+				"{09bc1f54}": {
+					"mDisplayAsPercent": true,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{e0882668}"
+							},
+							"mRatio": 0.009999999776482582,
+							"{a5749b52}": "scaleAP",
+							"mStyleTag": "noScale"
+						}
+					]
+				}
+			}
+		},
+		"mBuff": {}
+	},
+	"Characters/TFT2_Nocturne/Spells/TFT2_NocturneBasicAttack": {
+		"mScriptName": "TFT2_NocturneBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 7375,
+			"mAlternateName": "EbonBasicAttack",
+			"delayCastOffsetPercent": -0.17389999330043793,
+			"bHaveHitEffect": true,
+			"castRange": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT2_Nocturne/Spells/TFT2_NocturneCritAttack": {
+		"mScriptName": "TFT2_NocturneCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 7375,
+			"mAlternateName": "EbonCritAttack",
+			"delayCastOffsetPercent": -0.17389999330043793,
+			"bHaveHitEffect": true,
+			"castRange": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 7,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT2_Nocturne/Spells/TFT2_NocturneBasicAttack2": {
+		"mScriptName": "TFT2_NocturneBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 7375,
+			"mAlternateName": "NocturneBasicAttack2",
+			"delayCastOffsetPercent": -0.17389999330043793,
+			"bHaveHitEffect": true,
+			"castRange": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT2_Nocturne/Spells/TFT2_NocturnePAttack": {
+		"mScriptName": "TFT2_NocturnePAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 512,
+			"mImgIconName": [
+				"ASSETS/Characters/Nocturne/HUD/Icons2D/Nocturne_UmbraBlades.dds"
+			],
+			"delayCastOffsetPercent": -0.15279999375343323,
+			"canCastWhileDisabled": true,
+			"castRange": [
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9,
+			"missileSpeed": 1500,
+			"mMissileEffectKey": "TFT2_Nocturne_P_Swipe"
+		}
+	},
+	"{13b056ec}": {},
+	"Characters/TFT2_Nocturne/CharacterRecords/Root": {
+		"{f2c13b77}": "ASSETS/Characters/TFT2_Nocturne/HUD/TFT2_Nocturne_Square.TFT_Set2.dds",
+		"tier": 3,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{56ddc9ab}"
+			},
+			{
+				"TraitData": "{6b64c936}"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mCharacterName": "TFT2_Nocturne",
+		"baseHP": 650,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arBase": 0,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 60,
+		"baseArmor": 25,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 180,
+		"attackSpeed": 0.800000011920929,
+		"basicAttack": {
+			"mAttackName": "TFT2_NocturneBasicAttack"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT2_NocturneBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT2_NocturneCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT2_NocturneP",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 2,
+		"unitTagsString": "Champion",
+		"flags": 9446656
+	}
+}

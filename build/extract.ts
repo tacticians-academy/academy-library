@@ -73,7 +73,7 @@ const renameNormalizations: Record<string, Record<string, string>> = {
 }
 
 const apiNames = champions.map(champion => getAPIName(champion))
-if (parentSetNumber > 1) {
+if (parentSetNumber > 4) {
 	for (const apiName of BASE_UNIT_API_NAMES) {
 		if (!apiNames.includes(apiName)) {
 			apiNames.push(apiName)
@@ -129,31 +129,33 @@ await Promise.all(apiNames.map(async apiName => {
 						} else if (key.startsWith('{')) {
 							console.log('UNKNOWN mSpellCalculationsSubstitution', key, 'for', apiName)
 						}
-						for (const mFormulaPart of value.mFormulaParts) {
-							replaceKey(mFormulaPart, 'mRatio', '{b8dcfcbb}')
-							replaceKey(mFormulaPart, 'mStyleTag', '{992cd7eb}')
-							replaceKey(mFormulaPart, 'mSubpart', '{1cd83c4b}')
-							let childArray: any[]
-							if (mFormulaPart.mPart1) {
-								childArray = [mFormulaPart.mPart1, mFormulaPart.mPart2, mFormulaPart.mPart3, mFormulaPart.mPart4, , mFormulaPart.mPart5]
-									.filter((subpart): subpart is Record<string, any> => !!subpart)
-							} else if (mFormulaPart.mSubparts) {
-								childArray = mFormulaPart.mSubparts as Record<string, any>[]
-							} else {
-								childArray = [mFormulaPart]
-							}
-							for (const child of childArray) {
-								const subPart = child.mSubpart != null ? child.mSubpart : child
-								replaceKey(subPart, 'mRatio', '{b8dcfcbb}')
-								replaceKey(subPart, 'mStyleTag', '{992cd7eb}')
-								replaceKey(subPart, 'mSubpart', '{1cd83c4b}')
-								const value = subPart.mDataValue as string
-								if (value !== undefined) {
-									const mDataValueSubstitution = mDataValueSubstitutions[value]
-									if (mDataValueSubstitution != null) {
-										subPart.mDataValue = mDataValueSubstitution
-									} else if (value.startsWith('{')) {
-										console.log('UNKNOWN mDataValueSubstitution', value, 'for', apiName)
+						if (value.mFormulaParts) {
+							for (const mFormulaPart of value.mFormulaParts) {
+								replaceKey(mFormulaPart, 'mRatio', '{b8dcfcbb}')
+								replaceKey(mFormulaPart, 'mStyleTag', '{992cd7eb}')
+								replaceKey(mFormulaPart, 'mSubpart', '{1cd83c4b}')
+								let childArray: any[]
+								if (mFormulaPart.mPart1) {
+									childArray = [mFormulaPart.mPart1, mFormulaPart.mPart2, mFormulaPart.mPart3, mFormulaPart.mPart4, , mFormulaPart.mPart5]
+										.filter((subpart): subpart is Record<string, any> => !!subpart)
+								} else if (mFormulaPart.mSubparts) {
+									childArray = mFormulaPart.mSubparts as Record<string, any>[]
+								} else {
+									childArray = [mFormulaPart]
+								}
+								for (const child of childArray) {
+									const subPart = child.mSubpart != null ? child.mSubpart : child
+									replaceKey(subPart, 'mRatio', '{b8dcfcbb}')
+									replaceKey(subPart, 'mStyleTag', '{992cd7eb}')
+									replaceKey(subPart, 'mSubpart', '{1cd83c4b}')
+									const value = subPart.mDataValue as string
+									if (value !== undefined) {
+										const mDataValueSubstitution = mDataValueSubstitutions[value]
+										if (mDataValueSubstitution != null) {
+											subPart.mDataValue = mDataValueSubstitution
+										} else if (value.startsWith('{')) {
+											console.log('UNKNOWN mDataValueSubstitution', value, 'for', apiName)
+										}
 									}
 								}
 							}

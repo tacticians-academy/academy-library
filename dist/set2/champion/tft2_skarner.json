@@ -1,0 +1,228 @@
+{
+	"Characters/TFT2_Skarner/Spells/TFT2_SkarnerBasicAttack2": {
+		"mScriptName": "TFT2_SkarnerBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "SkarnerBasicAttack2",
+			"delayCastOffsetPercent": -0.3077000081539154,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castConeDistance": 100,
+			"castFrame": 10,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT2_Skarner/Spells/TFT2_SkarnerBasicAttack": {
+		"mScriptName": "TFT2_SkarnerBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "SkarnerBasicAttack",
+			"delayCastOffsetPercent": -0.3077000081539154,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRadius": [
+				385,
+				385,
+				385,
+				385,
+				385,
+				385,
+				385
+			],
+			"castConeDistance": 100,
+			"castFrame": 10,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT2_Skarner/Spells/TFT2_SkarnerCritAttack": {
+		"mScriptName": "TFT2_SkarnerCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "SkarnerCritAttack",
+			"delayCastOffsetPercent": -0.3077000081539154,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castConeDistance": 100,
+			"castFrame": 10,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT2_Skarner/Spells/TFT2_SkarnerW": {
+		"mScriptName": "TFT2_SkarnerW",
+		"mSpell": {
+			"mAffectsTypeFlags": 15567,
+			"mDataValues": [
+				{
+					"mName": "ShieldAmount",
+					"mValues": [
+						-150,
+						150,
+						450,
+						750,
+						1050,
+						1350,
+						1650
+					],
+					"mBaseP": -150,
+					"mFormula": "P+300"
+				},
+				{
+					"mName": "Duration",
+					"mValues": [
+						8,
+						8,
+						8,
+						8,
+						8,
+						8,
+						8
+					],
+					"mBaseP": 8,
+					"mFormula": "P"
+				},
+				{
+					"mName": "AttackSpeed",
+					"mValues": [
+						0.25,
+						0.5,
+						0.75,
+						1,
+						1.25,
+						1.5,
+						1.75
+					],
+					"mBaseP": 0.25,
+					"mFormula": "P + 0.25"
+				}
+			],
+			"mCastTime": 0.5,
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 7.5,
+			"missileSpeed": 20,
+			"bHaveHitBone": true,
+			"mHitBoneName": "head",
+			"mFloatVarsDecimals": [
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"selectionPriority": 1,
+			"mTargetingTypeData": {},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"mSpellCalculations": {
+				"{33dad32f}": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{40ee74ec}"
+							},
+							"mRatio": 0.009999999776482582,
+							"{a5749b52}": "scaleAP",
+							"mStyleTag": "noScale"
+						}
+					]
+				}
+			}
+		},
+		"mBuff": {
+			"mDescription": "game_buff_tooltip_SkarnerExoskeleton"
+		}
+	},
+	"{24634a1e}": {},
+	"Characters/TFT2_Skarner/CharacterRecords/Root": {
+		"{f2c13b77}": "ASSETS/Characters/TFT2_Skarner/HUD/TFT2_Skarner_Square.TFT_Set2.dds",
+		"tier": 2,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{7cb0af22}"
+			},
+			{
+				"TraitData": "{8d21be8f}"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mCharacterName": "TFT2_Skarner",
+		"baseHP": 650,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 65,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 60,
+		"baseArmor": 35,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 180,
+		"attackSpeed": 0.6499999761581421,
+		"basicAttack": {
+			"mAttackName": "TFT2_SkarnerBasicAttack"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT2_SkarnerBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT2_SkarnerCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT2_SkarnerW",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 3,
+		"unitTagsString": "Champion"
+	}
+}

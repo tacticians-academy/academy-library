@@ -1,0 +1,460 @@
+{
+	"Characters/TFT5_Katarina/Spells/TFT5_KatarinaBasicAttack": {
+		"mScriptName": "TFT5_KatarinaBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 4234,
+			"delayCastOffsetPercent": -0.3506999909877777,
+			"bHaveHitEffect": true,
+			"castRange": [
+				125,
+				125,
+				125,
+				125,
+				125,
+				125,
+				125
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9,
+			"missileSpeed": 467,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT5_Katarina/Spells/TFT5_KatarinaQBlinkTrailMis": {
+		"mScriptName": "TFT5_KatarinaQBlinkTrailMis",
+		"mSpell": {
+			"flags": 4,
+			"castRange": [
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000
+			],
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 5000,
+					"mUseHeightOffsetAtEnd": true,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"mMissileEffectKey": "{287bff01}",
+			"mHitEffectOrientType": 2,
+			"mTargetingTypeData": {
+				"__type": "Location"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT5_Katarina/Spells/TFT5_KatarinaQ": {
+		"mScriptName": "TFT5_KatarinaQ",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						0,
+						180,
+						250,
+						420,
+						0,
+						0,
+						0
+					],
+					"{3f95426c}": false,
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "NumTargets",
+					"mValues": [
+						0,
+						3,
+						3,
+						3,
+						3,
+						3,
+						3
+					],
+					"mFormula": "3",
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "SecondaryDamage",
+					"mValues": [
+						0,
+						90,
+						125,
+						210,
+						0,
+						0,
+						0
+					],
+					"{3f95426c}": false,
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "HealingReduction",
+					"mValues": [
+						0,
+						50,
+						50,
+						50,
+						50,
+						50,
+						50
+					],
+					"mFormula": "50",
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "HealingReductionDuration",
+					"mValues": [
+						0,
+						6,
+						6,
+						6,
+						6,
+						6,
+						6
+					],
+					"mFormula": "6",
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"ModifiedDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{42de401d}": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "SecondaryDamage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"delayCastOffsetPercent": -0.3999999761581421,
+			"delayTotalTimePercent": -0.5,
+			"castRange": [
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000
+			],
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2000,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"mMissileEffectKey": "{bbd7821e}",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT5_Katarina/Spells/TFT5_KatarinaQBounceMissile": {
+		"mScriptName": "TFT5_KatarinaQBounceMissile",
+		"mSpell": {
+			"flags": 4,
+			"castRange": [
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000
+			],
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTravelTime": 0.699999988079071,
+					"__type": "FixedTimeMovement"
+				},
+				"heightSolver": {
+					"mGravity": 12000,
+					"__type": "GravityHeightSolver"
+				},
+				"behaviors": [
+					{
+						"__type": "DestroyOnMovementComplete"
+					},
+					{
+						"__type": "CastOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 3,
+			"mMissileEffectKey": "{bbd7821e}",
+			"mTargetingTypeData": {
+				"__type": "Location"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT5_Katarina/Spells/TFT5_KatarinaBasicAttack2": {
+		"mScriptName": "TFT5_KatarinaBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 4234,
+			"delayCastOffsetPercent": -0.3506999909877777,
+			"bHaveHitEffect": true,
+			"castRange": [
+				125,
+				125,
+				125,
+				125,
+				125,
+				125,
+				125
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9,
+			"missileSpeed": 467,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT5_Katarina/Spells/TFT5_KatarinaQSpinMissile": {
+		"mScriptName": "TFT5_KatarinaQSpinMissile",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"canCastOrQueueWhileCasting": true,
+			"castRange": [
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000
+			],
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 3000,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"__type": "BlendedLinearHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"mMissileEffectKey": "{e041eb44}",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT5_Katarina/Spells/TFT5_KatarinaCritAttack": {
+		"mScriptName": "TFT5_KatarinaCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 4234,
+			"delayCastOffsetPercent": -0.3506999909877777,
+			"castRangeUseBoundingBoxes": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				125,
+				125,
+				125,
+				125,
+				125,
+				125,
+				125
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9,
+			"missileSpeed": 467,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT5_Katarina/CharacterRecords/Root": {
+		"PortraitIcon": "ASSETS/Characters/TFT5_Katarina/HUD/TFT5_Katarina_Square.TFT_Set5.dds",
+		"tier": 3,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{6617f461}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{77925438}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mCharacterName": "TFT5_Katarina",
+		"baseHP": 700,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 20,
+			"arBaseStaticRegen": 0,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 40,
+		"baseArmor": 30,
+		"baseSpellBlock": 30,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.2999999523162842,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.800000011920929,
+		"basicAttack": {
+			"mAttackProbability": 0.5,
+			"mAttackName": "TFT5_KatarinaBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 0.5,
+				"mAttackName": "TFT5_KatarinaBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT5_KatarinaCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT5_KatarinaQ",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"TFT5_KatarinaQBounceMissile",
+			"TFT5_KatarinaQBlinkTrailMis",
+			"TFT5_KatarinaQSpinMissile",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446664,
+		"__type": "TFTCharacterRecord"
+	}
+}

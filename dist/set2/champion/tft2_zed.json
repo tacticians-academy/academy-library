@@ -1,0 +1,254 @@
+{
+	"Characters/TFT2_Zed/Spells/TFT2_ZedW": {
+		"mScriptName": "TFT2_ZedW",
+		"mSpell": {
+			"mDataValues": [
+				{
+					"mName": "Clones",
+					"mValues": [
+						1,
+						1,
+						1,
+						1,
+						1,
+						1,
+						1
+					],
+					"mBaseP": 1
+				},
+				{
+					"mName": "ManaCostIncrease",
+					"mValues": [
+						75,
+						50,
+						25,
+						-125,
+						-25,
+						-50,
+						-75
+					],
+					"{3f95426c}": false,
+					"mBaseP": 75,
+					"mFormula": "P-25"
+				}
+			],
+			"mCastTime": 0.5,
+			"canCastOrQueueWhileCasting": true,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"mMissileSpec": {
+				"mMissileWidth": 60,
+				"movementComponent": {
+					"mSpeed": 1750,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "L_hand"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"mMissileEffectKey": "TFT2_Zed_W_Mis",
+			"mTargetingTypeData": {}
+		}
+	},
+	"Characters/TFT2_Zed/Spells/TFT2_ZedBasicAttack2": {
+		"mScriptName": "TFT2_ZedBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 4234,
+			"delayCastOffsetPercent": -0.3506999909877777,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				125,
+				125,
+				125,
+				125,
+				125,
+				125,
+				125
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9.5,
+			"missileSpeed": 467,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT2_Zed/Spells/TFT2_ZedBasicAttack": {
+		"mScriptName": "TFT2_ZedBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 4234,
+			"delayCastOffsetPercent": -0.3506999909877777,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				125,
+				125,
+				125,
+				125,
+				125,
+				125,
+				125
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9.5,
+			"missileSpeed": 467,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT2_Zed/Spells/TFT2_ZedCritAttack": {
+		"mScriptName": "TFT2_ZedCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 4234,
+			"delayCastOffsetPercent": -0.3506999909877777,
+			"bHaveHitEffect": true,
+			"castRange": [
+				125,
+				125,
+				125,
+				125,
+				125,
+				125,
+				125
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9,
+			"missileSpeed": 467,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"{76d20225}": {
+		"useGDSBinaries": true
+	},
+	"Characters/TFT2_Zed/CharacterRecords/Root": {
+		"{f2c13b77}": "ASSETS/Characters/TFT2_Zed/HUD/TFT2_Zed_Square_0.TFT_Set2.dds",
+		"tier": 5,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{f00746e7}"
+			},
+			{
+				"TraitData": "{cc6f9638}"
+			},
+			{
+				"TraitData": "{6b64c936}"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mInitialMana": 75,
+		"{ef57098f}": false,
+		"mCharacterName": "TFT2_Zed",
+		"baseHP": 850,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 150,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 70,
+		"baseArmor": 25,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 180,
+		"attackSpeed": 1.100000023841858,
+		"basicAttack": {
+			"mAttackCastTime": 0.800000011920929,
+			"mAttackProbability": 0.5,
+			"mAttackName": "TFT2_ZedBasicAttack"
+		},
+		"extraAttacks": [
+			{
+				"mAttackDelayCastOffsetPercent": -0.10199999809265137,
+				"mAttackProbability": 0.5,
+				"mAttackName": "TFT2_ZedBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackDelayCastOffsetPercent": -0.10240550339221954,
+				"mAttackName": "TFT2_ZedCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT2_ZedW",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"TFT2_ZedQMissile",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 2,
+		"unitTagsString": "Champion",
+		"flags": 9446656
+	}
+}

@@ -1,0 +1,524 @@
+{
+	"Characters/TFT4_Jinx/Spells/TFT4_JinxBasicAttack2": {
+		"mScriptName": "TFT4_JinxBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "JinxBasicAttack",
+			"mImgIconName": [
+				"Udyr_TigerStance.dds"
+			],
+			"delayCastOffsetPercent": -0.5,
+			"canCastWhileDisabled": true,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2750,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Buffbone_Glb_Weapon_1",
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8.5,
+			"missileSpeed": 2750,
+			"mMissileEffectKey": "{e44e7589}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT4_Jinx/Spells/TFT4_JinxSharpshooterBounce": {
+		"mScriptName": "TFT4_JinxSharpshooterBounce",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "JinxBasicAttack",
+			"mImgIconName": [
+				"Udyr_TigerStance.dds"
+			],
+			"delayCastOffsetPercent": -0.5,
+			"canCastWhileDisabled": true,
+			"canCastOrQueueWhileCasting": true,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				9999,
+				9999,
+				9999,
+				9999,
+				9999,
+				9999,
+				9999
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2750,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Buffbone_Glb_Weapon_1",
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8.5,
+			"missileSpeed": 2750,
+			"mMissileEffectKey": "{e44e7589}",
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT4_Jinx/Spells/TFT4_JinxQAttack": {
+		"mScriptName": "TFT4_JinxQAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 6794,
+			"mAlternateName": "JinxQAttack",
+			"mCoefficient": 0.6000000238418579,
+			"mImgIconName": [
+				"ASSETS/Characters/Jinx/HUD/Icons2D/Jinx_Q1.dds"
+			],
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.5,
+			"canCastWhileDisabled": true,
+			"mUseAutoattackCastTimeData": {
+				"__type": "UseAutoattackCastTimeData"
+			},
+			"castRange": [
+				99999,
+				99999,
+				99999,
+				99999,
+				99999,
+				99999,
+				99999
+			],
+			"castRadius": [
+				710,
+				710,
+				710,
+				710,
+				710,
+				710,
+				710
+			],
+			"castRadiusSecondary": [
+				280,
+				280,
+				280,
+				280,
+				280,
+				280,
+				280
+			],
+			"castConeDistance": 100,
+			"luaOnMissileUpdateDistanceInterval": 75,
+			"mMissileSpec": {
+				"mMissileWidth": 20,
+				"movementComponent": {
+					"mSpeed": 1650,
+					"mStartBoneName": "Cstm_Buffbone_Rocket_Launcher",
+					"mTargetBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"mGravity": 2500,
+					"__type": "GravityHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VerticalFacingFaceTarget"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 7,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{e2f468c0}",
+			"mLineWidth": 20,
+			"mHitEffectOrientType": 2,
+			"mHitBoneName": "R_hand",
+			"selectionPriority": 1,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT4_Jinx/Spells/TFT4_JinxQ": {
+		"mScriptName": "TFT4_JinxQ",
+		"mSpell": {
+			"mAffectsTypeFlags": 6794,
+			"mEffectAmount": [
+				{
+					"value": [
+						60,
+						90,
+						120,
+						150,
+						180,
+						210,
+						240
+					],
+					"__type": "SpellEffectAmount"
+				}
+			],
+			"mDataValues": [
+				{
+					"mName": "RocketDamage",
+					"mValues": [
+						0,
+						150,
+						250,
+						450,
+						0,
+						0,
+						0
+					],
+					"{3f95426c}": false,
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "StunDuration",
+					"mValues": [
+						0,
+						1.5,
+						2,
+						2.5,
+						2,
+						2,
+						2
+					],
+					"{3f95426c}": false,
+					"mFormula": "2",
+					"__type": "SpellDataValue"
+				}
+			],
+			"mCoefficient": 0.6000000238418579,
+			"mImgIconName": [
+				"ASSETS/Characters/Jinx/HUD/Icons2D/Jinx_Q1.dds"
+			],
+			"mCastTime": 0.5,
+			"delayCastOffsetPercent": 0.20000004768371582,
+			"delayTotalTimePercent": -0.699999988079071,
+			"canCastOrQueueWhileCasting": true,
+			"castRange": [
+				99999,
+				99999,
+				99999,
+				99999,
+				99999,
+				99999,
+				99999
+			],
+			"castRadius": [
+				710,
+				710,
+				710,
+				710,
+				710,
+				710,
+				710
+			],
+			"castRadiusSecondary": [
+				280,
+				280,
+				280,
+				280,
+				280,
+				280,
+				280
+			],
+			"castConeDistance": 100,
+			"luaOnMissileUpdateDistanceInterval": 75,
+			"mMissileSpec": {
+				"mMissileWidth": 20,
+				"movementComponent": {
+					"mSpeed": 1650,
+					"mStartBoneName": "Cstm_Buffbone_Rocket_Launcher",
+					"mTargetBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"mGravity": 2500,
+					"__type": "GravityHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VerticalFacingFaceTarget"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 18,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{e2f468c0}",
+			"mLineWidth": 20,
+			"mHitEffectOrientType": 2,
+			"selectionPriority": 1,
+			"mTargetingTypeData": {
+				"{6f92d6b3}": true,
+				"__type": "Target"
+			},
+			"__type": "SpellDataResource",
+			"mSpellCalculations": {
+				"ModifiedDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "RocketDamage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat",
+							"mStyleTag": "noScale"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			}
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT4_Jinx/Spells/TFT4_JinxBasicAttack": {
+		"mScriptName": "TFT4_JinxBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "JinxBasicAttack",
+			"mImgIconName": [
+				"Udyr_TigerStance.dds"
+			],
+			"delayCastOffsetPercent": -0.5,
+			"canCastWhileDisabled": true,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				9999,
+				9999,
+				9999,
+				9999,
+				9999,
+				9999,
+				9999
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2750,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Buffbone_Glb_Weapon_1",
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8.5,
+			"missileSpeed": 2750,
+			"mMissileEffectKey": "{e44e7589}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT4_Jinx/Spells/TFT4_JinxCritAttack": {
+		"mScriptName": "TFT4_JinxCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "JinxBasicAttack",
+			"delayCastOffsetPercent": -0.08070175349712372,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2750,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Buffbone_Glb_Weapon_1",
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8.5,
+			"missileSpeed": 2750,
+			"mMissileEffectKey": "{e44e7589}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT4_Jinx/CharacterRecords/Root": {
+		"PortraitIcon": "ASSETS/Characters/TFT4_Jinx/HUD/TFT4_Jinx_Square.TFT_Set4.dds",
+		"tier": 3,
+		"mLinkedTraits": [
+			{
+				"__type": "TFTTraitContributionData",
+				"TraitData": "{ccff10bf}"
+			},
+			{
+				"__type": "TFTTraitContributionData",
+				"TraitData": "{91d4636a}"
+			}
+		],
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mInitialMana": 70,
+		"mCharacterName": "TFT4_Jinx",
+		"baseHP": 650,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 120,
+			"arBaseStaticRegen": 0,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 75,
+		"baseArmor": 20,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 500,
+		"attackRange": 890,
+		"attackSpeed": 0.75,
+		"spellNames": [
+			"TFT4_JinxQ",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 2,
+		"unitTagsString": "Champion",
+		"__type": "TFTCharacterRecord"
+	}
+}

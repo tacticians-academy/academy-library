@@ -1,0 +1,397 @@
+{
+	"Characters/TFT2_Sivir/Spells/TFT2_SivirW": {
+		"mScriptName": "TFT2_SivirW",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 13327,
+			"mRequiredUnitTags": {
+				"mTagList": "Champion"
+			},
+			"mEffectAmount": [],
+			"mDataValues": [
+				{
+					"mName": "PercentDamage",
+					"mValues": [
+						0.75,
+						1,
+						1.25,
+						1.5,
+						1.75,
+						2,
+						2.25
+					],
+					"mBaseP": 0.75,
+					"mFormula": "P+0.25"
+				},
+				{
+					"mName": "NumBounces",
+					"mValues": [
+						3,
+						5,
+						7,
+						9,
+						11,
+						13,
+						15
+					],
+					"mBaseP": 3,
+					"mFormula": "P + 2"
+				},
+				{
+					"mName": "BounceRange",
+					"mValues": [
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2
+					],
+					"mBaseP": 2,
+					"mFormula": "P"
+				},
+				{
+					"mName": "Duration",
+					"mValues": [
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5
+					],
+					"mBaseP": 5,
+					"mFormula": "P + 0"
+				}
+			],
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.5,
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"bIsToggleSpell": true,
+			"castRange": [
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000
+			],
+			"castRangeDisplayOverride": [
+				750,
+				750,
+				750,
+				750,
+				750,
+				750,
+				750
+			],
+			"castRadius": [
+				210,
+				210,
+				210,
+				210,
+				210,
+				210,
+				210
+			],
+			"castConeDistance": 100,
+			"castFrame": 1.9800000190734863,
+			"missileSpeed": 1200,
+			"mLineWidth": 50,
+			"mHitBoneName": "head",
+			"mFloatVarsDecimals": [
+				1,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"selectionPriority": 2,
+			"mTargetingTypeData": {},
+			"mSpellCalculations": {
+				"DamageCalc": {
+					"mFormulaParts": [
+						{
+							"mDataValue": "{43961cf7}",
+							"mStat": 2
+						}
+					]
+				}
+			}
+		}
+	},
+	"Characters/TFT2_Sivir/Spells/TFT2_SivirBasicAttack2": {
+		"mScriptName": "TFT2_SivirBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 24527,
+			"mAlternateName": "SivirBasicAttack2",
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				387.5,
+				387.5,
+				387.5,
+				387.5,
+				387.5,
+				387.5,
+				387.5
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1750,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 17,
+			"missileSpeed": 1750,
+			"mMissileEffectKey": "{b5a72a8e}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1
+		}
+	},
+	"Characters/TFT2_Sivir/Spells/TFT2_SivirWAttackBounce": {
+		"mScriptName": "TFT2_SivirWAttackBounce",
+		"mSpell": {
+			"mAffectsTypeFlags": 6794,
+			"mAlternateName": "SivirW",
+			"mImgIconName": [
+				"ASSETS/Characters/Sivir/HUD/Icons2D/Sivir_W.dds"
+			],
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"canCastWhileDisabled": true,
+			"mIsDisabledWhileDead": false,
+			"bHaveHitEffect": true,
+			"{898fbad4}": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				20,
+				20,
+				20,
+				20,
+				20,
+				20,
+				20
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 700,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 18,
+			"missileSpeed": 700,
+			"mMissileEffectKey": "TFT2_Sivir_W_mis",
+			"mHitEffectKey": "TFT2_Sivir_W_Tar",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1
+		}
+	},
+	"Characters/TFT2_Sivir/Spells/TFT2_SivirCritAttack": {
+		"mScriptName": "TFT2_SivirCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 24527,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				387.5,
+				387.5,
+				387.5,
+				387.5,
+				387.5,
+				387.5,
+				387.5
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1750,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 17,
+			"missileSpeed": 1750,
+			"mMissileEffectKey": "{b5a72a8e}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1
+		}
+	},
+	"Characters/TFT2_Sivir/Spells/TFT2_SivirBasicAttack": {
+		"mScriptName": "TFT2_SivirBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 24527,
+			"mAlternateName": "SivirBasicAttack",
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				387.5,
+				387.5,
+				387.5,
+				387.5,
+				387.5,
+				387.5,
+				387.5
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1750,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 18,
+			"missileSpeed": 1750,
+			"mMissileEffectKey": "{b5a72a8e}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1
+		}
+	},
+	"Characters/TFT2_Sivir/CharacterRecords/Root": {
+		"{f2c13b77}": "ASSETS/Characters/TFT2_Sivir/HUD/TFT2_Sivir_Square.TFT_Set2.dds",
+		"tier": 3,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{c022a071}"
+			},
+			{
+				"TraitData": "{ba9f226d}"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"{ef57098f}": false,
+		"mCharacterName": "TFT2_Sivir",
+		"baseHP": 600,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 65,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 55,
+		"baseArmor": 25,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 660,
+		"attackSpeed": 0.699999988079071,
+		"basicAttack": {
+			"mAttackName": "TFT2_SivirBasicAttack"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT2_SivirBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT2_SivirCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT2_SivirW",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 2,
+		"unitTagsString": "Champion"
+	},
+	"{da14baa7}": {}
+}

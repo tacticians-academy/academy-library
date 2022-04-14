@@ -1,0 +1,294 @@
+{
+	"Characters/TFT2_Taric/CharacterRecords/Root": {
+		"{f2c13b77}": "ASSETS/Characters/TFT2_Taric/HUD/TFT2_Taric_Square.TFT_Set2.dds",
+		"tier": 5,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{7cb0af22}"
+			},
+			{
+				"TraitData": "{f9a0bf49}"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mInitialMana": 50,
+		"{ef57098f}": false,
+		"mCharacterName": "TFT2_Taric",
+		"baseHP": 900,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 125,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 60,
+		"baseArmor": 60,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 180,
+		"attackSpeed": 0.6499999761581421,
+		"basicAttack": {
+			"mAttackName": "TFT2_TaricBasicAttack"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT2_TaricBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT2_TaricCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT2_TaricR",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 2,
+		"unitTagsString": "Champion",
+		"flags": 9446656
+	},
+	"Characters/TFT2_Taric/Spells/TFT2_TaricR": {
+		"mScriptName": "TFT2_TaricR",
+		"mSpell": {
+			"mAffectsTypeFlags": 9221,
+			"mRequiredUnitTags": {
+				"mTagList": "Champion"
+			},
+			"mSpellTags": [
+				"Trait_Ultimate",
+				"PositiveEffect_Boon"
+			],
+			"mDataValues": [
+				{
+					"mName": "InitialDelay",
+					"mValues": [
+						1.5,
+						1.5,
+						1.5,
+						1.5,
+						1.5,
+						1.5,
+						1.5
+					],
+					"mBaseP": 1.5,
+					"mFormula": "P"
+				},
+				{
+					"mName": "InvulnDuration",
+					"mValues": [
+						3,
+						2.5,
+						2.5,
+						8,
+						3,
+						3,
+						3
+					],
+					"{3f95426c}": false,
+					"mBaseP": 3,
+					"mFormula": "P"
+				},
+				{
+					"mName": "HexRange",
+					"mValues": [
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					],
+					"mBaseP": 1,
+					"mFormula": "P + 1"
+				}
+			],
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -1,
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"mSpellRevealsChampion": false,
+			"mOrientRadiusTextureFromPlayer": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				400,
+				400,
+				400,
+				400,
+				400,
+				400,
+				400
+			],
+			"castRadiusSecondary": [
+				400,
+				400,
+				400,
+				400,
+				400,
+				400,
+				400
+			],
+			"castConeDistance": 100,
+			"castFrame": 10,
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"mTargetingTypeData": {},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"{00f7e5bc}": true
+		},
+		"mBuff": {
+			"mDescription": "game_buff_tooltip_TaricR"
+		}
+	},
+	"Characters/TFT2_Taric/Spells/TFT2_TaricBasicAttack2": {
+		"mScriptName": "TFT2_TaricBasicAttack2",
+		"mSpell": {
+			"flags": 128,
+			"mAffectsTypeFlags": 6826,
+			"delayCastOffsetPercent": -0.30250000953674316,
+			"mApplyAttackDamage": true,
+			"mApplyMaterialOnHitSound": true,
+			"alwaysSnapFacing": true,
+			"bHaveHitEffect": true,
+			"mUseAutoattackCastTimeData": {},
+			"mUpdateRotationWhenCasting": true,
+			"mConsideredAsAutoAttack": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 10,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT2_Taric/Spells/TFT2_TaricBasicAttack": {
+		"mScriptName": "TFT2_TaricBasicAttack",
+		"mSpell": {
+			"flags": 128,
+			"mAffectsTypeFlags": 6826,
+			"mAlternateName": "TaricBasicAttack",
+			"delayCastOffsetPercent": -0.30250000953674316,
+			"mApplyAttackDamage": true,
+			"mApplyMaterialOnHitSound": true,
+			"alwaysSnapFacing": true,
+			"bHaveHitEffect": true,
+			"mUseAutoattackCastTimeData": {},
+			"mUpdateRotationWhenCasting": true,
+			"mConsideredAsAutoAttack": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 8.5,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT2_Taric/Spells/TFT2_TaricCritAttack": {
+		"mScriptName": "TFT2_TaricCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 6826,
+			"delayCastOffsetPercent": -0.30250000953674316,
+			"mApplyAttackDamage": true,
+			"alwaysSnapFacing": true,
+			"bHaveHitEffect": true,
+			"mUseAutoattackCastTimeData": {},
+			"mUpdateRotationWhenCasting": true,
+			"mConsideredAsAutoAttack": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 16,
+			"missileSpeed": 0,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"{e4e1ba91}": {}
+}

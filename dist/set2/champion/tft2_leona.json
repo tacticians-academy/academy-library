@@ -1,0 +1,251 @@
+{
+	"Characters/TFT2_Leona/Spells/TFT2_LeonaW": {
+		"mScriptName": "TFT2_LeonaW",
+		"mSpell": {
+			"flags": 36,
+			"mAffectsTypeFlags": 11333,
+			"mEffectAmount": [],
+			"mDataValues": [
+				{
+					"mName": "FlatDamageReduction",
+					"mValues": [
+						0,
+						40,
+						80,
+						120,
+						160,
+						200,
+						240
+					],
+					"mFormula": "P + 40"
+				},
+				{
+					"mName": "Duration",
+					"mValues": [
+						4,
+						4,
+						4,
+						4,
+						4,
+						4,
+						4
+					],
+					"mBaseP": 4,
+					"mFormula": "P + 0"
+				}
+			],
+			"mCoefficient": 0.4000000059604645,
+			"mCoefficient2": 0.20000000298023224,
+			"mImgIconName": [
+				"ASSETS/Characters/Leona/HUD/Icons2D/LeonaSolarBarrier.dds"
+			],
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.5,
+			"mCantCancelWhileWindingUp": true,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRangeDisplayOverride": [
+				450,
+				450,
+				450,
+				450,
+				450,
+				450,
+				450
+			],
+			"castRadius": [
+				500,
+				500,
+				500,
+				500,
+				500,
+				500,
+				500
+			],
+			"castConeDistance": 100,
+			"missileSpeed": 828.5,
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"selectionPriority": 1,
+			"mTargetingTypeData": {},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5
+		},
+		"mBuff": {
+			"mDescription": "game_buff_tooltip_LeonaSolarBarrier"
+		}
+	},
+	"Characters/TFT2_Leona/Spells/TFT2_LeonaBasicAttack2": {
+		"mScriptName": "TFT2_LeonaBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "GarenBasicAttack",
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"mApplyMaterialOnHitSound": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 11,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true
+		}
+	},
+	"Characters/TFT2_Leona/Spells/TFT2_LeonaCritAttack": {
+		"mScriptName": "TFT2_LeonaCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "LeonaCritAttack",
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"mApplyMaterialOnHitSound": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 10,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true
+		}
+	},
+	"Characters/TFT2_Leona/Spells/TFT2_LeonaBasicAttack": {
+		"mScriptName": "TFT2_LeonaBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "GarenBasicAttack",
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"mApplyMaterialOnHitSound": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 11,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true
+		}
+	},
+	"{51e3b00f}": {},
+	"Characters/TFT2_Leona/CharacterRecords/Root": {
+		"{f2c13b77}": "ASSETS/Characters/TFT2_Leona/HUD/TFT2_Leona_Square.TFT1001ExpansionContent.dds",
+		"tier": 1,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{e9d7852e}"
+			},
+			{
+				"TraitData": "{f9a0bf49}"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mInitialMana": 50,
+		"mCharacterName": "TFT2_Leona",
+		"baseHP": 650,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 50,
+		"baseArmor": 40,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 180,
+		"attackSpeed": 0.550000011920929,
+		"basicAttack": {
+			"mAttackName": "TFT2_LeonaBasicAttack"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT2_LeonaBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT2_LeonaCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT2_LeonaW",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446656
+	}
+}

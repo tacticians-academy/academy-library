@@ -1,0 +1,391 @@
+{
+	"Characters/TFT5_Aphelios/Spells/TFT5_ApheliosRAttackMissile": {
+		"mScriptName": "TFT5_ApheliosRAttackMissile",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -0.800000011920929,
+			"delayTotalTimePercent": -0.949999988079071,
+			"{898fbad4}": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"mMissileSpec": {
+				"movementComponent": {
+					"mUseGroundHeightAtTarget": false,
+					"mSpeed": 3000,
+					"mTargetHeightAugment": 100,
+					"mStartBoneName": "Calibrum_R_Snap",
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"__type": "BlendedLinearHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VerticalFacingFaceTarget"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"mMissileEffectKey": "{8b374ecc}",
+			"mHitEffectOrientType": 2,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT5_Aphelios/Spells/TFT5_ApheliosBasicAttack": {
+		"mScriptName": "TFT5_ApheliosBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 7919,
+			"mAffectsStatusFlags": 32,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mPreCastLockoutDeltaTime": 0.05999999865889549,
+			"{3d746f1f}": 1,
+			"canCastWhileDisabled": true,
+			"mApplyAttackDamage": true,
+			"alwaysSnapFacing": true,
+			"bHaveHitEffect": true,
+			"mTurnSpeedScalar": 5,
+			"mIgnoreRangeCheck": true,
+			"castRange": [
+				2000,
+				2000,
+				2000,
+				2000,
+				2000,
+				2000,
+				2000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 3000,
+					"mOffsetInitialTargetHeight": 70,
+					"mStartBoneName": "Calibrum_Orb",
+					"mTargetBoneName": "C_Buffbone_Glb_Chest_Loc",
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"mHeightOffset": 100,
+					"__type": "FollowTerrainHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 7.32106876373291,
+			"missileSpeed": 1500,
+			"mMissileEffectKey": "{9362f04a}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"selectionPriority": 1,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT5_Aphelios/Spells/TFT5_ApheliosR": {
+		"mScriptName": "TFT5_ApheliosR",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mDataValues": [
+				{
+					"mName": "PercentAttackDamage",
+					"mValues": [
+						0,
+						3.5,
+						3.75,
+						4.5,
+						0,
+						0,
+						0
+					],
+					"{3f95426c}": false,
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "NumOfAttacks",
+					"mValues": [
+						0,
+						5,
+						5,
+						10,
+						0,
+						0,
+						0
+					],
+					"{3f95426c}": false,
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "BaseDamage",
+					"mValues": [
+						0,
+						150,
+						200,
+						500,
+						0,
+						0,
+						0
+					],
+					"{3f95426c}": false,
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"{678683de}": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "BaseDamage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "PercentAttackDamage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 1,
+							"mStat": 2,
+							"__type": "SubPartScaledProportionalToStat"
+						},
+						{
+							"mSubpart": {
+								"mDataValue": "BaseDamage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"__type": "GameCalculation"
+				}
+			},
+			"mImgIconName": [
+				"ASSETS/Characters/TFT5_Aphelios/HUD/Icons2D/TFT5_ApheliosR.TFT_Set5.dds"
+			],
+			"delayTotalTimePercent": -0.5,
+			"mCantCancelWhileWindingUp": true,
+			"castRange": [
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000
+			],
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT5_Aphelios/Spells/TFT5_ApheliosCritAttack": {
+		"mScriptName": "TFT5_ApheliosCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 7919,
+			"mAffectsStatusFlags": 32,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mPreCastLockoutDeltaTime": 0.05999999865889549,
+			"{3d746f1f}": 1,
+			"canCastWhileDisabled": true,
+			"mApplyAttackDamage": true,
+			"alwaysSnapFacing": true,
+			"bHaveHitEffect": true,
+			"mTurnSpeedScalar": 5,
+			"mIgnoreRangeCheck": true,
+			"castRange": [
+				2000,
+				2000,
+				2000,
+				2000,
+				2000,
+				2000,
+				2000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 3000,
+					"mOffsetInitialTargetHeight": 70,
+					"mStartBoneName": "Calibrum_Orb",
+					"mTargetBoneName": "C_Buffbone_Glb_Chest_Loc",
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"mHeightOffset": 100,
+					"__type": "FollowTerrainHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 7.32106876373291,
+			"missileSpeed": 1500,
+			"mMissileEffectKey": "{9362f04a}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"selectionPriority": 1,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT5_Aphelios/Spells/TFT5_ApheliosRAttack": {
+		"mScriptName": "TFT5_ApheliosRAttack",
+		"mSpell": {
+			"delayTotalTimePercent": -0.75,
+			"castRange": [
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000
+			],
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT5_Aphelios/CharacterRecords/Root": {
+		"PortraitIcon": "ASSETS/Characters/TFT5_Aphelios/HUD/TFT5_Aphelios_Square.TFT_Set5.dds",
+		"tier": 4,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{7591b9d0}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{b340a124}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mCharacterName": "TFT5_Aphelios",
+		"baseHP": 650,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 170,
+			"arBaseStaticRegen": 0,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 65,
+		"baseArmor": 25,
+		"baseSpellBlock": 25,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.2999999523162842,
+		"baseMoveSpeed": 500,
+		"attackRange": 890,
+		"attackSpeed": 0.8500000238418579,
+		"basicAttack": {
+			"mAttackName": "TFT5_ApheliosBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"critAttacks": [
+			{
+				"mAttackName": "TFT5_ApheliosCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT5_ApheliosR",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"TFT5_ApheliosRAttack",
+			"TFT5_ApheliosRAttackMissile",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"__type": "TFTCharacterRecord"
+	}
+}

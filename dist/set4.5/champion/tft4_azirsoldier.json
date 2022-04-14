@@ -1,0 +1,84 @@
+{
+	"Characters/TFT4_AzirSoldier/Spells/TFT4_AzirSoldierStab": {
+		"mScriptName": "TFT4_AzirSoldierStab",
+		"mSpell": {
+			"mAffectsTypeFlags": 7183,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mCantCancelWhileWindingUp": true,
+			"mCantCancelWhileChanneling": true,
+			"castRangeUseBoundingBoxes": true,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castFrame": 10,
+			"mTargetingTypeData": {
+				"__type": "Location"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT4_AzirSoldier/Spells/TFT4_AzirSoldierBasicAttack": {
+		"mScriptName": "TFT4_AzirSoldierBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 7183,
+			"mCantCancelWhileWindingUp": true,
+			"mCantCancelWhileChanneling": true,
+			"castRangeUseBoundingBoxes": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625
+			],
+			"castFrame": 20,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT4_AzirSoldier/CharacterRecords/Root": {
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"{4e28a666}": "L_Weapon",
+		"{bb71cb89}": true,
+		"mCharacterName": "TFT4_AzirSoldier",
+		"baseHP": 950,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arBase": 0,
+			"arBaseStaticRegen": 0,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 0,
+		"baseArmor": 50,
+		"baseSpellBlock": 50,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 500,
+		"attackRange": 0,
+		"attackSpeed": 0.20000000298023224,
+		"spellNames": [
+			"TFT4_AzirSoldierStab",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"__type": "TFTCharacterRecord"
+	}
+}

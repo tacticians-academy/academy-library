@@ -1,0 +1,293 @@
+{
+	"Characters/TFT2_Senna/Spells/TFT2_SennaBasicAttack": {
+		"mScriptName": "TFT2_SennaBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 6794,
+			"mAlternateName": "VelkozBasicAttack",
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mPreCastLockoutDeltaTime": 0.125,
+			"castRange": [
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 14,
+			"missileSpeed": 8000,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1
+		}
+	},
+	"Characters/TFT2_Senna/Spells/TFT2_SennaCritAttack": {
+		"mScriptName": "TFT2_SennaCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 6794,
+			"mAlternateName": "VelkozBasicAttack",
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mPreCastLockoutDeltaTime": 0.125,
+			"castRange": [
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 14,
+			"missileSpeed": 8000,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1
+		}
+	},
+	"Characters/TFT2_Senna/Spells/TFT2_SennaBasicAttack2": {
+		"mScriptName": "TFT2_SennaBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 6794,
+			"mAlternateName": "VelkozBasicAttack",
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mPreCastLockoutDeltaTime": 0.125,
+			"castRange": [
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 14,
+			"missileSpeed": 8000,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1
+		}
+	},
+	"Characters/TFT2_Senna/Spells/TFT2_SennaQ": {
+		"mScriptName": "TFT2_SennaQ",
+		"mSpell": {
+			"mAffectsTypeFlags": 24575,
+			"mAffectsStatusFlags": 48,
+			"mSpellTags": [
+				"PositiveEffect_Boon"
+			],
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						0,
+						50,
+						100,
+						150,
+						200,
+						250,
+						300
+					],
+					"mFormula": "P + 50"
+				},
+				{
+					"mName": "AllyBuffDuration",
+					"mValues": [
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5
+					],
+					"mBaseP": 5,
+					"mFormula": "P + 0"
+				},
+				{
+					"mName": "AllyDamageBonus",
+					"mValues": [
+						0,
+						20,
+						45,
+						70,
+						120,
+						150,
+						180
+					],
+					"{3f95426c}": false,
+					"mFormula": "P + 30"
+				}
+			],
+			"mImgIconName": [
+				"ASSETS/Characters/Senna/HUD/Icons2D/Senna_Q.Senna.dds"
+			],
+			"mCastTime": 0.3499999940395355,
+			"mChannelDuration": [
+				1,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1
+			],
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"castRangeUseBoundingBoxes": true,
+			"mShowChannelBar": false,
+			"alwaysSnapFacing": true,
+			"mNoWinddownIfCancelled": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castFrame": 24,
+			"mLineWidth": 65,
+			"mFloatVarsDecimals": [
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"mTargetingTypeData": {
+				"{6f92d6b3}": true
+			},
+			"mSpellCooldownOrSealedQueueThreshold": 0,
+			"{00f7e5bc}": true,
+			"mSpellCalculations": {
+				"{8fc8bce1}": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{2f89ecc9}"
+							},
+							"mRatio": 0.009999999776482582,
+							"{a5749b52}": "scaleAP",
+							"mStyleTag": "noScale"
+						}
+					]
+				},
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage"
+							},
+							"mRatio": 0.009999999776482582,
+							"{a5749b52}": "scaleAP",
+							"mStyleTag": "noScale"
+						}
+					]
+				}
+			}
+		}
+	},
+	"{ce2776cd}": {},
+	"Characters/TFT2_Senna/CharacterRecords/Root": {
+		"{f2c13b77}": "ASSETS/Characters/TFT2_Senna/HUD/TFT2_Senna_Square.TFT923ExpansionContent.dds",
+		"tier": 2,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{c95f8e64}"
+			},
+			{
+				"TraitData": "{521aec91}"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 960,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mInitialMana": 50,
+		"mCharacterName": "TFT2_Senna",
+		"baseHP": 450,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 75,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 45,
+		"baseArmor": 25,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 890,
+		"attackSpeed": 0.699999988079071,
+		"basicAttack": {
+			"mAttackCastTime": 0.800000011920929
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT2_SennaBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT2_SennaCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT2_SennaQ",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446656
+	}
+}

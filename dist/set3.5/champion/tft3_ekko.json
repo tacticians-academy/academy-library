@@ -1,0 +1,523 @@
+{
+	"{18892dd3}": {
+		"mScriptName": "TFT3_EkkoBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.30000001192092896,
+			"mCantCancelWhileChanneling": true,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				20,
+				20,
+				20,
+				20,
+				20,
+				20,
+				20
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 8,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "Spine"
+		}
+	},
+	"{799edb2f}": {
+		"mScriptName": "TFT3_EkkoWMis",
+		"mSpell": {
+			"flags": 4194304,
+			"mAffectsTypeFlags": 23567,
+			"mEffectAmount": [],
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.5,
+			"cannotBeSuppressed": true,
+			"canCastWhileDisabled": true,
+			"mIsDisabledWhileDead": false,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				225,
+				225,
+				225,
+				225,
+				225,
+				225,
+				225
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 120,
+				"movementComponent": {
+					"mTravelTime": 1,
+					"mTargetHeightAugment": 60,
+					"mOffsetInitialTargetHeight": 60
+				},
+				"heightSolver": {
+					"mGravity": 2500
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 7.974999904632568,
+			"missileSpeed": 1500,
+			"mLineWidth": 120,
+			"bHaveHitBone": true,
+			"mHitBoneName": "pelvis"
+		}
+	},
+	"{84f5d75b}": {
+		"mScriptName": "TFT3_EkkoCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.30000001192092896,
+			"mCantCancelWhileChanneling": true,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				20,
+				20,
+				20,
+				20,
+				20,
+				20,
+				20
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 11,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"{a7150f37}": {
+		"mScriptName": "TFT3_EkkoRDash",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"mSpellTags": [
+				"PositiveEffect_MoveBlock"
+			],
+			"mImgIconName": [
+				""
+			],
+			"mCantCancelWhileWindingUp": true,
+			"cantCastWhileRooted": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castConeAngle": 0,
+			"castConeDistance": 0,
+			"castFrame": 8,
+			"missileSpeed": 0,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"selectionPriority": 1,
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"{00f7e5bc}": true
+		}
+	},
+	"{d8e8c3cb}": {
+		"mScriptName": "TFT3_EkkoR",
+		"mSpell": {
+			"mAffectsTypeFlags": 6351,
+			"mSpellTags": [
+				""
+			],
+			"mDataValues": [
+				{
+					"mName": "BonusDamage",
+					"mValues": [
+						200,
+						100,
+						150,
+						2000,
+						1200,
+						1000,
+						1000
+					],
+					"{3f95426c}": false,
+					"mBaseP": 20,
+					"mFormula": "P + 40"
+				},
+				{
+					"mName": "BaseDelayBetweenAttacks",
+					"mValues": [
+						0.4000000059604645,
+						0.4000000059604645,
+						0.30000001192092896,
+						0.15000000596046448,
+						0.4000000059604645,
+						0.4000000059604645,
+						0.4000000059604645
+					],
+					"{3f95426c}": false,
+					"mBaseP": 0.4000000059604645,
+					"mFormula": "P + 0"
+				},
+				{
+					"mName": "NumAttacks",
+					"mValues": [
+						5,
+						5,
+						7,
+						20,
+						0,
+						0,
+						0
+					],
+					"{3f95426c}": false,
+					"mFormula": "P + 0"
+				},
+				{
+					"mName": "ASSlow",
+					"mValues": [
+						0,
+						0.5,
+						0.5,
+						0.5,
+						0.5,
+						0.5,
+						0.5
+					],
+					"mFormula": ".5"
+				},
+				{
+					"mName": "SlowDuration",
+					"mValues": [
+						7,
+						7,
+						7,
+						7,
+						7,
+						7,
+						7
+					],
+					"mBaseP": 7
+				}
+			],
+			"mImgIconName": [
+				"ASSETS/Characters/Ekko/HUD/Icons2D/Ekko_R.dds"
+			],
+			"mCastTime": 1,
+			"mCantCancelWhileWindingUp": true,
+			"mIgnoreRangeCheck": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castFrame": 14,
+			"mTargetingTypeData": {},
+			"{00f7e5bc}": true,
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "BonusDamage"
+							},
+							"mRatio": 0.009999999776482582,
+							"{a5749b52}": "scaleAP",
+							"mStyleTag": "noScale"
+						}
+					]
+				}
+			}
+		}
+	},
+	"{dbe8c884}": {
+		"mScriptName": "TFT3_EkkoW",
+		"mSpell": {
+			"mAffectsTypeFlags": 4106,
+			"mRequiredUnitTags": {
+				"mTagList": "Champion"
+			},
+			"mSpellTags": [
+				"Trait_Ultimate"
+			],
+			"mDataValues": [
+				{
+					"mName": "FieldDelay",
+					"mValues": [
+						0,
+						1.75,
+						1.75,
+						1.75,
+						1.75,
+						1.75,
+						1.75
+					],
+					"mFormula": "1.75"
+				},
+				{
+					"mName": "FieldDuration",
+					"mValues": [
+						1,
+						2.5,
+						4,
+						8,
+						5,
+						5,
+						5
+					],
+					"{3f95426c}": false,
+					"mBaseP": 1,
+					"mFormula": "P + 1.5"
+				},
+				{
+					"mName": "BonusAS",
+					"mValues": [
+						50,
+						150,
+						250,
+						500,
+						500,
+						500,
+						500
+					],
+					"{3f95426c}": false,
+					"mBaseP": 100,
+					"mFormula": "P"
+				},
+				{
+					"mName": "BonusMS",
+					"mValues": [
+						75,
+						150,
+						300,
+						600,
+						1200,
+						2400,
+						4800
+					],
+					"mBaseP": 75,
+					"mFormula": "P * 2"
+				},
+				{
+					"mName": "HexRadius",
+					"mValues": [
+						3,
+						3,
+						3,
+						3,
+						3,
+						3,
+						3
+					],
+					"mBaseP": 3,
+					"mFormula": "P"
+				}
+			],
+			"mCastTime": 0.25,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mCantCancelWhileWindingUp": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRangeDisplayOverride": [
+				1300,
+				1300,
+				1300,
+				1300,
+				1300,
+				1300,
+				1300
+			],
+			"castRadius": [
+				550,
+				550,
+				550,
+				550,
+				550,
+				550,
+				550
+			],
+			"castConeAngle": 0,
+			"castConeDistance": 0,
+			"castFrame": 7,
+			"missileSpeed": 0,
+			"mLineWidth": 120,
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"selectionPriority": 1,
+			"mTargetingTypeData": {},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"mSpellCalculations": {
+				"{1870685d}": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{d19caaa4}"
+							},
+							"mRatio": 0.009999999776482582,
+							"{a5749b52}": "scaleAP",
+							"mStyleTag": "noScale"
+						}
+					]
+				}
+			}
+		}
+	},
+	"{e6cecaf3}": {
+		"mScriptName": "TFT3_EkkoBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.30000001192092896,
+			"mCantCancelWhileChanneling": true,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				20,
+				20,
+				20,
+				20,
+				20,
+				20,
+				20
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 8,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "Spine"
+		}
+	},
+	"{5e4bc413}": {},
+	"{9c93d5df}": {
+		"PortraitIcon": "ASSETS/Characters/TFT3_Ekko/HUD/TFT3_Ekko_Square.TFT_Set3.dds",
+		"tier": 5,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{d9d7cfc9}"
+			},
+			{
+				"TraitData": "{5ad3f68f}"
+			}
+		],
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mInitialMana": 80,
+		"mCharacterName": "TFT3_Ekko",
+		"baseHP": 850,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 150,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 60,
+		"baseArmor": 30,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.8999999761581421,
+		"spellNames": [
+			"TFT3_EkkoR",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446664
+	}
+}

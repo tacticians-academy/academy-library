@@ -54,18 +54,13 @@ for (const apiName of BASE_UNIT_API_NAMES) {
 
 // Items
 
-const setData = await importSetData(currentSetNumber)
-const { LOCKED_STAR_LEVEL, SPATULA_ITEM_IDS } = setData
-const RETIRED_ITEM_NAMES = setData.RETIRED_ITEM_NAMES ?? []
-const RETIRED_AUGMENT_NAME_KEYS = setData.RETIRED_AUGMENT_NAME_KEYS ?? []
-const UNUSED_AUGMENT_NAME_KEYS = setData.UNUSED_AUGMENT_NAME_KEYS ?? []
-const TRAIT_DATA_SUBSTITUTIONS = setData.TRAIT_DATA_SUBSTITUTIONS ?? {}
+const { LOCKED_STAR_LEVEL, SPATULA_ITEM_IDS, RETIRED_ITEM_NAMES, RETIRED_AUGMENT_NAME_KEYS, UNUSED_AUGMENT_NAME_KEYS, TRAIT_DATA_SUBSTITUTIONS } = await importSetData(currentSetNumber)
 
 const currentItemsByType: Record<ItemTypeKey, ItemData[]> = {component: [], completed: [], spatula: [], duos: [], consumable: [], radiant: [], ornn: [], hexbuff: [], mercenaryDice: [], unreleased: []}
 
 const foundItemIDs: number[] = []
 itemsData.reverse().forEach(item => {
-	if (RETIRED_ITEM_NAMES.includes(item.name) || foundItemIDs.includes(item.id)) {
+	if (RETIRED_ITEM_NAMES?.includes(item.name) || foundItemIDs.includes(item.id)) {
 		return
 	}
 	for (const normalize in NORMALIZE_EFFECT_KEYS) {
@@ -319,7 +314,7 @@ function getByType(type: ChampionJSONType, alternateKey: string, json: ChampionJ
 	}
 }
 function getCharacterRecord(json: ChampionJSON) {
-	return getByType('TFTCharacterRecord', 'mLinkedTraits', json) as ChampionJSONStats
+	return getByType('TFTCharacterRecord', 'mCharacterName', json) as ChampionJSONStats
 }
 
 function parseAttack(attack: ChampionJSONAttack, json: ChampionJSON) {
@@ -382,6 +377,9 @@ const outputChampions = await Promise.all(playableChampions.map(async (champion)
 	const path = getPathTo(currentSetNumber, `champion/${apiName.toLowerCase()}.json`)
 	const json = JSON.parse(await fs.readFile(path, 'utf8')) as ChampionJSON
 	const characterRecord = getCharacterRecord(json)
+	if (!characterRecord) {
+		console.log(apiName, path, json)
+	}
 	if (characterRecord.baseStaticHPRegen !== 0) {
 		console.log('ERR HP Regen', apiName, characterRecord.baseStaticHPRegen)
 	}
@@ -568,7 +566,7 @@ function transformSpellData(spellName: string, spellData: ChampionJSONSpell, jso
 				// console.log(sourceCalculation, sourceCalculations[`Total${variableName}`])
 				continue
 			}
-			const parts = sourceCalculation.mFormulaParts
+			const parts = (sourceCalculation.mFormulaParts ?? [sourceCalculation.mMultiplier])
 				.map((part): SpellCalculationPart => {
 					let sourceSubparts: Record<string, any>[]
 					const sourceOperator = part['__type'] as string
@@ -576,6 +574,8 @@ function transformSpellData(spellName: string, spellData: ChampionJSONSpell, jso
 					if (sourceOperator) {
 						operator = spellCalculationOperatorSubstitutions[sourceOperator]
 						if (!operator) { console.log('ERR Unknown operator', spellName, sourceOperator) }
+					} else if (sourceCalculation.mMultiplier) {
+						operator = 'product'
 					}
 					if (part.mPart1) {
 						sourceSubparts = [part.mPart1, part.mPart2, part.mPart3, part.mPart4, , part.mPart5]

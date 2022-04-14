@@ -1,0 +1,221 @@
+{
+	"{0f003aba}": {},
+	"{21d4e4e9}": {
+		"mScriptName": "TFT3_NautilusCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 512,
+			"delayCastOffsetPercent": -0.15279999375343323,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 12.149999618530273,
+			"missileSpeed": 1000,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"{85277e59}": {
+		"mScriptName": "TFT3_NautilusR",
+		"mSpell": {
+			"mAffectsStatusFlags": 160,
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						0,
+						100,
+						200,
+						500,
+						0,
+						0,
+						0
+					],
+					"{3f95426c}": false
+				},
+				{
+					"mName": "StunDuration",
+					"mValues": [
+						0,
+						3,
+						3,
+						6,
+						0,
+						0,
+						0
+					],
+					"{3f95426c}": false
+				}
+			],
+			"mCastTime": 0.5,
+			"mCantCancelWhileWindingUp": true,
+			"alwaysSnapFacing": true,
+			"castRange": [
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000
+			],
+			"mTargetingTypeData": {},
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage"
+							},
+							"mRatio": 0.009999999776482582,
+							"{a5749b52}": "scaleAP",
+							"mStyleTag": "noScale"
+						}
+					]
+				}
+			}
+		}
+	},
+	"{bd181c29}": {
+		"mScriptName": "TFT3_NautilusBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 512,
+			"mAlternateName": "NautilusBasicAttack",
+			"delayCastOffsetPercent": -0.15279999375343323,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 11.569999694824219,
+			"missileSpeed": 1000,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"{c7f43e81}": {
+		"mScriptName": "TFT3_NautilusBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 512,
+			"mAlternateName": "NautilusBasicAttack2",
+			"delayCastOffsetPercent": -0.15279999375343323,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 12.960000038146973,
+			"missileSpeed": 1000,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"{8b70134c}": {
+		"PortraitIcon": "ASSETS/Characters/TFT3_Nautilus/HUD/TFT3_Nautilus_Square.TFT_Set3_Act2.dds",
+		"tier": 2,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{84f2a828}"
+			},
+			{
+				"TraitData": "{0436f1e7}"
+			}
+		],
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mInitialMana": 50,
+		"mCharacterName": "TFT3_Nautilus",
+		"baseHP": 750,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 120,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 60,
+		"baseArmor": 50,
+		"baseSpellBlock": 35,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.6499999761581421,
+		"basicAttack": {
+			"mAttackProbability": 0.5,
+			"mAttackName": "TFT3_NautilusBasicAttack"
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 0.5,
+				"mAttackName": "TFT3_NautilusBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT3_NautilusCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT3_NautilusR",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446664
+	}
+}

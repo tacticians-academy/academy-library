@@ -1,0 +1,315 @@
+{
+	"Characters/TFT2_Soraka/Spells/TFT2_SorakaBasicAttack": {
+		"mScriptName": "TFT2_SorakaBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "SorakaBasicAttack",
+			"delayCastOffsetPercent": -0.11249999701976776,
+			"bHaveHitEffect": true,
+			"castRange": [
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1000,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Buffbone_Cstm_Weapon"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 1000,
+			"mMissileEffectKey": "TFT2_Soraka_BA_mis",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT2_Soraka/Spells/TFT2_SorakaCritAttack": {
+		"mScriptName": "TFT2_SorakaCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "SorakaCritAttack",
+			"delayCastOffsetPercent": -0.11249999701976776,
+			"bHaveHitEffect": true,
+			"castRange": [
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1000,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_forarm"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 6.5,
+			"missileSpeed": 1000,
+			"mMissileEffectKey": "TFT2_Soraka_BA_mis",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT2_Soraka/Spells/TFT2_SorakaBasicAttack2": {
+		"mScriptName": "TFT2_SorakaBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "SorakaBasicAttack2",
+			"delayCastOffsetPercent": -0.11249999701976776,
+			"bHaveHitEffect": true,
+			"castRange": [
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1000,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Buffbone_Cstm_Weapon"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 9,
+			"missileSpeed": 1000,
+			"mMissileEffectKey": "TFT2_Soraka_BA_mis",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT2_Soraka/Spells/TFT2_SorakaE": {
+		"mScriptName": "TFT2_SorakaE",
+		"mSpell": {
+			"mAffectsTypeFlags": 7183,
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						0,
+						150,
+						300,
+						450,
+						600,
+						750,
+						900
+					],
+					"mFormula": "P + 150"
+				},
+				{
+					"mName": "ZoneDuration",
+					"mValues": [
+						1,
+						3,
+						5,
+						7,
+						9,
+						11,
+						13
+					],
+					"mBaseP": 1,
+					"mFormula": "P + 2"
+				},
+				{
+					"mName": "Radius",
+					"mValues": [
+						1,
+						1,
+						1,
+						1,
+						1,
+						1,
+						1
+					],
+					"mBaseP": 1
+				}
+			],
+			"mCastTime": 0.5,
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRangeDisplayOverride": [
+				925,
+				925,
+				925,
+				925,
+				925,
+				925,
+				925
+			],
+			"castConeDistance": 100,
+			"castFrame": 7.5,
+			"missileSpeed": 0,
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"selectionPriority": 1,
+			"mTargetingTypeData": {},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage"
+							},
+							"mRatio": 0.009999999776482582,
+							"{a5749b52}": "scaleAp",
+							"mStyleTag": "noScale"
+						}
+					]
+				}
+			}
+		}
+	},
+	"{a168e89b}": {},
+	"Characters/TFT2_Soraka/CharacterRecords/Root": {
+		"{f2c13b77}": "ASSETS/Characters/TFT2_Soraka/HUD/TFT2_Soraka_Square.TFT_Set2.dds",
+		"tier": 3,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{c41f7974}"
+			},
+			{
+				"TraitData": "{2ce85d2d}"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mCharacterName": "TFT2_Soraka",
+		"baseHP": 600,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 60,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 40,
+		"baseArmor": 20,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 660,
+		"attackSpeed": 0.699999988079071,
+		"basicAttack": {
+			"mAttackDelayCastOffsetPercent": -0.11299999803304672,
+			"mAttackProbability": 0.5,
+			"mAttackName": "TFT2_SorakaBasicAttack"
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 0.5,
+				"mAttackName": "TFT2_SorakaBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackDelayCastOffsetPercent": -0.11299999803304672,
+				"mAttackName": "TFT2_SorakaCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT2_SorakaE",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 2,
+		"unitTagsString": "Champion"
+	}
+}

@@ -1,0 +1,420 @@
+{
+	"{0cc46056}": {
+		"mScriptName": "TFT3_AnnieW",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						100,
+						300,
+						400,
+						700,
+						450,
+						450,
+						450
+					],
+					"{3f95426c}": false
+				},
+				{
+					"mName": "ShieldAmount",
+					"mValues": [
+						200,
+						400,
+						500,
+						800,
+						700,
+						450,
+						450
+					],
+					"{3f95426c}": false
+				},
+				{
+					"mName": "ShieldDuration",
+					"mValues": [
+						4,
+						4,
+						4,
+						4,
+						4,
+						4,
+						4
+					],
+					"mBaseP": 4
+				}
+			],
+			"mCoefficient": 0.800000011920929,
+			"mImgIconName": [
+				"ASSETS/Characters/TFT3_Kassadin/HUD/Icons2D/Kassadin_E.dds"
+			],
+			"mCastTime": 0.25,
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.5,
+			"mCantCancelWhileWindingUp": true,
+			"alwaysSnapFacing": true,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				350,
+				350,
+				350,
+				350,
+				350,
+				350,
+				350
+			],
+			"castConeAngle": 40,
+			"castConeDistance": 550,
+			"castFrame": 18,
+			"missileSpeed": 0,
+			"mTargetingTypeData": {},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"{00f7e5bc}": true,
+			"mSpellCalculations": {
+				"{33dad32f}": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{40ee74ec}"
+							},
+							"mRatio": 0.009999999776482582,
+							"{a5749b52}": "scaleAP",
+							"mStyleTag": "noScale"
+						}
+					]
+				},
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage"
+							},
+							"mRatio": 0.009999999776482582,
+							"{a5749b52}": "scaleAP",
+							"mStyleTag": "noScale"
+						}
+					]
+				}
+			}
+		},
+		"mBuff": {
+			"mDescription": "game_buff_tooltip_ForcePulse"
+		}
+	},
+	"{0ec4637c}": {
+		"mScriptName": "TFT3_AnnieQ",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mDataValues": [
+				{
+					"mName": "BaseDamage",
+					"mValues": [
+						0,
+						200,
+						400,
+						600,
+						800,
+						1000,
+						1200
+					],
+					"mFormula": "P+200"
+				},
+				{
+					"mName": "StunDuration",
+					"mValues": [
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2
+					],
+					"mBaseP": 2,
+					"mFormula": "2"
+				}
+			],
+			"mCoefficient": 1,
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.5,
+			"mCantCancelWhileWindingUp": true,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRangeDisplayOverride": [
+				1150,
+				1150,
+				1150,
+				1150,
+				1150,
+				1150,
+				1150
+			],
+			"castRadius": [
+				710,
+				710,
+				710,
+				710,
+				710,
+				710,
+				710
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1400,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "neck"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 8.699999809265137,
+			"missileSpeed": 1400,
+			"selectionPriority": 1,
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"{00f7e5bc}": true,
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "BaseDamage"
+							},
+							"mRatio": 0.009999999776482582,
+							"{a5749b52}": "scaleAP",
+							"mStyleTag": "noScale"
+						}
+					]
+				}
+			}
+		}
+	},
+	"{21c6bc55}": {
+		"mScriptName": "TFT3_AnnieBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 24527,
+			"mAlternateName": "AnnieBasicAttack2",
+			"delayCastOffsetPercent": -0.13459999859333038,
+			"bHaveHitEffect": true,
+			"castRange": [
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1200,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 8.5,
+			"missileSpeed": 1200,
+			"mMissileEffectKey": "{be5c6ab0}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1
+		}
+	},
+	"{603cd495}": {
+		"mScriptName": "TFT3_AnnieCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 24527,
+			"mAlternateName": "AnnieCritAttack",
+			"delayCastOffsetPercent": -0.13459999859333038,
+			"bHaveHitEffect": true,
+			"castRange": [
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1200,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 11,
+			"missileSpeed": 1200,
+			"mMissileEffectKey": "{be5c6ab0}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1
+		}
+	},
+	"{9a269b45}": {
+		"mScriptName": "TFT3_AnnieBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 24527,
+			"mAlternateName": "AnnieBasicAttack",
+			"delayCastOffsetPercent": -0.13459999859333038,
+			"bHaveHitEffect": true,
+			"castRange": [
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1200,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 7.5,
+			"missileSpeed": 1200,
+			"mMissileEffectKey": "{be5c6ab0}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1
+		}
+	},
+	"{76d5f878}": {
+		"PortraitIcon": "ASSETS/Characters/TFT3_Annie/HUD/TFT3_Annie_Square.TFT_Set3.dds",
+		"tier": 2,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{a21f56fe}"
+			},
+			{
+				"TraitData": "{eedbee24}"
+			}
+		],
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mInitialMana": 70,
+		"mCharacterName": "TFT3_Annie",
+		"baseHP": 750,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 150,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 40,
+		"baseArmor": 50,
+		"baseSpellBlock": 35,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 500,
+		"attackRange": 420,
+		"attackSpeed": 0.6499999761581421,
+		"basicAttack": {
+			"mAttackName": "TFT3_AnnieBasicAttack"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT3_AnnieBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT3_AnnieCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT3_AnnieW",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 1,
+		"unitTagsString": "Champion",
+		"flags": 9446656
+	},
+	"{e4199c7e}": {}
+}

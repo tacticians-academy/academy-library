@@ -58,6 +58,7 @@ export interface ChampionJSONSpell {
 	}[]
 	mSpellCalculations?: Record<string, {
 		mFormulaParts: Record<string, string | Record<string, Object> | Record<string, Object>[]>[]
+		mMultiplier?: Record<string, string>
 		mDisplayAsPercent?: boolean
 	}>
 	mCantCancelWhileWindingUp?: true

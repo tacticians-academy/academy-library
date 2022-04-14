@@ -1,0 +1,286 @@
+{
+	"{24295391}": {
+		"mScriptName": "TFT5_PantheonCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.30000001192092896,
+			"mCantCancelWhileChanneling": true,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				20,
+				20,
+				20,
+				20,
+				20,
+				20,
+				20
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 7.360000133514404,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{88c0cfe9}": {
+		"mScriptName": "TFT5_PantheonBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "PantheonUpdateBasicAttack",
+			"delayCastOffsetPercent": -0.30000001192092896,
+			"mCantCancelWhileChanneling": true,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"mTurnSpeedScalar": 3,
+			"castRange": [
+				20,
+				20,
+				20,
+				20,
+				20,
+				20,
+				20
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 7.800000190734863,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{ca89db14}": {
+		"mScriptName": "TFT5_PantheonE",
+		"mSpell": {
+			"mDataValues": [
+				{
+					"mName": "DamageReductionPercent",
+					"mValues": [
+						0,
+						0.6499999761581421,
+						0.6499999761581421,
+						0.6499999761581421,
+						0,
+						0,
+						0
+					],
+					"{3f95426c}": false,
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "PercentAttackDamage",
+					"mValues": [
+						0,
+						400,
+						450,
+						650,
+						0,
+						0,
+						0
+					],
+					"{3f95426c}": false,
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "Duration",
+					"mValues": [
+						0,
+						4,
+						4,
+						4,
+						4,
+						4,
+						4
+					],
+					"mFormula": "4",
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "HealingReduction",
+					"mValues": [
+						0,
+						50,
+						50,
+						50,
+						50,
+						50,
+						50
+					],
+					"mFormula": "50",
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "HealingReductionDuration",
+					"mValues": [
+						0,
+						8,
+						8,
+						8,
+						8,
+						8,
+						8
+					],
+					"mFormula": "8",
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "PercentAttackDamage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mStat": 2,
+							"__type": "StatBySubPartCalculationPart"
+						}
+					],
+					"mMultiplier": {
+						"mNumber": 0.009999999776482582,
+						"__type": "NumberCalculationPart"
+					},
+					"__type": "GameCalculation"
+				},
+				"{031c9f01}": {
+					"mFormulaParts": [
+						{
+							"{bfe6ad01}": 100,
+							"mDataValue": "{5064373e}",
+							"__type": "{05abdfab}"
+						}
+					],
+					"mDisplayAsPercent": true,
+					"__type": "GameCalculation"
+				}
+			},
+			"delayCastOffsetPercent": -0.3999999761581421,
+			"delayTotalTimePercent": -0.8500000238418579,
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{f2f3c621}": {
+		"mScriptName": "TFT5_PantheonBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "PantheonUpdateBasicAttack",
+			"delayCastOffsetPercent": -0.30000001192092896,
+			"mCantCancelWhileChanneling": true,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"mTurnSpeedScalar": 3,
+			"castRange": [
+				20,
+				20,
+				20,
+				20,
+				20,
+				20,
+				20
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 8.970000267028809,
+			"missileSpeed": 20,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{2d6dfd5c}": {
+		"PortraitIcon": "ASSETS/Characters/TFT5_Pantheon/HUD/TFT5_Pantheon_Square.TFT_Set5.dds",
+		"tier": 3,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{1042d394}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{323c08da}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mInitialMana": 30,
+		"mCharacterName": "TFT5_Pantheon",
+		"baseHP": 800,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 60,
+			"arBaseStaticRegen": 0,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 70,
+		"baseArmor": 45,
+		"baseSpellBlock": 45,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.2999999523162842,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.75,
+		"basicAttack": {
+			"mAttackName": "TFT5_PantheonBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT5_PantheonBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT5_PantheonCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT5_PantheonE",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446664,
+		"__type": "TFTCharacterRecord"
+	}
+}

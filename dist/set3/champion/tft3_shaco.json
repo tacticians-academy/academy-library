@@ -1,0 +1,295 @@
+{
+	"{0f2e3e85}": {},
+	"{104729dd}": {
+		"{f2c13b77}": "ASSETS/Characters/TFT3_Shaco/HUD/TFT3_Shaco_Square.TFT_Set3.dds",
+		"tier": 3,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{fd010015}"
+			},
+			{
+				"TraitData": "{5ad3f68f}"
+			}
+		],
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mInitialMana": 30,
+		"mCharacterName": "TFT3_Shaco",
+		"baseHP": 650,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 80,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 70,
+		"baseArmor": 25,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.800000011920929,
+		"basicAttack": {
+			"mAttackName": "TFT3_ShacoBasicAttack"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT3_ShacoBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT3_ShacoCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT3_ShacoQ",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446664
+	},
+	"{45bbbcf0}": {
+		"mScriptName": "TFT3_ShacoQAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.3077000081539154,
+			"mApplyMaterialOnHitSound": true,
+			"useAnimatorFramerate": true,
+			"castConeDistance": 100,
+			"castFrame": 9.25,
+			"mHitEffectOrientType": 2,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_GROUND_LOC"
+		}
+	},
+	"{5ae23164}": {
+		"mScriptName": "TFT3_ShacoQ",
+		"mSpell": {
+			"flags": 36,
+			"mAffectsTypeFlags": 6154,
+			"mSpellTags": [
+				"Trait_Ultimate"
+			],
+			"mDataValues": [
+				{
+					"mName": "Duration",
+					"mValues": [
+						1.5,
+						1.5,
+						1.5,
+						1.5,
+						1.5,
+						1.5,
+						1.5
+					],
+					"mBaseP": 1.5,
+					"mFormula": "P"
+				},
+				{
+					"mName": "PercentOfAD",
+					"mValues": [
+						1.75,
+						2,
+						2.25,
+						2.5,
+						2.75,
+						3,
+						3.25
+					],
+					"mBaseP": 1.75,
+					"mFormula": "P +.25"
+				}
+			],
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"mUseMinimapTargeting": true,
+			"useAnimatorFramerate": true,
+			"bIsToggleSpell": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				300,
+				300,
+				300,
+				300,
+				300,
+				300,
+				300
+			],
+			"castConeDistance": 100,
+			"castFrame": 7.5,
+			"missileSpeed": 2200,
+			"mFloatVarsDecimals": [
+				2,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"selectionPriority": 1,
+			"mTargetingTypeData": {},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"mSpellCalculations": {
+				"{da93a420}": {
+					"mDisplayAsPercent": true,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{11a96dee}"
+							},
+							"mRatio": 0.009999999776482582,
+							"{a5749b52}": "scaleAP",
+							"mStyleTag": "noScale"
+						}
+					]
+				},
+				"{4c7bc424}": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mSubpart": {
+									"mSubpart": {
+										"mDataValue": "{11a96dee}"
+									},
+									"mRatio": 0.009999999776482582,
+									"{992cd7eb}": "noScale",
+									"{a5749b52}": "scaleAP"
+								},
+								"mStat": 7
+							},
+							"mStat": 2
+						}
+					]
+				}
+			}
+		},
+		"mBuff": {
+			"mDescription": "game_buff_tooltip_KhazixR"
+		}
+	},
+	"{6081b2ed}": {
+		"mScriptName": "TFT3_ShacoCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.16670000553131104,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9.3149995803833,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"{e9d4afed}": {
+		"mScriptName": "TFT3_ShacoBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "ShacoBasicAttack",
+			"delayCastOffsetPercent": -0.16670000553131104,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9.25,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"{f8d0dc0d}": {
+		"mScriptName": "TFT3_ShacoBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "ShacoBasicAttack2",
+			"delayCastOffsetPercent": -0.16670000553131104,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9.359999656677246,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	}
+}

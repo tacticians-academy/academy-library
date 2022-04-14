@@ -1,0 +1,324 @@
+{
+	"Characters/TFT2_Ivern/Spells/TFT2_IvernBasicAttack2": {
+		"mScriptName": "TFT2_IvernBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 6827,
+			"delayCastOffsetPercent": -0.34850001335144043,
+			"useAnimatorFramerate": true,
+			"bHaveHitEffect": true,
+			"mUseAutoattackCastTimeData": {},
+			"mConsideredAsAutoAttack": true,
+			"castRange": [
+				150,
+				150,
+				150,
+				150,
+				150,
+				150,
+				150
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mAcceleration": -15000,
+					"mMinSpeed": 1500,
+					"mMaxSpeed": 3000,
+					"mInitialSpeed": 2000,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "C_Buffbone_Glb_Head_Loc"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 7.75,
+			"missileSpeed": 4000,
+			"mMissileEffectKey": "TFT2_Ivern_BA_Mis",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT2_Ivern/Spells/TFT2_IvernBasicAttack": {
+		"mScriptName": "TFT2_IvernBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 6827,
+			"delayCastOffsetPercent": -0.34850001335144043,
+			"useAnimatorFramerate": true,
+			"bHaveHitEffect": true,
+			"mUseAutoattackCastTimeData": {},
+			"mConsideredAsAutoAttack": true,
+			"castRange": [
+				150,
+				150,
+				150,
+				150,
+				150,
+				150,
+				150
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mAcceleration": -15000,
+					"mMinSpeed": 1500,
+					"mMaxSpeed": 3000,
+					"mInitialSpeed": 2000,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "C_Buffbone_Glb_Head_Loc"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 7.75,
+			"missileSpeed": 4000,
+			"mMissileEffectKey": "TFT2_Ivern_BA_Mis",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT2_Ivern/Spells/TFT2_IvernCritAttack": {
+		"mScriptName": "TFT2_IvernCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 6827,
+			"delayCastOffsetPercent": -0.34850001335144043,
+			"useAnimatorFramerate": true,
+			"bHaveHitEffect": true,
+			"mUseAutoattackCastTimeData": {},
+			"mConsideredAsAutoAttack": true,
+			"castRange": [
+				150,
+				150,
+				150,
+				150,
+				150,
+				150,
+				150
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mAcceleration": -15000,
+					"mMinSpeed": 1500,
+					"mMaxSpeed": 3000,
+					"mInitialSpeed": 2000,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "C_Buffbone_Glb_Head_Loc"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 7.75,
+			"missileSpeed": 4000,
+			"mMissileEffectKey": "TFT2_Ivern_BA_Mis",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT2_Ivern/Spells/TFT2_IvernE": {
+		"mScriptName": "TFT2_IvernE",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 1025,
+			"mSpellTags": [
+				"PositiveEffect_Boon"
+			],
+			"mDataValues": [
+				{
+					"mName": "ShieldAmount",
+					"mValues": [
+						100,
+						200,
+						300,
+						400,
+						500,
+						600,
+						700
+					],
+					"mBaseP": 100,
+					"mFormula": "P + 100"
+				},
+				{
+					"mName": "Duration",
+					"mValues": [
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5
+					],
+					"mBaseP": 5,
+					"mFormula": "P"
+				}
+			],
+			"mCastTime": 0.5,
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"mSpellRevealsChampion": false,
+			"mShowChannelBar": false,
+			"alwaysSnapFacing": true,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				285,
+				285,
+				285,
+				285,
+				285,
+				285,
+				285
+			],
+			"castConeDistance": 100,
+			"castFrame": 7.5,
+			"missileSpeed": 20,
+			"mLookAtPolicy": 1,
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"mSpellCalculations": {
+				"{33dad32f}": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{40ee74ec}"
+							},
+							"mRatio": 0.009999999776482582,
+							"{a5749b52}": "scaleAP",
+							"mStyleTag": "noScale"
+						}
+					]
+				}
+			}
+		},
+		"mBuff": {
+			"mDescription": "game_buff_tooltip_IvernE"
+		}
+	},
+	"{5ba6a8aa}": {},
+	"Characters/TFT2_Ivern/CharacterRecords/Root": {
+		"{f2c13b77}": "ASSETS/Characters/TFT2_Ivern/HUD/TFT2_Ivern_Square.TFT_Set2.dds",
+		"tier": 1,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{adb8f12c}"
+			},
+			{
+				"TraitData": "{d810ebc8}"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 520,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mInitialMana": 50,
+		"mCharacterName": "TFT2_Ivern",
+		"baseHP": 600,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 50,
+		"baseArmor": 25,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 420,
+		"attackSpeed": 0.6000000238418579,
+		"basicAttack": {
+			"mAttackName": "TFT2_IvernBasicAttack"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT2_IvernBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT2_IvernCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT2_IvernE",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 2,
+		"unitTagsString": "Champion",
+		"flags": 9446656
+	}
+}

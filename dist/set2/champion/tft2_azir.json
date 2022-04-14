@@ -1,0 +1,209 @@
+{
+	"Characters/TFT2_Azir/Spells/TFT2_AzirBasicAttack2": {
+		"mScriptName": "TFT2_AzirBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 8143,
+			"delayCastOffsetPercent": -0.31220000982284546,
+			"bHaveHitEffect": true,
+			"castRange": [
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 7.5,
+			"missileSpeed": 2600,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1
+		}
+	},
+	"Characters/TFT2_Azir/Spells/TFT2_AzirCritAttack": {
+		"mScriptName": "TFT2_AzirCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 8143,
+			"delayCastOffsetPercent": -0.31220000982284546,
+			"bHaveHitEffect": true,
+			"castRange": [
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 6,
+			"missileSpeed": 2800,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1
+		}
+	},
+	"Characters/TFT2_Azir/Spells/TFT2_AzirW": {
+		"mScriptName": "TFT2_AzirW",
+		"mSpell": {
+			"mDataValues": [
+				{
+					"mName": "SoldierDuration",
+					"mValues": [
+						6,
+						6,
+						6,
+						6,
+						6,
+						6,
+						6
+					],
+					"mBaseP": 6,
+					"mFormula": "P + 0"
+				},
+				{
+					"mName": "SoldierDamage",
+					"mValues": [
+						25,
+						150,
+						275,
+						450,
+						525,
+						650,
+						775
+					],
+					"{3f95426c}": false,
+					"mBaseP": 25,
+					"mFormula": "P + 125"
+				}
+			],
+			"mCastTime": 0.10000000149011612,
+			"delayCastOffsetPercent": -1,
+			"canCastOrQueueWhileCasting": true,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"mTargetingTypeData": {},
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{ff17e5f0}"
+							},
+							"mRatio": 0.009999999776482582,
+							"{a5749b52}": "scaleAP",
+							"mStyleTag": "noScale"
+						}
+					]
+				}
+			}
+		}
+	},
+	"Characters/TFT2_Azir/Spells/TFT2_AzirBasicAttack": {
+		"mScriptName": "TFT2_AzirBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 8143,
+			"delayCastOffsetPercent": -0.31220000982284546,
+			"bHaveHitEffect": true,
+			"castRange": [
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 7.5,
+			"missileSpeed": 2600,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1
+		}
+	},
+	"{8e75626e}": {},
+	"Characters/TFT2_Azir/CharacterRecords/Root": {
+		"{f2c13b77}": "ASSETS/Characters/TFT2_Azir/HUD/TFT2_Azir_Square.TFT_Set2.dds",
+		"tier": 3,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{c022a071}"
+			},
+			{
+				"TraitData": "{cc6f9638}"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mInitialMana": 50,
+		"mCharacterName": "TFT2_Azir",
+		"baseHP": 600,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 55,
+		"baseArmor": 20,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 660,
+		"attackSpeed": 0.800000011920929,
+		"spellNames": [
+			"TFT2_AzirW",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 2,
+		"unitTagsString": "Champion"
+	}
+}

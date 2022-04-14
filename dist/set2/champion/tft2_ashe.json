@@ -1,0 +1,479 @@
+{
+	"Characters/TFT2_Ashe/CharacterRecords/Root": {
+		"{f2c13b77}": "ASSETS/Characters/TFT2_Ashe/HUD/TFT2_Ashe_Square.TFT_Set2.dds",
+		"tier": 2,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{7cb0af22}"
+			},
+			{
+				"TraitData": "{4bd2d826}"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 960,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"{ef57098f}": false,
+		"mCharacterName": "TFT2_Ashe",
+		"baseHP": 550,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 35,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 60,
+		"baseArmor": 20,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 890,
+		"attackSpeed": 0.800000011920929,
+		"basicAttack": {
+			"mAttackCastTime": 0.6499999761581421,
+			"mAttackDelayCastOffsetPercent": null,
+			"mAttackDelayCastOffsetPercentAttackSpeedRatio": null,
+			"mAttackProbability": null,
+			"mAttackName": "TFT2_AsheBasicAttack"
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": null,
+				"mAttackName": "TFT2_AsheBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackDelayCastOffsetPercent": null,
+				"mAttackDelayCastOffsetPercentAttackSpeedRatio": null,
+				"mAttackName": "TFT2_AsheCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT2_AsheQ",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 2,
+		"unitTagsString": "Champion",
+		"flags": 9446656
+	},
+	"Characters/TFT2_Ashe/Spells/TFT2_AsheQ": {
+		"mScriptName": "TFT2_AsheQ",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 13327,
+			"mRequiredUnitTags": {
+				"mTagList": "Champion"
+			},
+			"mSpellTags": [
+				"Trait_AttackReset"
+			],
+			"mDataValues": [
+				{
+					"mName": "Duration",
+					"mValues": [
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5
+					],
+					"mBaseP": 5,
+					"mFormula": "P"
+				},
+				{
+					"mName": "AttackSpeed",
+					"mValues": [
+						0.25,
+						0.5,
+						0.75,
+						1,
+						1.25,
+						1.5,
+						1.75
+					],
+					"mBaseP": 0.25,
+					"mFormula": "P+ 0.25"
+				},
+				{
+					"mName": "PercentADPerArrow",
+					"mValues": [
+						0.25,
+						0.30000001192092896,
+						0.3499999940395355,
+						0.75,
+						0.75,
+						0.75,
+						0.75
+					],
+					"{3f95426c}": false,
+					"mBaseP": 0.25,
+					"mFormula": "P+0.05"
+				},
+				{
+					"mName": "NumArrows",
+					"mValues": [
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5
+					],
+					"mBaseP": 5,
+					"mFormula": "P"
+				}
+			],
+			"mCastTime": 0.5,
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.5,
+			"canCastOrQueueWhileCasting": true,
+			"mPingableWhileDisabled": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"mTargetingTypeData": {},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"{00f7e5bc}": true,
+			"mSpellCalculations": {
+				"{987a0156}": {
+					"mMultiplier": {
+						"mDataValue": "{c915bf41}"
+					},
+					"mFormulaParts": [
+						{
+							"mDataValue": "{8aa86c33}",
+							"mStat": 2
+						}
+					]
+				}
+			}
+		},
+		"mBuff": {
+			"mDescription": "game_buff_tooltip_AsheQ"
+		}
+	},
+	"Characters/TFT2_Ashe/Spells/TFT2_AsheQAttackNoOnHit": {
+		"mScriptName": "TFT2_AsheQAttackNoOnHit",
+		"mSpell": {
+			"mAffectsTypeFlags": 6826,
+			"mImgIconName": [
+				"ASSETS/Characters/Ashe/HUD/Icons2D/Ashe_Q_active.dds"
+			],
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"canCastWhileDisabled": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 60,
+				"movementComponent": {
+					"mSpeed": 2500,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 15,
+			"missileSpeed": 2500,
+			"mMissileEffectKey": "TFT2_Ashe_Q_mis",
+			"mLineWidth": 60,
+			"mHitEffectKey": "TFT2_Ashe_Q_tar",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		},
+		"mBuff": {
+			"mDescription": "game_buff_tooltip_AsheQAttack"
+		}
+	},
+	"Characters/TFT2_Ashe/Spells/TFT2_AsheCritAttack": {
+		"mScriptName": "TFT2_AsheCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.08070175349712372,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRangeDisplayOverride": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2500,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 9,
+			"missileSpeed": 2500,
+			"mMissileEffectKey": "TFT2_Ashe_BA_mis",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT2_Ashe/Spells/TFT2_AsheBasicAttack": {
+		"mScriptName": "TFT2_AsheBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "AsheBasicAttack",
+			"delayCastOffsetPercent": -0.08070000261068344,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRangeDisplayOverride": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2500,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 9,
+			"missileSpeed": 2500,
+			"mMissileEffectKey": "TFT2_Ashe_BA_mis",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT2_Ashe/Spells/TFT2_AsheQAttack": {
+		"mScriptName": "TFT2_AsheQAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 6826,
+			"mEffectAmount": [],
+			"mImgIconName": [
+				"ASSETS/Characters/Ashe/HUD/Icons2D/Ashe_Q_active.dds"
+			],
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"canCastWhileDisabled": true,
+			"useAnimatorFramerate": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 60,
+				"movementComponent": {
+					"mSpeed": 2500,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 4,
+			"missileSpeed": 2500,
+			"mMissileEffectKey": "TFT2_Ashe_Q_mis",
+			"mLineWidth": 60,
+			"mHitEffectKey": "TFT2_Ashe_Q_tar",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		},
+		"mBuff": {
+			"mDescription": "game_buff_tooltip_AsheQAttack"
+		}
+	},
+	"Characters/TFT2_Ashe/Spells/TFT2_AsheBasicAttack2": {
+		"mScriptName": "TFT2_AsheBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "AsheBasicAttack2",
+			"delayCastOffsetPercent": -0.08070000261068344,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRangeDisplayOverride": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2500,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 9,
+			"missileSpeed": 2500,
+			"mMissileEffectKey": "TFT2_Ashe_BA_mis",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"{83384e1f}": {
+		"useGDSBinaries": true
+	}
+}

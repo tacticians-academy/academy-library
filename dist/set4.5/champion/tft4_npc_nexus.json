@@ -1,0 +1,163 @@
+{
+	"Characters/TFT4_NPC_Nexus/CharacterRecords/Root": {
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mInitialMana": 200,
+		"mCharacterName": "TFT4_NPC_Nexus",
+		"baseHP": 6000,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 250,
+			"arBaseStaticRegen": 0,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 400,
+		"baseArmor": 100,
+		"baseSpellBlock": 100,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.6000000238418579,
+		"basicAttack": {
+			"mAttackName": "TFT4_NPC_NexusBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT4_NPC_NexusBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT4_NPC_NexusSlam",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446656,
+		"__type": "TFTCharacterRecord"
+	},
+	"Characters/TFT4_NPC_Nexus/Spells/TFT4_NPC_NexusBasicAttack": {
+		"mScriptName": "TFT4_NPC_NexusBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"bHaveHitEffect": true,
+			"castRange": [
+				700,
+				700,
+				700,
+				700,
+				700,
+				700,
+				700
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 15,
+			"missileSpeed": 0,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT4_NPC_Nexus/Spells/TFT4_NPC_NexusBasicAttack2": {
+		"mScriptName": "TFT4_NPC_NexusBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"bHaveHitEffect": true,
+			"castRange": [
+				700,
+				700,
+				700,
+				700,
+				700,
+				700,
+				700
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 15,
+			"missileSpeed": 0,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT4_NPC_Nexus/Spells/TFT4_NPC_NexusSlam": {
+		"mScriptName": "TFT4_NPC_NexusSlam",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mDataValues": [
+				{
+					"mName": "HealthPercentDamage",
+					"mValues": [
+						0.6000000238418579,
+						0.6000000238418579,
+						0.6000000238418579,
+						0.6000000238418579,
+						0.6000000238418579,
+						0.6000000238418579,
+						0.6000000238418579
+					],
+					"mBaseP": 0.6000000238418579,
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "BaseDamage",
+					"mValues": [
+						200,
+						200,
+						200,
+						200,
+						200,
+						200,
+						200
+					],
+					"mBaseP": 200,
+					"mFormula": "P + 0",
+					"__type": "SpellDataValue"
+				}
+			],
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castFrame": 37,
+			"mTargetingTypeData": {
+				"__type": "Location"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	}
+}

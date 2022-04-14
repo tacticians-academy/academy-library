@@ -1,0 +1,237 @@
+{
+	"Characters/TFT2_Olaf/Spells/TFT2_OlafBasicAttack": {
+		"mScriptName": "TFT2_OlafBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "OlafBasicAttack",
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT2_Olaf/Spells/TFT2_OlafCritAttack": {
+		"mScriptName": "TFT2_OlafCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "OlafCritAttack",
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT2_Olaf/Spells/TFT2_OlafBasicAttack2": {
+		"mScriptName": "TFT2_OlafBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "OlafBasicAttack2",
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT2_Olaf/Spells/TFT2_OlafP": {
+		"mScriptName": "TFT2_OlafP",
+		"mSpell": {
+			"flags": 4,
+			"mDataValues": [
+				{
+					"mName": "AttackSpeed",
+					"mValues": [
+						0.5,
+						1.25,
+						1.5,
+						4.5,
+						4.5,
+						4.5,
+						3
+					],
+					"{3f95426c}": false,
+					"mBaseP": 0.5,
+					"mFormula": "P + 0.25"
+				},
+				{
+					"mName": "LifeSteal",
+					"mValues": [
+						0.5,
+						0.5,
+						0.5,
+						0.5,
+						0.5,
+						0.5,
+						0.5
+					],
+					"mBaseP": 0.5,
+					"mFormula": "P "
+				},
+				{
+					"mName": "HealthThreshold",
+					"mValues": [
+						0.5,
+						0.5,
+						0.5,
+						0.5,
+						0.5,
+						0.5,
+						0.5
+					],
+					"mBaseP": 0.5,
+					"mFormula": "P + 0"
+				},
+				{
+					"mName": "Duration",
+					"mValues": [
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5
+					],
+					"mBaseP": 5
+				}
+			],
+			"mCastTime": 0.5,
+			"canCastWhileDisabled": true,
+			"canCastOrQueueWhileCasting": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"mTargetingTypeData": {}
+		}
+	},
+	"{ce251816}": {},
+	"Characters/TFT2_Olaf/CharacterRecords/Root": {
+		"{f2c13b77}": "ASSETS/Characters/TFT2_Olaf/HUD/TFT2_Olaf_Square.TFT_Set2.dds",
+		"tier": 4,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{b87e9a7e}"
+			},
+			{
+				"TraitData": "{c1066919}"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"{ef57098f}": false,
+		"mCharacterName": "TFT2_Olaf",
+		"baseHP": 850,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 90,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 70,
+		"baseArmor": 35,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 180,
+		"attackSpeed": 0.800000011920929,
+		"basicAttack": {
+			"mAttackName": "TFT2_OlafBasicAttack"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT2_OlafBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT2_OlafCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT2_OlafP",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 2,
+		"unitTagsString": "Champion",
+		"flags": 9446656
+	}
+}

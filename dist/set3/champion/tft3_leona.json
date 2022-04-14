@@ -1,0 +1,272 @@
+{
+	"{06aea6dd}": {
+		"mScriptName": "TFT3_LeonaCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "LeonaCritAttack",
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 10,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"{1268b61d}": {
+		"mScriptName": "TFT3_LeonaBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "GarenBasicAttack",
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 11,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"{29d6cbfd}": {
+		"mScriptName": "TFT3_LeonaBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "GarenBasicAttack",
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 11,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"{74c3516e}": {
+		"mScriptName": "TFT3_LeonaW",
+		"mSpell": {
+			"flags": 36,
+			"mAffectsTypeFlags": 11333,
+			"mDataValues": [
+				{
+					"mName": "FlatDamageReduction",
+					"mValues": [
+						0,
+						40,
+						80,
+						200,
+						160,
+						200,
+						240
+					],
+					"{3f95426c}": false,
+					"mFormula": "P + 40"
+				},
+				{
+					"mName": "Duration",
+					"mValues": [
+						4,
+						4,
+						4,
+						4,
+						4,
+						4,
+						4
+					],
+					"mBaseP": 4,
+					"mFormula": "P + 0"
+				}
+			],
+			"mImgIconName": [
+				"ASSETS/Characters/Leona/HUD/Icons2D/LeonaSolarBarrier.dds"
+			],
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.5,
+			"mCantCancelWhileWindingUp": true,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRangeDisplayOverride": [
+				450,
+				450,
+				450,
+				450,
+				450,
+				450,
+				450
+			],
+			"castRadius": [
+				500,
+				500,
+				500,
+				500,
+				500,
+				500,
+				500
+			],
+			"castConeDistance": 100,
+			"missileSpeed": 828.5,
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"selectionPriority": 1,
+			"mTargetingTypeData": {},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"mSpellCalculations": {
+				"{d3bdf870}": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{cb4cd428}"
+							},
+							"mRatio": 0.009999999776482582,
+							"{a5749b52}": "scaleAP",
+							"mStyleTag": "noScale"
+						}
+					]
+				}
+			}
+		},
+		"mBuff": {
+			"mDescription": "game_buff_tooltip_LeonaSolarBarrier"
+		}
+	},
+	"{5ea9f38c}": {
+		"{f2c13b77}": "ASSETS/Characters/TFT3_Leona/HUD/TFT3_Leona_Square.TFT_Set3.dds",
+		"tier": 1,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{d9d7cfc9}"
+			},
+			{
+				"TraitData": "{0436f1e7}"
+			}
+		],
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mInitialMana": 50,
+		"mCharacterName": "TFT3_Leona",
+		"baseHP": 600,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 50,
+		"baseArmor": 40,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.550000011920929,
+		"basicAttack": {
+			"mAttackName": "TFT3_LeonaBasicAttack"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT3_LeonaBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT3_LeonaCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT3_LeonaW",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 8398088
+	},
+	"{6d15f0fa}": {}
+}

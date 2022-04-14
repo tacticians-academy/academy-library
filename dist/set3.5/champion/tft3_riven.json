@@ -1,0 +1,1016 @@
+{
+	"{425772af}": {},
+	"{4e6364cc}": {
+		"mScriptName": "TFT3_RivenE",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"mSpellTags": [
+				"Trait_Ultimate"
+			],
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						50,
+						550,
+						750,
+						2500,
+						1000,
+						1250,
+						1500
+					],
+					"{3f95426c}": false,
+					"mBaseP": 50,
+					"mFormula": "P + 200"
+				},
+				{
+					"mName": "HexRange",
+					"mValues": [
+						8,
+						8,
+						8,
+						8,
+						8,
+						8,
+						8
+					],
+					"mBaseP": 8,
+					"mFormula": "P + 0"
+				},
+				{
+					"mName": "Shield",
+					"mValues": [
+						0,
+						200,
+						300,
+						400,
+						0,
+						0,
+						0
+					],
+					"{3f95426c}": false
+				},
+				{
+					"mName": "ShieldDuration",
+					"mValues": [
+						4,
+						4,
+						4,
+						4,
+						4,
+						4,
+						4
+					],
+					"mBaseP": 4
+				}
+			],
+			"mImgIconName": [
+				"ASSETS/Characters/AurelionSol/HUD/Icons2D/AurelionSol_R.dds"
+			],
+			"mChannelDuration": [
+				0.3499999940395355,
+				0.3499999940395355,
+				0.3499999940395355,
+				0.3499999940395355,
+				0.3499999940395355,
+				0.3499999940395355,
+				0.3499999940395355
+			],
+			"mCantCancelWhileWindingUp": true,
+			"mCantCancelWhileChanneling": true,
+			"mSpellRevealsChampion": false,
+			"mDoNotNeedToFaceTarget": true,
+			"mUpdateRotationWhenCasting": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				350,
+				350,
+				350,
+				350,
+				350,
+				350,
+				350
+			],
+			"castConeDistance": 100,
+			"castFrame": 10,
+			"missileSpeed": 20,
+			"bHaveHitBone": true,
+			"mHitBoneName": "head",
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"selectionPriority": 2,
+			"mSpellCooldownOrSealedQueueThreshold": null,
+			"mSpellCalculations": {
+				"{33dad32f}": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Shield"
+							},
+							"mRatio": 0.009999999776482582,
+							"{a5749b52}": "scaleAP",
+							"mStyleTag": "noScale"
+						}
+					]
+				},
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage"
+							},
+							"mRatio": 0.009999999776482582,
+							"{a5749b52}": "scaleAP",
+							"mStyleTag": "noScale"
+						}
+					]
+				}
+			}
+		}
+	},
+	"{5d637c69}": {
+		"mScriptName": "TFT3_RivenR",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mSpellTags": [
+				"Trait_Ultimate"
+			],
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						50,
+						100,
+						150,
+						600,
+						1000,
+						1250,
+						1500
+					],
+					"{3f95426c}": false,
+					"mBaseP": 50,
+					"mFormula": "P + 200"
+				},
+				{
+					"mName": "SlashHexRadius",
+					"mValues": [
+						1,
+						1,
+						1,
+						1,
+						1,
+						1,
+						1
+					],
+					"mBaseP": 1,
+					"mFormula": "P + 0"
+				},
+				{
+					"mName": "DamageFinal",
+					"mValues": [
+						0,
+						300,
+						500,
+						1500,
+						0,
+						0,
+						0
+					],
+					"{3f95426c}": false,
+					"mFormula": "P + 0"
+				},
+				{
+					"mName": "Shield",
+					"mValues": [
+						0,
+						200,
+						350,
+						1200,
+						0,
+						0,
+						0
+					],
+					"{3f95426c}": false
+				},
+				{
+					"mName": "ShieldDuration",
+					"mValues": [
+						4,
+						4,
+						4,
+						4,
+						4,
+						4,
+						4
+					],
+					"mBaseP": 4
+				}
+			],
+			"mImgIconName": [
+				"ASSETS/Characters/AurelionSol/HUD/Icons2D/AurelionSol_R.dds"
+			],
+			"mCastTime": 0.6499999761581421,
+			"mChannelDuration": [
+				0.3499999940395355,
+				0.3499999940395355,
+				0.3499999940395355,
+				0.3499999940395355,
+				0.3499999940395355,
+				0.3499999940395355,
+				0.3499999940395355
+			],
+			"mCantCancelWhileWindingUp": true,
+			"mCantCancelWhileChanneling": true,
+			"mSpellRevealsChampion": false,
+			"mDoNotNeedToFaceTarget": true,
+			"mUpdateRotationWhenCasting": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				350,
+				350,
+				350,
+				350,
+				350,
+				350,
+				350
+			],
+			"castConeDistance": 100,
+			"castFrame": 13,
+			"missileSpeed": 20,
+			"bHaveHitBone": true,
+			"mHitBoneName": "head",
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"selectionPriority": 2,
+			"mTargetingTypeData": {},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"mSpellCalculations": {
+				"{33dad32f}": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Shield"
+							},
+							"mRatio": 0.009999999776482582,
+							"{a5749b52}": "scaleAP",
+							"mStyleTag": "noScale"
+						}
+					]
+				},
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage"
+							},
+							"mRatio": 0.009999999776482582,
+							"{a5749b52}": "scaleAP",
+							"mStyleTag": "noScale"
+						}
+					]
+				},
+				"ModifiedDamageFinal": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "DamageFinal"
+							},
+							"mRatio": 0.009999999776482582,
+							"{a5749b52}": "scaleAP",
+							"mStyleTag": "noScale"
+						}
+					]
+				}
+			}
+		}
+	},
+	"{603f88d1}": {
+		"mScriptName": "TFT3_RivenBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "RivenBasicAttack",
+			"mCastTime": 0.3330000042915344,
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"useAnimatorFramerate": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 10,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"{964966cb}": {
+		"mScriptName": "TFT3_RivenR_MissileLeft",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"mAffectsStatusFlags": 160,
+			"mAlternateName": "EzrealEssenceFluxMissile",
+			"mEffectAmount": [],
+			"mCoefficient": 1,
+			"mImgIconName": [
+				"Bowmaster_EnchantedArrow.dds"
+			],
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.5,
+			"mCantCancelWhileWindingUp": true,
+			"mSpellRevealsChampion": false,
+			"bHaveHitEffect": true,
+			"castRange": [
+				700,
+				700,
+				700,
+				700,
+				700,
+				700,
+				700
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 100,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 1800,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "chest"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 13,
+			"missileSpeed": 1600,
+			"mMissileEffectKey": "{de0fef1e}",
+			"mLineWidth": 100,
+			"mHitEffectKey": "{69c3d11e}",
+			"mHitBoneName": "root",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"{a52b20b9}": {
+		"mScriptName": "TFT3_RivenCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "RivenBasicAttack",
+			"mCastTime": 0.3330000042915344,
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"useAnimatorFramerate": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 10,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"{bd319773}": {
+		"mScriptName": "TFT3_RivenR_MissileCenter",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"mAffectsStatusFlags": 160,
+			"mAlternateName": "EzrealEssenceFluxMissile",
+			"mEffectAmount": [],
+			"mCoefficient": 1,
+			"mImgIconName": [
+				"Bowmaster_EnchantedArrow.dds"
+			],
+			"mCastTime": 0.4000000059604645,
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.5,
+			"mCantCancelWhileWindingUp": true,
+			"mSpellRevealsChampion": false,
+			"useAnimatorFramerate": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				700,
+				700,
+				700,
+				700,
+				700,
+				700,
+				700
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 200,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 1800,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "chest"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 11,
+			"missileSpeed": 1600,
+			"mMissileEffectKey": "{9fdc55ba}",
+			"mLineWidth": 100,
+			"mHitEffectKey": "{69c3d11e}",
+			"mHitBoneName": "root",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"{cb2b5ab9}": {
+		"mScriptName": "TFT3_RivenBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "RivenBasicAttack",
+			"mCastTime": 0.3330000042915344,
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"useAnimatorFramerate": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 10,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"{cb952013}": {
+		"mScriptName": "TFT3_RivenQ1",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mAffectsStatusFlags": 160,
+			"mSpellTags": [
+				"Trait_Ultimate"
+			],
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						50,
+						550,
+						750,
+						2500,
+						1000,
+						1250,
+						1500
+					],
+					"{3f95426c}": false,
+					"mBaseP": 50,
+					"mFormula": "P + 200"
+				},
+				{
+					"mName": "HexRange",
+					"mValues": [
+						8,
+						8,
+						8,
+						8,
+						8,
+						8,
+						8
+					],
+					"mBaseP": 8,
+					"mFormula": "P + 0"
+				},
+				{
+					"mName": "Shield",
+					"mValues": [
+						0,
+						200,
+						300,
+						400,
+						0,
+						0,
+						0
+					],
+					"{3f95426c}": false
+				},
+				{
+					"mName": "ShieldDuration",
+					"mValues": [
+						4,
+						4,
+						4,
+						4,
+						4,
+						4,
+						4
+					],
+					"mBaseP": 4
+				}
+			],
+			"mImgIconName": [
+				"ASSETS/Characters/AurelionSol/HUD/Icons2D/AurelionSol_R.dds"
+			],
+			"mCastTime": 0.25,
+			"mChannelDuration": [
+				0.3499999940395355,
+				0.3499999940395355,
+				0.3499999940395355,
+				0.3499999940395355,
+				0.3499999940395355,
+				0.3499999940395355,
+				0.3499999940395355
+			],
+			"mCantCancelWhileWindingUp": true,
+			"mCantCancelWhileChanneling": true,
+			"mSpellRevealsChampion": false,
+			"mDoNotNeedToFaceTarget": true,
+			"mUpdateRotationWhenCasting": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				350,
+				350,
+				350,
+				350,
+				350,
+				350,
+				350
+			],
+			"castConeDistance": 100,
+			"castFrame": 9,
+			"missileSpeed": 20,
+			"bHaveHitBone": true,
+			"mHitBoneName": "head",
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"selectionPriority": 2,
+			"mTargetingTypeData": {},
+			"mSpellCooldownOrSealedQueueThreshold": null,
+			"mSpellCalculations": {
+				"{33dad32f}": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Shield"
+							},
+							"mRatio": 0.009999999776482582,
+							"{a5749b52}": "scaleAP",
+							"mStyleTag": "noScale"
+						}
+					]
+				},
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage"
+							},
+							"mRatio": 0.009999999776482582,
+							"{a5749b52}": "scaleAP",
+							"mStyleTag": "noScale"
+						}
+					]
+				}
+			}
+		}
+	},
+	"{cc9521a6}": {
+		"mScriptName": "TFT3_RivenQ2",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mAffectsStatusFlags": 160,
+			"mSpellTags": [
+				"Trait_Ultimate"
+			],
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						50,
+						550,
+						750,
+						2500,
+						1000,
+						1250,
+						1500
+					],
+					"{3f95426c}": false,
+					"mBaseP": 50,
+					"mFormula": "P + 200"
+				},
+				{
+					"mName": "HexRange",
+					"mValues": [
+						8,
+						8,
+						8,
+						8,
+						8,
+						8,
+						8
+					],
+					"mBaseP": 8,
+					"mFormula": "P + 0"
+				},
+				{
+					"mName": "Shield",
+					"mValues": [
+						0,
+						200,
+						300,
+						400,
+						0,
+						0,
+						0
+					],
+					"{3f95426c}": false
+				},
+				{
+					"mName": "ShieldDuration",
+					"mValues": [
+						4,
+						4,
+						4,
+						4,
+						4,
+						4,
+						4
+					],
+					"mBaseP": 4
+				}
+			],
+			"mImgIconName": [
+				"ASSETS/Characters/AurelionSol/HUD/Icons2D/AurelionSol_R.dds"
+			],
+			"mCastTime": 0.25,
+			"mChannelDuration": [
+				0.3499999940395355,
+				0.3499999940395355,
+				0.3499999940395355,
+				0.3499999940395355,
+				0.3499999940395355,
+				0.3499999940395355,
+				0.3499999940395355
+			],
+			"mCantCancelWhileWindingUp": true,
+			"mCantCancelWhileChanneling": true,
+			"mSpellRevealsChampion": false,
+			"mDoNotNeedToFaceTarget": true,
+			"mUpdateRotationWhenCasting": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				350,
+				350,
+				350,
+				350,
+				350,
+				350,
+				350
+			],
+			"castConeDistance": 100,
+			"castFrame": 7,
+			"missileSpeed": 20,
+			"bHaveHitBone": true,
+			"mHitBoneName": "head",
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"selectionPriority": 2,
+			"mTargetingTypeData": {},
+			"mSpellCooldownOrSealedQueueThreshold": null,
+			"mSpellCalculations": {
+				"{33dad32f}": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Shield"
+							},
+							"mRatio": 0.009999999776482582,
+							"{a5749b52}": "scaleAP",
+							"mStyleTag": "noScale"
+						}
+					]
+				},
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage"
+							},
+							"mRatio": 0.009999999776482582,
+							"{a5749b52}": "scaleAP",
+							"mStyleTag": "noScale"
+						}
+					]
+				}
+			}
+		}
+	},
+	"{f23b42d4}": {
+		"mScriptName": "TFT3_RivenR_MissileRight",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"mAffectsStatusFlags": 160,
+			"mAlternateName": "EzrealEssenceFluxMissile",
+			"mEffectAmount": [],
+			"mCoefficient": 1,
+			"mImgIconName": [
+				"Bowmaster_EnchantedArrow.dds"
+			],
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.5,
+			"mCantCancelWhileWindingUp": true,
+			"mSpellRevealsChampion": false,
+			"bHaveHitEffect": true,
+			"castRange": [
+				700,
+				700,
+				700,
+				700,
+				700,
+				700,
+				700
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 100,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 1800,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "chest"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 13,
+			"missileSpeed": 1600,
+			"mMissileEffectKey": "{dcb21173}",
+			"mLineWidth": 100,
+			"mHitEffectKey": "{69c3d11e}",
+			"mHitBoneName": "root",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"{8a8d1573}": {
+		"PortraitIcon": "ASSETS/Characters/TFT3_Riven/HUD/TFT3_Riven_Square.TFT_Set3_Act2.dds",
+		"tier": 4,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{58272f02}"
+			},
+			{
+				"TraitData": "{fad58c1b}"
+			}
+		],
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mCharacterName": "TFT3_Riven",
+		"baseHP": 850,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 25,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 70,
+		"baseArmor": 35,
+		"baseSpellBlock": 30,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.8500000238418579,
+		"basicAttack": {
+			"mAttackName": "TFT3_RivenBasicAttack"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT3_RivenBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT3_RivenCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT3_RivenR",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"TFT3_RivenQ1",
+			"TFT3_RivenQ2",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446664
+	}
+}

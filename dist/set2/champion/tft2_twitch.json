@@ -1,0 +1,358 @@
+{
+	"Characters/TFT2_Twitch/Spells/TFT2_TwitchRAttack": {
+		"mScriptName": "TFT2_TwitchRAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 6826,
+			"mAlternateName": "TwitchFullAutomatic",
+			"mSpellTags": [
+				"Trait_MultiTargetAttack"
+			],
+			"delayCastOffsetPercent": -0.22220000624656677,
+			"delayTotalTimePercent": -0.33329999446868896,
+			"canCastWhileDisabled": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000
+			],
+			"castRadius": [
+				210,
+				210,
+				210,
+				210,
+				210,
+				210,
+				210
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 60,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 4000,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mStartBoneName": "weapon"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 7.5,
+			"missileSpeed": 4000,
+			"mMissileEffectKey": "TFT2_Twitch_R_mis",
+			"mLineWidth": 60,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT2_Twitch/Spells/TFT2_TwitchBasicAttack": {
+		"mScriptName": "TFT2_TwitchBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 7375,
+			"mAlternateName": "TwitchBasicAttack",
+			"mApplyMaterialOnHitSound": true,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				550,
+				550,
+				550,
+				550,
+				550,
+				550,
+				550
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2500,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "weapon"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 12.739999771118164,
+			"missileSpeed": 2500,
+			"mMissileEffectKey": "TFT2_Twitch_BA_mis",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT2_Twitch/Spells/TFT2_TwitchCritAttack": {
+		"mScriptName": "TFT2_TwitchCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 7375,
+			"mAlternateName": "TwitchCritAttack",
+			"mApplyMaterialOnHitSound": true,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				550,
+				550,
+				550,
+				550,
+				550,
+				550,
+				550
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2500,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "weapon"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 12.739999771118164,
+			"missileSpeed": 2500,
+			"mMissileEffectKey": "TFT2_Twitch_BA_mis",
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT2_Twitch/Spells/TFT2_TwitchR": {
+		"mScriptName": "TFT2_TwitchR",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"mSpellTags": [
+				"Trait_Ultimate",
+				"Trait_SylasSpecialAttackOverride"
+			],
+			"mDataValues": [
+				{
+					"mName": "Duration",
+					"mValues": [
+						8,
+						8,
+						8,
+						8,
+						8,
+						8,
+						8
+					],
+					"mBaseP": 8,
+					"mFormula": "P"
+				},
+				{
+					"mName": "ADAmp",
+					"mValues": [
+						1,
+						1.2999999523162842,
+						1.600000023841858,
+						3,
+						2.25,
+						2.5,
+						2.75
+					],
+					"{3f95426c}": false,
+					"mBaseP": 1.25,
+					"mFormula": "P + 0.25"
+				}
+			],
+			"mCastTime": 0.5,
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				20,
+				20,
+				20,
+				20,
+				20,
+				20,
+				20
+			],
+			"castConeDistance": 100,
+			"castFrame": 3.059999942779541,
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"selectionPriority": 1,
+			"mTargetingTypeData": {},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"mSpellCalculations": {
+				"BonusADDamage": {
+					"mFormulaParts": [
+						{
+							"mDataValue": "{cfaa2ad6}",
+							"mStat": 2
+						}
+					]
+				}
+			}
+		}
+	},
+	"Characters/TFT2_Twitch/Spells/TFT2_TwitchBasicAttack2": {
+		"mScriptName": "TFT2_TwitchBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 7375,
+			"mAlternateName": "TwitchBasicAttack2",
+			"mApplyMaterialOnHitSound": true,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				550,
+				550,
+				550,
+				550,
+				550,
+				550,
+				550
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2500,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "weapon"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 13.15999984741211,
+			"missileSpeed": 2500,
+			"mMissileEffectKey": "TFT2_Twitch_BA_mis",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"{0d79780f}": {},
+	"Characters/TFT2_Twitch/CharacterRecords/Root": {
+		"{f2c13b77}": "ASSETS/Characters/TFT2_Twitch/HUD/TFT2_Twitch_Square.TFT_Set2.dds",
+		"tier": 4,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{3bf72878}"
+			},
+			{
+				"TraitData": "{4bd2d826}"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"{ef57098f}": false,
+		"mCharacterName": "TFT2_Twitch",
+		"baseHP": 650,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 70,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 70,
+		"baseArmor": 20,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 890,
+		"attackSpeed": 0.75,
+		"basicAttack": {
+			"mAttackName": "TFT2_TwitchBasicAttack"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT2_TwitchBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT2_TwitchCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT2_TwitchR",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 1,
+		"unitTagsString": "Champion",
+		"flags": 9446656
+	}
+}

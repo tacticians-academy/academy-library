@@ -1,0 +1,320 @@
+{
+	"Characters/TFT2_Sion/Spells/TFT2_SionQ": {
+		"mScriptName": "TFT2_SionQ",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mSpellTags": [
+				"Trait_ChannelSpell"
+			],
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						0,
+						200,
+						350,
+						700,
+						800,
+						1000,
+						1200
+					],
+					"{3f95426c}": false,
+					"mFormula": "P+200"
+				},
+				{
+					"mName": "HexRange",
+					"mValues": [
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2
+					],
+					"mBaseP": 2,
+					"mFormula": "P"
+				},
+				{
+					"mName": "ChargeUpTime",
+					"mValues": [
+						0.75,
+						0.75,
+						0.75,
+						0.75,
+						0.75,
+						0.75,
+						0.75
+					],
+					"mBaseP": 0.75,
+					"mFormula": "P"
+				}
+			],
+			"mChannelDuration": [
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"mUseChargeChanneling": true,
+			"mDisableCastBar": true,
+			"useAnimatorFramerate": true,
+			"mHideRangeIndicatorWhenCasting": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castFrame": 7.5,
+			"missileSpeed": 1500,
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"selectionPriority": 1,
+			"mTargetingTypeData": {},
+			"{00f7e5bc}": true,
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage"
+							},
+							"mRatio": 0.009999999776482582,
+							"{a5749b52}": "scaleAP",
+							"mStyleTag": "noScale"
+						}
+					]
+				}
+			}
+		},
+		"mBuff": {
+			"mDescription": "game_buff_tooltip_VarusQ"
+		}
+	},
+	"Characters/TFT2_Sion/Spells/TFT2_SionQDamage": {
+		"mScriptName": "TFT2_SionQDamage",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -0.75,
+			"delayTotalTimePercent": -0.5,
+			"mCantCancelWhileWindingUp": true,
+			"alwaysSnapFacing": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				350,
+				350,
+				350,
+				350,
+				350,
+				350,
+				350
+			],
+			"castConeAngle": 8,
+			"castConeDistance": 1550,
+			"castFrame": 18,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mTargetingTypeData": {}
+		},
+		"mBuff": {
+			"mDescription": "game_buff_tooltip_ForcePulse"
+		}
+	},
+	"Characters/TFT2_Sion/Spells/TFT2_SionCritAttack": {
+		"mScriptName": "TFT2_SionCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.33329999446868896,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				20,
+				20,
+				20,
+				20,
+				20,
+				20,
+				20
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 11,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT2_Sion/Spells/TFT2_SionBasicAttack2": {
+		"mScriptName": "TFT2_SionBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mCastTime": 0.3666999936103821,
+			"delayCastOffsetPercent": -0.30000001192092896,
+			"mCantCancelWhileChanneling": true,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				20,
+				20,
+				20,
+				20,
+				20,
+				20,
+				20
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 11,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_Buffbone_Glb_Chest_Loc"
+		}
+	},
+	"Characters/TFT2_Sion/Spells/TFT2_SionBasicAttack": {
+		"mScriptName": "TFT2_SionBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mCastTime": 0.3666999936103821,
+			"delayCastOffsetPercent": -0.30000001192092896,
+			"mCantCancelWhileChanneling": true,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				20,
+				20,
+				20,
+				20,
+				20,
+				20,
+				20
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 10,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_Buffbone_Glb_Chest_Loc"
+		}
+	},
+	"{aa96c589}": {},
+	"Characters/TFT2_Sion/CharacterRecords/Root": {
+		"{f2c13b77}": "ASSETS/Characters/TFT2_Sion/HUD/TFT2_Sion_Square.TFT_Set2.dds",
+		"tier": 3,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{c95f8e64}"
+			},
+			{
+				"TraitData": "{c1066919}"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mInitialMana": 75,
+		"mCharacterName": "TFT2_Sion",
+		"baseHP": 850,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 125,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 65,
+		"baseArmor": 35,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 180,
+		"attackSpeed": 0.6499999761581421,
+		"basicAttack": {
+			"mAttackName": "TFT2_SionBasicAttack"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT2_SionBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT2_SionCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT2_SionQ",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 3,
+		"unitTagsString": "Champion",
+		"flags": 9446656
+	}
+}

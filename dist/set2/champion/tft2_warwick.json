@@ -1,0 +1,386 @@
+{
+	"Characters/TFT2_Warwick/Spells/TFT2_WarwickCritAttack": {
+		"mScriptName": "TFT2_WarwickCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "WarwickCritAttack",
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT2_Warwick/Spells/TFT2_WarwickBasicAttack2": {
+		"mScriptName": "TFT2_WarwickBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "WarwickBasicAttack",
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT2_Warwick/Spells/TFT2_WarwickRChannel": {
+		"mScriptName": "TFT2_WarwickRChannel",
+		"mSpell": {
+			"mAffectsTypeFlags": 4106,
+			"mRequiredUnitTags": {
+				"mTagList": "Champion"
+			},
+			"mAlternateName": "TFT2_WarwickR",
+			"mEffectAmount": [],
+			"mImgIconName": [
+				"TFT2_Warwick_R.dds"
+			],
+			"mCastTime": 0.0010000000474974513,
+			"mChannelDuration": [
+				1.5,
+				1.5,
+				1.5,
+				1.5,
+				1.5,
+				1.5,
+				1.5
+			],
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.75,
+			"canCastWhileDisabled": true,
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"mCantCancelWhileChanneling": true,
+			"bHaveHitEffect": true,
+			"mDoNotNeedToFaceTarget": true,
+			"castRange": [
+				700,
+				700,
+				700,
+				700,
+				700,
+				700,
+				700
+			],
+			"castRadius": [
+				20,
+				20,
+				20,
+				20,
+				20,
+				20,
+				20
+			],
+			"castConeDistance": 100,
+			"castFrame": 4.619999885559082,
+			"missileSpeed": 0,
+			"mHitEffectName": "TFT2_WarwickR_tar.troy",
+			"selectionPriority": 1
+		}
+	},
+	"Characters/TFT2_Warwick/Spells/TFT2_WarwickRAbility": {
+		"mRootSpell": "{9b9c49b9}",
+		"mChildSpells": [
+			"{9b9c49b9}"
+		],
+		"{86ddaddb}": true,
+		"mName": "TFT2_WarwickRAbility"
+	},
+	"{9b9c49b9}": {
+		"mScriptName": "TFT2_WarwickR",
+		"mSpell": {
+			"mAffectsTypeFlags": 4106,
+			"mAlternateName": "TFT2_WarwickR",
+			"mSpellTags": [
+				"PositiveEffect_MoveBlock",
+				"Trait_Ultimate"
+			],
+			"mDataValues": [
+				{
+					"mName": "Duration",
+					"mValues": [
+						1.5,
+						1.5,
+						1.5,
+						1.5,
+						1.5,
+						1.5,
+						1.5
+					],
+					"mBaseP": 1.5
+				},
+				{
+					"mName": "BaseDamage",
+					"mValues": [
+						-100,
+						200,
+						500,
+						800,
+						1100,
+						1400,
+						1700
+					],
+					"mBaseP": -100,
+					"mFormula": "P + 300"
+				},
+				{
+					"mName": "DashHexSpeed",
+					"mValues": [
+						6,
+						6,
+						6,
+						6,
+						6,
+						6,
+						6
+					],
+					"mBaseP": 6
+				},
+				{
+					"mName": "Hits",
+					"mValues": [
+						3,
+						3,
+						3,
+						3,
+						3,
+						3,
+						3
+					],
+					"mBaseP": 3
+				}
+			],
+			"mCastTime": 0.10000000149011612,
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.5,
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"mCantCancelWhileChanneling": true,
+			"mSpellRevealsChampion": false,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				675,
+				675,
+				675,
+				675,
+				675,
+				675,
+				675
+			],
+			"castRadiusSecondary": [
+				400,
+				400,
+				400,
+				400,
+				400,
+				400,
+				400
+			],
+			"castConeDistance": 100,
+			"castFrame": 4.619999885559082,
+			"missileSpeed": 0,
+			"mFloatVarsDecimals": [
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"selectionPriority": 1,
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "BaseDamage"
+							},
+							"mRatio": 0.009999999776482582,
+							"{a5749b52}": "scaleAP",
+							"mStyleTag": "noScale"
+						}
+					]
+				}
+			}
+		},
+		"mBuff": {
+			"mDescription": "game_buff_tooltip_TFT2_WarwickR"
+		}
+	},
+	"Characters/TFT2_Warwick/Spells/TFT2_WarwickBasicAttack": {
+		"mScriptName": "TFT2_WarwickBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "WarwickBasicAttack",
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT2_Warwick/CharacterRecords/Root": {
+		"{f2c13b77}": "ASSETS/Characters/TFT2_Warwick/HUD/TFT2_Warwick_Square_0.TFT_Set2.dds",
+		"tier": 1,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{b87e9a7e}"
+			},
+			{
+				"TraitData": "{8d21be8f}"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mInitialMana": 50,
+		"mCharacterName": "TFT2_Warwick",
+		"baseHP": 650,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 125,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 50,
+		"baseArmor": 30,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 180,
+		"attackSpeed": 0.6000000238418579,
+		"basicAttack": {
+			"mAttackCastTime": 0.8500000238418579,
+			"mAttackProbability": 0.5,
+			"mAttackName": "TFT2_WarwickBasicAttack"
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 0.5,
+				"mAttackName": "TFT2_WarwickBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT2_WarwickCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT2_WarwickRAbility/TFT2_WarwickR",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"TFT2_WarwickRChannel",
+			"TFT2_WarwickPSpellInfo",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 2,
+		"unitTagsString": "Champion",
+		"flags": 9446656
+	},
+	"{6b0bf1ec}": {
+		"useGDSBinaries": true
+	}
+}

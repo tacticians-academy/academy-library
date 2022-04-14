@@ -1,0 +1,245 @@
+{
+	"Characters/TFT5_Sejuani/Spells/TFT5_SejuaniPStun": {
+		"mScriptName": "TFT5_SejuaniPStun",
+		"mSpell": {
+			"mAffectsTypeFlags": 7423,
+			"canCastWhileDisabled": true,
+			"mCantCancelWhileWindingUp": true,
+			"mDisableCastBar": true,
+			"castRange": [
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000
+			],
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT5_Sejuani/Spells/TFT5_SejuaniCritAttack": {
+		"mScriptName": "TFT5_SejuaniCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.3999999761581421,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castConeAngle": 0,
+			"castConeDistance": 0,
+			"castFrame": 9,
+			"missileSpeed": 0,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT5_Sejuani/Spells/TFT5_SejuaniBasicAttack": {
+		"mScriptName": "TFT5_SejuaniBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -1,
+			"bHaveHitEffect": true,
+			"castRange": [
+				125,
+				125,
+				125,
+				125,
+				125,
+				125,
+				125
+			],
+			"castConeDistance": 100,
+			"castFrame": 9,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT5_Sejuani/Spells/TFT5_SejuaniP": {
+		"mScriptName": "TFT5_SejuaniP",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mDataValues": [
+				{
+					"mName": "DefensiveStats",
+					"mValues": [
+						0,
+						60,
+						100,
+						200,
+						0,
+						0,
+						0
+					],
+					"{3f95426c}": false,
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "Duration",
+					"mValues": [
+						4,
+						4,
+						4,
+						4,
+						4,
+						4,
+						4
+					],
+					"mBaseP": 4,
+					"mFormula": "P + 0",
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "StunDuration",
+					"mValues": [
+						0,
+						2,
+						3,
+						4,
+						0,
+						0,
+						0
+					],
+					"{3f95426c}": false,
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "MagicDamage",
+					"mValues": [
+						0,
+						300,
+						450,
+						750,
+						0,
+						0,
+						0
+					],
+					"{3f95426c}": false,
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"ModifiedDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "MagicDamage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"delayCastOffsetPercent": 0.2999999523162842,
+			"castRange": [
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000
+			],
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT5_Sejuani/CharacterRecords/Root": {
+		"PortraitIcon": "ASSETS/Characters/TFT5_Sejuani/HUD/TFT5_Sejuani_Square.TFT_Set5.dds",
+		"tier": 2,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{7591b9d0}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{fc4dddd4}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{12c59978}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mInitialMana": 20,
+		"mCharacterName": "TFT5_Sejuani",
+		"baseHP": 750,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 80,
+			"arBaseStaticRegen": 0,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 65,
+		"baseArmor": 45,
+		"baseSpellBlock": 45,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.2999999523162842,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.550000011920929,
+		"basicAttack": {
+			"mAttackName": "TFT5_SejuaniBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"critAttacks": [
+			{
+				"mAttackName": "TFT5_SejuaniCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT5_SejuaniP",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"TFT5_SejuaniPStun",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 8398088,
+		"__type": "TFTCharacterRecord"
+	}
+}

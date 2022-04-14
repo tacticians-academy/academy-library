@@ -1,0 +1,387 @@
+{
+	"Characters/TFT5_Ivern/Spells/TFT5_IvernCritAttack": {
+		"mScriptName": "TFT5_IvernCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 6827,
+			"delayCastOffsetPercent": -0.34850001335144043,
+			"useAnimatorFramerate": true,
+			"bHaveHitEffect": true,
+			"mUseAutoattackCastTimeData": {
+				"__type": "UseAutoattackCastTimeData"
+			},
+			"mConsideredAsAutoAttack": true,
+			"castRange": [
+				150,
+				150,
+				150,
+				150,
+				150,
+				150,
+				150
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mAcceleration": -15000,
+					"mMinSpeed": 1500,
+					"mMaxSpeed": 3000,
+					"mInitialSpeed": 2000,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "C_Buffbone_Glb_Head_Loc",
+					"__type": "AcceleratingMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 7.75,
+			"missileSpeed": 4000,
+			"mMissileEffectKey": "{e9358557}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT5_Ivern/Spells/TFT5_IvernBasicAttack": {
+		"mScriptName": "TFT5_IvernBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 6827,
+			"delayCastOffsetPercent": -0.34850001335144043,
+			"useAnimatorFramerate": true,
+			"bHaveHitEffect": true,
+			"mUseAutoattackCastTimeData": {
+				"__type": "UseAutoattackCastTimeData"
+			},
+			"mConsideredAsAutoAttack": true,
+			"castRange": [
+				150,
+				150,
+				150,
+				150,
+				150,
+				150,
+				150
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mAcceleration": -15000,
+					"mMinSpeed": 1500,
+					"mMaxSpeed": 3000,
+					"mInitialSpeed": 2000,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "C_Buffbone_Glb_Head_Loc",
+					"__type": "AcceleratingMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 7.75,
+			"missileSpeed": 4000,
+			"mMissileEffectKey": "{e9358557}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT5_Ivern/Spells/TFT5_IvernR": {
+		"mScriptName": "TFT5_IvernR",
+		"mSpell": {
+			"mAffectsTypeFlags": 9217,
+			"mDataValues": [
+				{
+					"mName": "AbilityPowerBonus",
+					"mValues": [
+						0,
+						100,
+						150,
+						300,
+						0,
+						0,
+						0
+					],
+					"{3f95426c}": false,
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "DaisyBonusAPConversion",
+					"mValues": [
+						100,
+						100,
+						100,
+						100,
+						100,
+						100,
+						100
+					],
+					"mBaseP": 100,
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "DaisyHealth",
+					"mValues": [
+						0,
+						1500,
+						2400,
+						10000,
+						0,
+						0,
+						0
+					],
+					"{3f95426c}": false,
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"{f2845fa0}": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{2b7760d5}",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"mCastTime": 0.5,
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"mSpellRevealsChampion": false,
+			"mShowChannelBar": false,
+			"alwaysSnapFacing": true,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				285,
+				285,
+				285,
+				285,
+				285,
+				285,
+				285
+			],
+			"castConeDistance": 100,
+			"castFrame": 7.5,
+			"missileSpeed": 20,
+			"mLookAtPolicy": 1,
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"mSpellCooldownOrSealedQueueThreshold": 0,
+			"__type": "SpellDataResource"
+		},
+		"mBuff": {
+			"mDescription": "game_buff_tooltip_IvernE",
+			"__type": "BuffData"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT5_Ivern/Spells/TFT5_IvernBasicAttack2": {
+		"mScriptName": "TFT5_IvernBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 6827,
+			"delayCastOffsetPercent": -0.34850001335144043,
+			"useAnimatorFramerate": true,
+			"bHaveHitEffect": true,
+			"mUseAutoattackCastTimeData": {
+				"__type": "UseAutoattackCastTimeData"
+			},
+			"mConsideredAsAutoAttack": true,
+			"castRange": [
+				150,
+				150,
+				150,
+				150,
+				150,
+				150,
+				150
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mAcceleration": -15000,
+					"mMinSpeed": 1500,
+					"mMaxSpeed": 3000,
+					"mInitialSpeed": 2000,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "C_Buffbone_Glb_Head_Loc",
+					"__type": "AcceleratingMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 7.75,
+			"missileSpeed": 4000,
+			"mMissileEffectKey": "{e9358557}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT5_Ivern/CharacterRecords/Root": {
+		"PortraitIcon": "ASSETS/Characters/TFT5_Ivern/HUD/TFT5_Ivern_Square.TFT_Set5.dds",
+		"tier": 4,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{d08c9ee6}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{3adcd321}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{039d6cc5}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 520,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mInitialMana": 100,
+		"mCharacterName": "TFT5_Ivern",
+		"baseHP": 950,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 180,
+			"arBaseStaticRegen": 0,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 40,
+		"baseArmor": 50,
+		"baseSpellBlock": 50,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.2999999523162842,
+		"baseMoveSpeed": 500,
+		"attackRange": 420,
+		"attackSpeed": 0.75,
+		"basicAttack": {
+			"mAttackName": "TFT5_IvernBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT5_IvernBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT5_IvernCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT5_IvernR",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 2,
+		"unitTagsString": "Champion",
+		"flags": 9446656,
+		"__type": "TFTCharacterRecord"
+	}
+}

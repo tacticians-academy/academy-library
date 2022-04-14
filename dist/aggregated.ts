@@ -8,6 +8,18 @@ export enum AugmentGroupKey {
 export enum ChampionKey {
 	// Set 1
 	Aatrox = `Aatrox`, Ahri = `Ahri`, Akali = `Akali`, Anivia = `Anivia`, Ashe = `Ashe`, AurelionSol = `Aurelion Sol`, Blitzcrank = `Blitzcrank`, Brand = `Brand`, Braum = `Braum`, Camille = `Camille`, ChoGath = `Cho'Gath`, Darius = `Darius`, Draven = `Draven`, Elise = `Elise`, Evelynn = `Evelynn`, Fiora = `Fiora`, Gangplank = `Gangplank`, Garen = `Garen`, Gnar = `Gnar`, Graves = `Graves`, Jayce = `Jayce`, Jinx = `Jinx`, KaiSa = `Kai'Sa`, Karthus = `Karthus`, Kassadin = `Kassadin`, Katarina = `Katarina`, Kayle = `Kayle`, Kennen = `Kennen`, KhaZix = `Kha'Zix`, Kindred = `Kindred`, Leona = `Leona`, Lissandra = `Lissandra`, Lucian = `Lucian`, Lulu = `Lulu`, MissFortune = `Miss Fortune`, Mordekaiser = `Mordekaiser`, Morgana = `Morgana`, Nidalee = `Nidalee`, Pantheon = `Pantheon`, Poppy = `Poppy`, Pyke = `Pyke`, RekSai = `Rek'Sai`, Rengar = `Rengar`, Sejuani = `Sejuani`, Shen = `Shen`, Shyvana = `Shyvana`, Swain = `Swain`, Tristana = `Tristana`, TwistedFate = `Twisted Fate`, Varus = `Varus`, Vayne = `Vayne`, Veigar = `Veigar`, Vi = `Vi`, Volibear = `Volibear`, Warwick = `Warwick`, Yasuo = `Yasuo`, Zed = `Zed`,
+	// Set 2
+	Amumu = `Amumu`, Annie = `Annie`, Azir = `Azir`, Diana = `Diana`, Ivern = `Ivern`, Jax = `Jax`, Karma = `Karma`, Khazix = `Kha'Zix`, LeBlanc = `LeBlanc`, LuxCrystal = `Lux`, LuxElectric = `Lux`, LuxGlacial = `Lux`, LuxInferno = `Lux`, LuxLight = `Lux`, LuxMetal = `Lux`, LuxOcean = `Lux`, LuxShadow = `Lux`, LuxWind = `Lux`, LuxWoodland = `Lux`, Malphite = `Malphite`, Maokai = `Maokai`, MasterYi = `Master Yi`, Nami = `Nami`, Nasus = `Nasus`, Nautilus = `Nautilus`, Neeko = `Neeko`, Olaf = `Olaf`, Ornn = `Ornn`, Qiyana = `Qiyana`, QiyanaOcean = `Qiyana`, QiyanaInferno = `Qiyana`, QiyanaWoodland = `Qiyana`, QiyanaWind = `Qiyana`, Renekton = `Renekton`, Skarner = `Skarner`, Soraka = `Soraka`, Taliyah = `Taliyah`, Thresh = `Thresh`, Vladimir = `Vladimir`, Yorick = `Yorick`,
+	// Set 3
+	Fizz = `Fizz`, Rakan = `Rakan`, Rumble = `Rumble`, Sona = `Sona`, SuperMech = `Super-Mech`, VelKoz = `Vel'Koz`, Wukong = `Wukong`, Xayah = `Xayah`, Xerath = `Xerath`, XinZhao = `Xin Zhao`, Zoe = `Zoe`,
+	// Set 3.5
+	Bard = `Bard`, Cassiopeia = `Cassiopeia`, BardMeep = `Meep`, Riven = `Riven`, Teemo = `Teemo`,
+	// Set 4
+	Aphelios = `Aphelios`, Hecarim = `Hecarim`, Kalista = `Kalista`, Kayn = `Kayn`, LeeSin = `Lee Sin`, Lillia = `Lillia`, NPC = `Nexus Minion`, Nunu = `Nunu & Willump`, AzirSoldier = `Sand Guard`, Sett = `Sett`, Sylas = `Sylas`,
+	// Set 5
+	HeimerTurret = `Baby Dragon`, IvernMinion = `Daisy`, DraconicEgg = `Draconic Egg`, Gragas = `Gragas`, Kled = `Kled`, Rell = `Rell`, Ryze = `Ryze`, Monstrosity = `The Monstrosity`, Udyr = `Udyr`, Velkoz = `Vel'Koz`, Viego = `Viego`, KindredWolfCombat = `Wolf`,
+	// Set 5.5
+	Akshan = `Akshan`, Fiddlesticks = `Fiddlesticks`, Gwen = `Gwen`,
 	// Set 6
 	Caitlyn = `Caitlyn`, DrMundo = `Dr. Mundo`, Ekko = `Ekko`, Ezreal = `Ezreal`, Galio = `Galio`, Heimerdinger = `Heimerdinger`, Illaoi = `Illaoi`, Janna = `Janna`, Jhin = `Jhin`, Kaisa = `Kai'Sa`, KogMaw = `Kog'Maw`, Lux = `Lux`, Malzahar = `Malzahar`, Tibbers = `Mechanical Bear`, HexTechDragon = `Mechanical Dragon`, MalzaharVoidling = `Mechanical Scarab`, Orianna = `Orianna`, Quinn = `Quinn`, Samira = `Samira`, Seraphine = `Seraphine`, Shaco = `Shaco`, Singed = `Singed`, Sion = `Sion`, TahmKench = `Tahm Kench`, Talon = `Talon`, TrainingDummy = `Target Dummy`, Taric = `Taric`, Trundle = `Trundle`, Twitch = `Twitch`, Urgot = `Urgot`, Vex = `Vex`, Viktor = `Viktor`, VoidSpawn = `Voidspawn`, Yone = `Yone`, Yuumi = `Yuumi`, Zac = `Zac`, Ziggs = `Ziggs`, Zilean = `Zilean`, Zyra = `Zyra`,
 	// Set 6.5
@@ -17,6 +29,20 @@ export enum ChampionKey {
 export enum ItemKey {
 	// Set 1
 	BFSword = `B. F. Sword`, BladeOfTheRuinedKing = `Blade of the Ruined King`, Bloodthirster = `Bloodthirster`, ChainVest = `Chain Vest`, CursedBlade = `Cursed Blade`, Darkin = `Darkin`, Deathblade = `Deathblade`, DragonsClaw = `Dragon's Claw`, ForceOfNature = `Force of Nature`, FrozenHeart = `Frozen Heart`, FrozenMallet = `Frozen Mallet`, GiantsBelt = `Giant's Belt`, GiantSlayer = `Giant Slayer`, GuardianAngel = `Guardian Angel`, GuinsoosRageblade = `Guinsoo's Rageblade`, HandOfJustice = `Hand Of Justice`, HextechGunblade = `Hextech Gunblade`, Hush = `Hush`, IcebornGauntlet = `Iceborn Gauntlet`, InfinityEdge = `Infinity Edge`, IonicSpark = `Ionic Spark`, JeweledGauntlet = `Jeweled Gauntlet`, KnightsVow = `Knight's Vow`, LocketOfTheIronSolari = `Locket of the Iron Solari`, LudensEcho = `Luden's Echo`, Mittens = `Mittens`, Morellonomicon = `Morellonomicon`, NeedlesslyLargeRod = `Needlessly Large Rod`, NegatronCloak = `Negatron Cloak`, PhantomDancer = `Phantom Dancer`, Quicksilver = `Quicksilver`, RabadonsDeathcap = `Rabadon's Deathcap`, RapidFirecannon = `Rapid Firecannon`, RecurveBow = `Recurve Bow`, RedBuff = `Red Buff`, Redemption = `Redemption`, RepeatingCrossbow = `Repeating Crossbow`, RunaansHurricane = `Runaan's Hurricane`, SeraphsEmbrace = `Seraph's Embrace`, SparringGloves = `Sparring Gloves`, Spatula = `Spatula`, SpearOfShojin = `Spear of Shojin`, StatikkShiv = `Statikk Shiv`, SwordBreaker = `Sword Breaker`, TearOfTheGoddess = `Tear of the Goddess`, ThiefsGloves = `Thief's Gloves`, Thornmail = `Thornmail`, TitanicHydra = `Titanic Hydra`, TrapClaw = `Trap Claw`, WarmogsArmor = `Warmog's Armor`, YoumuusGhostblade = `Youmuu's Ghostblade`, Yuumi = `Yuumi`, ZekesHerald = `Zeke's Herald`, Zephyr = `Zephyr`,
+	// Set 2
+	BerserkersAxe = `Berserker's Axe`, InfernosCinder = `Inferno's Cinder`, MagesCap = `Mages Cap`, TalismanOfLight = `Talisman of Light`, WardensMail = `Warden's Mail`,
+	// Set 3
+	CelestialOrb = `Celestial Orb`, ChaliceOfFavor = `Chalice of Favor`, RebelMedal = `Rebel Medal`, StarGuardiansCharm = `Star Guardian's Charm`,
+	// Set 3.5
+	BattlecastPlating = `Battlecast Plating`,
+	// Set 4
+	AspectOfDusk = `Aspect of Dusk`, ElderwoodSprout = `Elderwood Sprout`, WarlordsBanner = `Warlord's Banner`,
+	// Set 4.5
+	SpiritOfTheDragon = `Spirit of the Dragon`,
+	// Set 5
+	DawnbringerEmblem = `Dawnbringer Emblem`, RenewerEmblem = `Renewer Emblem`, SpellweaverEmblem = `Spellweaver Emblem`,
+	// Set 5.5
+	CavalierEmblem = `Cavalier Emblem`, HellionEmblem = `Hellion Emblem`,
 	// Set 6
 	AcademyEmblem = `Academy Emblem`, ArcanistEmblem = `Arcanist Emblem`, ArchangelsStaff = `Archangel's Staff`, AssassinEmblem = `Assassin Emblem`, BansheesClaw = `Banshee's Claw`, BlueBuff = `Blue Buff`, BodyguardEmblem = `Bodyguard Emblem`, BrambleVest = `Bramble Vest`, BruiserEmblem = `Bruiser Emblem`, ChaliceOfPower = `Chalice of Power`, ChallengerEmblem = `Challenger Emblem`, ChemtechEmblem = `Chemtech Emblem`, ClockworkEmblem = `Clockwork Emblem`, EnforcerEmblem = `Enforcer Emblem`, GargoyleStoneplate = `Gargoyle Stoneplate`, InnovatorEmblem = `Innovator Emblem`, LastWhisper = `Last Whisper`, MercenaryEmblem = `Mercenary Emblem`, MutantEmblem = `Mutant Emblem`, ProtectorEmblem = `Protector Emblem`, ScholarEmblem = `Scholar Emblem`, ScrapEmblem = `Scrap Emblem`, ShroudOfStillness = `Shroud of Stillness`, SniperEmblem = `Sniper Emblem`, SocialiteEmblem = `Socialite Emblem`, SunfireCape = `Sunfire Cape`, SyndicateEmblem = `Syndicate Emblem`, TacticiansCrown = `Tactician's Crown`, TitansResolve = `Titan's Resolve`, ZzRotPortal = `Zz'Rot Portal`,
 	// Set 6.5
@@ -26,6 +52,20 @@ export enum ItemKey {
 export enum TraitKey {
 	// Set 1
 	Assassin = `Assassin`, Blademaster = `Blademaster`, Brawler = `Brawler`, Demon = `Demon`, Dragon = `Dragon`, Elementalist = `Elementalist`, Exile = `Exile`, Glacial = `Glacial`, Guardian = `Guardian`, Gunslinger = `Gunslinger`, Hextech = `Hextech`, Imperial = `Imperial`, Knight = `Knight`, Ninja = `Ninja`, Noble = `Noble`, Phantom = `Phantom`, Pirate = `Pirate`, Ranger = `Ranger`, Robot = `Robot`, Shapeshifter = `Shapeshifter`, Sorcerer = `Sorcerer`, Void = `Void`, Wild = `Wild`, Yordle = `Yordle`,
+	// Set 2
+	Alchemist = `Alchemist`, Avatar = `Avatar`, Berserker = `Berserker`, Wind = `Cloud`, Crystal = `Crystal`, Desert = `Desert`, Druid = `Druid`, Electric = `Electric`, Inferno = `Inferno`, Light = `Light`, Celestial = `Lunar`, Mage = `Mage`, Mountain = `Mountain`, Mystic = `Mystic`, Ocean = `Ocean`, Poison = `Poison`, Predator = `Predator`, Shadow = `Shadow`, Soulbound = `Soulbound`, Metal = `Steel`, Summoner = `Summoner`, Warden = `Warden`, Woodland = `Woodland`,
+	// Set 3
+	Blaster = `Blaster`, Chrono = `Chrono`, Cybernetic = `Cybernetic`, DarkStar = `Dark Star`, Demolitionist = `Demolitionist`, Infiltrator = `Infiltrator`, ManaReaver = `Mana-Reaver`, MechPilot = `Mech-Pilot`, Rebel = `Rebel`, SpacePirate = `Space Pirate`, StarGuardian = `Star Guardian`, Starship = `Starship`, Valkyrie = `Valkyrie`, Vanguard = `Vanguard`,
+	// Set 3.5
+	Astro = `Astro`, Battlecast = `Battlecast`, Paragon = `Paragon`,
+	// Set 4
+	Adept = `Adept`, Cultist = `Cultist`, Dazzler = `Dazzler`, Divine = `Divine`, Duelist = `Duelist`, Dusk = `Dusk`, Elderwood = `Elderwood`, Emperor = `Emperor`, Enlightened = `Enlightened`, Fortune = `Fortune`, Hunter = `Hunter`, Keeper = `Keeper`, Moonlight = `Moonlight`, Shade = `Shade`, Sharpshooter = `Sharpshooter`, Spirit = `Spirit`, Boss = `The Boss`, Tormented = `Tormented`, Warlord = `Warlord`,
+	// Set 4.5
+	Slayer = `Slayer`,
+	// Set 5
+	Abomination = `Abomination`, Caretaker = `Caretaker`, Cavalier = `Cavalier`, Coven = `Coven`, Cruel = `Cruel`, Dawnbringer = `Dawnbringer`, Draconic = `Draconic`, Dragonslayer = `Dragonslayer`, Eternal = `Eternal`, Forgotten = `Forgotten`, GodKing = `God-King`, Hellion = `Hellion`, Invoker = `Invoker`, Ironclad = `Ironclad`, Legionnaire = `Legionnaire`, Nightbringer = `Nightbringer`, Redeemed = `Redeemed`, Renewer = `Renewer`, Revenant = `Revenant`, Skirmisher = `Skirmisher`, Spellweaver = `Spellweaver`, Verdant = `Verdant`,
+	// Set 5.5
+	Cannoneer = `Cannoneer`, Inanimate = `Inanimate`, Sentinel = `Sentinel`, Victorious = `Victorious`,
 	// Set 6
 	Academy = `Academy `, Arcanist = `Arcanist`, Bodyguard = `Bodyguard`, Bruiser = `Bruiser`, Challenger = `Challenger`, Chemtech = `Chemtech`, Clockwork = `Clockwork`, Colossus = `Colossus`, Cuddly = `Cuddly`, Enchanter = `Enchanter`, Enforcer = `Enforcer`, Glutton = `Glutton`, Innovator = `Innovator`, Mercenary = `Mercenary`, Mutant = `Mutant`, Protector = `Protector`, Scholar = `Scholar`, Scrap = `Scrap`, Sister = `Sister`, Sniper = `Sniper`, Socialite = `Socialite`, Syndicate = `Syndicate`, Transformer = `Transformer`, Twinshot = `Twinshot`, YordleLord = `Yordle-Lord`,
 	// Set 6.5

@@ -1,0 +1,1924 @@
+{
+	"{0435f3f5}": {
+		"mScriptName": "TFT3_KayleSpell",
+		"mSpell": {
+			"mDataValues": [
+				{
+					"mName": "WaveDamage",
+					"mValues": [
+						0,
+						125,
+						200,
+						600,
+						0,
+						0,
+						0
+					],
+					"{3f95426c}": false
+				}
+			],
+			"mCastTime": 0.5,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castFrame": 6,
+			"mTargetingTypeData": {},
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{ad0bc0c5}"
+							},
+							"mRatio": 0.009999999776482582,
+							"{a5749b52}": "scaleAP",
+							"mStyleTag": "noScale"
+						}
+					]
+				}
+			}
+		}
+	},
+	"{070afbf9}": {
+		"mScriptName": "TFT3_KayleCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 512,
+			"mAlternateName": "KayleBasicAttack",
+			"delayCastOffsetPercent": -0.30250000953674316,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2000,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 9.5,
+			"missileSpeed": 0,
+			"mMissileEffectKey": "{068d9f7f}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"{90b0b8f9}": {
+		"mScriptName": "TFT3_KayleBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 512,
+			"mAlternateName": "KayleBasicAttack",
+			"delayCastOffsetPercent": -0.30250000953674316,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2000,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 9.5,
+			"missileSpeed": 0,
+			"mMissileEffectKey": "{068d9f7f}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"{9132e791}": {
+		"mScriptName": "TFT3_KayleBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 512,
+			"mAlternateName": "KayleBasicAttack2",
+			"delayCastOffsetPercent": -0.30250000953674316,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2000,
+					"mStartBoneName": "R_hand"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 9.5,
+			"missileSpeed": 0,
+			"mMissileEffectKey": "{068d9f7f}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"{9dcf2800}": {
+		"mScriptName": "TFT3_KaylePEnrageMis8",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"castRange": [
+				1400,
+				1400,
+				1400,
+				1400,
+				1400,
+				1400,
+				1400
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 200,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 2800,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Bow_01"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 15.074999809265137,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{3310452f}",
+			"mLineWidth": 100,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"{9ecf2993}": {
+		"mScriptName": "TFT3_KaylePEnrageMis9",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"castRange": [
+				1500,
+				1500,
+				1500,
+				1500,
+				1500,
+				1500,
+				1500
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 200,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 2800,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Bow_01"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 15.074999809265137,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{3310452f}",
+			"mLineWidth": 100,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"{a7cf37be}": {
+		"mScriptName": "TFT3_KaylePEnrageMis2",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"castRange": [
+				800,
+				800,
+				800,
+				800,
+				800,
+				800,
+				800
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 200,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 2000,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Bow_01"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 15.074999809265137,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{3310452f}",
+			"mLineWidth": 100,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"{a8cf3951}": {
+		"mScriptName": "TFT3_KaylePEnrageMis3",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"castRange": [
+				900,
+				900,
+				900,
+				900,
+				900,
+				900,
+				900
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 200,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 2000,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Bow_01"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 15.074999809265137,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{3310452f}",
+			"mLineWidth": 100,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"{a9cf3ae4}": {
+		"mScriptName": "TFT3_KaylePEnrageMis4",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"castRange": [
+				1000,
+				1000,
+				1000,
+				1000,
+				1000,
+				1000,
+				1000
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 200,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 2800,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Bow_01"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 15.074999809265137,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{3310452f}",
+			"mLineWidth": 100,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"{aa321e56}": {
+		"mScriptName": "TFT3_KaylePEnrageMis19",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"castRange": [
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 200,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 2800,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Bow_01"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 15.074999809265137,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{3310452f}",
+			"mLineWidth": 100,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"{aacf3c77}": {
+		"mScriptName": "TFT3_KaylePEnrageMis5",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"castRange": [
+				1100,
+				1100,
+				1100,
+				1100,
+				1100,
+				1100,
+				1100
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 200,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 2800,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Bow_01"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 15.074999809265137,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{3310452f}",
+			"mLineWidth": 100,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"{ab321fe9}": {
+		"mScriptName": "TFT3_KaylePEnrageMis18",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"castRange": [
+				2400,
+				2400,
+				2400,
+				2400,
+				2400,
+				2400,
+				2400
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 200,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 2800,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Bow_01"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 15.074999809265137,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{3310452f}",
+			"mLineWidth": 100,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"{abcf3e0a}": {
+		"mScriptName": "TFT3_KaylePEnrageMis6",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"castRange": [
+				1200,
+				1200,
+				1200,
+				1200,
+				1200,
+				1200,
+				1200
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 200,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 2800,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Bow_01"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 15.074999809265137,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{3310452f}",
+			"mLineWidth": 100,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"{accf3f9d}": {
+		"mScriptName": "TFT3_KaylePEnrageMis7",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"castRange": [
+				1300,
+				1300,
+				1300,
+				1300,
+				1300,
+				1300,
+				1300
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 200,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 2800,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Bow_01"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 15.074999809265137,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{3310452f}",
+			"mLineWidth": 100,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"{b03227c8}": {
+		"mScriptName": "TFT3_KaylePEnrageMis13",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"castRange": [
+				1900,
+				1900,
+				1900,
+				1900,
+				1900,
+				1900,
+				1900
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 200,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 2800,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Bow_01"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 15.074999809265137,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{3310452f}",
+			"mLineWidth": 100,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"{b132295b}": {
+		"mScriptName": "TFT3_KaylePEnrageMis12",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"castRange": [
+				1800,
+				1800,
+				1800,
+				1800,
+				1800,
+				1800,
+				1800
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 200,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 2800,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Bow_01"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 15.074999809265137,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{3310452f}",
+			"mLineWidth": 100,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"{b2322aee}": {
+		"mScriptName": "TFT3_KaylePEnrageMis11",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"castRange": [
+				1700,
+				1700,
+				1700,
+				1700,
+				1700,
+				1700,
+				1700
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 200,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 2800,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Bow_01"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 15.074999809265137,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{3310452f}",
+			"mLineWidth": 100,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"{b3322c81}": {
+		"mScriptName": "TFT3_KaylePEnrageMis10",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"castRange": [
+				1600,
+				1600,
+				1600,
+				1600,
+				1600,
+				1600,
+				1600
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 200,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 2800,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Bow_01"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 15.074999809265137,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{3310452f}",
+			"mLineWidth": 100,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"{b3346b18}": {
+		"mScriptName": "TFT3_KaylePEnrageMis26",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"castRange": [
+				3200,
+				3200,
+				3200,
+				3200,
+				3200,
+				3200,
+				3200
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 200,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 2800,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Bow_01"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 15.074999809265137,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{3310452f}",
+			"mLineWidth": 100,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"{b4322e14}": {
+		"mScriptName": "TFT3_KaylePEnrageMis17",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"castRange": [
+				2300,
+				2300,
+				2300,
+				2300,
+				2300,
+				2300,
+				2300
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 240,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 2800,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Bow_01"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 15.074999809265137,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{3310452f}",
+			"mLineWidth": 100,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"{b4346cab}": {
+		"mScriptName": "TFT3_KaylePEnrageMis27",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"castRange": [
+				3300,
+				3300,
+				3300,
+				3300,
+				3300,
+				3300,
+				3300
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 200,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 2800,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Bow_01"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 15.074999809265137,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{3310452f}",
+			"mLineWidth": 100,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"{b5322fa7}": {
+		"mScriptName": "TFT3_KaylePEnrageMis16",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"castRange": [
+				2200,
+				2200,
+				2200,
+				2200,
+				2200,
+				2200,
+				2200
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 200,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 2800,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Bow_01"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 15.074999809265137,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{3310452f}",
+			"mLineWidth": 100,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"{b5346e3e}": {
+		"mScriptName": "TFT3_KaylePEnrageMis24",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"castRange": [
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 200,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 2800,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Bow_01"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 15.074999809265137,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{3310452f}",
+			"mLineWidth": 100,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"{b632313a}": {
+		"mScriptName": "TFT3_KaylePEnrageMis15",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"castRange": [
+				2100,
+				2100,
+				2100,
+				2100,
+				2100,
+				2100,
+				2100
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 200,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 2800,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Bow_01"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 15.074999809265137,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{3310452f}",
+			"mLineWidth": 100,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"{b6346fd1}": {
+		"mScriptName": "TFT3_KaylePEnrageMis25",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"castRange": [
+				3100,
+				3100,
+				3100,
+				3100,
+				3100,
+				3100,
+				3100
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 200,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 2800,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Bow_01"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 15.074999809265137,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{3310452f}",
+			"mLineWidth": 100,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"{b73232cd}": {
+		"mScriptName": "TFT3_KaylePEnrageMis14",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"castRange": [
+				2000,
+				2000,
+				2000,
+				2000,
+				2000,
+				2000,
+				2000
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 200,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 2800,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Bow_01"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 15.074999809265137,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{3310452f}",
+			"mLineWidth": 100,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"{b7347164}": {
+		"mScriptName": "TFT3_KaylePEnrageMis22",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"castRange": [
+				2800,
+				2800,
+				2800,
+				2800,
+				2800,
+				2800,
+				2800
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 200,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 2800,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Bow_01"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 15.074999809265137,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{3310452f}",
+			"mLineWidth": 100,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"{b83472f7}": {
+		"mScriptName": "TFT3_KaylePEnrageMis23",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"castRange": [
+				2900,
+				2900,
+				2900,
+				2900,
+				2900,
+				2900,
+				2900
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 200,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 2800,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Bow_01"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 15.074999809265137,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{3310452f}",
+			"mLineWidth": 100,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"{b934748a}": {
+		"mScriptName": "TFT3_KaylePEnrageMis20",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"castRange": [
+				2600,
+				2600,
+				2600,
+				2600,
+				2600,
+				2600,
+				2600
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 200,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 2800,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Bow_01"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 15.074999809265137,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{3310452f}",
+			"mLineWidth": 100,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"{ba34761d}": {
+		"mScriptName": "TFT3_KaylePEnrageMis21",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"castRange": [
+				2700,
+				2700,
+				2700,
+				2700,
+				2700,
+				2700,
+				2700
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 200,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 2800,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Bow_01"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 15.074999809265137,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{3310452f}",
+			"mLineWidth": 100,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"{c8fc580c}": {
+		"mScriptName": "TFT3_KayleE",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 14984,
+			"mSpellTags": [
+				"Trait_AttackReset"
+			],
+			"mDataValues": [
+				{
+					"mName": "WaveDamage",
+					"mValues": [
+						0,
+						100,
+						200,
+						500,
+						500,
+						500,
+						500
+					],
+					"{3f95426c}": false,
+					"mFormula": "P+100"
+				},
+				{
+					"mName": "PercentOfAttackDamage",
+					"mValues": [
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2
+					],
+					"mBaseP": 2,
+					"mFormula": "P"
+				},
+				{
+					"mName": "AttackSpeed",
+					"mValues": [
+						25,
+						50,
+						75,
+						100,
+						125,
+						150,
+						175
+					],
+					"mBaseP": 25,
+					"mFormula": "P + 25"
+				},
+				{
+					"mName": "AttackRange",
+					"mValues": [
+						1,
+						1,
+						1,
+						1,
+						1,
+						1,
+						1
+					],
+					"mBaseP": 1,
+					"mFormula": "P + 0"
+				}
+			],
+			"mImgIconName": [
+				"ASSETS/Characters/Kayle/HUD/Icons2D/Kayle_E.dds",
+				"ASSETS/Characters/Kayle/HUD/Icons2D/Kayle_E2.dds"
+			],
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mCantCancelWhileWindingUp": true,
+			"mCantCancelWhileChanneling": true,
+			"mSpellRevealsChampion": false,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				210,
+				210,
+				210,
+				210,
+				210,
+				210,
+				210
+			],
+			"castConeDistance": 100,
+			"castFrame": 7.5,
+			"missileSpeed": 0,
+			"bHaveHitBone": true,
+			"mHitBoneName": "root",
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"mTargetingTypeData": {},
+			"mSpellCooldownOrSealedQueueThreshold": 0.10000000149011612,
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{97d115c2}"
+							},
+							"mRatio": 0.009999999776482582,
+							"{a5749b52}": "scaleAP",
+							"mStyleTag": "noScale"
+						}
+					]
+				}
+			}
+		},
+		"mBuff": {
+			"mTooltipData": {
+				"mObjectName": "TFT3_KayleE",
+				"mFormat": "{10f01d27}",
+				"mLocKeys": {
+					"keyName": "Buff_KayleE_Name",
+					"keyTooltip": "Buff_KayleE_Tooltip"
+				}
+			}
+		}
+	},
+	"{f30d3838}": {
+		"mScriptName": "TFT3_KaylePEnrageMis",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"castRange": [
+				700,
+				700,
+				700,
+				700,
+				700,
+				700,
+				700
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 200,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 2000,
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Bow_01"
+				},
+				"heightSolver": {},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 3,
+			"castFrame": 15.074999809265137,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{3310452f}",
+			"mLineWidth": 100,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"{f5312e88}": {
+		"mScriptName": "TFT3_KayleEAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 6826,
+			"mSpellTags": [
+				"PositiveEffect_EmpowerAttack",
+				"Trait_MultiTargetAttack"
+			],
+			"mImgIconName": [
+				"ASSETS/Characters/Kayle/HUD/Icons2D/Kayle_E.dds"
+			],
+			"canCastWhileDisabled": true,
+			"mCantCancelWhileWindingUp": true,
+			"bHaveHitEffect": true,
+			"mUseAutoattackCastTimeData": {},
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				20,
+				20,
+				20,
+				20,
+				20,
+				20,
+				20
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mUseGroundHeightAtTarget": false,
+					"mSpeed": 2000,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "C_Buffbone_Glb_Head_Loc",
+					"mTargetBoneName": "C_Buffbone_Glb_Chest_Loc"
+				},
+				"verticalFacing": {},
+				"behaviors": [
+					{},
+					{}
+				]
+			},
+			"mCastType": 1,
+			"castFrame": 11,
+			"missileSpeed": 1750,
+			"mMissileEffectKey": "{068d9f7f}",
+			"mHitEffectKey": "{26778e03}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
+			"selectionPriority": 1
+		}
+	},
+	"{48535add}": {},
+	"{ad792205}": {
+		"{f2c13b77}": "ASSETS/Characters/TFT3_Kayle/HUD/TFT3_Kayle_Square.TFT_Set3.dds",
+		"tier": 4,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{89921ee8}"
+			},
+			{
+				"TraitData": "{fad58c1b}"
+			}
+		],
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 780,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mCharacterName": "TFT3_Kayle",
+		"baseHP": 700,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 60,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 60,
+		"baseArmor": 25,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 500,
+		"attackRange": 660,
+		"attackSpeed": 0.800000011920929,
+		"basicAttack": {
+			"mAttackProbability": 0.5,
+			"mAttackName": "TFT3_KayleBasicAttack"
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 0.5,
+				"mAttackName": "TFT3_KayleBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT3_KayleCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT3_KayleSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"BaseSpell",
+			"TFT3_KaylePEnrageMis",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 10495232
+	}
+}

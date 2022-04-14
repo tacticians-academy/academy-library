@@ -1,0 +1,237 @@
+{
+	"Characters/TFT2_Aatrox/Spells/TFT2_AatroxBasicAttack": {
+		"mScriptName": "TFT2_AatroxBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "AatroxBasicAttack",
+			"delayCastOffsetPercent": -0.10000000149011612,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 12,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT2_Aatrox/Spells/TFT2_AatroxQ": {
+		"mScriptName": "TFT2_AatroxQ",
+		"mSpell": {
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						0,
+						300,
+						600,
+						1200,
+						1200,
+						1250,
+						1500
+					],
+					"{3f95426c}": false,
+					"mFormula": "P +250"
+				}
+			],
+			"mCastTime": 0.6000000238418579,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"canCastOrQueueWhileCasting": true,
+			"mChannelIsInterruptedByDisables": false,
+			"mChannelIsInterruptedByAttacking": false,
+			"mSpellRevealsChampion": false,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castFrame": 21,
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"mTargetingTypeData": {},
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage"
+							},
+							"mRatio": 0.009999999776482582,
+							"{a5749b52}": "scaleAP",
+							"mStyleTag": "noScale"
+						}
+					]
+				}
+			}
+		}
+	},
+	"Characters/TFT2_Aatrox/Spells/TFT2_AatroxCritAttack": {
+		"mScriptName": "TFT2_AatroxCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "AatroxBasicAttack2",
+			"delayCastOffsetPercent": -0.10000000149011612,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 11,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_Buffbone_Glb_Layout_Loc"
+		}
+	},
+	"Characters/TFT2_Aatrox/Spells/TFT2_AatroxBasicAttack2": {
+		"mScriptName": "TFT2_AatroxBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "AatroxBasicAttack2",
+			"delayCastOffsetPercent": -0.10000000149011612,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 10,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+		}
+	},
+	"Characters/TFT2_Aatrox/CharacterRecords/Root": {
+		"{f2c13b77}": "ASSETS/Characters/TFT2_Aatrox/HUD/TFT2_Aatrox_Square.TFT_Set2.dds",
+		"tier": 3,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{c41f7974}"
+			},
+			{
+				"TraitData": "{ba9f226d}"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mCharacterName": "TFT2_Aatrox",
+		"baseHP": 800,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 70,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 65,
+		"baseArmor": 35,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 180,
+		"attackSpeed": 0.699999988079071,
+		"basicAttack": {
+			"mAttackCastTime": 0.8999999761581421
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": null,
+				"mAttackName": "TFT2_AatroxBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackDelayCastOffsetPercent": null,
+				"mAttackName": "TFT2_AatroxCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT2_AatroxQ",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 3,
+		"unitTagsString": "Champion",
+		"flags": 9446656
+	},
+	"{e1dd8f9b}": {
+		"useGDSBinaries": true
+	}
+}

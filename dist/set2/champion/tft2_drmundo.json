@@ -1,0 +1,274 @@
+{
+	"Characters/TFT2_DrMundo/Spells/TFT2_DrMundoCritAttack": {
+		"mScriptName": "TFT2_DrMundoCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 21711,
+			"delayCastOffsetPercent": -0.31220000982284546,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"mOrientRadiusTextureFromPlayer": true,
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 7.965000152587891,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"Characters/TFT2_DrMundo/Spells/TFT2_DrMundoBasicAttack2": {
+		"mScriptName": "TFT2_DrMundoBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 21711,
+			"mAlternateName": "DrMundoBasicAttack2",
+			"delayCastOffsetPercent": -0.31220000982284546,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"mOrientRadiusTextureFromPlayer": true,
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 7.829999923706055,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"Characters/TFT2_DrMundo/Spells/TFT2_DrMundoBasicAttack": {
+		"mScriptName": "TFT2_DrMundoBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 21711,
+			"mAlternateName": "DrMundoBasicAttack",
+			"delayCastOffsetPercent": -0.31220000982284546,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"mOrientRadiusTextureFromPlayer": true,
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 7.695000171661377,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {}
+		}
+	},
+	"Characters/TFT2_DrMundo/Spells/TFT2_DrMundoR": {
+		"mScriptName": "TFT2_DrMundoR",
+		"mSpell": {
+			"mAffectsTypeFlags": 15567,
+			"mSpellTags": [
+				"Trait_Ultimate"
+			],
+			"mDataValues": [
+				{
+					"mName": "HealthPercent",
+					"mValues": [
+						1.25,
+						1.25,
+						1.25,
+						1.25,
+						1.25,
+						1.25,
+						1.25
+					],
+					"mBaseP": 1.25,
+					"mFormula": "P"
+				},
+				{
+					"mName": "Duration",
+					"mValues": [
+						8,
+						8,
+						8,
+						8,
+						8,
+						8,
+						8
+					],
+					"mBaseP": 8,
+					"mFormula": "P"
+				},
+				{
+					"mName": "BaseDamage",
+					"mValues": [
+						0,
+						50,
+						100,
+						200,
+						200,
+						250,
+						300
+					],
+					"{3f95426c}": false,
+					"mFormula": "P + 50"
+				},
+				{
+					"mName": "HealRatio",
+					"mValues": [
+						0.75,
+						1,
+						1.25,
+						1.5,
+						1.75,
+						2,
+						2.25
+					],
+					"mBaseP": 0.75,
+					"mFormula": "P+0.25"
+				}
+			],
+			"mCastTime": 0.5,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -0.5,
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castConeDistance": 100,
+			"castFrame": 15,
+			"missileSpeed": 828.5,
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"mTargetingTypeData": {},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "BaseDamage"
+							},
+							"mRatio": 0.009999999776482582,
+							"{a5749b52}": "scaleAP",
+							"mStyleTag": "noScale"
+						}
+					]
+				}
+			}
+		},
+		"mBuff": {
+			"mDescription": "game_buff_tooltip_Sadism"
+		}
+	},
+	"{0a10eac9}": {},
+	"Characters/TFT2_DrMundo/CharacterRecords/Root": {
+		"{f2c13b77}": "ASSETS/Characters/TFT2_DrMundo/HUD/TFT2_DrMundo_Square.TFT_Set2.dds",
+		"tier": 3,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{3bf72878}"
+			},
+			{
+				"TraitData": "{c1066919}"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mInitialMana": 75,
+		"mCharacterName": "TFT2_DrMundo",
+		"baseHP": 800,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 125,
+			"arBaseStaticRegen": 0
+		},
+		"baseDamage": 60,
+		"baseArmor": 35,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 180,
+		"attackSpeed": 0.6000000238418579,
+		"basicAttack": {
+			"mAttackName": "TFT2_DrMundoBasicAttack"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT2_DrMundoBasicAttack2"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT2_DrMundoCritAttack"
+			}
+		],
+		"spellNames": [
+			"TFT2_DrMundoR",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 3,
+		"unitTagsString": "Champion",
+		"flags": 9446656
+	}
+}

@@ -1,0 +1,254 @@
+{
+	"Characters/TFT5_Aatrox/CharacterRecords/Root": {
+		"PortraitIcon": "ASSETS/Characters/TFT5_Aatrox/HUD/TFT5_Aatrox_Square.TFT_Set5.dds",
+		"tier": 1,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{842f1f40}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{ea1f56a0}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mInitialMana": 30,
+		"mCharacterName": "TFT5_Aatrox",
+		"baseHP": 650,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBaseStaticRegen": 0,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 60,
+		"baseArmor": 35,
+		"baseSpellBlock": 35,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.2999999523162842,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.6499999761581421,
+		"basicAttack": {
+			"mAttackName": "TFT5_AatroxBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT5_AatroxBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT5_AatroxCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT5_AatroxP",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446664,
+		"__type": "TFTCharacterRecord"
+	},
+	"Characters/TFT5_Aatrox/Spells/TFT5_AatroxCritAttack": {
+		"mScriptName": "TFT5_AatroxCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "Crit",
+			"delayCastOffsetPercent": -0.10000000149011612,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 14,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_Buffbone_Glb_Layout_Loc",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT5_Aatrox/Spells/TFT5_AatroxBasicAttack": {
+		"mScriptName": "TFT5_AatroxBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "AatroxBasicAttack",
+			"delayCastOffsetPercent": -0.10000000149011612,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 11,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT5_Aatrox/Spells/TFT5_AatroxP": {
+		"mScriptName": "TFT5_AatroxP",
+		"mSpell": {
+			"mAffectsTypeFlags": 4106,
+			"mDataValues": [
+				{
+					"mName": "PercentAttackDamage",
+					"mValues": [
+						0,
+						260,
+						280,
+						360,
+						0,
+						0,
+						0
+					],
+					"{3f95426c}": false,
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "Heal",
+					"mValues": [
+						0,
+						200,
+						300,
+						400,
+						0,
+						0,
+						0
+					],
+					"{3f95426c}": false,
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "PercentAttackDamage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mStat": 2,
+							"__type": "StatBySubPartCalculationPart"
+						}
+					],
+					"mMultiplier": {
+						"mNumber": 0.009999999776482582,
+						"__type": "NumberCalculationPart"
+					},
+					"__type": "GameCalculation"
+				},
+				"ModifiedHeal": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Heal",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"{898fbad4}": true,
+			"castRange": [
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000
+			],
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT5_Aatrox/Spells/TFT5_AatroxBasicAttack2": {
+		"mScriptName": "TFT5_AatroxBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "Attack2",
+			"delayCastOffsetPercent": -0.10000000149011612,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	}
+}
