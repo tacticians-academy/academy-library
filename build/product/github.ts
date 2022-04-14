@@ -6,6 +6,8 @@ import { SetNumber } from '../../dist/index.js'
 import { importAugments, importItems, importTraits, importChampions } from '../../dist/imports.js'
 import { AugmentData, BonusKey, EffectVariables } from '../../dist/types.js'
 
+import { AugmentGroupKey, ChampionKey, ItemKey, TraitKey } from '../../dist/aggregated.js'
+
 import { getCurrentSetNumber, githubTokenPath, loadHardcodedTXT } from '../helpers/files.js'
 import { getAugmentNameKey } from '../helpers/utils.js'
 
@@ -87,9 +89,9 @@ if (!milestone) {
 	process.exit(0)
 }
 
-const { AugmentGroupKey, activeAugments } = await importAugments(currentSetNumber)
-const { ChampionKey, champions } = await importChampions(currentSetNumber)
-const { TraitKey, traits } = await importTraits(currentSetNumber)
+const { activeAugments } = await importAugments(currentSetNumber)
+const { champions } = await importChampions(currentSetNumber)
+const { traits } = await importTraits(currentSetNumber)
 const { completedItems } = await importItems(currentSetNumber)
 
 function wikiUrlFor({ name }: { name: string }) {
