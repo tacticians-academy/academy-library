@@ -671,7 +671,6 @@ function transformSpellData(spellName: string, spellData: ChampionJSONSpell, jso
 	// if (spellData.mCastTime == null) { //TODO verify these aren't supposed to instacast?
 	// 	console.log('!mCastTime', spellName)
 	// }
-	// if (!spell.missile) { //TODO multipart spells (TFT6_ViktorE, TFT6_JhinR, etc)
 	// if (spell.missile && spell.missile.speedMin == null && spell.missile.travelTime == null) {
 	// 	console.log('!missile', spellName)
 	// }

@@ -93,12 +93,12 @@ export const SUBSTITUTE_EFFECT_KEYS: Record<string, string> = {
 	'b4a90a5d': 'ProcChance',
 	'0acd95c2': 'ImperialBonusDamage',
 	'f469c9e6': 'TyrantTooltipBonusDamage',
-	'45564848': 'InnovationStarLevel', //TODO actual string
-	'97ea7bfc': 'InnovatorStarLevelMultiplier', //TODO actual string
+	'45564848': 'InnovationStarLevel', //NOTE actual name
+	'97ea7bfc': 'InnovatorStarLevelMultiplier', //NOTE actual name
 	'5263ba40': 'JinxEmpoweredAS',
 	'2a50526a': 'JinxASDuration',
 	'a859d7b0': 'ViManaReduction',
-	'3b173c39': 'ViPunchRange', //TODO verify
+	'3b173c39': 'ViPunchRange', //NOTE actual name
 	'471b1a16': 'TickRate',
 	'd0539890': 'ManaPerTick',
 	'6c155e99': 'OmnivampPercent',
@@ -107,7 +107,7 @@ export const SUBSTITUTE_EFFECT_KEYS: Record<string, string> = {
 	'96ca059f': 'ADAPPerCast',
 	'b3105623': 'ManaPerAllyAttack',
 	'70ed38c6': 'DetainDuration',
-	'd2b7f6f1': 'DetainCount', //TODO actual string
+	'd2b7f6f1': 'DetainCount', //NOTE actual name
 	'2f744e2b': 'TeamAbilityPower',
 	'faa12163': 'ArcanistAbilityPower',
 	'51aec5d2': 'BonusPerAugment',
@@ -138,25 +138,25 @@ export const SUBSTITUTE_EFFECT_KEYS: Record<string, string> = {
 	'df6f64b9': 'ManaRatio',
 	'c3360f16': 'ShieldHealth',
 	'c425872e': 'StasisDuration',
-	'7c694b41': 'ArmorPerEnemy', //TODO monitor. unverifiable MRPerEnemy/ArmorPerEnemy
-	'7ba8c0e3': 'MRPerEnemy', //TODO monitor. unverifiable MRPerEnemy/ArmorPerEnemy
+	'7c694b41': 'ArmorPerEnemy', //NOTE monitor. unverifiable MRPerEnemy/ArmorPerEnemy
+	'7ba8c0e3': 'MRPerEnemy', //NOTE monitor. unverifiable MRPerEnemy/ArmorPerEnemy
 	'1ee760be': '1StarAoEDamage',
 	'a3b999e9': '2StarAoEDamage',
 	'156febb8': '3StarAoEDamage',
 	'b5c2a66b': '4StarAoEDamage',
-	'6688a0d5': 'CritDamageBlock', //TODO actual name
+	'6688a0d5': 'CritDamageBlock', //NOTE actual name
 	'deada01e': 'SmallBonusPct',
 	'b8ae7546': 'LargeBonusPct',
 	'ad16f688': 'OmniVamp',
-	'12a15e9e': '1StarBounces', //TODO monitor. unverifiable 1StarBounces/2StarBounces/3StarBounces/4StarBounces
-	'15144cec': '2StarBounces', //TODO monitor. unverifiable 1StarBounces/2StarBounces/3StarBounces/4StarBounces
-	'440f813d': '3StarBounces', //TODO monitor. unverifiable 1StarBounces/2StarBounces/3StarBounces/4StarBounces
-	'79e2ec7b': '4StarBounces', //TODO monitor. unverifiable 1StarBounces/2StarBounces/3StarBounces/4StarBounces
+	'12a15e9e': '1StarBounces', //NOTE monitor. unverifiable 1StarBounces/2StarBounces/3StarBounces/4StarBounces
+	'15144cec': '2StarBounces', //NOTE monitor. unverifiable 1StarBounces/2StarBounces/3StarBounces/4StarBounces
+	'440f813d': '3StarBounces', //NOTE monitor. unverifiable 1StarBounces/2StarBounces/3StarBounces/4StarBounces
+	'79e2ec7b': '4StarBounces', //NOTE monitor. unverifiable 1StarBounces/2StarBounces/3StarBounces/4StarBounces
 	'a2b76524': 'SpellShieldDuration',
-	'f924a46e': '1StarAD', //TODO actual name
-	'82618485': '2StarAD', //TODO actual name
-	'1b738810': '3StarAD', //TODO actual name
-	'eb990bd7': '4StarAD', //TODO verify
+	'f924a46e': '1StarAD', //NOTE actual name
+	'82618485': '2StarAD', //NOTE actual name
+	'1b738810': '3StarAD', //NOTE actual name
+	'eb990bd7': '4StarAD', //NOTE verify
 	'8c7c8547': 'Tooltip1StarBonusAD',
 	'd4afa164': 'Tooltip2StarBonusAD',
 	'edb2fb99': 'Tooltip3StarBonusAD',
@@ -164,10 +164,10 @@ export const SUBSTITUTE_EFFECT_KEYS: Record<string, string> = {
 	'57706a69': 'BurnPercent',
 	'97e52ce8': 'BurnDuration',
 	'2161bfa2': 'GrievousWoundsPercent',
-	'b3b8f644': 'StackingAD', //TODO monitor. unverifiable StackingAP
-	'cb9689ca': 'StackingAP', //TODO actual name, monitor. unverifiable StackingAD
-	'9396f00d': 'StackCap', //TODO monitor. unverifiable BonusResistsAtStackCap
-	'b55019fa': 'BonusResistsAtStackCap', //TODO monitor. unverifiable StackCap
+	'b3b8f644': 'StackingAD', //NOTE monitor. unverifiable StackingAP
+	'cb9689ca': 'StackingAP', //NOTE monitor actual name. unverifiable StackingAD
+	'9396f00d': 'StackCap', //NOTE monitor. unverifiable BonusResistsAtStackCap
+	'b55019fa': 'BonusResistsAtStackCap', //NOTE monitor. unverifiable StackCap
 	'276ba2c8': 'MultiplierForDamage',
 	'0034a6ef': 'ShieldHealthPercent',
 	'5deb4eb2': 'APPerInterval',
@@ -180,21 +180,21 @@ export const SUBSTITUTE_EFFECT_KEYS: Record<string, string> = {
 	'829e6cec': '3StarShieldValue',
 	'c78af25f': '4StarShieldValue',
 	'5100c273': 'TooltipBonusAS',
-	'9f5117db': 'AttackAccuracy', //TODO actual name
+	'9f5117db': 'AttackAccuracy', //NOTE actual name
 	'5079c7a2': 'ArmorReductionPercent',
 	'cc9fefa7': 'ArmorBreakDuration',
 	'353ede36': 'CritDamageAmp',
 	'5200c406': 'TooltipBonusAP',
-	'19a89153': 'BaseAD', //TODO monitor, unverifiable BaseAP
-	'41cb628d': 'BaseAP', //TODO monitor, unverifiable BaseAD
-	'ae49cc70': 'AdditionalADAP', //TODO monitor, unverifiable
-	'c0c9af7f': 'AdditionalHeal', //TODO monitor, unverifiable
+	'19a89153': 'BaseAD', //NOTE monitor, unverifiable BaseAP
+	'41cb628d': 'BaseAP', //NOTE monitor, unverifiable BaseAD
+	'ae49cc70': 'AdditionalADAP', //NOTE monitor, unverifiable
+	'c0c9af7f': 'AdditionalHeal', //NOTE monitor, unverifiable
 	'f2474447': 'TooltipBonus',
-	'9fd37c1c': '{APTimer}', //TODO unused? https://leagueoflegends.fandom.com/wiki/Chalice_of_Power_(Teamfight_Tactics)
-	'fa1ef605': '{MagicDamageReductionMultiplier}', //TODO unused? https://leagueoflegends.fandom.com/wiki/Dragon%27s_Claw_(Teamfight_Tactics)
+	'9fd37c1c': '{APTimer}', //NOTE unused? https://leagueoflegends.fandom.com/wiki/Chalice_of_Power_(Teamfight_Tactics)
+	'fa1ef605': '{MagicDamageReductionMultiplier}', //NOTE unused? https://leagueoflegends.fandom.com/wiki/Dragon%27s_Claw_(Teamfight_Tactics)
 	'79a4455a': 'CritReduction',
-	'b1442c34': 'StealthDuration', //TODO verify
-	'5c51b509': 'TraitLevel', //TODO ??
+	'b1442c34': 'StealthDuration', //NOTE verify
+	'5c51b509': 'TraitLevel', //NOTE ??
 	'7f1304b2': 'AbilityPower',
 	'df962703': 'ADBoost',
 	'c9b0e3af': 'PercentOmnivamp',
@@ -326,20 +326,20 @@ export const mSpellCalculationsSubstitutions: Record<string, string> = {
 }
 
 export const mDataValueSubstitutions: Record<string, string> = {
-	'{6ad2d2c9}': 'UNKNOWN', // Unused on Tibbers AllyPercentASBase?
+	'{6ad2d2c9}': 'UNKNOWN', //NOTE Unused on Tibbers AllyPercentASBase?
 	'{fcfce396}': 'ADMult',
 	'{bc3d5e29}': 'ADPercent',
 	'{000f6884}': 'ASBoost',
-	'{fab7c982}': 'ASPercent', //TODO ModifiedASBoost
-	'{8832edd1}': 'BaseSpinDamage', //TODO ModifiedDamage
+	'{fab7c982}': 'ASPercent',
+	'{8832edd1}': 'BaseSpinDamage',
 	'{35783862}': 'BonusOnHit',
 	'{c976d37b}': 'BonusLightningDamage',
 	'{f7adf19d}': 'CritBonusDamage',
 	'{26aa1808}': 'DamageFinal',
-	'{0fca4668}': 'HealingPerAttack', //TODO ModifiedHealing
+	'{0fca4668}': 'HealingPerAttack',
 	'{f12d8928}': 'MaxHealthPercent',
-	'{fa6d190b}': 'MeleeDamagePercent', //TODO TotalDamage
-	'{15d27f09}': 'RangedADPercentBase', //TODO TotalDamage
+	'{fa6d190b}': 'MeleeDamagePercent',
+	'{15d27f09}': 'RangedADPercentBase',
 	'{df3d2f5f}': 'PercentAD',
 	'{608d099c}': 'PercentArmorDamage',
 	'{7ac38453}': 'PercentAttackDamage',
