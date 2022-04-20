@@ -31,7 +31,7 @@ const parentSetNumber = Math.floor(currentSetNumber)
 
 let responseJSON: ResponseJSON
 try {
-	const raw = await fs.readFile(getPathTo(currentSetNumber, '._.json'), 'utf8')
+	const raw = await fs.readFile(getPathTo(currentSetNumber, '.raw.json'), 'utf8')
 	responseJSON = JSON.parse(raw)
 } catch(error) {
 	console.log(error)
@@ -333,8 +333,7 @@ function reduceAttacks(attacks: ChampionJSONAttack[], json: ChampionJSON) {
 	const attackSpeeds = attacks
 		.map(attack => parseAttack(attack, json))
 		.filter((speed): speed is number => speed != null)
-	return attackSpeeds[0]
-	// return attackSpeeds.length === 0 ? undefined : attackSpeeds.reduce((acc, value) => acc + value, 0) / attackSpeeds.length
+	return attackSpeeds.length ? Math.max(...attackSpeeds) : undefined
 }
 
 function getByScriptName(name: string, json: ChampionJSON) {

@@ -7,7 +7,6 @@ const cachePath = path.resolve('build', 'cache')
 await fs.mkdir(cachePath, { recursive: true })
 
 export const setNumberPath = path.resolve(cachePath, 'set_number.local')
-export const etagPath = path.resolve(cachePath, 'cdragon_etag.local')
 export const githubTokenPath = path.resolve(cachePath, 'github_token.local')
 
 export async function getCurrentSetNumber() {

@@ -8,18 +8,19 @@ import path from 'path'
 import { SET_DATA, SetNumber } from '../dist/index.js'
 import { importSetData } from '../dist/imports.js'
 
-import { getPathTo, etagPath, setNumberPath } from './helpers/files.js'
+import { getPathTo, setNumberPath } from './helpers/files.js'
 import { BASE_UNIT_API_NAMES, mDataValueSubstitutions, mSpellCalculationsSubstitutions } from './helpers/normalize.js'
 import { ChampionJSON, ChampionJSONStats, ResponseJSON } from './helpers/types.js'
 import { getAPIName } from './helpers/utils.js'
 
-const patchLine = LOAD_PBE ? 'pbe' : (SET_DATA[LOAD_SET]?.patchLine ?? 'latest')
+const patchLine = LOAD_PBE ? 'pbe' : SET_DATA[LOAD_SET].patchLine
 const baseURL = `https://raw.communitydragon.org/${patchLine}`
 const url = `${baseURL}/cdragon/tft/en_us.json`
 const response = await fetch(url)
 if (!response.ok) { throw response }
 
 let oldEtag: string | undefined
+const etagPath = getPathTo(LOAD_SET, '.cdragon_etag.local')
 try {
 	oldEtag = await fs.readFile(etagPath, 'utf8')
 } catch {
@@ -52,7 +53,7 @@ const championsPath = getPathTo(currentSetNumber, 'champion')
 await fs.mkdir(championsPath, { recursive: true })
 await fs.mkdir(getPathTo(currentSetNumber, 'hardcoded'), { recursive: true })
 
-fs.writeFile(getPathTo(currentSetNumber, '._.json'), JSON.stringify(responseJSON, undefined, '\t'))
+fs.writeFile(getPathTo(currentSetNumber, '.raw.json'), JSON.stringify(responseJSON, undefined, '\t'))
 fs.writeFile(setNumberPath, currentSetNumber.toString())
 console.log('Loading set', currentSetNumber, 'from', patchLine.toUpperCase(), '...', 'Units:', champions.length, '\n')
 
