@@ -2,14 +2,15 @@ const MAX_STAR_LEVEL = 3
 
 import fs from 'fs/promises'
 
-import { AugmentData, AugmentTier, BonusKey, ChampionData, ChampionSpellData, COMPONENT_ITEM_IDS, EffectVariables, ItemData, ItemTypeKey, SpellCalculations, SpellCalculationPart, SpellCalculationSubpart, SpellVariables, TraitData } from '../dist/index.js'
+import { BonusKey, COMPONENT_ITEM_IDS } from '../dist/index.js'
+import type { AugmentData, AugmentTier, ChampionData, ChampionSpellData, EffectVariables, ItemData, ItemTypeKey, SpellCalculations, SpellCalculationPart, SpellCalculationSubpart, SpellVariables, TraitData } from '../dist/index.js'
 import { AugmentGroupKey, ChampionKey, ItemKey, TraitKey } from '../dist/aggregated.js'
 import { importSetData } from '../dist/imports.js'
 
 import { getCurrentSetNumber, getPathTo, loadHardcodedTXT } from './helpers/files.js'
 import { formatJS } from './helpers/formatting.js'
 import { BASE_UNIT_API_NAMES, UNRELEASED_ITEM_NAME_KEYS, NORMALIZE_EFFECT_KEYS, SUBSTITUTE_EFFECT_KEYS, normalizeEffects, mStatSubstitutions, spellCalculationOperatorSubstitutions } from './helpers/normalize.js'
-import { ChampionJSON, ChampionJSONType, ChampionJSONAttack, ChampionJSONSpell, ChampionJSONSpellAttack, ChampionJSONStats, ResponseJSON } from './helpers/types.js'
+import type { ChampionJSON, ChampionJSONType, ChampionJSONAttack, ChampionJSONSpell, ChampionJSONSpellAttack, ChampionJSONStats, ResponseJSON } from './helpers/types.js'
 import { getAPIName, getAugmentNameKey } from './helpers/utils.js'
 
 const BASE_AP_RATIO = 0.009999999776482582
@@ -33,7 +34,7 @@ let responseJSON: ResponseJSON
 try {
 	const raw = await fs.readFile(getPathTo(currentSetNumber, '.raw.json'), 'utf8')
 	responseJSON = JSON.parse(raw)
-} catch(error) {
+} catch (error) {
 	console.log(error)
 	throw 'Missing cache.local. Erase the `cache` directory and re-run `prepare`.'
 }
@@ -82,7 +83,7 @@ itemsData.reverse().forEach(item => {
 		typeKey = 'unreleased'
 	} else if (from.length) {
 		if (item.id !== 88 && from.includes(8)) {
-			if (SPATULA_ITEM_IDS && !SPATULA_ITEM_IDS.includes(item.id)) {
+			if (SPATULA_ITEM_IDS != null && !SPATULA_ITEM_IDS.includes(item.id)) {
 				return
 			}
 			typeKey = 'spatula'
@@ -106,7 +107,7 @@ itemsData.reverse().forEach(item => {
 		} else if (icon.includes('consumable')) {
 			typeKey = 'consumable'
 		} else if (!typeKey) {
-			if (!SPATULA_ITEM_IDS) {
+			if (SPATULA_ITEM_IDS == null) {
 				console.log('Unknown emblem item', item)
 			}
 			return false
@@ -308,7 +309,7 @@ if (activeAugments.length) {
 function getByType(type: ChampionJSONType, alternateKey: string, json: ChampionJSON) {
 	for (const key in json) {
 		const entry = json[key]
-		if (entry.__type ? entry.__type === type : alternateKey in entry) {
+		if (entry.__type != null ? entry.__type === type : alternateKey in entry) {
 			return entry
 		}
 	}
@@ -358,7 +359,7 @@ const unplayableAPINames = ['TFT5_EmblemArmoryKey', 'TFT5_DraconicEgg', 'TFT6_Me
 const playableChampions = champions
 	.filter(champion => {
 		champion.apiName = getAPIName(champion)
-		if (unplayableAPINames.includes(champion.apiName)) {
+		if (champion.apiName == null || unplayableAPINames.includes(champion.apiName)) {
 			return false
 		}
 		if (!champion.icon) {
@@ -376,7 +377,7 @@ const outputChampions = await Promise.all(playableChampions.map(async (champion)
 	const path = getPathTo(currentSetNumber, `champion/${apiName.toLowerCase()}.json`)
 	const json = JSON.parse(await fs.readFile(path, 'utf8')) as ChampionJSON
 	const characterRecord = getCharacterRecord(json)
-	if (!characterRecord) {
+	if (characterRecord == null) {
 		console.log(apiName, path, json)
 	}
 	if (characterRecord.baseStaticHPRegen !== 0) {
@@ -455,8 +456,8 @@ const outputChampions = await Promise.all(playableChampions.map(async (champion)
 	const needsCritAttacks = !basicAttacks.length
 	for (const key in json) {
 		const entry = json[key as keyof typeof json]
-		const scriptName = entry.mScriptName
-		if (!scriptName) {
+		const scriptName = entry.mScriptName as string | undefined
+		if (scriptName == null) {
 			continue
 		}
 		if (scriptName.startsWith(`${apiName}BasicAttack`)) {
@@ -499,7 +500,7 @@ const outputChampions = await Promise.all(playableChampions.map(async (champion)
 			return traitAPIName
 		}
 		const enumKey = getEnumKeyFrom(traitData.TraitData!)
-		return TraitKey ? TraitKey[enumKey as keyof typeof TraitKey] : enumKey
+		return TraitKey != null ? TraitKey[enumKey as keyof typeof TraitKey] : enumKey
 	}) ?? []
 	return {
 		apiName,
@@ -550,18 +551,18 @@ function transformSpellData(spellName: string, spellData: ChampionJSONSpell, jso
 		const prefixes = ['Tooltip', 'Modified', 'Total']
 		for (const calculationKey in sourceCalculations) {
 			const prefix = prefixes.find(prefix => calculationKey.startsWith(prefix))
-			if (!prefix) {
+			if (prefix == null) {
 				// console.log('No prefix for', spellName, calculationKey)
 			}
-			const variableName = prefix ? calculationKey.replace(prefix, '') : calculationKey
+			const variableName = prefix != null ? calculationKey.replace(prefix, '') : calculationKey
 			const sourceCalculation = sourceCalculations[calculationKey]
-			if (!variables[variableName]) {
+			if (variables[variableName] == null) {
 				if (variableName !== 'UNUSED') {
 					// console.log('ERR', 'Missing variable for calculation', spellName, variableName, Object.keys(variables))
 				}
 			}
 			const totalPrefix = 'Total'
-			if (prefix !== totalPrefix && sourceCalculations[`${totalPrefix}${variableName}`]) {
+			if (prefix !== totalPrefix && sourceCalculations[`${totalPrefix}${variableName}`] != null) {
 				// console.log(sourceCalculation, sourceCalculations[`Total${variableName}`])
 				continue
 			}
@@ -576,10 +577,10 @@ function transformSpellData(spellName: string, spellData: ChampionJSONSpell, jso
 					} else if (sourceCalculation.mMultiplier) {
 						operator = 'product'
 					}
-					if (part.mPart1) {
-						sourceSubparts = [part.mPart1, part.mPart2, part.mPart3, part.mPart4, , part.mPart5]
-							.filter((subpart): subpart is Record<string, any> => !!subpart)
-					} else if (part.mSubparts) {
+					if (part.mPart1 != null) {
+						sourceSubparts = [part.mPart1, part.mPart2, part.mPart3, part.mPart4, part.mPart5]
+							.filter((subpart): subpart is Record<string, any> => subpart != null)
+					} else if (part.mSubparts != null) {
 						sourceSubparts = part.mSubparts as Record<string, any>[]
 					} else {
 						sourceSubparts = [part]
@@ -587,11 +588,11 @@ function transformSpellData(spellName: string, spellData: ChampionJSONSpell, jso
 					const subparts: SpellCalculationSubpart[] = sourceSubparts
 						.map(subpart => {
 							const variableName: string | undefined = subpart.mDataValue ?? subpart.mSubpart?.mDataValue
-							if (!variableName || variableName?.startsWith('{')) {
+							if (variableName == null || variableName?.startsWith('{')) {
 								// console.log('ERR', 'Unknown variableName', spellName, calculationKey, subpart)
 							}
 							const mStat: number | undefined = subpart.mSubpart?.mStat ?? subpart.mStat
-							let stat: string | undefined = mStat ? mStatSubstitutions[mStat] : undefined
+							let stat: string | undefined = mStat != null ? mStatSubstitutions[mStat] : undefined
 							let ratio: number | undefined = subpart.mRatio ?? subpart.mCoefficient
 							if (stat === undefined) {
 								if (spellName === 'TFT6_GnarR' && variableName === 'ADPercent') {
@@ -610,7 +611,7 @@ function transformSpellData(spellName: string, spellData: ChampionJSONSpell, jso
 									}
 								}
 							}
-							if (stat && !ratio) {
+							if (stat != null && ratio == null) {
 								if (stat === BonusKey.AbilityPower) {
 									console.log('ERR', 'Assume base AP ratio', spellName, calculationKey, stat)
 									ratio = BASE_AP_RATIO
@@ -618,8 +619,8 @@ function transformSpellData(spellName: string, spellData: ChampionJSONSpell, jso
 									ratio = 1
 								}
 							}
-							const starValues = variableName ? variables[variableName] : undefined
-							if (variableName && !starValues && calculationKey !== 'UNUSED') {
+							const starValues = variableName != null ? variables[variableName] : undefined
+							if (variableName != null && !starValues && calculationKey !== 'UNUSED') {
 								console.log('ERR', 'Missing variable', spellName, calculationKey, variableName, variables)
 							}
 							return {
@@ -638,7 +639,7 @@ function transformSpellData(spellName: string, spellData: ChampionJSONSpell, jso
 					}
 				})
 			calculations[variableName] = {
-				asPercent: !!sourceCalculation.mDisplayAsPercent,
+				asPercent: sourceCalculation.mDisplayAsPercent != null,
 				parts,
 			}
 		}
@@ -665,7 +666,7 @@ function transformSpellData(spellName: string, spellData: ChampionJSONSpell, jso
 		cantCastWhileRooted: spellData.cantCastWhileRooted,
 		uninterruptable: spellData.mCantCancelWhileWindingUp,
 	}
-	if (spell.missile && missileSpeed && missileSpeed !== missileMovementSpeed) {
+	if (spell.missile && missileSpeed != null && missileSpeed !== missileMovementSpeed) {
 		spell.missile._missileSpeed = missileSpeed
 	}
 	// if (spellData.mCastTime == null) { //TODO verify these aren't supposed to instacast?
@@ -681,7 +682,7 @@ function transformSpellData(spellName: string, spellData: ChampionJSONSpell, jso
 
 console.log('\n')
 
-if (activeAugments) {
+if (activeAugments != null) {
 	const augmentKeys = activeAugments
 		.filter(augment => !(toKey(getAugmentNameKey(augment)) in AugmentGroupKey))
 		.sort((a, b) => a.groupID.localeCompare(b.groupID))

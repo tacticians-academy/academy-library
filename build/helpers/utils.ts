@@ -8,7 +8,7 @@ export function getAugmentNameKey(item: AugmentData | ItemData) {
 }
 
 export function getAPIName(champion: ChampionData) {
-	if (champion.apiName) { return champion.apiName }
+	if (champion.apiName != null) { return champion.apiName }
 	const matches = champion.icon.match(/.*\/(.+?).dds/)
 	const prefix = matches![1].split('_')[0]
 	return `${prefix}_${champion.name.replaceAll(/['. ]/g, '')}`

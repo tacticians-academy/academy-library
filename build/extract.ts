@@ -1,3 +1,5 @@
+import type { SetNumber } from '../dist/index.js'
+
 const LOAD_PBE = false
 const LOAD_SET: SetNumber = 6.5
 
@@ -5,12 +7,12 @@ import fetch from 'node-fetch'
 import fs from 'fs/promises'
 import path from 'path'
 
-import { SET_DATA, SetNumber } from '../dist/index.js'
+import { SET_DATA } from '../dist/index.js'
 import { importSetData } from '../dist/imports.js'
 
 import { getPathTo, setNumberPath } from './helpers/files.js'
 import { BASE_UNIT_API_NAMES, mDataValueSubstitutions, mSpellCalculationsSubstitutions } from './helpers/normalize.js'
-import { ChampionJSON, ChampionJSONStats, ResponseJSON } from './helpers/types.js'
+import type { ChampionJSON, ChampionJSONStats, ResponseJSON } from './helpers/types.js'
 import { getAPIName } from './helpers/utils.js'
 
 const patchLine = LOAD_PBE ? 'pbe' : SET_DATA[LOAD_SET].patchLine
@@ -83,14 +85,14 @@ if (parentSetNumber > 4) {
 }
 
 function replaceKey(object: Record<string, any>, key: string, substituted: string) {
-	if (!object[key] && substituted in object) {
+	if (!(key in object) && substituted in object) {
 		object[key] = object[substituted]
 		delete object[substituted]
 	}
 }
 
 await Promise.all(apiNames.map(async apiName => {
-	const pathName = apiName.toLowerCase()
+	const pathName = apiName!.toLowerCase()
 	const outputPath = path.resolve(championsPath, pathName + '.json')
 	const url = `${baseURL}/game/data/characters/${pathName}/${pathName}.bin.json`
 	// console.log('Loading champion', apiName, url)
@@ -130,16 +132,16 @@ await Promise.all(apiNames.map(async apiName => {
 						} else if (key.startsWith('{')) {
 							console.log('UNKNOWN mSpellCalculationsSubstitution', key, 'for', apiName)
 						}
-						if (value.mFormulaParts) {
+						if (value.mFormulaParts != null) {
 							for (const mFormulaPart of value.mFormulaParts) {
 								replaceKey(mFormulaPart, 'mRatio', '{b8dcfcbb}')
 								replaceKey(mFormulaPart, 'mStyleTag', '{992cd7eb}')
 								replaceKey(mFormulaPart, 'mSubpart', '{1cd83c4b}')
 								let childArray: any[]
-								if (mFormulaPart.mPart1) {
-									childArray = [mFormulaPart.mPart1, mFormulaPart.mPart2, mFormulaPart.mPart3, mFormulaPart.mPart4, , mFormulaPart.mPart5]
-										.filter((subpart): subpart is Record<string, any> => !!subpart)
-								} else if (mFormulaPart.mSubparts) {
+								if (mFormulaPart.mPart1 != null) {
+									childArray = [mFormulaPart.mPart1, mFormulaPart.mPart2, mFormulaPart.mPart3, mFormulaPart.mPart4, mFormulaPart.mPart5]
+										.filter((subpart): subpart is Record<string, any> => subpart != null)
+								} else if (mFormulaPart.mSubparts != null) {
 									childArray = mFormulaPart.mSubparts as Record<string, any>[]
 								} else {
 									childArray = [mFormulaPart]

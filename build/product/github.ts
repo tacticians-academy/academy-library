@@ -2,9 +2,10 @@ import fetch from 'node-fetch'
 import fs from 'fs/promises'
 import process from 'process'
 
-import { SetNumber } from '../../dist/index.js'
+import type { SetNumber } from '../../dist/index.js'
 import { importAugments, importItems, importTraits, importChampions } from '../../dist/imports.js'
-import { AugmentData, BonusKey, EffectVariables } from '../../dist/types.js'
+import { BonusKey } from '../../dist/types.js'
+import type { AugmentData, EffectVariables } from '../../dist/types.js'
 
 import { AugmentGroupKey, ChampionKey, ItemKey, TraitKey } from '../../dist/aggregated.js'
 
@@ -35,7 +36,7 @@ async function createIssue(data: GithubIssueData) {
 
 		if (response.ok) {
 			const remainingString = response.headers.get('x-ratelimit-remaining')
-			if (remainingString && remainingString.length === 1) {
+			if (remainingString?.length === 1) {
 				console.log('RATE LIMIT APPROACHING', response.headers)
 				return false
 			}
@@ -63,11 +64,13 @@ function getBulletEntriesFor(effectVariablesArray: (EffectVariables | null)[]) {
 		output[outputKey] = effectVariablesArray.map(effectVariables => effectVariables?.[key] ?? null)
 	}
 	const outputEntries = Object.entries(output)
-	return !outputEntries.length ? [] : outputEntries.map(([key, values]) => {
-		const outputKey = bonusKeyEntries.includes(key.replace('Bonus', '') as BonusKey) ? `_${key}_` : key
-		const outputValues = values.map(value => `\`${value}\``).join(' | ')
-		return `${outputKey} | ${outputValues}`
-	})
+	return !outputEntries.length
+		? []
+		: outputEntries.map(([key, values]) => {
+			const outputKey = bonusKeyEntries.includes(key.replace('Bonus', '') as BonusKey) ? `_${key}_` : key
+			const outputValues = values.map(value => `\`${value}\``).join(' | ')
+			return `${outputKey} | ${outputValues}`
+		})
 }
 
 function formatBulletEntries(bullets: string[], labels: string[]) {
@@ -91,7 +94,7 @@ const milestoneIDForSetString: Record<SetNumber, number | undefined> = {
 
 const currentSetNumber = await getCurrentSetNumber()
 const milestone = milestoneIDForSetString[currentSetNumber]
-if (!milestone) {
+if (milestone == null) {
 	console.log('Unknown milestone', currentSetNumber)
 	process.exit(0)
 }
@@ -165,7 +168,7 @@ const emptyImplementationAugments = await loadHardcodedTXT(currentSetNumber, 'au
 if (emptyImplementationAugments) {
 	const augmentGroups: Record<string, [AugmentData?, AugmentData?, AugmentData?]> = {}
 	for (const augment of activeAugments) {
-		if (!augmentGroups[augment.groupID]) {
+		if (augmentGroups[augment.groupID] == null) {
 			augmentGroups[augment.groupID] = []
 		}
 		augmentGroups[augment.groupID][augment.tier - 1] = augment

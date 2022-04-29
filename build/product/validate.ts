@@ -8,7 +8,7 @@ const currentSetNumber = await getCurrentSetNumber()
 
 const { activeAugments, inactiveAugments } = await importAugments(currentSetNumber)
 
-if (activeAugments) {
+if (activeAugments != null) {
 	console.log('\n')
 	const knownAugmentNames = await loadHardcodedTXT(currentSetNumber, 'augments-known')
 	if (knownAugmentNames) {
@@ -24,7 +24,6 @@ if (activeAugments) {
 			console.log('Augments missing', remainingKnownAugmentNames, remainingFoundAugmentNames)
 		}
 	}
-
 
 	const uniqueActiveAugments: Record<string, [AugmentData | undefined, AugmentData | undefined, AugmentData | undefined]> = {}
 	activeAugments.forEach(augment => {
@@ -46,17 +45,17 @@ if (activeAugments) {
 
 	const { augmentTierProbabilities } = await importAugmentTiers(currentSetNumber)
 
-	function recursiveCheckTiers(tier: AugmentTierProbability) {
-		const children = tier[1]
-		if (!children) {
-			return
-		}
-		const sum = children.reduce((acc, child) => acc + child[0], 0)
-		if (sum !== 100) {
-			throw `Invalid augment tier probability total: ${sum}, ` + JSON.stringify(children)
-		}
-		return children.forEach(recursiveCheckTiers)
-	}
-
 	recursiveCheckTiers(augmentTierProbabilities)
+}
+
+function recursiveCheckTiers(tier: AugmentTierProbability) {
+	const children = tier[1]
+	if (!children) {
+		return
+	}
+	const sum = children.reduce((acc, child) => acc + child[0], 0)
+	if (sum !== 100) {
+		throw `Invalid augment tier probability total: ${sum}, ` + JSON.stringify(children)
+	}
+	return children.forEach(recursiveCheckTiers)
 }

@@ -28,7 +28,7 @@ function getNormalizedEffects(variables: EffectVariables) {
 
 const { activeAugments } = await importAugments(currentSetNumber)
 
-if (activeAugments) {
+if (activeAugments != null) {
 	type AugmentEntry = [name: string, nameExtensions: (string | undefined)[], tiers: AugmentTier[], descriptions: string[], effectsArray: EffectVariables[], icons: string[]]
 
 	const nameExtensions = ['Heart', 'Crest', 'Crown', 'Soul']
@@ -71,7 +71,7 @@ if (activeAugments) {
 					.map((description, index) => {
 						return description ? `${index + 1}: ${substituteVariables(description, [effectsArray[index]])}` : null
 					})
-					.filter((description): description is string => !!description)
+					.filter((description): description is string => description != null)
 					.join('  ')
 			} else {
 				description = substituteVariables(validDescriptions[0], effectsArray)
@@ -84,7 +84,7 @@ if (activeAugments) {
 				name: extensions ? name + ' ' + extensions : name,
 				tiers: tiers.filter(e => e),
 				description,
-				icons: icons.filter(e => e).map(icon => icon.replace(REGEX_ASSET_PREFIX, '').replace('.png', ''))
+				icons: icons.filter(e => e).map(icon => icon.replace(REGEX_ASSET_PREFIX, '').replace('.png', '')),
 			})
 		})
 
