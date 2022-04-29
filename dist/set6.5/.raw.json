@@ -35,7 +35,7 @@
 		{
 			"desc": "Gain @NumChamps@ random 4-cost champions.",
 			"effects": {
-				"{78bc82ef}": 4
+				"{78bc82ef}": 3
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Four-Score-I.TFT_Set6_Stage2.dds",
@@ -1327,7 +1327,7 @@
 		{
 			"desc": "Your units with no Traits active gain @HP@ Health and @AS@% Attack Speed.",
 			"effects": {
-				"AS": 60,
+				"AS": 55,
 				"{513ad265}": 300
 			},
 			"from": [],
@@ -1348,7 +1348,7 @@
 		{
 			"desc": "Your units with no Traits active gain @HP@ Health and @AS@% Attack Speed.",
 			"effects": {
-				"AS": 70,
+				"AS": 60,
 				"{513ad265}": 400
 			},
 			"from": [],
@@ -1383,7 +1383,7 @@
 		{
 			"desc": "Your units with no Traits active gain @HP@ Health and @AS@% Attack Speed.",
 			"effects": {
-				"AS": 80,
+				"AS": 70,
 				"{513ad265}": 500
 			},
 			"from": [],
@@ -1517,7 +1517,7 @@
 		{
 			"desc": "Gain @NumChamps@ random 5-cost champions.",
 			"effects": {
-				"{78bc82ef}": 5
+				"{78bc82ef}": 4
 			},
 			"from": [],
 			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/High-Five-II.TFT_Set6_Stage2.dds",
@@ -3946,7 +3946,7 @@
 		{
 			"desc": "The holder gains %i:scaleAS% <TFTRadiantItemBonus>@AS@%</TFTRadiantItemBonus> bonus Attack Speed.  The holder is immune to crowd control in combat for <TFTRadiantItemBonus>@SpellShieldDuration@</TFTRadiantItemBonus> seconds. <br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>",
 			"effects": {
-				"AS": 45,
+				"AS": 55,
 				"MagicResist": 20,
 				"{a2b76524}": 30,
 				"{c4b5579c}": 15
@@ -4455,7 +4455,7 @@
 			"desc": "Reduces the Attack Speed of enemies within @HexRadius@ hexes by @AttackSpeedSlow@%.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>",
 			"effects": {
 				"Armor": 20,
-				"AttackSpeedSlow": 35,
+				"AttackSpeedSlow": 30,
 				"Mana": 15,
 				"{5cc52ba8}": 2
 			},
@@ -5036,7 +5036,7 @@
 				"Armor": 25,
 				"Health": 200,
 				"SlowDuration": 2,
-				"{0f0fd3a2}": 25,
+				"{0f0fd3a2}": 30,
 				"{22302443}": 10,
 				"{aaa03dde}": 2,
 				"{e8bc18e0}": 7
@@ -6981,8 +6981,8 @@
 								"name": "Slow",
 								"value": [
 									0,
-									0.25,
-									0.3499999940395355,
+									0.30000001192092896,
+									0.4000000059604645,
 									0.5,
 									0,
 									0,
@@ -7342,7 +7342,7 @@
 								"name": "Damage",
 								"value": [
 									0,
-									120,
+									110,
 									160,
 									225,
 									0,
@@ -7490,7 +7490,7 @@
 				{
 					"ability": {
 						"desc": "Seraphine projects her song towards the largest group of enemy units, dealing @ModifiedDamage@ magic damage to enemies. Allies it passes through are healed for @ModifiedHeal@ Health and gain @ASBonus*100@% bonus Attack Speed for @ASBonusDuration@ seconds.",
-						"icon": "ASSETS/Characters/Seraphine/HUD/Icons2D/Seraphine_R.EllipsisMage.dds",
+						"icon": "ASSETS/Characters/Seraphine/HUD/Icons2D/Seraphine_R.dds",
 						"name": "Encore",
 						"variables": [
 							{
@@ -7694,7 +7694,7 @@
 									50,
 									125,
 									200,
-									450,
+									500,
 									1000,
 									1250,
 									1500
@@ -7730,7 +7730,7 @@
 									0,
 									225,
 									325,
-									750,
+									850,
 									0,
 									0,
 									0
@@ -8275,9 +8275,9 @@
 								"name": "ASSlow",
 								"value": [
 									0,
-									0.25,
-									0.25,
-									0.3499999940395355,
+									0.20000000298023224,
+									0.20000000298023224,
+									0.30000001192092896,
 									0,
 									0,
 									0
@@ -8455,8 +8455,8 @@
 								"name": "RocketLauncherPercentAD",
 								"value": [
 									0.75,
+									2.0999999046325684,
 									2.200000047683716,
-									2.299999952316284,
 									8.880000114440918,
 									0.75,
 									0.75,
@@ -9003,14 +9003,14 @@
 					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT6_Talon.TFT_Set6_Stage2.dds",
 					"name": "Talon",
 					"stats": {
-						"armor": 25,
+						"armor": 20,
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
 						"damage": 45,
 						"hp": 650,
 						"initialMana": 0,
-						"magicResist": 25,
+						"magicResist": 20,
 						"mana": 0,
 						"range": 1
 					},
@@ -9096,7 +9096,7 @@
 									100,
 									100,
 									200,
-									600,
+									750,
 									100,
 									100,
 									100
@@ -9948,13 +9948,13 @@
 							{
 								"name": "PercentDamage",
 								"value": [
-									0.4000000059604645,
-									0.4000000059604645,
-									0.4000000059604645,
-									0.4000000059604645,
-									0.4000000059604645,
-									0.4000000059604645,
-									0.4000000059604645
+									0.30000001192092896,
+									0.30000001192092896,
+									0.30000001192092896,
+									0.30000001192092896,
+									0.30000001192092896,
+									0.30000001192092896,
+									0.30000001192092896
 								]
 							},
 							{
@@ -9997,8 +9997,8 @@
 								"name": "BonusAttackSpeed",
 								"value": [
 									0,
-									0.5,
-									0.699999988079071,
+									0.44999998807907104,
+									0.6499999761581421,
 									2.5,
 									0,
 									0,
@@ -10387,8 +10387,8 @@
 								"name": "Damage",
 								"value": [
 									0,
-									100,
-									125,
+									120,
+									150,
 									400,
 									0,
 									0,
@@ -10500,9 +10500,9 @@
 								"name": "ADPercent",
 								"value": [
 									0,
-									1.9500000476837158,
-									2,
-									2.25,
+									1.7999999523162842,
+									1.850000023841858,
+									2.5999999046325684,
 									0,
 									0,
 									0
@@ -10683,9 +10683,9 @@
 								"name": "RocketDamage",
 								"value": [
 									0,
-									190,
-									245,
-									315,
+									180,
+									220,
+									290,
 									0,
 									0,
 									0
@@ -10872,7 +10872,7 @@
 									1,
 									40,
 									65,
-									220,
+									240,
 									2,
 									2.25,
 									2.5
@@ -10882,9 +10882,9 @@
 								"name": "ASReduction",
 								"value": [
 									0.30000001192092896,
-									15,
-									15,
-									15,
+									20,
+									20,
+									20,
 									0.30000001192092896,
 									0.30000001192092896,
 									0.30000001192092896
@@ -11391,8 +11391,8 @@
 							"minUnits": 3,
 							"style": 1,
 							"variables": {
-								"Armor": 50,
-								"MagicResist": 50,
+								"Armor": 55,
+								"MagicResist": 55,
 								"{5c51b509}": 1,
 								"{c9b0e3af}": 20
 							}
@@ -11402,8 +11402,8 @@
 							"minUnits": 5,
 							"style": 3,
 							"variables": {
-								"Armor": 50,
-								"MagicResist": 50,
+								"Armor": 55,
+								"MagicResist": 55,
 								"{5c51b509}": 2,
 								"{c9b0e3af}": 20
 							}
@@ -11413,10 +11413,10 @@
 							"minUnits": 7,
 							"style": 4,
 							"variables": {
-								"Armor": 50,
-								"MagicResist": 50,
+								"Armor": 55,
+								"MagicResist": 55,
 								"{5c51b509}": 3,
-								"{867bc055}": 0.5,
+								"{867bc055}": 0.550000011920929,
 								"{c9b0e3af}": 20
 							}
 						}
@@ -11467,7 +11467,7 @@
 							"style": 2,
 							"variables": {
 								"{5cc08b27}": 3,
-								"{94c6a08c}": 40
+								"{94c6a08c}": 30
 							}
 						},
 						{
@@ -11475,8 +11475,8 @@
 							"minUnits": 6,
 							"style": 3,
 							"variables": {
-								"{5cc08b27}": 10,
-								"{94c6a08c}": 60
+								"{5cc08b27}": 12,
+								"{94c6a08c}": 50
 							}
 						}
 					],
@@ -11546,7 +11546,7 @@
 							"style": 2,
 							"variables": {
 								"{47343861}": 45,
-								"{98396b21}": 0.44999998807907104
+								"{98396b21}": 0.5
 							}
 						},
 						{
@@ -11555,7 +11555,7 @@
 							"style": 3,
 							"variables": {
 								"{47343861}": 70,
-								"{98396b21}": 0.699999988079071
+								"{98396b21}": 0.800000011920929
 							}
 						},
 						{
@@ -11564,7 +11564,7 @@
 							"style": 4,
 							"variables": {
 								"{47343861}": 100,
-								"{98396b21}": 1
+								"{98396b21}": 1.149999976158142
 							}
 						}
 					],
@@ -11703,7 +11703,7 @@
 								"{66d8ecb1}": 50,
 								"{6b5aee70}": 2,
 								"{76882e8f}": 450,
-								"{7c799240}": 20,
+								"{7c799240}": 18,
 								"{7f322ebf}": "null",
 								"{82e43c84}": 20,
 								"{994006f0}": 2,
@@ -11727,8 +11727,8 @@
 								"{5c51b509}": 2,
 								"{66d8ecb1}": 50,
 								"{6b5aee70}": 2,
-								"{76882e8f}": 900,
-								"{7c799240}": 30,
+								"{76882e8f}": 800,
+								"{7c799240}": 25,
 								"{7f322ebf}": "null",
 								"{82e43c84}": 40,
 								"{994006f0}": 4,
@@ -11752,8 +11752,8 @@
 								"{5c51b509}": 3,
 								"{66d8ecb1}": 50,
 								"{6b5aee70}": 2,
-								"{76882e8f}": 1350,
-								"{7c799240}": 40,
+								"{76882e8f}": 1250,
+								"{7c799240}": 35,
 								"{7f322ebf}": 40,
 								"{82e43c84}": 40,
 								"{994006f0}": 7,
@@ -11843,7 +11843,7 @@
 							"style": 3,
 							"variables": {
 								"{471b1a16}": 2,
-								"{d0539890}": 15
+								"{d0539890}": 12
 							}
 						},
 						{
@@ -11916,7 +11916,7 @@
 							"style": 2,
 							"variables": {
 								"MagicDamage": 25,
-								"ShieldAmount": 135,
+								"ShieldAmount": 150,
 								"ShieldDuration": 4,
 								"{2fb31c01}": 6,
 								"{f49783e7}": 20
@@ -11928,7 +11928,7 @@
 							"style": 3,
 							"variables": {
 								"MagicDamage": 45,
-								"ShieldAmount": 250,
+								"ShieldAmount": 275,
 								"ShieldDuration": 4,
 								"{2fb31c01}": 6,
 								"{f49783e7}": 20
@@ -11940,7 +11940,7 @@
 							"style": 4,
 							"variables": {
 								"MagicDamage": 75,
-								"ShieldAmount": 350,
+								"ShieldAmount": 375,
 								"ShieldDuration": 4,
 								"{2fb31c01}": 6,
 								"{f49783e7}": 20
@@ -12324,7 +12324,7 @@
 								"AttackSpeed": 40,
 								"DamageReduction": 15,
 								"Duration": 8,
-								"HealthRegen": 7,
+								"HealthRegen": 8,
 								"HealthThreshold": 75
 							}
 						},
@@ -12336,7 +12336,7 @@
 								"AttackSpeed": 80,
 								"DamageReduction": 15,
 								"Duration": 8,
-								"HealthRegen": 10,
+								"HealthRegen": 13,
 								"HealthThreshold": 75
 							}
 						},
@@ -12348,7 +12348,7 @@
 								"AttackSpeed": 150,
 								"DamageReduction": 15,
 								"Duration": 8,
-								"HealthRegen": 18,
+								"HealthRegen": 20,
 								"HealthThreshold": 75
 							}
 						}
@@ -13000,8 +13000,8 @@
 								"name": "Slow",
 								"value": [
 									0,
-									0.25,
-									0.3499999940395355,
+									0.30000001192092896,
+									0.4000000059604645,
 									0.5,
 									0,
 									0,
@@ -13361,7 +13361,7 @@
 								"name": "Damage",
 								"value": [
 									0,
-									120,
+									110,
 									160,
 									225,
 									0,
@@ -13509,7 +13509,7 @@
 				{
 					"ability": {
 						"desc": "Seraphine projects her song towards the largest group of enemy units, dealing @ModifiedDamage@ magic damage to enemies. Allies it passes through are healed for @ModifiedHeal@ Health and gain @ASBonus*100@% bonus Attack Speed for @ASBonusDuration@ seconds.",
-						"icon": "ASSETS/Characters/Seraphine/HUD/Icons2D/Seraphine_R.EllipsisMage.dds",
+						"icon": "ASSETS/Characters/Seraphine/HUD/Icons2D/Seraphine_R.dds",
 						"name": "Encore",
 						"variables": [
 							{
@@ -13713,7 +13713,7 @@
 									50,
 									125,
 									200,
-									450,
+									500,
 									1000,
 									1250,
 									1500
@@ -13749,7 +13749,7 @@
 									0,
 									225,
 									325,
-									750,
+									850,
 									0,
 									0,
 									0
@@ -14294,9 +14294,9 @@
 								"name": "ASSlow",
 								"value": [
 									0,
-									0.25,
-									0.25,
-									0.3499999940395355,
+									0.20000000298023224,
+									0.20000000298023224,
+									0.30000001192092896,
 									0,
 									0,
 									0
@@ -14474,8 +14474,8 @@
 								"name": "RocketLauncherPercentAD",
 								"value": [
 									0.75,
+									2.0999999046325684,
 									2.200000047683716,
-									2.299999952316284,
 									8.880000114440918,
 									0.75,
 									0.75,
@@ -15022,14 +15022,14 @@
 					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT6_Talon.TFT_Set6_Stage2.dds",
 					"name": "Talon",
 					"stats": {
-						"armor": 25,
+						"armor": 20,
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
 						"damage": 45,
 						"hp": 650,
 						"initialMana": 0,
-						"magicResist": 25,
+						"magicResist": 20,
 						"mana": 0,
 						"range": 1
 					},
@@ -15115,7 +15115,7 @@
 									100,
 									100,
 									200,
-									600,
+									750,
 									100,
 									100,
 									100
@@ -15967,13 +15967,13 @@
 							{
 								"name": "PercentDamage",
 								"value": [
-									0.4000000059604645,
-									0.4000000059604645,
-									0.4000000059604645,
-									0.4000000059604645,
-									0.4000000059604645,
-									0.4000000059604645,
-									0.4000000059604645
+									0.30000001192092896,
+									0.30000001192092896,
+									0.30000001192092896,
+									0.30000001192092896,
+									0.30000001192092896,
+									0.30000001192092896,
+									0.30000001192092896
 								]
 							},
 							{
@@ -16016,8 +16016,8 @@
 								"name": "BonusAttackSpeed",
 								"value": [
 									0,
-									0.5,
-									0.699999988079071,
+									0.44999998807907104,
+									0.6499999761581421,
 									2.5,
 									0,
 									0,
@@ -16406,8 +16406,8 @@
 								"name": "Damage",
 								"value": [
 									0,
-									100,
-									125,
+									120,
+									150,
 									400,
 									0,
 									0,
@@ -16519,9 +16519,9 @@
 								"name": "ADPercent",
 								"value": [
 									0,
-									1.9500000476837158,
-									2,
-									2.25,
+									1.7999999523162842,
+									1.850000023841858,
+									2.5999999046325684,
 									0,
 									0,
 									0
@@ -16702,9 +16702,9 @@
 								"name": "RocketDamage",
 								"value": [
 									0,
-									190,
-									245,
-									315,
+									180,
+									220,
+									290,
 									0,
 									0,
 									0
@@ -16891,7 +16891,7 @@
 									1,
 									40,
 									65,
-									220,
+									240,
 									2,
 									2.25,
 									2.5
@@ -16901,9 +16901,9 @@
 								"name": "ASReduction",
 								"value": [
 									0.30000001192092896,
-									15,
-									15,
-									15,
+									20,
+									20,
+									20,
 									0.30000001192092896,
 									0.30000001192092896,
 									0.30000001192092896
@@ -17410,8 +17410,8 @@
 							"minUnits": 3,
 							"style": 1,
 							"variables": {
-								"Armor": 50,
-								"MagicResist": 50,
+								"Armor": 55,
+								"MagicResist": 55,
 								"{5c51b509}": 1,
 								"{c9b0e3af}": 20
 							}
@@ -17421,8 +17421,8 @@
 							"minUnits": 5,
 							"style": 3,
 							"variables": {
-								"Armor": 50,
-								"MagicResist": 50,
+								"Armor": 55,
+								"MagicResist": 55,
 								"{5c51b509}": 2,
 								"{c9b0e3af}": 20
 							}
@@ -17432,10 +17432,10 @@
 							"minUnits": 7,
 							"style": 4,
 							"variables": {
-								"Armor": 50,
-								"MagicResist": 50,
+								"Armor": 55,
+								"MagicResist": 55,
 								"{5c51b509}": 3,
-								"{867bc055}": 0.5,
+								"{867bc055}": 0.550000011920929,
 								"{c9b0e3af}": 20
 							}
 						}
@@ -17486,7 +17486,7 @@
 							"style": 2,
 							"variables": {
 								"{5cc08b27}": 3,
-								"{94c6a08c}": 40
+								"{94c6a08c}": 30
 							}
 						},
 						{
@@ -17494,8 +17494,8 @@
 							"minUnits": 6,
 							"style": 3,
 							"variables": {
-								"{5cc08b27}": 10,
-								"{94c6a08c}": 60
+								"{5cc08b27}": 12,
+								"{94c6a08c}": 50
 							}
 						}
 					],
@@ -17565,7 +17565,7 @@
 							"style": 2,
 							"variables": {
 								"{47343861}": 45,
-								"{98396b21}": 0.44999998807907104
+								"{98396b21}": 0.5
 							}
 						},
 						{
@@ -17574,7 +17574,7 @@
 							"style": 3,
 							"variables": {
 								"{47343861}": 70,
-								"{98396b21}": 0.699999988079071
+								"{98396b21}": 0.800000011920929
 							}
 						},
 						{
@@ -17583,7 +17583,7 @@
 							"style": 4,
 							"variables": {
 								"{47343861}": 100,
-								"{98396b21}": 1
+								"{98396b21}": 1.149999976158142
 							}
 						}
 					],
@@ -17722,7 +17722,7 @@
 								"{66d8ecb1}": 50,
 								"{6b5aee70}": 2,
 								"{76882e8f}": 450,
-								"{7c799240}": 20,
+								"{7c799240}": 18,
 								"{7f322ebf}": "null",
 								"{82e43c84}": 20,
 								"{994006f0}": 2,
@@ -17746,8 +17746,8 @@
 								"{5c51b509}": 2,
 								"{66d8ecb1}": 50,
 								"{6b5aee70}": 2,
-								"{76882e8f}": 900,
-								"{7c799240}": 30,
+								"{76882e8f}": 800,
+								"{7c799240}": 25,
 								"{7f322ebf}": "null",
 								"{82e43c84}": 40,
 								"{994006f0}": 4,
@@ -17771,8 +17771,8 @@
 								"{5c51b509}": 3,
 								"{66d8ecb1}": 50,
 								"{6b5aee70}": 2,
-								"{76882e8f}": 1350,
-								"{7c799240}": 40,
+								"{76882e8f}": 1250,
+								"{7c799240}": 35,
 								"{7f322ebf}": 40,
 								"{82e43c84}": 40,
 								"{994006f0}": 7,
@@ -17862,7 +17862,7 @@
 							"style": 3,
 							"variables": {
 								"{471b1a16}": 2,
-								"{d0539890}": 15
+								"{d0539890}": 12
 							}
 						},
 						{
@@ -17935,7 +17935,7 @@
 							"style": 2,
 							"variables": {
 								"MagicDamage": 25,
-								"ShieldAmount": 135,
+								"ShieldAmount": 150,
 								"ShieldDuration": 4,
 								"{2fb31c01}": 6,
 								"{f49783e7}": 20
@@ -17947,7 +17947,7 @@
 							"style": 3,
 							"variables": {
 								"MagicDamage": 45,
-								"ShieldAmount": 250,
+								"ShieldAmount": 275,
 								"ShieldDuration": 4,
 								"{2fb31c01}": 6,
 								"{f49783e7}": 20
@@ -17959,7 +17959,7 @@
 							"style": 4,
 							"variables": {
 								"MagicDamage": 75,
-								"ShieldAmount": 350,
+								"ShieldAmount": 375,
 								"ShieldDuration": 4,
 								"{2fb31c01}": 6,
 								"{f49783e7}": 20
@@ -18343,7 +18343,7 @@
 								"AttackSpeed": 40,
 								"DamageReduction": 15,
 								"Duration": 8,
-								"HealthRegen": 7,
+								"HealthRegen": 8,
 								"HealthThreshold": 75
 							}
 						},
@@ -18355,7 +18355,7 @@
 								"AttackSpeed": 80,
 								"DamageReduction": 15,
 								"Duration": 8,
-								"HealthRegen": 10,
+								"HealthRegen": 13,
 								"HealthThreshold": 75
 							}
 						},
@@ -18367,7 +18367,7 @@
 								"AttackSpeed": 150,
 								"DamageReduction": 15,
 								"Duration": 8,
-								"HealthRegen": 18,
+								"HealthRegen": 20,
 								"HealthThreshold": 75
 							}
 						}
@@ -18923,8 +18923,8 @@
 								"name": "Slow",
 								"value": [
 									0,
-									0.25,
-									0.3499999940395355,
+									0.30000001192092896,
+									0.4000000059604645,
 									0.5,
 									0,
 									0,
@@ -19284,7 +19284,7 @@
 								"name": "Damage",
 								"value": [
 									0,
-									120,
+									110,
 									160,
 									225,
 									0,
@@ -19432,7 +19432,7 @@
 				{
 					"ability": {
 						"desc": "Seraphine projects her song towards the largest group of enemy units, dealing @ModifiedDamage@ magic damage to enemies. Allies it passes through are healed for @ModifiedHeal@ Health and gain @ASBonus*100@% bonus Attack Speed for @ASBonusDuration@ seconds.",
-						"icon": "ASSETS/Characters/Seraphine/HUD/Icons2D/Seraphine_R.EllipsisMage.dds",
+						"icon": "ASSETS/Characters/Seraphine/HUD/Icons2D/Seraphine_R.dds",
 						"name": "Encore",
 						"variables": [
 							{
@@ -19636,7 +19636,7 @@
 									50,
 									125,
 									200,
-									450,
+									500,
 									1000,
 									1250,
 									1500
@@ -19672,7 +19672,7 @@
 									0,
 									225,
 									325,
-									750,
+									850,
 									0,
 									0,
 									0
@@ -20217,9 +20217,9 @@
 								"name": "ASSlow",
 								"value": [
 									0,
-									0.25,
-									0.25,
-									0.3499999940395355,
+									0.20000000298023224,
+									0.20000000298023224,
+									0.30000001192092896,
 									0,
 									0,
 									0
@@ -20397,8 +20397,8 @@
 								"name": "RocketLauncherPercentAD",
 								"value": [
 									0.75,
+									2.0999999046325684,
 									2.200000047683716,
-									2.299999952316284,
 									8.880000114440918,
 									0.75,
 									0.75,
@@ -20945,14 +20945,14 @@
 					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT6_Talon.TFT_Set6_Stage2.dds",
 					"name": "Talon",
 					"stats": {
-						"armor": 25,
+						"armor": 20,
 						"attackSpeed": 0.699999988079071,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
 						"damage": 45,
 						"hp": 650,
 						"initialMana": 0,
-						"magicResist": 25,
+						"magicResist": 20,
 						"mana": 0,
 						"range": 1
 					},
@@ -21038,7 +21038,7 @@
 									100,
 									100,
 									200,
-									600,
+									750,
 									100,
 									100,
 									100
@@ -21890,13 +21890,13 @@
 							{
 								"name": "PercentDamage",
 								"value": [
-									0.4000000059604645,
-									0.4000000059604645,
-									0.4000000059604645,
-									0.4000000059604645,
-									0.4000000059604645,
-									0.4000000059604645,
-									0.4000000059604645
+									0.30000001192092896,
+									0.30000001192092896,
+									0.30000001192092896,
+									0.30000001192092896,
+									0.30000001192092896,
+									0.30000001192092896,
+									0.30000001192092896
 								]
 							},
 							{
@@ -21939,8 +21939,8 @@
 								"name": "BonusAttackSpeed",
 								"value": [
 									0,
-									0.5,
-									0.699999988079071,
+									0.44999998807907104,
+									0.6499999761581421,
 									2.5,
 									0,
 									0,
@@ -22329,8 +22329,8 @@
 								"name": "Damage",
 								"value": [
 									0,
-									100,
-									125,
+									120,
+									150,
 									400,
 									0,
 									0,
@@ -22442,9 +22442,9 @@
 								"name": "ADPercent",
 								"value": [
 									0,
-									1.9500000476837158,
-									2,
-									2.25,
+									1.7999999523162842,
+									1.850000023841858,
+									2.5999999046325684,
 									0,
 									0,
 									0
@@ -22625,9 +22625,9 @@
 								"name": "RocketDamage",
 								"value": [
 									0,
-									190,
-									245,
-									315,
+									180,
+									220,
+									290,
 									0,
 									0,
 									0
@@ -22814,7 +22814,7 @@
 									1,
 									40,
 									65,
-									220,
+									240,
 									2,
 									2.25,
 									2.5
@@ -22824,9 +22824,9 @@
 								"name": "ASReduction",
 								"value": [
 									0.30000001192092896,
-									15,
-									15,
-									15,
+									20,
+									20,
+									20,
 									0.30000001192092896,
 									0.30000001192092896,
 									0.30000001192092896
@@ -23331,8 +23331,8 @@
 							"minUnits": 3,
 							"style": 1,
 							"variables": {
-								"Armor": 50,
-								"MagicResist": 50,
+								"Armor": 55,
+								"MagicResist": 55,
 								"{5c51b509}": 1,
 								"{c9b0e3af}": 20
 							}
@@ -23342,8 +23342,8 @@
 							"minUnits": 5,
 							"style": 3,
 							"variables": {
-								"Armor": 50,
-								"MagicResist": 50,
+								"Armor": 55,
+								"MagicResist": 55,
 								"{5c51b509}": 2,
 								"{c9b0e3af}": 20
 							}
@@ -23353,10 +23353,10 @@
 							"minUnits": 7,
 							"style": 4,
 							"variables": {
-								"Armor": 50,
-								"MagicResist": 50,
+								"Armor": 55,
+								"MagicResist": 55,
 								"{5c51b509}": 3,
-								"{867bc055}": 0.5,
+								"{867bc055}": 0.550000011920929,
 								"{c9b0e3af}": 20
 							}
 						}
@@ -23407,7 +23407,7 @@
 							"style": 2,
 							"variables": {
 								"{5cc08b27}": 3,
-								"{94c6a08c}": 40
+								"{94c6a08c}": 30
 							}
 						},
 						{
@@ -23415,8 +23415,8 @@
 							"minUnits": 6,
 							"style": 3,
 							"variables": {
-								"{5cc08b27}": 10,
-								"{94c6a08c}": 60
+								"{5cc08b27}": 12,
+								"{94c6a08c}": 50
 							}
 						}
 					],
@@ -23486,7 +23486,7 @@
 							"style": 2,
 							"variables": {
 								"{47343861}": 45,
-								"{98396b21}": 0.44999998807907104
+								"{98396b21}": 0.5
 							}
 						},
 						{
@@ -23495,7 +23495,7 @@
 							"style": 3,
 							"variables": {
 								"{47343861}": 70,
-								"{98396b21}": 0.699999988079071
+								"{98396b21}": 0.800000011920929
 							}
 						},
 						{
@@ -23504,7 +23504,7 @@
 							"style": 4,
 							"variables": {
 								"{47343861}": 100,
-								"{98396b21}": 1
+								"{98396b21}": 1.149999976158142
 							}
 						}
 					],
@@ -23643,7 +23643,7 @@
 								"{66d8ecb1}": 50,
 								"{6b5aee70}": 2,
 								"{76882e8f}": 450,
-								"{7c799240}": 20,
+								"{7c799240}": 18,
 								"{7f322ebf}": "null",
 								"{82e43c84}": 20,
 								"{994006f0}": 2,
@@ -23667,8 +23667,8 @@
 								"{5c51b509}": 2,
 								"{66d8ecb1}": 50,
 								"{6b5aee70}": 2,
-								"{76882e8f}": 900,
-								"{7c799240}": 30,
+								"{76882e8f}": 800,
+								"{7c799240}": 25,
 								"{7f322ebf}": "null",
 								"{82e43c84}": 40,
 								"{994006f0}": 4,
@@ -23692,8 +23692,8 @@
 								"{5c51b509}": 3,
 								"{66d8ecb1}": 50,
 								"{6b5aee70}": 2,
-								"{76882e8f}": 1350,
-								"{7c799240}": 40,
+								"{76882e8f}": 1250,
+								"{7c799240}": 35,
 								"{7f322ebf}": 40,
 								"{82e43c84}": 40,
 								"{994006f0}": 7,
@@ -23783,7 +23783,7 @@
 							"style": 3,
 							"variables": {
 								"{471b1a16}": 2,
-								"{d0539890}": 15
+								"{d0539890}": 12
 							}
 						},
 						{
@@ -23856,7 +23856,7 @@
 							"style": 2,
 							"variables": {
 								"MagicDamage": 25,
-								"ShieldAmount": 135,
+								"ShieldAmount": 150,
 								"ShieldDuration": 4,
 								"{2fb31c01}": 6,
 								"{f49783e7}": 20
@@ -23868,7 +23868,7 @@
 							"style": 3,
 							"variables": {
 								"MagicDamage": 45,
-								"ShieldAmount": 250,
+								"ShieldAmount": 275,
 								"ShieldDuration": 4,
 								"{2fb31c01}": 6,
 								"{f49783e7}": 20
@@ -23880,7 +23880,7 @@
 							"style": 4,
 							"variables": {
 								"MagicDamage": 75,
-								"ShieldAmount": 350,
+								"ShieldAmount": 375,
 								"ShieldDuration": 4,
 								"{2fb31c01}": 6,
 								"{f49783e7}": 20
@@ -24264,7 +24264,7 @@
 								"AttackSpeed": 40,
 								"DamageReduction": 15,
 								"Duration": 8,
-								"HealthRegen": 7,
+								"HealthRegen": 8,
 								"HealthThreshold": 75
 							}
 						},
@@ -24276,7 +24276,7 @@
 								"AttackSpeed": 80,
 								"DamageReduction": 15,
 								"Duration": 8,
-								"HealthRegen": 10,
+								"HealthRegen": 13,
 								"HealthThreshold": 75
 							}
 						},
@@ -24288,7 +24288,7 @@
 								"AttackSpeed": 150,
 								"DamageReduction": 15,
 								"Duration": 8,
-								"HealthRegen": 18,
+								"HealthRegen": 20,
 								"HealthThreshold": 75
 							}
 						}

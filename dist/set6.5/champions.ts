@@ -537,7 +537,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: false,
 				},
 				variables: {
-					'Damage': [100, 100, 200, 600],
+					'Damage': [100, 100, 200, 750],
 					'StunDuration': [2.5, 2, 2.75, 8],
 				},
 				calculations: {
@@ -549,7 +549,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [100, 100, 200, 600],
+										starValues: [100, 100, 200, 750],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -907,7 +907,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'RocketDamage': [0, 190, 245, 315],
+					'RocketDamage': [0, 180, 220, 290],
 				},
 				calculations: {
 					'Damage': {
@@ -918,7 +918,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `RocketDamage`,
-										starValues: [0, 190, 245, 315],
+										starValues: [0, 180, 220, 290],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1078,7 +1078,7 @@ export const champions: ChampionData[] = [
 				variables: {
 					'BuffDuration': [5.75, 5.75, 5.75, 5.75],
 					'ADMult': [1, 1.7000000476837158, 1.7999999523162842, 4],
-					'Damage': [0, 100, 125, 400],
+					'Damage': [0, 120, 150, 400],
 					'ArmorPenPercent': [25, 25, 25, 25],
 					'T1DebutantBonus': [2.5, 2.5, 2.5, 2.5],
 					'PassiveArmorPenPercent': [25, 25, 25, 25],
@@ -1103,7 +1103,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [0, 100, 125, 400],
+										starValues: [0, 120, 150, 400],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1379,7 +1379,7 @@ export const champions: ChampionData[] = [
 					'FieldDuration': [2, 2, 2, 2],
 					'HexRadius': [2, 2, 2, 2],
 					'BonusAS': [0.10000000149011612, 0.3499999940395355, 0.4000000059604645, 0.5],
-					'ASSlow': [0, 0.25, 0.25, 0.3499999940395355],
+					'ASSlow': [0, 0.20000000298023224, 0.20000000298023224, 0.30000001192092896],
 					'Damage': [75, 150, 200, 350],
 					'SlowDuration': [4, 4, 4, 4],
 					'BuffDuration': [4, 4, 4, 4],
@@ -1677,7 +1677,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'Damage': [0, 120, 160, 225],
+					'Damage': [0, 110, 160, 225],
 					'ADPercent': [1.7000000476837158, 1.7000000476837158, 1.7000000476837158, 1.7000000476837158],
 				},
 				calculations: {
@@ -1689,7 +1689,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [0, 120, 160, 225],
+										starValues: [0, 110, 160, 225],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2439,7 +2439,7 @@ export const champions: ChampionData[] = [
 					'OuterRadius': [3, 3, 3, 5],
 					'PercentBurn': [1, 2, 3, 4],
 					'FalloffPercent': [0.5, 0.5, 0.5, 0.5],
-					'RocketLauncherPercentAD': [0.75, 2.200000047683716, 2.299999952316284, 8.880000114440918],
+					'RocketLauncherPercentAD': [0.75, 2.0999999046325684, 2.200000047683716, 8.880000114440918],
 					'HexDuration': [5, 5, 5, 5],
 				},
 				calculations: {
@@ -2451,7 +2451,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `RocketLauncherPercentAD`,
-										starValues: [0.75, 2.200000047683716, 2.299999952316284, 8.880000114440918],
+										starValues: [0.75, 2.0999999046325684, 2.200000047683716, 8.880000114440918],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -2828,7 +2828,7 @@ export const champions: ChampionData[] = [
 					'MSBuff': [1500, 1500, 1500, 1500],
 					'Damage': [0, 175, 225, 500],
 					'ManaReave': [0, 50, 50, 50],
-					'ADPercent': [0, 1.9500000476837158, 2, 2.25],
+					'ADPercent': [0, 1.7999999523162842, 1.850000023841858, 2.5999999046325684],
 				},
 				calculations: {
 					'Damage': {
@@ -2845,7 +2845,7 @@ export const champions: ChampionData[] = [
 									},
 									{
 										variable: `ADPercent`,
-										starValues: [0, 1.9500000476837158, 2, 2.25],
+										starValues: [0, 1.7999999523162842, 1.850000023841858, 2.5999999046325684],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -4262,8 +4262,8 @@ export const champions: ChampionData[] = [
 					tracksTarget: false,
 				},
 				variables: {
-					'DamagePerSecond': [1, 40, 65, 220],
-					'ASReduction': [0.30000001192092896, 15, 15, 15],
+					'DamagePerSecond': [1, 40, 65, 240],
+					'ASReduction': [0.30000001192092896, 20, 20, 20],
 					'Duration': [15, 15, 15, 15],
 					'SpellRange': [6, 6, 6, 6],
 				},
@@ -4276,7 +4276,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `DamagePerSecond`,
-										starValues: [1, 40, 65, 220],
+										starValues: [1, 40, 65, 240],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4778,11 +4778,11 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'PercentDamage': [0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645],
+					'PercentDamage': [0.30000001192092896, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
 					'NumBounces': [3, 4, 5, 9],
 					'BounceRange': [5, 5, 5, 5],
 					'Duration': [5, 5, 5, 5],
-					'BonusAttackSpeed': [0, 0.5, 0.699999988079071, 2.5],
+					'BonusAttackSpeed': [0, 0.44999998807907104, 0.6499999761581421, 2.5],
 				},
 				calculations: {
 					'DamageCalc': {
@@ -4793,7 +4793,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `PercentDamage`,
-										starValues: [0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645],
+										starValues: [0.30000001192092896, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -4809,7 +4809,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `BonusAttackSpeed`,
-										starValues: [0, 0.5, 0.699999988079071, 2.5],
+										starValues: [0, 0.44999998807907104, 0.6499999761581421, 2.5],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -5153,14 +5153,14 @@ export const champions: ChampionData[] = [
 		isSpawn: false,
 		traits: [`Debonair`, `Assassin`],
 		stats: {
-			armor: 25,
+			armor: 20,
 			attackSpeed: 0.699999988079071,
 			critChance: 0.25,
 			critMultiplier: 1.2999999523162842,
 			damage: 45,
 			hp: 650,
 			initialMana: 0,
-			magicResist: 25,
+			magicResist: 20,
 			mana: 0,
 			moveSpeed: 500,
 			range: 1,
@@ -5587,10 +5587,10 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'Damage': [50, 125, 200, 450],
+					'Damage': [50, 125, 200, 500],
 					'AoEHexRadius': [2, 2, 2, 2],
 					'DamageFinal': [0, 250, 350, 900],
-					'Shield': [0, 225, 325, 750],
+					'Shield': [0, 225, 325, 850],
 					'ShieldDuration': [4, 4, 4, 4],
 				},
 				calculations: {
@@ -5602,7 +5602,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [50, 125, 200, 450],
+										starValues: [50, 125, 200, 500],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -5618,7 +5618,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Shield`,
-										starValues: [0, 225, 325, 750],
+										starValues: [0, 225, 325, 850],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -5758,6 +5758,7 @@ export const champions: ChampionData[] = [
 					acceleration: 3000,
 					startDelay: 1.2000000476837158,
 					tracksTarget: false,
+					_missileSpeed: 0,
 				},
 				variables: {},
 				calculations: {},
@@ -6507,7 +6508,7 @@ export const champions: ChampionData[] = [
 				},
 				variables: {
 					'Damage': [0, 250, 350, 700],
-					'Slow': [0, 0.25, 0.3499999940395355, 0.5],
+					'Slow': [0, 0.30000001192092896, 0.4000000059604645, 0.5],
 					'StunDuration': [0, 1.5, 2, 2.5],
 					'SlowDuration': [4, 4, 4, 4],
 				},

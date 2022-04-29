@@ -423,7 +423,7 @@ export const completedItems: ItemData[] = [
 		desc: `Reduces the Attack Speed of enemies within @HexRadius@ hexes by @ASSlow@%.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
 		effects: {
 			'Armor': 20,
-			'ASSlow': 35,
+			'ASSlow': 30,
 			'Mana': 15,
 			'HexRadius': 2,
 		},
@@ -1471,7 +1471,7 @@ export const radiantItems: ItemData[] = [
 	{
 		desc: `The holder gains %i:scaleAS% <TFTRadiantItemBonus>@AS@%</TFTRadiantItemBonus> bonus Attack Speed.  The holder is immune to crowd control in combat for <TFTRadiantItemBonus>@SpellShieldDuration@</TFTRadiantItemBonus> seconds. <br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
 		effects: {
-			'AS': 45,
+			'AS': 55,
 			'MR': 20,
 			'SpellShieldDuration': 30,
 			'DodgeChance': 15,
@@ -1560,7 +1560,7 @@ export const ornnItems: ItemData[] = [
 			'Armor': 25,
 			'HP': 200,
 			'SlowDuration': 2,
-			'{0f0fd3a2}': 25,
+			'{0f0fd3a2}': 30,
 			'{22302443}': 10,
 			'{aaa03dde}': 2,
 			'{e8bc18e0}': 7,

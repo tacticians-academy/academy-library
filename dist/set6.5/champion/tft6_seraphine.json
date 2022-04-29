@@ -128,7 +128,7 @@
 				}
 			},
 			"mImgIconName": [
-				"ASSETS/Characters/Seraphine/HUD/Icons2D/Seraphine_R.EllipsisMage.dds"
+				"ASSETS/Characters/Seraphine/HUD/Icons2D/Seraphine_R.dds"
 			],
 			"mCastTime": 0.5,
 			"delayCastOffsetPercent": -1,

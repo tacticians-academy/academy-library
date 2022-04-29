@@ -304,7 +304,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `builtDifferent`,
 		desc: `Your units with no Traits active gain @HP@ HP and @AS@% Attack Speed.`,
 		effects: {
-			'AS': 60,
+			'AS': 55,
 			'HP': 300,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/BuiltDifferent1.TFT_Set6.dds`,
@@ -315,7 +315,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `builtDifferent`,
 		desc: `Your units with no Traits active gain @HP@ HP and @AS@% Attack Speed.`,
 		effects: {
-			'AS': 70,
+			'AS': 60,
 			'HP': 400,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/BuiltDifferent2.TFT_Set6.dds`,
@@ -326,7 +326,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `builtDifferent`,
 		desc: `Your units with no Traits active gain @HP@ HP and @AS@% Attack Speed.`,
 		effects: {
-			'AS': 80,
+			'AS': 70,
 			'HP': 500,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/BuiltDifferent3.TFT_Set6.dds`,
@@ -881,7 +881,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `fourScore`,
 		desc: `Gain @NumChamps@ random 4-cost champions.`,
 		effects: {
-			'NumChamps': 4,
+			'NumChamps': 3,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Four-Score-I.TFT_Set6_Stage2.dds`,
 	},
@@ -1005,7 +1005,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `highFive`,
 		desc: `Gain @NumChamps@ random 5-cost champions.`,
 		effects: {
-			'NumChamps': 5,
+			'NumChamps': 4,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/High-Five-II.TFT_Set6_Stage2.dds`,
 	},

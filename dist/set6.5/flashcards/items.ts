@@ -275,7 +275,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 		id: 45,
 		name: `Frozen Heart`,
 		type: `completed`,
-		description: `Reduces the Attack Speed of enemies within 2 hexes by 35%. [Unique - only 1 per champion]`,
+		description: `Reduces the Attack Speed of enemies within 2 hexes by 30%. [Unique - only 1 per champion]`,
 		icon: `assets/maps/particles/tft/item_icons/standard/frozen_heart`,
 		from: [4, 5],
 		unique: true,

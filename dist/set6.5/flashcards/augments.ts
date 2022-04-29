@@ -117,7 +117,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `builtdifferent`,
 		name: `Built Different`,
 		tiers: [1, 2, 3],
-		description: `Your units with no Traits active gain 300/400/500 HP and 60/70/80% Attack Speed.`,
+		description: `Your units with no Traits active gain 300/400/500 HP and 55/60/70% Attack Speed.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/builtdifferent1.tft_set6`, `assets/maps/particles/tft/item_icons/augments/hexcore/builtdifferent2.tft_set6`, `assets/maps/particles/tft/item_icons/augments/hexcore/builtdifferent3.tft_set6`],
 	},
 	{
@@ -313,7 +313,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `fourscore`,
 		name: `Four Score`,
 		tiers: [1],
-		description: `Gain 4 random 4-cost champions.`,
+		description: `Gain 3 random 4-cost champions.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/four-score-i.tft_set6_stage2`],
 	},
 	{
@@ -376,7 +376,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `highfive`,
 		name: `High Five`,
 		tiers: [2],
-		description: `Gain 5 random 5-cost champions.`,
+		description: `Gain 4 random 5-cost champions.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/high-five-ii.tft_set6_stage2`],
 	},
 	{
