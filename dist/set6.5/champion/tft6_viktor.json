@@ -486,7 +486,7 @@
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
 		"mCharacterName": "TFT6_Viktor",
-		"baseHP": 850,
+		"baseHP": 851,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,

@@ -248,7 +248,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 		id: 37,
 		name: `Morellonomicon`,
 		type: `completed`,
-		description: `When the holder deals magic or true damage with their Ability, they burn the target, dealing 20% of the target's maximum HP as true damage over 10 seconds, and reducing healing by 50% for the duration of the burn. [Unique - only 1 per champion]`,
+		description: `When the holder deals magic or true damage with their Ability, they burn the target, dealing 10% of the target's maximum HP as true damage over 10 seconds, and reducing healing by 50% for the duration of the burn. [Unique - only 1 per champion]`,
 		icon: `assets/maps/particles/tft/item_icons/standard/morellonomicon`,
 		from: [3, 7],
 		unique: true,

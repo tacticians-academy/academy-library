@@ -382,7 +382,7 @@ export const completedItems: ItemData[] = [
 			'MonsterCap': 100,
 			'TicksPerSecond': 1,
 			'GrievousWoundsPercent': 50,
-			'BurnPercent': 20,
+			'BurnPercent': 10,
 			'BurnDuration': 10,
 		},
 		from: [3, 7],

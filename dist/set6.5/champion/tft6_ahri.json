@@ -731,7 +731,7 @@
 		"critDamageMultiplier": 1.2999999523162842,
 		"baseMoveSpeed": 500,
 		"attackRange": 890,
-		"attackSpeed": 0.75,
+		"attackSpeed": 0.800000011920929,
 		"basicAttack": {
 			"mAttackCastTime": 0.75,
 			"mAttackDelayCastOffsetPercent": -0.0989999994635582,

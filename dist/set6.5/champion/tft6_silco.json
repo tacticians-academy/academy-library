@@ -134,8 +134,8 @@
 					"mName": "Damage",
 					"mValues": [
 						0,
-						250,
-						500,
+						350,
+						600,
 						5000,
 						0,
 						0,
@@ -443,7 +443,7 @@
 		"critDamageMultiplier": 1.2999999523162842,
 		"baseMoveSpeed": 500,
 		"attackRange": 890,
-		"attackSpeed": 0.6499999761581421,
+		"attackSpeed": 0.699999988079071,
 		"basicAttack": {
 			"mAttackName": "TFT6_SilcoBasicAttack",
 			"__type": "AttackSlotData"

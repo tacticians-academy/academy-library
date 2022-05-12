@@ -280,7 +280,7 @@
 		"mInitialMana": 200,
 		"{4e28a666}": "Spine1",
 		"mCharacterName": "TFT6_HexTechDragon",
-		"baseHP": 1125,
+		"baseHP": 1025,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,

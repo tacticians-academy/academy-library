@@ -13,9 +13,9 @@
 					"mName": "Damage",
 					"mValues": [
 						0,
-						800,
-						1400,
-						2000,
+						900,
+						1500,
+						2250,
 						2400,
 						3000,
 						3600
@@ -387,7 +387,7 @@
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 45,
+		"baseDamage": 50,
 		"baseArmor": 15,
 		"baseSpellBlock": 15,
 		"baseCritChance": 0.25,

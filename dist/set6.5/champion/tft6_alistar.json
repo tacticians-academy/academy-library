@@ -92,9 +92,9 @@
 					"mName": "Damage",
 					"mValues": [
 						0,
-						150,
-						250,
-						1000,
+						200,
+						325,
+						1200,
 						1000,
 						1000,
 						900
@@ -122,8 +122,8 @@
 					"mName": "StunDuration",
 					"mValues": [
 						1.5,
+						1.5,
 						2,
-						2.5,
 						8,
 						3.5,
 						4,
@@ -260,13 +260,13 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 85,
+		"mInitialMana": 80,
 		"mCharacterName": "TFT6_Alistar",
 		"baseHP": 1400,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 170,
+			"arBase": 160,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"

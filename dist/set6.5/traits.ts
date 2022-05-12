@@ -73,8 +73,8 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 3,
 				variables: {
-					'CritDamage': 60,
-					'CritChance': 50,
+					'CritDamage': 75,
+					'CritChance': 60,
 				},
 			},
 		],
@@ -192,7 +192,7 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 3,
 				variables: {
-					'BonusAS': 80,
+					'BonusAS': 85,
 					'BurstDuration': 2.5,
 				},
 			},
@@ -201,7 +201,7 @@ export const traits: TraitData[] = [
 				minUnits: 8,
 				style: 4,
 				variables: {
-					'BonusAS': 150,
+					'BonusAS': 160,
 					'BurstDuration': 2.5,
 				},
 			},
@@ -242,10 +242,10 @@ export const traits: TraitData[] = [
 				minUnits: 7,
 				style: 3,
 				variables: {
-					'AS': 80,
+					'AS': 90,
 					'DamageReduction': 15,
 					'Duration': 8,
-					'HPRegen': 13,
+					'HPRegen': 15,
 					'HPThreshold': 75,
 				},
 			},
@@ -254,10 +254,10 @@ export const traits: TraitData[] = [
 				minUnits: 9,
 				style: 4,
 				variables: {
-					'AS': 150,
+					'AS': 200,
 					'DamageReduction': 15,
 					'Duration': 8,
-					'HPRegen': 20,
+					'HPRegen': 25,
 					'HPThreshold': 75,
 				},
 			},
@@ -293,7 +293,7 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'BonusPerAugment': 0.15000000596046448,
-					'ASBonus': 0.800000011920929,
+					'ASBonus': 0.699999988079071,
 				},
 			},
 		],
@@ -302,15 +302,26 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Set6_Colossus`,
-		desc: `Innate: Colossi are bigger and more powerful. They gain @BonusHPTooltip@ bonus HP and immunity to crowd control effects. However, each Colossus requires 2 team slots.<br><row>(@MinUnits@) Colossus champions take @DamageReduction*100@% less damage</row>`,
+		desc: `Innate: Colossi are bigger and more powerful. They gain @BonusHPTooltip@ bonus HP and immunity to crowd control effects. However, each Colossus requires 2 team slots.<br><row>(@MinUnits@) Colossus champions take @DamageReduction*100@% less damage</row><br><row>(@MinUnits@) Colossus champions instead gain @BonusHPTooltip2@ bonus HP.</row>`,
 		effects: [
 			{
-				maxUnits: 25000,
+				maxUnits: 2,
 				minUnits: 2,
-				style: 3,
+				style: 2,
 				variables: {
 					'DamageReduction': 0.25,
 					'TraitLevel': 2,
+					'BonusHPTooltip': 800,
+				},
+			},
+			{
+				maxUnits: 25000,
+				minUnits: 3,
+				style: 3,
+				variables: {
+					'DamageReduction': 0.25,
+					'TraitLevel': 3,
+					'{7b9ae201}': 1600,
 					'BonusHPTooltip': 800,
 				},
 			},
@@ -336,8 +347,8 @@ export const traits: TraitData[] = [
 				minUnits: 5,
 				style: 3,
 				variables: {
-					'HP': 400,
-					'AP': 40,
+					'HP': 450,
+					'AP': 45,
 				},
 			},
 			{
@@ -345,8 +356,8 @@ export const traits: TraitData[] = [
 				minUnits: 7,
 				style: 4,
 				variables: {
-					'HP': 700,
-					'AP': 70,
+					'HP': 800,
+					'AP': 80,
 				},
 			},
 		],
@@ -371,7 +382,7 @@ export const traits: TraitData[] = [
 				minUnits: 3,
 				style: 2,
 				variables: {
-					'MR': 45,
+					'MR': 50,
 					'HealShieldBoost': 0.5,
 				},
 			},
@@ -380,7 +391,7 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 3,
 				variables: {
-					'MR': 70,
+					'MR': 80,
 					'HealShieldBoost': 0.800000011920929,
 				},
 			},
@@ -389,8 +400,8 @@ export const traits: TraitData[] = [
 				minUnits: 5,
 				style: 4,
 				variables: {
-					'MR': 100,
-					'HealShieldBoost': 1.149999976158142,
+					'MR': 125,
+					'HealShieldBoost': 1.25,
 				},
 			},
 		],
@@ -399,16 +410,27 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Set6_Enforcer`,
-		desc: `<row>(@MinUnits@) At the start of combat, Enforcers stun the enemy who has the most HP. The target breaks free after @DetainDuration@ seconds, or after losing @HPPercent*100@% of their maximum HP. Enforcers will not try to stun enemies who are immune to crowd control effects.</row>`,
+		desc: `<row>(@MinUnits@) At the start of combat, Enforcers stun the enemy who has the most HP. The target breaks free after @DetainDuration@ seconds, or after losing @HPPercent*100@% of their maximum HP. Enforcers will not try to stun enemies who are immune to crowd control effects.</row><br><row>(@MinUnits@) At the start of combat, Enforcers gain @AS*100@% Attack Speed for the rest of combat.</row>`,
 		effects: [
 			{
-				maxUnits: 25000,
+				maxUnits: 4,
 				minUnits: 3,
 				style: 3,
 				variables: {
 					'HPPercent': 0.4000000059604645,
 					'DetainDuration': 4,
 					'DetainCount': 1,
+				},
+			},
+			{
+				maxUnits: 25000,
+				minUnits: 5,
+				style: 4,
+				variables: {
+					'AS': 0.800000011920929,
+					'HPPercent': 0.4000000059604645,
+					'DetainDuration': 4,
+					'DetainCount': 2,
 				},
 			},
 		],
@@ -450,7 +472,7 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 2,
 				variables: {
-					'MagicDamage': 25,
+					'MagicDamage': 30,
 					'ShieldAmount': 150,
 					'ShieldDuration': 4,
 					'Frequency': 6,
@@ -462,7 +484,7 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 3,
 				variables: {
-					'MagicDamage': 45,
+					'MagicDamage': 55,
 					'ShieldAmount': 275,
 					'ShieldDuration': 4,
 					'Frequency': 6,
@@ -474,7 +496,7 @@ export const traits: TraitData[] = [
 				minUnits: 8,
 				style: 4,
 				variables: {
-					'MagicDamage': 75,
+					'MagicDamage': 90,
 					'ShieldAmount': 375,
 					'ShieldDuration': 4,
 					'Frequency': 6,
@@ -598,7 +620,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'{02ce80f2}': 12,
 					'MutantMetamorphosisArmorMR': 25,
-					'MutantBioLeechingOmnivamp': 55,
+					'MutantBioLeechingOmnivamp': 65,
 					'{2fb1d11d}': 0.029999999329447746,
 					'MutantVoidborneExecuteThreshold': 20,
 					'TraitLevel': 2,
@@ -623,7 +645,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'{02ce80f2}': 8,
 					'MutantMetamorphosisArmorMR': 35,
-					'MutantBioLeechingOmnivamp': 80,
+					'MutantBioLeechingOmnivamp': 100,
 					'{2fb1d11d}': 0.03999999910593033,
 					'MutantVoidborneExecuteThreshold': 20,
 					'TraitLevel': 3,
@@ -683,7 +705,7 @@ export const traits: TraitData[] = [
 				style: 3,
 				variables: {
 					'TickRate': 2,
-					'ManaPerTick': 12,
+					'ManaPerTick': 15,
 				},
 			},
 			{
@@ -778,7 +800,7 @@ export const traits: TraitData[] = [
 				minUnits: 1,
 				style: 1,
 				variables: {
-					'DamagePercent': 0.15000000596046448,
+					'DamagePercent': 0.18000000715255737,
 					'{5064373e}': null,
 					'TraitLevel': 1,
 					'OmnivampPercent': null,
@@ -790,7 +812,7 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 2,
 				variables: {
-					'DamagePercent': 0.15000000596046448,
+					'DamagePercent': 0.18000000715255737,
 					'{5064373e}': null,
 					'TraitLevel': 2,
 					'OmnivampPercent': null,
@@ -802,7 +824,7 @@ export const traits: TraitData[] = [
 				minUnits: 3,
 				style: 3,
 				variables: {
-					'DamagePercent': 0.15000000596046448,
+					'DamagePercent': 0.18000000715255737,
 					'{5064373e}': null,
 					'TraitLevel': 3,
 					'OmnivampPercent': 0.33000001311302185,
@@ -814,7 +836,7 @@ export const traits: TraitData[] = [
 				minUnits: 5,
 				style: 4,
 				variables: {
-					'DamagePercent': 0.30000001192092896,
+					'DamagePercent': 0.36000001430511475,
 					'{5064373e}': null,
 					'TraitLevel': 4,
 					'OmnivampPercent': 0.6600000262260437,
@@ -866,8 +888,8 @@ export const traits: TraitData[] = [
 				minUnits: 3,
 				style: 1,
 				variables: {
-					'Armor': 55,
-					'MR': 55,
+					'Armor': 50,
+					'MR': 50,
 					'TraitLevel': 1,
 					'PercentOmnivamp': 20,
 				},
@@ -877,8 +899,8 @@ export const traits: TraitData[] = [
 				minUnits: 5,
 				style: 3,
 				variables: {
-					'Armor': 55,
-					'MR': 55,
+					'Armor': 50,
+					'MR': 50,
 					'TraitLevel': 2,
 					'PercentOmnivamp': 20,
 				},
@@ -888,10 +910,10 @@ export const traits: TraitData[] = [
 				minUnits: 7,
 				style: 4,
 				variables: {
-					'Armor': 55,
-					'MR': 55,
+					'Armor': 50,
+					'MR': 50,
 					'TraitLevel': 3,
-					'SyndicateIncrease': 0.550000011920929,
+					'SyndicateIncrease': 0.5,
 					'PercentOmnivamp': 20,
 				},
 			},
@@ -974,7 +996,7 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 3,
 				variables: {
-					'PercentManaReduction': 30,
+					'PercentManaReduction': 33,
 				},
 			},
 		],

@@ -27,10 +27,14 @@ export const SET_DATA = {
 		patchLine: '12.2',
 	},
 	6.5: {
-		patchLine: 'latest',
+		patchLine: 'latest', //'12.10',
+	},
+	7: {
+		patchLine: 'pbe', //'latest',
 	},
 }
 export type SetNumber = keyof typeof SET_DATA
 export const SET_NUMBERS = Object.keys(SET_DATA).map(setKey => parseFloat(setKey) as SetNumber)
+export const CURRENT_SET_NUMBER = SET_NUMBERS.reduce((largest, current) => Math.max(largest, current), 0)
 
 export const COMPONENT_ITEM_IDS = [1, 2, 3, 4, 5, 6, 7, 8, 9]

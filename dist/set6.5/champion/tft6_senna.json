@@ -26,15 +26,15 @@
 				{
 					"mName": "PercentHealing",
 					"mValues": [
-						0.5,
-						0.5,
-						0.5,
-						0.5,
-						0.5,
-						0.5,
-						0.5
+						0.6000000238418579,
+						0.6000000238418579,
+						0.6000000238418579,
+						0.6000000238418579,
+						0.6000000238418579,
+						0.6000000238418579,
+						0.6000000238418579
 					],
-					"mBaseP": 0.5,
+					"mBaseP": 0.6000000238418579,
 					"mFormula": "P + 0",
 					"__type": "SpellDataValue"
 				},
@@ -404,7 +404,7 @@
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 80,
+			"arBase": 70,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"

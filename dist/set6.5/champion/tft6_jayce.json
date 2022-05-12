@@ -796,7 +796,7 @@
 		"mMoveHeight": 0,
 		"{4e28a666}": "C_BUFFBONE_GLB_OVERHEAD_LOC",
 		"mCharacterName": "TFT6_Jayce",
-		"baseHP": 1000,
+		"baseHP": 999,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,

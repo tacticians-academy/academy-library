@@ -366,15 +366,15 @@
 				{
 					"mName": "ASReduction",
 					"mValues": [
-						15,
-						15,
-						15,
-						15,
-						15,
-						15,
-						15
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20
 					],
-					"mBaseP": 15,
+					"mBaseP": 20,
 					"mFormula": "P + 0",
 					"__type": "SpellDataValue"
 				},

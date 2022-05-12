@@ -55,8 +55,8 @@
 					"mName": "MaxFeastStacks",
 					"mValues": [
 						0,
-						20,
-						40,
+						30,
+						60,
 						999,
 						0,
 						0,
@@ -175,7 +175,7 @@
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 90,
+		"baseDamage": 100,
 		"baseArmor": 50,
 		"baseSpellBlock": 50,
 		"baseCritChance": 0.25,

@@ -208,21 +208,21 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `cyberneticimplants`,
 		name: `Cybernetic Implants`,
 		tiers: [1, 2, 3],
-		description: `Your champions holding an item gain 150/250/350 HP and 10/20/30 Attack Damage.`,
+		description: `Your champions holding an item gain 125/200/300 HP and 10/20/30 Attack Damage.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/cybernetic1.tft_set6`, `assets/maps/particles/tft/item_icons/augments/hexcore/cybernetic2.tft_set6`, `assets/maps/particles/tft/item_icons/augments/hexcore/cybernetic3.tft_set6`],
 	},
 	{
 		id: `cyberneticshell`,
 		name: `Cybernetic Shell`,
 		tiers: [1, 2, 3],
-		description: `Your champions holding an item gain 150/250/350 HP and 25/35/50 Armor.`,
+		description: `Your champions holding an item gain 125/200/300 HP and 25/35/50 Armor.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/cybernetic-shell-i.tft_set6_stage2`, `assets/maps/particles/tft/item_icons/augments/hexcore/cybernetic-shell-ii.tft_set6_stage2`, `assets/maps/particles/tft/item_icons/augments/hexcore/cybernetic-shell-iii.tft_set6_stage2`],
 	},
 	{
 		id: `cyberneticuplink`,
 		name: `Cybernetic Uplink`,
 		tiers: [1, 2, 3],
-		description: `Your champions holding an item gain 150/250/350 HP and restore 2/3/4 Mana per second.`,
+		description: `Your champions holding an item gain 125/200/300 HP and restore 2/3/4 Mana per second.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/cybernetic-uplink-i.tft_set6_stage2`, `assets/maps/particles/tft/item_icons/augments/hexcore/cybernetic-uplink-ii.tft_set6_stage2`, `assets/maps/particles/tft/item_icons/augments/hexcore/cybernetic-uplink-iii.tft_set6_stage2`],
 	},
 	{
@@ -264,7 +264,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `electrocharge`,
 		name: `Electrocharge`,
 		tiers: [1, 2, 3],
-		description: `When your units receive critical strikes, they deal 60/85/105-105/145/200 (based on current Stage) magic damage  to nearby enemies (1 second cooldown).`,
+		description: `When your units receive critical strikes, they deal 60/85/115-105/145/220 (based on current Stage) magic damage  to nearby enemies (1 second cooldown).`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/electrocharge-i.tft_set6_stage2`, `assets/maps/particles/tft/item_icons/augments/hexcore/electrocharge-ii.tft_set6_stage2`, `assets/maps/particles/tft/item_icons/augments/hexcore/electrocharge-iii.tft_set6_stage2`],
 	},
 	{
@@ -334,7 +334,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `goldengifts`,
 		name: `Golden Gifts`,
 		tiers: [2, 3],
-		description: `Gain 1/2 golden and 2/3 gray loot orb(s).`,
+		description: `Gain 1/2 golden and 3/4 gray loot orb(s).`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/golden-gifts-ii.tft_set6_stage2`, `assets/maps/particles/tft/item_icons/augments/hexcore/golden-gifts-iii.tft_set6_stage2`],
 	},
 	{

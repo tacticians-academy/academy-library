@@ -16,13 +16,13 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 40,
+		"mInitialMana": 30,
 		"mCharacterName": "TFT6_Zilean",
 		"baseHP": 600,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 80,
+			"arBase": 70,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
@@ -72,9 +72,9 @@
 					"mName": "Damage",
 					"mValues": [
 						0,
-						250,
-						350,
-						700,
+						275,
+						400,
+						777,
 						0,
 						0,
 						0
@@ -101,8 +101,8 @@
 					"mValues": [
 						0,
 						1.5,
-						2,
-						2.5,
+						1.5,
+						1.5,
 						0,
 						0,
 						0

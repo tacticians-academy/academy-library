@@ -1147,13 +1147,13 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 75,
+		"mInitialMana": 80,
 		"mCharacterName": "TFT6_Kaisa",
 		"baseHP": 850,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 150,
+			"arBase": 160,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"

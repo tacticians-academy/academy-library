@@ -18,7 +18,7 @@
 		"mMoveHeight": 0,
 		"mInitialMana": 100,
 		"mCharacterName": "TFT6_Singed",
-		"baseHP": 650,
+		"baseHP": 700,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,

@@ -524,7 +524,7 @@ export const activeAugments: AugmentData[] = [
 		desc: `Your champions holding an item gain @HP@ HP and @AD@ Attack Damage.`,
 		effects: {
 			'AD': 10,
-			'HP': 150,
+			'HP': 125,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Cybernetic1.TFT_Set6.dds`,
 	},
@@ -535,7 +535,7 @@ export const activeAugments: AugmentData[] = [
 		desc: `Your champions holding an item gain @HP@ HP and @AD@ Attack Damage.`,
 		effects: {
 			'AD': 20,
-			'HP': 250,
+			'HP': 200,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Cybernetic2.TFT_Set6.dds`,
 	},
@@ -546,7 +546,7 @@ export const activeAugments: AugmentData[] = [
 		desc: `Your champions holding an item gain @HP@ HP and @AD@ Attack Damage.`,
 		effects: {
 			'AD': 30,
-			'HP': 350,
+			'HP': 300,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Cybernetic3.TFT_Set6.dds`,
 	},
@@ -556,7 +556,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `cyberneticShell`,
 		desc: `Your champions holding an item gain @HP@ HP and @Resists@ Armor.`,
 		effects: {
-			'HP': 150,
+			'HP': 125,
 			'Resists': 25,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Cybernetic-Shell-I.TFT_Set6_Stage2.dds`,
@@ -567,7 +567,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `cyberneticShell`,
 		desc: `Your champions holding an item gain @HP@ HP and @Resists@ Armor.`,
 		effects: {
-			'HP': 250,
+			'HP': 200,
 			'Resists': 35,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Cybernetic-Shell-II.TFT_Set6_Stage2.dds`,
@@ -578,7 +578,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `cyberneticShell`,
 		desc: `Your champions holding an item gain @HP@ HP and @Resists@ Armor.`,
 		effects: {
-			'HP': 350,
+			'HP': 300,
 			'Resists': 50,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Cybernetic-Shell-III.TFT_Set6_Stage2.dds`,
@@ -589,7 +589,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `cyberneticUplink`,
 		desc: `Your champions holding an item gain @HP@ HP and restore @ManaRegen@ Mana per second.`,
 		effects: {
-			'HP': 150,
+			'HP': 125,
 			'ManaRegen': 2,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Cybernetic-Uplink-I.TFT_Set6_Stage2.dds`,
@@ -600,7 +600,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `cyberneticUplink`,
 		desc: `Your champions holding an item gain @HP@ HP and restore @ManaRegen@ Mana per second.`,
 		effects: {
-			'HP': 250,
+			'HP': 200,
 			'ManaRegen': 3,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Cybernetic-Uplink-II.TFT_Set6_Stage2.dds`,
@@ -611,7 +611,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `cyberneticUplink`,
 		desc: `Your champions holding an item gain @HP@ HP and restore @ManaRegen@ Mana per second.`,
 		effects: {
-			'HP': 350,
+			'HP': 300,
 			'ManaRegen': 4,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Cybernetic-Uplink-III.TFT_Set6_Stage2.dds`,
@@ -756,10 +756,10 @@ export const activeAugments: AugmentData[] = [
 		desc: `When your units receive critical strikes, they deal @Damage1@-@Damage4@ (based on current Stage) magic damage  to nearby enemies (@ICD@ second cooldown).`,
 		effects: {
 			'ICD': 1,
-			'Damage1': 105,
-			'Damage2': 135,
-			'Damage3': 165,
-			'Damage4': 200,
+			'Damage1': 115,
+			'Damage2': 145,
+			'Damage3': 180,
+			'Damage4': 220,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Electrocharge-III.TFT_Set6_Stage2.dds`,
 	},
@@ -919,7 +919,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `goldenGifts`,
 		desc: `Gain @NumGoldOrbs@ golden and @NumGrayOrbs@ gray loot orb(s).`,
 		effects: {
-			'NumGrayOrbs': 2,
+			'NumGrayOrbs': 3,
 			'NumGoldOrbs': 1,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Golden-Gifts-II.TFT_Set6_Stage2.dds`,
@@ -930,7 +930,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `goldenGifts`,
 		desc: `Gain @NumGoldOrbs@ golden and @NumGrayOrbs@ gray loot orb(s).`,
 		effects: {
-			'NumGrayOrbs': 3,
+			'NumGrayOrbs': 4,
 			'NumGoldOrbs': 2,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Golden-Gifts-III.TFT_Set6_Stage2.dds`,
@@ -1849,7 +1849,7 @@ export const activeAugments: AugmentData[] = [
 		desc: `Free Yordles from the portal have a @ItemChance@% chance to arrive holding an item component. Gain a Lulu.`,
 		effects: {
 			'{54c3c993}': 10,
-			'{5f7516f7}': 4,
+			'{5f7516f7}': 3,
 			'ItemChance': 33,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Thieving-Rascals-II.TFT_Set6_Stage2.dds`,

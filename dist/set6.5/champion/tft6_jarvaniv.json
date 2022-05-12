@@ -115,8 +115,8 @@
 					"mValues": [
 						0.6499999761581421,
 						0.4000000059604645,
-						0.5,
-						0.699999988079071,
+						0.550000011920929,
+						0.800000011920929,
 						1.0499999523162842,
 						1.149999976158142,
 						1.25
@@ -284,7 +284,7 @@
 		"critDamageMultiplier": 1.2999999523162842,
 		"baseMoveSpeed": 500,
 		"attackRange": 180,
-		"attackSpeed": 0.6000000238418579,
+		"attackSpeed": 0.699999988079071,
 		"basicAttack": {
 			"mAttackName": "TFT6_JarvanIVBasicAttack",
 			"__type": "AttackSlotData"
