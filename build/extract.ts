@@ -1,7 +1,7 @@
 import type { SetNumber } from '../dist/index.js'
 
 const LOAD_PBE = false
-const LOAD_SET: SetNumber = 6.5
+const LOAD_SET: SetNumber = 7
 
 import fetch from 'node-fetch'
 import fs from 'fs/promises'
@@ -10,7 +10,7 @@ import path from 'path'
 import { SET_DATA } from '../dist/index.js'
 import { importSetData } from '../dist/imports.js'
 
-import { getPathTo, setNumberPath } from './helpers/files.js'
+import { getPathTo, getOutputFolder, setNumberPath } from './helpers/files.js'
 import { BASE_UNIT_API_NAMES, mDataValueSubstitutions, mSpellCalculationsSubstitutions } from './helpers/normalize.js'
 import type { ChampionJSON, ChampionJSONStats, ResponseJSON } from './helpers/types.js'
 import { getAPIName } from './helpers/utils.js'
@@ -27,6 +27,7 @@ try {
 	oldEtag = await fs.readFile(etagPath, 'utf8')
 } catch {
 	console.log('No local hash. Reloading data.')
+	await fs.mkdir(getOutputFolder(LOAD_SET), { recursive: true })
 }
 const newEtag = response.headers.get('etag')
 if (newEtag != null) {

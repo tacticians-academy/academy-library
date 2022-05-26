@@ -14,15 +14,15 @@ export async function getCurrentSetNumber() {
 	return parseFloat(await fs.readFile(setNumberPath, 'utf8')) as SetNumber
 }
 
-function getOutputFolder(setNumber: number) {
+export function getOutputFolder(setNumber: SetNumber) {
 	return `dist/set${setNumber}`
 }
 
-export function getPathTo(setNumber: number, filename: string) {
+export function getPathTo(setNumber: SetNumber, filename: string) {
 	return path.resolve(getOutputFolder(setNumber), filename)
 }
 
-export async function loadHardcodedTXT(currentSetNumber: number, name: string) {
+export async function loadHardcodedTXT(currentSetNumber: SetNumber, name: string) {
 	try {
 		const text = await fs.readFile(getPathTo(currentSetNumber, `hardcoded/${name}.txt`), 'utf8')
 		return text

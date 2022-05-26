@@ -27,7 +27,7 @@ export const SET_DATA = {
 		patchLine: '12.2',
 	},
 	6.5: {
-		patchLine: 'latest', //'12.10',
+		patchLine: '12.10',
 	},
 	7: {
 		patchLine: 'pbe', //'latest',

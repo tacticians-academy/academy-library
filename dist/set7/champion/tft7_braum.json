@@ -1,0 +1,368 @@
+{
+	"{1ab10248}": {
+		"mScriptName": "TFT7_BraumBasicAttackShieldOverride",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"mApplyMaterialOnHitSound": true,
+			"alwaysSnapFacing": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 10,
+			"missileSpeed": 347.79998779296875,
+			"mLookAtPolicy": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{1be9f2f8}": {
+		"mScriptName": "TFT7_BraumE",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 9221,
+			"mRequiredUnitTags": {
+				"mTagList": "Champion",
+				"__type": "ObjectTags"
+			},
+			"mDataValues": [
+				{
+					"mName": "ShieldDR",
+					"mValues": [
+						0.5,
+						0.6000000238418579,
+						0.699999988079071,
+						0.800000011920929,
+						0.8999999761581421,
+						1,
+						1.100000023841858
+					],
+					"mBaseP": 0.5,
+					"mFormula": "P +.1",
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ShieldDuration",
+					"mValues": [
+						4,
+						4,
+						4,
+						4,
+						4,
+						4,
+						4
+					],
+					"mBaseP": 4,
+					"mFormula": "P",
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"ModifiedShieldDR": {
+					"mFormulaParts": [
+						{
+							"{bfe6ad01}": 100,
+							"mDataValue": "ShieldDR",
+							"__type": "{05abdfab}"
+						}
+					],
+					"mDisplayAsPercent": true,
+					"__type": "GameCalculation"
+				}
+			},
+			"mCastTime": 0.009999999776482582,
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"bIsToggleSpell": true,
+			"mIgnoreRangeCheck": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				350,
+				350,
+				350,
+				350,
+				350,
+				350,
+				350
+			],
+			"castConeDistance": 700,
+			"castFrame": 7.5,
+			"mLookAtPolicy": 1,
+			"mTargetingTypeData": {
+				"__type": "Direction"
+			},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{a8ec74fd}": {
+		"mScriptName": "TFT7_BraumBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "BraumBasicAttack",
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 11,
+			"missileSpeed": 347.79998779296875,
+			"mLookAtPolicy": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{ba3be04a}": {
+		"mScriptName": "TFT7_BraumBasicAttack3",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "BraumBasicAttack",
+			"delayCastOffsetPercent": -0.30000001192092896,
+			"mCantCancelWhileChanneling": true,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				20,
+				20,
+				20,
+				20,
+				20,
+				20,
+				20
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9.5,
+			"missileSpeed": 0,
+			"mLookAtPolicy": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{bb3be1dd}": {
+		"mScriptName": "TFT7_BraumBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "BraumBasicAttack",
+			"delayCastOffsetPercent": -0.30000001192092896,
+			"mCantCancelWhileChanneling": true,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				20,
+				20,
+				20,
+				20,
+				20,
+				20,
+				20
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9.5,
+			"missileSpeed": 0,
+			"mLookAtPolicy": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{f44eaf3d}": {
+		"mScriptName": "TFT7_BraumCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "BraumBasicAttack",
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 10,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{b7126e7c}": {
+		"PortraitIcon": "ASSETS/Characters/TFT7_Braum/HUD/TFT7_Braum_Square.TFT_Set7.dds",
+		"tier": 2,
+		"mLinkedTraits": [
+			{
+				"TraitData": "Scalescorn",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "Guardian",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"mMoveInterval": 0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mInitialMana": 30,
+		"mCharacterName": "TFT7_Braum",
+		"baseHP": 800,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 60,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 40,
+		"baseArmor": 60,
+		"baseSpellBlock": 60,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 550,
+		"attackRange": 180,
+		"attackSpeed": 0.6000000238418579,
+		"basicAttack": {
+			"mAttackProbability": 0.3499999940395355,
+			"mAttackName": "TFT7_BraumBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 0.3499999940395355,
+				"mAttackName": "TFT7_BraumBasicAttack2",
+				"__type": "AttackSlotData"
+			},
+			{
+				"mAttackProbability": 0.30000001192092896,
+				"mAttackName": "TFT7_BraumBasicAttack3",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT7_BraumCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT7_BraumE",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"BaseSpell",
+			"BaseSpell",
+			"TFT7_BraumBasicAttackShieldOverride",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 8398088,
+		"__type": "TFTCharacterRecord"
+	}
+}

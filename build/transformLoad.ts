@@ -22,7 +22,7 @@ function sortByName(a: {name: string}, b: {name: string}) {
 }
 
 function getEnumKeyFrom(apiName: string) {
-	return apiName.includes('_') ? apiName.split('_')[1] : apiName
+	return apiName.includes('_') ? apiName.split('_')[1] : apiName.replaceAll(' ', '')
 }
 
 // Load
@@ -499,7 +499,7 @@ const outputChampions = await Promise.all(playableChampions.map(async (champion)
 			console.log('ERR Unknown trait', apiName, traitAPIName, champion.traits.filter(t => !knownTraits.includes(t)))
 			return traitAPIName
 		}
-		const enumKey = getEnumKeyFrom(traitData.TraitData!)
+		const enumKey = getEnumKeyFrom(traitAPIName)
 		return TraitKey != null ? TraitKey[enumKey as keyof typeof TraitKey] : enumKey
 	}) ?? []
 	return {

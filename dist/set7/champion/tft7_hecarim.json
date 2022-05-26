@@ -1,0 +1,260 @@
+{
+	"{3b86c87d}": {
+		"mScriptName": "TFT7_HecarimR",
+		"mSpell": {
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						0,
+						150,
+						250,
+						1000,
+						0,
+						0,
+						0
+					],
+					"{3f95426c}": false,
+					"mFormula": "P + 0",
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "StunDuration",
+					"mValues": [
+						0,
+						1.5,
+						2,
+						8,
+						0,
+						0,
+						0
+					],
+					"{3f95426c}": false,
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"ModifiedDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"delayCastOffsetPercent": 1,
+			"canCastOrQueueWhileCasting": true,
+			"castRange": [
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000
+			],
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{6a93fd8b}": {
+		"mScriptName": "TFT7_HecarimRMissile",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mProjectTargetToCastRange": true,
+			"castRange": [
+				4000,
+				4000,
+				4000,
+				4000,
+				4000,
+				4000,
+				4000
+			],
+			"mMissileSpec": {
+				"mMissileWidth": 40,
+				"movementComponent": {
+					"mSpeed": 1100,
+					"mUseHeightOffsetAtEnd": true,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "",
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"__type": "BlendedLinearHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VerticalFacingFaceTarget"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnHit"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 3,
+			"mMissileEffectKey": "{acab9cf1}",
+			"mTargetingTypeData": {
+				"__type": "Location"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{897fa7ed}": {
+		"mScriptName": "TFT7_HecarimBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "SejuaniBasicAttack",
+			"delayCastOffsetPercent": -0.3077000081539154,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				125,
+				125,
+				125,
+				125,
+				125,
+				125,
+				125
+			],
+			"castConeDistance": 100,
+			"castFrame": 12,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{8e51a04d}": {
+		"mScriptName": "TFT7_HecarimBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "SejuaniBasicAttack",
+			"delayCastOffsetPercent": -0.3077000081539154,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				125,
+				125,
+				125,
+				125,
+				125,
+				125,
+				125
+			],
+			"castConeDistance": 100,
+			"castFrame": 12,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{ae177dcd}": {
+		"mScriptName": "TFT7_HecarimCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "SejuaniBasicAttack",
+			"delayCastOffsetPercent": -0.3077000081539154,
+			"bHaveHitEffect": true,
+			"castRange": [
+				125,
+				125,
+				125,
+				125,
+				125,
+				125,
+				125
+			],
+			"castConeDistance": 100,
+			"castFrame": 12,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{fdb22c80}": {
+		"PortraitIcon": "ASSETS/Characters/TFT7_Hecarim/HUD/TFT7_Hecarim_Square.TFT_Set7.dds",
+		"tier": 4,
+		"mLinkedTraits": [
+			{
+				"TraitData": "Ragewing",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "Cavalier",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mInitialMana": 75,
+		"mCharacterName": "TFT7_Hecarim",
+		"baseHP": 900,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 120,
+			"arBaseStaticRegen": 0,
+			"arIncrements": 15,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 50,
+		"baseArmor": 60,
+		"baseSpellBlock": 60,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.2999999523162842,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.75,
+		"spellNames": [
+			"TFT7_HecarimR",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"TFT7_HecarimRMissile",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 8398088,
+		"__type": "TFTCharacterRecord"
+	}
+}
