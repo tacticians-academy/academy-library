@@ -1,5 +1,5 @@
 {
-	"{05cd1d9e}": {
+	"Characters/TFT6_Ahri/Spells/TFT6_AhriOrbMissile": {
 		"mScriptName": "TFT6_AhriOrbMissile",
 		"mSpell": {
 			"mAffectsTypeFlags": 6154,
@@ -87,7 +87,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{6a16dbd5}": {
+	"Characters/TFT6_Ahri/Spells/TFT6_AhriBasicAttack": {
 		"mScriptName": "TFT6_AhriBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -145,7 +145,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{9b7989a5}": {
+	"Characters/TFT6_Ahri/Spells/TFT6_AhriCritAttack": {
 		"mScriptName": "TFT6_AhriCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -203,7 +203,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{cbf7930c}": {
+	"Characters/TFT6_Ahri/Spells/TFT6_AhriQ": {
 		"mScriptName": "TFT6_AhriQ",
 		"mSpell": {
 			"mAffectsTypeFlags": 12298,
@@ -230,9 +230,9 @@
 					"mName": "Damage",
 					"mValues": [
 						150,
-						135,
-						200,
-						450,
+						140,
+						210,
+						500,
 						500,
 						400,
 						400
@@ -359,7 +359,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{e8fc2ca5}": {
+	"Characters/TFT6_Ahri/Spells/TFT6_AhriBasicAttack2": {
 		"mScriptName": "TFT6_AhriBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -417,7 +417,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{ea6f2922}": {
+	"Characters/TFT6_Ahri/Spells/TFT6_AhriOrbReturnDead": {
 		"mScriptName": "TFT6_AhriOrbReturnDead",
 		"mSpell": {
 			"mAffectsTypeFlags": 6154,
@@ -521,7 +521,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{f2fb630c}": {
+	"Characters/TFT6_Ahri/Spells/TFT6_AhriOrbReturn": {
 		"mScriptName": "TFT6_AhriOrbReturn",
 		"mSpell": {
 			"flags": 4,
@@ -621,7 +621,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{fb0be35e}": {
+	"Characters/TFT6_Ahri/Spells/TFT6_AhriFoxFireMissile": {
 		"mScriptName": "TFT6_AhriFoxFireMissile",
 		"mSpell": {
 			"flags": 4194308,
@@ -696,7 +696,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{c6b7f718}": {
+	"Characters/TFT6_Ahri/CharacterRecords/Root": {
 		"PortraitIcon": "ASSETS/Characters/TFT6_Ahri/HUD/TFT6_Ahri.TFT_Set6_Stage2.dds",
 		"tier": 4,
 		"mLinkedTraits": [

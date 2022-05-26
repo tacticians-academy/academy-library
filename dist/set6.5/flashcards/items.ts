@@ -293,7 +293,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 		id: 47,
 		name: `Redemption`,
 		type: `completed`,
-		description: `Every 5 seconds, the holder radiates an aura to allies within 1 hex, healing them for 18% of their missing HP. Affected allies take 25% reduced damage from multi-target abilities and attacks for 5 seconds.`,
+		description: `Aura: Every 5 seconds, the holder radiates an aura to allies within 1 hex, healing them for 18% of their missing HP. Affected allies also take 25% reduced damage from multi-target abilities and attacks for 5 seconds (damage reduction does not stack).`,
 		icon: `assets/maps/particles/tft/item_icons/standard/redemption`,
 		from: [4, 7],
 		unique: false,

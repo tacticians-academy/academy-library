@@ -1,5 +1,5 @@
 {
-	"{38ac3973}": {
+	"Characters/TFT6_Renata/Spells/TFT6_RenataCritAttack": {
 		"mScriptName": "TFT6_RenataCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -50,7 +50,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{a98ae03b}": {
+	"Characters/TFT6_Renata/Spells/TFT6_RenataBasicAttack": {
 		"mScriptName": "TFT6_RenataBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -109,7 +109,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{ee9eae2b}": {
+	"Characters/TFT6_Renata/Spells/TFT6_RenataBasicAttack2": {
 		"mScriptName": "TFT6_RenataBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -167,7 +167,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{faea9c53}": {
+	"Characters/TFT6_Renata/Spells/TFT6_RenataR": {
 		"mScriptName": "TFT6_RenataR",
 		"mSpell": {
 			"mAffectsTypeFlags": 22538,
@@ -181,9 +181,9 @@
 					"mName": "DamagePerSecond",
 					"mValues": [
 						1,
-						40,
-						65,
-						240,
+						50,
+						75,
+						250,
 						2,
 						2.25,
 						2.5
@@ -332,7 +332,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{9f31aa27}": {
+	"Characters/TFT6_Renata/CharacterRecords/Root": {
 		"PortraitIcon": "ASSETS/Characters/TFT6_Renata/HUD/TFT6_Renata.TFT_Set6_Stage2.dds",
 		"tier": 4,
 		"mLinkedTraits": [

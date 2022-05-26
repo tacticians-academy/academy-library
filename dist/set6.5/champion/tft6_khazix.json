@@ -1,5 +1,5 @@
 {
-	"{0a40aa2f}": {
+	"Characters/TFT6_KhaZix/Spells/TFT6_KhaZixBasicAttack": {
 		"mScriptName": "TFT6_KhaZixBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -16,7 +16,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{29804d37}": {
+	"Characters/TFT6_KhaZix/Spells/TFT6_KhaZixCritAttack": {
 		"mScriptName": "TFT6_KhaZixCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -32,7 +32,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{40cbcba7}": {
+	"Characters/TFT6_KhaZix/Spells/TFT6_KhaZixBasicAttack2": {
 		"mScriptName": "TFT6_KhaZixBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -49,7 +49,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{5ff3f74f}": {
+	"Characters/TFT6_KhaZix/Spells/TFT6_KhaZixRAttack": {
 		"mScriptName": "TFT6_KhaZixRAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -67,7 +67,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{b0434ee7}": {
+	"Characters/TFT6_KhaZix/Spells/TFT6_KhaZixR": {
 		"mScriptName": "TFT6_KhaZixR",
 		"mSpell": {
 			"flags": 36,
@@ -233,7 +233,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{b773f3a9}": {
+	"Characters/TFT6_KhaZix/CharacterRecords/Root": {
 		"PortraitIcon": "ASSETS/Characters/TFT6_KhaZix/HUD/TFT6_Khazix.TFT_Set6_Stage2.dds",
 		"tier": 4,
 		"mLinkedTraits": [
@@ -261,7 +261,7 @@
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 85,
+		"baseDamage": 90,
 		"baseArmor": 35,
 		"baseSpellBlock": 35,
 		"baseCritChance": 0.25,

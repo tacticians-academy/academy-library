@@ -176,7 +176,7 @@
 		"mInitialMana": 40,
 		"{4e28a666}": "Voidling_Head",
 		"mCharacterName": "TFT6_MalzaharVoidling",
-		"baseHP": 475,
+		"baseHP": 450,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,

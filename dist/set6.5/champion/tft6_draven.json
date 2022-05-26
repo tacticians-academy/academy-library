@@ -1,5 +1,5 @@
 {
-	"{05b72d0d}": {
+	"Characters/TFT6_Draven/Spells/TFT6_DravenCritAttack": {
 		"mScriptName": "TFT6_DravenCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 24575,
@@ -34,7 +34,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{071ec453}": {
+	"Characters/TFT6_Draven/Spells/TFT6_DravenSpinningAttackCrit": {
 		"mScriptName": "TFT6_DravenSpinningAttackCrit",
 		"mSpell": {
 			"mAffectsTypeFlags": 24527,
@@ -93,7 +93,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{1e9db57f}": {
+	"Characters/TFT6_Draven/Spells/TFT6_DravenAttackP_RC": {
 		"mScriptName": "TFT6_DravenAttackP_RC",
 		"mSpell": {
 			"flags": 4,
@@ -154,7 +154,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{2cdcdfdf}": {
+	"Characters/TFT6_Draven/Spells/TFT6_DravenAttackP_LQ": {
 		"mScriptName": "TFT6_DravenAttackP_LQ",
 		"mSpell": {
 			"flags": 4,
@@ -214,7 +214,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{309dd1d5}": {
+	"Characters/TFT6_Draven/Spells/TFT6_DravenAttackP_RQ": {
 		"mScriptName": "TFT6_DravenAttackP_RQ",
 		"mSpell": {
 			"flags": 4,
@@ -274,7 +274,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{379c4131}": {
+	"Characters/TFT6_Draven/Spells/TFT6_DravenSpinningReturn": {
 		"mScriptName": "TFT6_DravenSpinningReturn",
 		"mSpell": {
 			"flags": 4194308,
@@ -372,7 +372,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{4ab5718d}": {
+	"Characters/TFT6_Draven/Spells/TFT6_DravenBasicAttack": {
 		"mScriptName": "TFT6_DravenBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 24575,
@@ -406,7 +406,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{52169f86}": {
+	"Characters/TFT6_Draven/Spells/TFT6_DravenAttackP_R": {
 		"mScriptName": "TFT6_DravenAttackP_R",
 		"mSpell": {
 			"flags": 4,
@@ -467,7 +467,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{5aa20fad}": {
+	"Characters/TFT6_Draven/Spells/TFT6_DravenBasicAttack2": {
 		"mScriptName": "TFT6_DravenBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 24575,
@@ -501,7 +501,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{6c16c874}": {
+	"Characters/TFT6_Draven/Spells/TFT6_DravenAttackP_L": {
 		"mScriptName": "TFT6_DravenAttackP_L",
 		"mSpell": {
 			"flags": 4,
@@ -562,7 +562,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{b0d9503b}": {
+	"Characters/TFT6_Draven/Spells/TFT6_DravenSpinningAttack2": {
 		"mScriptName": "TFT6_DravenSpinningAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 24527,
@@ -619,7 +619,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{b948e953}": {
+	"Characters/TFT6_Draven/Spells/TFT6_DravenSpinning": {
 		"mScriptName": "TFT6_DravenSpinning",
 		"mSpell": {
 			"flags": 36,
@@ -838,7 +838,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{c993e208}": {
+	"Characters/TFT6_Draven/Spells/TFT6_DravenSpinningReturnCatch": {
 		"mScriptName": "TFT6_DravenSpinningReturnCatch",
 		"mSpell": {
 			"flags": 4194308,
@@ -935,7 +935,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{e7d73f8b}": {
+	"Characters/TFT6_Draven/Spells/TFT6_DravenSpinningAttack": {
 		"mScriptName": "TFT6_DravenSpinningAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 24527,
@@ -992,7 +992,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{edeca903}": {
+	"Characters/TFT6_Draven/Spells/TFT6_DravenSpinningAttack2Crit": {
 		"mScriptName": "TFT6_DravenSpinningAttack2Crit",
 		"mSpell": {
 			"mAffectsTypeFlags": 24527,
@@ -1051,7 +1051,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{f0cb0e18}": {
+	"Characters/TFT6_Draven/Spells/TFT6_DravenSpinningReturnLeftAxe": {
 		"mScriptName": "TFT6_DravenSpinningReturnLeftAxe",
 		"mSpell": {
 			"flags": 4194308,
@@ -1149,7 +1149,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{f3687f32}": {
+	"Characters/TFT6_Draven/CharacterRecords/Root": {
 		"PortraitIcon": "ASSETS/Characters/TFT6_Draven/HUD/TFT6_Draven.TFT_Set6_Stage2.dds",
 		"tier": 4,
 		"mLinkedTraits": [
@@ -1176,7 +1176,7 @@
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 90,
+		"baseDamage": 85,
 		"baseArmor": 30,
 		"baseSpellBlock": 30,
 		"baseCritChance": 0.25,

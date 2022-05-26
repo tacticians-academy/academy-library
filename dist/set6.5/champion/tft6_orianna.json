@@ -414,7 +414,7 @@
 					"mName": "ShieldAmount",
 					"mValues": [
 						0,
-						140,
+						125,
 						200,
 						700,
 						0,
@@ -442,8 +442,8 @@
 					"mName": "Damage",
 					"mValues": [
 						0,
-						325,
-						450,
+						300,
+						425,
 						1500,
 						0,
 						0,
@@ -602,13 +602,12 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 30,
+		"mInitialMana": 40,
 		"mCharacterName": "TFT6_Orianna",
 		"baseHP": 700,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 90,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"

@@ -4255,7 +4255,7 @@
 			"unique": false
 		},
 		{
-			"desc": "Every @HealTickRate@ seconds, the holder radiates an aura to allies within <TFTRadiantItemBonus>@HexRadius@</TFTRadiantItemBonus> hexes, healing them for <TFTRadiantItemBonus>@MissingHealthHeal@%</TFTRadiantItemBonus> of their missing Health. Affected allies take @AoEDamageReduction@% reduced damage from multi-target abilities and attacks for @HealTickRate@ seconds.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@BonusHealth@ Health.</TFTRadiantItemBonus>",
+			"desc": "Aura: Every @HealTickRate@ seconds, the holder radiates an aura to allies within <TFTRadiantItemBonus>@HexRadius@</TFTRadiantItemBonus> hexes, healing them for <TFTRadiantItemBonus>@MissingHealthHeal@%</TFTRadiantItemBonus> of their missing Health. Affected allies also take @AoEDamageReduction@% reduced damage from multi-target abilities and attacks for @HealTickRate@ seconds (damage reduction does not stack).<br><br><TFTRadiantItemBonus>Radiant Bonus: +@BonusHealth@ Health.</TFTRadiantItemBonus>",
 			"effects": {
 				"BonusHealth": 350,
 				"Health": 500,
@@ -4530,7 +4530,7 @@
 			"unique": false
 		},
 		{
-			"desc": "Every @HealTickRate@ seconds, the holder radiates an aura to allies within @HexRadius@ hex, healing them for @MissingHealthHeal@% of their missing Health. Affected allies take @AoEDamageReduction@% reduced damage from multi-target abilities and attacks for @HealTickRate@ seconds.",
+			"desc": "Aura: Every @HealTickRate@ seconds, the holder radiates an aura to allies within @HexRadius@ hex, healing them for @MissingHealthHeal@% of their missing Health. Affected allies also take @AoEDamageReduction@% reduced damage from multi-target abilities and attacks for @HealTickRate@ seconds (damage reduction does not stack).",
 			"effects": {
 				"Health": 150,
 				"Mana": 15,
@@ -4974,7 +4974,7 @@
 				"StunDuration": 1.5
 			},
 			"from": [],
-			"icon": "ASSETS/Maps/Particles/TFT/TFT4_OrnnItem_RocketPropelledFist.TFT_Set4_Act2.dds",
+			"icon": "ASSETS/Maps/Particles/TFT/TFT4_OrnnItem_RocketPropelledFist.dds",
 			"id": 9008,
 			"name": "Rocket-Propelled Fist",
 			"unique": true
@@ -6851,9 +6851,9 @@
 								"name": "ShieldDestructionPercent",
 								"value": [
 									0,
-									0.25,
-									0.33000001311302185,
-									1,
+									0.4000000059604645,
+									0.5,
+									2,
 									0,
 									0,
 									0
@@ -7046,7 +7046,7 @@
 								"name": "ShieldAmount",
 								"value": [
 									0,
-									140,
+									125,
 									200,
 									700,
 									0,
@@ -7070,8 +7070,8 @@
 								"name": "Damage",
 								"value": [
 									0,
-									325,
-									450,
+									300,
+									425,
 									1500,
 									0,
 									0,
@@ -7103,9 +7103,9 @@
 						"critMultiplier": 1.2999999523162842,
 						"damage": 50,
 						"hp": 700,
-						"initialMana": 30,
+						"initialMana": 40,
 						"magicResist": 30,
-						"mana": 90,
+						"mana": 100,
 						"range": 4
 					},
 					"traits": [
@@ -8263,7 +8263,7 @@
 								"name": "BonusAS",
 								"value": [
 									0.10000000149011612,
-									0.3499999940395355,
+									0.30000001192092896,
 									0.4000000059604645,
 									0.5,
 									0.8999999761581421,
@@ -8287,7 +8287,7 @@
 								"name": "Damage",
 								"value": [
 									75,
-									150,
+									125,
 									200,
 									400,
 									575,
@@ -8880,14 +8880,14 @@
 					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT6_Tibbers.TFT_Set6.dds",
 					"name": "Mechanical Bear",
 					"stats": {
-						"armor": 55,
+						"armor": 50,
 						"attackSpeed": 0.6000000238418579,
 						"critChance": 0.25,
 						"critMultiplier": 1.5,
 						"damage": 50,
-						"hp": 775,
+						"hp": 725,
 						"initialMana": 0,
-						"magicResist": 55,
+						"magicResist": 50,
 						"mana": 100,
 						"range": 1
 					},
@@ -9191,7 +9191,7 @@
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
 						"damage": 40,
-						"hp": 475,
+						"hp": 450,
 						"initialMana": 40,
 						"magicResist": 30,
 						"mana": 80,
@@ -9379,7 +9379,7 @@
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
 						"damage": 65,
-						"hp": 1025,
+						"hp": 925,
 						"initialMana": 200,
 						"magicResist": 90,
 						"mana": 300,
@@ -10480,7 +10480,7 @@
 						"attackSpeed": 0.800000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 90,
+						"damage": 85,
 						"hp": 800,
 						"initialMana": 0,
 						"magicResist": 30,
@@ -10557,7 +10557,7 @@
 						"attackSpeed": 0.8999999761581421,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 85,
+						"damage": 90,
 						"hp": 800,
 						"initialMana": 0,
 						"magicResist": 35,
@@ -10579,9 +10579,9 @@
 								"name": "Damage",
 								"value": [
 									150,
-									135,
-									200,
-									450,
+									140,
+									210,
+									500,
 									500,
 									400,
 									400
@@ -10667,13 +10667,13 @@
 							{
 								"name": "PercentADDamage",
 								"value": [
-									0,
-									1.850000023841858,
-									1.850000023841858,
-									1.850000023841858,
-									0,
-									0,
-									0
+									1.899999976158142,
+									1.899999976158142,
+									1.899999976158142,
+									1.899999976158142,
+									1.899999976158142,
+									1.899999976158142,
+									1.899999976158142
 								]
 							},
 							{
@@ -10908,9 +10908,9 @@
 								"name": "DamagePerSecond",
 								"value": [
 									1,
-									40,
-									65,
-									240,
+									50,
+									75,
+									250,
 									2,
 									2.25,
 									2.5
@@ -11479,7 +11479,7 @@
 							"minUnits": 6,
 							"style": 3,
 							"variables": {
-								"{ed1f9fc2}": 33
+								"{ed1f9fc2}": 40
 							}
 						}
 					],
@@ -11660,7 +11660,7 @@
 							"style": 4,
 							"variables": {
 								"BonusArmor": 450,
-								"ShieldAmount": 2000
+								"ShieldAmount": 1800
 							}
 						}
 					],
@@ -11890,7 +11890,7 @@
 							"style": 4,
 							"variables": {
 								"{471b1a16}": 2,
-								"{d0539890}": 25
+								"{d0539890}": 30
 							}
 						}
 					],
@@ -11954,7 +11954,7 @@
 							"style": 2,
 							"variables": {
 								"MagicDamage": 30,
-								"ShieldAmount": 150,
+								"ShieldAmount": 175,
 								"ShieldDuration": 4,
 								"{2fb31c01}": 6,
 								"{f49783e7}": 20
@@ -11966,7 +11966,7 @@
 							"style": 3,
 							"variables": {
 								"MagicDamage": 55,
-								"ShieldAmount": 275,
+								"ShieldAmount": 300,
 								"ShieldDuration": 4,
 								"{2fb31c01}": 6,
 								"{f49783e7}": 20
@@ -11978,7 +11978,7 @@
 							"style": 4,
 							"variables": {
 								"MagicDamage": 90,
-								"ShieldAmount": 375,
+								"ShieldAmount": 425,
 								"ShieldDuration": 4,
 								"{2fb31c01}": 6,
 								"{f49783e7}": 20
@@ -12015,8 +12015,8 @@
 							"minUnits": 4,
 							"style": 3,
 							"variables": {
-								"BonusAD": 40,
-								"{b4a90a5d}": 70
+								"BonusAD": 50,
+								"{b4a90a5d}": 75
 							}
 						},
 						{
@@ -12024,7 +12024,7 @@
 							"minUnits": 5,
 							"style": 4,
 							"variables": {
-								"BonusAD": 70,
+								"BonusAD": 80,
 								"{b4a90a5d}": 100
 							}
 						}
@@ -12142,7 +12142,7 @@
 							"variables": {
 								"DamageReduction": 0.25,
 								"{5c51b509}": 3,
-								"{7b9ae201}": 1600,
+								"{7b9ae201}": 1888,
 								"{e86b1aa9}": 800
 							}
 						}
@@ -12213,7 +12213,7 @@
 							"style": 3,
 							"variables": {
 								"{2f744e2b}": 50,
-								"{faa12163}": 40
+								"{faa12163}": 50
 							}
 						},
 						{
@@ -12221,7 +12221,7 @@
 							"minUnits": 8,
 							"style": 4,
 							"variables": {
-								"{2f744e2b}": 135,
+								"{2f744e2b}": 150,
 								"{faa12163}": "null"
 							}
 						}
@@ -12350,7 +12350,7 @@
 							"minUnits": 5,
 							"style": 4,
 							"variables": {
-								"AttackSpeed": 0.800000011920929,
+								"AttackSpeed": 1,
 								"HPPercent": 0.4000000059604645,
 								"{70ed38c6}": 4,
 								"{d2b7f6f1}": 2
@@ -12930,9 +12930,9 @@
 								"name": "ShieldDestructionPercent",
 								"value": [
 									0,
-									0.25,
-									0.33000001311302185,
-									1,
+									0.4000000059604645,
+									0.5,
+									2,
 									0,
 									0,
 									0
@@ -13125,7 +13125,7 @@
 								"name": "ShieldAmount",
 								"value": [
 									0,
-									140,
+									125,
 									200,
 									700,
 									0,
@@ -13149,8 +13149,8 @@
 								"name": "Damage",
 								"value": [
 									0,
-									325,
-									450,
+									300,
+									425,
 									1500,
 									0,
 									0,
@@ -13182,9 +13182,9 @@
 						"critMultiplier": 1.2999999523162842,
 						"damage": 50,
 						"hp": 700,
-						"initialMana": 30,
+						"initialMana": 40,
 						"magicResist": 30,
-						"mana": 90,
+						"mana": 100,
 						"range": 4
 					},
 					"traits": [
@@ -14342,7 +14342,7 @@
 								"name": "BonusAS",
 								"value": [
 									0.10000000149011612,
-									0.3499999940395355,
+									0.30000001192092896,
 									0.4000000059604645,
 									0.5,
 									0.8999999761581421,
@@ -14366,7 +14366,7 @@
 								"name": "Damage",
 								"value": [
 									75,
-									150,
+									125,
 									200,
 									400,
 									575,
@@ -14959,14 +14959,14 @@
 					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT6_Tibbers.TFT_Set6.dds",
 					"name": "Mechanical Bear",
 					"stats": {
-						"armor": 55,
+						"armor": 50,
 						"attackSpeed": 0.6000000238418579,
 						"critChance": 0.25,
 						"critMultiplier": 1.5,
 						"damage": 50,
-						"hp": 775,
+						"hp": 725,
 						"initialMana": 0,
-						"magicResist": 55,
+						"magicResist": 50,
 						"mana": 100,
 						"range": 1
 					},
@@ -15270,7 +15270,7 @@
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
 						"damage": 40,
-						"hp": 475,
+						"hp": 450,
 						"initialMana": 40,
 						"magicResist": 30,
 						"mana": 80,
@@ -15458,7 +15458,7 @@
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
 						"damage": 65,
-						"hp": 1025,
+						"hp": 925,
 						"initialMana": 200,
 						"magicResist": 90,
 						"mana": 300,
@@ -16559,7 +16559,7 @@
 						"attackSpeed": 0.800000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 90,
+						"damage": 85,
 						"hp": 800,
 						"initialMana": 0,
 						"magicResist": 30,
@@ -16636,7 +16636,7 @@
 						"attackSpeed": 0.8999999761581421,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 85,
+						"damage": 90,
 						"hp": 800,
 						"initialMana": 0,
 						"magicResist": 35,
@@ -16658,9 +16658,9 @@
 								"name": "Damage",
 								"value": [
 									150,
-									135,
-									200,
-									450,
+									140,
+									210,
+									500,
 									500,
 									400,
 									400
@@ -16746,13 +16746,13 @@
 							{
 								"name": "PercentADDamage",
 								"value": [
-									0,
-									1.850000023841858,
-									1.850000023841858,
-									1.850000023841858,
-									0,
-									0,
-									0
+									1.899999976158142,
+									1.899999976158142,
+									1.899999976158142,
+									1.899999976158142,
+									1.899999976158142,
+									1.899999976158142,
+									1.899999976158142
 								]
 							},
 							{
@@ -16987,9 +16987,9 @@
 								"name": "DamagePerSecond",
 								"value": [
 									1,
-									40,
-									65,
-									240,
+									50,
+									75,
+									250,
 									2,
 									2.25,
 									2.5
@@ -17558,7 +17558,7 @@
 							"minUnits": 6,
 							"style": 3,
 							"variables": {
-								"{ed1f9fc2}": 33
+								"{ed1f9fc2}": 40
 							}
 						}
 					],
@@ -17739,7 +17739,7 @@
 							"style": 4,
 							"variables": {
 								"BonusArmor": 450,
-								"ShieldAmount": 2000
+								"ShieldAmount": 1800
 							}
 						}
 					],
@@ -17969,7 +17969,7 @@
 							"style": 4,
 							"variables": {
 								"{471b1a16}": 2,
-								"{d0539890}": 25
+								"{d0539890}": 30
 							}
 						}
 					],
@@ -18033,7 +18033,7 @@
 							"style": 2,
 							"variables": {
 								"MagicDamage": 30,
-								"ShieldAmount": 150,
+								"ShieldAmount": 175,
 								"ShieldDuration": 4,
 								"{2fb31c01}": 6,
 								"{f49783e7}": 20
@@ -18045,7 +18045,7 @@
 							"style": 3,
 							"variables": {
 								"MagicDamage": 55,
-								"ShieldAmount": 275,
+								"ShieldAmount": 300,
 								"ShieldDuration": 4,
 								"{2fb31c01}": 6,
 								"{f49783e7}": 20
@@ -18057,7 +18057,7 @@
 							"style": 4,
 							"variables": {
 								"MagicDamage": 90,
-								"ShieldAmount": 375,
+								"ShieldAmount": 425,
 								"ShieldDuration": 4,
 								"{2fb31c01}": 6,
 								"{f49783e7}": 20
@@ -18094,8 +18094,8 @@
 							"minUnits": 4,
 							"style": 3,
 							"variables": {
-								"BonusAD": 40,
-								"{b4a90a5d}": 70
+								"BonusAD": 50,
+								"{b4a90a5d}": 75
 							}
 						},
 						{
@@ -18103,7 +18103,7 @@
 							"minUnits": 5,
 							"style": 4,
 							"variables": {
-								"BonusAD": 70,
+								"BonusAD": 80,
 								"{b4a90a5d}": 100
 							}
 						}
@@ -18221,7 +18221,7 @@
 							"variables": {
 								"DamageReduction": 0.25,
 								"{5c51b509}": 3,
-								"{7b9ae201}": 1600,
+								"{7b9ae201}": 1888,
 								"{e86b1aa9}": 800
 							}
 						}
@@ -18292,7 +18292,7 @@
 							"style": 3,
 							"variables": {
 								"{2f744e2b}": 50,
-								"{faa12163}": 40
+								"{faa12163}": 50
 							}
 						},
 						{
@@ -18300,7 +18300,7 @@
 							"minUnits": 8,
 							"style": 4,
 							"variables": {
-								"{2f744e2b}": 135,
+								"{2f744e2b}": 150,
 								"{faa12163}": "null"
 							}
 						}
@@ -18429,7 +18429,7 @@
 							"minUnits": 5,
 							"style": 4,
 							"variables": {
-								"AttackSpeed": 0.800000011920929,
+								"AttackSpeed": 1,
 								"HPPercent": 0.4000000059604645,
 								"{70ed38c6}": 4,
 								"{d2b7f6f1}": 2
@@ -18913,9 +18913,9 @@
 								"name": "ShieldDestructionPercent",
 								"value": [
 									0,
-									0.25,
-									0.33000001311302185,
-									1,
+									0.4000000059604645,
+									0.5,
+									2,
 									0,
 									0,
 									0
@@ -19108,7 +19108,7 @@
 								"name": "ShieldAmount",
 								"value": [
 									0,
-									140,
+									125,
 									200,
 									700,
 									0,
@@ -19132,8 +19132,8 @@
 								"name": "Damage",
 								"value": [
 									0,
-									325,
-									450,
+									300,
+									425,
 									1500,
 									0,
 									0,
@@ -19165,9 +19165,9 @@
 						"critMultiplier": 1.2999999523162842,
 						"damage": 50,
 						"hp": 700,
-						"initialMana": 30,
+						"initialMana": 40,
 						"magicResist": 30,
-						"mana": 90,
+						"mana": 100,
 						"range": 4
 					},
 					"traits": [
@@ -20325,7 +20325,7 @@
 								"name": "BonusAS",
 								"value": [
 									0.10000000149011612,
-									0.3499999940395355,
+									0.30000001192092896,
 									0.4000000059604645,
 									0.5,
 									0.8999999761581421,
@@ -20349,7 +20349,7 @@
 								"name": "Damage",
 								"value": [
 									75,
-									150,
+									125,
 									200,
 									400,
 									575,
@@ -20942,14 +20942,14 @@
 					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT6_Tibbers.TFT_Set6.dds",
 					"name": "Mechanical Bear",
 					"stats": {
-						"armor": 55,
+						"armor": 50,
 						"attackSpeed": 0.6000000238418579,
 						"critChance": 0.25,
 						"critMultiplier": 1.5,
 						"damage": 50,
-						"hp": 775,
+						"hp": 725,
 						"initialMana": 0,
-						"magicResist": 55,
+						"magicResist": 50,
 						"mana": 100,
 						"range": 1
 					},
@@ -21253,7 +21253,7 @@
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
 						"damage": 40,
-						"hp": 475,
+						"hp": 450,
 						"initialMana": 40,
 						"magicResist": 30,
 						"mana": 80,
@@ -21441,7 +21441,7 @@
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
 						"damage": 65,
-						"hp": 1025,
+						"hp": 925,
 						"initialMana": 200,
 						"magicResist": 90,
 						"mana": 300,
@@ -22542,7 +22542,7 @@
 						"attackSpeed": 0.800000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 90,
+						"damage": 85,
 						"hp": 800,
 						"initialMana": 0,
 						"magicResist": 30,
@@ -22619,7 +22619,7 @@
 						"attackSpeed": 0.8999999761581421,
 						"critChance": 0.25,
 						"critMultiplier": 1.2999999523162842,
-						"damage": 85,
+						"damage": 90,
 						"hp": 800,
 						"initialMana": 0,
 						"magicResist": 35,
@@ -22641,9 +22641,9 @@
 								"name": "Damage",
 								"value": [
 									150,
-									135,
-									200,
-									450,
+									140,
+									210,
+									500,
 									500,
 									400,
 									400
@@ -22729,13 +22729,13 @@
 							{
 								"name": "PercentADDamage",
 								"value": [
-									0,
-									1.850000023841858,
-									1.850000023841858,
-									1.850000023841858,
-									0,
-									0,
-									0
+									1.899999976158142,
+									1.899999976158142,
+									1.899999976158142,
+									1.899999976158142,
+									1.899999976158142,
+									1.899999976158142,
+									1.899999976158142
 								]
 							},
 							{
@@ -22970,9 +22970,9 @@
 								"name": "DamagePerSecond",
 								"value": [
 									1,
-									40,
-									65,
-									240,
+									50,
+									75,
+									250,
 									2,
 									2.25,
 									2.5
@@ -23539,7 +23539,7 @@
 							"minUnits": 6,
 							"style": 3,
 							"variables": {
-								"{ed1f9fc2}": 33
+								"{ed1f9fc2}": 40
 							}
 						}
 					],
@@ -23720,7 +23720,7 @@
 							"style": 4,
 							"variables": {
 								"BonusArmor": 450,
-								"ShieldAmount": 2000
+								"ShieldAmount": 1800
 							}
 						}
 					],
@@ -23950,7 +23950,7 @@
 							"style": 4,
 							"variables": {
 								"{471b1a16}": 2,
-								"{d0539890}": 25
+								"{d0539890}": 30
 							}
 						}
 					],
@@ -24014,7 +24014,7 @@
 							"style": 2,
 							"variables": {
 								"MagicDamage": 30,
-								"ShieldAmount": 150,
+								"ShieldAmount": 175,
 								"ShieldDuration": 4,
 								"{2fb31c01}": 6,
 								"{f49783e7}": 20
@@ -24026,7 +24026,7 @@
 							"style": 3,
 							"variables": {
 								"MagicDamage": 55,
-								"ShieldAmount": 275,
+								"ShieldAmount": 300,
 								"ShieldDuration": 4,
 								"{2fb31c01}": 6,
 								"{f49783e7}": 20
@@ -24038,7 +24038,7 @@
 							"style": 4,
 							"variables": {
 								"MagicDamage": 90,
-								"ShieldAmount": 375,
+								"ShieldAmount": 425,
 								"ShieldDuration": 4,
 								"{2fb31c01}": 6,
 								"{f49783e7}": 20
@@ -24075,8 +24075,8 @@
 							"minUnits": 4,
 							"style": 3,
 							"variables": {
-								"BonusAD": 40,
-								"{b4a90a5d}": 70
+								"BonusAD": 50,
+								"{b4a90a5d}": 75
 							}
 						},
 						{
@@ -24084,7 +24084,7 @@
 							"minUnits": 5,
 							"style": 4,
 							"variables": {
-								"BonusAD": 70,
+								"BonusAD": 80,
 								"{b4a90a5d}": 100
 							}
 						}
@@ -24202,7 +24202,7 @@
 							"variables": {
 								"DamageReduction": 0.25,
 								"{5c51b509}": 3,
-								"{7b9ae201}": 1600,
+								"{7b9ae201}": 1888,
 								"{e86b1aa9}": 800
 							}
 						}
@@ -24273,7 +24273,7 @@
 							"style": 3,
 							"variables": {
 								"{2f744e2b}": 50,
-								"{faa12163}": 40
+								"{faa12163}": 50
 							}
 						},
 						{
@@ -24281,7 +24281,7 @@
 							"minUnits": 8,
 							"style": 4,
 							"variables": {
-								"{2f744e2b}": 135,
+								"{2f744e2b}": 150,
 								"{faa12163}": "null"
 							}
 						}
@@ -24410,7 +24410,7 @@
 							"minUnits": 5,
 							"style": 4,
 							"variables": {
-								"AttackSpeed": 0.800000011920929,
+								"AttackSpeed": 1,
 								"HPPercent": 0.4000000059604645,
 								"{70ed38c6}": 4,
 								"{d2b7f6f1}": 2

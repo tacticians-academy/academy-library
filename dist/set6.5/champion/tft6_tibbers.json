@@ -5,7 +5,7 @@
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
 		"mCharacterName": "TFT6_Tibbers",
-		"baseHP": 775,
+		"baseHP": 725,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
@@ -14,8 +14,8 @@
 			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 50,
-		"baseArmor": 55,
-		"baseSpellBlock": 55,
+		"baseArmor": 50,
+		"baseSpellBlock": 50,
 		"baseCritChance": 0.25,
 		"critDamageMultiplier": 1.5,
 		"baseMoveSpeed": 500,

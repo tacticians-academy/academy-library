@@ -450,7 +450,7 @@ export const completedItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		desc: `Every @HealTickRate@ seconds, the holder radiates an aura to allies within @HexRadius@ hex, healing them for @MissingHPHeal@% of their missing HP. Affected allies take @AoEDamageReduction@% reduced damage from multi-target abilities and attacks for @HealTickRate@ seconds.`,
+		desc: `Aura: Every @HealTickRate@ seconds, the holder radiates an aura to allies within @HexRadius@ hex, healing them for @MissingHPHeal@% of their missing HP. Affected allies also take @AoEDamageReduction@% reduced damage from multi-target abilities and attacks for @HealTickRate@ seconds (damage reduction does not stack).`,
 		effects: {
 			'HP': 150,
 			'Mana': 15,
@@ -1338,7 +1338,7 @@ export const radiantItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		desc: `Every @HealTickRate@ seconds, the holder radiates an aura to allies within <TFTRadiantItemBonus>@HexRadius@</TFTRadiantItemBonus> hexes, healing them for <TFTRadiantItemBonus>@MissingHPHeal@%</TFTRadiantItemBonus> of their missing HP. Affected allies take @AoEDamageReduction@% reduced damage from multi-target abilities and attacks for @HealTickRate@ seconds.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@BonusHP@ HP.</TFTRadiantItemBonus>`,
+		desc: `Aura: Every @HealTickRate@ seconds, the holder radiates an aura to allies within <TFTRadiantItemBonus>@HexRadius@</TFTRadiantItemBonus> hexes, healing them for <TFTRadiantItemBonus>@MissingHPHeal@%</TFTRadiantItemBonus> of their missing HP. Affected allies also take @AoEDamageReduction@% reduced damage from multi-target abilities and attacks for @HealTickRate@ seconds (damage reduction does not stack).<br><br><TFTRadiantItemBonus>Radiant Bonus: +@BonusHP@ HP.</TFTRadiantItemBonus>`,
 		effects: {
 			'BonusHP': 350,
 			'HP': 500,
@@ -1640,7 +1640,7 @@ export const ornnItems: ItemData[] = [
 			'StunDuration': 1.5,
 		},
 		from: [],
-		icon: `ASSETS/Maps/Particles/TFT/TFT4_OrnnItem_RocketPropelledFist.TFT_Set4_Act2.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/TFT4_OrnnItem_RocketPropelledFist.dds`,
 		id: 9008,
 		name: `Rocket-Propelled Fist`,
 		unique: true,

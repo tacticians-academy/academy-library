@@ -30,7 +30,7 @@ export const traits: TraitData[] = [
 				style: 3,
 				variables: {
 					'TeamAP': 50,
-					'ArcanistAP': 40,
+					'ArcanistAP': 50,
 				},
 			},
 			{
@@ -38,7 +38,7 @@ export const traits: TraitData[] = [
 				minUnits: 8,
 				style: 4,
 				variables: {
-					'TeamAP': 135,
+					'TeamAP': 150,
 					'ArcanistAP': null,
 				},
 			},
@@ -118,7 +118,7 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'BonusArmor': 450,
-					'ShieldAmount': 2000,
+					'ShieldAmount': 1800,
 				},
 			},
 		],
@@ -321,7 +321,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'DamageReduction': 0.25,
 					'TraitLevel': 3,
-					'{7b9ae201}': 1600,
+					'{7b9ae201}': 1888,
 					'BonusHPTooltip': 800,
 				},
 			},
@@ -427,7 +427,7 @@ export const traits: TraitData[] = [
 				minUnits: 5,
 				style: 4,
 				variables: {
-					'AS': 0.800000011920929,
+					'AS': 1,
 					'HPPercent': 0.4000000059604645,
 					'DetainDuration': 4,
 					'DetainCount': 2,
@@ -473,7 +473,7 @@ export const traits: TraitData[] = [
 				style: 2,
 				variables: {
 					'MagicDamage': 30,
-					'ShieldAmount': 150,
+					'ShieldAmount': 175,
 					'ShieldDuration': 4,
 					'Frequency': 6,
 					'BonusPercentPerAugment': 20,
@@ -485,7 +485,7 @@ export const traits: TraitData[] = [
 				style: 3,
 				variables: {
 					'MagicDamage': 55,
-					'ShieldAmount': 275,
+					'ShieldAmount': 300,
 					'ShieldDuration': 4,
 					'Frequency': 6,
 					'BonusPercentPerAugment': 20,
@@ -497,7 +497,7 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'MagicDamage': 90,
-					'ShieldAmount': 375,
+					'ShieldAmount': 425,
 					'ShieldDuration': 4,
 					'Frequency': 6,
 					'BonusPercentPerAugment': 20,
@@ -714,7 +714,7 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'TickRate': 2,
-					'ManaPerTick': 25,
+					'ManaPerTick': 30,
 				},
 			},
 		],
@@ -962,8 +962,8 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 3,
 				variables: {
-					'BonusAD': 40,
-					'ProcChance': 70,
+					'BonusAD': 50,
+					'ProcChance': 75,
 				},
 			},
 			{
@@ -971,7 +971,7 @@ export const traits: TraitData[] = [
 				minUnits: 5,
 				style: 4,
 				variables: {
-					'BonusAD': 70,
+					'BonusAD': 80,
 					'ProcChance': 100,
 				},
 			},
@@ -996,7 +996,7 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 3,
 				variables: {
-					'PercentManaReduction': 33,
+					'PercentManaReduction': 40,
 				},
 			},
 		],

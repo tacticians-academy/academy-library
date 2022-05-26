@@ -1,5 +1,5 @@
 {
-	"{349be3fd}": {
+	"Characters/TFT6_Irelia/Spells/TFT6_IreliaCritAttack": {
 		"mScriptName": "TFT6_IreliaCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 512,
@@ -26,7 +26,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{a6cc2934}": {
+	"Characters/TFT6_Irelia/Spells/TFT6_IreliaQ": {
 		"mScriptName": "TFT6_IreliaQ",
 		"mSpell": {
 			"flags": 4,
@@ -38,15 +38,15 @@
 				{
 					"mName": "PercentADDamage",
 					"mValues": [
-						0,
-						1.850000023841858,
-						1.850000023841858,
-						1.850000023841858,
-						0,
-						0,
-						0
+						1.899999976158142,
+						1.899999976158142,
+						1.899999976158142,
+						1.899999976158142,
+						1.899999976158142,
+						1.899999976158142,
+						1.899999976158142
 					],
-					"{3f95426c}": false,
+					"mBaseP": 1.899999976158142,
 					"__type": "SpellDataValue"
 				},
 				{
@@ -151,7 +151,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{a74ac9bd}": {
+	"Characters/TFT6_Irelia/Spells/TFT6_IreliaBasicAttack": {
 		"mScriptName": "TFT6_IreliaBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 4234,
@@ -187,7 +187,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{e9bb4c1d}": {
+	"Characters/TFT6_Irelia/Spells/TFT6_IreliaBasicAttack2": {
 		"mScriptName": "TFT6_IreliaBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 4234,
@@ -223,7 +223,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{50aa64cc}": {
+	"Characters/TFT6_Irelia/CharacterRecords/Root": {
 		"PortraitIcon": "ASSETS/Characters/TFT6_Irelia/HUD/TFT6_Irelia.TFT_Set6_Stage2.dds",
 		"tier": 4,
 		"mLinkedTraits": [
