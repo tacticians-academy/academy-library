@@ -1,0 +1,245 @@
+{
+	"{0e69e8c9}": {
+		"mCharacterName": "TFT7_IvernMinion",
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 0,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"arIsShown": false,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 120,
+		"baseArmor": 60,
+		"baseSpellBlock": 60,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.2999999523162842,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.5,
+		"basicAttack": {
+			"mAttackName": "TFT7_IvernMinionBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT7_IvernMinionBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT7_IvernMinionCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT7_IvernMinionSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446656,
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"__type": "TFTCharacterRecord",
+		"isSpawn": true
+	},
+	"{599d2845}": {
+		"mScriptName": "TFT7_IvernMinionBasicAttack",
+		"mSpell": {
+			"flags": 128,
+			"mAffectsTypeFlags": 5839,
+			"bHaveHitEffect": true,
+			"mUseAutoattackCastTimeData": {
+				"__type": "UseAutoattackCastTimeData"
+			},
+			"mConsideredAsAutoAttack": true,
+			"castRange": [
+				125,
+				125,
+				125,
+				125,
+				125,
+				125,
+				125
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 18,
+			"missileSpeed": 0,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{69432ce9}": {
+		"mScriptName": "TFT7_IvernMinionSpell",
+		"mSpell": {
+			"mAffectsTypeFlags": 4106,
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						250,
+						500,
+						1000,
+						10000,
+						250,
+						250,
+						250
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"{af204103}": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"mCastTime": 0.5,
+			"delayCastOffsetPercent": 0.6000000238418579,
+			"castRange": [
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000
+			],
+			"castFrame": 20,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{8966b355}": {
+		"mScriptName": "TFT7_IvernMinionBasicAttack2",
+		"mSpell": {
+			"flags": 128,
+			"mAffectsTypeFlags": 5839,
+			"bHaveHitEffect": true,
+			"mUseAutoattackCastTimeData": {
+				"__type": "UseAutoattackCastTimeData"
+			},
+			"mConsideredAsAutoAttack": true,
+			"castRange": [
+				125,
+				125,
+				125,
+				125,
+				125,
+				125,
+				125
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 18,
+			"missileSpeed": 0,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{b6783395}": {
+		"mScriptName": "TFT7_IvernMinionCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 6827,
+			"delayCastOffsetPercent": -0.34850001335144043,
+			"useAnimatorFramerate": true,
+			"bHaveHitEffect": true,
+			"mUseAutoattackCastTimeData": {
+				"__type": "UseAutoattackCastTimeData"
+			},
+			"mConsideredAsAutoAttack": true,
+			"castRange": [
+				150,
+				150,
+				150,
+				150,
+				150,
+				150,
+				150
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "C_Buffbone_Glb_Head_Loc",
+					"mAcceleration": -15000,
+					"mMinSpeed": 1500,
+					"mMaxSpeed": 3000,
+					"mInitialSpeed": 2000,
+					"__type": "AcceleratingMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 7.75,
+			"missileSpeed": 4000,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	}
+}

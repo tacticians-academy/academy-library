@@ -1,0 +1,401 @@
+{
+	"{101b601b}": {
+		"mCharacterName": "TFT7_DragonGreen",
+		"baseHP": 850,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 75,
+		"baseArmor": 60,
+		"baseSpellBlock": 60,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.2999999523162842,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.75,
+		"basicAttack": {
+			"mAttackName": "TFT7_DragonGreenBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT7_DragonGreenBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT7_DragonGreenCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT7_DragonGreenP",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"TFT7_DragonGreenAttack1",
+			"TFT7_DragonGreenAttack2",
+			"TFT7_DragonGreenAttack3",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446664,
+		"PortraitIcon": "ASSETS/Characters/TFT7_DragonGreen/HUD/TFT7_JadeDragon_Square.TFT_Set7.dds",
+		"tier": 4,
+		"mLinkedTraits": [
+			{
+				"TraitData": "Jade",
+				"{baeca565}": true,
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "Mystic",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "Dragon",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mInitialMana": 30,
+		"__type": "TFTCharacterRecord",
+		"teamSize": 2
+	},
+	"{74ea7e59}": {
+		"mScriptName": "TFT7_DragonGreenBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 512,
+			"delayCastOffsetPercent": -0.3399999737739563,
+			"delayTotalTimePercent": -0.19999998807907104,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castConeDistance": 100,
+			"castFrame": 10,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{78250271}": {
+		"mScriptName": "TFT7_DragonGreenBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 512,
+			"delayCastOffsetPercent": -0.3399999737739563,
+			"delayTotalTimePercent": -0.19999998807907104,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castConeDistance": 100,
+			"castFrame": 10,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{a5098638}": {
+		"mScriptName": "TFT7_DragonGreenAttack1",
+		"mSpell": {
+			"mAffectsTypeFlags": 8191,
+			"mImgIconName": [
+				""
+			],
+			"delayCastOffsetPercent": -0.550000011920929,
+			"canCastWhileDisabled": true,
+			"castRange": [
+				125,
+				125,
+				125,
+				125,
+				125,
+				125,
+				125
+			],
+			"castRadius": [
+				125,
+				125,
+				125,
+				125,
+				125,
+				125,
+				125
+			],
+			"castConeDistance": 100,
+			"castFrame": 7.5,
+			"missileSpeed": 0,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{a709895e}": {
+		"mScriptName": "TFT7_DragonGreenAttack3",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mImgIconName": [
+				""
+			],
+			"delayCastOffsetPercent": -0.550000011920929,
+			"canCastWhileDisabled": true,
+			"canCastOrQueueWhileCasting": true,
+			"castRange": [
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000
+			],
+			"castConeDistance": 60,
+			"mMissileSpec": {
+				"mMissileWidth": 140,
+				"movementComponent": {
+					"mTracksTarget": false,
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 1000,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"__type": "BlendedLinearHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VerticalFacingFaceTarget"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnHit"
+					},
+					{
+						"mMaximumDistance": 500,
+						"mTargeterDefinition": {
+							"__type": "TargeterDefinitionSkipTerrain"
+						},
+						"__type": "FixedDistanceIgnoringTerrain"
+					},
+					{
+						"__type": "{e357c116}"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 3,
+			"castFrame": 10.5,
+			"missileSpeed": 1200,
+			"mMissileEffectKey": "{fe692f29}",
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{a8098af1}": {
+		"mScriptName": "TFT7_DragonGreenAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 8191,
+			"mImgIconName": [
+				""
+			],
+			"delayCastOffsetPercent": -0.550000011920929,
+			"canCastWhileDisabled": true,
+			"castRange": [
+				125,
+				125,
+				125,
+				125,
+				125,
+				125,
+				125
+			],
+			"castRadius": [
+				125,
+				125,
+				125,
+				125,
+				125,
+				125,
+				125
+			],
+			"castConeDistance": 100,
+			"castFrame": 7.5,
+			"missileSpeed": 0,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{b58dfad9}": {
+		"mScriptName": "TFT7_DragonGreenCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 512,
+			"mAlternateName": "GalioCritAttack",
+			"delayCastOffsetPercent": -0.3399999737739563,
+			"delayTotalTimePercent": -0.19999998807907104,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 10,
+			"missileSpeed": 1000,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{fe81bee3}": {
+		"mScriptName": "TFT7_DragonGreenP",
+		"mSpell": {
+			"mAffectsTypeFlags": 8193,
+			"mAffectsStatusFlags": 160,
+			"mDataValues": [
+				{
+					"mName": "DamageReduction",
+					"mValues": [
+						0.20000000298023224,
+						0.20000000298023224,
+						0.25,
+						0.4000000059604645,
+						0.5,
+						0.5,
+						0.5
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "Stun",
+					"mValues": [
+						1,
+						1,
+						1,
+						1,
+						1,
+						1,
+						1
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "PercentAttackDamage",
+					"mValues": [
+						0,
+						250,
+						300,
+						1000,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"{d3bdf870}": {
+					"mFormulaParts": [
+						{
+							"{bfe6ad01}": 100,
+							"mDataValue": "DamageReduction",
+							"__type": "{05abdfab}"
+						}
+					],
+					"mDisplayAsPercent": true,
+					"__type": "GameCalculation"
+				},
+				"TotalDamage": {
+					"mMultiplier": {
+						"mNumber": 0.009999999776482582,
+						"__type": "NumberCalculationPart"
+					},
+					"mFormulaParts": [
+						{
+							"mSubparts": [
+								{
+									"mStat": 2,
+									"mDataValue": "PercentAttackDamage",
+									"__type": "StatByNamedDataValueCalculationPart"
+								}
+							],
+							"__type": "SumOfSubPartsCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"delayCastOffsetPercent": 0.3999999761581421,
+			"delayTotalTimePercent": -0.6499999761581421,
+			"canCastOrQueueWhileCasting": true,
+			"castRange": [
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000
+			],
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	}
+}

@@ -1,0 +1,252 @@
+{
+	"{02bf4409}": {
+		"mScriptName": "TFT8_BlitzcrankSpell",
+		"mSpell": {
+			"mAffectsTypeFlags": 13327,
+			"mDataValues": [
+				{
+					"mName": "Duration",
+					"mValues": [
+						4,
+						4,
+						4,
+						4,
+						4,
+						4,
+						4
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "DRReductionPercent",
+					"mValues": [
+						0,
+						0.550000011920929,
+						0.6000000238418579,
+						0.6499999761581421,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"{96fe8f90}": {
+					"mFormulaParts": [
+						{
+							"{bfe6ad01}": 100,
+							"mDataValue": "{ebc537b5}",
+							"__type": "{05abdfab}"
+						}
+					],
+					"mDisplayAsPercent": true,
+					"__type": "GameCalculation"
+				}
+			},
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.5,
+			"mCantCancelWhileWindingUp": true,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000
+			],
+			"castFrame": 16,
+			"selectionPriority": 2,
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{d0223535}": {
+		"mScriptName": "TFT8_BlitzcrankCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 8143,
+			"delayCastOffsetPercent": -0.31220000982284546,
+			"bHaveHitEffect": true,
+			"castRange": [
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 12.824999809265137,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {
+				"__type": "Area"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{e13fbc65}": {
+		"mScriptName": "TFT8_BlitzcrankBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 8143,
+			"mAlternateName": "BlitzcrankBasicAttack",
+			"delayCastOffsetPercent": -0.31220000982284546,
+			"bHaveHitEffect": true,
+			"castRange": [
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 12.960000038146973,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {
+				"__type": "Area"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{ee557cf5}": {
+		"mScriptName": "TFT8_BlitzcrankBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 8143,
+			"mAlternateName": "BlitzcrankBasicAttack2",
+			"delayCastOffsetPercent": -0.31220000982284546,
+			"bHaveHitEffect": true,
+			"castRange": [
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 12.960000038146973,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {
+				"__type": "Area"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{8a95d648}": {
+		"mCharacterName": "TFT8_Blitzcrank",
+		"baseHP": 650,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 80,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 65,
+		"baseArmor": 45,
+		"baseSpellBlock": 45,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.5,
+		"basicAttack": {
+			"mAttackProbability": 0.5,
+			"mAttackName": "TFT8_BlitzcrankBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 0.5,
+				"mAttackName": "TFT8_BlitzcrankBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT8_BlitzcrankCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT8_BlitzcrankSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 8398088,
+		"tier": 1,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{2498fc94}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{6404759c}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mInitialMana": 40,
+		"{22f5197d}": 125,
+		"__type": "TFTCharacterRecord"
+	}
+}

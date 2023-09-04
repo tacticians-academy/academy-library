@@ -1,0 +1,319 @@
+{
+	"Characters/TFT9_Kassadin/Spells/TFT9_KassadinSpell": {
+		"mScriptName": "TFT9_KassadinSpell",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						100,
+						135,
+						200,
+						300,
+						300,
+						300,
+						300
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "DisarmDuration",
+					"mValues": [
+						3,
+						1.5,
+						1.75,
+						2,
+						4,
+						3,
+						3
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ShieldAmount",
+					"mValues": [
+						0,
+						250,
+						300,
+						400,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ShieldDuration",
+					"mValues": [
+						4,
+						4,
+						4,
+						4,
+						4,
+						4,
+						4
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"ModifiedDamage": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"ModifiedShield": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "ShieldAmount",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"mImgIconName": [
+				""
+			],
+			"mCastTime": 0.25,
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.5,
+			"mCantCancelWhileWindingUp": true,
+			"alwaysSnapFacing": true,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				350,
+				350,
+				350,
+				350,
+				350,
+				350,
+				350
+			],
+			"castConeAngle": 40,
+			"castConeDistance": 550,
+			"castFrame": 18,
+			"missileSpeed": 0,
+			"mTargetingTypeData": {
+				"__type": "Cone"
+			},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"{00f7e5bc}": true,
+			"__type": "SpellDataResource"
+		},
+		"mBuff": {
+			"mDescription": "game_buff_tooltip_ForcePulse",
+			"__type": "BuffData"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Kassadin/Spells/TFT9_KassadinBasicAttack2": {
+		"mScriptName": "TFT9_KassadinBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 8143,
+			"mAlternateName": "KassadinBasicAttack2",
+			"delayCastOffsetPercent": -0.31220000982284546,
+			"bHaveHitEffect": true,
+			"castRange": [
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 7.800000190734863,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {
+				"__type": "Area"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Kassadin/Spells/TFT9_KassadinBasicAttack": {
+		"mScriptName": "TFT9_KassadinBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 8143,
+			"mAlternateName": "KassadinBasicAttack",
+			"delayCastOffsetPercent": -0.31220000982284546,
+			"bHaveHitEffect": true,
+			"castRange": [
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 8.039999961853027,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {
+				"__type": "Area"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Kassadin/Spells/TFT9_KassadinCritAttack": {
+		"mScriptName": "TFT9_KassadinCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 8143,
+			"delayCastOffsetPercent": -0.31220000982284546,
+			"bHaveHitEffect": true,
+			"castRange": [
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 7.679999828338623,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {
+				"__type": "Area"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Kassadin/CharacterRecords/Root": {
+		"mCharacterName": "TFT9_Kassadin",
+		"baseHP": 800,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 50,
+		"baseArmor": 45,
+		"baseSpellBlock": 45,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.699999988079071,
+		"basicAttack": {
+			"mAttackName": "TFT9_KassadinBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT9_KassadinBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT9_KassadinCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT9_KassadinSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446664,
+		"tier": 2,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{02851b97}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{1b732087}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{2ccf900f}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mInitialMana": 50,
+		"{22f5197d}": 170,
+		"__type": "TFTCharacterRecord"
+	}
+}

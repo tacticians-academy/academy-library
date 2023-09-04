@@ -1,0 +1,1214 @@
+{
+	"Characters/TFT9_KaiSa/Spells/TFT9_KaisaSpell2": {
+		"mScriptName": "TFT9_KaisaSpell2",
+		"mScript": {
+			"__type": "LolSpellScript"
+		},
+		"mSpell": {
+			"flags": 32,
+			"mAffectsTypeFlags": 8192,
+			"mAffectsStatusFlags": 48,
+			"mAlternateName": "KaisaQ",
+			"mImgIconName": [
+				"ASSETS/Characters/Kaisa/HUD/Icons2D/Kaisa_Q.dds",
+				"ASSETS/Characters/Kaisa/HUD/Icons2D/Kaisa_Q2.dds"
+			],
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"mSpellRevealsChampion": false,
+			"castRangeUseBoundingBoxes": true,
+			"mPingableWhileDisabled": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castRadiusSecondary": [
+				180,
+				180,
+				180,
+				180,
+				180,
+				180,
+				180
+			],
+			"castConeDistance": 100,
+			"castFrame": 1,
+			"missileSpeed": 2500,
+			"mLineWidth": 120,
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"{00f7e5bc}": true,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_KaiSa/Spells/TFT9_KaiSaQRightMissile2": {
+		"mScriptName": "TFT9_KaiSaQRightMissile2",
+		"mSpell": {
+			"flags": 4194308,
+			"mAffectsTypeFlags": 6154,
+			"mEffectAmount": [
+				{
+					"value": [
+						0,
+						80,
+						110,
+						140,
+						170,
+						200,
+						0
+					],
+					"__type": "SpellEffectAmount"
+				},
+				{
+					"value": [
+						0,
+						12,
+						11,
+						10,
+						9,
+						8,
+						0
+					],
+					"__type": "SpellEffectAmount"
+				}
+			],
+			"mCoefficient": 0.6000000238418579,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mIsDisabledWhileDead": false,
+			"bHaveHitEffect": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				210,
+				210,
+				210,
+				210,
+				210,
+				210,
+				210
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mStartBoneName": "R_Buffbone_Engine",
+					"mTargetBoneName": "C_Buffbone_Glb_Center_Loc",
+					"mSplineInfo": {
+						"mControlPoint1": [
+							3.2088959217071533,
+							0,
+							0.025929149240255356
+						],
+						"mControlPoint2": [
+							1.961836814880371,
+							0,
+							0.9877659678459167
+						],
+						"__type": "HermiteSplineInfo"
+					},
+					"mTravelTime": 0.6000000238418579,
+					"__type": "FixedTimeSplineMovement"
+				},
+				"heightSolver": {
+					"mAmplitude": 50,
+					"mNumberOfPeriods": 0.699999988079071,
+					"__type": "SinusoidalHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"missileSpeed": 1800,
+			"mMissileEffectKey": "{1bc3abe7}",
+			"mLineWidth": 120,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_Buffbone_Glb_Center_Loc",
+			"{47e0dff9}": {
+				"13": "Play_sfx_tft9_KaisaMissile_OnHit",
+				"15": "Play_sfx_tft9_KaisaMissile_OnCast"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_KaiSa/Spells/TFT9_KaiSaQRightMissile3": {
+		"mScriptName": "TFT9_KaiSaQRightMissile3",
+		"mSpell": {
+			"flags": 4194308,
+			"mAffectsTypeFlags": 6154,
+			"mEffectAmount": [
+				{
+					"value": [
+						0,
+						80,
+						110,
+						140,
+						170,
+						200,
+						0
+					],
+					"__type": "SpellEffectAmount"
+				},
+				{
+					"value": [
+						0,
+						12,
+						11,
+						10,
+						9,
+						8,
+						0
+					],
+					"__type": "SpellEffectAmount"
+				}
+			],
+			"mCoefficient": 0.6000000238418579,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mIsDisabledWhileDead": false,
+			"bHaveHitEffect": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				210,
+				210,
+				210,
+				210,
+				210,
+				210,
+				210
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 20,
+					"mStartBoneName": "R_Buffbone_Engine",
+					"mTargetBoneName": "C_Buffbone_Glb_Center_Loc",
+					"mSplineInfo": {
+						"mControlPoint1": [
+							2.6248855590820312,
+							0,
+							-0.9872807860374451
+						],
+						"mControlPoint2": [
+							-0.8546139597892761,
+							0,
+							1.6906113624572754
+						],
+						"__type": "HermiteSplineInfo"
+					},
+					"mTravelTime": 0.6000000238418579,
+					"__type": "FixedTimeSplineMovement"
+				},
+				"heightSolver": {
+					"mAmplitude": 60,
+					"mNumberOfPeriods": 0.800000011920929,
+					"__type": "SinusoidalHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VerticalFacingFaceTarget"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"missileSpeed": 1800,
+			"mMissileEffectKey": "{1bc3abe7}",
+			"mLineWidth": 120,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_Buffbone_Glb_Center_Loc",
+			"{47e0dff9}": {
+				"13": "Play_sfx_tft9_KaisaMissile_OnHit",
+				"15": "Play_sfx_tft9_KaisaMissile_OnCast"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_KaiSa/Spells/TFT9_KaiSaQRightMissile1": {
+		"mScriptName": "TFT9_KaiSaQRightMissile1",
+		"mSpell": {
+			"flags": 4194308,
+			"mAffectsTypeFlags": 6154,
+			"mEffectAmount": [
+				{
+					"value": [
+						0,
+						80,
+						110,
+						140,
+						170,
+						200,
+						0
+					],
+					"__type": "SpellEffectAmount"
+				},
+				{
+					"value": [
+						0,
+						12,
+						11,
+						10,
+						9,
+						8,
+						0
+					],
+					"__type": "SpellEffectAmount"
+				}
+			],
+			"mCoefficient": 0.6000000238418579,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mIsDisabledWhileDead": false,
+			"bHaveHitEffect": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				210,
+				210,
+				210,
+				210,
+				210,
+				210,
+				210
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mStartBoneName": "R_Buffbone_Engine",
+					"mTargetBoneName": "C_Buffbone_Glb_Center_Loc",
+					"mSplineInfo": {
+						"mControlPoint1": [
+							2.3734195232391357,
+							0,
+							-1.0159772634506226
+						],
+						"mControlPoint2": [
+							-0.1758088618516922,
+							0,
+							1.7346116304397583
+						],
+						"__type": "HermiteSplineInfo"
+					},
+					"mTravelTime": 0.6000000238418579,
+					"__type": "FixedTimeSplineMovement"
+				},
+				"heightSolver": {
+					"mAmplitude": 50,
+					"mNumberOfPeriods": 0.699999988079071,
+					"__type": "SinusoidalHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VerticalFacingFaceTarget"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"missileSpeed": 1800,
+			"mMissileEffectKey": "{1bc3abe7}",
+			"mLineWidth": 120,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_Buffbone_Glb_Center_Loc",
+			"{47e0dff9}": {
+				"13": "Play_sfx_tft9_KaisaMissile_OnHit",
+				"15": "Play_sfx_tft9_KaisaMissile_OnCast"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_KaiSa/Spells/TFT9_KaiSaBasicAttack": {
+		"mScriptName": "TFT9_KaiSaBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "KaisaBasicAttack",
+			"mApplyAttackDamage": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"luaOnMissileUpdateDistanceInterval": 51,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_elbow",
+					"mSpeed": 2000,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{9e8a1f5c}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "Root",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_KaiSa/Spells/TFT9_KaiSaSpell": {
+		"mScriptName": "TFT9_KaisaSpell",
+		"mScript": {
+			"__type": "LolSpellScript"
+		},
+		"mSpell": {
+			"flags": 32,
+			"mAffectsTypeFlags": 8192,
+			"mAffectsStatusFlags": 48,
+			"mAlternateName": "KaisaQ",
+			"mDataValues": [
+				{
+					"mName": "NumMissiles",
+					"mValues": [
+						12,
+						15,
+						15,
+						25,
+						20,
+						22,
+						24
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "BaseDamage",
+					"mValues": [
+						0,
+						75,
+						111,
+						240,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "NumTargets",
+					"mValues": [
+						4,
+						4,
+						4,
+						4,
+						4,
+						4,
+						4
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "BaseDamage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{c9f34916}": {
+					"mFormulaParts": [
+						{
+							"mSubparts": [
+								{
+									"mStat": 28,
+									"mCoefficient": 0.004000000189989805,
+									"__type": "StatByCoefficientCalculationPart"
+								},
+								{
+									"mNumber": 2,
+									"__type": "NumberCalculationPart"
+								}
+							],
+							"__type": "SumOfSubPartsCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"mCoefficient": 0.3499999940395355,
+			"mCoefficient2": 0.4000000059604645,
+			"mImgIconName": [
+				"ASSETS/Characters/Kaisa/HUD/Icons2D/Kaisa_Q.dds",
+				"ASSETS/Characters/Kaisa/HUD/Icons2D/Kaisa_Q2.dds"
+			],
+			"mCastTime": 0.20000000298023224,
+			"delayCastOffsetPercent": -0.6000000238418579,
+			"delayTotalTimePercent": -0.8999999761581421,
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"mSpellRevealsChampion": false,
+			"castRangeUseBoundingBoxes": true,
+			"mPingableWhileDisabled": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castRadiusSecondary": [
+				180,
+				180,
+				180,
+				180,
+				180,
+				180,
+				180
+			],
+			"castConeDistance": 100,
+			"castFrame": 14.850000381469727,
+			"missileSpeed": 2500,
+			"mLineWidth": 120,
+			"bHaveHitBone": true,
+			"mHitBoneName": "pelvis",
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"{47e0dff9}": {
+				"15": "Play_sfx_tft9_KaisaSpellTrail_OnMissileCast"
+			},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"{00f7e5bc}": true,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_KaiSa/Spells/TFT9_KaisaBasicAttack3": {
+		"mScriptName": "TFT9_KaisaBasicAttack3",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "KaisaBasicAttack",
+			"mApplyAttackDamage": true,
+			"bHaveHitEffect": true,
+			"mUseAutoattackCastTimeData": {
+				"__type": "UseAutoattackCastTimeData"
+			},
+			"castRange": [
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375,
+				554.0999755859375
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"luaOnMissileUpdateDistanceInterval": 51,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_elbow",
+					"mSpeed": 2000,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{9e8a1f5c}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "Root",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_KaiSa/Spells/TFT9_KaiSaBasicAttack2": {
+		"mScriptName": "TFT9_KaiSaBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "KaisaBasicAttack2",
+			"mApplyAttackDamage": true,
+			"bHaveHitEffect": true,
+			"mUseAutoattackCastTimeData": {
+				"__type": "UseAutoattackCastTimeData"
+			},
+			"castRange": [
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"luaOnMissileUpdateDistanceInterval": 51,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "L_elbow",
+					"mSpeed": 2000,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{9e8a1f5c}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "Root",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_KaiSa/Spells/TFT9_KaiSaQLeftMissile3": {
+		"mScriptName": "TFT9_KaiSaQLeftMissile3",
+		"mSpell": {
+			"flags": 4194308,
+			"mAffectsTypeFlags": 6154,
+			"mEffectAmount": [
+				{
+					"value": [
+						0,
+						80,
+						110,
+						140,
+						170,
+						200,
+						0
+					],
+					"__type": "SpellEffectAmount"
+				},
+				{
+					"value": [
+						0,
+						12,
+						11,
+						10,
+						9,
+						8,
+						0
+					],
+					"__type": "SpellEffectAmount"
+				}
+			],
+			"mCoefficient": 0.6000000238418579,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mIsDisabledWhileDead": false,
+			"bHaveHitEffect": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				210,
+				210,
+				210,
+				210,
+				210,
+				210,
+				210
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 30,
+					"mStartBoneName": "L_Buffbone_Engine",
+					"mTargetBoneName": "C_Buffbone_Glb_Center_Loc",
+					"mSplineInfo": {
+						"mControlPoint1": [
+							-2.281198740005493,
+							0,
+							-0.9219833612442017
+						],
+						"mControlPoint2": [
+							1.094975471496582,
+							0,
+							1.7279348373413086
+						],
+						"__type": "HermiteSplineInfo"
+					},
+					"mTravelTime": 0.6000000238418579,
+					"__type": "FixedTimeSplineMovement"
+				},
+				"heightSolver": {
+					"mAmplitude": 60,
+					"mNumberOfPeriods": 0.800000011920929,
+					"__type": "SinusoidalHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VerticalFacingFaceTarget"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"missileSpeed": 1800,
+			"mMissileEffectKey": "{1bc3abe7}",
+			"mLineWidth": 120,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_Buffbone_Glb_Center_Loc",
+			"{47e0dff9}": {
+				"13": "Play_sfx_tft9_KaisaMissile_OnHit",
+				"15": "Play_sfx_tft9_KaisaMissile_OnCast"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_KaiSa/Spells/TFT9_KaisaQLeftMissile2": {
+		"mScriptName": "TFT9_KaisaQLeftMissile2",
+		"mSpell": {
+			"flags": 4194308,
+			"mAffectsTypeFlags": 6154,
+			"mEffectAmount": [
+				{
+					"value": [
+						0,
+						80,
+						110,
+						140,
+						170,
+						200,
+						0
+					],
+					"__type": "SpellEffectAmount"
+				},
+				{
+					"value": [
+						0,
+						12,
+						11,
+						10,
+						9,
+						8,
+						0
+					],
+					"__type": "SpellEffectAmount"
+				}
+			],
+			"mCoefficient": 0.6000000238418579,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mIsDisabledWhileDead": false,
+			"bHaveHitEffect": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				210,
+				210,
+				210,
+				210,
+				210,
+				210,
+				210
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 25,
+					"mStartBoneName": "L_Buffbone_Engine",
+					"mTargetBoneName": "C_Buffbone_Glb_Center_Loc",
+					"mSplineInfo": {
+						"mControlPoint1": [
+							-3.2108805179595947,
+							0,
+							0.017415683716535568
+						],
+						"mControlPoint2": [
+							-1.9800429344177246,
+							0,
+							0.9974586963653564
+						],
+						"__type": "HermiteSplineInfo"
+					},
+					"mTravelTime": 0.6000000238418579,
+					"__type": "FixedTimeSplineMovement"
+				},
+				"heightSolver": {
+					"mAmplitude": -60,
+					"mNumberOfPeriods": 0.30000001192092896,
+					"__type": "SinusoidalHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VerticalFacingFaceTarget"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"missileSpeed": 1800,
+			"mMissileEffectKey": "{1bc3abe7}",
+			"mLineWidth": 120,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_Buffbone_Glb_Center_Loc",
+			"{47e0dff9}": {
+				"13": "Play_sfx_tft9_KaisaMissile_OnHit",
+				"15": "Play_sfx_tft9_KaisaMissile_OnCast"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_KaiSa/Spells/TFT9_KaiSaQLeftMissile1": {
+		"mScriptName": "TFT9_KaiSaQLeftMissile1",
+		"mSpell": {
+			"flags": 4194308,
+			"mAffectsTypeFlags": 6154,
+			"mEffectAmount": [
+				{
+					"value": [
+						0,
+						80,
+						110,
+						140,
+						170,
+						200,
+						0
+					],
+					"__type": "SpellEffectAmount"
+				},
+				{
+					"value": [
+						0,
+						12,
+						11,
+						10,
+						9,
+						8,
+						0
+					],
+					"__type": "SpellEffectAmount"
+				}
+			],
+			"mCoefficient": 0.6000000238418579,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mIsDisabledWhileDead": false,
+			"bHaveHitEffect": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				210,
+				210,
+				210,
+				210,
+				210,
+				210,
+				210
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mStartBoneName": "L_Buffbone_Engine",
+					"mTargetBoneName": "C_Buffbone_Glb_Center_Loc",
+					"mSplineInfo": {
+						"mControlPoint1": [
+							-2.3690989017486572,
+							-0.49999988079071045,
+							-1.0180011987686157
+						],
+						"mControlPoint2": [
+							0.22167007625102997,
+							-0.9999997615814209,
+							1.7642444372177124
+						],
+						"__type": "HermiteSplineInfo"
+					},
+					"mTravelTime": 0.6000000238418579,
+					"__type": "FixedTimeSplineMovement"
+				},
+				"heightSolver": {
+					"mAmplitude": 50,
+					"mNumberOfPeriods": 0.699999988079071,
+					"__type": "SinusoidalHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VerticalFacingFaceTarget"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"missileSpeed": 1800,
+			"mMissileEffectKey": "{1bc3abe7}",
+			"mLineWidth": 120,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_Buffbone_Glb_Center_Loc",
+			"{47e0dff9}": {
+				"13": "Play_sfx_tft9_KaisaMissile_OnHit",
+				"15": "Play_sfx_tft9_KaisaMissile_OnCast"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_KaiSa/Spells/TFT9_KaiSaCritAttack": {
+		"mScriptName": "TFT9_KaiSaCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "KaisaCritAttack",
+			"bHaveHitEffect": true,
+			"castRange": [
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"luaOnMissileUpdateDistanceInterval": 51,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_elbow",
+					"mSpeed": 2000,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{9e8a1f5c}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "Root",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_KaiSa/CharacterRecords/Root": {
+		"mCharacterName": "TFT9_KaiSa",
+		"baseHP": 850,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 125,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 45,
+		"baseArmor": 35,
+		"baseSpellBlock": 35,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 890,
+		"attackSpeed": 0.800000011920929,
+		"basicAttack": {
+			"mAttackName": "TFT9_KaiSaBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT9_KaiSaBasicAttack2",
+				"__type": "AttackSlotData"
+			},
+			{
+				"mAttackName": "TFT9_KaiSaBasicAttack3",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT9_KaiSaCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT9_KaiSaSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446656,
+		"tier": 4,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{02851b97}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{8faff97c}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{9eb7b8a6}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mInitialMana": 30,
+		"{22f5197d}": 190,
+		"__type": "TFTCharacterRecord"
+	}
+}

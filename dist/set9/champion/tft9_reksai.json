@@ -1,0 +1,411 @@
+{
+	"Characters/TFT9_RekSai/Spells/TFT9_RekSaiSpell": {
+		"mScriptName": "TFT9_RekSaiSpell",
+		"mSpell": {
+			"mAffectsTypeFlags": 4106,
+			"mDataValues": [
+				{
+					"mName": "PercentOfAD",
+					"mValues": [
+						2.5,
+						3.1500000953674316,
+						3.1500000953674316,
+						3.1500000953674316,
+						4.5,
+						5,
+						5.5
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "PercentMaxHealthHeal",
+					"mValues": [
+						0.10000000149011612,
+						0.10000000149011612,
+						0.10000000149011612,
+						0.10000000149011612,
+						0.10000000149011612,
+						0.10000000149011612,
+						0.10000000149011612
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "HealthThreshold",
+					"mValues": [
+						0.699999988079071,
+						0.699999988079071,
+						0.699999988079071,
+						0.699999988079071,
+						0.699999988079071,
+						0.699999988079071,
+						0.699999988079071
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "EmpoweredDamageAmp",
+					"mValues": [
+						0.20000000298023224,
+						0.20000000298023224,
+						0.20000000298023224,
+						0.20000000298023224,
+						0.20000000298023224,
+						0.20000000298023224,
+						0.20000000298023224
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubparts": [
+								{
+									"mStat": 2,
+									"mDataValue": "{11a96dee}",
+									"__type": "StatByNamedDataValueCalculationPart"
+								}
+							],
+							"__type": "SumOfSubPartsCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{728ad1db}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "HealthThreshold",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"mDisplayAsPercent": true,
+					"__type": "GameCalculation"
+				},
+				"HealAmount": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mStat": 11,
+								"mDataValue": "{8b4a02cc}",
+								"__type": "StatByNamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{435fa3bd}": {
+					"{cbcac618}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{8b4a02cc}",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"mDisplayAsPercent": true,
+					"__type": "GameCalculation"
+				},
+				"{dfe8af3d}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{53539a52}",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"mDisplayAsPercent": true,
+					"__type": "GameCalculation"
+				},
+				"{da1a0b4e}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mPart1": {
+								"{88536426}": "TotalDamage",
+								"__type": "{f3cbe7b2}"
+							},
+							"mPart2": {
+								"mSubparts": [
+									{
+										"{88536426}": "{dfe8af3d}",
+										"__type": "{f3cbe7b2}"
+									},
+									{
+										"mNumber": 1,
+										"__type": "NumberCalculationPart"
+									}
+								],
+								"__type": "SumOfSubPartsCalculationPart"
+							},
+							"__type": "ProductOfSubPartsCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{ae88ed52}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubparts": [
+								{
+									"{88536426}": "{dfe8af3d}",
+									"__type": "{f3cbe7b2}"
+								},
+								{
+									"mNumber": 1,
+									"__type": "NumberCalculationPart"
+								}
+							],
+							"__type": "SumOfSubPartsCalculationPart"
+						}
+					],
+					"mDisplayAsPercent": true,
+					"__type": "GameCalculation"
+				}
+			},
+			"mCoefficient": 0.8500000238418579,
+			"mCastTime": 0.5,
+			"delayTotalTimePercent": -0.75,
+			"mAmmoUsed": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"alwaysSnapFacing": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRangeDisplayOverride": [
+				250,
+				250,
+				250,
+				250,
+				250,
+				250,
+				250
+			],
+			"castRadius": [
+				250,
+				250,
+				250,
+				250,
+				250,
+				250,
+				250
+			],
+			"castConeDistance": 100,
+			"castFrame": 8,
+			"missileSpeed": 4000,
+			"{00f7e5bc}": true,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_RekSai/Spells/TFT9_RekSaiCritAttack": {
+		"mScriptName": "TFT9_RekSaiCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.3077000081539154,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castConeDistance": 100,
+			"castFrame": 13,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_RekSai/Spells/TFT9_RekSaiBasicAttack4": {
+		"mScriptName": "TFT9_RekSaiBasicAttack4",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.3077000081539154,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castConeDistance": 100,
+			"castFrame": 11,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_RekSai/Spells/TFT9_RekSaiBasicAttack3": {
+		"mScriptName": "TFT9_RekSaiBasicAttack3",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.3077000081539154,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castConeDistance": 100,
+			"castFrame": 11,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_RekSai/Spells/TFT9_RekSaiBasicAttack2": {
+		"mScriptName": "TFT9_RekSaiBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.3077000081539154,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castConeDistance": 100,
+			"castFrame": 11,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_RekSai/Spells/TFT9_RekSaiCritAttack2": {
+		"mScriptName": "TFT9_RekSaiCritAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.3077000081539154,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castConeDistance": 100,
+			"castFrame": 13,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_RekSai/Spells/TFT9_RekSaiBasicAttack": {
+		"mScriptName": "TFT9_RekSaiBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.3077000081539154,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castConeDistance": 100,
+			"castFrame": 11,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_RekSai/CharacterRecords/Root": {
+		"mCharacterName": "TFT9_RekSai",
+		"baseHP": 800,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 75,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 65,
+		"baseArmor": 40,
+		"baseSpellBlock": 40,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.699999988079071,
+		"basicAttack": {
+			"mAttackName": "TFT9_RekSaiBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT9_RekSaiBasicAttack2",
+				"__type": "AttackSlotData"
+			},
+			{
+				"mAttackName": "TFT9_RekSaiBasicAttack3",
+				"__type": "AttackSlotData"
+			},
+			{
+				"mAttackName": "TFT9_RekSaiBasicAttack4",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT9_RekSaiCritAttack",
+				"__type": "AttackSlotData"
+			},
+			{
+				"mAttackName": "TFT9_RekSaiCritAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT9_RekSaiSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 3,
+		"unitTagsString": "Champion",
+		"flags": 9446664,
+		"tier": 3,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{02851b97}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{48cb72b7}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{53d104ac}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mInitialMana": 30,
+		"__type": "TFTCharacterRecord"
+	}
+}

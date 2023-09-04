@@ -1,0 +1,653 @@
+{
+	"Characters/TFT9_Zeri/CharacterRecords/Root": {
+		"mCharacterName": "TFT9_Zeri",
+		"baseHP": 750,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 50,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 65,
+		"baseArmor": 25,
+		"baseSpellBlock": 25,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 890,
+		"attackSpeed": 0.800000011920929,
+		"basicAttack": {
+			"mAttackName": "TFT9_ZeriQParentBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"critAttacks": [
+			{
+				"mAttackName": "TFT9_ZeriQParentBasicAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT9_ZeriSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"tier": 4,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{b0e4deef}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{dfc0f253}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{34ed6daa}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"{22f5197d}": 160,
+		"__type": "TFTCharacterRecord"
+	},
+	"Characters/TFT9_Zeri/Spells/TFT9_ZeriZap": {
+		"mScriptName": "TFT9_ZeriZap",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 24527,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mTurnSpeedScalar": 2,
+			"castRange": [
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 8,
+			"missileSpeed": 8000,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1,
+			"{00f7e5bc}": true,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Zeri/Spells/TFT9_ZeriRMis": {
+		"mScriptName": "TFT9_ZeriRMis",
+		"mSpell": {
+			"mAffectsTypeFlags": 6826,
+			"mAlternateName": "ZeriQ",
+			"mDataValues": [
+				{
+					"mName": "BaseDamage",
+					"mValues": [
+						-5,
+						5,
+						15,
+						25,
+						35,
+						45,
+						55
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "CDRefund",
+					"mValues": [
+						1.5,
+						1.5,
+						1.5,
+						1.5,
+						1.5,
+						1.5,
+						1.5
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "CDRefundUrf",
+					"mValues": [
+						0.5,
+						0.5,
+						0.5,
+						0.5,
+						0.5,
+						0.5,
+						0.5
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "AttackSpeed",
+					"mValues": [
+						0.30000001192092896,
+						0.44999998807907104,
+						0.6000000238418579,
+						0.75,
+						0.8999999761581421,
+						1.0499999523162842,
+						1.2000000476837158
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"Damage": {
+					"mFormulaParts": [
+						{
+							"mDataValue": "BaseDamage",
+							"__type": "NamedDataValueCalculationPart"
+						},
+						{
+							"mStat": 2,
+							"mCoefficient": 1,
+							"__type": "StatByCoefficientCalculationPart"
+						},
+						{
+							"mCoefficient": 0.15000000596046448,
+							"__type": "StatByCoefficientCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"mCoefficient": 1.100000023841858,
+			"mCoefficient2": 0.15000000596046448,
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.5,
+			"{3d746f1f}": 1,
+			"mAmmoUsed": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"mCantCancelWhileWindingUp": true,
+			"mApplyAttackEffect": true,
+			"mProjectTargetToCastRange": true,
+			"bHaveHitEffect": true,
+			"mTurnSpeedScalar": 1.7000000476837158,
+			"mIgnoreRangeCheck": true,
+			"mUseAutoattackCastTimeData": {
+				"__type": "UseAutoattackCastTimeData"
+			},
+			"castRange": [
+				2000,
+				2000,
+				2000,
+				2000,
+				2000,
+				2000,
+				2000
+			],
+			"castRadius": [
+				210,
+				210,
+				210,
+				210,
+				210,
+				210,
+				210
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 50,
+				"movementComponent": {
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mStartBoneName": "Buffbone_Glb_Weapon_1",
+					"mProjectTargetToCastRange": true,
+					"{99aa2d1f}": true,
+					"mSpeed": 3500,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"__type": "BlendedLinearHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VerticalFacingFaceTarget"
+				},
+				"behaviors": [
+					{
+						"__type": "DestroyOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnHit"
+					},
+					{
+						"mActions": [
+							{
+								"__type": "AttackEvents"
+							},
+							{
+								"{9aa2fc4c}": true,
+								"__type": "Cast"
+							}
+						],
+						"__type": "TriggerOnHit"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 3,
+			"castFrame": 15,
+			"mMissileEffectKey": "{91f05f42}",
+			"mLineWidth": 60,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "{23c21dc2}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_buffbone_Glb_Center_Loc",
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"selectionPriority": 2,
+			"mTargetingTypeData": {
+				"__type": "Location"
+			},
+			"mSpellCooldownOrSealedQueueThreshold": 0,
+			"{00f7e5bc}": true,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Zeri/Spells/TFT9_ZeriQMis": {
+		"mScriptName": "TFT9_ZeriQMis",
+		"mSpell": {
+			"mAffectsTypeFlags": 6826,
+			"mAlternateName": "ZeriQ",
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"{3d746f1f}": 1,
+			"mAmmoUsed": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"mCantCancelWhileWindingUp": true,
+			"mApplyAttackEffect": true,
+			"bHaveHitEffect": true,
+			"mTurnSpeedScalar": 1.7000000476837158,
+			"mIgnoreRangeCheck": true,
+			"mUseAutoattackCastTimeData": {
+				"__type": "UseAutoattackCastTimeData"
+			},
+			"castRange": [
+				2200,
+				2200,
+				2200,
+				2200,
+				2200,
+				2200,
+				2200
+			],
+			"castRadius": [
+				210,
+				210,
+				210,
+				210,
+				210,
+				210,
+				210
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 50,
+				"movementComponent": {
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mStartBoneName": "Buffbone_Glb_Weapon_1",
+					"mProjectTargetToCastRange": true,
+					"{99aa2d1f}": true,
+					"mSpeed": 3500,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"__type": "BlendedLinearHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VerticalFacingFaceTarget"
+				},
+				"behaviors": [
+					{
+						"__type": "DestroyOnMovementComplete"
+					},
+					{
+						"mActions": [
+							{
+								"__type": "AttackEvents"
+							},
+							{
+								"{9aa2fc4c}": true,
+								"__type": "Cast"
+							}
+						],
+						"__type": "TriggerOnHit"
+					},
+					{
+						"__type": "DestroyOnHit"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 3,
+			"castFrame": 15,
+			"mMissileEffectKey": "{cc998841}",
+			"mLineWidth": 60,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "{bfd9c1a5}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_buffbone_Glb_Center_Loc",
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"selectionPriority": 2,
+			"mTargetingTypeData": {
+				"__type": "Location"
+			},
+			"mSpellCooldownOrSealedQueueThreshold": 0,
+			"{00f7e5bc}": true,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Zeri/Spells/TFT9_ZeriQParentBasicAttack": {
+		"mScriptName": "TFT9_ZeriQParentBasicAttack",
+		"mSpell": {
+			"flags": 32,
+			"mAffectsTypeFlags": 16384,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mCantCancelWhileWindingUp": true,
+			"mIgnoreRangeCheck": true,
+			"mMinimapIconDisplayFlag": 0,
+			"castRange": [
+				825,
+				825,
+				825,
+				825,
+				825,
+				825,
+				825
+			],
+			"castRangeDisplayOverride": [
+				1175,
+				1175,
+				1175,
+				1175,
+				1175,
+				1175,
+				1175
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"luaOnMissileUpdateDistanceInterval": 51,
+			"mMissileSpec": {
+				"mMissileWidth": 10,
+				"movementComponent": {
+					"mStartBoneName": "root",
+					"mInferDirectionFromFacingIfNeeded": false,
+					"mUseGroundHeightAtTarget": false,
+					"mTravelTime": 10,
+					"__type": "FixedTimeMovement"
+				},
+				"behaviors": [
+					{
+						"mDelay": 1240,
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 1,
+			"missileSpeed": 2000,
+			"mLineWidth": 10,
+			"mLookAtPolicy": 0,
+			"mHitEffectOrientType": 2,
+			"bHaveHitBone": true,
+			"mHitBoneName": "root",
+			"selectionPriority": 2,
+			"{47e0dff9}": {
+				"12": "Play_sfx_tft9_ZeriBasicAttack_OnCast",
+				"13": "Play_sfx_tft9_ZeriBasicAttack_OnHit"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Zeri/Spells/TFT9_ZeriSpell": {
+		"mScriptName": "TFT9_ZeriSpell",
+		"mSpell": {
+			"mAffectsTypeFlags": 8192,
+			"mAffectsStatusFlags": 32,
+			"mDataValues": [
+				{
+					"mName": "NumBullets",
+					"mValues": [
+						3,
+						3,
+						3,
+						3,
+						3,
+						3,
+						3
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ADRatioPerBullet",
+					"mValues": [
+						0.3400000035762787,
+						0.3400000035762787,
+						0.3400000035762787,
+						0.3400000035762787,
+						0.3400000035762787,
+						0.3400000035762787,
+						0.3400000035762787
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "OverchargeDuration",
+					"mValues": [
+						9,
+						8,
+						8,
+						15,
+						15,
+						9,
+						9
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "OverchargeChainRatio",
+					"mValues": [
+						0.4000000059604645,
+						0.44999998807907104,
+						0.44999998807907104,
+						1,
+						0.4000000059604645,
+						0.4000000059604645,
+						0.4000000059604645
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ExecuteThresholdBase",
+					"mValues": [
+						0.07999999821186066,
+						0.07999999821186066,
+						0.07999999821186066,
+						0.07999999821186066,
+						0.07999999821186066,
+						0.07999999821186066,
+						0.07999999821186066
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "EnemyCount",
+					"mValues": [
+						3,
+						3,
+						3,
+						5,
+						3,
+						3,
+						3
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ExecuteThresholdAP",
+					"mValues": [
+						0.03999999910593033,
+						0.03999999910593033,
+						0.03999999910593033,
+						0.03999999910593033,
+						0.03999999910593033,
+						0.03999999910593033,
+						0.03999999910593033
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"{964dcfb2}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubparts": [
+								{
+									"mStat": 2,
+									"mSubpart": {
+										"mDataValue": "{35d51666}",
+										"__type": "NamedDataValueCalculationPart"
+									},
+									"__type": "StatBySubPartCalculationPart"
+								}
+							],
+							"__type": "SumOfSubPartsCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{f8f787a4}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubparts": [
+								{
+									"mDataValue": "{96f2d0a6}",
+									"__type": "NamedDataValueCalculationPart"
+								},
+								{
+									"mSubpart": {
+										"mDataValue": "{5cfd7c1a}",
+										"__type": "NamedDataValueCalculationPart"
+									},
+									"mRatio": 0.009999999776482582,
+									"__type": "SubPartScaledProportionalToStat"
+								}
+							],
+							"__type": "SumOfSubPartsCalculationPart"
+						}
+					],
+					"mDisplayAsPercent": true,
+					"__type": "GameCalculation"
+				},
+				"{9d82943b}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubparts": [
+								{
+									"mStat": 2,
+									"mDataValue": "{78646acf}",
+									"__type": "StatByNamedDataValueCalculationPart"
+								}
+							],
+							"__type": "SumOfSubPartsCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"mCastTime": 0.5,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	}
+}

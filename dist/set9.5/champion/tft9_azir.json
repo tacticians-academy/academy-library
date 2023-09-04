@@ -1,0 +1,343 @@
+{
+	"Characters/TFT9_Azir/Spells/TFT9_AzirBasicAttack": {
+		"mScriptName": "TFT9_AzirBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 8143,
+			"delayCastOffsetPercent": -0.31220000982284546,
+			"bHaveHitEffect": true,
+			"castRange": [
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 7.5,
+			"missileSpeed": 2600,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"selectionPriority": 1,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Azir/Spells/TFT9_AzirCritAttack": {
+		"mScriptName": "TFT9_AzirCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 8143,
+			"delayCastOffsetPercent": -0.31220000982284546,
+			"bHaveHitEffect": true,
+			"castRange": [
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 6,
+			"missileSpeed": 2800,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Azir/Spells/TFT9_AzirSpell": {
+		"mScriptName": "TFT9_AzirSpell",
+		"mSpell": {
+			"mDataValues": [
+				{
+					"mName": "BaseMagicDamage",
+					"mValues": [
+						35,
+						105,
+						160,
+						550,
+						500,
+						500,
+						500
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "Duration",
+					"mValues": [
+						90,
+						90,
+						90,
+						90,
+						90,
+						90,
+						90
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "MaxSummons",
+					"mValues": [
+						3,
+						3,
+						3,
+						3,
+						3,
+						3,
+						3
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "BonusRatio",
+					"mValues": [
+						0.699999988079071,
+						0.699999988079071,
+						0.699999988079071,
+						0.699999988079071,
+						0.699999988079071,
+						0.699999988079071,
+						0.699999988079071
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"{2e670f8b}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mPart1": {
+								"mSubpart": {
+									"mDataValue": "{5b68a63a}",
+									"__type": "NamedDataValueCalculationPart"
+								},
+								"mRatio": 0.009999999776482582,
+								"__type": "SubPartScaledProportionalToStat"
+							},
+							"mPart2": {
+								"mDataValue": "{d04ae9af}",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"__type": "ProductOfSubPartsCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"ModifiedMagicDamage": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{5b68a63a}",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.75,
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Azir/Spells/TFT9_AzirBasicAttack2": {
+		"mScriptName": "TFT9_AzirBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 8143,
+			"delayCastOffsetPercent": -0.31220000982284546,
+			"bHaveHitEffect": true,
+			"castRange": [
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 7.5,
+			"missileSpeed": 2600,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"selectionPriority": 1,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Azir/Spells/TFT9_AzirSpell_MC": {
+		"mScriptName": "TFT9_AzirSpell_MC",
+		"mSpell": {
+			"mDataValues": [
+				{
+					"mName": "BaseMagicDamage",
+					"mValues": [
+						70,
+						80,
+						120,
+						1000,
+						500,
+						500,
+						500
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "Duration",
+					"mValues": [
+						90,
+						90,
+						90,
+						90,
+						90,
+						90,
+						90
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "MaxSummons",
+					"mValues": [
+						4,
+						4,
+						4,
+						4,
+						4,
+						4,
+						4
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "BonusRatio",
+					"mValues": [
+						0.5,
+						0.5,
+						0.5,
+						0.5,
+						0.5,
+						0.5,
+						0.5
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"ModifiedMagicDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{5b68a63a}",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.75,
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Azir/CharacterRecords/Root": {
+		"mCharacterName": "TFT9_Azir",
+		"baseHP": 750,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 50,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 30,
+		"baseArmor": 30,
+		"baseSpellBlock": 30,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 890,
+		"attackSpeed": 0.75,
+		"spellNames": [
+			"TFT9_AzirSpell",
+			"TFT9_AzirSpell_MC",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"tier": 4,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{cd4e5e4a}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{f184c04b}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{9eb7b8a6}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mInitialMana": 40,
+		"{22f5197d}": 195,
+		"__type": "TFTCharacterRecord"
+	}
+}

@@ -1,0 +1,540 @@
+{
+	"Characters/TFT9_Shen/CharacterRecords/Root": {
+		"mCharacterName": "TFT9_Shen",
+		"baseHP": 1000,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 150,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 60,
+		"baseArmor": 60,
+		"baseSpellBlock": 60,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.6000000238418579,
+		"basicAttack": {
+			"mAttackName": "TFT9_ShenBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT9_ShenBasicAttack3",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT9_ShenCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT9_ShenSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446664,
+		"tier": 4,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{fc11d4ff}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{1b732087}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{d7ded6a9}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{2ccf900f}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mInitialMana": 70,
+		"{22f5197d}": 175,
+		"__type": "TFTCharacterRecord"
+	},
+	"Characters/TFT9_Shen/Spells/TFT9_ShenBasicAttack3": {
+		"mScriptName": "TFT9_ShenBasicAttack3",
+		"mSpell": {
+			"bHaveHitEffect": true,
+			"castFrame": 8,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Shen/Spells/TFT9_ShenSpell": {
+		"mScriptName": "TFT9_ShenSpell",
+		"mSpell": {
+			"mAffectsTypeFlags": 7183,
+			"mAffectsStatusFlags": 160,
+			"mSpellTags": [
+				"Trait_ImmobilizingCCSpell"
+			],
+			"mDataValues": [
+				{
+					"mName": "MagicDamage",
+					"mValues": [
+						0,
+						240,
+						360,
+						2500,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "AllyShieldAmount",
+					"mValues": [
+						0,
+						225,
+						275,
+						1500,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "SelfShieldAmount",
+					"mValues": [
+						0,
+						350,
+						450,
+						2000,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ShieldDuration",
+					"mValues": [
+						4,
+						4,
+						4,
+						4,
+						4,
+						4,
+						4
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ChillDuration",
+					"mValues": [
+						3,
+						3,
+						3,
+						3,
+						3,
+						3,
+						3
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ChillAmount",
+					"mValues": [
+						40,
+						40,
+						40,
+						40,
+						40,
+						40,
+						40
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "TooltipIoniaBonus",
+					"mValues": [
+						9,
+						9,
+						9,
+						9,
+						9,
+						9,
+						9
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"ModifiedDamage": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "MagicDamage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{ee9eae65}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{f82b0e8a}",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{0546af49}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{0ecc6c1a}",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"delayCastOffsetPercent": 0.7999999523162842,
+			"delayTotalTimePercent": -0.550000011920929,
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"mProjectTargetToCastRange": true,
+			"mSpellRevealsChampion": false,
+			"alwaysSnapFacing": true,
+			"useAnimatorFramerate": true,
+			"mIgnoreRangeCheck": true,
+			"mMinimapIconDisplayFlag": 0,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRangeDisplayOverride": [
+				800,
+				800,
+				800,
+				800,
+				800,
+				800,
+				800
+			],
+			"castRadius": [
+				210,
+				210,
+				210,
+				210,
+				210,
+				210,
+				210
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 120,
+				"movementComponent": {
+					"mTargetHeightAugment": 60,
+					"mOffsetInitialTargetHeight": 60,
+					"mStartBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
+					"mTargetBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
+					"mSpeed": 3000,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"mGravity": 300,
+					"__type": "GravityHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"castFrame": 7.5,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{f1378d0f}",
+			"mLineWidth": 120,
+			"bHaveHitBone": true,
+			"selectionPriority": 2,
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"{00f7e5bc}": true,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Shen/Spells/TFT9_ShenCritAttack": {
+		"mScriptName": "TFT9_ShenCritAttack",
+		"mSpell": {
+			"bHaveHitEffect": true,
+			"castFrame": 8,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Shen/Spells/TFT9_ShenBasicAttack": {
+		"mScriptName": "TFT9_ShenBasicAttack",
+		"mSpell": {
+			"bHaveHitEffect": true,
+			"castFrame": 8,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Shen/Spells/TFT9_ShenSpellMissile": {
+		"mScriptName": "TFT9_ShenSpellMissile",
+		"mSpell": {
+			"mAffectsTypeFlags": 7183,
+			"mAffectsStatusFlags": 160,
+			"mSpellTags": [
+				"Trait_ImmobilizingCCSpell"
+			],
+			"mDataValues": [
+				{
+					"mName": "MagicDamage",
+					"mValues": [
+						0,
+						250,
+						450,
+						800,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "AllyShieldAmount",
+					"mValues": [
+						0,
+						250,
+						375,
+						600,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "SelfShieldAmount",
+					"mValues": [
+						0,
+						350,
+						550,
+						800,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ShieldDuration",
+					"mValues": [
+						4,
+						4,
+						4,
+						4,
+						4,
+						4,
+						4
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ChillDuration",
+					"mValues": [
+						3,
+						3,
+						3,
+						3,
+						3,
+						3,
+						3
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"ModifiedDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "MagicDamage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{ee9eae65}": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{f82b0e8a}",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{0546af49}": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{0ecc6c1a}",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"canCastWhileDisabled": true,
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"mProjectTargetToCastRange": true,
+			"mSpellRevealsChampion": false,
+			"alwaysSnapFacing": true,
+			"useAnimatorFramerate": true,
+			"mIgnoreRangeCheck": true,
+			"mMinimapIconDisplayFlag": 0,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRangeDisplayOverride": [
+				800,
+				800,
+				800,
+				800,
+				800,
+				800,
+				800
+			],
+			"castRadius": [
+				210,
+				210,
+				210,
+				210,
+				210,
+				210,
+				210
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 120,
+				"movementComponent": {
+					"mTargetHeightAugment": 60,
+					"mOffsetInitialTargetHeight": 60,
+					"mStartBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
+					"mTargetBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
+					"mSpeed": 3000,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"mGravity": 300,
+					"__type": "GravityHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 7.5,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{f1378d0f}",
+			"mLineWidth": 120,
+			"bHaveHitBone": true,
+			"selectionPriority": 2,
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"{00f7e5bc}": true,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	}
+}

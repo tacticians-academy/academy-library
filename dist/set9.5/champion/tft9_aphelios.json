@@ -1,0 +1,640 @@
+{
+	"Characters/TFT9_Aphelios/Spells/TFT9_ApheliosCrescendumMiniAttack": {
+		"mScriptName": "TFT9_ApheliosCrescendumMiniAttack",
+		"mSpell": {
+			"flags": 132,
+			"mAffectsTypeFlags": 6826,
+			"mAlternateName": "ApheliosCrescendumAttack",
+			"mImgIconName": [
+				"ASSETS/Characters/Aphelios/HUD/Icons2D/Crescendum_U.dds"
+			],
+			"mApplyMaterialOnHitSound": true,
+			"mTurnSpeedScalar": 5,
+			"mIgnoreRangeCheck": true,
+			"castRange": [
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2000,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"__type": "BlendedLinearHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 10,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{61565df8}",
+			"mHitEffectOrientType": 2,
+			"mDimensionBehavior": 1,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Aphelios/Spells/TFT9_ApheliosCrescendumMiniAttackReturn": {
+		"mScriptName": "TFT9_ApheliosCrescendumMiniAttackReturn",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 8192,
+			"mAffectsStatusFlags": 32,
+			"mImgIconName": [
+				"ASSETS/Characters/Aphelios/HUD/Icons2D/Crescendum_U.dds"
+			],
+			"delayCastOffsetPercent": -0.23799997568130493,
+			"mChannelIsInterruptedByAttacking": false,
+			"mIgnoreRangeCheck": true,
+			"castRange": [
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mStartBoneName": "C_Buffbone_Glb_Chest_Loc",
+					"mTargetBoneName": "R_Hand",
+					"mSpeed": 1200,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 3,
+			"castFrame": 7.32106876373291,
+			"missileSpeed": 1000,
+			"mMissileEffectKey": "{3f9401df}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"mDimensionBehavior": 1,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Aphelios/Spells/TFT9_ApheliosCrescendumOrbitMissile": {
+		"mScriptName": "TFT9_ApheliosCrescendumOrbitMissile",
+		"mSpell": {
+			"flags": 4194308,
+			"mAffectsTypeFlags": 14346,
+			"mAffectsStatusFlags": 32,
+			"cannotBeSuppressed": true,
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"{7e3432a0}": true,
+			"mChannelIsInterruptedByAttacking": false,
+			"mCanMoveWhileChanneling": true,
+			"mDisableCastBar": true,
+			"mNoWinddownIfCancelled": true,
+			"mIgnoreAnimContinueUntilCastFrame": true,
+			"castRange": [
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500
+			],
+			"luaOnMissileUpdateDistanceInterval": 51,
+			"mMissileSpec": {
+				"mMissileWidth": 50,
+				"movementComponent": {
+					"{aa44f99e}": true,
+					"mTargetHeightAugment": 50,
+					"mOffsetInitialTargetHeight": 50,
+					"mStartBoneName": "",
+					"mAngularVelocity": 2,
+					"__type": "SyncCircleMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnHit"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 7,
+			"mTargetingTypeData": {
+				"__type": "TargetOrLocation"
+			},
+			"mDimensionBehavior": 1,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Aphelios/Spells/TFT9_ApheliosCrescendumMiniGenerator": {
+		"mScriptName": "TFT9_ApheliosCrescendumMiniGenerator",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 8192,
+			"mAffectsStatusFlags": 32,
+			"mImgIconName": [
+				"ASSETS/Characters/Aphelios/HUD/Icons2D/Crescendum_U.dds"
+			],
+			"delayCastOffsetPercent": -0.23799997568130493,
+			"mChannelIsInterruptedByAttacking": false,
+			"mIgnoreRangeCheck": true,
+			"castRange": [
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mStartBoneName": "C_Buffbone_Glb_Chest_Loc",
+					"mTargetBoneName": "R_Hand",
+					"mSpeed": 1200,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnHit"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 3,
+			"castFrame": 7.32106876373291,
+			"missileSpeed": 1000,
+			"mMissileEffectKey": "{3f9401df}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"mDimensionBehavior": 1,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Aphelios/Spells/TFT9_ApheliosSpell": {
+		"mScriptName": "TFT9_ApheliosSpell",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mAlternateName": "TFT9_ApheliosR",
+			"mDataValues": [
+				{
+					"mName": "BlastPercentAD",
+					"mValues": [
+						1.7999999523162842,
+						2,
+						2,
+						5,
+						2.200000047683716,
+						2.299999952316284,
+						2.4000000953674316
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ChakramDuration",
+					"mValues": [
+						7,
+						7,
+						7,
+						7,
+						7,
+						7,
+						7
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ChakramPercentAD",
+					"mValues": [
+						0.10000000149011612,
+						0.05000000074505806,
+						0.05000000074505806,
+						0.15000000596046448,
+						0.10000000149011612,
+						0.10000000149011612,
+						0.10000000149011612
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ChakramHealing",
+					"mValues": [
+						0.75,
+						0.75,
+						0.75,
+						0.75,
+						0.75,
+						0.75,
+						0.75
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "BaseChakramNumber",
+					"mValues": [
+						3,
+						3,
+						3,
+						3,
+						3,
+						3,
+						3
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "BlastSize",
+					"mValues": [
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "MaxChakrams",
+					"mValues": [
+						10,
+						10,
+						12,
+						20,
+						10,
+						10,
+						10
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"{8a2f58bc}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mStat": 2,
+							"mSubpart": {
+								"mDataValue": "{bdff4233}",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"__type": "StatBySubPartCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{c3c7988f}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mStat": 2,
+							"mSubpart": {
+								"mDataValue": "{337d737e}",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"__type": "StatBySubPartCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{71cd7e73}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{854d054c}",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"mDisplayAsPercent": true,
+					"__type": "GameCalculation"
+				}
+			},
+			"mCastTime": 0.5,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mAmmoUsed": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"mSpellRevealsChampion": false,
+			"bIsToggleSpell": true,
+			"mDoNotNeedToFaceTarget": true,
+			"mIgnoreRangeCheck": true,
+			"castRange": [
+				40000,
+				40000,
+				40000,
+				40000,
+				40000,
+				40000,
+				40000
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 125,
+				"movementComponent": {
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mStartBoneName": "",
+					"mSpeed": 2500,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"__type": "GravityHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VerticalFacingFaceTarget"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 3,
+			"castFrame": 12,
+			"missileSpeed": 1000,
+			"mMissileEffectKey": "{a520cd81}",
+			"mLineWidth": 125,
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"mTargetingTypeData": {
+				"__type": "TargetOrLocation"
+			},
+			"{00f7e5bc}": true,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Aphelios/Spells/TFT9_ApheliosCrescendumAttackReturn": {
+		"mScriptName": "TFT9_ApheliosCrescendumAttackReturn",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 8192,
+			"mAffectsStatusFlags": 32,
+			"mImgIconName": [
+				"ASSETS/Characters/Aphelios/HUD/Icons2D/Crescendum_U.dds"
+			],
+			"delayCastOffsetPercent": -0.23799997568130493,
+			"canCastOrQueueWhileCasting": true,
+			"mChannelIsInterruptedByAttacking": false,
+			"mIgnoreRangeCheck": true,
+			"castRange": [
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mStartBoneName": "C_Buffbone_Glb_Chest_Loc",
+					"mTargetBoneName": "R_Hand",
+					"mSpeed": 1200,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnHit"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 3,
+			"castFrame": 7.32106876373291,
+			"missileSpeed": 1000,
+			"mMissileEffectKey": "{7d460ab5}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"mDimensionBehavior": 1,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Aphelios/Spells/TFT9_ApheliosCrescendumAttack": {
+		"mScriptName": "TFT9_ApheliosCrescendumAttack",
+		"mSpell": {
+			"flags": 128,
+			"mAffectsTypeFlags": 6826,
+			"mAlternateName": "ApheliosCrescendumAttack",
+			"mImgIconName": [
+				"ASSETS/Characters/Aphelios/HUD/Icons2D/Crescendum_U.dds"
+			],
+			"mApplyMaterialOnHitSound": true,
+			"mTurnSpeedScalar": 5,
+			"mIgnoreRangeCheck": true,
+			"castRange": [
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2000,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"__type": "BlendedLinearHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 10,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{9bcb09c2}",
+			"mHitEffectOrientType": 2,
+			"mDimensionBehavior": 1,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Aphelios/CharacterRecords/Root": {
+		"mCharacterName": "TFT9_Aphelios",
+		"baseHP": 750,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 60,
+		"baseArmor": 25,
+		"baseSpellBlock": 25,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 890,
+		"attackSpeed": 0.75,
+		"basicAttack": {
+			"mAttackName": "TFT9_ApheliosCrescendumAttack",
+			"__type": "AttackSlotData"
+		},
+		"critAttacks": [
+			{
+				"mAttackName": "TFT9_ApheliosCrescendumAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT9_ApheliosSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"tier": 4,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{ea95b664}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{dfc0f253}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{34ed6daa}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mInitialMana": 50,
+		"{22f5197d}": 160,
+		"__type": "TFTCharacterRecord"
+	}
+}

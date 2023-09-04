@@ -1,0 +1,39 @@
+{
+	"{ba007f0a}": {
+		"mCharacterName": "TFT9_VoidEgg",
+		"baseHP": 1200,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 7,
+			"arBase": 2,
+			"arBaseStaticRegen": 0,
+			"arIncrements": 1,
+			"arMaxSegments": 2,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 300,
+		"baseArmor": 200,
+		"baseSpellBlock": 200,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 1716,
+		"attackSpeed": 0.699999988079071,
+		"spellNames": [
+			"TFT9_BaronNashorAcidBall",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 8398208,
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"{1f16e793}": true,
+		"{7cbc4762}": 1,
+		"__type": "TFTCharacterRecord"
+	}
+}

@@ -1,0 +1,40 @@
+{
+	"Characters/TFT9_VoidTotem/CharacterRecords/Root": {
+		"mCharacterName": "TFT9_VoidTotem",
+		"baseHP": 1,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 0,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 0,
+		"baseArmor": 0,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 1,
+		"spellNames": [
+			"TFT9_VoidTotemSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"__type": "TFTCharacterRecord"
+	},
+	"Characters/TFT9_VoidTotem/Spells/TFT9_VoidTotemSpell": {
+		"mScriptName": "TFT9_VoidTotemSpell",
+		"mSpell": {
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	}
+}

@@ -1,0 +1,229 @@
+{
+	"Characters/TFT9_ChoGath/Spells/TFT9_ChoGathCritAttack": {
+		"mScriptName": "TFT9_ChoGathCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.3077000081539154,
+			"bHaveHitEffect": true,
+			"castConeDistance": 100,
+			"castFrame": 14.125,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_ChoGath/Spells/TFT9_ChoGathBasicAttack2": {
+		"mScriptName": "TFT9_ChoGathBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "ChogathBasicAttack2",
+			"delayCastOffsetPercent": -0.3077000081539154,
+			"bHaveHitEffect": true,
+			"castConeDistance": 100,
+			"castFrame": 14.25,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_ChoGath/Spells/TFT9_ChoGathBasicAttack": {
+		"mScriptName": "TFT9_ChoGathBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "ChogathBasicAttack",
+			"delayCastOffsetPercent": -0.3077000081539154,
+			"bHaveHitEffect": true,
+			"castConeDistance": 100,
+			"castFrame": 14,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_ChoGath/Spells/TFT9_ChoGathSpell": {
+		"mScriptName": "TFT9_ChoGathSpell",
+		"mSpell": {
+			"mAffectsTypeFlags": 8192,
+			"mDataValues": [
+				{
+					"mName": "PercentMaximumHealthDamage",
+					"mValues": [
+						0.14000000059604645,
+						0.14000000059604645,
+						0.14000000059604645,
+						0.14000000059604645,
+						0.14000000059604645,
+						0.14000000059604645,
+						0.14000000059604645
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "BonusDamage",
+					"mValues": [
+						140,
+						250,
+						335,
+						450,
+						380,
+						440,
+						500
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "BonusHealthOnKill",
+					"mValues": [
+						25,
+						30,
+						35,
+						40,
+						45,
+						50,
+						55
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubparts": [
+								{
+									"mSubpart": {
+										"mDataValue": "BonusDamage",
+										"__type": "NamedDataValueCalculationPart"
+									},
+									"mRatio": 0.009999999776482582,
+									"__type": "SubPartScaledProportionalToStat"
+								},
+								{
+									"mStat": 11,
+									"mDataValue": "{7a01df57}",
+									"__type": "StatByNamedDataValueCalculationPart"
+								}
+							],
+							"__type": "SumOfSubPartsCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"ModifiedBonusDamage": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "BonusDamage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"mCastTime": 0.5299999713897705,
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"bIsToggleSpell": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castConeDistance": 100,
+			"castFrame": 10,
+			"selectionPriority": 2,
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"{00f7e5bc}": true,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_ChoGath/CharacterRecords/Root": {
+		"mCharacterName": "TFT9_ChoGath",
+		"baseHP": 700,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 90,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 50,
+		"baseArmor": 30,
+		"baseSpellBlock": 30,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.5,
+		"basicAttack": {
+			"mAttackName": "TFT9_ChoGathBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT9_ChoGathBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT9_ChoGathCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT9_ChoGathSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 4,
+		"unitTagsString": "Champion",
+		"flags": 9446664,
+		"tier": 1,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{02851b97}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{48cb72b7}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{2ccf900f}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mInitialMana": 30,
+		"{22f5197d}": 140,
+		"__type": "TFTCharacterRecord"
+	}
+}

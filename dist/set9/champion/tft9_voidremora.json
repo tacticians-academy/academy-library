@@ -1,0 +1,184 @@
+{
+	"Characters/TFT9_VoidRemora/CharacterRecords/Root": {
+		"mCharacterName": "TFT9_VoidRemora",
+		"baseHP": 400,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 55,
+		"baseArmor": 40,
+		"baseSpellBlock": 40,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.699999988079071,
+		"basicAttack": {
+			"mAttackName": "TFT9_VoidRemoraBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT9_VoidRemoraBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT9_VoidRemoraBasicAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT9_VoidRemoraSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446656,
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mInitialMana": 50,
+		"__type": "TFTCharacterRecord"
+	},
+	"Characters/TFT9_VoidRemora/Spells/TFT9_VoidRemoraSpell": {
+		"mScriptName": "TFT9_VoidRemoraSpell",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mDataValues": [
+				{
+					"mName": "Duration",
+					"mValues": [
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "Shield",
+					"mValues": [
+						200,
+						200,
+						200,
+						200,
+						200,
+						200,
+						200
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "Damage",
+					"mValues": [
+						125,
+						125,
+						125,
+						125,
+						125,
+						125,
+						125
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"ModifiedShield": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Shield",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"ModifiedDamage": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"delayCastOffsetPercent": -0.19999998807907104,
+			"delayTotalTimePercent": 0.20000004768371582,
+			"mAmmoUsed": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"mApplyMaterialOnHitSound": true,
+			"castConeDistance": 100,
+			"castFrame": 24,
+			"mHitEffectOrientType": 2,
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_VoidRemora/Spells/TFT9_VoidRemoraBasicAttack": {
+		"mScriptName": "TFT9_VoidRemoraBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castConeDistance": 100,
+			"castFrame": 11,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_VoidRemora/Spells/TFT9_VoidRemoraBasicAttack2": {
+		"mScriptName": "TFT9_VoidRemoraBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castConeDistance": 100,
+			"castFrame": 11,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	}
+}

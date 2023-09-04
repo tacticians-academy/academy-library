@@ -1,0 +1,421 @@
+{
+	"{749b5a48}": {
+		"mScriptName": "TFT8_TaliyahRMis",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"mCastTime": 0.25,
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.5,
+			"useAnimatorFramerate": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				2000,
+				2000,
+				2000,
+				2000,
+				2000,
+				2000,
+				2000
+			],
+			"luaOnMissileUpdateDistanceInterval": 200,
+			"mMissileSpec": {
+				"mMissileWidth": 250,
+				"movementComponent": {
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mTargetBoneName": "C_buffbone_Glb_Center_Loc",
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 2500,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"__type": "BlendedLinearHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VerticalFacingFaceTarget"
+				},
+				"behaviors": [
+					{
+						"__type": "DestroyOnMovementComplete"
+					},
+					{
+						"__type": "CastOnHit"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 3,
+			"mLineWidth": 60,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_buffbone_Glb_Center_Loc",
+			"mTargetingTypeData": {
+				"__type": "Location"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{7d179f3d}": {
+		"mScriptName": "TFT8_TaliyahBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 7375,
+			"mCastTime": 0.25,
+			"bHaveHitEffect": true,
+			"castRange": [
+				300,
+				300,
+				300,
+				300,
+				300,
+				300,
+				300
+			],
+			"mMissileSpec": {
+				"mMissileWidth": 60,
+				"movementComponent": {
+					"mTargetHeightAugment": 20,
+					"mOffsetInitialTargetHeight": 20,
+					"mStartBoneName": "Buffbone_glb_ground_loc",
+					"mSpeed": 2100,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"mHeightOffset": 20,
+					"__type": "FollowTerrainHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 7,
+			"missileSpeed": 2100,
+			"mMissileEffectKey": "{fecaa3a6}",
+			"mLineWidth": 60,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "BUFFBONE_GLB_GROUND_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{adc59ddd}": {
+		"mScriptName": "TFT8_TaliyahBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 7375,
+			"mCastTime": 0.25,
+			"bHaveHitEffect": true,
+			"castRange": [
+				300,
+				300,
+				300,
+				300,
+				300,
+				300,
+				300
+			],
+			"mMissileSpec": {
+				"mMissileWidth": 60,
+				"movementComponent": {
+					"mTargetHeightAugment": 20,
+					"mOffsetInitialTargetHeight": 20,
+					"mStartBoneName": "Buffbone_glb_ground_loc",
+					"mSpeed": 2100,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"mHeightOffset": 20,
+					"__type": "FollowTerrainHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 7,
+			"missileSpeed": 2100,
+			"mMissileEffectKey": "{fecaa3a6}",
+			"mLineWidth": 60,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "BUFFBONE_GLB_GROUND_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{cac4659d}": {
+		"mScriptName": "TFT8_TaliyahCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 7375,
+			"mAlternateName": "TaliyahCritAttack",
+			"delayCastOffsetPercent": -0.34850001335144043,
+			"bHaveHitEffect": true,
+			"castRange": [
+				300,
+				300,
+				300,
+				300,
+				300,
+				300,
+				300
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 20,
+					"mOffsetInitialTargetHeight": 20,
+					"mStartBoneName": "Buffbone_Glb_Ground_Loc",
+					"mSpeed": 2200,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"mHeightOffset": 20,
+					"__type": "FollowTerrainHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 7.75,
+			"missileSpeed": 2200,
+			"mMissileEffectKey": "{fecaa3a6}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "Buffbone_Glb_Ground_Loc",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{cbff59e1}": {
+		"mScriptName": "TFT8_TaliyahSpell",
+		"mSpell": {
+			"mAffectsTypeFlags": 11269,
+			"mAffectsStatusFlags": 32,
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						0,
+						75,
+						115,
+						275,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ExplosionDamage",
+					"mValues": [
+						200,
+						225,
+						335,
+						999,
+						200,
+						200,
+						200
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "WallExplosionDelay",
+					"mValues": [
+						1,
+						1,
+						1,
+						1,
+						1,
+						1,
+						1
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"ModifiedDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{51537910}": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "ExplosionDamage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"delayCastOffsetPercent": 0.2999999523162842,
+			"delayTotalTimePercent": -0.5,
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				20,
+				20,
+				20,
+				20,
+				20,
+				20,
+				20
+			],
+			"castFrame": 32,
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{ccd76fa6}": {
+		"mCharacterName": "TFT8_Taliyah",
+		"baseHP": 700,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 90,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 45,
+		"baseArmor": 30,
+		"baseSpellBlock": 30,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 890,
+		"attackSpeed": 0.75,
+		"basicAttack": {
+			"mAttackProbability": 0.5,
+			"mAttackName": "TFT8_TaliyahBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 0.5,
+				"mAttackName": "TFT8_TaliyahBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT8_TaliyahCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT8_TaliyahSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"tier": 4,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{a010ddd2}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{f95c4af3}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"{22f5197d}": 155,
+		"__type": "TFTCharacterRecord"
+	}
+}

@@ -1,0 +1,801 @@
+{
+	"Characters/TFT9_Ahri/Spells/TFT9_AhriBasicAttack": {
+		"mScriptName": "TFT9_AhriBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.23579999804496765,
+			"mApplyAttackDamage": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				550,
+				550,
+				550,
+				550,
+				550,
+				550,
+				550
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mStartBoneName": "R_hand",
+					"mTargetBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+					"mSpeed": 1750,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 9,
+			"missileSpeed": 1750,
+			"mMissileEffectKey": "{8aa881af}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Ahri/Spells/TFT9_AhriSpell": {
+		"mScriptName": "TFT9_AhriSpell",
+		"mSpell": {
+			"mAffectsTypeFlags": 8192,
+			"mAffectsStatusFlags": 32,
+			"mDataValues": [
+				{
+					"mName": "MagicDamage",
+					"mValues": [
+						0,
+						230,
+						350,
+						1888,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "EssenceDamage",
+					"mValues": [
+						0,
+						90,
+						135,
+						1000,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "NumCastsToBoom",
+					"mValues": [
+						2,
+						2,
+						2,
+						0,
+						2,
+						2,
+						2
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "EssenceStolenMultiplier",
+					"mValues": [
+						0.33000001311302185,
+						0.33000001311302185,
+						0.33000001311302185,
+						0.33000001311302185,
+						0.33000001311302185,
+						0.33000001311302185,
+						0.33000001311302185
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "TooltipIoniaBonus",
+					"mValues": [
+						3,
+						3,
+						3,
+						3,
+						3,
+						3,
+						3
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "TooltipReave",
+					"mValues": [
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"{c84577bb}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubparts": [
+								{
+									"mDataValue": "{7b78fab7}",
+									"__type": "NamedDataValueCalculationPart"
+								},
+								{
+									"mNumber": 1,
+									"__type": "NumberCalculationPart"
+								}
+							],
+							"__type": "SumOfSubPartsCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{270780d1}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{5a596368}",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"ModifiedMagicDamage": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "MagicDamage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -0.25,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Ahri/Spells/TFT9_AhriDrainMisR1": {
+		"mScriptName": "TFT9_AhriDrainMisR1",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 8143,
+			"delayCastOffsetPercent": -0.3399999737739563,
+			"delayTotalTimePercent": -0.19999998807907104,
+			"canCastOrQueueWhileCasting": true,
+			"castRange": [
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mStartBoneName": "C_Buffbone_Glb_Overhead_Loc",
+					"mTargetBoneName": "BUFFBONE_GLB_WEAPON_1",
+					"mSplineInfo": {
+						"mUseMissilePositionAsOrigin": true,
+						"mControlPoint1": [
+							0.9696457982063293,
+							0,
+							-0.11189576238393784
+						],
+						"mControlPoint2": [
+							-0.58301842212677,
+							0,
+							1.7050808668136597
+						],
+						"__type": "HermiteSplineInfo"
+					},
+					"mSpeed": 800,
+					"__type": "FixedSpeedSplineMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 1600,
+			"mMissileEffectKey": "{2ffc2092}",
+			"mHitEffectOrientType": 2,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Ahri/Spells/TFT9_AhriDrainMisR2": {
+		"mScriptName": "TFT9_AhriDrainMisR2",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 8143,
+			"delayCastOffsetPercent": -0.3399999737739563,
+			"delayTotalTimePercent": -0.19999998807907104,
+			"canCastOrQueueWhileCasting": true,
+			"castRange": [
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mStartBoneName": "C_Buffbone_Glb_Overhead_Loc",
+					"mTargetBoneName": "BUFFBONE_GLB_WEAPON_1",
+					"mSplineInfo": {
+						"mUseMissilePositionAsOrigin": true,
+						"mControlPoint1": [
+							2.1649701595306396,
+							0,
+							0.024578353390097618
+						],
+						"mControlPoint2": [
+							-1.9926342964172363,
+							0,
+							0.9418157935142517
+						],
+						"__type": "HermiteSplineInfo"
+					},
+					"mSpeed": 950,
+					"__type": "FixedSpeedSplineMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 1600,
+			"mMissileEffectKey": "{2ffc2092}",
+			"mHitEffectOrientType": 2,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Ahri/Spells/TFT9_AhriDrainMisC": {
+		"mScriptName": "TFT9_AhriDrainMisC",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 8143,
+			"delayCastOffsetPercent": -0.3399999737739563,
+			"delayTotalTimePercent": -0.19999998807907104,
+			"canCastOrQueueWhileCasting": true,
+			"castRange": [
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000
+			],
+			"castConeDistance": 100,
+			"luaOnMissileUpdateDistanceInterval": 51,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "C_Buffbone_Glb_Overhead_Loc",
+					"mTargetBoneName": "BUFFBONE_GLB_WEAPON_1",
+					"mSplineInfo": {
+						"mUseMissilePositionAsOrigin": true,
+						"mControlPoint1": [
+							-3.3782570362091064,
+							0,
+							0.531468391418457
+						],
+						"mControlPoint2": [
+							-3.263793468475342,
+							0,
+							1.3170974254608154
+						],
+						"__type": "HermiteSplineInfo"
+					},
+					"mSpeed": 1200,
+					"__type": "FixedSpeedSplineMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 1600,
+			"mMissileEffectKey": "{2ffc2092}",
+			"mHitEffectOrientType": 2,
+			"{47e0dff9}": {
+				"13": "Play_sfx_tft9_AhriDrain_OnHit",
+				"16": "Play_sfx_tft9_AhriDrain_OnMissileLaunch"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Ahri/Spells/TFT9_AhriWCircleMissile": {
+		"mScriptName": "TFT9_AhriWCircleMissile",
+		"mSpell": {
+			"flags": 4,
+			"mAlternateName": "AhriFoxFire",
+			"mEffectAmount": [
+				{
+					"value": [
+						40,
+						90,
+						140,
+						190,
+						240,
+						290,
+						340
+					],
+					"__type": "SpellEffectAmount"
+				}
+			],
+			"mCoefficient": 0.699999988079071,
+			"mImgIconName": [
+				"Annie_Disintegrate.dds"
+			],
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.5,
+			"mCantCancelWhileWindingUp": true,
+			"castRange": [
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000
+			],
+			"castRadius": [
+				710,
+				710,
+				710,
+				710,
+				710,
+				710,
+				710
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mStartBoneName": "chest",
+					"mAngularVelocity": -2.6500000953674316,
+					"mLinearVelocity": 900,
+					"mLifetime": 60,
+					"__type": "CircleMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 4,
+			"missileSpeed": 900,
+			"mMissileEffectKey": "{3b8a74bb}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "spine",
+			"selectionPriority": 1,
+			"{47e0dff9}": {
+				"12": "tft9_AhriW_OnCast"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Ahri/Spells/TFT9_AhriBasicAttack2": {
+		"mScriptName": "TFT9_AhriBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.23579999804496765,
+			"mApplyAttackDamage": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				550,
+				550,
+				550,
+				550,
+				550,
+				550,
+				550
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mStartBoneName": "R_hand",
+					"mTargetBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+					"mSpeed": 1750,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 9,
+			"missileSpeed": 1750,
+			"mMissileEffectKey": "{8aa881af}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Ahri/Spells/TFT9_AhriSpell_BigBoom": {
+		"mScriptName": "TFT9_AhriSpell_BigBoom",
+		"mSpell": {
+			"delayCastOffsetPercent": 2,
+			"delayTotalTimePercent": -0.10000002384185791,
+			"castFrame": 70,
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"{47e0dff9}": {
+				"13": "Play_sfx_tft9_AhriBigBoom_OnHit"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Ahri/Spells/TFT9_AhriDrainMisL2": {
+		"mScriptName": "TFT9_AhriDrainMisL2",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 8143,
+			"delayCastOffsetPercent": -0.3399999737739563,
+			"delayTotalTimePercent": -0.19999998807907104,
+			"canCastOrQueueWhileCasting": true,
+			"castRange": [
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mStartBoneName": "C_Buffbone_Glb_Overhead_Loc",
+					"mTargetBoneName": "BUFFBONE_GLB_WEAPON_1",
+					"mSplineInfo": {
+						"mUseMissilePositionAsOrigin": true,
+						"mControlPoint1": [
+							-2.1649701595306396,
+							0,
+							0.024578353390097618
+						],
+						"mControlPoint2": [
+							1.9926342964172363,
+							0,
+							0.9418157935142517
+						],
+						"__type": "HermiteSplineInfo"
+					},
+					"mSpeed": 1450,
+					"__type": "FixedSpeedSplineMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 1600,
+			"mMissileEffectKey": "{2ffc2092}",
+			"mHitEffectOrientType": 2,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Ahri/Spells/TFT9_AhriDrainMisL1": {
+		"mScriptName": "TFT9_AhriDrainMisL1",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 8143,
+			"delayCastOffsetPercent": -0.3399999737739563,
+			"delayTotalTimePercent": -0.19999998807907104,
+			"canCastOrQueueWhileCasting": true,
+			"castRange": [
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "C_Buffbone_Glb_Overhead_Loc",
+					"mTargetBoneName": "BUFFBONE_GLB_WEAPON_1",
+					"mSplineInfo": {
+						"mUseMissilePositionAsOrigin": true,
+						"mControlPoint1": [
+							-0.8262099623680115,
+							0,
+							-0.008580954745411873
+						],
+						"mControlPoint2": [
+							0.7605614066123962,
+							0,
+							1.6975107192993164
+						],
+						"__type": "HermiteSplineInfo"
+					},
+					"mSpeed": 600,
+					"__type": "FixedSpeedSplineMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 1600,
+			"mMissileEffectKey": "{2ffc2092}",
+			"mHitEffectOrientType": 2,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Ahri/Spells/TFT9_AhriCritAttack": {
+		"mScriptName": "TFT9_AhriCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.23579999804496765,
+			"mApplyAttackDamage": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				550,
+				550,
+				550,
+				550,
+				550,
+				550,
+				550
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mStartBoneName": "R_hand",
+					"mTargetBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+					"mSpeed": 1750,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 9,
+			"missileSpeed": 1750,
+			"mMissileEffectKey": "{8aa881af}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Ahri/CharacterRecords/Root": {
+		"mCharacterName": "TFT9_Ahri",
+		"baseHP": 850,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 50,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 50,
+		"baseArmor": 40,
+		"baseSpellBlock": 40,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 890,
+		"attackSpeed": 0.8500000238418579,
+		"basicAttack": {
+			"mAttackName": "TFT9_AhriBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT9_AhriBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT9_AhriCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT9_AhriSpell",
+			"",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"TFT9_AhriSpell_BigBoom",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446656,
+		"tier": 5,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{fc11d4ff}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{01fcdb08}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{32cdc033}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"{22f5197d}": 200,
+		"__type": "TFTCharacterRecord"
+	}
+}

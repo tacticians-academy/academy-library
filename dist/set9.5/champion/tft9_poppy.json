@@ -1,0 +1,294 @@
+{
+	"Characters/TFT9_Poppy/Spells/TFT9_PoppyCritAttack": {
+		"mScriptName": "TFT9_PoppyCritAttack",
+		"mSpell": {
+			"bHaveHitEffect": true,
+			"castFrame": 15,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
+			"{47e0dff9}": {
+				"12": "Play_sfx_tft9_PoppyCritAttack_OnCast",
+				"13": "Play_sfx_tft9_PoppyCritAttack_OnHit"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Poppy/Spells/TFT9_PoppyBasicAttack": {
+		"mScriptName": "TFT9_PoppyBasicAttack",
+		"mSpell": {
+			"bHaveHitEffect": true,
+			"castFrame": 15,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
+			"{47e0dff9}": {
+				"12": "Play_sfx_tft9_PoppyBasicAttack_OnCast",
+				"13": "Play_sfx_tft9_PoppyBasicAttack_OnHit"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Poppy/Spells/TFT9_PoppySpell": {
+		"mScriptName": "TFT9_PoppySpell",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"mDataValues": [
+				{
+					"mName": "ShieldAmount",
+					"mValues": [
+						120,
+						250,
+						325,
+						400,
+						350,
+						400,
+						400
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ShieldDuration",
+					"mValues": [
+						4,
+						4,
+						4,
+						4,
+						4,
+						4,
+						4
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "StunDuration",
+					"mValues": [
+						0.25,
+						0.25,
+						0.25,
+						0.25,
+						0.25,
+						0.25,
+						0.25
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "CollisionDamagePercent",
+					"mValues": [
+						15,
+						15,
+						15,
+						15,
+						15,
+						15,
+						15
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "HexRadius",
+					"mValues": [
+						0,
+						0,
+						0,
+						0,
+						1,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "Damage",
+					"mValues": [
+						0,
+						140,
+						210,
+						315,
+						315,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "PercentHealthDamage",
+					"mValues": [
+						33,
+						33,
+						33,
+						33,
+						33,
+						33,
+						33
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"ModifiedShieldAmount": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "ShieldAmount",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"ModifiedMagicDamage": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				710,
+				710,
+				710,
+				710,
+				710,
+				710,
+				710
+			],
+			"castFrame": 8.5,
+			"missileSpeed": 0,
+			"mFloatVarsDecimals": [
+				0,
+				1,
+				0,
+				2,
+				0,
+				1,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"selectionPriority": 1,
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Poppy/Spells/TFT9_PoppyBasicAttack2": {
+		"mScriptName": "TFT9_PoppyBasicAttack2",
+		"mSpell": {
+			"bHaveHitEffect": true,
+			"castFrame": 15,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
+			"{47e0dff9}": {
+				"12": "Play_sfx_tft9_PoppyBasicAttack_OnCast",
+				"13": "Play_sfx_tft9_PoppyBasicAttack_OnHit"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Poppy/CharacterRecords/Root": {
+		"mCharacterName": "TFT9_Poppy",
+		"baseHP": 700,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 90,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 55,
+		"baseArmor": 40,
+		"baseSpellBlock": 40,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.550000011920929,
+		"basicAttack": {
+			"mAttackName": "TFT9_PoppyBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT9_PoppyBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT9_PoppyCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT9_PoppySpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446664,
+		"tier": 1,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{4afab417}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{1b732087}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{2ccf900f}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mInitialMana": 30,
+		"{22f5197d}": 150,
+		"__type": "TFTCharacterRecord"
+	}
+}

@@ -1,0 +1,131 @@
+{
+	"{44c79d05}": {
+		"mScriptName": "TFT9_AscendedSunDiscBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 4286,
+			"mAlternateName": "ChaosTurretWormBasicAttack",
+			"bHaveHitEffect": true,
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "joint2",
+					"mSpeed": 1200,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 4.949999809265137,
+			"missileSpeed": 1200,
+			"mMissileEffectKey": "{24aa35aa}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "{aeb68fd6}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{629d6635}": {
+		"mScriptName": "TFT9_AscendedSunDiscBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 4282,
+			"mAlternateName": "ChaosTurretWormBasicAttack",
+			"bHaveHitEffect": true,
+			"castRange": [
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "joint2",
+					"mSpeed": 1200,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 4.949999809265137,
+			"missileSpeed": 1200,
+			"mMissileEffectKey": "{24aa35aa}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "{aeb68fd6}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{6e1db480}": {
+		"mScriptName": "TFT9_AscendedSunDiscTooltip",
+		"mSpell": {
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{5926a0bd}": {
+		"mCharacterName": "TFT9_AscendedSunDisc",
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arBase": 0,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 0,
+		"baseArmor": 50,
+		"baseSpellBlock": 50,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 2880,
+		"attackSpeed": 0.5,
+		"basicAttack": {
+			"mAttackName": "TFT9_AscendedSunDiscBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"spellNames": [
+			"TFT9_AscendedSunDiscTooltip",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"__type": "TFTCharacterRecord"
+	}
+}

@@ -1,0 +1,47 @@
+{
+	"Characters/TFT_TrainingDummy/CharacterRecords/Root": {
+		"mCharacterName": "TFT_TrainingDummy",
+		"baseHP": 700,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arBase": 0,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 0,
+		"baseArmor": 40,
+		"baseSpellBlock": 40,
+		"critDamageMultiplier": 0,
+		"baseMoveSpeed": 0,
+		"attackRange": 180,
+		"attackSpeed": 0.20000000298023224,
+		"spellNames": [
+			"TFT_TrainingDummy_Spell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"{2cddddbb}": 99,
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 1,
+		"mMoveHeight": 0,
+		"{ef57098f}": false,
+		"{1f16e793}": true,
+		"__type": "TFTCharacterRecord",
+		"isSpawn": true
+	},
+	"Characters/TFT_TrainingDummy/Spells/TFT_TrainingDummy_Spell": {
+		"mScriptName": "TFT_TrainingDummy_Spell",
+		"mSpell": {
+			"mAlternateName": "DummyPassive",
+			"mImgIconName": [
+				"ASSETS/Characters/TFTDebug_Dummy/HUD/Icons2D/TFTDebug_Dummy_DoNothing.dds"
+			],
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	}
+}

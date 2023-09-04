@@ -1,0 +1,452 @@
+{
+	"Characters/TFT9_Taliyah/Spells/TFT9_TaliyahSpell": {
+		"mScriptName": "TFT9_TaliyahSpell",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mDataValues": [
+				{
+					"mName": "KnockupDuration",
+					"mValues": [
+						1,
+						2,
+						2,
+						2,
+						1,
+						1,
+						1
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "SpellDamage",
+					"mValues": [
+						100,
+						160,
+						240,
+						370,
+						100,
+						100,
+						100
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "BoulderDamage",
+					"mValues": [
+						100,
+						110,
+						160,
+						240,
+						100,
+						100,
+						100
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"{e42c86ed}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "SpellDamage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{7d6d0a3e}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{4dd34fff}",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"delayCastOffsetPercent": 0.5,
+			"castRange": [
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500
+			],
+			"castFrame": 25,
+			"{47e0dff9}": {
+				"12": "Play_sfx_tft9_TaliyahSound_cast",
+				"14": "Play_sfx_tft9_TaliyahKnockUp_cast",
+				"20": "Play_sfx_tft9_TaliyahKnockUp_OnBuffCast"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Taliyah/Spells/TFT9_TaliyahSpell_MC": {
+		"mScriptName": "TFT9_TaliyahSpell_MC",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mDataValues": [
+				{
+					"mName": "KnockupDuration",
+					"mValues": [
+						1,
+						1.5,
+						1.75,
+						2.25,
+						1,
+						1,
+						1
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "Damage",
+					"mValues": [
+						0,
+						200,
+						300,
+						450,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"ModifiedDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"delayCastOffsetPercent": 0.5,
+			"castRange": [
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500
+			],
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Taliyah/Spells/TFT9_TaliyahBasicAttack": {
+		"mScriptName": "TFT9_TaliyahBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 7375,
+			"mCastTime": 0.25,
+			"bHaveHitEffect": true,
+			"castRange": [
+				300,
+				300,
+				300,
+				300,
+				300,
+				300,
+				300
+			],
+			"mMissileSpec": {
+				"mMissileWidth": 60,
+				"movementComponent": {
+					"mTargetHeightAugment": 20,
+					"mOffsetInitialTargetHeight": 20,
+					"mStartBoneName": "Buffbone_glb_ground_loc",
+					"mSpeed": 2100,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"mHeightOffset": 20,
+					"__type": "FollowTerrainHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 7,
+			"missileSpeed": 2100,
+			"mMissileEffectKey": "{442c66db}",
+			"mLineWidth": 60,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "BUFFBONE_GLB_GROUND_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Taliyah/Spells/TFT9_TaliyahBasicAttack2": {
+		"mScriptName": "TFT9_TaliyahBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 7375,
+			"mCastTime": 0.25,
+			"bHaveHitEffect": true,
+			"castRange": [
+				300,
+				300,
+				300,
+				300,
+				300,
+				300,
+				300
+			],
+			"mMissileSpec": {
+				"mMissileWidth": 60,
+				"movementComponent": {
+					"mTargetHeightAugment": 20,
+					"mOffsetInitialTargetHeight": 20,
+					"mStartBoneName": "Buffbone_glb_ground_loc",
+					"mSpeed": 2100,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"mHeightOffset": 20,
+					"__type": "FollowTerrainHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 7,
+			"missileSpeed": 2100,
+			"mMissileEffectKey": "{442c66db}",
+			"mLineWidth": 60,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "BUFFBONE_GLB_GROUND_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Taliyah/Spells/TFT9_TaliyahBigRock": {
+		"mScriptName": "TFT9_TaliyahBigRock",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"castRange": [
+				2200,
+				2200,
+				2200,
+				2200,
+				2200,
+				2200,
+				2200
+			],
+			"mMissileSpec": {
+				"mMissileWidth": 75,
+				"movementComponent": {
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mStartBoneName": "root",
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 2000,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"__type": "BlendedLinearHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VerticalFacingFaceTarget"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnHit"
+					},
+					{
+						"__type": "DestroyOnHit"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 3,
+			"mMissileEffectKey": "{2fd9df01}",
+			"{47e0dff9}": {
+				"12": "Play_sfx_tft9_TaliyahSpellMisBig_cast",
+				"13": "Play_sfx_tft9_TaliyahSpellMisBig_hit",
+				"16": "Play_sfx_tft9_TaliyahSpellMisBig_missilelaunch"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Taliyah/Spells/TFT9_TaliyahCritAttack": {
+		"mScriptName": "TFT9_TaliyahCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 7375,
+			"mAlternateName": "TaliyahCritAttack",
+			"delayCastOffsetPercent": -0.34850001335144043,
+			"bHaveHitEffect": true,
+			"castRange": [
+				300,
+				300,
+				300,
+				300,
+				300,
+				300,
+				300
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 20,
+					"mOffsetInitialTargetHeight": 20,
+					"mStartBoneName": "Buffbone_Glb_Ground_Loc",
+					"mSpeed": 2200,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"mHeightOffset": 20,
+					"__type": "FollowTerrainHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 7.75,
+			"missileSpeed": 2200,
+			"mMissileEffectKey": "{442c66db}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"mHitEffectName": "globalhit_physical_crit.troy",
+			"bHaveHitBone": true,
+			"mHitBoneName": "Buffbone_Glb_Ground_Loc",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Taliyah/CharacterRecords/Root": {
+		"mCharacterName": "TFT9_Taliyah",
+		"baseHP": 550,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 60,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 40,
+		"baseArmor": 20,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 890,
+		"attackSpeed": 0.699999988079071,
+		"basicAttack": {
+			"mAttackProbability": 0.5,
+			"mAttackName": "TFT9_TaliyahBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 0.5,
+				"mAttackName": "TFT9_TaliyahBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT9_TaliyahCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT9_TaliyahSpell",
+			"TFT9_TaliyahSpell_MC",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"tier": 2,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{cd4e5e4a}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{9f820252}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{32cdc033}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"{22f5197d}": 160,
+		"__type": "TFTCharacterRecord"
+	}
+}
