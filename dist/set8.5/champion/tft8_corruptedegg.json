@@ -1,0 +1,64 @@
+{
+	"{025f5c77}": {
+		"mScriptName": "TFT8_CorruptedEgg",
+		"mSpell": {
+			"mDataValues": [
+				{
+					"mName": "EggTurns",
+					"mValues": [
+						7,
+						7,
+						7,
+						7,
+						7,
+						7,
+						7
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mCastTime": 0.5,
+			"mCantCancelWhileWindingUp": true,
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{be58bc03}": {
+		"mCharacterName": "TFT8_CorruptedEgg",
+		"baseHP": 10,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"secondaryAbilityResource": {
+			"arBase": 0,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseArmor": 10,
+		"baseSpellBlock": 10,
+		"critDamageMultiplier": 0,
+		"baseMoveSpeed": 1,
+		"attackSpeed": 1,
+		"spellNames": [
+			"TFT8_CorruptedEgg",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 0,
+		"mMoveHeight": 0,
+		"{4e28a666}": "base_egg_root",
+		"{ef57098f}": false,
+		"{7cbc4762}": 0,
+		"__type": "TFTCharacterRecord"
+	}
+}

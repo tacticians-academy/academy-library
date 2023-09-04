@@ -1,0 +1,496 @@
+{
+	"{1461ef6d}": {
+		"mScriptName": "TFT8_JannaBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 7375,
+			"mAlternateName": "JannaBasicAttack2",
+			"bHaveHitEffect": true,
+			"castRange": [
+				550,
+				550,
+				550,
+				550,
+				550,
+				550,
+				550
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "BUFFBONE_CSTM_FROST_STAFF",
+					"mSpeed": 1600,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 9,
+			"missileSpeed": 1600,
+			"mMissileEffectKey": "{7682847c}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{30bb4bbd}": {
+		"mScriptName": "TFT8_JannaTornadoMis",
+		"mSpell": {
+			"mAffectsTypeFlags": 3077,
+			"mEffectAmount": [
+				{
+					"value": [
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2
+					],
+					"__type": "SpellEffectAmount"
+				}
+			],
+			"delayTotalTimePercent": 0.75,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"mMissileSpec": {
+				"movementComponent": {
+					"mUseHeightOffsetAtEnd": true,
+					"mStartBoneName": "C_BUFFBONE_GLB_LAYOUT_LOC",
+					"mAcceleration": 500,
+					"mMinSpeed": 100,
+					"mMaxSpeed": 2000,
+					"mInitialSpeed": 50,
+					"__type": "AcceleratingMovement"
+				},
+				"heightSolver": {
+					"__type": "BlendedLinearHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VerticalFacingFaceTarget"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnHit"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 3,
+			"mMissileEffectKey": "{f259901c}",
+			"mLineWidth": 60,
+			"mHitEffectOrientType": 2,
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"selectionPriority": 2,
+			"mTargetingTypeData": {
+				"__type": "Location"
+			},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{86c00bf1}": {
+		"mScriptName": "TFT8_JannaSpell",
+		"mSpell": {
+			"mAffectsTypeFlags": 3077,
+			"mEffectAmount": [
+				{
+					"value": [
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2
+					],
+					"__type": "SpellEffectAmount"
+				}
+			],
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						0,
+						450,
+						675,
+						6000,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "DamageDuration",
+					"mValues": [
+						0,
+						3,
+						3,
+						3,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "StunDuration",
+					"mValues": [
+						0,
+						1.25,
+						1.5,
+						8,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "HexRadius",
+					"mValues": [
+						0,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "SmallKnockup",
+					"mValues": [
+						0,
+						0.5,
+						0.5,
+						0.5,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"TotalMagicDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"delayCastOffsetPercent": 1,
+			"delayTotalTimePercent": 0.75,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"mMissileSpec": {
+				"movementComponent": {
+					"mUseHeightOffsetAtEnd": true,
+					"mAcceleration": 400,
+					"mMinSpeed": 35,
+					"mMaxSpeed": 4000,
+					"mInitialSpeed": 35,
+					"__type": "AcceleratingMovement"
+				},
+				"heightSolver": {
+					"__type": "BlendedLinearHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VerticalFacingFaceTarget"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnHit"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 3,
+			"mMissileEffectKey": "{f259901c}",
+			"mLineWidth": 60,
+			"mHitEffectOrientType": 2,
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"selectionPriority": 2,
+			"mTargetingTypeData": {
+				"__type": "Location"
+			},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{8f73994d}": {
+		"mScriptName": "TFT8_JannaCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 7375,
+			"bHaveHitEffect": true,
+			"castRange": [
+				550,
+				550,
+				550,
+				550,
+				550,
+				550,
+				550
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "BUFFBONE_CSTM_FROST_STAFF",
+					"mSpeed": 1600,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 14,
+			"missileSpeed": 1600,
+			"mMissileEffectKey": "{7682847c}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{d250eacd}": {
+		"mScriptName": "TFT8_JannaBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 7375,
+			"mAlternateName": "JannaBasicAttack",
+			"mCastTime": 0.32260000705718994,
+			"useAnimatorFramerate": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				550,
+				550,
+				550,
+				550,
+				550,
+				550,
+				550
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "BUFFBONE_CSTM_FROST_STAFF",
+					"mSpeed": 1600,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 7,
+			"missileSpeed": 1600,
+			"mMissileEffectKey": "{7682847c}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{48f1e514}": {
+		"mCharacterName": "TFT8_Janna",
+		"baseHP": 800,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 120,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 50,
+		"baseArmor": 45,
+		"baseSpellBlock": 45,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 890,
+		"attackSpeed": 0.800000011920929,
+		"basicAttack": {
+			"mAttackProbability": 0.5,
+			"mAttackName": "TFT8_JannaBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 0.5,
+				"mAttackName": "TFT8_JannaBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT8_JannaCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT8_JannaSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446656,
+		"tier": 5,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{bec8a9a7}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{f95c4af3}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mInitialMana": 40,
+		"{22f5197d}": 245,
+		"__type": "TFTCharacterRecord"
+	}
+}

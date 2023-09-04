@@ -1,0 +1,397 @@
+{
+	"{251ef2db}": {
+		"mScriptName": "TFT8_Boss_AurelionSolBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 7375,
+			"mAlternateName": "KarmaBasicAttack",
+			"delayCastOffsetPercent": -0.34850001335144043,
+			"bHaveHitEffect": true,
+			"castRange": [
+				300,
+				300,
+				300,
+				300,
+				300,
+				300,
+				300
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "C_Buffbone_Glb_Head_Loc",
+					"mSpeed": 2000,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 7.75,
+			"missileSpeed": 4000,
+			"mMissileEffectKey": "{52fa56ad}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "{b4f64f01}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{46bcc607}": {
+		"mScriptName": "TFT8_Boss_AurelionSolAttackExtra",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"bHaveHitEffect": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "C_Buffbone_Glb_Head_Loc",
+					"mSpeed": 2000,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"mMissileEffectKey": "{52fa56ad}",
+			"mHitEffectKey": "{b4f64f01}",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{79fff9aa}": {
+		"mScriptName": "TFT8_Boss_AurelionSolSpellMis",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"mMissileSpec": {
+				"mMissileWidth": 1,
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mStartBoneName": "spine",
+					"mSpeed": 750,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"mMissileEffectKey": "{c23b006f}",
+			"mTargetingTypeData": {
+				"__type": "Location"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{907eb493}": {
+		"mScriptName": "TFT8_Boss_AurelionSolCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 7375,
+			"mAlternateName": "KarmaBasicAttack",
+			"delayCastOffsetPercent": -0.34850001335144043,
+			"bHaveHitEffect": true,
+			"castRange": [
+				300,
+				300,
+				300,
+				300,
+				300,
+				300,
+				300
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "C_Buffbone_Glb_Head_Loc",
+					"mSpeed": 2000,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 7.75,
+			"missileSpeed": 4000,
+			"mMissileEffectKey": "{52fa56ad}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "{b4f64f01}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{c6937faf}": {
+		"mScriptName": "TFT8_Boss_AurelionSolSpell",
+		"mSpell": {
+			"mAffectsTypeFlags": 17413,
+			"mRequiredUnitTags": {
+				"mTagList": "Champion",
+				"__type": "ObjectTags"
+			},
+			"mAlternateName": "TFT8_AurelionSolSpell",
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						100,
+						100,
+						100,
+						100,
+						100,
+						100,
+						100
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "Duration",
+					"mValues": [
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "PercentBurn",
+					"mValues": [
+						30,
+						30,
+						30,
+						30,
+						30,
+						30,
+						30
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "NumMeteors",
+					"mValues": [
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "HealingReduction",
+					"mValues": [
+						50,
+						50,
+						50,
+						50,
+						50,
+						50,
+						50
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"ModifiedDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.004999999888241291,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"mCastTime": 1.25,
+			"delayCastOffsetPercent": 1,
+			"delayTotalTimePercent": -0.5,
+			"mCantCancelWhileWindingUp": true,
+			"mIgnoreRangeCheck": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				325,
+				325,
+				325,
+				325,
+				325,
+				325,
+				325
+			],
+			"castRadiusSecondary": [
+				650,
+				650,
+				650,
+				650,
+				650,
+				650,
+				650
+			],
+			"castConeAngle": 0,
+			"castConeDistance": 0,
+			"castFrame": 24,
+			"missileSpeed": 0,
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"selectionPriority": 2,
+			"mTargetingTypeData": {
+				"__type": "TargetOrLocation"
+			},
+			"mDimensionBehavior": 1,
+			"{00f7e5bc}": true,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{9742866d}": {
+		"mCharacterName": "TFT8_Boss_AurelionSol",
+		"baseHP": 10000,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 300,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 100,
+		"baseArmor": 50,
+		"baseSpellBlock": 50,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 1400,
+		"attackSpeed": 0.800000011920929,
+		"spellNames": [
+			"TFT8_Boss_AurelionSolSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"{7cbc4762}": 50,
+		"__type": "TFTCharacterRecord"
+	}
+}

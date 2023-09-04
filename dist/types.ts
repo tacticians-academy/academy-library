@@ -13,13 +13,17 @@ export interface AugmentData {
 }
 
 export interface ItemData {
-	desc: string
+	apiName: string
+	desc: string | null
 	effects: EffectVariables
-	from: number[]
+	from: number[] | null
 	icon: string
 	id: number
 	name: string
 	unique: boolean
+	composition?: string[]
+	incompatibleTraits?: string[]
+	associatedTraits?: never[]
 }
 
 export type AugmentTierProbability = [probability: number, children?: [AugmentTierProbability, AugmentTierProbability, AugmentTierProbability]]

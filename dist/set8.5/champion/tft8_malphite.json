@@ -1,0 +1,256 @@
+{
+	"{2d063b9d}": {
+		"mScriptName": "TFT8_MalphiteBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 512,
+			"mAlternateName": "MalphiteBasicAttack",
+			"delayCastOffsetPercent": -0.15279999375343323,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 11.744999885559082,
+			"missileSpeed": 1000,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{421a87a1}": {
+		"mScriptName": "TFT8_MalphiteSpell",
+		"mSpell": {
+			"mAffectsTypeFlags": 11333,
+			"mDataValues": [
+				{
+					"mName": "ArmorAmount",
+					"mValues": [
+						0,
+						100,
+						125,
+						150,
+						160,
+						200,
+						240
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "Damage",
+					"mValues": [
+						0,
+						150,
+						225,
+						350,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "Duration",
+					"mValues": [
+						4,
+						4,
+						4,
+						4,
+						4,
+						4,
+						4
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"ModifiedDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castFrame": 9,
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{8fcff47d}": {
+		"mScriptName": "TFT8_MalphiteBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 512,
+			"mAlternateName": "MalphiteBasicAttack2",
+			"delayCastOffsetPercent": -0.15279999375343323,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 11.569999694824219,
+			"missileSpeed": 1000,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{d5847b5d}": {
+		"mScriptName": "TFT8_MalphiteCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 512,
+			"delayCastOffsetPercent": -0.15279999375343323,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 12.149999618530273,
+			"missileSpeed": 1000,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{601773b0}": {
+		"mCharacterName": "TFT8_Malphite",
+		"baseHP": 800,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 80,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 60,
+		"baseArmor": 45,
+		"baseSpellBlock": 45,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.5,
+		"spellNames": [
+			"TFT8_MalphiteSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446664,
+		"tier": 2,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{48051565}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{47be087a}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mInitialMana": 40,
+		"{22f5197d}": 130,
+		"__type": "TFTCharacterRecord"
+	}
+}

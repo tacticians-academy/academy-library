@@ -1,0 +1,419 @@
+{
+	"{4cc094e5}": {
+		"mScriptName": "TFT8_KayleCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 21711,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mStartBoneName": "R_hand",
+					"mSpeed": 5000,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 2250,
+			"mMissileEffectKey": "{ef2fb880}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{596eaa15}": {
+		"mScriptName": "TFT8_KayleBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 21711,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mStartBoneName": "R_hand",
+					"mSpeed": 5000,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 2250,
+			"mMissileEffectKey": "{ef2fb880}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{75ea5d61}": {
+		"mScriptName": "TFT8_KayleSpellAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 21711,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mStartBoneName": "R_hand",
+					"mSpeed": 5000,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 2250,
+			"mMissileEffectKey": "{22a86324}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{d06110d9}": {
+		"mScriptName": "TFT8_KayleSpell",
+		"mSpell": {
+			"mAffectsTypeFlags": 7173,
+			"mAffectsStatusFlags": 32,
+			"mDataValues": [
+				{
+					"mName": "PercentAttackDamage",
+					"mValues": [
+						1.75,
+						1.75,
+						1.75,
+						1.75,
+						1.75,
+						1.75,
+						1.75
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "Damage",
+					"mValues": [
+						0,
+						30,
+						45,
+						65,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "AttackCount",
+					"mValues": [
+						3,
+						3,
+						3,
+						3,
+						3,
+						3,
+						3
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"{1dad97b2}": {
+					"mFormulaParts": [
+						{
+							"mSubparts": [
+								{
+									"mStat": 2,
+									"mDataValue": "PercentAttackDamage",
+									"__type": "StatByNamedDataValueCalculationPart"
+								}
+							],
+							"__type": "SumOfSubPartsCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"ModifiedBonusDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"mCastTime": 0.0010000000474974513,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				20,
+				20,
+				20,
+				20,
+				20,
+				20,
+				20
+			],
+			"castConeDistance": 100,
+			"castFrame": 15,
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"selectionPriority": 2,
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{f035db65}": {
+		"mScriptName": "TFT8_KayleBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 21711,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mStartBoneName": "R_hand",
+					"mSpeed": 5000,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 2250,
+			"mMissileEffectKey": "{ef2fb880}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{a7dff41c}": {
+		"mCharacterName": "TFT8_Kayle",
+		"baseHP": 500,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 30,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 55,
+		"baseArmor": 15,
+		"baseSpellBlock": 15,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 890,
+		"attackSpeed": 0.6499999761581421,
+		"basicAttack": {
+			"mAttackProbability": 0.5,
+			"mAttackName": "TFT8_KayleBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 0.5,
+				"mAttackName": "TFT8_KayleBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT8_KayleCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT8_KayleSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446656,
+		"tier": 1,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{fa08de4d}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{6fda2eb1}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"{22f5197d}": 220,
+		"__type": "TFTCharacterRecord"
+	}
+}

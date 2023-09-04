@@ -12,8 +12,22 @@ export async function importAugments(set: SetNumber) {
 		return await import('./set6.5/augments.js')
 	}
 	if (set === 7) {
-		return await import('./set6.5/augments.js')
-		// return await import('./set7/augments.js')
+		return await import('./set7/augments.js')
+	}
+	if (set === 7.5) {
+		return await import('./set7.5/augments.js')
+	}
+	if (set === 8) {
+		return await import('./set8/augments.js')
+	}
+	if (set === 8.5) {
+		return await import('./set8.5/augments.js')
+	}
+	if (set === 9) {
+		return await import('./set9/augments.js')
+	}
+	if (set === 9.5) {
+		return await import('./set9.5/augments.js')
 	}
 	throw 'Unsupported set:' + set
 }
@@ -31,6 +45,21 @@ export async function importAugmentTiers(set: SetNumber) {
 	}
 	if (set === 7) {
 		return await import('./set7/hardcoded/augment-tiers.js')
+	}
+	if (set === 7.5) {
+		return await import('./set7/hardcoded/augment-tiers.js')
+	}
+	if (set === 8) {
+		return await import('./set7/hardcoded/augment-tiers.js')
+	}
+	if (set === 8.5) {
+		return await import('./set7/hardcoded/augment-tiers.js')
+	}
+	if (set === 9) {
+		return await import('./set7/hardcoded/augment-tiers.js')
+	}
+	if (set === 9.5) {
+		return await import('./set7/hardcoded/augment-tiers.js') //TODO
 	}
 	throw 'Unsupported set:' + set
 }
@@ -69,6 +98,21 @@ export async function importChampions(set: SetNumber) {
 	if (set === 7) {
 		return await import('./set7/champions.js')
 	}
+	if (set === 7.5) {
+		return await import('./set7.5/champions.js')
+	}
+	if (set === 8) {
+		return await import('./set8/champions.js')
+	}
+	if (set === 8.5) {
+		return await import('./set8.5/champions.js')
+	}
+	if (set === 9) {
+		return await import('./set9/champions.js')
+	}
+	if (set === 9.5) {
+		return await import('./set9.5/champions.js')
+	}
 	throw 'Unsupported set:' + set
 }
 
@@ -105,6 +149,21 @@ export async function importItems(set: SetNumber) {
 	}
 	if (set === 7) {
 		return await import('./set7/items.js')
+	}
+	if (set === 7.5) {
+		return await import('./set7.5/items.js')
+	}
+	if (set === 8) {
+		return await import('./set8/items.js')
+	}
+	if (set === 8.5) {
+		return await import('./set8.5/items.js')
+	}
+	if (set === 9) {
+		return await import('./set9/items.js')
+	}
+	if (set === 9.5) {
+		return await import('./set9.5/items.js')
 	}
 	throw 'Unsupported set:' + set
 }
@@ -144,6 +203,21 @@ export async function importSetData(set: SetNumber) {
 	if (set === 7) {
 		return await import('./set7/hardcoded/set-data.js')
 	}
+	if (set === 7.5) {
+		return await import('./set7/hardcoded/set-data.js')
+	}
+	if (set === 8) {
+		return await import('./set7/hardcoded/set-data.js') //TODO
+	}
+	if (set === 8.5) {
+		return await import('./set7/hardcoded/set-data.js')
+	}
+	if (set === 9) {
+		return await import('./set9/hardcoded/set-data.js')
+	}
+	if (set === 9.5) {
+		return await import('./set9.5/hardcoded/set-data.js')
+	}
 	throw 'Unsupported set:' + set
 }
 
@@ -180,6 +254,21 @@ export async function importTraits(set: SetNumber) {
 	}
 	if (set === 7) {
 		return await import('./set7/traits.js')
+	}
+	if (set === 7.5) {
+		return await import('./set7.5/traits.js')
+	}
+	if (set === 8) {
+		return await import('./set8/traits.js')
+	}
+	if (set === 8.5) {
+		return await import('./set8.5/traits.js')
+	}
+	if (set === 9) {
+		return await import('./set9/traits.js')
+	}
+	if (set === 9.5) {
+		return await import('./set9.5/traits.js')
 	}
 	throw 'Unsupported set:' + set
 }

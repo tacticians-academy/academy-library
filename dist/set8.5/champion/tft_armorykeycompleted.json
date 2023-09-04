@@ -1,0 +1,66 @@
+{
+	"{46fc785c}": {
+		"mCharacterName": "TFT_ArmoryKeyCompleted",
+		"baseHP": 10,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"secondaryAbilityResource": {
+			"arBase": 0,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseArmor": 10,
+		"baseSpellBlock": 10,
+		"critDamageMultiplier": 0,
+		"baseMoveSpeed": 500,
+		"attackSpeed": 1,
+		"spellNames": [
+			"TFT_ArmoryKeyCompleted",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"{2cddddbb}": 99,
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 0,
+		"mMoveHeight": 0,
+		"{4e28a666}": "Root",
+		"{d75e19ad}": 2,
+		"{ef57098f}": false,
+		"{7cbc4762}": 0,
+		"__type": "TFTCharacterRecord"
+	},
+	"{aa55a119}": {
+		"mScriptName": "TFT_ArmoryKeyCompleted",
+		"mSpell": {
+			"mDataValues": [
+				{
+					"mName": "RoundsToHatch",
+					"mValues": [
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mCastTime": 0.5,
+			"mCantCancelWhileWindingUp": true,
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	}
+}

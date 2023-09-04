@@ -7,7 +7,7 @@ import { importAugments, importItems } from '../../dist/imports.js'
 
 import { getCurrentSetNumber, getPathTo } from '../helpers/files.js'
 import { formatJS } from '../helpers/formatting.js'
-import { getAugmentNameKey } from '../helpers/utils.js'
+import { getAugmentNameKey, removeSymbols } from '../helpers/utils.js'
 
 const REGEX_ASSET_PREFIX = /https:\/\/raw.communitydragon.org\/\w+?\/game\//
 
@@ -80,7 +80,7 @@ if (activeAugments != null) {
 				.filter(extension => extension)
 				.join('/')
 			outputAugmentsObject.push({
-				id: name.toLowerCase().replaceAll(/[ '.+-]/g, ''),
+				id: removeSymbols(name.toLowerCase()),
 				name: extensions ? name + ' ' + extensions : name,
 				tiers: tiers.filter(e => e),
 				description,
@@ -102,7 +102,7 @@ currentItems.forEach(item => {
 		: spatulaItems.some(component => item === component)
 			? 'spatula'
 			: 'completed'
-	const description = substituteVariables(item.desc, [getNormalizedEffects(item.effects)])
+	const description = substituteVariables(item.desc ?? '', [getNormalizedEffects(item.effects)])
 		.replaceAll(/%i.+?%/g, '')
 		.replaceAll(/<.+?>/g, ' ')
 		.trim()
@@ -114,7 +114,7 @@ currentItems.forEach(item => {
 		type,
 		description,
 		icon: iconURL.replace(REGEX_ASSET_PREFIX, '').replace('.png', ''),
-		from: item.from,
+		from: item.from ?? [],
 		unique: item.unique,
 	})
 })

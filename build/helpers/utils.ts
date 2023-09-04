@@ -13,3 +13,7 @@ export function getAPIName(champion: ChampionData) {
 	const prefix = matches![1].split('_')[0]
 	return `${prefix}_${champion.name.replaceAll(/['. ]/g, '')}`
 }
+
+export function removeSymbols(raw: string) {
+	return raw.replaceAll(/['.:+\-!,]/g, '')
+}

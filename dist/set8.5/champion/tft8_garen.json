@@ -1,0 +1,297 @@
+{
+	"{21e2507d}": {
+		"mScriptName": "TFT8_GarenBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "GarenBasicAttack2",
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 10,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{2daa6214}": {
+		"mScriptName": "TFT8_GarenQ",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"mDataValues": [
+				{
+					"mName": "HexRadius",
+					"mValues": [
+						0,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ExplosionDelay",
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "StunDuration",
+					"mValues": [
+						0,
+						2,
+						2.25,
+						6,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ADRatio",
+					"mValues": [
+						0,
+						1.399999976158142,
+						1.399999976158142,
+						3.25,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "BaseDamage",
+					"mValues": [
+						0,
+						60,
+						90,
+						200,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"mSubparts": [
+								{
+									"mStat": 2,
+									"mDataValue": "ADRatio",
+									"__type": "StatByNamedDataValueCalculationPart"
+								},
+								{
+									"mSubpart": {
+										"mDataValue": "BaseDamage",
+										"__type": "NamedDataValueCalculationPart"
+									},
+									"mRatio": 0.009999999776482582,
+									"mStyleTag": "noScale",
+									"{a5749b52}": "scaleAP",
+									"__type": "SubPartScaledProportionalToStat"
+								}
+							],
+							"__type": "SumOfSubPartsCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{1d43b77a}": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "BaseDamage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"castRange": [
+				720,
+				720,
+				720,
+				720,
+				720,
+				720,
+				720
+			],
+			"mTargetingTypeData": {
+				"__type": "Location"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{3a20775d}": {
+		"mScriptName": "TFT8_GarenCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 8,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{8e93ef9d}": {
+		"mScriptName": "TFT8_GarenBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "GarenBasicAttack",
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 10,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{ff302555}": {
+		"mCharacterName": "TFT8_Garen",
+		"baseHP": 1050,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 200,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 80,
+		"baseArmor": 60,
+		"baseSpellBlock": 60,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.6000000238418579,
+		"basicAttack": {
+			"mAttackProbability": 0.5,
+			"mAttackName": "TFT8_GarenBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 0.5,
+				"mAttackName": "TFT8_GarenBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT8_GarenCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT8_GarenQ",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446664,
+		"tier": 4,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{53ed9e20}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{17b5a27a}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mInitialMana": 100,
+		"{22f5197d}": 160,
+		"__type": "TFTCharacterRecord"
+	}
+}

@@ -13,7 +13,6 @@ export const RETIRED_AUGMENT_NAME_KEYS = [
 export const UNUSED_AUGMENT_NAME_KEYS: string[] = [
 ]
 
-
 export const TRAIT_DATA_SUBSTITUTIONS: Record<string, string> = {
 	'{a8ae9f94}': 'Assassin',
 	'{f9d15366}': 'Astral',

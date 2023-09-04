@@ -1,0 +1,307 @@
+{
+	"{288d6d66}": {
+		"mCharacterName": "TFT8_LeeSin",
+		"baseHP": 700,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 70,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 60,
+		"baseArmor": 50,
+		"baseSpellBlock": 50,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.6499999761581421,
+		"spellNames": [
+			"TFT8_LeeSinSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446664,
+		"tier": 2,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{48051565}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{fe7aec63}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{6404759c}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"{22f5197d}": 150,
+		"__type": "TFTCharacterRecord"
+	},
+	"{549016dd}": {
+		"mScriptName": "TFT8_LeeSinCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "BlindMonkCritAttack",
+			"delayCastOffsetPercent": -0.17569999396800995,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{6aadbbfd}": {
+		"mScriptName": "TFT8_LeeSinBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "LeeSinBasicAttack2",
+			"delayCastOffsetPercent": -0.17569999396800995,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{ac4c061d}": {
+		"mScriptName": "TFT8_LeeSinBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "LeeSinBasicAttack",
+			"delayCastOffsetPercent": -0.17569999396800995,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{f0124621}": {
+		"mScriptName": "TFT8_LeeSinSpell",
+		"mSpell": {
+			"mAffectsTypeFlags": 7173,
+			"mAffectsStatusFlags": 32,
+			"mDataValues": [
+				{
+					"mName": "ShieldAmount",
+					"mValues": [
+						0,
+						180,
+						220,
+						270,
+						160,
+						200,
+						240
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ADPercent",
+					"mValues": [
+						200,
+						275,
+						275,
+						280,
+						200,
+						200,
+						200
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "Duration",
+					"mValues": [
+						4,
+						4,
+						4,
+						4,
+						4,
+						4,
+						4
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"mMultiplier": {
+						"mNumber": 0.009999999776482582,
+						"__type": "NumberCalculationPart"
+					},
+					"mFormulaParts": [
+						{
+							"mSubparts": [
+								{
+									"mStat": 2,
+									"mDataValue": "ADPercent",
+									"__type": "StatByNamedDataValueCalculationPart"
+								}
+							],
+							"__type": "SumOfSubPartsCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{2dfca249}": {
+					"mMultiplier": {
+						"mNumber": 2,
+						"__type": "NumberCalculationPart"
+					},
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "ShieldAmount",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"ModifiedShieldAmount": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "ShieldAmount",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"mCastTime": 0.10000000149011612,
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				20,
+				20,
+				20,
+				20,
+				20,
+				20,
+				20
+			],
+			"castConeDistance": 100,
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"selectionPriority": 2,
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	}
+}

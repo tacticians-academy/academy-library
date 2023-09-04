@@ -11,7 +11,8 @@ export const githubTokenPath = path.resolve(cachePath, 'github_token.local')
 
 export async function getCurrentSetNumber() {
 	console.log(setNumberPath)
-	return parseFloat(await fs.readFile(setNumberPath, 'utf8')) as SetNumber
+	const setString = await fs.readFile(setNumberPath, 'utf8')
+	return (parseFloat(setString) ?? 1) as SetNumber
 }
 
 export function getOutputFolder(setNumber: SetNumber) {

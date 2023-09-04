@@ -1,7 +1,6 @@
 import type { SetNumber } from '../dist/index.js'
 
-const LOAD_PBE = false
-const LOAD_SET: SetNumber = 7
+const LOAD_SET: SetNumber = 7.5
 
 import fetch from 'node-fetch'
 import fs from 'fs/promises'
@@ -15,7 +14,7 @@ import { BASE_UNIT_API_NAMES, mDataValueSubstitutions, mSpellCalculationsSubstit
 import type { ChampionJSON, ChampionJSONStats, ResponseJSON } from './helpers/types.js'
 import { getAPIName } from './helpers/utils.js'
 
-const patchLine = LOAD_PBE ? 'pbe' : SET_DATA[LOAD_SET].patchLine
+const patchLine = SET_DATA[LOAD_SET].patchLine
 const baseURL = `https://raw.communitydragon.org/${patchLine}`
 const url = `${baseURL}/cdragon/tft/en_us.json`
 const response = await fetch(url)
@@ -38,7 +37,7 @@ if (newEtag != null) {
 	if (oldEtag !== undefined) {
 		console.log('File updated! Rebuilding data.', newEtag, oldEtag)
 	}
-	fs.writeFile(etagPath, newEtag)
+	await fs.writeFile(etagPath, newEtag)
 } else {
 	console.log('No cache etag for resource, reloading data.')
 }
@@ -46,6 +45,7 @@ console.log('')
 
 const responseJSON = await response.json() as ResponseJSON
 const parentSetNumber = Object.keys(responseJSON.sets).reduce((previous, current) => Math.max(previous, parseInt(current, 10)), 0)
+
 const currentSetNumber = parentSetNumber === Math.floor(LOAD_SET) ? LOAD_SET : parentSetNumber as SetNumber
 if (SET_DATA[currentSetNumber] == null) {
 	throw 'New Set!! ' + currentSetNumber
@@ -56,8 +56,8 @@ const championsPath = getPathTo(currentSetNumber, 'champion')
 await fs.mkdir(championsPath, { recursive: true })
 await fs.mkdir(getPathTo(currentSetNumber, 'hardcoded'), { recursive: true })
 
-fs.writeFile(getPathTo(currentSetNumber, '.raw.json'), JSON.stringify(responseJSON, undefined, '\t'))
-fs.writeFile(setNumberPath, currentSetNumber.toString())
+await fs.writeFile(getPathTo(currentSetNumber, '.raw.json'), JSON.stringify(responseJSON, undefined, '\t'))
+await fs.writeFile(setNumberPath, currentSetNumber.toString())
 console.log('Loading set', currentSetNumber, 'from', patchLine.toUpperCase(), '...', 'Units:', champions.length, '\n')
 
 const setData = await importSetData(currentSetNumber)
@@ -99,7 +99,7 @@ await Promise.all(apiNames.map(async apiName => {
 	// console.log('Loading champion', apiName, url)
 	const response = await fetch(url)
 	if (!response.ok) {
-		throw response
+		throw `ERR ${pathName} :: ${response}`
 	}
 	const json = await response.json() as ChampionJSON
 	for (const rootKey in json) { // Remove and rename keys

@@ -1,0 +1,333 @@
+{
+	"{076f76d1}": {
+		"mScriptName": "TFT8_WarwickSpell",
+		"mSpell": {
+			"mAffectsTypeFlags": 11333,
+			"mDataValues": [
+				{
+					"mName": "Omnivamp",
+					"mValues": [
+						0.019999999552965164,
+						0.20000000298023224,
+						0.20000000298023224,
+						0.5,
+						0.019999999552965164,
+						0.019999999552965164,
+						0.019999999552965164
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "Duration",
+					"mValues": [
+						6,
+						6,
+						6,
+						6,
+						6,
+						6,
+						6
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ADPercent",
+					"mValues": [
+						1.5,
+						5,
+						5,
+						15,
+						1.5,
+						1.5,
+						1.5
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "AttackSpeedGain",
+					"mValues": [
+						0.6000000238418579,
+						0.6000000238418579,
+						0.6000000238418579,
+						0.6000000238418579,
+						0.6000000238418579,
+						0.6000000238418579,
+						0.6000000238418579
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ManaRefund",
+					"mValues": [
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "AttacksPerOnLaunchAttack",
+					"mValues": [
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"{ebad1c97}": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{ad16f688}",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"mDisplayAsPercent": true,
+					"__type": "GameCalculation"
+				},
+				"TotalDamage": {
+					"mFormulaParts": [
+						{
+							"mSubparts": [
+								{
+									"mStat": 2,
+									"mDataValue": "ADPercent",
+									"__type": "StatByNamedDataValueCalculationPart"
+								}
+							],
+							"__type": "SumOfSubPartsCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"delayCastOffsetPercent": -0.5,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castFrame": 5,
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{1addb3ad}": {
+		"mScriptName": "TFT8_WarwickCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "WarwickCritAttack",
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{212a334d}": {
+		"mScriptName": "TFT8_WarwickBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "WarwickBasicAttack",
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{7e1983ad}": {
+		"mScriptName": "TFT8_WarwickBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "WarwickBasicAttack",
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9,
+			"missileSpeed": 347.79998779296875,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{4f6afae4}": {
+		"mCharacterName": "TFT8_Warwick",
+		"baseHP": 950,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 90,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 70,
+		"baseArmor": 50,
+		"baseSpellBlock": 50,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.949999988079071,
+		"basicAttack": {
+			"mAttackProbability": 0.5,
+			"mAttackName": "TFT8_WarwickBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 0.5,
+				"mAttackName": "TFT8_WarwickBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT8_WarwickCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT8_WarwickSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446664,
+		"tier": 4,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{2498fc94}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{01f1bb1a}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{6404759c}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mInitialMana": 40,
+		"{22f5197d}": 145,
+		"__type": "TFTCharacterRecord"
+	}
+}

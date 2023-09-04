@@ -11,7 +11,7 @@ import { getCurrentSetNumber, getPathTo, loadHardcodedTXT } from './helpers/file
 import { formatJS } from './helpers/formatting.js'
 import { BASE_UNIT_API_NAMES, UNRELEASED_ITEM_NAME_KEYS, NORMALIZE_EFFECT_KEYS, SUBSTITUTE_EFFECT_KEYS, normalizeEffects, mStatSubstitutions, spellCalculationOperatorSubstitutions } from './helpers/normalize.js'
 import type { ChampionJSON, ChampionJSONType, ChampionJSONAttack, ChampionJSONSpell, ChampionJSONSpellAttack, ChampionJSONStats, ResponseJSON } from './helpers/types.js'
-import { getAPIName, getAugmentNameKey } from './helpers/utils.js'
+import { getAPIName, getAugmentNameKey, removeSymbols } from './helpers/utils.js'
 
 const BASE_AP_RATIO = 0.009999999776482582
 
@@ -36,10 +36,10 @@ try {
 	responseJSON = JSON.parse(raw)
 } catch (error) {
 	console.log(error)
-	throw 'Missing cache.local. Erase the `cache` directory and re-run `prepare`.'
+	throw 'Missing Set data. Erase the current Set directory and re-run `prepare`.'
 }
 const { champions, traits } = responseJSON.sets[parentSetNumber]
-const itemsData = responseJSON.items as ItemData[]
+const itemsData = (responseJSON.items as ItemData[]).filter(item => item.name)
 
 const baseSet = responseJSON.sets['1']
 for (const apiName of BASE_UNIT_API_NAMES) {
@@ -61,11 +61,13 @@ const currentItemsByType: Record<ItemTypeKey, ItemData[]> = {component: [], comp
 
 const foundItemIDs: number[] = []
 itemsData.reverse().forEach(item => {
-	if (RETIRED_ITEM_NAMES?.includes(item.name) || foundItemIDs.includes(item.id)) {
+	if (!item.name || RETIRED_ITEM_NAMES?.includes(item.name) || foundItemIDs.includes(item.id)) {
 		return
 	}
-	for (const normalize in NORMALIZE_EFFECT_KEYS) {
-		item.desc = item.desc.replaceAll(normalize, NORMALIZE_EFFECT_KEYS[normalize])
+	if (item.desc?.length == 0) {
+		for (const normalize in NORMALIZE_EFFECT_KEYS) {
+			item.desc = item.desc.replaceAll(normalize, NORMALIZE_EFFECT_KEYS[normalize])
+		}
 	}
 	normalizeEffects(item.effects, unreplacedIDs)
 	const name = item.name.toLowerCase()
@@ -73,7 +75,11 @@ itemsData.reverse().forEach(item => {
 	if (icon.includes('/augments/')) {
 		return
 	}
-	const from = item.from as number[]
+	const from = item.from as number[] | null
+	if (!from) {
+		// console.error('Invalid item', item)
+		return
+	}
 	let typeKey: ItemTypeKey | undefined
 	if (icon.includes('_hex_')) {
 		typeKey = 'hexbuff'
@@ -127,7 +133,7 @@ for (const key in currentItemsByType) {
 }
 
 allItems.forEach((item: ItemData) => {
-	item.unique = item.unique || item.desc.toLowerCase().includes('[unique - only')
+	item.unique = item.unique || item.desc!.toLowerCase().includes('[unique - only')
 	if (item.name === ItemKey.HandOfJustice) {
 		const invalidKey = 'BonusAD'
 		if (item.effects[invalidKey] != null) {
@@ -153,7 +159,7 @@ traits.forEach((trait: TraitData) => {
 })
 
 function toKey(name: string) {
-	return name.replaceAll(/['.+\-!]/g, '').split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join('')
+	return removeSymbols(name.replaceAll(/\+/g, 'plus')).split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join('')
 }
 
 const outputItemSections = []
@@ -197,12 +203,12 @@ for (const item of itemsData.sort((a, b) => a.name.localeCompare(b.name))) {
 	const [ pathName, setKey ] = pathNameComponent.split('.')
 	if (!setKey.startsWith(parentSetName)) {
 		if (isAugment) {
-			console.log('Augment with invalid set marker', pathNameComponent)
+			// console.log('Augment with invalid set marker', pathNameComponent)
 		}
 		continue
 	}
 	if (isAugment) {
-		if (item.from.length) {
+		if (item.from != null && item.from.length > 0) {
 			console.log('Augment should not have components', item)
 		}
 		const nameKey = item.name.toLowerCase()
@@ -229,7 +235,7 @@ for (const item of itemsData.sort((a, b) => a.name.localeCompare(b.name))) {
 		}
 		if (nameKey.endsWith(' heart')) {
 			if (tier && tier !== 1) {
-				if (nameKey !== 'innovator heart' && nameKey !== 'hextech heart') {
+				if (currentSetNumber < 9 && nameKey !== 'innovator heart' && nameKey !== 'hextech heart') {
 					console.log('ERR Multiple tier designations for heart', tier, 1, item)
 				}
 			} else {
@@ -255,8 +261,10 @@ for (const item of itemsData.sort((a, b) => a.name.localeCompare(b.name))) {
 			}
 			tier = manualTier
 		}
+		const isUnused = !tier || UNUSED_AUGMENT_NAME_KEYS.includes(nameKey) || icon.includes('/missing-t')
 		if (!tier) {
-			throw 'No tier for item: ' + JSON.stringify(item)
+			console.error('No tier for augment item entry: ' + JSON.stringify(item))
+			tier = 3
 		}
 		const effects = item.effects
 		for (const key in effects) {
@@ -275,11 +283,14 @@ for (const item of itemsData.sort((a, b) => a.name.localeCompare(b.name))) {
 			tier: tier!,
 			name: item.name,
 			groupID: key[0].toLowerCase() + key.slice(1),
-			desc: item.desc,
+			desc: item.desc!,
 			effects: effects as EffectVariables,
 			icon: item.icon,
 		}
-		if (UNUSED_AUGMENT_NAME_KEYS.includes(nameKey) || icon.includes('/missing-t')) {
+		if (isUnused) {
+			if (data.desc == null) {
+				data.desc = ''
+			}
 			unreleasedAugments.push(data)
 		} else {
 			activeAugments.push(data)
@@ -297,7 +308,7 @@ if (activeAugments.length) {
 		.map(id => `AugmentGroupKey.${id[0].toUpperCase() + id.slice(1)}`).join(', ')
 	const outputAugmentSections = [
 		`import { AugmentGroupKey } from '../index.js'\nimport type { AugmentData } from '../index'`,
-		`export const emptyImplementationAugments: AugmentGroupKey[] =  [${emptyImplementationAugments}]`,
+		`export const emptyImplementationAugments: AugmentGroupKey[] =  [${emptyImplementationAugments ?? ''}]`,
 		`export const activeAugments: AugmentData[] = ` + formatJS(activeAugments),
 		`export const inactiveAugments: AugmentData[] = ` + formatJS(unreleasedAugments),
 	]
@@ -363,7 +374,7 @@ const playableChampions = champions
 			return false
 		}
 		if (!champion.icon) {
-			if (champion.apiName !== 'TFT6_Annie') {
+			if (champion.apiName !== 'TFT6_Annie' && champion.apiName !== 'TFT_ArmoryKeyComponent' && champion.apiName !== 'TFT_ArmoryKeyCompleted' && champion.apiName !== 'TFT_ArmoryKeyOrnn') {
 				console.log('No icon for champion, excluding.', champion)
 			}
 			return false
@@ -621,7 +632,7 @@ function transformSpellData(spellName: string, spellData: ChampionJSONSpell, jso
 							}
 							const starValues = variableName != null ? variables[variableName] : undefined
 							if (variableName != null && !starValues && calculationKey !== 'UNUSED') {
-								console.log('ERR', 'Missing variable', spellName, calculationKey, variableName, variables)
+								// console.log('ERR', 'Missing variable', spellName, calculationKey, variableName, variables) //TODO
 							}
 							return {
 								variable: variableName,

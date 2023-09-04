@@ -79,7 +79,7 @@ function formatBulletEntries(bullets: string[], labels: string[]) {
 
 // Set data
 
-const milestoneIDForSetString: Record<SetNumber, number | undefined> = {
+const milestoneIDForSet: Record<SetNumber, number | undefined> = {
 	1: undefined,
 	2: undefined,
 	3: undefined,
@@ -90,10 +90,16 @@ const milestoneIDForSetString: Record<SetNumber, number | undefined> = {
 	5.5: undefined,
 	6: undefined,
 	6.5: 1,
+	7: undefined,
+	7.5: undefined,
+	8: undefined,
+	8.5: undefined,
+	9: undefined,
+	9.5: undefined,
 }
 
 const currentSetNumber = await getCurrentSetNumber()
-const milestone = milestoneIDForSetString[currentSetNumber]
+const milestone = milestoneIDForSet[currentSetNumber]
 if (milestone == null) {
 	console.log('Unknown milestone', currentSetNumber)
 	process.exit(0)

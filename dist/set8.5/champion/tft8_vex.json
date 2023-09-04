@@ -1,0 +1,497 @@
+{
+	"{0b395b59}": {
+		"mScriptName": "TFT8_VexSpellEmpowered",
+		"mSpell": {
+			"mAffectsTypeFlags": 21514,
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						0,
+						80,
+						130,
+						200,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "BurstDamage",
+					"mValues": [
+						0,
+						160,
+						260,
+						400,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"ModifiedDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "ScaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{0d5e5649}": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{693d018c}",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "ScaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.25,
+			"mProjectTargetToCastRange": true,
+			"bHaveHitEffect": true,
+			"mIgnoreRangeCheck": true,
+			"castRange": [
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"luaOnMissileUpdateDistanceInterval": 390,
+			"mMissileSpec": {
+				"mMissileWidth": 180,
+				"movementComponent": {
+					"mTracksTarget": false,
+					"mStartBoneName": "Buffbone_Glb_Center_Loc",
+					"mProjectTargetToCastRange": true,
+					"mMinSpeed": 1500,
+					"mMaxSpeed": 5000,
+					"mInitialSpeed": 1500,
+					"__type": "AcceleratingMovement"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnHit"
+					},
+					{
+						"__type": "{e357c116}"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 3,
+			"castFrame": 7,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "{b9aff492}",
+			"mTargetingTypeData": {
+				"__type": "TargetOrLocation"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{55b37455}": {
+		"mScriptName": "TFT8_VexSpell",
+		"mSpell": {
+			"mAffectsTypeFlags": 21514,
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						0,
+						230,
+						345,
+						570,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "BurstDamage",
+					"mValues": [
+						0,
+						230,
+						345,
+						570,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "SecondaryDamage",
+					"mValues": [
+						0,
+						150,
+						225,
+						370,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"ModifiedDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{0d5e5649}": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{693d018c}",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{42de401d}": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "SecondaryDamage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"mProjectTargetToCastRange": true,
+			"bHaveHitEffect": true,
+			"mIgnoreRangeCheck": true,
+			"castRange": [
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"luaOnMissileUpdateDistanceInterval": 390,
+			"mMissileSpec": {
+				"mMissileWidth": 180,
+				"movementComponent": {
+					"mTracksTarget": false,
+					"mProjectTargetToCastRange": true,
+					"mMinSpeed": 1500,
+					"mMaxSpeed": 5000,
+					"mInitialSpeed": 1500,
+					"__type": "AcceleratingMovement"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnHit"
+					},
+					{
+						"__type": "DestroyOnHit"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 3,
+			"castFrame": 11,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "{b9aff492}",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{6acf04d9}": {
+		"mScriptName": "TFT8_VexCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mSpeed": 1700,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 13,
+			"missileSpeed": 347.79998779296875,
+			"mMissileEffectKey": "{0a08cfb5}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{ca4d3c59}": {
+		"mScriptName": "TFT8_VexBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mSpeed": 1700,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 11.5,
+			"missileSpeed": 347.79998779296875,
+			"mMissileEffectKey": "{0a08cfb5}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{e2961c71}": {
+		"mScriptName": "TFT8_VexBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.3677999973297119,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mSpeed": 1700,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 11.5,
+			"missileSpeed": 347.79998779296875,
+			"mMissileEffectKey": "{0a08cfb5}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{581e608f}": {
+		"mCharacterName": "TFT8_Vex",
+		"baseHP": 650,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 40,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 40,
+		"baseArmor": 25,
+		"baseSpellBlock": 25,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 890,
+		"attackSpeed": 0.75,
+		"basicAttack": {
+			"mAttackProbability": 0.5,
+			"mAttackName": "TFT8_VexBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 0.5,
+				"mAttackName": "TFT8_VexBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackProbability": 0.5,
+				"mAttackName": "TFT8_VexCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT8_VexSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446656,
+		"tier": 3,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{da26e304}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{47be087a}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"{22f5197d}": 95,
+		"__type": "TFTCharacterRecord"
+	}
+}

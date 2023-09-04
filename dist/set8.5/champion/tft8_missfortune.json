@@ -1,0 +1,680 @@
+{
+	"{740c15f5}": {
+		"mScriptName": "TFT8_MissFortuneBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "MissFortuneBasicAttack2",
+			"bHaveHitEffect": true,
+			"castRange": [
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_Weapon",
+					"mSpeed": 2000,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 9,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{fb3b71b3}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{7c16e635}": {
+		"mScriptName": "TFT8_MissFortuneCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "MissFortuneCritAttack",
+			"bHaveHitEffect": true,
+			"castRange": [
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_WEAPON",
+					"{a6cb1fa4}": {
+						"31": "UltGun_Root"
+					},
+					"mSpeed": 2000,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 9,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{fb3b71b3}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{93725f65}": {
+		"mScriptName": "TFT8_MissFortuneBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "MissFortuneBasicAttack",
+			"bHaveHitEffect": true,
+			"castRange": [
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375,
+				554.0999755859375
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "L_WEAPON",
+					"mSpeed": 2000,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 9,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{fb3b71b3}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{c0867afe}": {
+		"mScriptName": "TFT8_MissFortuneBullets",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"mAlternateName": "TFT_MissFortuneBullets",
+			"mEffectAmount": [
+				{
+					"value": [
+						15,
+						55,
+						95,
+						140,
+						185,
+						230,
+						275
+					],
+					"__type": "SpellEffectAmount"
+				}
+			],
+			"mCoefficient": 0.6499999761581421,
+			"mCastTime": 0.25,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mCantCancelWhileWindingUp": true,
+			"mSpellRevealsChampion": false,
+			"bHaveHitEffect": true,
+			"castRange": [
+				4000,
+				4000,
+				4000,
+				4000,
+				4000,
+				4000,
+				4000
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"castConeDistance": 0,
+			"mMissileSpec": {
+				"mMissileWidth": 20,
+				"movementComponent": {
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand",
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 3500,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"__type": "BlendedLinearHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VerticalFacingFaceTarget"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnHit"
+					},
+					{
+						"__type": "DestroyOnHit"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 3,
+			"castFrame": 2.8499999046325684,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{b705b2b4}",
+			"mLineWidth": 20,
+			"mHitEffectKey": "{a3c546f0}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {
+				"__type": "Direction"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{d62db272}": {
+		"mScriptName": "TFT8_MissFortuneBulletEMPTY",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"mAlternateName": "TFT_MissFortuneBulletTime",
+			"mEffectAmount": [
+				{
+					"value": [
+						20,
+						55,
+						90,
+						125,
+						0,
+						0,
+						35
+					],
+					"__type": "SpellEffectAmount"
+				},
+				{
+					"value": [
+						15,
+						20,
+						25,
+						30,
+						35,
+						40,
+						45
+					],
+					"__type": "SpellEffectAmount"
+				}
+			],
+			"mCoefficient": 0.15000000596046448,
+			"mAnimationLoopName": "Spell4_Loop",
+			"mAnimationWinddownName": "Spell4_Winddown",
+			"mImgIconName": [
+				"ASSETS/Characters/TFT_MissFortune/HUD/Icons2D/TFT_MissFortune_BulletTime.dds"
+			],
+			"castRange": [
+				1500,
+				1500,
+				1500,
+				1500,
+				1500,
+				1500,
+				1500
+			],
+			"castRadius": [
+				210,
+				210,
+				210,
+				210,
+				210,
+				210,
+				210
+			],
+			"castConeAngle": 23,
+			"castConeDistance": 1500,
+			"mMissileSpec": {
+				"mMissileWidth": 100,
+				"movementComponent": {
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "weapon",
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 2000,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"__type": "BlendedLinearHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VerticalFacingFaceTarget"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnHit"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 3,
+			"castFrame": 7.849999904632568,
+			"missileSpeed": 2000,
+			"mMissileEffectName": "Empty.troy",
+			"mLineWidth": 100,
+			"mTargetingTypeData": {
+				"__type": "Cone"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{e8ba57d0}": {
+		"mScriptName": "TFT8_MissFortuneGunmageBullets",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"mAlternateName": "TFT_MissFortuneBullets",
+			"mEffectAmount": [
+				{
+					"value": [
+						15,
+						55,
+						95,
+						140,
+						185,
+						230,
+						275
+					],
+					"__type": "SpellEffectAmount"
+				}
+			],
+			"mCoefficient": 0.6499999761581421,
+			"mCastTime": 0.25,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mCantCancelWhileWindingUp": true,
+			"mSpellRevealsChampion": false,
+			"bHaveHitEffect": true,
+			"castRange": [
+				4000,
+				4000,
+				4000,
+				4000,
+				4000,
+				4000,
+				4000
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"castConeDistance": 0,
+			"mMissileSpec": {
+				"mMissileWidth": 20,
+				"movementComponent": {
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand",
+					"mTargetBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 3500,
+					"__type": "FixedSpeedMovement"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnHit"
+					},
+					{
+						"__type": "DestroyOnHit"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 3,
+			"castFrame": 2.8499999046325684,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{88ae1fbb}",
+			"mLineWidth": 20,
+			"mHitEffectKey": "{de78f0bf}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {
+				"__type": "Direction"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{f6bdbf09}": {
+		"mScriptName": "TFT8_MissFortuneSpell",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mAlternateName": "TFT_MissFortuneBulletTime",
+			"mSpellTags": [
+				"Trait_Ultimate"
+			],
+			"mDataValues": [
+				{
+					"mName": "WaveCount",
+					"mValues": [
+						8,
+						8,
+						8,
+						8,
+						8,
+						8,
+						8
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "Damage",
+					"mValues": [
+						0,
+						30,
+						45,
+						150,
+						120,
+						120,
+						120
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ChannelDuration",
+					"mValues": [
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ReducedDamage",
+					"mValues": [
+						0,
+						15,
+						24,
+						100,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"ModifiedDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{12ec2a45}": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "ReducedDamage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"mCoefficient": 0.20000000298023224,
+			"mImgIconName": [
+				"ASSETS/Characters/TFT_MissFortune/HUD/Icons2D/TFT_MissFortune_R.dds"
+			],
+			"mCastTime": 0.75,
+			"delayCastOffsetPercent": -0.22220000624656677,
+			"delayTotalTimePercent": -0.33329999446868896,
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"mCantCancelWhileChanneling": true,
+			"mChannelIsInterruptedByDisables": false,
+			"mApplyAttackDamage": true,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				4000,
+				4000,
+				4000,
+				4000,
+				4000,
+				4000,
+				4000
+			],
+			"castRadius": [
+				210,
+				210,
+				210,
+				210,
+				210,
+				210,
+				210
+			],
+			"castConeAngle": 17,
+			"castConeDistance": 1400,
+			"castFrame": 2.5,
+			"missileSpeed": 779.9000244140625,
+			"mMissileEffectKey": "{b705b2b4}",
+			"mLineWidth": 100,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"mTargetingTypeData": {
+				"__type": "Cone"
+			},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{9c88dd85}": {
+		"mCharacterName": "TFT8_MissFortune",
+		"baseHP": 750,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 120,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 60,
+		"baseArmor": 30,
+		"baseSpellBlock": 30,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 890,
+		"attackSpeed": 0.699999988079071,
+		"basicAttack": {
+			"mAttackProbability": -1.5,
+			"mAttackName": "TFT8_MissFortuneBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 0.5,
+				"mAttackName": "TFT8_MissFortuneBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT8_MissFortuneCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT8_MissFortuneSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446656,
+		"tier": 4,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{48c38c97}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{019b1fa8}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{042e98a3}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"{22f5197d}": 145,
+		"__type": "TFTCharacterRecord"
+	}
+}

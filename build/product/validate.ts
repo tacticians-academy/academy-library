@@ -35,8 +35,10 @@ if (activeAugments != null) {
 		if (uniqueActiveAugments[nameKey] === undefined) {
 			uniqueActiveAugments[nameKey] = [undefined, undefined, undefined]
 		}
-		if (uniqueActiveAugments[nameKey][augment.tier - 1]) {
+		const existingAugment = uniqueActiveAugments[nameKey][augment.tier - 1]
+		if (existingAugment && (augment.name !== existingAugment.name || augment.icon !== existingAugment.icon || augment.desc !== existingAugment.desc)) {
 			console.log('Multiple augments at tier', augment, uniqueActiveAugments[nameKey][augment.tier - 1])
+			return
 		}
 		uniqueActiveAugments[nameKey][augment.tier - 1] = augment
 	})
