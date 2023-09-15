@@ -383,25 +383,6 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{f94619a5}": {
-					"{cbcac618}": 5,
-					"{37070a8d}": 5,
-					"{e6eebb2f}": 5,
-					"mFormulaParts": [
-						{
-							"mPart1": {
-								"{88536426}": "ModifiedHeal",
-								"__type": "{f3cbe7b2}"
-							},
-							"mPart2": {
-								"mDataValue": "{a3cc5b24}",
-								"__type": "NamedDataValueCalculationPart"
-							},
-							"__type": "ProductOfSubPartsCalculationPart"
-						}
-					],
-					"__type": "GameCalculation"
-				},
 				"ModifiedMagicDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
@@ -414,6 +395,25 @@
 							},
 							"mRatio": 0.009999999776482582,
 							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"TooltipBonusHeal": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mPart1": {
+								"{88536426}": "ModifiedHeal",
+								"__type": "{f3cbe7b2}"
+							},
+							"mPart2": {
+								"mDataValue": "EmpoweredHealPercent",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"__type": "ProductOfSubPartsCalculationPart"
 						}
 					],
 					"__type": "GameCalculation"

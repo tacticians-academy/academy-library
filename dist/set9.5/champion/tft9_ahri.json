@@ -143,7 +143,23 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{c84577bb}": {
+				"ModifiedMagicDamage": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "MagicDamage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"ActualBoomTooltip": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -151,7 +167,7 @@
 						{
 							"mSubparts": [
 								{
-									"mDataValue": "{7b78fab7}",
+									"mDataValue": "NumCastsToBoom",
 									"__type": "NamedDataValueCalculationPart"
 								},
 								{
@@ -164,30 +180,14 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{270780d1}": {
+				"ModifiedEssenceDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{5a596368}",
-								"__type": "NamedDataValueCalculationPart"
-							},
-							"mRatio": 0.009999999776482582,
-							"__type": "SubPartScaledProportionalToStat"
-						}
-					],
-					"__type": "GameCalculation"
-				},
-				"ModifiedMagicDamage": {
-					"{cbcac618}": 5,
-					"{37070a8d}": 5,
-					"{e6eebb2f}": 5,
-					"mFormulaParts": [
-						{
-							"mSubpart": {
-								"mDataValue": "MagicDamage",
+								"mDataValue": "EssenceDamage",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,

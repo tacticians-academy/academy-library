@@ -243,8 +243,8 @@
 					"mName": "BlastPercentAD",
 					"mValues": [
 						1.7999999523162842,
-						2,
-						2,
+						2.25,
+						2.25,
 						5,
 						2.200000047683716,
 						2.299999952316284,
@@ -332,7 +332,7 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{8a2f58bc}": {
+				"TotalBlastDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -340,7 +340,7 @@
 						{
 							"mStat": 2,
 							"mSubpart": {
-								"mDataValue": "{bdff4233}",
+								"mDataValue": "BlastPercentAD",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"__type": "StatBySubPartCalculationPart"
@@ -348,7 +348,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{c3c7988f}": {
+				"TotalChakramDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -356,7 +356,7 @@
 						{
 							"mStat": 2,
 							"mSubpart": {
-								"mDataValue": "{337d737e}",
+								"mDataValue": "ChakramPercentAD",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"__type": "StatBySubPartCalculationPart"
@@ -364,14 +364,14 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{71cd7e73}": {
+				"ModifiedChakramHealing": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{854d054c}",
+								"mDataValue": "ChakramHealing",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,

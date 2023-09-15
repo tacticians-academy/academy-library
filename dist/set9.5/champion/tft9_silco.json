@@ -1,0 +1,449 @@
+{
+	"Characters/TFT9_Silco/Spells/TFT9_SilcoBasicAttack2": {
+		"mScriptName": "TFT9_SilcoBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 24527,
+			"mAlternateName": "AnnieBasicAttack",
+			"delayCastOffsetPercent": -0.5,
+			"bHaveHitEffect": true,
+			"castRange": [
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_Weapon",
+					"mSpeed": 2000,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 7.5,
+			"missileSpeed": 1200,
+			"mMissileEffectKey": "{6d1bef3f}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
+			"selectionPriority": 2,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Silco/Spells/TFT9_SilcoCritAttack": {
+		"mScriptName": "TFT9_SilcoCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 24527,
+			"mAlternateName": "AnnieBasicAttack",
+			"delayCastOffsetPercent": -0.5,
+			"bHaveHitEffect": true,
+			"castRange": [
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand",
+					"mSpeed": 2000,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 7.5,
+			"missileSpeed": 1200,
+			"mMissileEffectKey": "{6d1bef3f}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
+			"selectionPriority": 2,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Silco/Spells/TFT9_SilcoBasicAttack": {
+		"mScriptName": "TFT9_SilcoBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 24527,
+			"mAlternateName": "AnnieBasicAttack",
+			"delayCastOffsetPercent": -0.5,
+			"bHaveHitEffect": true,
+			"castRange": [
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_Weapon",
+					"mSpeed": 2000,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 7.5,
+			"missileSpeed": 1200,
+			"mMissileEffectKey": "{6d1bef3f}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
+			"selectionPriority": 2,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Silco/Spells/TFT9_SilcoSpell": {
+		"mScriptName": "TFT9_SilcoSpell",
+		"mSpell": {
+			"mAffectsTypeFlags": 1029,
+			"mAffectsStatusFlags": 35,
+			"mSpellTags": [
+				"Trait_Ultimate",
+				"PositiveEffect_Boon"
+			],
+			"mDataValues": [
+				{
+					"mName": "ShimmerDuration",
+					"mValues": [
+						0,
+						6,
+						6,
+						10,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ShimmerDamagePerSec",
+					"mValues": [
+						0,
+						80,
+						120,
+						425,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "HealPerSec",
+					"mValues": [
+						0,
+						20,
+						30,
+						120,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"ModifiedShimmerDamagePerSec": {
+					"{cbcac618}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "ShimmerDamagePerSec",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"ModifiedHealPerSec": {
+					"{cbcac618}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "HealPerSec",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"mCoefficient": 2,
+			"delayCastOffsetPercent": -0.19999998807907104,
+			"delayTotalTimePercent": -0.6000000238418579,
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"alwaysSnapFacing": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				300,
+				300,
+				300,
+				300,
+				300,
+				300,
+				300
+			],
+			"castFrame": 8.5,
+			"missileSpeed": 20,
+			"selectionPriority": 2,
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"__type": "SpellDataResource"
+		},
+		"mBuff": {
+			"mDescription": "game_buff_tooltip_ChronoShift",
+			"__type": "BuffData"
+		},
+		"__type": "SpellObject"
+	},
+	"{e6862ee5}": {
+		"mScriptName": "TFT9_SilcoR_Mis",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6155,
+			"mAffectsStatusFlags": 32,
+			"mRequiredUnitTags": {
+				"mTagList": "Champion",
+				"__type": "ObjectTags"
+			},
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.75,
+			"mCantCancelWhileWindingUp": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				1000,
+				1000,
+				1000,
+				1000,
+				1000,
+				1000,
+				1000
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mUseHeightOffsetAtEnd": true,
+					"mStartBoneName": "R_Buffbone_Glb_Ability_Loc",
+					"mUseGroundHeightAtTarget": false,
+					"mTravelTime": 0.6000000238418579,
+					"__type": "FixedTimeMovement"
+				},
+				"heightSolver": {
+					"mGravity": 6000,
+					"__type": "GravityHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 9,
+			"missileSpeed": 1500,
+			"mMissileEffectKey": "{83e43488}",
+			"mHitEffectOrientType": 2,
+			"mFloatVarsDecimals": [
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1
+			],
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Silco/CharacterRecords/Root": {
+		"mCharacterName": "TFT9_Silco",
+		"baseHP": 750,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 50,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 45,
+		"baseArmor": 30,
+		"baseSpellBlock": 30,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 890,
+		"attackSpeed": 0.699999988079071,
+		"basicAttack": {
+			"mAttackName": "TFT9_SilcoBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT9_SilcoBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT9_SilcoCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT9_SilcoSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 1,
+		"unitTagsString": "Champion",
+		"flags": 9446656,
+		"tier": 4,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{b0e4deef}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{01fcdb08}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{32cdc033}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"{4e28a666}": "hair_02",
+		"{22f5197d}": 155,
+		"__type": "TFTCharacterRecord"
+	}
+}

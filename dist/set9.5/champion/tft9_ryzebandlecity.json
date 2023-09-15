@@ -60,14 +60,14 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{1c2ec27a}": {
+				"ModifiedBonusMana": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{43012963}",
+								"mDataValue": "BonusMana",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,

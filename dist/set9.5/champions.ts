@@ -3,23 +3,23 @@ import type { ChampionData } from '../index'
 
 export const champions: ChampionData[] = [
 	{
-		apiName: `TFT9_Aatrox`,
+		apiName: `TFT9b_Aatrox`,
 		name: `Aatrox`,
 		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Aatrox.TFT_Set9.tex`,
 		cost: 5,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{10de8466}`, `{9a48f4a7}`, `{7c0ebaf6}`],
+		traits: [`{3df99d7d}`, `{9a48f4a7}`, `{7c0ebaf6}`],
 		stats: {
-			armor: 70,
+			armor: 60,
 			attackSpeed: 0.800000011920929,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
 			damage: 80,
 			hp: 900,
 			initialMana: 0,
-			magicResist: 70,
+			magicResist: 60,
 			mana: 50,
 			moveSpeed: 500,
 			range: 1,
@@ -29,26 +29,28 @@ export const champions: ChampionData[] = [
 		passive: undefined,
 		spells: [
 			{
-				name: `TFT9_AatroxSpell`,
+				name: `TFT9b_AatroxSpell`,
 				castTime: undefined,
 				missile: undefined,
 				variables: {
 					'Duration': [10, 12, 12, 30],
-					'Omnivamp': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
+					'DarkinOmnivamp': [0.15000000596046448, 0.15000000596046448, 0.15000000596046448, 0.15000000596046448],
 					'GreatswordADRatio': [0, 2.75, 2.75, 25],
 					'ADPerASConversion': [0.800000011920929, 0.800000011920929, 0.800000011920929, 0.800000011920929],
 					'MovementSpeed': [700, 700, 700, 700],
+					'DarkinHealth': [350, 350, 350, 350],
+					'DarkinReviveTime': [4, 4, 4, 4],
 				},
 				calculations: {
-					'{f43feb6a}': {
+					'GreatswordDamage': {
 						asPercent: false,
 						parts: [
 							{
 								operator: undefined,
 								subparts: [
 									{
-										variable: `{99221af5}`,
-										starValues: undefined,
+										variable: `GreatswordADRatio`,
+										starValues: [0, 2.75, 2.75, 25],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -56,15 +58,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{ebad1c97}': {
+					'Omnivamp': {
 						asPercent: true,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{ad16f688}`,
-										starValues: undefined,
+										variable: `DarkinOmnivamp`,
+										starValues: [0.15000000596046448, 0.15000000596046448, 0.15000000596046448, 0.15000000596046448],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -79,7 +81,7 @@ export const champions: ChampionData[] = [
 		],
 		missiles: [
 			{
-				name: `TFT9_AatroxQ1`,
+				name: `TFT9b_AatroxQ1`,
 				castTime: undefined,
 				missile: undefined,
 				variables: {},
@@ -88,7 +90,7 @@ export const champions: ChampionData[] = [
 				uninterruptable: undefined,
 			},
 			{
-				name: `TFT9_AatroxQ2`,
+				name: `TFT9b_AatroxQ2`,
 				castTime: undefined,
 				missile: undefined,
 				variables: {},
@@ -97,7 +99,7 @@ export const champions: ChampionData[] = [
 				uninterruptable: undefined,
 			},
 			{
-				name: `TFT9_AatroxQ3`,
+				name: `TFT9b_AatroxQ3`,
 				castTime: undefined,
 				missile: undefined,
 				variables: {},
@@ -146,15 +148,31 @@ export const champions: ChampionData[] = [
 					'TooltipReave': [20, 20, 20, 20],
 				},
 				calculations: {
-					'{c84577bb}': {
+					'MagicDamage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `MagicDamage`,
+										starValues: [0, 230, 350, 1888],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'ActualBoomTooltip': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `sum`,
 								subparts: [
 									{
-										variable: `{7b78fab7}`,
-										starValues: undefined,
+										variable: `NumCastsToBoom`,
+										starValues: [2, 2, 2, 0],
 										stat: undefined,
 										ratio: undefined,
 									},
@@ -168,31 +186,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{270780d1}': {
+					'EssenceDamage': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{5a596368}`,
-										starValues: undefined,
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-					'MagicDamage': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `MagicDamage`,
-										starValues: [0, 230, 350, 1888],
+										variable: `EssenceDamage`,
+										starValues: [0, 90, 135, 1000],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -331,126 +333,6 @@ export const champions: ChampionData[] = [
 		],
 	},
 	{
-		apiName: `TFT9_Akshan`,
-		name: `Akshan`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Akshan.TFT_Set9.tex`,
-		cost: 3,
-		starLevel: undefined,
-		teamSize: undefined,
-		isSpawn: false,
-		traits: [`{cd4e5e4a}`, `{24734090}`],
-		stats: {
-			armor: 25,
-			attackSpeed: 0.75,
-			critChance: 0.25,
-			critMultiplier: 1.399999976158142,
-			damage: 60,
-			hp: 700,
-			initialMana: 30,
-			magicResist: 25,
-			mana: 110,
-			moveSpeed: 500,
-			range: 4,
-		},
-		basicAttackMissileSpeed: 2000,
-		critAttackMissileSpeed: 2000,
-		passive: undefined,
-		spells: [
-			{
-				name: `TFT9_AkshanSpell`,
-				castTime: undefined,
-				missile: undefined,
-				variables: {
-					'NumBullets': [6, 6, 6, 6],
-					'ADRatio': [1.25, 1.25, 1.25, 1.25],
-					'BaseDamage': [0, 20, 35, 60],
-					'RocketsPerSimulatedLaunchAttack': [2, 2, 2, 2],
-				},
-				calculations: {
-					'Damage': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `sum`,
-								subparts: [
-									{
-										variable: `ADRatio`,
-										starValues: [1.25, 1.25, 1.25, 1.25],
-										stat: `AD`,
-										ratio: 1,
-									},
-									{
-										variable: `BaseDamage`,
-										starValues: [0, 20, 35, 60],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-					'BaseDamage': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `BaseDamage`,
-										starValues: [0, 20, 35, 60],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-				},
-				cantCastWhileRooted: undefined,
-				uninterruptable: undefined,
-			},
-		],
-		missiles: [
-			{
-				name: `TFT9_AkshanR_mis`,
-				castTime: 0.125,
-				missile: {
-					width: 60,
-					travelTime: undefined,
-					speedInitial: 3000,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-					_missileSpeed: 3200,
-				},
-				variables: {},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: undefined,
-			},
-			{
-				name: `TFT9_AkshanR_ammo`,
-				castTime: undefined,
-				missile: {
-					width: 40,
-					travelTime: undefined,
-					speedInitial: undefined,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: undefined,
-			},
-		],
-	},
-	{
 		apiName: `TFT9_HeimerdingerTurret`,
 		name: `Apex Turret`,
 		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_HeimerdingerTurret.TFT_Set9.tex`,
@@ -578,7 +460,7 @@ export const champions: ChampionData[] = [
 					_missileSpeed: 1000,
 				},
 				variables: {
-					'BlastPercentAD': [1.7999999523162842, 2, 2, 5],
+					'BlastPercentAD': [1.7999999523162842, 2.25, 2.25, 5],
 					'ChakramDuration': [7, 7, 7, 7],
 					'ChakramPercentAD': [0.10000000149011612, 0.05000000074505806, 0.05000000074505806, 0.15000000596046448],
 					'ChakramHealing': [0.75, 0.75, 0.75, 0.75],
@@ -587,15 +469,15 @@ export const champions: ChampionData[] = [
 					'MaxChakrams': [10, 10, 12, 20],
 				},
 				calculations: {
-					'{8a2f58bc}': {
+					'BlastDamage': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{bdff4233}`,
-										starValues: undefined,
+										variable: `BlastPercentAD`,
+										starValues: [1.7999999523162842, 2.25, 2.25, 5],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -603,15 +485,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{c3c7988f}': {
+					'ChakramDamage': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{337d737e}`,
-										starValues: undefined,
+										variable: `ChakramPercentAD`,
+										starValues: [0.10000000149011612, 0.05000000074505806, 0.05000000074505806, 0.15000000596046448],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -619,15 +501,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{71cd7e73}': {
+					'ChakramHealing': {
 						asPercent: true,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{854d054c}`,
-										starValues: undefined,
+										variable: `ChakramHealing`,
+										starValues: [0.75, 0.75, 0.75, 0.75],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -767,14 +649,14 @@ export const champions: ChampionData[] = [
 				castTime: 0.30000001192092896,
 				missile: undefined,
 				variables: {
-					'ADPercent': [0, 1.5, 1.5, 1.600000023841858],
+					'ADPercent': [0, 1.600000023841858, 1.649999976158142, 1.75],
 					'BonusDamage': [10, 10, 10, 10],
 					'Shots': [0, 8, 8, 8],
 					'Duration': [2, 2, 2, 2],
 					'Chill': [30, 30, 30, 30],
 				},
 				calculations: {
-					'{b1925ae3}': {
+					'ArrowDamage': {
 						asPercent: false,
 						parts: [
 							{
@@ -782,7 +664,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `ADPercent`,
-										starValues: [0, 1.5, 1.5, 1.600000023841858],
+										starValues: [0, 1.600000023841858, 1.649999976158142, 1.75],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -879,34 +761,12 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {
-					'BaseMagicDamage': [35, 105, 160, 550],
+					'BaseMagicDamage': [35, 100, 150, 500],
 					'Duration': [90, 90, 90, 90],
 					'MaxSummons': [3, 3, 3, 3],
 					'BonusRatio': [0.699999988079071, 0.699999988079071, 0.699999988079071, 0.699999988079071],
 				},
 				calculations: {
-					'{2e670f8b}': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `product`,
-								subparts: [
-									{
-										variable: `{5b68a63a}`,
-										starValues: undefined,
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-									{
-										variable: `{d04ae9af}`,
-										starValues: undefined,
-										stat: undefined,
-										ratio: undefined,
-									},
-								],
-							},
-						],
-					},
 					'MagicDamage': {
 						asPercent: false,
 						parts: [
@@ -914,10 +774,32 @@ export const champions: ChampionData[] = [
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{5b68a63a}`,
-										starValues: undefined,
+										variable: `BaseMagicDamage`,
+										starValues: [35, 100, 150, 500],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'MaxSoldierStrike': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `product`,
+								subparts: [
+									{
+										variable: `BaseMagicDamage`,
+										starValues: [35, 100, 150, 500],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+									{
+										variable: `BonusRatio`,
+										starValues: [0.699999988079071, 0.699999988079071, 0.699999988079071, 0.699999988079071],
+										stat: undefined,
+										ratio: undefined,
 									},
 								],
 							},
@@ -945,8 +827,8 @@ export const champions: ChampionData[] = [
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{5b68a63a}`,
-										starValues: undefined,
+										variable: `BaseMagicDamage`,
+										starValues: [70, 80, 120, 1000],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1213,15 +1095,15 @@ export const champions: ChampionData[] = [
 					'StrikesPer100BonusAS': [5, 5, 5, 5],
 				},
 				calculations: {
-					'{588a9429}': {
+					'NumStrikes': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `sum`,
 								subparts: [
 									{
-										variable: `{011db30e}`,
-										starValues: undefined,
+										variable: `NumStrikes`,
+										starValues: [5, 6, 6, 30],
 										stat: undefined,
 										ratio: undefined,
 									},
@@ -1253,8 +1135,8 @@ export const champions: ChampionData[] = [
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{291a269a}`,
-										starValues: undefined,
+										variable: `BonusFlatDamage`,
+										starValues: [15, 18, 30, 50],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1262,15 +1144,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{0c668f30}': {
+					'FlatDamage': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{291a269a}`,
-										starValues: undefined,
+										variable: `BonusFlatDamage`,
+										starValues: [15, 18, 30, 50],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1362,7 +1244,7 @@ export const champions: ChampionData[] = [
 					'TooltipWound': [50, 50, 50, 50],
 				},
 				calculations: {
-					'{678683de}': {
+					'BaseDamage': {
 						asPercent: false,
 						parts: [
 							{
@@ -1443,9 +1325,9 @@ export const champions: ChampionData[] = [
 			critMultiplier: 1.399999976158142,
 			damage: 65,
 			hp: 700,
-			initialMana: 30,
+			initialMana: 20,
 			magicResist: 30,
-			mana: 90,
+			mana: 80,
 			moveSpeed: 500,
 			range: 1,
 		},
@@ -1459,32 +1341,10 @@ export const champions: ChampionData[] = [
 				missile: undefined,
 				variables: {
 					'PercentMaximumHealthDamage': [0.15000000596046448, 0.15000000596046448, 0.15000000596046448, 0.15000000596046448],
-					'BonusDamage': [140, 250, 335, 450],
+					'BonusDamage': [140, 270, 370, 500],
 					'BonusHealthOnKill': [25, 30, 35, 40],
 				},
 				calculations: {
-					'Damage': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `sum`,
-								subparts: [
-									{
-										variable: `BonusDamage`,
-										starValues: [140, 250, 335, 450],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-									{
-										variable: `{7a01df57}`,
-										starValues: undefined,
-										stat: `HP`,
-										ratio: 1,
-									},
-								],
-							},
-						],
-					},
 					'BonusDamage': {
 						asPercent: false,
 						parts: [
@@ -1493,9 +1353,31 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `BonusDamage`,
-										starValues: [140, 250, 335, 450],
+										starValues: [140, 270, 370, 500],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `sum`,
+								subparts: [
+									{
+										variable: `BonusDamage`,
+										starValues: [140, 270, 370, 500],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+									{
+										variable: `PercentMaximumHealthDamage`,
+										starValues: [0.15000000596046448, 0.15000000596046448, 0.15000000596046448, 0.15000000596046448],
+										stat: `HP`,
+										ratio: 1,
 									},
 								],
 							},
@@ -1554,15 +1436,15 @@ export const champions: ChampionData[] = [
 					'PercentDamageFalloff': [0, 0.8199999928474426, 0.8500000238418579, 0.8999999761581421],
 				},
 				calculations: {
-					'{fac096d7}': {
+					'AbilityScaleDamage': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{966831c0}`,
-										starValues: undefined,
+										variable: `AbilityScaleDamage`,
+										starValues: [100, 55, 80, 110],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1577,14 +1459,14 @@ export const champions: ChampionData[] = [
 								operator: `sum`,
 								subparts: [
 									{
-										variable: `{966831c0}`,
-										starValues: undefined,
+										variable: `AbilityScaleDamage`,
+										starValues: [100, 55, 80, 110],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
 									{
-										variable: `{14f704f9}`,
-										starValues: undefined,
+										variable: `AttackDamagePercent`,
+										starValues: [3, 3, 3, 3],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -1639,7 +1521,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'Damage': [0, 300, 450, 725],
+					'Damage': [0, 270, 405, 610],
 					'HealPercent': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
 					'RewindTime': [4, 4, 4, 4],
 					'RollDuration': [0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645],
@@ -1653,9 +1535,85 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [0, 300, 450, 725],
+										starValues: [0, 270, 405, 610],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
+			},
+		],
+		missiles: [],
+	},
+	{
+		apiName: `TFT9_Fiora`,
+		name: `Fiora`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Fiora.TFT_Set9_Stage2.tex`,
+		cost: 4,
+		starLevel: undefined,
+		teamSize: undefined,
+		isSpawn: false,
+		traits: [`{4afab417}`, `{8faff97c}`],
+		stats: {
+			armor: 40,
+			attackSpeed: 0.8999999761581421,
+			critChance: 0.25,
+			critMultiplier: 1.399999976158142,
+			damage: 75,
+			hp: 850,
+			initialMana: 70,
+			magicResist: 40,
+			mana: 160,
+			moveSpeed: 500,
+			range: 1,
+		},
+		basicAttackMissileSpeed: 467,
+		critAttackMissileSpeed: 467,
+		passive: undefined,
+		spells: [
+			{
+				name: `TFT9_FioraSpell`,
+				castTime: 0.20000000298023224,
+				missile: undefined,
+				variables: {
+					'PercentAD': [1.5499999523162842, 1.5, 1.5, 2.5],
+					'BonusTrueDamage': [75, 60, 90, 270],
+					'PercentHealing': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
+					'NumStrikes': [4, 4, 4, 4],
+				},
+				calculations: {
+					'BonusDamage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `BonusTrueDamage`,
+										starValues: [75, 60, 90, 270],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `PercentAD`,
+										starValues: [1.5499999523162842, 1.5, 1.5, 2.5],
+										stat: `AD`,
+										ratio: 1,
 									},
 								],
 							},
@@ -1746,61 +1704,55 @@ export const champions: ChampionData[] = [
 		missiles: [],
 	},
 	{
-		apiName: `TFT9_Garen`,
-		name: `Garen`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Garen.TFT_Set9.tex`,
-		cost: 3,
+		apiName: `TFT9_Gangplank`,
+		name: `Gangplank`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Gangplank.TFT_Set9_Stage2.tex`,
+		cost: 5,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{4afab417}`, `{7c0ebaf6}`],
+		traits: [`{001c06e0}`, `{dfc0f253}`, `{f4a432b4}`],
 		stats: {
-			armor: 45,
-			attackSpeed: 0.75,
+			armor: 30,
+			attackSpeed: 0.800000011920929,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
-			damage: 70,
-			hp: 850,
-			initialMana: 0,
-			magicResist: 45,
-			mana: 80,
+			damage: 80,
+			hp: 1000,
+			initialMana: 90,
+			magicResist: 30,
+			mana: 180,
 			moveSpeed: 500,
 			range: 1,
 		},
-		basicAttackMissileSpeed: 347.79998779296875,
-		critAttackMissileSpeed: 347.79998779296875,
+		basicAttackMissileSpeed: undefined,
+		critAttackMissileSpeed: undefined,
 		passive: undefined,
 		spells: [
 			{
-				name: `TFT9_GarenSpell`,
+				name: `TFT9_GangplankSpell`,
 				castTime: undefined,
-				missile: {
-					width: undefined,
-					travelTime: undefined,
-					speedInitial: 700,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
+				missile: undefined,
 				variables: {
-					'SpinDuration': [4, 4, 4, 4],
-					'BaseTicks': [2, 2, 2, 2],
-					'DamagePerTick': [15, 0.800000011920929, 0.8199999928474426, 0.8500000238418579],
-					'ASPerTickTooltip': [50, 50, 50, 50],
-					'SpinsPerLaunchAttack': [3, 3, 3, 3],
+					'MeleePassiveADRatio': [0, 3, 3, 25],
+					'MeleePassiveDuration': [3, 3, 3, 3],
+					'ActiveMagicDamage': [0, 450, 675, 9001],
+					'ActiveAttackSpeed': [0, 0.3499999940395355, 0.5, 3],
+					'ActiveAttackSpeedDuration': [3, 3, 3, 3],
+					'ReaverKingMeleeBonusResists': [50, 50, 50, 50],
+					'ReaverKingRangedBonusHexRange': [3, 3, 3, 3],
+					'ReaverKingRangedBonusMana': [3, 3, 3, 3],
 				},
 				calculations: {
-					'Damage': {
+					'MeleePassiveTotalDamage': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `sum`,
 								subparts: [
 									{
-										variable: `DamagePerTick`,
-										starValues: [15, 0.800000011920929, 0.8199999928474426, 0.8500000238418579],
+										variable: `MeleePassiveADRatio`,
+										starValues: [0, 3, 3, 25],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -1808,59 +1760,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{c30c4324}': {
-						asPercent: true,
-						parts: [
-							{
-								operator: `product`,
-								subparts: [
-									{
-										variable: undefined,
-										starValues: undefined,
-										stat: undefined,
-										ratio: undefined,
-									},
-									{
-										variable: `SpinDuration`,
-										starValues: [4, 4, 4, 4],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-					'{50a938a5}': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `sum`,
-								subparts: [
-									{
-										variable: `{55959392}`,
-										starValues: undefined,
-										stat: undefined,
-										ratio: undefined,
-									},
-									{
-										variable: undefined,
-										starValues: undefined,
-										stat: undefined,
-										ratio: undefined,
-									},
-								],
-							},
-						],
-					},
-					'Duration': {
+					'ActiveMagicDamage': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `SpinDuration`,
-										starValues: [4, 4, 4, 4],
+										variable: `ActiveMagicDamage`,
+										starValues: [0, 450, 675, 9001],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1873,55 +1781,156 @@ export const champions: ChampionData[] = [
 				uninterruptable: true,
 			},
 		],
-		missiles: [],
+		missiles: [
+			{
+				name: `TFT9_GangplankBasicAttack_Ranged`,
+				castTime: undefined,
+				missile: {
+					width: undefined,
+					travelTime: undefined,
+					speedInitial: 2600,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+			{
+				name: `TFT9_GangplankCritAttack_Ranged`,
+				castTime: undefined,
+				missile: {
+					width: undefined,
+					travelTime: undefined,
+					speedInitial: 2600,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+			{
+				name: `TFT9_GangplankBasicAttack2_Ranged`,
+				castTime: undefined,
+				missile: {
+					width: undefined,
+					travelTime: undefined,
+					speedInitial: 2600,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+			{
+				name: `TFT9_GangplankSpell_Boat`,
+				castTime: undefined,
+				missile: {
+					width: 200,
+					travelTime: undefined,
+					speedInitial: 1000,
+					speedMin: 800,
+					speedMax: 1000,
+					acceleration: -200,
+					startDelay: undefined,
+					tracksTarget: false,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+			{
+				name: `TFT9_GangplankBasicAttack2`,
+				castTime: undefined,
+				missile: undefined,
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+		],
 	},
 	{
-		apiName: `TFT9_Gwen`,
-		name: `Gwen`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Gwen.TFT_Set9.tex`,
-		cost: 4,
+		apiName: `TFT9_Graves`,
+		name: `Graves`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Graves.TFT_Set9_Stage2.tex`,
+		cost: 1,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{42ae1c57}`, `{9a48f4a7}`],
+		traits: [`{001c06e0}`, `{dfc0f253}`, `{29d0b1a5}`],
 		stats: {
-			armor: 50,
-			attackSpeed: 0.800000011920929,
+			armor: 40,
+			attackSpeed: 0.6499999761581421,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
 			damage: 55,
-			hp: 1000,
-			initialMana: 0,
-			magicResist: 50,
-			mana: 35,
+			hp: 700,
+			initialMana: 30,
+			magicResist: 40,
+			mana: 80,
 			moveSpeed: 500,
-			range: 2,
+			range: 1,
 		},
-		basicAttackMissileSpeed: 467,
-		critAttackMissileSpeed: undefined,
+		basicAttackMissileSpeed: 3000,
+		critAttackMissileSpeed: 3400,
 		passive: undefined,
 		spells: [
 			{
-				name: `TFT9_GwenSpell`,
-				castTime: undefined,
-				missile: undefined,
+				name: `TFT9_GravesSpell`,
+				castTime: 0.25,
+				missile: {
+					width: 120,
+					travelTime: undefined,
+					speedInitial: 1500,
+					speedMin: 1500,
+					speedMax: 5000,
+					acceleration: 5000,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
 				variables: {
-					'Snips': [3, 3, 3, 3],
-					'MagicDamage': [0, 100, 150, 400],
-					'MistDuration': [3, 3, 3, 5],
-					'CastCountForMist': [3, 3, 3, 3],
-					'MistResists': [150, 120, 120, 300],
+					'PercentAttackDamage': [0, 2.200000047683716, 2.200000047683716, 2.299999952316284],
+					'AbilityScaleDamage': [0, 30, 45, 60],
+					'CCDuration': [1, 3, 3.5, 4],
+					'TooltipChillPercent': [30, 30, 30, 30],
 				},
 				calculations: {
-					'MagicDamage': {
+					'Damage': {
 						asPercent: false,
 						parts: [
+							{
+								operator: undefined,
+								subparts: [
+									{
+										variable: `PercentAttackDamage`,
+										starValues: [0, 2.200000047683716, 2.200000047683716, 2.299999952316284],
+										stat: `AD`,
+										ratio: 1,
+									},
+								],
+							},
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `MagicDamage`,
-										starValues: [0, 100, 150, 400],
+										variable: `AbilityScaleDamage`,
+										starValues: [0, 30, 45, 60],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1934,7 +1943,45 @@ export const champions: ChampionData[] = [
 				uninterruptable: undefined,
 			},
 		],
-		missiles: [],
+		missiles: [
+			{
+				name: `TFT9_GravesBasicAttackSpread`,
+				castTime: undefined,
+				missile: {
+					width: 20,
+					travelTime: undefined,
+					speedInitial: 3800,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: false,
+				},
+				variables: {
+					'DamageMultiplier': [0, 0.05000000074505806, 0.10000000149011612, 0.15000000596046448],
+				},
+				calculations: {
+					'BonusDamage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: undefined,
+								subparts: [
+									{
+										variable: `DamageMultiplier`,
+										starValues: [0, 0.05000000074505806, 0.10000000149011612, 0.15000000596046448],
+										stat: `AD`,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+				},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+		],
 	},
 	{
 		apiName: `TFT9_Heimerdinger`,
@@ -2023,6 +2070,65 @@ export const champions: ChampionData[] = [
 		],
 	},
 	{
+		apiName: `TFT9_Illaoi`,
+		name: `Illaoi`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Illaoi.TFT_Set9_Stage2.tex`,
+		cost: 1,
+		starLevel: undefined,
+		teamSize: undefined,
+		isSpawn: false,
+		traits: [`{001c06e0}`, `{1b732087}`],
+		stats: {
+			armor: 40,
+			attackSpeed: 0.550000011920929,
+			critChance: 0.25,
+			critMultiplier: 1.399999976158142,
+			damage: 60,
+			hp: 700,
+			initialMana: 40,
+			magicResist: 40,
+			mana: 80,
+			moveSpeed: 500,
+			range: 1,
+		},
+		basicAttackMissileSpeed: 467,
+		critAttackMissileSpeed: 467,
+		passive: undefined,
+		spells: [
+			{
+				name: `TFT9_IllaoiSpell`,
+				castTime: undefined,
+				missile: undefined,
+				variables: {
+					'MagicDamage': [0, 220, 330, 500],
+					'PercentHealing': [0, 0.25, 0.30000001192092896, 0.4000000059604645],
+					'Duration': [5, 5, 5, 5],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `MagicDamage`,
+										starValues: [0, 220, 330, 500],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+		],
+		missiles: [],
+	},
+	{
 		apiName: `TFT9_Irelia`,
 		name: `Irelia`,
 		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Irelia.TFT_Set9.tex`,
@@ -2067,8 +2173,8 @@ export const champions: ChampionData[] = [
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{c3360f16}`,
-										starValues: undefined,
+										variable: `ShieldHealth`,
+										starValues: [200, 350, 400, 450],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2076,15 +2182,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{a6a27a90}': {
+					'BaseStrikeDamage': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{5f1c3fbf}`,
-										starValues: undefined,
+										variable: `StrikeBaseDamage`,
+										starValues: [50, 70, 100, 150],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2175,9 +2281,9 @@ export const champions: ChampionData[] = [
 			critMultiplier: 1.399999976158142,
 			damage: 65,
 			hp: 700,
-			initialMana: 40,
+			initialMana: 30,
 			magicResist: 25,
-			mana: 90,
+			mana: 80,
 			moveSpeed: 500,
 			range: 4,
 		},
@@ -2207,15 +2313,15 @@ export const champions: ChampionData[] = [
 					'SelfAttackSpeed': [0.30000001192092896, 0.30000001192092896, 0.4000000059604645, 0.5],
 				},
 				calculations: {
-					'{98aa80a6}': {
+					'PercentAttackSpeed': {
 						asPercent: true,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{db1859c9}`,
-										starValues: undefined,
+										variable: `PercentAttackSpeed`,
+										starValues: [0.5, 0.15000000596046448, 0.15000000596046448, 0.15000000596046448],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2239,15 +2345,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{48690697}': {
+					'EnhancedAttackSpeed': {
 						asPercent: true,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{df36deba}`,
-										starValues: undefined,
+										variable: `SelfAttackSpeed`,
+										starValues: [0.30000001192092896, 0.30000001192092896, 0.4000000059604645, 0.5],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2320,7 +2426,7 @@ export const champions: ChampionData[] = [
 					'Damage': [0, 60, 90, 135],
 				},
 				calculations: {
-					'{7cd71e4c}': {
+					'MissingHealthPercentBonus': {
 						asPercent: true,
 						parts: [
 							{
@@ -2417,9 +2523,9 @@ export const champions: ChampionData[] = [
 			critMultiplier: 1.399999976158142,
 			damage: 55,
 			hp: 600,
-			initialMana: 0,
+			initialMana: 10,
 			magicResist: 20,
-			mana: 75,
+			mana: 70,
 			moveSpeed: 500,
 			range: 4,
 		},
@@ -2443,8 +2549,8 @@ export const champions: ChampionData[] = [
 				variables: {
 					'NumberOfRockets': [5, 5, 5, 5],
 					'HexRadius': [2, 2, 2, 2],
-					'PercentAttackDamage': [0, 1.5, 1.5, 1.600000023841858],
-					'AbilityScaleDamage': [20, 10, 15, 25],
+					'PercentAttackDamage': [0, 1.5, 1.5499999523162842, 1.600000023841858],
+					'AbilityScaleDamage': [20, 15, 20, 35],
 					'RocketsPerSimulatedLaunchAttack': [2, 2, 2, 2],
 				},
 				calculations: {
@@ -2456,7 +2562,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `PercentAttackDamage`,
-										starValues: [0, 1.5, 1.5, 1.600000023841858],
+										starValues: [0, 1.5, 1.5499999523162842, 1.600000023841858],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -2466,8 +2572,8 @@ export const champions: ChampionData[] = [
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{966831c0}`,
-										starValues: undefined,
+										variable: `AbilityScaleDamage`,
+										starValues: [20, 15, 20, 35],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2512,15 +2618,15 @@ export const champions: ChampionData[] = [
 		isSpawn: false,
 		traits: [`{cd4e5e4a}`, `{1b732087}`],
 		stats: {
-			armor: 60,
+			armor: 50,
 			attackSpeed: 0.699999988079071,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
 			damage: 60,
 			hp: 1000,
 			initialMana: 0,
-			magicResist: 60,
-			mana: 60,
+			magicResist: 50,
+			mana: 70,
 			moveSpeed: 500,
 			range: 1,
 		},
@@ -2556,7 +2662,7 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{9ce7b15e}': {
+					'CollisionDamage': {
 						asPercent: false,
 						parts: [
 							{
@@ -2611,9 +2717,9 @@ export const champions: ChampionData[] = [
 			critMultiplier: 1.399999976158142,
 			damage: 45,
 			hp: 850,
-			initialMana: 30,
+			initialMana: 40,
 			magicResist: 35,
-			mana: 125,
+			mana: 120,
 			moveSpeed: 500,
 			range: 4,
 		},
@@ -2729,7 +2835,7 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{c9f34916}': {
+					'SpellRange': {
 						asPercent: false,
 						parts: [
 							{
@@ -2821,112 +2927,6 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
-				},
-				variables: {},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: undefined,
-			},
-		],
-	},
-	{
-		apiName: `TFT9_Kalista`,
-		name: `Kalista`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Kalista.TFT_Set9.tex`,
-		cost: 3,
-		starLevel: undefined,
-		teamSize: undefined,
-		isSpawn: false,
-		traits: [`{42ae1c57}`, `{8faff97c}`],
-		stats: {
-			armor: 25,
-			attackSpeed: 0.8500000238418579,
-			critChance: 0.25,
-			critMultiplier: 1.399999976158142,
-			damage: 45,
-			hp: 650,
-			initialMana: 0,
-			magicResist: 25,
-			mana: 80,
-			moveSpeed: 500,
-			range: 4,
-		},
-		basicAttackMissileSpeed: 2600,
-		critAttackMissileSpeed: 2600,
-		passive: undefined,
-		spells: [
-			{
-				name: `TFT9_KalistaSpell`,
-				castTime: 0.25,
-				missile: {
-					width: undefined,
-					travelTime: undefined,
-					speedInitial: 20,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {
-					'Damage': [16, 18, 27, 45],
-					'NumSpears': [6, 6, 6, 6],
-				},
-				calculations: {
-					'Damage': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `Damage`,
-										starValues: [16, 18, 27, 45],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-				},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-		],
-		missiles: [
-			{
-				name: `TFT9_KalistaSpellPierce`,
-				castTime: 0.10000000149011612,
-				missile: {
-					width: undefined,
-					travelTime: undefined,
-					speedInitial: 10,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-					_missileSpeed: 4000,
-				},
-				variables: {},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-			{
-				name: `TFT9_KalistaSpellPierceMissile`,
-				castTime: undefined,
-				missile: {
-					width: undefined,
-					travelTime: undefined,
-					speedInitial: 10,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-					_missileSpeed: 2000,
 				},
 				variables: {},
 				calculations: {},
@@ -3190,7 +3190,7 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{c9f34916}': {
+					'SpellRange': {
 						asPercent: false,
 						parts: [
 							{
@@ -3203,8 +3203,8 @@ export const champions: ChampionData[] = [
 										ratio: 0.004999999888241291,
 									},
 									{
-										variable: `{a3dca3cb}`,
-										starValues: undefined,
+										variable: `BonusSpellRange`,
+										starValues: [1, 1, 1, 1],
 										stat: undefined,
 										ratio: undefined,
 									},
@@ -3322,22 +3322,6 @@ export const champions: ChampionData[] = [
 					'AscensionDamage': [0, 30, 40, 60],
 				},
 				calculations: {
-					'{851f35f7}': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `{2f9d5f21}`,
-										starValues: undefined,
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
 					'MagicDamage': {
 						asPercent: false,
 						parts: [
@@ -3347,6 +3331,22 @@ export const champions: ChampionData[] = [
 									{
 										variable: `Damage`,
 										starValues: [0, 30, 45, 70],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'AscensionModifiedMagicDamage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `AscensionDamage`,
+										starValues: [0, 30, 40, 60],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3382,246 +3382,6 @@ export const champions: ChampionData[] = [
 		],
 	},
 	{
-		apiName: `TFT9_Kled`,
-		name: `Kled`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Kled.TFT_Set9.tex`,
-		cost: 2,
-		starLevel: undefined,
-		teamSize: undefined,
-		isSpawn: false,
-		traits: [`{b02cb1c6}`, `{932dc68e}`, `{9a48f4a7}`],
-		stats: {
-			armor: 40,
-			attackSpeed: 0.75,
-			critChance: 0.25,
-			critMultiplier: 1.399999976158142,
-			damage: 58,
-			hp: 550,
-			initialMana: 0,
-			magicResist: 40,
-			mana: 175,
-			moveSpeed: 500,
-			range: 1,
-		},
-		basicAttackMissileSpeed: undefined,
-		critAttackMissileSpeed: undefined,
-		passive: undefined,
-		spells: [
-			{
-				name: `TFT9_KledSpell`,
-				castTime: undefined,
-				missile: undefined,
-				variables: {
-					'ShieldPercent': [0.30000001192092896, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
-					'AttackSpeedPercent': [0.6000000238418579, 0.6499999761581421, 0.699999988079071, 0.75],
-					'ExecuteThreshold': [25, 25, 25, 25],
-				},
-				calculations: {
-					'{5ba7c96e}': {
-						asPercent: true,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `{a8ca7859}`,
-										starValues: undefined,
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-					'Shield': {
-						asPercent: false,
-						parts: [
-							{
-								operator: undefined,
-								subparts: [
-									{
-										variable: `ShieldPercent`,
-										starValues: [0.30000001192092896, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
-										stat: `HP`,
-										ratio: 1,
-									},
-								],
-							},
-						],
-					},
-				},
-				cantCastWhileRooted: undefined,
-				uninterruptable: undefined,
-			},
-		],
-		missiles: [
-			{
-				name: `TFT9_KledExecuteAttack_Mounted`,
-				castTime: undefined,
-				missile: undefined,
-				variables: {},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: undefined,
-			},
-			{
-				name: `TFT9_KledPAttackMounted`,
-				castTime: undefined,
-				missile: undefined,
-				variables: {},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: undefined,
-			},
-			{
-				name: `TFT9_KledPAttack`,
-				castTime: undefined,
-				missile: undefined,
-				variables: {},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: undefined,
-			},
-			{
-				name: `TFT9_KledExecuteAttack_Dismounted`,
-				castTime: undefined,
-				missile: undefined,
-				variables: {},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: undefined,
-			},
-		],
-	},
-	{
-		apiName: `TFT9_Lissandra`,
-		name: `Lissandra`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Lissandra.TFT_Set9.tex`,
-		cost: 3,
-		starLevel: undefined,
-		teamSize: undefined,
-		isSpawn: false,
-		traits: [`{6afb61dd}`, `{d7ded6a9}`],
-		stats: {
-			armor: 40,
-			attackSpeed: 0.699999988079071,
-			critChance: 0.25,
-			critMultiplier: 1.399999976158142,
-			damage: 50,
-			hp: 800,
-			initialMana: 30,
-			magicResist: 40,
-			mana: 90,
-			moveSpeed: 500,
-			range: 2,
-		},
-		basicAttackMissileSpeed: 2200,
-		critAttackMissileSpeed: 2000,
-		passive: undefined,
-		spells: [
-			{
-				name: `TFT9_LissandraSpell`,
-				castTime: undefined,
-				missile: undefined,
-				variables: {
-					'Damage': [0, 160, 240, 400],
-					'StunDuration': [2, 2, 2, 2],
-					'DebuffDuration': [4, 4, 4, 4],
-					'DamageAmp': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
-				},
-				calculations: {
-					'Damage': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `Damage`,
-										starValues: [0, 160, 240, 400],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-				},
-				cantCastWhileRooted: undefined,
-				uninterruptable: undefined,
-			},
-		],
-		missiles: [],
-	},
-	{
-		apiName: `TFT9_Lux`,
-		name: `Lux`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Lux.TFT_Set9.tex`,
-		cost: 4,
-		starLevel: undefined,
-		teamSize: undefined,
-		isSpawn: false,
-		traits: [`{4afab417}`, `{01fcdb08}`],
-		stats: {
-			armor: 30,
-			attackSpeed: 0.699999988079071,
-			critChance: 0.25,
-			critMultiplier: 1.399999976158142,
-			damage: 45,
-			hp: 750,
-			initialMana: 0,
-			magicResist: 30,
-			mana: 40,
-			moveSpeed: 500,
-			range: 4,
-		},
-		basicAttackMissileSpeed: 1600,
-		critAttackMissileSpeed: 1600,
-		passive: undefined,
-		spells: [
-			{
-				name: `TFT9_LuxSpell`,
-				castTime: 0.5,
-				missile: {
-					width: undefined,
-					travelTime: undefined,
-					speedInitial: 1600,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {
-					'Duration': [3, 3, 3, 3],
-					'Damage': [0, 735, 1100, 2750],
-					'Shred': [0, 15, 15, 40],
-				},
-				calculations: {
-					'Damage': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `Damage`,
-										starValues: [0, 735, 1100, 2750],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-				},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-		],
-		missiles: [],
-	},
-	{
 		apiName: `TFT9_Malzahar`,
 		name: `Malzahar`,
 		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Malzahar.TFT_Set9.tex`,
@@ -3652,7 +3412,7 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {
-					'Damage': [0, 205, 310, 460],
+					'Damage': [0, 220, 330, 500],
 					'PercentShieldDestruction': [0.5, 0.5, 0.5, 0.5],
 				},
 				calculations: {
@@ -3664,7 +3424,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [0, 205, 310, 460],
+										starValues: [0, 220, 330, 500],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3699,50 +3459,92 @@ export const champions: ChampionData[] = [
 		],
 	},
 	{
-		apiName: `TFT9_Maokai`,
-		name: `Maokai`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Maokai.TFT_Set9.tex`,
+		apiName: `TFT9_Milio`,
+		name: `Milio`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Milio.TFT_Set9_Stage2.tex`,
 		cost: 1,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{42ae1c57}`, `{1b732087}`],
+		traits: [`{8c92325c}`, `{d7ded6a9}`],
 		stats: {
-			armor: 40,
-			attackSpeed: 0.5,
+			armor: 20,
+			attackSpeed: 0.699999988079071,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
-			damage: 60,
-			hp: 700,
-			initialMana: 50,
-			magicResist: 40,
-			mana: 125,
+			damage: 40,
+			hp: 500,
+			initialMana: 20,
+			magicResist: 20,
+			mana: 80,
 			moveSpeed: 500,
-			range: 1,
+			range: 4,
 		},
-		basicAttackMissileSpeed: 0,
-		critAttackMissileSpeed: 0,
+		basicAttackMissileSpeed: 1900,
+		critAttackMissileSpeed: 1900,
 		passive: undefined,
 		spells: [
 			{
-				name: `TFT9_MaokaiSpell`,
-				castTime: undefined,
-				missile: undefined,
+				name: `TFT9_MilioSpell`,
+				castTime: 0.25,
+				missile: {
+					width: 60,
+					travelTime: undefined,
+					speedInitial: 1200,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
 				variables: {
-					'HealAmount': [200, 220, 260, 300],
-					'BonusManaOnCast': [5, 5, 5, 5],
-					'PassiveHexRange': [10, 10, 10, 10],
+					'MagicDamage': [0, 160, 240, 360],
+					'Duration': [1.5, 1.5, 1.5, 1.5],
+					'MagicDamageAOE': [0, 170, 250, 380],
+					'SplashDamage': [0, 85, 125, 190],
 				},
 				calculations: {
-					'Heal': {
+					'Damage': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `HealAmount`,
-										starValues: [200, 220, 260, 300],
+										variable: `MagicDamage`,
+										starValues: [0, 160, 240, 360],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'DamageAoE': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `MagicDamageAOE`,
+										starValues: [0, 170, 250, 380],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'SplashDamage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `SplashDamage`,
+										starValues: [0, 85, 125, 190],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3757,15 +3559,351 @@ export const champions: ChampionData[] = [
 		],
 		missiles: [
 			{
-				name: `TFT9_MaokaiPAttack`,
+				name: `TFT9_MilioSpellBounce`,
 				castTime: undefined,
-				missile: undefined,
+				missile: {
+					width: 60,
+					travelTime: 0.800000011920929,
+					speedInitial: undefined,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
 				variables: {},
 				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+			{
+				name: `TFT9_MilioSpellMissile`,
+				castTime: 0.25,
+				missile: {
+					width: 60,
+					travelTime: undefined,
+					speedInitial: 1200,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+		],
+	},
+	{
+		apiName: `TFT9_MissFortune`,
+		name: `Miss Fortune`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_MissFortune.TFT_Set9_Stage2.tex`,
+		cost: 3,
+		starLevel: undefined,
+		teamSize: undefined,
+		isSpawn: false,
+		traits: [`{001c06e0}`, `{f184c04b}`],
+		stats: {
+			armor: 25,
+			attackSpeed: 0.699999988079071,
+			critChance: 0.25,
+			critMultiplier: 1.399999976158142,
+			damage: 50,
+			hp: 650,
+			initialMana: 10,
+			magicResist: 25,
+			mana: 50,
+			moveSpeed: 500,
+			range: 4,
+		},
+		basicAttackMissileSpeed: 2000,
+		critAttackMissileSpeed: 2000,
+		passive: undefined,
+		spells: [
+			{
+				name: `TFT9_MissFortuneSpell`,
+				castTime: 1,
+				missile: {
+					width: undefined,
+					travelTime: undefined,
+					speedInitial: 0,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {
+					'MagicDamage': [0, 225, 340, 550],
+					'ShieldReavePercent': [0, 0.3499999940395355, 0.3499999940395355, 0.3499999940395355],
+					'ShieldReaveDuration': [0, 5, 5, 5],
+				},
+				calculations: {
+					'MagicDamage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `MagicDamage`,
+										starValues: [0, 225, 340, 550],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
 		],
+		missiles: [],
+	},
+	{
+		apiName: `TFT9_Mordekaiser`,
+		name: `Mordekaiser`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Mordekaiser.TFT_Set9_Stage2.tex`,
+		cost: 4,
+		starLevel: undefined,
+		teamSize: undefined,
+		isSpawn: false,
+		traits: [`{b02cb1c6}`, `{9a48f4a7}`],
+		stats: {
+			armor: 50,
+			attackSpeed: 0.550000011920929,
+			critChance: 0.25,
+			critMultiplier: 1.399999976158142,
+			damage: 70,
+			hp: 1000,
+			initialMana: 30,
+			magicResist: 50,
+			mana: 80,
+			moveSpeed: 500,
+			range: 1,
+		},
+		basicAttackMissileSpeed: 0,
+		critAttackMissileSpeed: 0,
+		passive: undefined,
+		spells: [
+			{
+				name: `TFT9_MordekaiserSpell`,
+				castTime: 0.75,
+				missile: undefined,
+				variables: {
+					'BonusDamage': [100, 100, 150, 375],
+					'RealmBonusDamage': [100, 250, 375, 900],
+					'Duration': [5, 5, 5, 5],
+					'PercentHealthShield': [0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645],
+					'PercentStatSteal': [0.10000000149011612, 0.05999999865889549, 0.05999999865889549, 0.15000000596046448],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `sum`,
+								subparts: [
+									{
+										variable: `BonusDamage`,
+										starValues: [100, 100, 150, 375],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'RealmDamage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `sum`,
+								subparts: [
+									{
+										variable: `RealmBonusDamage`,
+										starValues: [100, 250, 375, 900],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'Shield': {
+						asPercent: false,
+						parts: [
+							{
+								operator: undefined,
+								subparts: [
+									{
+										variable: `PercentHealthShield`,
+										starValues: [0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645],
+										stat: `HP`,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+				},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
+			},
+		],
+		missiles: [
+			{
+				name: `TFT9_MordekaiserEmpoweredAttack`,
+				castTime: undefined,
+				missile: {
+					width: undefined,
+					travelTime: undefined,
+					speedInitial: 0,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+			{
+				name: `TFT9_MordekaiserEmpoweredAttack3`,
+				castTime: undefined,
+				missile: {
+					width: undefined,
+					travelTime: undefined,
+					speedInitial: 0,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+			{
+				name: `TFT9_MordekaiserEmpoweredAttack2`,
+				castTime: undefined,
+				missile: {
+					width: undefined,
+					travelTime: undefined,
+					speedInitial: 0,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+		],
+	},
+	{
+		apiName: `TFT9_Naafiri`,
+		name: `Naafiri`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Naafiri.TFT_Set9_Stage2.tex`,
+		cost: 2,
+		starLevel: undefined,
+		teamSize: undefined,
+		isSpawn: false,
+		traits: [`{3df99d7d}`, `{cd4e5e4a}`, `{8faff97c}`],
+		stats: {
+			armor: 40,
+			attackSpeed: 0.75,
+			critChance: 0.25,
+			critMultiplier: 1.399999976158142,
+			damage: 60,
+			hp: 750,
+			initialMana: 0,
+			magicResist: 40,
+			mana: 50,
+			moveSpeed: 500,
+			range: 1,
+		},
+		basicAttackMissileSpeed: 347.79998779296875,
+		critAttackMissileSpeed: 347.79998779296875,
+		passive: undefined,
+		spells: [
+			{
+				name: `TFT9_NaafiriSpell`,
+				castTime: undefined,
+				missile: undefined,
+				variables: {
+					'ADRatio': [1.2000000476837158, 1.4500000476837158, 1.5499999523162842, 1.649999976158142],
+					'NumPackmates': [0, 2, 3, 4],
+					'TotalPackmateADRatio': [1.7999999523162842, 1.899999976158142, 1.9500000476837158, 2],
+					'PackmateHealing': [75, 75, 75, 75],
+					'DaggerOmnivamp': [0.15000000596046448, 0.15000000596046448, 0.15000000596046448, 0.15000000596046448],
+				},
+				calculations: {
+					'Omnivamp': {
+						asPercent: true,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `DaggerOmnivamp`,
+										starValues: [0.15000000596046448, 0.15000000596046448, 0.15000000596046448, 0.15000000596046448],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `sum`,
+								subparts: [
+									{
+										variable: `ADRatio`,
+										starValues: [1.2000000476837158, 1.4500000476837158, 1.5499999523162842, 1.649999976158142],
+										stat: `AD`,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+					'PackmateDamage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `sum`,
+								subparts: [
+									{
+										variable: `TotalPackmateADRatio`,
+										starValues: [1.7999999523162842, 1.899999976158142, 1.9500000476837158, 2],
+										stat: `AD`,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+				},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
+			},
+		],
+		missiles: [],
 	},
 	{
 		apiName: `TFT9_Nasus`,
@@ -3808,11 +3946,11 @@ export const champions: ChampionData[] = [
 				},
 				variables: {
 					'PercentHealthSteal': [0.10000000149011612, 0.05000000074505806, 0.05000000074505806, 0.15000000596046448],
-					'PercentADSteal': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
-					'FlatResistanceSteal': [3, 5, 5, 30],
+					'PercentADSteal': [0.07999999821186066, 0.07999999821186066, 0.07999999821186066, 0.07999999821186066],
+					'FlatResistanceSteal': [3, 4, 4, 20],
 					'Duration': [8, 8, 8, 8],
 					'EmpoweredDamagePct': [3.5, 3.799999952316284, 3.799999952316284, 7],
-					'NumEnemies': [3, 4, 5, 9],
+					'NumEnemies': [3, 4, 5, 7],
 				},
 				calculations: {
 					'Duration': {
@@ -3838,8 +3976,8 @@ export const champions: ChampionData[] = [
 								operator: undefined,
 								subparts: [
 									{
-										variable: `{c0db585b}`,
-										starValues: undefined,
+										variable: `EmpoweredDamagePct`,
+										starValues: [3.5, 3.799999952316284, 3.799999952316284, 7],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -3893,6 +4031,290 @@ export const champions: ChampionData[] = [
 		],
 	},
 	{
+		apiName: `TFT9_Nautilus`,
+		name: `Nautilus`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Nautilus.TFT_Set9_Stage2.tex`,
+		cost: 3,
+		starLevel: undefined,
+		teamSize: undefined,
+		isSpawn: false,
+		traits: [`{001c06e0}`, `{7c0ebaf6}`],
+		stats: {
+			armor: 35,
+			attackSpeed: 0.5,
+			critChance: 0.25,
+			critMultiplier: 1.399999976158142,
+			damage: 80,
+			hp: 950,
+			initialMana: 80,
+			magicResist: 35,
+			mana: 160,
+			moveSpeed: 500,
+			range: 1,
+		},
+		basicAttackMissileSpeed: 1000,
+		critAttackMissileSpeed: 1000,
+		passive: undefined,
+		spells: [
+			{
+				name: `TFT9_NautilusSpell`,
+				castTime: 0.6499999761581421,
+				missile: undefined,
+				variables: {
+					'StatAmp': [0.30000001192092896, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
+					'Damage': [0, 150, 225, 360],
+					'StunDuration': [1, 1.5, 1.5, 2],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `sum`,
+								subparts: [
+									{
+										variable: `Damage`,
+										starValues: [0, 150, 225, 360],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+		],
+		missiles: [],
+	},
+	{
+		apiName: `TFT9_Neeko`,
+		name: `Neeko`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Neeko.TFT_Set9_Stage2.tex`,
+		cost: 3,
+		starLevel: undefined,
+		teamSize: undefined,
+		isSpawn: false,
+		traits: [`{8c92325c}`, `{1b732087}`],
+		stats: {
+			armor: 45,
+			attackSpeed: 0.6499999761581421,
+			critChance: 0.25,
+			critMultiplier: 1.399999976158142,
+			damage: 50,
+			hp: 800,
+			initialMana: 50,
+			magicResist: 45,
+			mana: 120,
+			moveSpeed: 500,
+			range: 2,
+		},
+		basicAttackMissileSpeed: 2000,
+		critAttackMissileSpeed: 2000,
+		passive: undefined,
+		spells: [
+			{
+				name: `TFT9_NeekoSpell`,
+				castTime: 0.75,
+				missile: undefined,
+				variables: {
+					'Shield': [0, 225, 350, 475],
+					'ShieldDuration': [3, 3, 3, 3],
+					'Damage': [50, 270, 410, 650],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Damage`,
+										starValues: [50, 270, 410, 650],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'Shield': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Shield`,
+										starValues: [0, 225, 350, 475],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
+			},
+		],
+		missiles: [],
+	},
+	{
+		apiName: `TFT9_Nilah`,
+		name: `Nilah`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Nilah.TFT_Set9_Stage2.tex`,
+		cost: 4,
+		starLevel: undefined,
+		teamSize: undefined,
+		isSpawn: false,
+		traits: [`{001c06e0}`, `{a3779d74}`],
+		stats: {
+			armor: 45,
+			attackSpeed: 0.8500000238418579,
+			critChance: 0.25,
+			critMultiplier: 1.399999976158142,
+			damage: 75,
+			hp: 950,
+			initialMana: 20,
+			magicResist: 45,
+			mana: 60,
+			moveSpeed: 500,
+			range: 2,
+		},
+		basicAttackMissileSpeed: 347.79998779296875,
+		critAttackMissileSpeed: 347.79998779296875,
+		passive: undefined,
+		spells: [
+			{
+				name: `TFT9_NilahSpell`,
+				castTime: undefined,
+				missile: undefined,
+				variables: {
+					'CleaveTargets': [2, 2, 2, 2],
+					'CleaveDamage': [75, 0.75, 0.75, 1],
+					'AttackSpeed': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.4000000059604645],
+					'DashRange': [3, 3, 3, 3],
+					'ShieldAmount': [0, 250, 375, 700],
+					'ShieldDuration': [3, 3, 3, 3],
+					'EmpoweredLineDamage': [1.5, 1.7000000476837158, 1.75, 3.75],
+				},
+				calculations: {
+					'CleaveDamage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `CleaveDamage`,
+										starValues: [75, 0.75, 0.75, 1],
+										stat: `AD`,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+					'EmpoweredDamage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `EmpoweredLineDamage`,
+										starValues: [1.5, 1.7000000476837158, 1.75, 3.75],
+										stat: `AD`,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+					'Shield': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `ShieldAmount`,
+										starValues: [0, 250, 375, 700],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
+			},
+		],
+		missiles: [
+			{
+				name: `TFT9_NilahSpellAttackEmpowered`,
+				castTime: undefined,
+				missile: {
+					width: undefined,
+					travelTime: undefined,
+					speedInitial: 347.79998779296875,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+			{
+				name: `TFT9_NilahSpellAttack`,
+				castTime: undefined,
+				missile: {
+					width: undefined,
+					travelTime: undefined,
+					speedInitial: 347.79998779296875,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+			{
+				name: `TFT9_NilahSpellAttack2`,
+				castTime: undefined,
+				missile: {
+					width: undefined,
+					travelTime: undefined,
+					speedInitial: 347.79998779296875,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+		],
+	},
+	{
 		apiName: `TFT9_NoxianFlag`,
 		name: `Noxian Banner`,
 		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_NoxianFlag.TFT_Set9.dds`,
@@ -3936,9 +4358,9 @@ export const champions: ChampionData[] = [
 			critMultiplier: 1.399999976158142,
 			damage: 40,
 			hp: 500,
-			initialMana: 50,
+			initialMana: 40,
 			magicResist: 15,
-			mana: 100,
+			mana: 90,
 			moveSpeed: 500,
 			range: 4,
 		},
@@ -3989,8 +4411,8 @@ export const champions: ChampionData[] = [
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{c3360f16}`,
-										starValues: undefined,
+										variable: `ShieldHealth`,
+										starValues: [200, 225, 250, 325],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4094,6 +4516,245 @@ export const champions: ChampionData[] = [
 		missiles: [],
 	},
 	{
+		apiName: `TFT9_Qiyana`,
+		name: `Qiyana`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Qiyana.TFT_Set9_Stage2.tex`,
+		cost: 2,
+		starLevel: undefined,
+		teamSize: undefined,
+		isSpawn: false,
+		traits: [`{8c92325c}`, `{9a48f4a7}`, `{29d0b1a5}`],
+		stats: {
+			armor: 35,
+			attackSpeed: 0.75,
+			critChance: 0.25,
+			critMultiplier: 1.399999976158142,
+			damage: 55,
+			hp: 700,
+			initialMana: 20,
+			magicResist: 35,
+			mana: 80,
+			moveSpeed: 500,
+			range: 1,
+		},
+		basicAttackMissileSpeed: 0,
+		critAttackMissileSpeed: 0,
+		passive: undefined,
+		spells: [
+			{
+				name: `TFT9_QiyanaSpell`,
+				castTime: 0.5,
+				missile: undefined,
+				variables: {
+					'BaseDamage': [0, 2.549999952316284, 2.549999952316284, 2.700000047683716],
+					'AbilityScaleDamage': [0, 40, 60, 90],
+					'PrimaryStunDuration': [1.5, 1.5, 1.5, 1.5],
+					'SecondaryStunDuration': [0.5, 0.5, 0.5, 0.5],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `sum`,
+								subparts: [
+									{
+										variable: `AbilityScaleDamage`,
+										starValues: [0, 40, 60, 90],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+									{
+										variable: `BaseDamage`,
+										starValues: [0, 2.549999952316284, 2.549999952316284, 2.700000047683716],
+										stat: `AD`,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+					'AbilityScaleDamage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `AbilityScaleDamage`,
+										starValues: [0, 40, 60, 90],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'{d5951215}': {
+						asPercent: false,
+						parts: [
+							{
+								operator: undefined,
+								subparts: [
+									{
+										variable: `BaseDamage`,
+										starValues: [0, 2.549999952316284, 2.549999952316284, 2.700000047683716],
+										stat: `AD`,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+				},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+		],
+		missiles: [
+			{
+				name: `TFT9_QiyanaQMis`,
+				castTime: 0.5,
+				missile: {
+					width: 230,
+					travelTime: undefined,
+					speedInitial: 900,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: false,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+		],
+	},
+	{
+		apiName: `TFT9_Quinn`,
+		name: `Quinn`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Quinn.TFT_Set9.tex`,
+		cost: 3,
+		starLevel: undefined,
+		teamSize: undefined,
+		isSpawn: false,
+		traits: [`{4afab417}`, `{9a48f4a7}`],
+		stats: {
+			armor: 25,
+			attackSpeed: 0.75,
+			critChance: 0.25,
+			critMultiplier: 1.399999976158142,
+			damage: 60,
+			hp: 700,
+			initialMana: 30,
+			magicResist: 25,
+			mana: 90,
+			moveSpeed: 500,
+			range: 4,
+		},
+		basicAttackMissileSpeed: 2000,
+		critAttackMissileSpeed: 2000,
+		passive: undefined,
+		spells: [
+			{
+				name: `TFT9_QuinnSpell`,
+				castTime: 0.25,
+				missile: undefined,
+				variables: {
+					'AmpDamage': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
+					'PercentAD': [6, 5.5, 5.550000190734863, 5.650000095367432],
+					'Duration': [4, 4, 4, 4],
+				},
+				calculations: {
+					'AmpDamage': {
+						asPercent: true,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `{b577e694}`,
+										starValues: undefined,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: undefined,
+								subparts: [
+									{
+										variable: `PercentAD`,
+										starValues: [6, 5.5, 5.550000190734863, 5.650000095367432],
+										stat: `AD`,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+				},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
+			},
+		],
+		missiles: [
+			{
+				name: `TFT9_QuinnSpellShoot`,
+				castTime: 0.25,
+				missile: undefined,
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
+			},
+			{
+				name: `TFT9_QuinnSpellArrow`,
+				castTime: 0.25,
+				missile: {
+					width: undefined,
+					travelTime: undefined,
+					speedInitial: 2600,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+			{
+				name: `TFT9_QuinnSpellValor`,
+				castTime: undefined,
+				missile: {
+					width: 60,
+					travelTime: undefined,
+					speedInitial: 3600,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: false,
+					_missileSpeed: 2000,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
+			},
+		],
+	},
+	{
 		apiName: `TFT9_RekSai`,
 		name: `Rek'Sai`,
 		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_RekSai.TFT_Set9.tex`,
@@ -4145,8 +4806,8 @@ export const champions: ChampionData[] = [
 								operator: `sum`,
 								subparts: [
 									{
-										variable: `{11a96dee}`,
-										starValues: undefined,
+										variable: `PercentOfAD`,
+										starValues: [2.6500000953674316, 2.9000000953674316, 2.9000000953674316, 3],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -4161,8 +4822,8 @@ export const champions: ChampionData[] = [
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{8b4a02cc}`,
-										starValues: undefined,
+										variable: `PercentMaxHealthHeal`,
+										starValues: [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
 										stat: `HP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4170,15 +4831,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{435fa3bd}': {
+					'HealPercent': {
 						asPercent: true,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{8b4a02cc}`,
-										starValues: undefined,
+										variable: `PercentMaxHealthHeal`,
+										starValues: [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4255,7 +4916,7 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{c31747a0}': {
+					'InitialHeal': {
 						asPercent: false,
 						parts: [
 							{
@@ -4271,15 +4932,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{9db4f5c9}': {
+					'KickerHeal': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{df2816be}`,
-										starValues: undefined,
+										variable: `KickerHeal`,
+										starValues: [30, 30, 30, 30],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4592,15 +5253,15 @@ export const champions: ChampionData[] = [
 					'BaseStarLevelSummon': [0, 1, 1, 3],
 				},
 				calculations: {
-					'{1c2ec27a}': {
+					'BonusMana': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{43012963}`,
-										starValues: undefined,
+										variable: `BonusMana`,
+										starValues: [0, 25, 70, 200],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -5235,15 +5896,15 @@ export const champions: ChampionData[] = [
 					'NumAllies': [1, 1, 1, 10],
 				},
 				calculations: {
-					'{684e3a7b}': {
+					'HealthOnReturn': {
 						asPercent: true,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{aee31a83}`,
-										starValues: undefined,
+										variable: `PercentHealthOnReturn`,
+										starValues: [0, 0.4000000059604645, 0.800000011920929, 3],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -5505,15 +6166,15 @@ export const champions: ChampionData[] = [
 					'ThreeStarStarfallDamage': [0, 0, 0, 999],
 				},
 				calculations: {
-					'{95c1122d}': {
+					'PercentMaxHealth': {
 						asPercent: true,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{82a4720a}`,
-										starValues: undefined,
+										variable: `PercentMaxHealth`,
+										starValues: [0.20000000298023224, 0.18000000715255737, 0.30000001192092896, 1],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -5814,6 +6475,355 @@ export const champions: ChampionData[] = [
 		],
 	},
 	{
+		apiName: `TFT9_RyzeBilgewater`,
+		name: `Ryze`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Ryze.TFT_Set9.tex`,
+		cost: 5,
+		starLevel: undefined,
+		teamSize: undefined,
+		isSpawn: false,
+		traits: [`{c50fe1eb}`, `{d7ded6a9}`],
+		stats: {
+			armor: 30,
+			attackSpeed: 0.8500000238418579,
+			critChance: 0.25,
+			critMultiplier: 1.399999976158142,
+			damage: 50,
+			hp: 1111,
+			initialMana: 30,
+			magicResist: 30,
+			mana: 100,
+			moveSpeed: 500,
+			range: 4,
+		},
+		basicAttackMissileSpeed: undefined,
+		critAttackMissileSpeed: undefined,
+		passive: undefined,
+		spells: [
+			{
+				name: `TFT9_RyzeSpellBilgewater`,
+				castTime: 1,
+				missile: undefined,
+				variables: {
+					'Damage': [0, 300, 450, 7777],
+					'PercentScalar': [0.009999999776482582, 0.009999999776482582, 0.009999999776482582, 0.009999999776482582],
+					'PerGoldScalar': [2, 2, 2, 2],
+					'BaseLootPercent': [0.05000000074505806, 0.05000000074505806, 0.07500000298023224, 1],
+					'KillLootPercent': [0.10000000149011612, 0.10000000149011612, 0.15000000596046448, 1],
+					'BaseGoldPercent': [0.10000000149011612, 0.10000000149011612, 0.15000000596046448, 1],
+					'KillGoldPercent': [0.20000000298023224, 0.20000000298023224, 0.30000001192092896, 1],
+					'MinGold': [1, 1, 1, 1],
+					'MaxGold': [4, 4, 4, 4],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Damage`,
+										starValues: [0, 300, 450, 7777],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+		],
+		missiles: [
+			{
+				name: `TFT9_RyzeSpellBilgewater_ChestMis_Boot`,
+				castTime: undefined,
+				missile: {
+					width: 1,
+					travelTime: undefined,
+					speedInitial: 80,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+			{
+				name: `TFT9_RyzeBilgewaterBasicAttack`,
+				castTime: undefined,
+				missile: {
+					width: undefined,
+					travelTime: undefined,
+					speedInitial: 2400,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+			{
+				name: `TFT9_RyzeBilgewaterBasicAttack2`,
+				castTime: undefined,
+				missile: {
+					width: undefined,
+					travelTime: undefined,
+					speedInitial: 2400,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+			{
+				name: `TFT9_RyzeSpellBilgewater_ChestMisMini`,
+				castTime: undefined,
+				missile: {
+					width: 1,
+					travelTime: undefined,
+					speedInitial: 120,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+			{
+				name: `TFT9_RyzeSpellBilgewater_ChestMis`,
+				castTime: undefined,
+				missile: {
+					width: 1,
+					travelTime: undefined,
+					speedInitial: 80,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+			{
+				name: `TFT9_RyzeBilgewaterCritAttack`,
+				castTime: undefined,
+				missile: {
+					width: undefined,
+					travelTime: undefined,
+					speedInitial: 2400,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+		],
+	},
+	{
+		apiName: `TFT9_RyzeIxtal`,
+		name: `Ryze`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Ryze.TFT_Set9.tex`,
+		cost: 5,
+		starLevel: undefined,
+		teamSize: undefined,
+		isSpawn: false,
+		traits: [`{c50fe1eb}`, `{d7ded6a9}`],
+		stats: {
+			armor: 50,
+			attackSpeed: 0.8500000238418579,
+			critChance: 0.25,
+			critMultiplier: 1.399999976158142,
+			damage: 50,
+			hp: 1111,
+			initialMana: 60,
+			magicResist: 50,
+			mana: 120,
+			moveSpeed: 500,
+			range: 2,
+		},
+		basicAttackMissileSpeed: undefined,
+		critAttackMissileSpeed: undefined,
+		passive: undefined,
+		spells: [
+			{
+				name: `TFT9_RyzeSpellIxtal`,
+				castTime: 0.25,
+				missile: undefined,
+				variables: {
+					'ArmorScalar': [1.5, 1.850000023841858, 2.8499999046325684, 15],
+					'MRScalar': [1.5, 1.850000023841858, 2.8499999046325684, 15],
+					'StunDuration': [2, 2, 2, 10],
+					'BarkskinDuration': [4, 4, 4, 4],
+					'BarskinDefenceScalar': [1, 1, 1, 1],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `ArmorScalar`,
+										starValues: [1.5, 1.850000023841858, 2.8499999046325684, 15],
+										stat: `Armor`,
+										ratio: 1,
+									},
+								],
+							},
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `MRScalar`,
+										starValues: [1.5, 1.850000023841858, 2.8499999046325684, 15],
+										stat: undefined,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+					'Armor': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `BarskinDefenceScalar`,
+										starValues: [1, 1, 1, 1],
+										stat: `Armor`,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+					'MR': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `BarskinDefenceScalar`,
+										starValues: [1, 1, 1, 1],
+										stat: undefined,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+					'BarkskinDuration': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `BarkskinDuration`,
+										starValues: [4, 4, 4, 4],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+		],
+		missiles: [
+			{
+				name: `TFT9_RyzeIxtalBasicAttack2`,
+				castTime: undefined,
+				missile: {
+					width: undefined,
+					travelTime: undefined,
+					speedInitial: 2400,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+			{
+				name: `TFT9_RyzeIxtalBasicAttack`,
+				castTime: undefined,
+				missile: {
+					width: undefined,
+					travelTime: undefined,
+					speedInitial: 2400,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+			{
+				name: `TFT9_RyzeIxtalCritAttack`,
+				castTime: undefined,
+				missile: {
+					width: undefined,
+					travelTime: undefined,
+					speedInitial: 2400,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+		],
+	},
+	{
 		apiName: `TFT9_Samira`,
 		name: `Samira`,
 		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Samira.TFT_Set9.tex`,
@@ -5844,19 +6854,19 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {
-					'ADPercent': [2.0999999046325684, 2, 2, 2.0999999046325684],
+					'ADPercent': [2.0999999046325684, 1.899999976158142, 1.899999976158142, 2],
 					'ArmorShred': [0, 10, 15, 20],
 				},
 				calculations: {
-					'{84ba2311}': {
+					'ArmorShred': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{826ded1e}`,
-										starValues: undefined,
+										variable: `ArmorShred`,
+										starValues: [0, 10, 15, 20],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -5872,7 +6882,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `ADPercent`,
-										starValues: [2.0999999046325684, 2, 2, 2.0999999046325684],
+										starValues: [2.0999999046325684, 1.899999976158142, 1.899999976158142, 2],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -5921,7 +6931,7 @@ export const champions: ChampionData[] = [
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
 			damage: 60,
-			hp: 1000,
+			hp: 1100,
 			initialMana: 60,
 			magicResist: 60,
 			mana: 120,
@@ -5976,7 +6986,7 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{9169335e}': {
+					'HealthDamage': {
 						asPercent: false,
 						parts: [
 							{
@@ -5998,128 +7008,6 @@ export const champions: ChampionData[] = [
 			},
 		],
 		missiles: [],
-	},
-	{
-		apiName: `TFT9_Senna`,
-		name: `Senna`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Senna.TFT_Set9.tex`,
-		cost: 5,
-		starLevel: undefined,
-		teamSize: undefined,
-		isSpawn: false,
-		traits: [`{42ae1c57}`, `{dfc0f253}`, `{c0fa064e}`],
-		stats: {
-			armor: 30,
-			attackSpeed: 0.800000011920929,
-			critChance: 0.25,
-			critMultiplier: 1.399999976158142,
-			damage: 65,
-			hp: 900,
-			initialMana: 75,
-			magicResist: 30,
-			mana: 150,
-			moveSpeed: 500,
-			range: 4,
-		},
-		basicAttackMissileSpeed: 8000,
-		critAttackMissileSpeed: undefined,
-		passive: undefined,
-		spells: [
-			{
-				name: `TFT9_SennaSpell`,
-				castTime: undefined,
-				missile: {
-					width: 300,
-					travelTime: undefined,
-					speedInitial: 20000,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {
-					'ADRatio': [0, 2.3499999046325684, 2.5, 20],
-					'ShieldAmount': [0, 200, 275, 4000],
-					'ShieldDuration': [4, 4, 4, 15],
-				},
-				calculations: {
-					'Damage': {
-						asPercent: false,
-						parts: [
-							{
-								operator: undefined,
-								subparts: [
-									{
-										variable: `ADRatio`,
-										starValues: [0, 2.3499999046325684, 2.5, 20],
-										stat: `AD`,
-										ratio: 1,
-									},
-								],
-							},
-						],
-					},
-					'ShieldAmount': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `ShieldAmount`,
-										starValues: [0, 200, 275, 4000],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-				},
-				cantCastWhileRooted: undefined,
-				uninterruptable: undefined,
-			},
-		],
-		missiles: [
-			{
-				name: `TFT9_SennaR_Ally`,
-				castTime: undefined,
-				missile: {
-					width: 1200,
-					travelTime: undefined,
-					speedInitial: 20000,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: false,
-					_missileSpeed: 2000,
-				},
-				variables: {},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: undefined,
-			},
-			{
-				name: `TFT9_SennaCritAttack`,
-				castTime: undefined,
-				missile: {
-					width: undefined,
-					travelTime: undefined,
-					speedInitial: 8000,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: undefined,
-			},
-		],
 	},
 	{
 		apiName: `TFT9_Sett`,
@@ -6206,15 +7094,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{ee90a3b4}': {
+					'ResistAmount': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{0ee71306}`,
-										starValues: undefined,
+										variable: `BaseResistAmount`,
+										starValues: [15, 50, 60, 80],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -6271,7 +7159,7 @@ export const champions: ChampionData[] = [
 				variables: {
 					'MagicDamage': [0, 240, 360, 2500],
 					'AllyShieldAmount': [0, 225, 275, 1500],
-					'SelfShieldAmount': [0, 350, 450, 2000],
+					'SelfShieldAmount': [0, 300, 400, 2000],
 					'ShieldDuration': [4, 4, 4, 4],
 					'ChillDuration': [3, 3, 3, 3],
 					'ChillAmount': [40, 40, 40, 40],
@@ -6294,15 +7182,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{ee9eae65}': {
+					'AllyShieldAmount': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{f82b0e8a}`,
-										starValues: undefined,
+										variable: `AllyShieldAmount`,
+										starValues: [0, 225, 275, 1500],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -6310,15 +7198,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{0546af49}': {
+					'SelfShieldAmount': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{0ecc6c1a}`,
-										starValues: undefined,
+										variable: `SelfShieldAmount`,
+										starValues: [0, 300, 400, 2000],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -6370,15 +7258,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{ee9eae65}': {
+					'AllyShieldAmount': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{f82b0e8a}`,
-										starValues: undefined,
+										variable: `AllyShieldAmount`,
+										starValues: [0, 250, 375, 600],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -6386,15 +7274,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{0546af49}': {
+					'SelfShieldAmount': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{0ecc6c1a}`,
-										starValues: undefined,
+										variable: `SelfShieldAmount`,
+										starValues: [0, 350, 550, 800],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -6403,6 +7291,109 @@ export const champions: ChampionData[] = [
 						],
 					},
 				},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
+			},
+		],
+	},
+	{
+		apiName: `TFT9_Silco`,
+		name: `Silco`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Silco.TFT_Set9_Stage2.tex`,
+		cost: 4,
+		starLevel: undefined,
+		teamSize: undefined,
+		isSpawn: false,
+		traits: [`{b0e4deef}`, `{01fcdb08}`],
+		stats: {
+			armor: 30,
+			attackSpeed: 0.699999988079071,
+			critChance: 0.25,
+			critMultiplier: 1.399999976158142,
+			damage: 45,
+			hp: 750,
+			initialMana: 0,
+			magicResist: 30,
+			mana: 50,
+			moveSpeed: 500,
+			range: 4,
+		},
+		basicAttackMissileSpeed: 2000,
+		critAttackMissileSpeed: 2000,
+		passive: undefined,
+		spells: [
+			{
+				name: `TFT9_SilcoSpell`,
+				castTime: undefined,
+				missile: {
+					width: undefined,
+					travelTime: undefined,
+					speedInitial: 20,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {
+					'ShimmerDuration': [0, 6, 6, 10],
+					'ShimmerDamagePerSec': [0, 80, 120, 425],
+					'HealPerSec': [0, 20, 30, 120],
+				},
+				calculations: {
+					'ShimmerDamagePerSec': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `ShimmerDamagePerSec`,
+										starValues: [0, 80, 120, 425],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'HealPerSec': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `HealPerSec`,
+										starValues: [0, 20, 30, 120],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
+			},
+		],
+		missiles: [
+			{
+				name: `TFT9_SilcoR_Mis`,
+				castTime: undefined,
+				missile: {
+					width: undefined,
+					travelTime: 0.6000000238418579,
+					speedInitial: 1500,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
@@ -6465,15 +7456,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{9498a61c}': {
+					'AttackSpeedPct': {
 						asPercent: true,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{380996ff}`,
-										starValues: undefined,
+										variable: `AttackSpeedPct`,
+										starValues: [1.5, 1.5, 1.5, 10],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -6481,7 +7472,7 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{3b26e559}': {
+					'DashRangeTooltip': {
 						asPercent: false,
 						parts: [
 							{
@@ -6494,8 +7485,8 @@ export const champions: ChampionData[] = [
 										ratio: 0.004999999888241291,
 									},
 									{
-										variable: `{9a14d685}`,
-										starValues: undefined,
+										variable: `DashRangeBonus`,
+										starValues: [3, 3, 3, 3],
 										stat: undefined,
 										ratio: undefined,
 									},
@@ -6766,7 +7757,23 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{f94619a5}': {
+					'MagicDamage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `MagicDamage`,
+										starValues: [60, 115, 165, 260],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'BonusHeal': {
 						asPercent: false,
 						parts: [
 							{
@@ -6779,26 +7786,10 @@ export const champions: ChampionData[] = [
 										ratio: undefined,
 									},
 									{
-										variable: `{a3cc5b24}`,
-										starValues: undefined,
+										variable: `EmpoweredHealPercent`,
+										starValues: [0.33000001311302185, 0.33000001311302185, 0.33000001311302185, 0.33000001311302185],
 										stat: undefined,
 										ratio: undefined,
-									},
-								],
-							},
-						],
-					},
-					'MagicDamage': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `MagicDamage`,
-										starValues: [60, 115, 165, 260],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
 									},
 								],
 							},
@@ -6956,9 +7947,9 @@ export const champions: ChampionData[] = [
 				missile: undefined,
 				variables: {
 					'BuffDuration': [5, 5, 5, 5],
-					'BonusMaxHealth': [200, 350, 400, 650],
+					'BonusMaxHealth': [200, 325, 375, 550],
 					'DamagePerTick': [0, 25, 40, 60],
-					'SecondaryBonusMaxHealth': [200, 240, 280, 425],
+					'SecondaryBonusMaxHealth': [200, 225, 260, 385],
 					'SecondaryDamage': [20, 100, 160, 300],
 				},
 				calculations: {
@@ -6978,7 +7969,23 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{42de401d}': {
+					'BonusHealth': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `BonusMaxHealth`,
+										starValues: [200, 325, 375, 550],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'SecondaryDamage': {
 						asPercent: false,
 						parts: [
 							{
@@ -6994,31 +8001,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{67657c25}': {
+					'SecondaryBonusHealth': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{6bd7c92c}`,
-										starValues: undefined,
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-					'BonusHealth': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `{f780b9d8}`,
-										starValues: undefined,
+										variable: `SecondaryBonusMaxHealth`,
+										starValues: [200, 225, 260, 385],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -7069,15 +8060,15 @@ export const champions: ChampionData[] = [
 					'FlameBreathDamage': [325, 325, 325, 325],
 				},
 				calculations: {
-					'{c209f33e}': {
+					'FlameBreathDamage': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{0852737f}`,
-										starValues: undefined,
+										variable: `FlameBreathDamage`,
+										starValues: [325, 325, 325, 325],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -7147,7 +8138,7 @@ export const champions: ChampionData[] = [
 			critMultiplier: 1.399999976158142,
 			damage: 40,
 			hp: 550,
-			initialMana: 0,
+			initialMana: 20,
 			magicResist: 20,
 			mana: 60,
 			moveSpeed: 500,
@@ -7163,11 +8154,11 @@ export const champions: ChampionData[] = [
 				missile: undefined,
 				variables: {
 					'KnockupDuration': [1, 2, 2, 2],
-					'SpellDamage': [100, 160, 240, 370],
+					'SpellDamage': [100, 180, 270, 410],
 					'BoulderDamage': [100, 110, 160, 240],
 				},
 				calculations: {
-					'{e42c86ed}': {
+					'SpellDamage': {
 						asPercent: false,
 						parts: [
 							{
@@ -7175,7 +8166,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `SpellDamage`,
-										starValues: [100, 160, 240, 370],
+										starValues: [100, 180, 270, 410],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -7183,15 +8174,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{7d6d0a3e}': {
+					'BoulderDamage': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{4dd34fff}`,
-										starValues: undefined,
+										variable: `BoulderDamage`,
+										starValues: [100, 110, 160, 240],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -7323,7 +8314,7 @@ export const champions: ChampionData[] = [
 				castTime: 0.25,
 				missile: undefined,
 				variables: {
-					'ShieldAmount': [0, 550, 650, 750],
+					'ShieldAmount': [0, 500, 580, 680],
 					'Duration': [4, 4, 4, 4],
 					'RedirectPercent': [0.5, 0.5, 0.5, 0.5],
 				},
@@ -7336,7 +8327,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `ShieldAmount`,
-										starValues: [0, 550, 650, 750],
+										starValues: [0, 500, 580, 680],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -7352,227 +8343,75 @@ export const champions: ChampionData[] = [
 		missiles: [],
 	},
 	{
-		apiName: `TFT9_Teemo`,
-		name: `Teemo`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Teemo.TFT_Set9.tex`,
+		apiName: `TFT9_TwistedFate`,
+		name: `Twisted Fate`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_TwistedFate.TFT_Set9_Stage2.tex`,
 		cost: 2,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{932dc68e}`, `{f184c04b}`, `{9f820252}`],
+		traits: [`{001c06e0}`, `{9f820252}`],
 		stats: {
 			armor: 20,
 			attackSpeed: 0.699999988079071,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
 			damage: 40,
-			hp: 500,
-			initialMana: 0,
+			hp: 550,
+			initialMana: 20,
 			magicResist: 20,
-			mana: 50,
+			mana: 70,
 			moveSpeed: 500,
 			range: 4,
 		},
-		basicAttackMissileSpeed: 1300,
-		critAttackMissileSpeed: 1300,
+		basicAttackMissileSpeed: 1500,
+		critAttackMissileSpeed: 1500,
 		passive: undefined,
 		spells: [
 			{
-				name: `TFT9_TeemoSpell`,
-				castTime: 0.5,
-				missile: {
-					width: undefined,
-					travelTime: 0.75,
-					speedInitial: undefined,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {
-					'Damage': [0, 260, 390, 585],
-					'DetonationDelay': [0.5, 0.5, 0.5, 0.5],
-					'Duration': [3, 3, 3, 3],
-					'TickRate': [0.5, 0.5, 0.5, 0.5],
-					'HexRadius': [1, 1, 1, 1],
-				},
-				calculations: {
-					'Damage': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `Damage`,
-										starValues: [0, 260, 390, 585],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-				},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-			{
-				name: `TFT9_TeemoSpell_MC`,
-				castTime: 0.5,
-				missile: {
-					width: undefined,
-					travelTime: 0.75,
-					speedInitial: 1000,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-		],
-		missiles: [
-			{
-				name: `TFT9_TeemoSpell_MC_Bounce`,
-				castTime: undefined,
-				missile: {
-					width: undefined,
-					travelTime: 0.75,
-					speedInitial: undefined,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-			{
-				name: `TFT9_TeemoBasicAttack2`,
-				castTime: undefined,
+				name: `TFT9_TwistedFateSpell`,
+				castTime: 0.25,
 				missile: {
 					width: undefined,
 					travelTime: undefined,
-					speedInitial: 1300,
+					speedInitial: 1400,
 					speedMin: undefined,
 					speedMax: undefined,
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
 				},
-				variables: {},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: undefined,
-			},
-		],
-	},
-	{
-		apiName: `TFT9_Tristana`,
-		name: `Tristana`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Tristana.TFT_Set9.tex`,
-		cost: 1,
-		starLevel: undefined,
-		teamSize: undefined,
-		isSpawn: false,
-		traits: [`{932dc68e}`, `{dfc0f253}`],
-		stats: {
-			armor: 15,
-			attackSpeed: 0.699999988079071,
-			critChance: 0.25,
-			critMultiplier: 1.399999976158142,
-			damage: 45,
-			hp: 400,
-			initialMana: 0,
-			magicResist: 15,
-			mana: 40,
-			moveSpeed: 500,
-			range: 4,
-		},
-		basicAttackMissileSpeed: 2250,
-		critAttackMissileSpeed: 2250,
-		passive: undefined,
-		spells: [
-			{
-				name: `TFT9_TristanaSpell`,
-				castTime: undefined,
-				missile: undefined,
 				variables: {
-					'AttackSpeed': [0.699999988079071, 0.699999988079071, 0.699999988079071, 0.699999988079071],
-					'Duration': [4, 4, 4, 4],
-					'PercentAttackDamage': [0.6000000238418579, 0.6000000238418579, 0.6000000238418579, 0.6000000238418579],
-					'EmpoweredBonus': [1, 1, 1, 1],
-					'ExplosionPercent': [0.5, 0.5, 0.5, 0.5],
-					'NumberOfAttacks': [10, 10, 10, 10],
-					'HexRadius': [1, 1, 1, 1],
+					'InitialMagicDamage': [175, 165, 250, 375],
+					'DelayedMagicDamage': [175, 210, 315, 490],
+					'Delay': [1.5, 1.5, 1.5, 1.5],
 				},
 				calculations: {
-					'ExplosionDamage': {
+					'InitialMagicDamage': {
 						asPercent: false,
-						parts: [
-							{
-								operator: undefined,
-								subparts: [
-									{
-										variable: `{1d65f6f1}`,
-										starValues: undefined,
-										stat: `AD`,
-										ratio: 1,
-									},
-								],
-							},
-						],
-					},
-					'BonusDamage': {
-						asPercent: false,
-						parts: [
-							{
-								operator: undefined,
-								subparts: [
-									{
-										variable: `PercentAttackDamage`,
-										starValues: [0.6000000238418579, 0.6000000238418579, 0.6000000238418579, 0.6000000238418579],
-										stat: `AD`,
-										ratio: 1,
-									},
-								],
-							},
-						],
-					},
-					'{0692ef0e}': {
-						asPercent: false,
-						parts: [
-							{
-								operator: undefined,
-								subparts: [
-									{
-										variable: `{3a9475c8}`,
-										starValues: undefined,
-										stat: `AD`,
-										ratio: 1,
-									},
-								],
-							},
-						],
-					},
-					'BonusAttackSpeed': {
-						asPercent: true,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `AttackSpeed`,
-										starValues: [0.699999988079071, 0.699999988079071, 0.699999988079071, 0.699999988079071],
+										variable: `InitialMagicDamage`,
+										starValues: [175, 165, 250, 375],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'DelayedMagicDamage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `DelayedMagicDamage`,
+										starValues: [175, 210, 315, 490],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -7581,108 +8420,37 @@ export const champions: ChampionData[] = [
 						],
 					},
 				},
-				cantCastWhileRooted: undefined,
-				uninterruptable: undefined,
-			},
-		],
-		missiles: [
-			{
-				name: `TFT9_TristanaRicochet`,
-				castTime: undefined,
-				missile: {
-					width: undefined,
-					travelTime: 0.75,
-					speedInitial: 1000,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {},
-				calculations: {},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
 			{
-				name: `TFT9_Tristana4StarSpellAttack`,
-				castTime: undefined,
+				name: `TFT9_TwistedFateSpell_MC`,
+				castTime: 0.25,
 				missile: {
 					width: undefined,
 					travelTime: undefined,
-					speedInitial: 2250,
+					speedInitial: 1400,
 					speedMin: undefined,
 					speedMax: undefined,
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
 				},
-				variables: {},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: undefined,
-			},
-		],
-	},
-	{
-		apiName: `TFT9_Urgot`,
-		name: `Urgot`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Urgot.TFT_Set9.tex`,
-		cost: 4,
-		starLevel: undefined,
-		teamSize: undefined,
-		isSpawn: false,
-		traits: [`{b0e4deef}`, `{24734090}`],
-		stats: {
-			armor: 60,
-			attackSpeed: 0.699999988079071,
-			critChance: 0.25,
-			critMultiplier: 1.399999976158142,
-			damage: 75,
-			hp: 1000,
-			initialMana: 40,
-			magicResist: 60,
-			mana: 100,
-			moveSpeed: 500,
-			range: 1,
-		},
-		basicAttackMissileSpeed: 2500,
-		critAttackMissileSpeed: 2500,
-		passive: undefined,
-		spells: [
-			{
-				name: `TFT9_UrgotSpell`,
-				castTime: 0.6000000238418579,
-				missile: undefined,
 				variables: {
-					'Cooldown': [4, 4, 4, 1],
-					'PercentOfAttackDamage': [2.200000047683716, 2.200000047683716, 2.200000047683716, 2.200000047683716],
-					'BaseDamage': [100, 40, 60, 500],
-					'StunDuration': [1.5, 1.5, 1.5, 1.5],
-					'ShieldAmount': [0, 350, 450, 1200],
-					'ShieldDuration': [5, 5, 5, 5],
+					'InitialMagicDamage': [175, 175, 265, 400],
+					'DelayedMagicDamage': [175, 175, 265, 400],
+					'Delay': [1.5, 1.5, 1.5, 1.5],
 				},
 				calculations: {
-					'Damage': {
+					'InitialMagicDamage': {
 						asPercent: false,
 						parts: [
-							{
-								operator: undefined,
-								subparts: [
-									{
-										variable: `{97d115c2}`,
-										starValues: undefined,
-										stat: `AD`,
-										ratio: 1,
-									},
-								],
-							},
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `BaseDamage`,
-										starValues: [100, 40, 60, 500],
+										variable: `InitialMagicDamage`,
+										starValues: [175, 175, 265, 400],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -7690,15 +8458,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'ShieldAmount': {
+					'DelayedMagicDamage': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `ShieldAmount`,
-										starValues: [0, 350, 450, 1200],
+										variable: `DelayedMagicDamage`,
+										starValues: [175, 175, 265, 400],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -7888,25 +8656,9 @@ export const champions: ChampionData[] = [
 					'ShieldDuration': [4, 4, 4, 4],
 					'ArmorShredPercent': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
 					'ArmorShredDuration': [4, 4, 4, 4],
-					'ADPercent': [2, 2, 2, 2],
+					'ADPercent': [2.5, 2.5, 2.5, 2.5],
 				},
 				calculations: {
-					'Damage': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `sum`,
-								subparts: [
-									{
-										variable: `ADPercent`,
-										starValues: [2, 2, 2, 2],
-										stat: `AD`,
-										ratio: 1,
-									},
-								],
-							},
-						],
-					},
 					'ShieldAmount': {
 						asPercent: false,
 						parts: [
@@ -7918,6 +8670,22 @@ export const champions: ChampionData[] = [
 										starValues: [0, 350, 400, 450],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `sum`,
+								subparts: [
+									{
+										variable: `ADPercent`,
+										starValues: [2.5, 2.5, 2.5, 2.5],
+										stat: `AD`,
+										ratio: 1,
 									},
 								],
 							},
@@ -7948,81 +8716,6 @@ export const champions: ChampionData[] = [
 				uninterruptable: true,
 			},
 		],
-	},
-	{
-		apiName: `TFT9_Viego`,
-		name: `Viego`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Viego.TFT_Set9.tex`,
-		cost: 1,
-		starLevel: undefined,
-		teamSize: undefined,
-		isSpawn: false,
-		traits: [`{42ae1c57}`, `{29d0b1a5}`],
-		stats: {
-			armor: 30,
-			attackSpeed: 0.75,
-			critChance: 0.25,
-			critMultiplier: 1.399999976158142,
-			damage: 45,
-			hp: 600,
-			initialMana: 0,
-			magicResist: 30,
-			mana: 50,
-			moveSpeed: 500,
-			range: 1,
-		},
-		basicAttackMissileSpeed: 20,
-		critAttackMissileSpeed: 0,
-		passive: undefined,
-		spells: [
-			{
-				name: `TFT9_ViegoSpell`,
-				castTime: undefined,
-				missile: undefined,
-				variables: {
-					'StabDamage': [0, 110, 165, 250],
-					'Duration': [60, 60, 60, 60],
-					'StackingDamage': [0, 20, 30, 45],
-				},
-				calculations: {
-					'{da3e5d67}': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `StabDamage`,
-										starValues: [0, 110, 165, 250],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-					'{d4eb666b}': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `{ab1d5674}`,
-										starValues: undefined,
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-				},
-				cantCastWhileRooted: undefined,
-				uninterruptable: undefined,
-			},
-		],
-		missiles: [],
 	},
 	{
 		apiName: `TFT9_VoidRemora`,
@@ -8273,173 +8966,58 @@ export const champions: ChampionData[] = [
 		missiles: [],
 	},
 	{
-		apiName: `TFT9_Yasuo`,
-		name: `Yasuo`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Yasuo.TFT_Set9.tex`,
+		apiName: `TFT9_Xayah`,
+		name: `Xayah`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Xayah.TFT_Set9.tex`,
 		cost: 4,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{fc11d4ff}`, `{8faff97c}`],
+		traits: [`{fc11d4ff}`, `{a3779d74}`],
 		stats: {
-			armor: 50,
-			attackSpeed: 0.800000011920929,
+			armor: 25,
+			attackSpeed: 0.75,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
-			damage: 75,
-			hp: 1000,
-			initialMana: 50,
-			magicResist: 50,
+			damage: 65,
+			hp: 750,
+			initialMana: 30,
+			magicResist: 25,
 			mana: 110,
 			moveSpeed: 500,
-			range: 1,
+			range: 4,
 		},
-		basicAttackMissileSpeed: 347.79998779296875,
-		critAttackMissileSpeed: 347.79998779296875,
+		basicAttackMissileSpeed: 2500,
+		critAttackMissileSpeed: 2500,
 		passive: undefined,
 		spells: [
 			{
-				name: `TFT9_YasuoSpell`,
-				castTime: undefined,
-				missile: {
-					width: 150,
-					travelTime: undefined,
-					speedInitial: 1800,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {
-					'KnockupDuration': [0, 1, 1, 1],
-					'ADPercent': [0, 5, 5, 15],
-					'BonusDamage': [0, 55, 85, 300],
-					'HexRange': [3, 3, 3, 3],
-					'AttackCount': [3, 3, 3, 3],
-					'TornadoKnockupDuration': [0.5, 0.5, 0.5, 0.5],
-					'TooltipIoniaBonus': [15, 15, 15, 15],
-					'AOEADPercent': [2, 3, 3, 7.5],
-				},
-				calculations: {
-					'Damage': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `sum`,
-								subparts: [
-									{
-										variable: `ADPercent`,
-										starValues: [0, 5, 5, 15],
-										stat: `AD`,
-										ratio: 1,
-									},
-									{
-										variable: `BonusDamage`,
-										starValues: [0, 55, 85, 300],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-					'{cdbc7d90}': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `{f9bc7f3e}`,
-										starValues: undefined,
-										stat: `AD`,
-										ratio: 1,
-									},
-								],
-							},
-						],
-					},
-					'{c498838d}': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `identity`,
-								subparts: [
-									{
-										variable: `{9b1e8f37}`,
-										starValues: undefined,
-										stat: undefined,
-										ratio: undefined,
-									},
-								],
-							},
-						],
-					},
-				},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-		],
-		missiles: [],
-	},
-	{
-		apiName: `TFT9_Zed`,
-		name: `Zed`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Zed.TFT_Set9.tex`,
-		cost: 2,
-		starLevel: undefined,
-		teamSize: undefined,
-		isSpawn: false,
-		traits: [`{fc11d4ff}`, `{29d0b1a5}`, `{9a48f4a7}`],
-		stats: {
-			armor: 35,
-			attackSpeed: 0.699999988079071,
-			critChance: 0.25,
-			critMultiplier: 1.399999976158142,
-			damage: 55,
-			hp: 600,
-			initialMana: 0,
-			magicResist: 35,
-			mana: 70,
-			moveSpeed: 500,
-			range: 1,
-		},
-		basicAttackMissileSpeed: 467,
-		critAttackMissileSpeed: 467,
-		passive: undefined,
-		spells: [
-			{
-				name: `TFT9_ZedSpell`,
+				name: `TFT9_XayahSpell`,
 				castTime: undefined,
 				missile: undefined,
 				variables: {
-					'DamagePercent': [0, 1.399999976158142, 1.399999976158142, 1.5],
-					'ShadowRange': [2, 2, 2, 2],
-					'BaseDamage': [0, 25, 40, 50],
-					'TooltipIoniaBonus': [15, 15, 15, 15],
+					'NumFeathers': [9, 7, 7, 12],
+					'PercentADPerFeather': [0.800000011920929, 0.800000011920929, 0.800000011920929, 0.800000011920929],
+					'BonusDamagePerFeather': [0, 15, 25, 60],
+					'ArmorShred': [6, 6, 6, 6],
+					'TooltipIoniaBonus': [5, 5, 5, 5],
 				},
 				calculations: {
 					'Damage': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `sum`,
 								subparts: [
 									{
-										variable: `DamagePercent`,
-										starValues: [0, 1.399999976158142, 1.399999976158142, 1.5],
+										variable: `PercentADPerFeather`,
+										starValues: [0.800000011920929, 0.800000011920929, 0.800000011920929, 0.800000011920929],
 										stat: `AD`,
 										ratio: 1,
 									},
-								],
-							},
-							{
-								operator: `scale`,
-								subparts: [
 									{
-										variable: `BaseDamage`,
-										starValues: [0, 25, 40, 50],
+										variable: `BonusDamagePerFeather`,
+										starValues: [0, 15, 25, 60],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -8447,23 +9025,17 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{c498838d}': {
+					'{cfad5f8e}': {
 						asPercent: false,
 						parts: [
 							{
-								operator: `sum`,
+								operator: `scale`,
 								subparts: [
 									{
-										variable: undefined,
-										starValues: undefined,
-										stat: undefined,
-										ratio: 0.004999999888241291,
-									},
-									{
-										variable: `{73569f2e}`,
-										starValues: undefined,
-										stat: undefined,
-										ratio: undefined,
+										variable: `BonusDamagePerFeather`,
+										starValues: [0, 15, 25, 60],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
 									},
 								],
 							},
@@ -8476,7 +9048,7 @@ export const champions: ChampionData[] = [
 		],
 		missiles: [
 			{
-				name: `TFT9_ZedSpellShadowMis`,
+				name: `TFT9_XayahBasicAttack3`,
 				castTime: undefined,
 				missile: {
 					width: undefined,
@@ -8493,115 +9065,13 @@ export const champions: ChampionData[] = [
 				cantCastWhileRooted: undefined,
 				uninterruptable: undefined,
 			},
-		],
-	},
-	{
-		apiName: `TFT9_Zeri`,
-		name: `Zeri`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_Zeri.TFT_Set9.tex`,
-		cost: 4,
-		starLevel: undefined,
-		teamSize: undefined,
-		isSpawn: false,
-		traits: [`{b0e4deef}`, `{dfc0f253}`],
-		stats: {
-			armor: 25,
-			attackSpeed: 0.800000011920929,
-			critChance: 0.25,
-			critMultiplier: 1.399999976158142,
-			damage: 65,
-			hp: 750,
-			initialMana: 0,
-			magicResist: 25,
-			mana: 50,
-			moveSpeed: 500,
-			range: 4,
-		},
-		basicAttackMissileSpeed: 2000,
-		critAttackMissileSpeed: 2000,
-		passive: undefined,
-		spells: [
 			{
-				name: `TFT9_ZeriSpell`,
-				castTime: 0.5,
-				missile: undefined,
-				variables: {
-					'NumBullets': [3, 3, 3, 3],
-					'ADRatioPerBullet': [0.3400000035762787, 0.3400000035762787, 0.3400000035762787, 0.3400000035762787],
-					'OverchargeDuration': [9, 8, 8, 15],
-					'OverchargeChainRatio': [0.4000000059604645, 0.44999998807907104, 0.44999998807907104, 1],
-					'ExecuteThresholdBase': [0.07999999821186066, 0.07999999821186066, 0.07999999821186066, 0.07999999821186066],
-					'EnemyCount': [3, 3, 3, 5],
-					'ExecuteThresholdAP': [0.03999999910593033, 0.03999999910593033, 0.03999999910593033, 0.03999999910593033],
-				},
-				calculations: {
-					'{964dcfb2}': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `sum`,
-								subparts: [
-									{
-										variable: `{35d51666}`,
-										starValues: undefined,
-										stat: `AD`,
-										ratio: 1,
-									},
-								],
-							},
-						],
-					},
-					'{f8f787a4}': {
-						asPercent: true,
-						parts: [
-							{
-								operator: `sum`,
-								subparts: [
-									{
-										variable: `{96f2d0a6}`,
-										starValues: undefined,
-										stat: undefined,
-										ratio: undefined,
-									},
-									{
-										variable: `{5cfd7c1a}`,
-										starValues: undefined,
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-					'{9d82943b}': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `sum`,
-								subparts: [
-									{
-										variable: `{78646acf}`,
-										starValues: undefined,
-										stat: `AD`,
-										ratio: 1,
-									},
-								],
-							},
-						],
-					},
-				},
-				cantCastWhileRooted: undefined,
-				uninterruptable: undefined,
-			},
-		],
-		missiles: [
-			{
-				name: `TFT9_ZeriZap`,
+				name: `TFT9_XayahBasicAttack4`,
 				castTime: undefined,
 				missile: {
 					width: undefined,
 					travelTime: undefined,
-					speedInitial: 8000,
+					speedInitial: 2500,
 					speedMin: undefined,
 					speedMax: undefined,
 					acceleration: undefined,
@@ -8614,84 +9084,23 @@ export const champions: ChampionData[] = [
 				uninterruptable: undefined,
 			},
 			{
-				name: `TFT9_ZeriRMis`,
+				name: `TFT9_XayahSpellMis`,
 				castTime: undefined,
 				missile: {
-					width: 50,
+					width: 20,
 					travelTime: undefined,
-					speedInitial: 3500,
+					speedInitial: 10,
 					speedMin: undefined,
 					speedMax: undefined,
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: false,
-				},
-				variables: {
-					'BaseDamage': [-5, 5, 15, 25],
-					'CDRefund': [1.5, 1.5, 1.5, 1.5],
-					'CDRefundUrf': [0.5, 0.5, 0.5, 0.5],
-					'AttackSpeed': [0.30000001192092896, 0.44999998807907104, 0.6000000238418579, 0.75],
-				},
-				calculations: {
-					'Damage': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `identity`,
-								subparts: [
-									{
-										variable: `BaseDamage`,
-										starValues: [-5, 5, 15, 25],
-										stat: undefined,
-										ratio: undefined,
-									},
-								],
-							},
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: undefined,
-										starValues: undefined,
-										stat: `AD`,
-										ratio: 1,
-									},
-								],
-							},
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: undefined,
-										starValues: undefined,
-										stat: undefined,
-										ratio: 0.15000000596046448,
-									},
-								],
-							},
-						],
-					},
-				},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-			{
-				name: `TFT9_ZeriQMis`,
-				castTime: undefined,
-				missile: {
-					width: 50,
-					travelTime: undefined,
-					speedInitial: 3500,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: false,
+					_missileSpeed: 4000,
 				},
 				variables: {},
 				calculations: {},
 				cantCastWhileRooted: undefined,
-				uninterruptable: true,
+				uninterruptable: undefined,
 			},
 		],
 	},

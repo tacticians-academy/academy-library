@@ -156,7 +156,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{c9f34916}": {
+				"SpellRange": {
 					"mFormulaParts": [
 						{
 							"mSubparts": [
@@ -166,7 +166,7 @@
 									"__type": "StatByCoefficientCalculationPart"
 								},
 								{
-									"mDataValue": "{a3dca3cb}",
+									"mDataValue": "BonusSpellRange",
 									"__type": "NamedDataValueCalculationPart"
 								}
 							],

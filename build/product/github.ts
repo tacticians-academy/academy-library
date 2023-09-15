@@ -12,8 +12,6 @@ import { AugmentGroupKey, ChampionKey, ItemKey, TraitKey } from '../../dist/aggr
 import { getCurrentSetNumber, githubTokenPath, loadHardcodedTXT } from '../helpers/files.js'
 import { getAugmentNameKey } from '../helpers/utils.js'
 
-const githubToken = (await fs.readFile(githubTokenPath, 'utf8')).trim()
-
 interface GithubIssueData {
 	title: string,
 	body: string,
@@ -23,6 +21,7 @@ interface GithubIssueData {
 
 async function createIssue(data: GithubIssueData) {
 	try {
+		const githubToken = (await fs.readFile(githubTokenPath, 'utf8')).trim()
 		const repo = 'ky-is/TEST' //SAMPLE
 		// const repo = 'tacticians-academy/teamfight-simulator'
 		const response = await fetch(`https://api.github.com/repos/${repo}/import/issues`, {

@@ -21,9 +21,9 @@
 					"mName": "SpellDamage",
 					"mValues": [
 						100,
-						160,
-						240,
-						370,
+						180,
+						270,
+						410,
 						100,
 						100,
 						100
@@ -45,7 +45,7 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{e42c86ed}": {
+				"ModifiedSpellDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -61,14 +61,14 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{7d6d0a3e}": {
+				"ModifiedBoulderDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{4dd34fff}",
+								"mDataValue": "BoulderDamage",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -446,6 +446,7 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
+		"mInitialMana": 20,
 		"{22f5197d}": 160,
 		"__type": "TFTCharacterRecord"
 	}

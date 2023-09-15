@@ -54,7 +54,7 @@
 							"mSubparts": [
 								{
 									"mStat": 2,
-									"mDataValue": "{11a96dee}",
+									"mDataValue": "PercentOfAD",
 									"__type": "StatByNamedDataValueCalculationPart"
 								}
 							],
@@ -71,7 +71,7 @@
 						{
 							"mSubpart": {
 								"mStat": 11,
-								"mDataValue": "{8b4a02cc}",
+								"mDataValue": "PercentMaxHealthHeal",
 								"__type": "StatByNamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -80,12 +80,12 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{435fa3bd}": {
+				"ModifiedHealPercent": {
 					"{cbcac618}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{8b4a02cc}",
+								"mDataValue": "PercentMaxHealthHeal",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,

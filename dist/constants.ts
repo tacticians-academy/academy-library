@@ -45,7 +45,7 @@ export const SET_DATA = {
 		patchLine: '13.17',
 	},
 	9.5: {
-		patchLine: 'pbe', //'latest',
+		patchLine: '13.18',
 	},
 }
 export type SetNumber = keyof typeof SET_DATA

@@ -97,9 +97,9 @@
 					"mName": "BonusMaxHealth",
 					"mValues": [
 						200,
-						350,
-						400,
-						650,
+						325,
+						375,
+						550,
 						500,
 						575,
 						650
@@ -123,9 +123,9 @@
 					"mName": "SecondaryBonusMaxHealth",
 					"mValues": [
 						200,
-						240,
-						280,
-						425,
+						225,
+						260,
+						385,
 						200,
 						200,
 						200
@@ -163,7 +163,23 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{42de401d}": {
+				"ModifiedBonusHealth": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "BonusMaxHealth",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"ModifiedSecondaryDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -179,30 +195,14 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{67657c25}": {
+				"ModifiedSecondaryBonusHealth": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{6bd7c92c}",
-								"__type": "NamedDataValueCalculationPart"
-							},
-							"mRatio": 0.009999999776482582,
-							"__type": "SubPartScaledProportionalToStat"
-						}
-					],
-					"__type": "GameCalculation"
-				},
-				"ModifiedBonusHealth": {
-					"{cbcac618}": 5,
-					"{37070a8d}": 5,
-					"{e6eebb2f}": 5,
-					"mFormulaParts": [
-						{
-							"mSubpart": {
-								"mDataValue": "{f780b9d8}",
+								"mDataValue": "SecondaryBonusMaxHealth",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,

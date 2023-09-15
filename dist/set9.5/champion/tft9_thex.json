@@ -154,14 +154,14 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{c209f33e}": {
+				"ModifiedFlameBreathDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{0852737f}",
+								"mDataValue": "FlameBreathDamage",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,

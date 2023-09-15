@@ -99,7 +99,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{9169335e}": {
+				"HealthDamage": {
 					"{cbcac618}": 5,
 					"mFormulaParts": [
 						{
@@ -215,7 +215,7 @@
 	},
 	"Characters/TFT9_Sejuani/CharacterRecords/Root": {
 		"mCharacterName": "TFT9_Sejuani",
-		"baseHP": 1000,
+		"baseHP": 1100,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,

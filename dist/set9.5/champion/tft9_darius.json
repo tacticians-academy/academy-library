@@ -227,14 +227,14 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{fac096d7}": {
+				"ModifiedAbilityScaleDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{966831c0}",
+								"mDataValue": "AbilityScaleDamage",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -252,7 +252,7 @@
 							"mSubparts": [
 								{
 									"mSubpart": {
-										"mDataValue": "{966831c0}",
+										"mDataValue": "AbilityScaleDamage",
 										"__type": "NamedDataValueCalculationPart"
 									},
 									"mRatio": 0.009999999776482582,
@@ -260,7 +260,7 @@
 								},
 								{
 									"mStat": 2,
-									"mDataValue": "{14f704f9}",
+									"mDataValue": "AttackDamagePercent",
 									"__type": "StatByNamedDataValueCalculationPart"
 								}
 							],

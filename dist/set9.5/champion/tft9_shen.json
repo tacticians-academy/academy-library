@@ -118,8 +118,8 @@
 					"mName": "SelfShieldAmount",
 					"mValues": [
 						0,
-						350,
-						450,
+						300,
+						400,
 						2000,
 						0,
 						0,
@@ -197,14 +197,14 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{ee9eae65}": {
+				"ModifiedAllyShieldAmount": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{f82b0e8a}",
+								"mDataValue": "AllyShieldAmount",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -213,14 +213,14 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{0546af49}": {
+				"ModifiedSelfShieldAmount": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{0ecc6c1a}",
+								"mDataValue": "SelfShieldAmount",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -427,11 +427,11 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{ee9eae65}": {
+				"ModifiedAllyShieldAmount": {
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{f82b0e8a}",
+								"mDataValue": "AllyShieldAmount",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -442,11 +442,11 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{0546af49}": {
+				"ModifiedSelfShieldAmount": {
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{0ecc6c1a}",
+								"mDataValue": "SelfShieldAmount",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,

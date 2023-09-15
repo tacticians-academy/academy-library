@@ -157,9 +157,9 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{9ce7b15e}": {
+				"CollisionDamage": {
 					"mMultiplier": {
-						"mDataValue": "{97f11664}",
+						"mDataValue": "CollisionPercent",
 						"__type": "NamedDataValueCalculationPart"
 					},
 					"{cbcac618}": 5,
@@ -255,14 +255,14 @@
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 60,
+			"arBase": 70,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 60,
-		"baseArmor": 60,
-		"baseSpellBlock": 60,
+		"baseArmor": 50,
+		"baseSpellBlock": 50,
 		"baseCritChance": 0.25,
 		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,

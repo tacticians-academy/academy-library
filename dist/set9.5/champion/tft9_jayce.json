@@ -323,14 +323,14 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{98aa80a6}": {
+				"ModifiedPercentAttackSpeed": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{db1859c9}",
+								"mDataValue": "PercentAttackSpeed",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -353,14 +353,14 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{48690697}": {
+				"ModifiedEnhancedAttackSpeed": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{df36deba}",
+								"mDataValue": "SelfAttackSpeed",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -434,7 +434,7 @@
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 90,
+			"arBase": 80,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
@@ -488,7 +488,7 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 40,
+		"mInitialMana": 30,
 		"{22f5197d}": 160,
 		"__type": "TFTCharacterRecord"
 	}

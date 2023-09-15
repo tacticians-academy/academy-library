@@ -301,11 +301,11 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{ee90a3b4}": {
+				"ModifiedResistAmount": {
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{0ee71306}",
+								"mDataValue": "BaseResistAmount",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,

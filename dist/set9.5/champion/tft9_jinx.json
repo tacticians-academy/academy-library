@@ -35,7 +35,7 @@
 					"mValues": [
 						0,
 						1.5,
-						1.5,
+						1.5499999523162842,
 						1.600000023841858,
 						0,
 						0,
@@ -47,9 +47,9 @@
 					"mName": "AbilityScaleDamage",
 					"mValues": [
 						20,
-						10,
 						15,
-						25,
+						20,
+						35,
 						20,
 						20,
 						20
@@ -83,7 +83,7 @@
 						},
 						{
 							"mSubpart": {
-								"mDataValue": "{966831c0}",
+								"mDataValue": "AbilityScaleDamage",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -399,7 +399,7 @@
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 75,
+			"arBase": 70,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
@@ -452,6 +452,7 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
+		"mInitialMana": 10,
 		"{22f5197d}": 160,
 		"__type": "TFTCharacterRecord"
 	}

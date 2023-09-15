@@ -234,12 +234,12 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{588a9429}": {
+				"ModifiedNumStrikes": {
 					"mFormulaParts": [
 						{
 							"mSubparts": [
 								{
-									"mDataValue": "{011db30e}",
+									"mDataValue": "NumStrikes",
 									"__type": "NamedDataValueCalculationPart"
 								},
 								{
@@ -251,7 +251,7 @@
 										"__type": "StatByCoefficientCalculationPart"
 									},
 									"mPart2": {
-										"mDataValue": "{a9bf4e69}",
+										"mDataValue": "StrikesPer100BonusAS",
 										"__type": "NamedDataValueCalculationPart"
 									},
 									"__type": "ProductOfSubPartsCalculationPart"
@@ -273,7 +273,7 @@
 						},
 						{
 							"mSubpart": {
-								"mDataValue": "{291a269a}",
+								"mDataValue": "BonusFlatDamage",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -282,11 +282,11 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{0c668f30}": {
+				"ModifiedFlatDamage": {
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{291a269a}",
+								"mDataValue": "BonusFlatDamage",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,

@@ -273,14 +273,14 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{9498a61c}": {
+				"ModifiedAttackSpeedPct": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{380996ff}",
+								"mDataValue": "AttackSpeedPct",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -290,7 +290,7 @@
 					"mDisplayAsPercent": true,
 					"__type": "GameCalculation"
 				},
-				"{3b26e559}": {
+				"DashRangeTooltip": {
 					"mFormulaParts": [
 						{
 							"mSubparts": [
@@ -300,7 +300,7 @@
 									"__type": "StatByCoefficientCalculationPart"
 								},
 								{
-									"mDataValue": "{9a14d685}",
+									"mDataValue": "DashRangeBonus",
 									"__type": "NamedDataValueCalculationPart"
 								}
 							],

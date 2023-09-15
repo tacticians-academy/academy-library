@@ -171,14 +171,14 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{95c1122d}": {
+				"ModifiedPercentMaxHealth": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{82a4720a}",
+								"mDataValue": "PercentMaxHealth",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,

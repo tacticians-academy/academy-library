@@ -1,0 +1,420 @@
+{
+	"Characters/TFT9_Gangplank/Spells/TFT9_GangplankCritAttack": {
+		"mScriptName": "TFT9_GangplankCritAttack",
+		"mSpell": {
+			"bHaveHitEffect": true,
+			"castFrame": 8.710000038146973,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{5830ac5d}": {
+		"mScriptName": "TFT9_GangplankBasicAttack_Ranged",
+		"mSpell": {
+			"bHaveHitEffect": true,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand",
+					"mSpeed": 2600,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 10,
+			"mMissileEffectKey": "{9f076a8e}",
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Gangplank/Spells/TFT9_GangplankSpell": {
+		"mScriptName": "TFT9_GangplankSpell",
+		"mSpell": {
+			"mAffectsTypeFlags": 8192,
+			"mSpellTags": [
+				""
+			],
+			"mDataValues": [
+				{
+					"mName": "MeleePassiveADRatio",
+					"mValues": [
+						0,
+						3,
+						3,
+						25,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "MeleePassiveDuration",
+					"mValues": [
+						3,
+						3,
+						3,
+						3,
+						3,
+						3,
+						3
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ActiveMagicDamage",
+					"mValues": [
+						0,
+						450,
+						675,
+						9001,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ActiveAttackSpeed",
+					"mValues": [
+						0,
+						0.3499999940395355,
+						0.5,
+						3,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ActiveAttackSpeedDuration",
+					"mValues": [
+						3,
+						3,
+						3,
+						3,
+						3,
+						3,
+						3
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ReaverKingMeleeBonusResists",
+					"mValues": [
+						50,
+						50,
+						50,
+						50,
+						50,
+						50,
+						50
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ReaverKingRangedBonusHexRange",
+					"mValues": [
+						3,
+						3,
+						3,
+						3,
+						3,
+						3,
+						3
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ReaverKingRangedBonusMana",
+					"mValues": [
+						3,
+						3,
+						3,
+						3,
+						3,
+						3,
+						3
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"MeleePassiveTotalDamage": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubparts": [
+								{
+									"mStat": 2,
+									"mDataValue": "MeleePassiveADRatio",
+									"__type": "StatByNamedDataValueCalculationPart"
+								}
+							],
+							"__type": "SumOfSubPartsCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"ModifiedActiveMagicDamage": {
+					"{cbcac618}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "ActiveMagicDamage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"delayCastOffsetPercent": -0.19999998807907104,
+			"delayTotalTimePercent": -0.5,
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castConeDistance": 1000,
+			"castFrame": 6,
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"{00f7e5bc}": true,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{7a94384d}": {
+		"mScriptName": "TFT9_GangplankCritAttack_Ranged",
+		"mSpell": {
+			"bHaveHitEffect": true,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand",
+					"mSpeed": 2600,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 10,
+			"mMissileEffectKey": "{9f076a8e}",
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{7d3965cd}": {
+		"mScriptName": "TFT9_GangplankBasicAttack2_Ranged",
+		"mSpell": {
+			"bHaveHitEffect": true,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand",
+					"mSpeed": 2600,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 10,
+			"mMissileEffectKey": "{9f076a8e}",
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Gangplank/Spells/TFT9_GangplankBasicAttack": {
+		"mScriptName": "TFT9_GangplankBasicAttack",
+		"mSpell": {
+			"bHaveHitEffect": true,
+			"castFrame": 8.710000038146973,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{ebe5b1b0}": {
+		"mScriptName": "TFT9_GangplankSpell_Boat",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 7183,
+			"mMinimapIconDisplayFlag": 0,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"luaOnMissileUpdateDistanceInterval": 60,
+			"mMissileSpec": {
+				"mMissileWidth": 200,
+				"movementComponent": {
+					"mTracksTarget": false,
+					"mStartBoneName": "",
+					"mAcceleration": -200,
+					"mMinSpeed": 800,
+					"mMaxSpeed": 1000,
+					"mInitialSpeed": 1000,
+					"__type": "AcceleratingMovement"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnHit"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"mMissileEffectKey": "{22a2b546}",
+			"mTargetingTypeData": {
+				"__type": "Location"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{fecc2e05}": {
+		"mScriptName": "TFT9_GangplankBasicAttack2",
+		"mSpell": {
+			"bHaveHitEffect": true,
+			"castFrame": 8.710000038146973,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT9_Gangplank/CharacterRecords/Root": {
+		"mCharacterName": "TFT9_Gangplank",
+		"baseHP": 1000,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 180,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 80,
+		"baseArmor": 30,
+		"baseSpellBlock": 30,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.800000011920929,
+		"basicAttack": {
+			"mAttackName": "TFT9_GangplankBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"critAttacks": [
+			{
+				"mAttackName": "TFT9_GangplankCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT9_GangplankSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446664,
+		"tier": 5,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{001c06e0}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{dfc0f253}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{f4a432b4}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{53d104ac}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mInitialMana": 90,
+		"{22f5197d}": 225,
+		"__type": "TFTCharacterRecord"
+	}
+}

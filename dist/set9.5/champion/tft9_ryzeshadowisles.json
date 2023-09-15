@@ -246,14 +246,14 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{684e3a7b}": {
+				"ModifiedHealthOnReturn": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{aee31a83}",
+								"mDataValue": "PercentHealthOnReturn",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
