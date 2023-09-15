@@ -1,6 +1,6 @@
 import type { SetNumber } from '../dist/index.js'
 
-const LOAD_SET: SetNumber = 7.5
+const LOAD_SET: SetNumber = 9.5
 
 import fetch from 'node-fetch'
 import fs from 'fs/promises'
@@ -12,7 +12,7 @@ import { importSetData } from '../dist/imports.js'
 import { getPathTo, getOutputFolder, setNumberPath } from './helpers/files.js'
 import { BASE_UNIT_API_NAMES, mDataValueSubstitutions, mSpellCalculationsSubstitutions } from './helpers/normalize.js'
 import type { ChampionJSON, ChampionJSONStats, ResponseJSON } from './helpers/types.js'
-import { getAPIName } from './helpers/utils.js'
+import { getAPIName, getSetDataFrom } from './helpers/utils.js'
 
 const patchLine = SET_DATA[LOAD_SET].patchLine
 const baseURL = `https://raw.communitydragon.org/${patchLine}`
@@ -25,7 +25,7 @@ const etagPath = getPathTo(LOAD_SET, '.cdragon_etag.local')
 try {
 	oldEtag = await fs.readFile(etagPath, 'utf8')
 } catch {
-	console.log('No local hash. Reloading data.')
+	console.log('No local hash. Reloading data from:', url)
 	await fs.mkdir(getOutputFolder(LOAD_SET), { recursive: true })
 }
 const newEtag = response.headers.get('etag')
@@ -44,13 +44,13 @@ if (newEtag != null) {
 console.log('')
 
 const responseJSON = await response.json() as ResponseJSON
-const parentSetNumber = Object.keys(responseJSON.sets).reduce((previous, current) => Math.max(previous, parseInt(current, 10)), 0)
+const parentSetNumber = Object.keys(responseJSON.sets).reduce((previous, current) => Math.max(previous, parseInt(current, 10)) as SetNumber, 0 as SetNumber)
 
-const currentSetNumber = parentSetNumber === Math.floor(LOAD_SET) ? LOAD_SET : parentSetNumber as SetNumber
+const currentSetNumber = parentSetNumber === Math.floor(LOAD_SET) ? LOAD_SET : parentSetNumber
 if (SET_DATA[currentSetNumber] == null) {
 	throw 'New Set!! ' + currentSetNumber
 }
-const { champions } = responseJSON.sets[parentSetNumber]
+const { champions } = getSetDataFrom(LOAD_SET, parentSetNumber, responseJSON)
 
 const championsPath = getPathTo(currentSetNumber, 'champion')
 await fs.mkdir(championsPath, { recursive: true })

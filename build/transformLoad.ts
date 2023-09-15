@@ -3,7 +3,7 @@ const MAX_STAR_LEVEL = 3
 import fs from 'fs/promises'
 
 import { BonusKey, COMPONENT_ITEM_IDS } from '../dist/index.js'
-import type { AugmentData, AugmentTier, ChampionData, ChampionSpellData, EffectVariables, ItemData, ItemTypeKey, SpellCalculations, SpellCalculationPart, SpellCalculationSubpart, SpellVariables, TraitData } from '../dist/index.js'
+import type { AugmentData, AugmentTier, ChampionData, ChampionSpellData, EffectVariables, ItemData, ItemTypeKey, SpellCalculations, SpellCalculationPart, SpellCalculationSubpart, SpellVariables, TraitData, SetNumber } from '../dist/index.js'
 import { AugmentGroupKey, ChampionKey, ItemKey, TraitKey } from '../dist/aggregated.js'
 import { importSetData } from '../dist/imports.js'
 
@@ -11,7 +11,7 @@ import { getCurrentSetNumber, getPathTo, loadHardcodedTXT } from './helpers/file
 import { formatJS } from './helpers/formatting.js'
 import { BASE_UNIT_API_NAMES, UNRELEASED_ITEM_NAME_KEYS, NORMALIZE_EFFECT_KEYS, SUBSTITUTE_EFFECT_KEYS, normalizeEffects, mStatSubstitutions, spellCalculationOperatorSubstitutions } from './helpers/normalize.js'
 import type { ChampionJSON, ChampionJSONType, ChampionJSONAttack, ChampionJSONSpell, ChampionJSONSpellAttack, ChampionJSONStats, ResponseJSON } from './helpers/types.js'
-import { getAPIName, getAugmentNameKey, removeSymbols } from './helpers/utils.js'
+import { getAPIName, getAugmentNameKey, getSetDataFrom, removeSymbols } from './helpers/utils.js'
 
 const BASE_AP_RATIO = 0.009999999776482582
 
@@ -28,7 +28,7 @@ function getEnumKeyFrom(apiName: string) {
 // Load
 
 const currentSetNumber = await getCurrentSetNumber()
-const parentSetNumber = Math.floor(currentSetNumber)
+const parentSetNumber = Math.floor(currentSetNumber) as SetNumber
 
 let responseJSON: ResponseJSON
 try {
@@ -38,7 +38,7 @@ try {
 	console.log(error)
 	throw 'Missing Set data. Erase the current Set directory and re-run `prepare`.'
 }
-const { champions, traits } = responseJSON.sets[parentSetNumber]
+const { champions, traits } = getSetDataFrom(currentSetNumber, parentSetNumber, responseJSON)
 const itemsData = (responseJSON.items as ItemData[]).filter(item => item.name)
 
 const baseSet = responseJSON.sets['1']

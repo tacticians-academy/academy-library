@@ -1,4 +1,5 @@
-import type { AugmentData, ChampionData, ItemData } from '../../dist/index.js'
+import type { AugmentData, ChampionData, ItemData, SetNumber } from '../../dist/index.js'
+import type { ResponseJSON } from './types'
 
 export function getAugmentNameKey(item: AugmentData | ItemData) {
 	if (item.name === 'Arcane Crest') {
@@ -16,4 +17,8 @@ export function getAPIName(champion: ChampionData) {
 
 export function removeSymbols(raw: string) {
 	return raw.replaceAll(/['.:+\-!,]/g, '')
+}
+
+export function getSetDataFrom(set: SetNumber, parentSet: SetNumber, responseJSON: ResponseJSON) {
+	return set === 9.5 ? responseJSON.setData[0] : responseJSON.sets[parentSet]
 }
