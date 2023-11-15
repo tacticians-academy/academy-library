@@ -2,7 +2,7 @@ const MAX_STAR_LEVEL = 3
 
 import fs from 'fs/promises'
 
-import { BonusKey, COMPONENT_ITEM_IDS } from '../dist/index.js'
+import { BonusKey, COMPONENT_ITEM_API_NAMES, COMPONENT_ITEM_IDS } from '../dist/index.js'
 import type { AugmentData, AugmentTier, ChampionData, ChampionSpellData, EffectVariables, ItemData, ItemTypeKey, SpellCalculations, SpellCalculationPart, SpellCalculationSubpart, SpellVariables, TraitData, SetNumber } from '../dist/index.js'
 import { AugmentGroupKey, ChampionKey, ItemKey, TraitKey } from '../dist/aggregated.js'
 import { importSetData } from '../dist/imports.js'
@@ -57,11 +57,11 @@ for (const apiName of BASE_UNIT_API_NAMES) {
 
 const { LOCKED_STAR_LEVEL, SPATULA_ITEM_IDS, RETIRED_ITEM_NAMES, RETIRED_AUGMENT_NAME_KEYS, UNUSED_AUGMENT_NAME_KEYS, TRAIT_DATA_SUBSTITUTIONS } = await importSetData(currentSetNumber)
 
-const currentItemsByType: Record<ItemTypeKey, ItemData[]> = {component: [], completed: [], spatula: [], duos: [], consumable: [], radiant: [], ornn: [], hexbuff: [], mercenaryDice: [], unreleased: []}
+const currentItemsByType: Record<ItemTypeKey, ItemData[]> = {component: [], completed: [], spatula: [], radiant: [], ornn: [], support: [], shimmerscale: [], consumable: [], hexbuff: [], mod: [], unreleased: []}
 
 const foundItemIDs: number[] = []
 itemsData.reverse().forEach(item => {
-	if (!item.name || RETIRED_ITEM_NAMES?.includes(item.name) || foundItemIDs.includes(item.id)) {
+	if (!item.name || item.desc == null || RETIRED_ITEM_NAMES?.includes(item.name) || (item.id != null && foundItemIDs.includes(item.id)) || item.desc.toLowerCase().startsWith('tft_item_')) {
 		return
 	}
 	if (item.desc?.length == 0) {
@@ -71,56 +71,112 @@ itemsData.reverse().forEach(item => {
 	}
 	normalizeEffects(item.effects, unreplacedIDs)
 	const name = item.name.toLowerCase()
-	const icon = item.icon.toLowerCase()
-	if (icon.includes('/augments/')) {
-		return
-	}
-	const from = item.from as number[] | null
-	if (!from) {
-		// console.error('Invalid item', item)
+	const iconNormalized = item.icon.toLowerCase()
+	if (iconNormalized.includes('/augments/') || iconNormalized.includes('/set6_mercenary/') || iconNormalized.includes('/mercenary/') || iconNormalized.includes('/pairs/')) {
 		return
 	}
 	let typeKey: ItemTypeKey | undefined
-	if (icon.includes('_hex_')) {
-		typeKey = 'hexbuff'
-	} else if (item.desc === 'tft_item_description_Mercenary_Dice') {
-		typeKey = 'mercenaryDice'
-	} else if (item.id < 0 || UNRELEASED_ITEM_NAME_KEYS.includes(name) || name.includes('item_name')) {
+	if (iconNormalized.includes('/radiant/')) {
+		typeKey = 'radiant'
+	} else if (iconNormalized.includes('ornnitem') || iconNormalized.includes('ornn_item')) {
+		typeKey = 'ornn'
+	} else if (iconNormalized.includes('_supportitems/')) {
+		typeKey = 'support'
+	} else if (iconNormalized.includes('shimmerscale/')) {
+		typeKey = 'shimmerscale'
+	} else if (name.includes('item_name')) {
 		typeKey = 'unreleased'
-	} else if (from.length) {
-		if (item.id !== 88 && from.includes(8)) {
-			if (SPATULA_ITEM_IDS != null && !SPATULA_ITEM_IDS.includes(item.id)) {
+	} else if (item.apiName != null) { // Set >= 7
+		if (item.apiName === 'TFT_Item_Unknown' || item.apiName === 'TFT_Item_TitanicHydra' || item.apiName === 'TFT_Item_SeraphsEmbrace') {
+			return
+		}
+		if (item.apiName === 'TFT_Item_ForceOfNature' || item.apiName === 'TFT_Item_KnightsVow' || item.apiName === 'TFT_Item_YoumuusGhostblade') { // Old emblems
+			return
+		}
+		if (item.apiName.includes('_Augment_') || item.apiName.includes('_HyperRollAugment_') || item.apiName.startsWith('TFT_Assist_') || item.apiName.startsWith('TFTEvent_') || item.apiName.startsWith('TFT_Item_Free') || item.apiName.startsWith('TFT_Item_Grant') || item.apiName.startsWith('TFTTutorial_')) {
+			return
+		}
+		if (item.apiName.endsWith('Slot') || item.apiName.endsWith('_DU') || item.apiName.endsWith('_HR')) {
+			return
+		}
+
+		// Mods
+		if (item.apiName === 'TFT7_Item_TrainerSnax') {
+			if (currentSetNumber !== 7) {
+				return
+			}
+			typeKey = 'mod'
+		} else if (item.apiName === 'TFT7_Item_DarkflightEssence') {
+			if (currentSetNumber !== 7.5) {
+				return
+			}
+			typeKey = 'mod'
+		} else if (item.apiName.endsWith('_GenAE')) {
+			if (parentSetNumber !== 8) {
+				return
+			}
+			typeKey = 'mod'
+		} else if (item.apiName === 'TFT9_Item_CrownOfDemacia' || item.apiName.startsWith('TFT9_Consumable_Chempunk_') || item.apiName.startsWith('TFT9_HeimerUpgrade_')) {
+			if (parentSetNumber !== 9) {
+				return
+			}
+			typeKey = 'mod'
+
+		} else if (COMPONENT_ITEM_API_NAMES.includes(item.apiName) == true) {
+			typeKey = 'component'
+		} else if (item.apiName.endsWith('Emblem') || item.apiName.endsWith('EmblemItem')) {
+			if (!item.apiName.startsWith(`TFT${parentSetNumber}_`)) {
 				return
 			}
 			typeKey = 'spatula'
-		} else if (from.every(itemID => COMPONENT_ITEM_IDS.includes(itemID))) {
+		} else if (item.apiName.includes('_Consumable_')) {
+			typeKey = 'consumable'
+		} else {
+			if (iconNormalized.includes('_miscitems/') || item.apiName.startsWith('TFT8_Item_Arsenal') || item.apiName.startsWith('TFT9_Item_Piltover')) {
+				return
+			}
 			typeKey = 'completed'
 		}
-	} else {
-		if (icon.includes('/hexcore/')) {
-			return false
+	} else if (item.id != null) { // Set < 7
+		if (!item.from) {
+			// console.error('Invalid item', item)
+			return
 		}
-		if (SPATULA_ITEM_IDS?.includes(item.id)) {
-			typeKey = 'spatula'
-		} else if (COMPONENT_ITEM_IDS.includes(item.id)) {
-			typeKey = 'component'
-		} else if (icon.includes('/pairs/')) {
-			typeKey = 'duos'
-		} else if (icon.includes('/radiant/')) {
-			typeKey = 'radiant'
-		} else if (icon.includes('ornnitem')) {
-			typeKey = 'ornn'
-		} else if (icon.includes('consumable')) {
+		if (iconNormalized.includes('consumable')) {
 			typeKey = 'consumable'
-		} else if (!typeKey) {
-			if (SPATULA_ITEM_IDS == null) {
-				console.log('Unknown emblem item', item)
+		} else if (iconNormalized.includes('_hex_')) {
+			typeKey = 'hexbuff'
+		} else if (item.id < 0 || UNRELEASED_ITEM_NAME_KEYS.includes(name)) {
+			typeKey = 'unreleased'
+		} else if (item.from.length) {
+			if (item.id !== 88 && item.from.includes(8)) {
+				if (SPATULA_ITEM_IDS != null && item.id != null && !SPATULA_ITEM_IDS.includes(item.id)) {
+					return
+				}
+				typeKey = 'spatula'
+			} else if (item.from.every(itemID => COMPONENT_ITEM_IDS.includes(itemID))) {
+				typeKey = 'completed'
 			}
-			return false
+		} else {
+			if (iconNormalized.includes('/hexcore/')) {
+				return false
+			}
+			if (SPATULA_ITEM_IDS && SPATULA_ITEM_IDS?.includes(item.id)) {
+				typeKey = 'spatula'
+			} else if (COMPONENT_ITEM_IDS.includes(item.id)) {
+				typeKey = 'component'
+			} else if (!typeKey) {
+				if (SPATULA_ITEM_IDS == null) {
+					console.log('Unknown emblem item', item)
+				}
+				return false
+			}
 		}
 	}
 	if (typeKey) {
-		foundItemIDs.push(item.id)
+		if (item.id != null) {
+			foundItemIDs.push(item.id)
+		}
 		currentItemsByType[typeKey].push(item)
 	}
 })
@@ -159,13 +215,13 @@ traits.forEach((trait: TraitData) => {
 })
 
 function toKey(name: string) {
-	return removeSymbols(name.replaceAll(/\+/g, 'plus')).split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join('')
+	return removeSymbols(name.replaceAll(/\+/g, 'plus')).split(' ').map(word => word[0]?.toUpperCase() + word.slice(1)).join('')
 }
 
 const outputItemSections = []
 for (const key in currentItemsByType) {
 	const itemKey = key as ItemTypeKey
-	currentItemsByType[itemKey].sort((a, b) => a.id - b.id)
+	currentItemsByType[itemKey].sort((a, b) => a.name.localeCompare(b.name))
 	const itemsData = currentItemsByType[itemKey]
 	outputItemSections.push(`export const ${itemKey}Items: ItemData[] = ` + (itemsData.length ? formatJS(itemsData) : '[]'))
 }
@@ -199,7 +255,7 @@ for (const item of itemsData.sort((a, b) => a.name.localeCompare(b.name))) {
 	const pathComponents = icon.split('/')
 	const pathNameComponent = pathComponents[pathComponents.length - 1]
 	const pathCategoryComponent = pathComponents[pathComponents.length - 3]
-	const isAugment = pathCategoryComponent === 'augments'
+	const isAugment = pathCategoryComponent === 'augments' || (item.apiName != null && item.apiName.includes('_Augment_'))
 	const [ pathName, setKey ] = pathNameComponent.split('.')
 	if (!setKey.startsWith(parentSetName)) {
 		if (isAugment) {
@@ -212,7 +268,7 @@ for (const item of itemsData.sort((a, b) => a.name.localeCompare(b.name))) {
 			console.log('Augment should not have components', item)
 		}
 		const nameKey = item.name.toLowerCase()
-		if (RETIRED_AUGMENT_NAME_KEYS.includes(nameKey)) {
+		if (RETIRED_AUGMENT_NAME_KEYS && RETIRED_AUGMENT_NAME_KEYS.includes(nameKey)) {
 			continue
 		}
 		let tier: AugmentTier | undefined = getTierFromWord(nameKey.split(' ').pop()!)
@@ -534,9 +590,9 @@ const outputChampions = await Promise.all(playableChampions.map(async (champion)
 // Output
 
 await Promise.all([
-	fs.writeFile(getPathTo(currentSetNumber, 'champions.ts'), `import { ChampionKey } from '../index.js'\nimport type { ChampionData } from '../index'\n\nexport const champions: ChampionData[] = ` + formatJS(outputChampions)),
-	fs.writeFile(getPathTo(currentSetNumber, 'traits.ts'), `import { TraitKey } from '../index.js'\nimport type { TraitData } from '../index'\n\nexport const traits: TraitData[] = ` + formatJS(traits)),
-	fs.writeFile(getPathTo(currentSetNumber, 'items.ts'), `import { ItemKey } from '../index.js'\nimport type { ItemData } from '../index'\n\n` + outputItemSections.join('\n\n')),
+	fs.writeFile(getPathTo(currentSetNumber, 'champions.ts'), `import { ChampionKey } from '../index.js'\nimport type { ChampionData } from '../index'\n\nexport const champions: ChampionData[] = ${formatJS(outputChampions)}\n`),
+	fs.writeFile(getPathTo(currentSetNumber, 'traits.ts'), `import { TraitKey } from '../index.js'\nimport type { TraitData } from '../index'\n\nexport const traits: TraitData[] = ${formatJS(traits)}\n`),
+	fs.writeFile(getPathTo(currentSetNumber, 'items.ts'), `import { ItemKey } from '../index.js'\nimport type { ItemData } from '../index'\n\n${outputItemSections.join('\n\n')}\n`),
 ])
 
 // Transform
@@ -691,8 +747,6 @@ function transformSpellData(spellName: string, spellData: ChampionJSONSpell, jso
 
 // Aggregated
 
-console.log('\n')
-
 if (activeAugments != null) {
 	const augmentKeys = activeAugments
 		.filter(augment => !(toKey(getAugmentNameKey(augment)) in AugmentGroupKey))
@@ -714,9 +768,8 @@ const itemKeys = currentItemsByType['component'].concat(currentItemsByType['comp
 	.filter(item => !(toKey(item.name) in ItemKey))
 	.sort((a, b) => toKey(a.name).localeCompare(toKey(b.name)))
 	.map(({name}) => `${toKey(name)} = \`${name}\``)
-	.join(', ')
 if (itemKeys.length) {
-	console.log(`AGGREGATE ItemKey: ${itemKeys}`)
+	console.log(`AGGREGATE ItemKey: ${itemKeys.join(', ')}`)
 }
 
 const traitKeys = (traits as TraitData[])

@@ -53,3 +53,4 @@ export const SET_NUMBERS = Object.keys(SET_DATA).map(setKey => parseFloat(setKey
 export const CURRENT_SET_NUMBER = SET_NUMBERS.reduce((largest, current) => Math.max(largest, current), 0)
 
 export const COMPONENT_ITEM_IDS = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+export const COMPONENT_ITEM_API_NAMES = ['TFT_Item_BFSword', 'TFT_Item_RecurveBow', 'TFT_Item_NeedlesslyLargeRod', 'TFT_Item_TearOfTheGoddess', 'TFT_Item_ChainVest', 'TFT_Item_NegatronCloak', 'TFT_Item_GiantsBelt', 'TFT_Item_Spatula', 'TFT_Item_', 'TFT_Item_SparringGloves']

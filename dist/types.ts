@@ -13,12 +13,12 @@ export interface AugmentData {
 }
 
 export interface ItemData {
-	apiName: string
+	apiName?: string
 	desc: string | null
 	effects: EffectVariables
 	from: number[] | null
 	icon: string
-	id: number
+	id: number | null
 	name: string
 	unique: boolean
 	composition?: string[]
@@ -28,7 +28,7 @@ export interface ItemData {
 
 export type AugmentTierProbability = [probability: number, children?: [AugmentTierProbability, AugmentTierProbability, AugmentTierProbability]]
 
-export type ItemTypeKey = 'component' | 'completed' | 'spatula' | 'duos' | 'consumable' | 'radiant' | 'ornn' | 'hexbuff' | 'mercenaryDice' | 'unreleased'
+export type ItemTypeKey = 'component' | 'completed' | 'spatula' | 'radiant' | 'ornn' | 'support' | 'shimmerscale' | 'consumable' | 'hexbuff' | 'mod' | 'unreleased'
 
 export interface AugmentFlashcard {
 	id: string
