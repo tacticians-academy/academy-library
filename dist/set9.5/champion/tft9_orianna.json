@@ -5,19 +5,19 @@
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 90,
+			"arBase": 70,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 40,
+		"baseDamage": 35,
 		"baseArmor": 15,
 		"baseSpellBlock": 15,
 		"baseCritChance": 0.25,
 		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
 		"attackRange": 890,
-		"attackSpeed": 0.699999988079071,
+		"attackSpeed": 0.75,
 		"basicAttack": {
 			"mAttackProbability": 0.5,
 			"mAttackName": "TFT9_OriannaBasicAttack",
@@ -60,7 +60,7 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 40,
+		"mInitialMana": 20,
 		"{22f5197d}": 160,
 		"__type": "TFTCharacterRecord"
 	},
@@ -257,9 +257,9 @@
 					"mName": "ShieldHealth",
 					"mValues": [
 						200,
+						200,
 						225,
-						250,
-						325,
+						275,
 						300,
 						325,
 						350
@@ -283,9 +283,9 @@
 					"mName": "MagicDamage",
 					"mValues": [
 						50,
-						260,
-						390,
-						585,
+						290,
+						435,
+						650,
 						250,
 						300,
 						350

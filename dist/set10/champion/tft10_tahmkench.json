@@ -1,0 +1,146 @@
+{
+	"{0e68a459}": {
+		"mScriptName": "TFT10_TahmKenchBasicAttack",
+		"mSpell": {
+			"bHaveHitEffect": true,
+			"castFrame": 10,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{19bad471}": {
+		"mScriptName": "TFT10_TahmKenchBasicAttack2",
+		"mSpell": {
+			"bHaveHitEffect": true,
+			"castFrame": 10,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{4f06fcd9}": {
+		"mScriptName": "TFT10_TahmKenchCritAttack",
+		"mSpell": {
+			"bHaveHitEffect": true,
+			"castFrame": 10,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{d915206c}": {
+		"mScriptName": "TFT10_TahmKenchE",
+		"mSpell": {
+			"mDataValues": [
+				{
+					"mName": "BaseDR",
+					"mValues": [
+						15,
+						12,
+						15,
+						25,
+						75,
+						75,
+						75
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "HeadlinerHealth",
+					"mValues": [
+						225,
+						225,
+						225,
+						225,
+						225,
+						225,
+						225
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"ModifiedDR": {
+					"{cbcac618}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{21d1ebf2}",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"{47e0dff9}": {
+				"12": "Play_sfx_tft10_TahmKenchSpell_OnCast",
+				"19": "Play_sfx_tft10_TahmKenchSpellShield_OnBuffDeactivate"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{816ce0b8}": {
+		"mCharacterName": "TFT10_TahmKench",
+		"baseHP": 650,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 0,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 60,
+		"baseArmor": 35,
+		"baseSpellBlock": 35,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.550000011920929,
+		"spellNames": [
+			"TFT10_TahmKenchE",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 4,
+		"unitTagsString": "Champion",
+		"flags": 9446664,
+		"tier": 1,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{eb00b415}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{e89aa978}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{2ccf900f}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"{22f5197d}": 180,
+		"__type": "TFTCharacterRecord"
+	}
+}

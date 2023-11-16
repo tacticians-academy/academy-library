@@ -491,9 +491,9 @@
 					"mName": "MagicDamage",
 					"mValues": [
 						0,
-						175,
-						225,
-						275,
+						150,
+						180,
+						210,
 						0,
 						0,
 						0
@@ -507,9 +507,9 @@
 					"mName": "Healing",
 					"mValues": [
 						0,
-						275,
-						300,
-						325,
+						170,
+						190,
+						210,
 						0,
 						0,
 						0
@@ -829,13 +829,13 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 40,
+		"mInitialMana": 50,
 		"mCharacterName": "TFT7_Nami",
 		"baseHP": 600,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 80,
+			"arBase": 90,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"

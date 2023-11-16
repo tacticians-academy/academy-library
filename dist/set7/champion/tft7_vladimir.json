@@ -206,9 +206,9 @@
 					"mName": "Damage",
 					"mValues": [
 						75,
-						250,
+						275,
 						325,
-						400,
+						375,
 						575,
 						700,
 						825
@@ -222,9 +222,9 @@
 					"mName": "Heal",
 					"mValues": [
 						0,
-						200,
-						275,
-						350,
+						270,
+						300,
+						330,
 						0,
 						0,
 						0
@@ -334,18 +334,18 @@
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
 		"mCharacterName": "TFT7_Vladimir",
-		"baseHP": 650,
+		"baseHP": 700,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 80,
+			"arBase": 70,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 40,
-		"baseArmor": 40,
-		"baseSpellBlock": 40,
+		"baseArmor": 45,
+		"baseSpellBlock": 45,
 		"baseCritChance": 0.25,
 		"critDamageMultiplier": 1.2999999523162842,
 		"baseMoveSpeed": 500,

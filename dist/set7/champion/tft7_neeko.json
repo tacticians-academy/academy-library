@@ -30,9 +30,9 @@
 					"mName": "MagicDamage",
 					"mValues": [
 						0,
-						275,
-						400,
-						1200,
+						300,
+						425,
+						1500,
 						0,
 						0,
 						0
@@ -44,15 +44,15 @@
 				{
 					"mName": "StunDuration",
 					"mValues": [
-						2,
-						2,
-						2,
-						2,
-						2,
-						2,
-						2
+						1.5,
+						1.5,
+						1.5,
+						1.5,
+						1.5,
+						1.5,
+						1.5
 					],
-					"mBaseP": 2,
+					"mBaseP": 1.5,
 					"__type": "SpellDataValue"
 				},
 				{
@@ -103,7 +103,7 @@
 						0,
 						275,
 						400,
-						1200,
+						2000,
 						0,
 						0,
 						0
@@ -301,12 +301,12 @@
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 120,
+			"arBase": 150,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 50,
+		"baseDamage": 60,
 		"baseArmor": 20,
 		"baseSpellBlock": 20,
 		"baseCritChance": 0.25,

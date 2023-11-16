@@ -7,9 +7,9 @@
 					"mName": "BonusDamage",
 					"mValues": [
 						0,
-						100,
-						150,
-						200,
+						90,
+						140,
+						215,
 						0,
 						0,
 						0
@@ -228,7 +228,7 @@
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
 		"mCharacterName": "TFT7_Yone",
-		"baseHP": 750,
+		"baseHP": 800,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
@@ -237,14 +237,14 @@
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 45,
+		"baseDamage": 55,
 		"baseArmor": 40,
 		"baseSpellBlock": 40,
 		"baseCritChance": 0.25,
 		"critDamageMultiplier": 1.2999999523162842,
 		"baseMoveSpeed": 500,
 		"attackRange": 180,
-		"attackSpeed": 0.8999999761581421,
+		"attackSpeed": 0.8500000238418579,
 		"basicAttack": {
 			"mAttackProbability": 1,
 			"mAttackName": "TFT7_YoneBasicAttack",

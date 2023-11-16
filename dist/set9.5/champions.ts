@@ -12,14 +12,14 @@ export const champions: ChampionData[] = [
 		isSpawn: false,
 		traits: [`{3df99d7d}`, `{9a48f4a7}`, `{7c0ebaf6}`],
 		stats: {
-			armor: 60,
+			armor: 70,
 			attackSpeed: 0.800000011920929,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
 			damage: 80,
 			hp: 900,
 			initialMana: 0,
-			magicResist: 60,
+			magicResist: 70,
 			mana: 50,
 			moveSpeed: 500,
 			range: 1,
@@ -34,11 +34,11 @@ export const champions: ChampionData[] = [
 				missile: undefined,
 				variables: {
 					'Duration': [10, 12, 12, 30],
-					'DarkinOmnivamp': [0.15000000596046448, 0.15000000596046448, 0.15000000596046448, 0.15000000596046448],
-					'GreatswordADRatio': [0, 2.75, 2.75, 25],
+					'DarkinOmnivamp': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
+					'GreatswordADRatio': [0, 2.9000000953674316, 3, 25],
 					'ADPerASConversion': [0.800000011920929, 0.800000011920929, 0.800000011920929, 0.800000011920929],
 					'MovementSpeed': [700, 700, 700, 700],
-					'DarkinHealth': [350, 350, 350, 350],
+					'DarkinHealth': [250, 250, 250, 250],
 					'DarkinReviveTime': [4, 4, 4, 4],
 				},
 				calculations: {
@@ -50,7 +50,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `GreatswordADRatio`,
-										starValues: [0, 2.75, 2.75, 25],
+										starValues: [0, 2.9000000953674316, 3, 25],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -66,7 +66,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `DarkinOmnivamp`,
-										starValues: [0.15000000596046448, 0.15000000596046448, 0.15000000596046448, 0.15000000596046448],
+										starValues: [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -140,8 +140,8 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {
-					'MagicDamage': [0, 230, 350, 1888],
-					'EssenceDamage': [0, 90, 135, 1000],
+					'MagicDamage': [0, 260, 390, 1999],
+					'EssenceDamage': [0, 105, 150, 1000],
 					'NumCastsToBoom': [2, 2, 2, 0],
 					'EssenceStolenMultiplier': [0.33000001311302185, 0.33000001311302185, 0.33000001311302185, 0.33000001311302185],
 					'TooltipIoniaBonus': [3, 3, 3, 3],
@@ -156,7 +156,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `MagicDamage`,
-										starValues: [0, 230, 350, 1888],
+										starValues: [0, 260, 390, 1999],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -194,7 +194,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `EssenceDamage`,
-										starValues: [0, 90, 135, 1000],
+										starValues: [0, 105, 150, 1000],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -433,7 +433,7 @@ export const champions: ChampionData[] = [
 			attackSpeed: 0.75,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
-			damage: 60,
+			damage: 65,
 			hp: 750,
 			initialMana: 50,
 			magicResist: 25,
@@ -460,9 +460,9 @@ export const champions: ChampionData[] = [
 					_missileSpeed: 1000,
 				},
 				variables: {
-					'BlastPercentAD': [1.7999999523162842, 2.25, 2.25, 5],
+					'BlastPercentAD': [1.7999999523162842, 2.4000000953674316, 2.4000000953674316, 7.5],
 					'ChakramDuration': [7, 7, 7, 7],
-					'ChakramPercentAD': [0.10000000149011612, 0.05000000074505806, 0.05000000074505806, 0.15000000596046448],
+					'ChakramPercentAD': [0.10000000149011612, 0.07000000029802322, 0.07000000029802322, 0.15000000596046448],
 					'ChakramHealing': [0.75, 0.75, 0.75, 0.75],
 					'BaseChakramNumber': [3, 3, 3, 3],
 					'BlastSize': [2, 2, 2, 2],
@@ -477,7 +477,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `BlastPercentAD`,
-										starValues: [1.7999999523162842, 2.25, 2.25, 5],
+										starValues: [1.7999999523162842, 2.4000000953674316, 2.4000000953674316, 7.5],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -493,7 +493,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `ChakramPercentAD`,
-										starValues: [0.10000000149011612, 0.05000000074505806, 0.05000000074505806, 0.15000000596046448],
+										starValues: [0.10000000149011612, 0.07000000029802322, 0.07000000029802322, 0.15000000596046448],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -741,7 +741,7 @@ export const champions: ChampionData[] = [
 		traits: [`{cd4e5e4a}`, `{f184c04b}`],
 		stats: {
 			armor: 30,
-			attackSpeed: 0.75,
+			attackSpeed: 0.800000011920929,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
 			damage: 30,
@@ -761,7 +761,7 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {
-					'BaseMagicDamage': [35, 100, 150, 500],
+					'BaseMagicDamage': [35, 110, 160, 500],
 					'Duration': [90, 90, 90, 90],
 					'MaxSummons': [3, 3, 3, 3],
 					'BonusRatio': [0.699999988079071, 0.699999988079071, 0.699999988079071, 0.699999988079071],
@@ -775,7 +775,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `BaseMagicDamage`,
-										starValues: [35, 100, 150, 500],
+										starValues: [35, 110, 160, 500],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -791,7 +791,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `BaseMagicDamage`,
-										starValues: [35, 100, 150, 500],
+										starValues: [35, 110, 160, 500],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1066,14 +1066,14 @@ export const champions: ChampionData[] = [
 		isSpawn: false,
 		traits: [`{02851b97}`, `{20d504d6}`],
 		stats: {
-			armor: 50,
+			armor: 60,
 			attackSpeed: 0.8500000238418579,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
 			damage: 80,
 			hp: 1100,
 			initialMana: 20,
-			magicResist: 50,
+			magicResist: 60,
 			mana: 70,
 			moveSpeed: 500,
 			range: 2,
@@ -1088,10 +1088,10 @@ export const champions: ChampionData[] = [
 				missile: undefined,
 				variables: {
 					'Duration': [1.5, 1.5, 1.5, 4],
-					'NumStrikes': [5, 6, 6, 30],
-					'PercentAD': [0.6499999761581421, 0.6499999761581421, 0.6499999761581421, 0.6499999761581421],
+					'NumStrikes': [5, 6, 6, 25],
+					'PercentAD': [0.8500000238418579, 0.8500000238418579, 0.8500000238418579, 0.8500000238418579],
 					'PercentHealthTrueDamage': [0.019999999552965164, 0.019999999552965164, 0.019999999552965164, 0.019999999552965164],
-					'BonusFlatDamage': [15, 18, 30, 50],
+					'BonusFlatDamage': [15, 18, 30, 100],
 					'StrikesPer100BonusAS': [5, 5, 5, 5],
 				},
 				calculations: {
@@ -1103,7 +1103,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `NumStrikes`,
-										starValues: [5, 6, 6, 30],
+										starValues: [5, 6, 6, 25],
 										stat: undefined,
 										ratio: undefined,
 									},
@@ -1125,7 +1125,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `PercentAD`,
-										starValues: [0.6499999761581421, 0.6499999761581421, 0.6499999761581421, 0.6499999761581421],
+										starValues: [0.8500000238418579, 0.8500000238418579, 0.8500000238418579, 0.8500000238418579],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -1136,7 +1136,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `BonusFlatDamage`,
-										starValues: [15, 18, 30, 50],
+										starValues: [15, 18, 30, 100],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1152,7 +1152,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `BonusFlatDamage`,
-										starValues: [15, 18, 30, 50],
+										starValues: [15, 18, 30, 100],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1238,7 +1238,7 @@ export const champions: ChampionData[] = [
 					_missileSpeed: 2500,
 				},
 				variables: {
-					'BaseDamage': [0, 170, 255, 385],
+					'BaseDamage': [0, 160, 240, 360],
 					'DamageAmp': [0.30000001192092896, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
 					'WoundDuration': [5, 5, 5, 5],
 					'TooltipWound': [50, 50, 50, 50],
@@ -1252,7 +1252,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `BaseDamage`,
-										starValues: [0, 170, 255, 385],
+										starValues: [0, 160, 240, 360],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1268,7 +1268,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `BaseDamage`,
-										starValues: [0, 170, 255, 385],
+										starValues: [0, 160, 240, 360],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1325,9 +1325,9 @@ export const champions: ChampionData[] = [
 			critMultiplier: 1.399999976158142,
 			damage: 65,
 			hp: 700,
-			initialMana: 20,
+			initialMana: 40,
 			magicResist: 30,
-			mana: 80,
+			mana: 100,
 			moveSpeed: 500,
 			range: 1,
 		},
@@ -1340,9 +1340,9 @@ export const champions: ChampionData[] = [
 				castTime: 0.5299999713897705,
 				missile: undefined,
 				variables: {
-					'PercentMaximumHealthDamage': [0.15000000596046448, 0.15000000596046448, 0.15000000596046448, 0.15000000596046448],
+					'PercentMaximumHealthDamage': [0.11999999731779099, 0.11999999731779099, 0.11999999731779099, 0.11999999731779099],
 					'BonusDamage': [140, 270, 370, 500],
-					'BonusHealthOnKill': [25, 30, 35, 40],
+					'BonusHealthOnKill': [35, 35, 35, 35],
 				},
 				calculations: {
 					'BonusDamage': {
@@ -1375,7 +1375,7 @@ export const champions: ChampionData[] = [
 									},
 									{
 										variable: `PercentMaximumHealthDamage`,
-										starValues: [0.15000000596046448, 0.15000000596046448, 0.15000000596046448, 0.15000000596046448],
+										starValues: [0.11999999731779099, 0.11999999731779099, 0.11999999731779099, 0.11999999731779099],
 										stat: `HP`,
 										ratio: 1,
 									},
@@ -1404,11 +1404,11 @@ export const champions: ChampionData[] = [
 			attackSpeed: 0.699999988079071,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
-			damage: 60,
+			damage: 70,
 			hp: 750,
-			initialMana: 30,
+			initialMana: 20,
 			magicResist: 50,
-			mana: 90,
+			mana: 80,
 			moveSpeed: 500,
 			range: 1,
 		},
@@ -1430,10 +1430,10 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'AttackDamagePercent': [3, 3, 3, 3],
+					'AttackDamagePercent': [3.5, 3.5, 3.5, 3.5],
 					'FearDuration': [1, 1, 1, 1],
 					'AbilityScaleDamage': [100, 55, 80, 110],
-					'PercentDamageFalloff': [0, 0.8199999928474426, 0.8500000238418579, 0.8999999761581421],
+					'PercentDamageFalloff': [0, 0.8999999761581421, 0.949999988079071, 1],
 				},
 				calculations: {
 					'AbilityScaleDamage': {
@@ -1466,7 +1466,7 @@ export const champions: ChampionData[] = [
 									},
 									{
 										variable: `AttackDamagePercent`,
-										starValues: [3, 3, 3, 3],
+										starValues: [3.5, 3.5, 3.5, 3.5],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -1521,7 +1521,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'Damage': [0, 270, 405, 610],
+					'Damage': [0, 255, 380, 570],
 					'HealPercent': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
 					'RewindTime': [4, 4, 4, 4],
 					'RollDuration': [0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645],
@@ -1535,7 +1535,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [0, 270, 405, 610],
+										starValues: [0, 255, 380, 570],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1560,15 +1560,15 @@ export const champions: ChampionData[] = [
 		isSpawn: false,
 		traits: [`{4afab417}`, `{8faff97c}`],
 		stats: {
-			armor: 40,
+			armor: 45,
 			attackSpeed: 0.8999999761581421,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
 			damage: 75,
-			hp: 850,
-			initialMana: 70,
-			magicResist: 40,
-			mana: 160,
+			hp: 950,
+			initialMana: 60,
+			magicResist: 45,
+			mana: 120,
 			moveSpeed: 500,
 			range: 1,
 		},
@@ -1581,10 +1581,11 @@ export const champions: ChampionData[] = [
 				castTime: 0.20000000298023224,
 				missile: undefined,
 				variables: {
-					'PercentAD': [1.5499999523162842, 1.5, 1.5, 2.5],
+					'PercentAD': [1.5499999523162842, 1.600000023841858, 1.600000023841858, 2.4000000953674316],
 					'BonusTrueDamage': [75, 60, 90, 270],
-					'PercentHealing': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
+					'PercentHealing': [0.15000000596046448, 0.15000000596046448, 0.15000000596046448, 0.15000000596046448],
 					'NumStrikes': [4, 4, 4, 4],
+					'DamageReduction': [0.30000001192092896, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
 				},
 				calculations: {
 					'BonusDamage': {
@@ -1611,7 +1612,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `PercentAD`,
-										starValues: [1.5499999523162842, 1.5, 1.5, 2.5],
+										starValues: [1.5499999523162842, 1.600000023841858, 1.600000023841858, 2.4000000953674316],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -1644,7 +1645,7 @@ export const champions: ChampionData[] = [
 			hp: 800,
 			initialMana: 60,
 			magicResist: 45,
-			mana: 120,
+			mana: 110,
 			moveSpeed: 500,
 			range: 1,
 		},
@@ -1714,7 +1715,7 @@ export const champions: ChampionData[] = [
 		traits: [`{001c06e0}`, `{dfc0f253}`, `{f4a432b4}`],
 		stats: {
 			armor: 30,
-			attackSpeed: 0.800000011920929,
+			attackSpeed: 0.8500000238418579,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
 			damage: 80,
@@ -1734,14 +1735,14 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {
-					'MeleePassiveADRatio': [0, 3, 3, 25],
-					'MeleePassiveDuration': [3, 3, 3, 3],
+					'MeleePassiveADRatio': [0, 2.5, 2.5, 25],
+					'MeleePassiveDuration': [2, 2, 2, 2],
 					'ActiveMagicDamage': [0, 450, 675, 9001],
 					'ActiveAttackSpeed': [0, 0.3499999940395355, 0.5, 3],
 					'ActiveAttackSpeedDuration': [3, 3, 3, 3],
 					'ReaverKingMeleeBonusResists': [50, 50, 50, 50],
 					'ReaverKingRangedBonusHexRange': [3, 3, 3, 3],
-					'ReaverKingRangedBonusMana': [3, 3, 3, 3],
+					'ReaverKingRangedBonusMana': [5, 5, 5, 5],
 				},
 				calculations: {
 					'MeleePassiveTotalDamage': {
@@ -1752,7 +1753,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `MeleePassiveADRatio`,
-										starValues: [0, 3, 3, 25],
+										starValues: [0, 2.5, 2.5, 25],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -1840,7 +1841,7 @@ export const champions: ChampionData[] = [
 				name: `TFT9_GangplankSpell_Boat`,
 				castTime: undefined,
 				missile: {
-					width: 200,
+					width: 260,
 					travelTime: undefined,
 					speedInitial: 1000,
 					speedMin: 800,
@@ -1905,7 +1906,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'PercentAttackDamage': [0, 2.200000047683716, 2.200000047683716, 2.299999952316284],
+					'PercentAttackDamage': [0, 2, 2, 2.049999952316284],
 					'AbilityScaleDamage': [0, 30, 45, 60],
 					'CCDuration': [1, 3, 3.5, 4],
 					'TooltipChillPercent': [30, 30, 30, 30],
@@ -1919,7 +1920,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `PercentAttackDamage`,
-										starValues: [0, 2.200000047683716, 2.200000047683716, 2.299999952316284],
+										starValues: [0, 2, 2, 2.049999952316284],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -2085,9 +2086,9 @@ export const champions: ChampionData[] = [
 			critMultiplier: 1.399999976158142,
 			damage: 60,
 			hp: 700,
-			initialMana: 40,
+			initialMana: 30,
 			magicResist: 40,
-			mana: 80,
+			mana: 70,
 			moveSpeed: 500,
 			range: 1,
 		},
@@ -2100,7 +2101,7 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {
-					'MagicDamage': [0, 220, 330, 500],
+					'MagicDamage': [0, 250, 375, 560],
 					'PercentHealing': [0, 0.25, 0.30000001192092896, 0.4000000059604645],
 					'Duration': [5, 5, 5, 5],
 				},
@@ -2113,7 +2114,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `MagicDamage`,
-										starValues: [0, 220, 330, 500],
+										starValues: [0, 250, 375, 560],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2236,7 +2237,7 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {
-					'StunDuration': [2.5, 1.75, 2.25, 8],
+					'StunDuration': [2.5, 1.5, 2, 8],
 					'SearchRange': [3, 3, 3, 3],
 					'Damage': [0, 140, 210, 800],
 					'HexRadius': [2, 2, 2, 2],
@@ -2279,7 +2280,7 @@ export const champions: ChampionData[] = [
 			attackSpeed: 0.75,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
-			damage: 65,
+			damage: 60,
 			hp: 700,
 			initialMana: 30,
 			magicResist: 25,
@@ -2405,7 +2406,7 @@ export const champions: ChampionData[] = [
 			hp: 504,
 			initialMana: 44,
 			magicResist: 14,
-			mana: 124,
+			mana: 114,
 			moveSpeed: 500,
 			range: 5,
 		},
@@ -2422,7 +2423,7 @@ export const champions: ChampionData[] = [
 					'MissingHealthPercentBonus': [0, 0.23999999463558197, 0.3400000035762787, 0.4399999976158142],
 					'TooltipIoniaBonus': [25, 25, 25, 25],
 					'AimDuration': [1.600000023841858, 1.600000023841858, 1.600000023841858, 1.600000023841858],
-					'FalloffPercent': [0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645],
+					'FalloffPercent': [0.5600000023841858, 0.5600000023841858, 0.5600000023841858, 0.5600000023841858],
 					'Damage': [0, 60, 90, 135],
 				},
 				calculations: {
@@ -2521,7 +2522,7 @@ export const champions: ChampionData[] = [
 			attackSpeed: 0.75,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
-			damage: 55,
+			damage: 50,
 			hp: 600,
 			initialMana: 10,
 			magicResist: 20,
@@ -2717,7 +2718,7 @@ export const champions: ChampionData[] = [
 			critMultiplier: 1.399999976158142,
 			damage: 45,
 			hp: 850,
-			initialMana: 40,
+			initialMana: 60,
 			magicResist: 35,
 			mana: 120,
 			moveSpeed: 500,
@@ -2815,7 +2816,7 @@ export const champions: ChampionData[] = [
 				},
 				variables: {
 					'NumMissiles': [12, 15, 15, 25],
-					'BaseDamage': [0, 75, 111, 240],
+					'BaseDamage': [0, 80, 120, 240],
 					'NumTargets': [4, 4, 4, 4],
 				},
 				calculations: {
@@ -2827,7 +2828,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `BaseDamage`,
-										starValues: [0, 75, 111, 240],
+										starValues: [0, 80, 120, 240],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2953,7 +2954,7 @@ export const champions: ChampionData[] = [
 			hp: 700,
 			initialMana: 0,
 			magicResist: 25,
-			mana: 50,
+			mana: 45,
 			moveSpeed: 500,
 			range: 4,
 		},
@@ -2976,8 +2977,8 @@ export const champions: ChampionData[] = [
 					_missileSpeed: 0,
 				},
 				variables: {
-					'MagicDamage': [0, 170, 255, 420],
-					'TooltipIoniaBonus': [20, 20, 20, 20],
+					'MagicDamage': [0, 200, 300, 470],
+					'TooltipIoniaBonus': [25, 25, 25, 25],
 					'EmpoweredBursts': [3, 3, 3, 3],
 				},
 				calculations: {
@@ -2989,7 +2990,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `MagicDamage`,
-										starValues: [0, 170, 255, 420],
+										starValues: [0, 200, 300, 470],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3083,7 +3084,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'Damage': [100, 135, 200, 300],
+					'Damage': [100, 160, 240, 360],
 					'DisarmDuration': [3, 1.5, 1.75, 2],
 					'ShieldAmount': [0, 250, 300, 400],
 					'ShieldDuration': [4, 4, 4, 4],
@@ -3097,7 +3098,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [100, 135, 200, 300],
+										starValues: [100, 160, 240, 360],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3474,9 +3475,9 @@ export const champions: ChampionData[] = [
 			critMultiplier: 1.399999976158142,
 			damage: 40,
 			hp: 500,
-			initialMana: 20,
+			initialMana: 0,
 			magicResist: 20,
-			mana: 80,
+			mana: 60,
 			moveSpeed: 500,
 			range: 4,
 		},
@@ -3498,10 +3499,10 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'MagicDamage': [0, 160, 240, 360],
+					'MagicDamage': [0, 220, 330, 500],
 					'Duration': [1.5, 1.5, 1.5, 1.5],
-					'MagicDamageAOE': [0, 170, 250, 380],
-					'SplashDamage': [0, 85, 125, 190],
+					'MagicDamageAOE': [0, 180, 270, 400],
+					'SplashDamage': [0, 90, 140, 200],
 				},
 				calculations: {
 					'Damage': {
@@ -3512,7 +3513,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `MagicDamage`,
-										starValues: [0, 160, 240, 360],
+										starValues: [0, 220, 330, 500],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3528,7 +3529,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `MagicDamageAOE`,
-										starValues: [0, 170, 250, 380],
+										starValues: [0, 180, 270, 400],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3544,7 +3545,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `SplashDamage`,
-										starValues: [0, 85, 125, 190],
+										starValues: [0, 90, 140, 200],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3612,7 +3613,7 @@ export const champions: ChampionData[] = [
 			critMultiplier: 1.399999976158142,
 			damage: 50,
 			hp: 650,
-			initialMana: 10,
+			initialMana: 0,
 			magicResist: 25,
 			mana: 50,
 			moveSpeed: 500,
@@ -3636,7 +3637,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'MagicDamage': [0, 225, 340, 550],
+					'MagicDamage': [0, 240, 360, 580],
 					'ShieldReavePercent': [0, 0.3499999940395355, 0.3499999940395355, 0.3499999940395355],
 					'ShieldReaveDuration': [0, 5, 5, 5],
 				},
@@ -3649,7 +3650,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `MagicDamage`,
-										starValues: [0, 225, 340, 550],
+										starValues: [0, 240, 360, 580],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3823,7 +3824,7 @@ export const champions: ChampionData[] = [
 		traits: [`{3df99d7d}`, `{cd4e5e4a}`, `{8faff97c}`],
 		stats: {
 			armor: 40,
-			attackSpeed: 0.75,
+			attackSpeed: 0.800000011920929,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
 			damage: 60,
@@ -3843,7 +3844,7 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {
-					'ADRatio': [1.2000000476837158, 1.4500000476837158, 1.5499999523162842, 1.649999976158142],
+					'ADRatio': [1.2000000476837158, 1.75, 1.75, 1.7999999523162842],
 					'NumPackmates': [0, 2, 3, 4],
 					'TotalPackmateADRatio': [1.7999999523162842, 1.899999976158142, 1.9500000476837158, 2],
 					'PackmateHealing': [75, 75, 75, 75],
@@ -3874,7 +3875,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `ADRatio`,
-										starValues: [1.2000000476837158, 1.4500000476837158, 1.5499999523162842, 1.649999976158142],
+										starValues: [1.2000000476837158, 1.75, 1.75, 1.7999999523162842],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -3915,14 +3916,14 @@ export const champions: ChampionData[] = [
 		isSpawn: false,
 		traits: [`{cd4e5e4a}`, `{7c0ebaf6}`],
 		stats: {
-			armor: 50,
+			armor: 55,
 			attackSpeed: 0.699999988079071,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
 			damage: 60,
 			hp: 1000,
 			initialMana: 70,
-			magicResist: 50,
+			magicResist: 55,
 			mana: 150,
 			moveSpeed: 500,
 			range: 1,
@@ -3945,7 +3946,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'PercentHealthSteal': [0.10000000149011612, 0.05000000074505806, 0.05000000074505806, 0.15000000596046448],
+					'PercentHealthSteal': [0.10000000149011612, 0.03999999910593033, 0.03999999910593033, 0.15000000596046448],
 					'PercentADSteal': [0.07999999821186066, 0.07999999821186066, 0.07999999821186066, 0.07999999821186066],
 					'FlatResistanceSteal': [3, 4, 4, 20],
 					'Duration': [8, 8, 8, 8],
@@ -4040,15 +4041,15 @@ export const champions: ChampionData[] = [
 		isSpawn: false,
 		traits: [`{001c06e0}`, `{7c0ebaf6}`],
 		stats: {
-			armor: 35,
+			armor: 40,
 			attackSpeed: 0.5,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
 			damage: 80,
 			hp: 950,
-			initialMana: 80,
-			magicResist: 35,
-			mana: 160,
+			initialMana: 60,
+			magicResist: 40,
+			mana: 140,
 			moveSpeed: 500,
 			range: 1,
 		},
@@ -4061,7 +4062,7 @@ export const champions: ChampionData[] = [
 				castTime: 0.6499999761581421,
 				missile: undefined,
 				variables: {
-					'StatAmp': [0.30000001192092896, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
+					'StatAmp': [0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645],
 					'Damage': [0, 150, 225, 360],
 					'StunDuration': [1, 1.5, 1.5, 2],
 				},
@@ -4120,9 +4121,9 @@ export const champions: ChampionData[] = [
 				castTime: 0.75,
 				missile: undefined,
 				variables: {
-					'Shield': [0, 225, 350, 475],
+					'Shield': [0, 250, 325, 425],
 					'ShieldDuration': [3, 3, 3, 3],
-					'Damage': [50, 270, 410, 650],
+					'Damage': [50, 300, 450, 700],
 				},
 				calculations: {
 					'Damage': {
@@ -4133,7 +4134,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [50, 270, 410, 650],
+										starValues: [50, 300, 450, 700],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4149,7 +4150,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Shield`,
-										starValues: [0, 225, 350, 475],
+										starValues: [0, 250, 325, 425],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4175,7 +4176,7 @@ export const champions: ChampionData[] = [
 		traits: [`{001c06e0}`, `{a3779d74}`],
 		stats: {
 			armor: 45,
-			attackSpeed: 0.8500000238418579,
+			attackSpeed: 0.800000011920929,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
 			damage: 75,
@@ -4196,8 +4197,8 @@ export const champions: ChampionData[] = [
 				missile: undefined,
 				variables: {
 					'CleaveTargets': [2, 2, 2, 2],
-					'CleaveDamage': [75, 0.75, 0.75, 1],
-					'AttackSpeed': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.4000000059604645],
+					'CleaveDamage': [75, 0.550000011920929, 0.550000011920929, 1],
+					'AttackSpeed': [0.20000000298023224, 0.18000000715255737, 0.18000000715255737, 0.4000000059604645],
 					'DashRange': [3, 3, 3, 3],
 					'ShieldAmount': [0, 250, 375, 700],
 					'ShieldDuration': [3, 3, 3, 3],
@@ -4212,7 +4213,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `CleaveDamage`,
-										starValues: [75, 0.75, 0.75, 1],
+										starValues: [75, 0.550000011920929, 0.550000011920929, 1],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -4353,14 +4354,14 @@ export const champions: ChampionData[] = [
 		traits: [`{9ead4b50}`, `{01fcdb08}`],
 		stats: {
 			armor: 15,
-			attackSpeed: 0.699999988079071,
+			attackSpeed: 0.75,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
-			damage: 40,
+			damage: 35,
 			hp: 500,
-			initialMana: 40,
+			initialMana: 20,
 			magicResist: 15,
-			mana: 90,
+			mana: 70,
 			moveSpeed: 500,
 			range: 4,
 		},
@@ -4383,9 +4384,9 @@ export const champions: ChampionData[] = [
 					_missileSpeed: 0,
 				},
 				variables: {
-					'ShieldHealth': [200, 225, 250, 325],
+					'ShieldHealth': [200, 200, 225, 275],
 					'ShieldDuration': [4, 4, 4, 4],
-					'MagicDamage': [50, 260, 390, 585],
+					'MagicDamage': [50, 290, 435, 650],
 				},
 				calculations: {
 					'Damage': {
@@ -4396,7 +4397,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `MagicDamage`,
-										starValues: [50, 260, 390, 585],
+										starValues: [50, 290, 435, 650],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4412,7 +4413,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `ShieldHealth`,
-										starValues: [200, 225, 250, 325],
+										starValues: [200, 200, 225, 275],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4472,7 +4473,7 @@ export const champions: ChampionData[] = [
 					'StunDuration': [0.25, 0.25, 0.25, 0.25],
 					'CollisionDamagePercent': [15, 15, 15, 15],
 					'HexRadius': [0, 0, 0, 0],
-					'Damage': [0, 140, 210, 315],
+					'Damage': [0, 160, 240, 360],
 					'PercentHealthDamage': [33, 33, 33, 33],
 				},
 				calculations: {
@@ -4500,7 +4501,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [0, 140, 210, 315],
+										starValues: [0, 160, 240, 360],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4530,10 +4531,10 @@ export const champions: ChampionData[] = [
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
 			damage: 55,
-			hp: 700,
-			initialMana: 20,
+			hp: 650,
+			initialMana: 40,
 			magicResist: 35,
-			mana: 80,
+			mana: 100,
 			moveSpeed: 500,
 			range: 1,
 		},
@@ -4770,7 +4771,7 @@ export const champions: ChampionData[] = [
 			critMultiplier: 1.399999976158142,
 			damage: 60,
 			hp: 800,
-			initialMana: 30,
+			initialMana: 50,
 			magicResist: 45,
 			mana: 75,
 			moveSpeed: 500,
@@ -4794,9 +4795,10 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'PercentOfAD': [2.6500000953674316, 2.9000000953674316, 2.9000000953674316, 3],
+					'PercentOfAD': [2.6500000953674316, 2.5, 2.5, 2.549999952316284],
 					'PercentMaxHealthHeal': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
 					'HealthThreshold': [0.6600000262260437, 0.6600000262260437, 0.6600000262260437, 0.6600000262260437],
+					'PercentOfADMark': [1.350000023841858, 2.4000000953674316, 2.4000000953674316, 2.5],
 				},
 				calculations: {
 					'Damage': {
@@ -4807,7 +4809,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `PercentOfAD`,
-										starValues: [2.6500000953674316, 2.9000000953674316, 2.9000000953674316, 3],
+										starValues: [2.6500000953674316, 2.5, 2.5, 2.549999952316284],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -4842,6 +4844,22 @@ export const champions: ChampionData[] = [
 										starValues: [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'MarkDamage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `sum`,
+								subparts: [
+									{
+										variable: `{82c2447f}`,
+										starValues: undefined,
+										stat: `AD`,
+										ratio: 1,
 									},
 								],
 							},
@@ -5087,7 +5105,7 @@ export const champions: ChampionData[] = [
 			hp: 1111,
 			initialMana: 50,
 			magicResist: 30,
-			mana: 110,
+			mana: 100,
 			moveSpeed: 500,
 			range: 4,
 		},
@@ -5102,7 +5120,7 @@ export const champions: ChampionData[] = [
 				variables: {
 					'Shield': [300, 600, 900, 9999],
 					'Heal': [0, 250, 375, 9999],
-					'Damage': [125, 300, 450, 999],
+					'Damage': [125, 300, 450, 2000],
 					'PortalDuration': [2, 2, 2, 5],
 				},
 				calculations: {
@@ -5146,7 +5164,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [125, 300, 450, 999],
+										starValues: [125, 300, 450, 2000],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -5234,7 +5252,7 @@ export const champions: ChampionData[] = [
 			hp: 1111,
 			initialMana: 30,
 			magicResist: 30,
-			mana: 75,
+			mana: 65,
 			moveSpeed: 500,
 			range: 4,
 		},
@@ -5347,9 +5365,9 @@ export const champions: ChampionData[] = [
 			critMultiplier: 1.399999976158142,
 			damage: 50,
 			hp: 1111,
-			initialMana: 30,
+			initialMana: 15,
 			magicResist: 30,
-			mana: 65,
+			mana: 60,
 			moveSpeed: 500,
 			range: 4,
 		},
@@ -5461,9 +5479,9 @@ export const champions: ChampionData[] = [
 			critMultiplier: 1.399999976158142,
 			damage: 50,
 			hp: 1111,
-			initialMana: 50,
+			initialMana: 30,
 			magicResist: 30,
-			mana: 125,
+			mana: 100,
 			moveSpeed: 500,
 			range: 4,
 		},
@@ -5594,9 +5612,9 @@ export const champions: ChampionData[] = [
 			critMultiplier: 1.399999976158142,
 			damage: 50,
 			hp: 1111,
-			initialMana: 70,
+			initialMana: 40,
 			magicResist: 30,
-			mana: 120,
+			mana: 100,
 			moveSpeed: 500,
 			range: 4,
 		},
@@ -5610,7 +5628,7 @@ export const champions: ChampionData[] = [
 				missile: undefined,
 				variables: {
 					'NumItems': [2, 3, 4, 10],
-					'NumAxes': [3, 4, 5, 12],
+					'NumAxes': [3, 5, 5, 15],
 					'MagicDamage': [200, 150, 225, 2000],
 					'DamageAmp': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
 				},
@@ -5745,9 +5763,9 @@ export const champions: ChampionData[] = [
 			critMultiplier: 1.399999976158142,
 			damage: 50,
 			hp: 1111,
-			initialMana: 30,
+			initialMana: 15,
 			magicResist: 30,
-			mana: 100,
+			mana: 75,
 			moveSpeed: 500,
 			range: 4,
 		},
@@ -5761,8 +5779,8 @@ export const champions: ChampionData[] = [
 				missile: undefined,
 				variables: {
 					'Damage': [0.20000000298023224, 275, 425, 3000],
-					'PercentSharedDamage': [0.15000000596046448, 0.15000000596046448, 0.30000001192092896, 5],
-					'AreaDuration': [4, 3, 4, 8],
+					'PercentSharedDamage': [0.15000000596046448, 0.30000001192092896, 0.30000001192092896, 5],
+					'AreaDuration': [4, 5, 5, 10],
 				},
 				calculations: {
 					'Damage': {
@@ -5877,9 +5895,9 @@ export const champions: ChampionData[] = [
 			critMultiplier: 1.399999976158142,
 			damage: 50,
 			hp: 1111,
-			initialMana: 40,
+			initialMana: 30,
 			magicResist: 30,
-			mana: 80,
+			mana: 70,
 			moveSpeed: 500,
 			range: 4,
 		},
@@ -5990,9 +6008,9 @@ export const champions: ChampionData[] = [
 			critMultiplier: 1.399999976158142,
 			damage: 50,
 			hp: 1111,
-			initialMana: 90,
+			initialMana: 60,
 			magicResist: 30,
-			mana: 150,
+			mana: 120,
 			moveSpeed: 500,
 			range: 4,
 		},
@@ -6008,8 +6026,8 @@ export const champions: ChampionData[] = [
 					'Damage': [0, 175, 275, 2500],
 					'KnockupDuration': [0.75, 1, 1.25, 3],
 					'NumberOfLootRolls': [3, 3, 3, 3],
-					'ChanceToSpawnGold': [0.25, 0.20000000298023224, 0.3499999940395355, 1],
-					'ChanceToSpawnItem': [0.25, 0.019999999552965164, 0.05000000074505806, 0.30000001192092896],
+					'ChanceToSpawnGold': [0.25, 0.3499999940395355, 0.5, 1],
+					'ChanceToSpawnItem': [0.25, 0.05000000074505806, 0.10000000149011612, 0.5],
 					'MinGold': [1, 1, 1, 1],
 					'MaxGold': [4, 4, 4, 4],
 				},
@@ -6146,7 +6164,7 @@ export const champions: ChampionData[] = [
 			hp: 1111,
 			initialMana: 30,
 			magicResist: 30,
-			mana: 100,
+			mana: 90,
 			moveSpeed: 500,
 			range: 4,
 		},
@@ -6278,9 +6296,9 @@ export const champions: ChampionData[] = [
 			critMultiplier: 1.399999976158142,
 			damage: 50,
 			hp: 1111,
-			initialMana: 40,
+			initialMana: 30,
 			magicResist: 30,
-			mana: 100,
+			mana: 90,
 			moveSpeed: 500,
 			range: 4,
 		},
@@ -6302,7 +6320,7 @@ export const champions: ChampionData[] = [
 					'Breakpoint1BonusPortals': [1, 1, 1, 1],
 					'Breakpoint2BonusPortalsPerGold': [1, 1, 1, 1],
 					'GoldPerPortal': [20, 20, 20, 20],
-					'TooltipShredPercent': [20, 20, 20, 20],
+					'TooltipShredPercent': [30, 30, 30, 30],
 				},
 				calculations: {
 					'Damage': {
@@ -6490,9 +6508,9 @@ export const champions: ChampionData[] = [
 			critMultiplier: 1.399999976158142,
 			damage: 50,
 			hp: 1111,
-			initialMana: 30,
+			initialMana: 0,
 			magicResist: 30,
-			mana: 100,
+			mana: 75,
 			moveSpeed: 500,
 			range: 4,
 		},
@@ -6505,13 +6523,13 @@ export const champions: ChampionData[] = [
 				castTime: 1,
 				missile: undefined,
 				variables: {
-					'Damage': [0, 300, 450, 7777],
-					'PercentScalar': [0.009999999776482582, 0.009999999776482582, 0.009999999776482582, 0.009999999776482582],
+					'Damage': [0, 350, 525, 7777],
+					'PercentScalar': [0.019999999552965164, 0.019999999552965164, 0.019999999552965164, 0.019999999552965164],
 					'PerGoldScalar': [2, 2, 2, 2],
-					'BaseLootPercent': [0.05000000074505806, 0.05000000074505806, 0.07500000298023224, 1],
-					'KillLootPercent': [0.10000000149011612, 0.10000000149011612, 0.15000000596046448, 1],
-					'BaseGoldPercent': [0.10000000149011612, 0.10000000149011612, 0.15000000596046448, 1],
-					'KillGoldPercent': [0.20000000298023224, 0.20000000298023224, 0.30000001192092896, 1],
+					'BaseLootPercent': [0.05000000074505806, 0.05000000074505806, 0.10000000149011612, 1],
+					'KillLootPercent': [0.10000000149011612, 0.10000000149011612, 0.20000000298023224, 1],
+					'BaseGoldPercent': [0.10000000149011612, 0.10000000149011612, 0.20000000298023224, 1],
+					'KillGoldPercent': [0.20000000298023224, 0.20000000298023224, 0.4000000059604645, 1],
 					'MinGold': [1, 1, 1, 1],
 					'MaxGold': [4, 4, 4, 4],
 				},
@@ -6524,7 +6542,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [0, 300, 450, 7777],
+										starValues: [0, 350, 525, 7777],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -6664,9 +6682,9 @@ export const champions: ChampionData[] = [
 			critMultiplier: 1.399999976158142,
 			damage: 50,
 			hp: 1111,
-			initialMana: 60,
+			initialMana: 30,
 			magicResist: 50,
-			mana: 120,
+			mana: 100,
 			moveSpeed: 500,
 			range: 2,
 		},
@@ -6679,9 +6697,9 @@ export const champions: ChampionData[] = [
 				castTime: 0.25,
 				missile: undefined,
 				variables: {
-					'ArmorScalar': [1.5, 1.850000023841858, 2.8499999046325684, 15],
-					'MRScalar': [1.5, 1.850000023841858, 2.8499999046325684, 15],
-					'StunDuration': [2, 2, 2, 10],
+					'ArmorScalar': [1.5, 2, 3, 15],
+					'MRScalar': [1.5, 2, 3, 15],
+					'StunDuration': [2, 2, 2.5, 10],
 					'BarkskinDuration': [4, 4, 4, 4],
 					'BarskinDefenceScalar': [1, 1, 1, 1],
 				},
@@ -6694,7 +6712,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `ArmorScalar`,
-										starValues: [1.5, 1.850000023841858, 2.8499999046325684, 15],
+										starValues: [1.5, 2, 3, 15],
 										stat: `Armor`,
 										ratio: 1,
 									},
@@ -6705,7 +6723,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `MRScalar`,
-										starValues: [1.5, 1.850000023841858, 2.8499999046325684, 15],
+										starValues: [1.5, 2, 3, 15],
 										stat: undefined,
 										ratio: 1,
 									},
@@ -6837,7 +6855,7 @@ export const champions: ChampionData[] = [
 			attackSpeed: 0.699999988079071,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
-			damage: 50,
+			damage: 45,
 			hp: 500,
 			initialMana: 0,
 			magicResist: 15,
@@ -6950,7 +6968,7 @@ export const champions: ChampionData[] = [
 					'Shield': [0, 600, 700, 2000],
 					'Damage': [0, 160, 240, 1200],
 					'ShieldDuration': [4, 4, 4, 4],
-					'PercentHealth': [0.014999999664723873, 0.014999999664723873, 0.014999999664723873, 0.10000000149011612],
+					'PercentHealth': [0.009999999776482582, 0.009999999776482582, 0.009999999776482582, 0.10000000149011612],
 					'ChillDuration': [4, 4, 4, 4],
 				},
 				calculations: {
@@ -6994,7 +7012,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `PercentHealth`,
-										starValues: [0.014999999664723873, 0.014999999664723873, 0.014999999664723873, 0.10000000149011612],
+										starValues: [0.009999999776482582, 0.009999999776482582, 0.009999999776482582, 0.10000000149011612],
 										stat: `HP`,
 										ratio: 1,
 									},
@@ -7025,9 +7043,9 @@ export const champions: ChampionData[] = [
 			critMultiplier: 1.399999976158142,
 			damage: 60,
 			hp: 800,
-			initialMana: 40,
+			initialMana: 60,
 			magicResist: 50,
-			mana: 90,
+			mana: 110,
 			moveSpeed: 500,
 			range: 1,
 		},
@@ -7043,7 +7061,7 @@ export const champions: ChampionData[] = [
 					'Damage': [0, 180, 270, 420],
 					'StunDuration': [1, 1.25, 1.5, 2],
 					'SoloBonus': [0.5, 0.5, 0.5, 0.5],
-					'TooltipIoniaBonus': [200, 200, 200, 200],
+					'TooltipIoniaBonus': [180, 180, 180, 180],
 				},
 				calculations: {
 					'Damage': {
@@ -7159,7 +7177,7 @@ export const champions: ChampionData[] = [
 				variables: {
 					'MagicDamage': [0, 240, 360, 2500],
 					'AllyShieldAmount': [0, 225, 275, 1500],
-					'SelfShieldAmount': [0, 300, 400, 2000],
+					'SelfShieldAmount': [0, 350, 450, 2000],
 					'ShieldDuration': [4, 4, 4, 4],
 					'ChillDuration': [3, 3, 3, 3],
 					'ChillAmount': [40, 40, 40, 40],
@@ -7206,7 +7224,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `SelfShieldAmount`,
-										starValues: [0, 300, 400, 2000],
+										starValues: [0, 350, 450, 2000],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -7314,7 +7332,7 @@ export const champions: ChampionData[] = [
 			hp: 750,
 			initialMana: 0,
 			magicResist: 30,
-			mana: 50,
+			mana: 30,
 			moveSpeed: 500,
 			range: 4,
 		},
@@ -7337,8 +7355,8 @@ export const champions: ChampionData[] = [
 				},
 				variables: {
 					'ShimmerDuration': [0, 6, 6, 10],
-					'ShimmerDamagePerSec': [0, 80, 120, 425],
-					'HealPerSec': [0, 20, 30, 120],
+					'ShimmerDamagePerSec': [0, 65, 100, 400],
+					'HealPerSec': [0, 20, 25, 120],
 				},
 				calculations: {
 					'ShimmerDamagePerSec': {
@@ -7349,7 +7367,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `ShimmerDamagePerSec`,
-										starValues: [0, 80, 120, 425],
+										starValues: [0, 65, 100, 400],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -7365,7 +7383,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `HealPerSec`,
-										starValues: [0, 20, 30, 120],
+										starValues: [0, 20, 25, 120],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -7598,11 +7616,11 @@ export const champions: ChampionData[] = [
 			attackSpeed: 0.6499999761581421,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
-			damage: 40,
+			damage: 45,
 			hp: 700,
-			initialMana: 40,
+			initialMana: 35,
 			magicResist: 25,
-			mana: 90,
+			mana: 80,
 			moveSpeed: 500,
 			range: 4,
 		},
@@ -7625,9 +7643,9 @@ export const champions: ChampionData[] = [
 					_missileSpeed: 2000,
 				},
 				variables: {
-					'MagicDamage': [0, 105, 155, 255],
-					'AttackSpeed': [0, 35, 40, 45],
-					'Duration': [5, 5, 5, 5],
+					'MagicDamage': [0, 170, 255, 420],
+					'AttackSpeed': [0, 20, 25, 35],
+					'FalloffPercent': [0.33000001311302185, 0.33000001311302185, 0.33000001311302185, 0.33000001311302185],
 				},
 				calculations: {
 					'Damage': {
@@ -7638,7 +7656,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `MagicDamage`,
-										starValues: [0, 105, 155, 255],
+										starValues: [0, 170, 255, 420],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -7707,7 +7725,7 @@ export const champions: ChampionData[] = [
 			attackSpeed: 0.6499999761581421,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
-			damage: 55,
+			damage: 66,
 			hp: 700,
 			initialMana: 30,
 			magicResist: 25,
@@ -7733,10 +7751,10 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'Heal': [0, 170, 190, 220],
+					'Heal': [0, 140, 160, 180],
 					'EmpoweredHealPercent': [0.33000001311302185, 0.33000001311302185, 0.33000001311302185, 0.33000001311302185],
 					'EmpoweredHealThreshold': [0.5, 0.5, 0.5, 0.5],
-					'MagicDamage': [60, 115, 165, 260],
+					'MagicDamage': [60, 120, 180, 280],
 					'Duration': [5, 5, 5, 5],
 					'NumberOfStars': [5, 5, 5, 5],
 				},
@@ -7749,7 +7767,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Heal`,
-										starValues: [0, 170, 190, 220],
+										starValues: [0, 140, 160, 180],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -7765,7 +7783,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `MagicDamage`,
-										starValues: [60, 115, 165, 260],
+										starValues: [60, 120, 180, 280],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -8154,8 +8172,8 @@ export const champions: ChampionData[] = [
 				missile: undefined,
 				variables: {
 					'KnockupDuration': [1, 2, 2, 2],
-					'SpellDamage': [100, 180, 270, 410],
-					'BoulderDamage': [100, 110, 160, 240],
+					'SpellDamage': [100, 220, 330, 495],
+					'BoulderDamage': [100, 120, 180, 270],
 				},
 				calculations: {
 					'SpellDamage': {
@@ -8166,7 +8184,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `SpellDamage`,
-										starValues: [100, 180, 270, 410],
+										starValues: [100, 220, 330, 495],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -8182,7 +8200,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `BoulderDamage`,
-										starValues: [100, 110, 160, 240],
+										starValues: [100, 120, 180, 270],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -8299,9 +8317,9 @@ export const champions: ChampionData[] = [
 			critMultiplier: 1.399999976158142,
 			damage: 60,
 			hp: 800,
-			initialMana: 0,
+			initialMana: 15,
 			magicResist: 50,
-			mana: 65,
+			mana: 85,
 			moveSpeed: 500,
 			range: 1,
 		},
@@ -8358,9 +8376,9 @@ export const champions: ChampionData[] = [
 			critMultiplier: 1.399999976158142,
 			damage: 40,
 			hp: 550,
-			initialMana: 20,
+			initialMana: 25,
 			magicResist: 20,
-			mana: 70,
+			mana: 75,
 			moveSpeed: 500,
 			range: 4,
 		},
@@ -8382,9 +8400,9 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'InitialMagicDamage': [175, 165, 250, 375],
-					'DelayedMagicDamage': [175, 210, 315, 490],
-					'Delay': [1.5, 1.5, 1.5, 1.5],
+					'InitialMagicDamage': [175, 155, 235, 355],
+					'DelayedMagicDamage': [175, 155, 235, 380],
+					'Delay': [1.25, 1.25, 1.25, 1.25],
 				},
 				calculations: {
 					'InitialMagicDamage': {
@@ -8395,7 +8413,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `InitialMagicDamage`,
-										starValues: [175, 165, 250, 375],
+										starValues: [175, 155, 235, 355],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -8411,7 +8429,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `DelayedMagicDamage`,
-										starValues: [175, 210, 315, 490],
+										starValues: [175, 155, 235, 380],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -8521,7 +8539,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: false,
 				},
 				variables: {
-					'MagicDamage': [0, 250, 375, 600],
+					'MagicDamage': [0, 220, 330, 550],
 					'FalloffPercent': [0.5, 0.5, 0.5, 0.5],
 				},
 				calculations: {
@@ -8533,7 +8551,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `MagicDamage`,
-										starValues: [0, 250, 375, 600],
+										starValues: [0, 220, 330, 550],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -8637,9 +8655,9 @@ export const champions: ChampionData[] = [
 			critMultiplier: 1.399999976158142,
 			damage: 60,
 			hp: 800,
-			initialMana: 0,
+			initialMana: 20,
 			magicResist: 50,
-			mana: 80,
+			mana: 70,
 			moveSpeed: 500,
 			range: 1,
 		},
@@ -8656,7 +8674,7 @@ export const champions: ChampionData[] = [
 					'ShieldDuration': [4, 4, 4, 4],
 					'ArmorShredPercent': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
 					'ArmorShredDuration': [4, 4, 4, 4],
-					'ADPercent': [2.5, 2.5, 2.5, 2.5],
+					'ADPercent': [3, 3, 3, 3],
 				},
 				calculations: {
 					'ShieldAmount': {
@@ -8683,7 +8701,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `ADPercent`,
-										starValues: [2.5, 2.5, 2.5, 2.5],
+										starValues: [3, 3, 3, 3],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -8981,9 +8999,9 @@ export const champions: ChampionData[] = [
 			critMultiplier: 1.399999976158142,
 			damage: 65,
 			hp: 750,
-			initialMana: 30,
+			initialMana: 20,
 			magicResist: 25,
-			mana: 110,
+			mana: 100,
 			moveSpeed: 500,
 			range: 4,
 		},
@@ -8996,8 +9014,8 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {
-					'NumFeathers': [9, 7, 7, 12],
-					'PercentADPerFeather': [0.800000011920929, 0.800000011920929, 0.800000011920929, 0.800000011920929],
+					'NumFeathers': [9, 7, 7, 15],
+					'PercentADPerFeather': [0.800000011920929, 0.800000011920929, 0.800000011920929, 1],
 					'BonusDamagePerFeather': [0, 15, 25, 60],
 					'ArmorShred': [6, 6, 6, 6],
 					'TooltipIoniaBonus': [5, 5, 5, 5],
@@ -9011,7 +9029,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `PercentADPerFeather`,
-										starValues: [0.800000011920929, 0.800000011920929, 0.800000011920929, 0.800000011920929],
+										starValues: [0.800000011920929, 0.800000011920929, 0.800000011920929, 1],
 										stat: `AD`,
 										ratio: 1,
 									},

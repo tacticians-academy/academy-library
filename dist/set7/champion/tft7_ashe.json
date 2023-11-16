@@ -77,9 +77,9 @@
 					"mName": "Damage",
 					"mValues": [
 						0,
-						90,
 						125,
 						175,
+						250,
 						0,
 						0,
 						0
@@ -90,15 +90,15 @@
 				{
 					"mName": "NumOfArrows",
 					"mValues": [
-						8,
-						8,
-						8,
-						8,
-						8,
-						8,
-						8
+						6,
+						6,
+						6,
+						6,
+						6,
+						6,
+						6
 					],
-					"mBaseP": 8,
+					"mBaseP": 6,
 					"__type": "SpellDataValue"
 				},
 				{
@@ -504,24 +504,25 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 50,
+		"mInitialMana": 40,
 		"mCharacterName": "TFT7_Ashe",
 		"baseHP": 600,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
+			"arBase": 90,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 45,
+		"baseDamage": 50,
 		"baseArmor": 20,
 		"baseSpellBlock": 20,
 		"baseCritChance": 0.25,
 		"critDamageMultiplier": 1.2999999523162842,
 		"baseMoveSpeed": 500,
 		"attackRange": 890,
-		"attackSpeed": 0.75,
+		"attackSpeed": 0.699999988079071,
 		"basicAttack": {
 			"mAttackName": "TFT7_AsheBasicAttack",
 			"__type": "AttackSlotData"

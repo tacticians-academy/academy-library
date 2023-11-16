@@ -16,18 +16,18 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 60,
+		"mInitialMana": 100,
 		"mCharacterName": "TFT7_Soraka",
 		"baseHP": 800,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 180,
+			"arBase": 200,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 50,
+		"baseDamage": 40,
 		"baseArmor": 30,
 		"baseSpellBlock": 30,
 		"baseCritChance": 0.25,
@@ -189,8 +189,8 @@
 					"mName": "Healing",
 					"mValues": [
 						0,
-						70,
-						125,
+						120,
+						180,
 						1000,
 						0,
 						0,
@@ -232,15 +232,15 @@
 				{
 					"mName": "ManaPerAttack",
 					"mValues": [
-						5,
-						5,
-						5,
-						5,
-						5,
-						5,
-						5
+						15,
+						15,
+						15,
+						15,
+						15,
+						15,
+						15
 					],
-					"mBaseP": 5,
+					"mBaseP": 15,
 					"mFormula": "P + 0",
 					"__type": "SpellDataValue"
 				},

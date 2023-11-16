@@ -114,9 +114,9 @@
 					"mName": "ADRatio",
 					"mValues": [
 						1.2000000476837158,
-						1.4500000476837158,
-						1.5499999523162842,
-						1.649999976158142,
+						1.75,
+						1.75,
+						1.7999999523162842,
 						1.2000000476837158,
 						1.2000000476837158,
 						1.2000000476837158
@@ -298,7 +298,7 @@
 		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
 		"attackRange": 180,
-		"attackSpeed": 0.75,
+		"attackSpeed": 0.800000011920929,
 		"basicAttack": {
 			"mAttackName": "TFT9_NaafiriBasicAttack",
 			"__type": "AttackSlotData"

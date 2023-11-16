@@ -1,0 +1,521 @@
+{
+	"{3281cf86}": {
+		"mScriptName": "TFT10_CorkiQ_Mis",
+		"mSpell": {
+			"mAffectsTypeFlags": 6794,
+			"mEffectAmount": [
+				{
+					"value": [
+						60,
+						90,
+						120,
+						150,
+						180,
+						210,
+						240
+					],
+					"__type": "SpellEffectAmount"
+				}
+			],
+			"mCoefficient": 0.6000000238418579,
+			"mImgIconName": [
+				"ASSETS/Characters/Corki/HUD/Icons2D/Corki_PhosphorusBomb.dds"
+			],
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mMaxAmmo": [
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-2,
+				-1
+			],
+			"canCastOrQueueWhileCasting": true,
+			"castRange": [
+				99999,
+				99999,
+				99999,
+				99999,
+				99999,
+				99999,
+				99999
+			],
+			"castRadius": [
+				710,
+				710,
+				710,
+				710,
+				710,
+				710,
+				710
+			],
+			"castRadiusSecondary": [
+				280,
+				280,
+				280,
+				280,
+				280,
+				280,
+				280
+			],
+			"luaOnMissileUpdateDistanceInterval": 75,
+			"mMissileSpec": {
+				"mMissileWidth": 20,
+				"movementComponent": {
+					"mTargetHeightAugment": 60,
+					"mOffsetInitialTargetHeight": 60,
+					"mStartBoneName": "BUFFBONE_GLB_WEAPON_1",
+					"mTargetBoneName": "C_BUFFBONE_GLB_LAYOUT_LOC",
+					"mSpeed": 1600,
+					"__type": "FixedSpeedMovement"
+				},
+				"visibilityComponent": {
+					"mPerceptionBubbleRadius": 500,
+					"__type": "Defaultvisibility"
+				},
+				"heightSolver": {
+					"mGravity": 6000,
+					"__type": "GravityHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VerticalFacingFaceTarget"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 3,
+			"castFrame": 6,
+			"mMissileEffectKey": "{abd2f9f7}",
+			"mLineWidth": 40,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_buffbone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {
+				"__type": "TargetOrLocation"
+			},
+			"{47e0dff9}": {
+				"12": "Play_sfx_tft10_CorkiSpell_OnCast",
+				"13": "Play_sfx_tft10_CorkiSpell_OnHit"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT10_Corki/Spells/TFT10_CorkiBasicAttack2": {
+		"mScriptName": "TFT10_CorkiBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 24527,
+			"mAlternateName": "CorkiBasicAttack2",
+			"delayCastOffsetPercent": -0.029999999329447746,
+			"bHaveHitEffect": true,
+			"castRange": [
+				475,
+				475,
+				475,
+				475,
+				475,
+				475,
+				475
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_Gun",
+					"mSpeed": 2000,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 4.199999809265137,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{be533801}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT10_Corki/Spells/TFT10_CorkiCritAttack": {
+		"mScriptName": "TFT10_CorkiCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 24527,
+			"mAlternateName": "CorkiCritAttack",
+			"delayCastOffsetPercent": -0.029999999329447746,
+			"bHaveHitEffect": true,
+			"castRange": [
+				475,
+				475,
+				475,
+				475,
+				475,
+				475,
+				475
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "gun",
+					"mSpeed": 2000,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 4.199999809265137,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{be533801}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT10_Corki/Spells/TFT10_CorkiQ": {
+		"mScriptName": "TFT10_CorkiQ",
+		"mSpell": {
+			"mAffectsTypeFlags": 8193,
+			"mAffectsStatusFlags": 160,
+			"mEffectAmount": [
+				{
+					"value": [
+						60,
+						90,
+						120,
+						150,
+						180,
+						210,
+						240
+					],
+					"__type": "SpellEffectAmount"
+				}
+			],
+			"mDataValues": [
+				{
+					"mName": "RocketDamage",
+					"mValues": [
+						3.200000047683716,
+						3.200000047683716,
+						3.200000047683716,
+						3.200000047683716,
+						3.200000047683716,
+						3.200000047683716,
+						3.200000047683716
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "HeadlinerAttackDamage",
+					"mValues": [
+						0.20000000298023224,
+						0.20000000298023224,
+						0.20000000298023224,
+						0.20000000298023224,
+						0.20000000298023224,
+						0.20000000298023224,
+						0.20000000298023224
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "DurationIncreasePerAPPercent",
+					"mValues": [
+						1,
+						1,
+						1,
+						1,
+						1,
+						1,
+						1
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "WoundDuration",
+					"mValues": [
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mStat": 2,
+							"mDataValue": "RocketDamage",
+							"__type": "StatByNamedDataValueCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{8893044d}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{7bfef408}",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"mCoefficient": 0.6000000238418579,
+			"mImgIconName": [
+				"ASSETS/Characters/Corki/HUD/Icons2D/Corki_PhosphorusBomb.dds"
+			],
+			"delayCastOffsetPercent": -0.699999988079071,
+			"delayTotalTimePercent": -0.824999988079071,
+			"{3d746f1f}": 1,
+			"canCastOrQueueWhileCasting": true,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				99999,
+				99999,
+				99999,
+				99999,
+				99999,
+				99999,
+				99999
+			],
+			"castRadius": [
+				710,
+				710,
+				710,
+				710,
+				710,
+				710,
+				710
+			],
+			"castRadiusSecondary": [
+				280,
+				280,
+				280,
+				280,
+				280,
+				280,
+				280
+			],
+			"luaOnMissileUpdateDistanceInterval": 75,
+			"mMissileSpec": {
+				"__type": "MissileSpecification"
+			},
+			"castFrame": 12,
+			"mLineWidth": 40,
+			"mLookAtPolicy": 1,
+			"mHitEffectOrientType": 0,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_buffbone_Glb_Center_Loc",
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"{47e0dff9}": {
+				"12": "Play_sfx_tft10_CorkiSpell_OnCast",
+				"13": "Play_sfx_tft10_CorkiSpell_OnHit"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT10_Corki/Spells/TFT10_CorkiBasicAttack": {
+		"mScriptName": "TFT10_CorkiBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 24527,
+			"mAlternateName": "CorkiBasicAttack",
+			"delayCastOffsetPercent": -0.029999999329447746,
+			"bHaveHitEffect": true,
+			"castRange": [
+				475,
+				475,
+				475,
+				475,
+				475,
+				475,
+				475
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "L_Gun",
+					"mSpeed": 2000,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 4.199999809265137,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{be533801}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT10_Corki/CharacterRecords/Root": {
+		"mCharacterName": "TFT10_Corki",
+		"baseHP": 450,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 60,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 42,
+		"baseArmor": 15,
+		"baseSpellBlock": 15,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 900,
+		"attackSpeed": 0.699999988079071,
+		"basicAttack": {
+			"mAttackName": "TFT10_CorkiBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT10_CorkiBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT10_CorkiCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT10_CorkiQ",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 3,
+		"unitTagsString": "Champion",
+		"flags": 9446656,
+		"tier": 1,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{4995a396}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{b540ffc4}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{34ed6daa}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mInitialMana": 15,
+		"{22f5197d}": 130,
+		"__type": "TFTCharacterRecord"
+	}
+}

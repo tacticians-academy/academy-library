@@ -1,0 +1,547 @@
+{
+	"Characters/TFT10_Caitlyn/Spells/TFT10_CaitlynBasicAttack2": {
+		"mScriptName": "TFT10_CaitlynBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "CaitlynBasicAttack2",
+			"delayCastOffsetPercent": -0.029999999329447746,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Rifle_TopBarrel2",
+					"mSpeed": 3500,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8.5,
+			"missileSpeed": 2500,
+			"mMissileEffectKey": "{901f0491}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "{593984ad}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT10_Caitlyn/Spells/TFT10_CaitlynBasicAttack": {
+		"mScriptName": "TFT10_CaitlynBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "CaitlynBasicAttack",
+			"delayCastOffsetPercent": -0.029999999329447746,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Rifle_TopBarrel2",
+					"mSpeed": 3500,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8.5,
+			"missileSpeed": 2500,
+			"mMissileEffectKey": "{901f0491}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "{593984ad}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT10_Caitlyn/Spells/TFT10_CaitlynR": {
+		"mScriptName": "TFT10_CaitlynR",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 4106,
+			"mAffectsStatusFlags": 48,
+			"mRequiredUnitTags": {
+				"mTagList": "Champion",
+				"__type": "ObjectTags"
+			},
+			"mAlternateName": "CaitlynAceintheHole",
+			"mDataValues": [
+				{
+					"mName": "ADPercent",
+					"mValues": [
+						2,
+						3.4000000953674316,
+						3.4000000953674316,
+						6.800000190734863,
+						2,
+						2,
+						2
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "APRatio",
+					"mValues": [
+						0,
+						0.25,
+						0.4000000059604645,
+						1.2000000476837158,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "NumShots",
+					"mValues": [
+						4,
+						4,
+						4,
+						4,
+						4,
+						4,
+						4
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "HeadlinerAttackDamage",
+					"mValues": [
+						0.05000000074505806,
+						0.05000000074505806,
+						0.05000000074505806,
+						0.05000000074505806,
+						0.05000000074505806,
+						0.05000000074505806,
+						0.05000000074505806
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "HeadlinerShotDamage",
+					"mValues": [
+						0.6000000238418579,
+						0.6000000238418579,
+						0.6000000238418579,
+						0.6000000238418579,
+						0.6000000238418579,
+						0.6000000238418579,
+						0.6000000238418579
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"{5d0b9563}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubparts": [
+								{
+									"mDataValue": "APRatio",
+									"__type": "StatByNamedDataValueCalculationPart"
+								},
+								{
+									"mStat": 2,
+									"mDataValue": "ADPercent",
+									"__type": "StatByNamedDataValueCalculationPart"
+								}
+							],
+							"__type": "SumOfSubPartsCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"mImgIconName": [
+				"ASSETS/Characters/TFT3_Caitlyn/HUD/Icons2D/Caitlyn_AceintheHole.dds",
+				""
+			],
+			"mCastTime": 1.100000023841858,
+			"delayCastOffsetPercent": -0.25,
+			"delayTotalTimePercent": -0.5,
+			"mCantCancelWhileWindingUp": true,
+			"mCantCancelWhileChanneling": true,
+			"mUseMinimapTargeting": true,
+			"castRangeUseBoundingBoxes": true,
+			"alwaysSnapFacing": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 40,
+				"movementComponent": {
+					"mUseHeightOffsetAtEnd": true,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Buffbone_Cstm_Attack",
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 3200,
+					"__type": "FixedSpeedMovement"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnHit"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"castFrame": 54,
+			"missileSpeed": 3200,
+			"mMissileEffectKey": "{221bac3e}",
+			"mFloatVarsDecimals": [
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"{47e0dff9}": {
+				"12": "Play_sfx_tft10_CaitlynSpell_OnCast"
+			},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"mDimensionBehavior": 1,
+			"{00f7e5bc}": true,
+			"__type": "SpellDataResource"
+		},
+		"mBuff": {
+			"mDescription": "game_buff_tooltip_CaitlynAceintheHole",
+			"__type": "BuffData"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT10_Caitlyn/Spells/TFT10_CaitlynR_mis": {
+		"mScriptName": "TFT10_CaitlynR_mis",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 22538,
+			"mRequiredUnitTags": {
+				"mTagList": "Champion",
+				"__type": "ObjectTags"
+			},
+			"mAlternateName": "CaitlynAceintheHole",
+			"mImgIconName": [
+				""
+			],
+			"mCastTime": 1.100000023841858,
+			"delayCastOffsetPercent": -0.25,
+			"delayTotalTimePercent": -0.5,
+			"mCantCancelWhileWindingUp": true,
+			"mCantCancelWhileChanneling": true,
+			"mUseMinimapTargeting": true,
+			"castRangeUseBoundingBoxes": true,
+			"alwaysSnapFacing": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 40,
+				"movementComponent": {
+					"mStartBoneName": "Buffbone_Cstm_Rifle_Barrel_Loc",
+					"mTargetBoneName": "C_BUFFBONE_GLB_HEAD_LOC",
+					"mProjectTargetToCastRange": true,
+					"mUseGroundHeightAtTarget": false,
+					"mSpeed": 3000,
+					"__type": "FixedSpeedMovement"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnHit"
+					},
+					{
+						"__type": "DestroyOnHit"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 3,
+			"castFrame": 2,
+			"missileSpeed": 3000,
+			"mMissileEffectKey": "{221bac3e}",
+			"mFloatVarsDecimals": [
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"{47e0dff9}": {
+				"15": "Play_sfx_tft10_CaitlynSpellMissile_OnMissileCast"
+			},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"mDimensionBehavior": 1,
+			"{00f7e5bc}": true,
+			"__type": "SpellDataResource"
+		},
+		"mBuff": {
+			"mDescription": "game_buff_tooltip_CaitlynAceintheHole",
+			"__type": "BuffData"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT10_Caitlyn/Spells/TFT10_CaitlynCritAttack": {
+		"mScriptName": "TFT10_CaitlynCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "CaitlynCritAttack",
+			"delayCastOffsetPercent": -0.029999999329447746,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Rifle_TopBarrel2",
+					"mSpeed": 3500,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8.5,
+			"missileSpeed": 2500,
+			"mMissileEffectKey": "{5e14a37a}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "{74ac1b3a}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT10_Caitlyn/CharacterRecords/Root": {
+		"mCharacterName": "TFT10_Caitlyn",
+		"baseHP": 700,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 90,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 70,
+		"baseArmor": 30,
+		"baseSpellBlock": 30,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 900,
+		"attackSpeed": 0.800000011920929,
+		"basicAttack": {
+			"mAttackName": "TFT10_CaitlynBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT10_CaitlynBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT10_CaitlynCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT10_CaitlynR",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"TFT10_CaitlynR_mis",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 1,
+		"unitTagsString": "Champion",
+		"flags": 9446656,
+		"tier": 4,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{4995a396}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{c505a558}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{2ae695df}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"{22f5197d}": 200,
+		"__type": "TFTCharacterRecord"
+	}
+}

@@ -24,8 +24,8 @@
 					"mValues": [
 						0,
 						1.5,
+						1.75,
 						2,
-						3,
 						0,
 						0,
 						0
@@ -212,7 +212,7 @@
 					"mSpeed": 2000,
 					"mTargetHeightAugment": 100,
 					"mOffsetInitialTargetHeight": 100,
-					"mStartBoneName": "BUFFBONE_CSTM_WEAPON_4",
+					"mStartBoneName": "r_finger",
 					"__type": "FixedSpeedMovement"
 				},
 				"verticalFacing": {
@@ -271,7 +271,7 @@
 					"mSpeed": 2000,
 					"mTargetHeightAugment": 100,
 					"mOffsetInitialTargetHeight": 100,
-					"mStartBoneName": "BUFFBONE_CSTM_WEAPON_4",
+					"mStartBoneName": "r_finger",
 					"__type": "FixedSpeedMovement"
 				},
 				"verticalFacing": {
@@ -330,7 +330,7 @@
 					"mSpeed": 2000,
 					"mTargetHeightAugment": 100,
 					"mOffsetInitialTargetHeight": 100,
-					"mStartBoneName": "BUFFBONE_CSTM_WEAPON_4",
+					"mStartBoneName": "r_finger",
 					"__type": "FixedSpeedMovement"
 				},
 				"verticalFacing": {
@@ -360,6 +360,7 @@
 	"{c31a00ea}": {
 		"mScriptName": "TFT7_VarusRSpread",
 		"mSpell": {
+			"flags": 4,
 			"mAffectsTypeFlags": 4106,
 			"mDataValues": [
 				{
@@ -552,13 +553,13 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 60,
+		"mInitialMana": 75,
 		"mCharacterName": "TFT7_Varus",
 		"baseHP": 650,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 120,
+			"arBase": 150,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
@@ -570,7 +571,7 @@
 		"critDamageMultiplier": 1.2999999523162842,
 		"baseMoveSpeed": 500,
 		"attackRange": 660,
-		"attackSpeed": 0.75,
+		"attackSpeed": 0.699999988079071,
 		"basicAttack": {
 			"mAttackName": "TFT7_VarusBasicAttack",
 			"__type": "AttackSlotData"

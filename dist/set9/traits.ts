@@ -13,9 +13,9 @@ export const traits: TraitData[] = [
 				variables: {
 					'BonusArmor': 25,
 					'BonusMR': 25,
+					'BonusPercent': 1,
 					'Duration': 10,
 					'{09b7d38c}': 2,
-					'{b44c0eed}': 1,
 				},
 			},
 			{
@@ -25,9 +25,9 @@ export const traits: TraitData[] = [
 				variables: {
 					'BonusArmor': 50,
 					'BonusMR': 50,
+					'BonusPercent': 1,
 					'Duration': 10,
 					'{09b7d38c}': 2,
-					'{b44c0eed}': 1,
 				},
 			},
 			{
@@ -37,9 +37,9 @@ export const traits: TraitData[] = [
 				variables: {
 					'BonusArmor': 95,
 					'BonusMR': 95,
+					'BonusPercent': 1,
 					'Duration': 10,
 					'{09b7d38c}': 2,
-					'{b44c0eed}': 1,
 				},
 			},
 			{
@@ -49,9 +49,9 @@ export const traits: TraitData[] = [
 				variables: {
 					'BonusArmor': 240,
 					'BonusMR': 240,
+					'BonusPercent': 1,
 					'Duration': 10,
 					'{09b7d38c}': 2,
-					'{b44c0eed}': 1,
 				},
 			},
 		],
@@ -67,8 +67,8 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
-					'{392edb65}': 100,
-					'{a92bb347}': 0.10000000149011612,
+					'BonusPercentHP': 0.10000000149011612,
+					'TeamFlatHP': 100,
 				},
 			},
 			{
@@ -76,8 +76,8 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 3,
 				variables: {
-					'{392edb65}': 100,
-					'{a92bb347}': 0.4000000059604645,
+					'BonusPercentHP': 0.4000000059604645,
+					'TeamFlatHP': 100,
 				},
 			},
 			{
@@ -85,8 +85,8 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 4,
 				variables: {
-					'{392edb65}': 100,
-					'{a92bb347}': 0.699999988079071,
+					'BonusPercentHP': 0.699999988079071,
+					'TeamFlatHP': 100,
 				},
 			},
 		],
@@ -104,7 +104,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'BonusAS': 30,
 					'BurstDuration': 2.5,
-					'{89094428}': 0.5,
+					'IncreasePct': 0.5,
 				},
 			},
 			{
@@ -114,7 +114,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'BonusAS': 60,
 					'BurstDuration': 2.5,
-					'{89094428}': 0.5,
+					'IncreasePct': 0.5,
 				},
 			},
 			{
@@ -124,7 +124,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'BonusAS': 95,
 					'BurstDuration': 2.5,
-					'{89094428}': 0.5,
+					'IncreasePct': 0.5,
 				},
 			},
 			{
@@ -134,7 +134,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'BonusAS': 140,
 					'BurstDuration': 2.5,
-					'{89094428}': 0.5,
+					'IncreasePct': 0.5,
 				},
 			},
 		],
@@ -151,8 +151,8 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'BonusHP': 350,
-					'{8bdcd88d}': 0.15000000596046448,
-					'{ad17ba74}': 4,
+					'BonusOmnivamp': 0.15000000596046448,
+					'RespawnTimer': 4,
 				},
 			},
 		],
@@ -169,7 +169,7 @@ export const traits: TraitData[] = [
 				style: 1,
 				variables: {
 					'DamageAmp': 0.20000000298023224,
-					'{428a4c11}': 3,
+					'ShotFrequency': 3,
 				},
 			},
 			{
@@ -178,7 +178,7 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'DamageAmp': 0.6499999761581421,
-					'{428a4c11}': 3,
+					'ShotFrequency': 3,
 				},
 			},
 			{
@@ -187,7 +187,7 @@ export const traits: TraitData[] = [
 				style: 5,
 				variables: {
 					'DamageAmp': 1.5,
-					'{428a4c11}': 3,
+					'ShotFrequency': 3,
 				},
 			},
 		],
@@ -203,8 +203,8 @@ export const traits: TraitData[] = [
 				minUnits: 3,
 				style: 1,
 				variables: {
-					'{a750b59f}': 1,
-					'{bd072701}': 5,
+					'BonusDefenses': 5,
+					'NumElites': 1,
 				},
 			},
 			{
@@ -212,8 +212,8 @@ export const traits: TraitData[] = [
 				minUnits: 5,
 				style: 3,
 				variables: {
-					'{a750b59f}': 2,
-					'{bd072701}': 30,
+					'BonusDefenses': 30,
+					'NumElites': 2,
 				},
 			},
 			{
@@ -221,8 +221,8 @@ export const traits: TraitData[] = [
 				minUnits: 7,
 				style: 4,
 				variables: {
-					'{a750b59f}': 4,
-					'{bd072701}': 40,
+					'BonusDefenses': 40,
+					'NumElites': 4,
 				},
 			},
 			{
@@ -230,8 +230,8 @@ export const traits: TraitData[] = [
 				minUnits: 9,
 				style: 5,
 				variables: {
-					'{a750b59f}': 6,
-					'{bd072701}': 100,
+					'BonusDefenses': 100,
+					'NumElites': 6,
 				},
 			},
 		],
@@ -247,10 +247,10 @@ export const traits: TraitData[] = [
 				minUnits: 1,
 				style: 4,
 				variables: {
-					'PercentHPHeal': 0.20000000298023224,
-					'{0b0b3c63}': 0.5,
-					'{1ec4c4d2}': 0.10000000149011612,
 					'HexRange': 2,
+					'PercentBonusMaxHP': 0.5,
+					'PercentHPHeal': 0.20000000298023224,
+					'PercentHPMagicDamage': 0.10000000149011612,
 				},
 			},
 		],
@@ -266,10 +266,10 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
+					'DelayTime': 8,
 					'Duration': 10,
 					'PercentHPDamage': 5,
-					'{14adee04}': 40,
-					'{17f82fb1}': 8,
+					'ShredSunder': 40,
 					'{81ce23cf}': 1,
 				},
 			},
@@ -278,9 +278,9 @@ export const traits: TraitData[] = [
 				minUnits: 3,
 				style: 4,
 				variables: {
+					'DelayTime': 8,
 					'Duration': 10,
 					'PercentHPDamage': 10,
-					'{17f82fb1}': 8,
 					'{5e31469e}': 30,
 					'{81ce23cf}': 2,
 				},
@@ -290,10 +290,10 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 5,
 				variables: {
+					'DelayTime': 8,
 					'Duration': 10,
 					'PercentHPDamage': 15,
 					'StunDuration': 1.5,
-					'{17f82fb1}': 8,
 					'{81ce23cf}': 3,
 				},
 			},
@@ -311,7 +311,7 @@ export const traits: TraitData[] = [
 				style: 1,
 				variables: {
 					'MaxStacks': 8,
-					'{df3d2f5f}': 6,
+					'PercentAD': 6,
 				},
 			},
 			{
@@ -320,7 +320,7 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'MaxStacks': 8,
-					'{df3d2f5f}': 14,
+					'PercentAD': 14,
 				},
 			},
 			{
@@ -329,7 +329,7 @@ export const traits: TraitData[] = [
 				style: 5,
 				variables: {
 					'MaxStacks': 8,
-					'{df3d2f5f}': 25,
+					'PercentAD': 25,
 				},
 			},
 		],
@@ -345,9 +345,9 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
-					'{2af5ed55}': null,
+					'SelfBonusMana': null,
+					'TeamMana': 5,
 					'TickRate': 3,
-					'{dd3e2f2b}': 5,
 				},
 			},
 			{
@@ -355,9 +355,9 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 3,
 				variables: {
-					'{2af5ed55}': 15,
+					'SelfBonusMana': 15,
+					'TeamMana': 5,
 					'TickRate': 3,
-					'{dd3e2f2b}': 5,
 				},
 			},
 			{
@@ -365,9 +365,9 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 4,
 				variables: {
-					'{2af5ed55}': 15,
+					'SelfBonusMana': 15,
+					'TeamMana': 20,
 					'TickRate': 3,
-					'{dd3e2f2b}': 20,
 				},
 			},
 		],
@@ -383,21 +383,21 @@ export const traits: TraitData[] = [
 				minUnits: 3,
 				style: 1,
 				variables: {
+					'EmblemBonus': 33,
 					'Mana': 20,
+					'NumberOfSpirits': 1,
+					'SpiritDuration': 4,
+					'TooltipBonus': 1,
 					'{18bfc1ac}': 10,
 					'{1b8cd16a}': 20,
 					'{27b17444}': 25,
-					'{3076bc18}': 4,
 					'{3fc62f6f}': 2,
 					'{4df03474}': 200,
 					'{53912082}': 1,
 					'{b9a6ee1b}': 15,
-					'{c5f948bd}': 1,
 					'{eb0c521b}': 15,
 					'{ed124bdb}': 25,
-					'TooltipBonus': 1,
 					'{f6b4b588}': 3,
-					'{f809601e}': 33,
 				},
 			},
 			{
@@ -405,21 +405,21 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 4,
 				variables: {
+					'EmblemBonus': 66,
 					'Mana': 20,
+					'NumberOfSpirits': 2,
+					'SpiritDuration': 4,
+					'TooltipBonus': 2,
 					'{18bfc1ac}': 20,
 					'{1b8cd16a}': 40,
 					'{27b17444}': 50,
-					'{3076bc18}': 4,
 					'{3fc62f6f}': 2,
 					'{4df03474}': 400,
 					'{53912082}': 1,
 					'{b9a6ee1b}': 30,
-					'{c5f948bd}': 2,
 					'{eb0c521b}': 30,
 					'{ed124bdb}': 50,
-					'TooltipBonus': 2,
 					'{f6b4b588}': 6,
-					'{f809601e}': 66,
 				},
 			},
 			{
@@ -427,21 +427,21 @@ export const traits: TraitData[] = [
 				minUnits: 9,
 				style: 5,
 				variables: {
+					'EmblemBonus': 107.25,
 					'Mana': 20,
+					'NumberOfSpirits': 3,
+					'SpiritDuration': 4,
+					'TooltipBonus': 3.25,
 					'{18bfc1ac}': 32.5,
 					'{1b8cd16a}': 65,
 					'{27b17444}': 81.25,
-					'{3076bc18}': 4,
 					'{3fc62f6f}': 2,
 					'{4df03474}': 650,
 					'{53912082}': 1,
 					'{b9a6ee1b}': 48.75,
-					'{c5f948bd}': 3,
 					'{eb0c521b}': 48.75,
 					'{ed124bdb}': 81.25,
-					'TooltipBonus': 3.25,
 					'{f6b4b588}': 10,
-					'{f809601e}': 107.25,
 				},
 			},
 		],
@@ -458,8 +458,8 @@ export const traits: TraitData[] = [
 				style: 1,
 				variables: {
 					'Duration': 7,
-					'{012399e1}': 0.15000000596046448,
-					'{5532c3ef}': 0.25,
+					'MaxDR': 0.25,
+					'MinDR': 0.15000000596046448,
 				},
 			},
 			{
@@ -468,8 +468,8 @@ export const traits: TraitData[] = [
 				style: 3,
 				variables: {
 					'Duration': 7,
-					'{012399e1}': 0.25,
-					'{5532c3ef}': 0.4000000059604645,
+					'MaxDR': 0.4000000059604645,
+					'MinDR': 0.25,
 				},
 			},
 			{
@@ -478,8 +478,8 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'Duration': 7,
-					'{012399e1}': 0.3499999940395355,
-					'{5532c3ef}': 0.5,
+					'MaxDR': 0.5,
+					'MinDR': 0.3499999940395355,
 				},
 			},
 		],
@@ -495,8 +495,8 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
+					'BonusCasts': 1,
 					'DamageReduction': 0.6600000262260437,
-					'{b99088b8}': 1,
 				},
 			},
 			{
@@ -504,8 +504,8 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 4,
 				variables: {
+					'BonusCasts': 2,
 					'DamageReduction': 0.6600000262260437,
-					'{b99088b8}': 2,
 				},
 			},
 		],
@@ -523,8 +523,8 @@ export const traits: TraitData[] = [
 				variables: {
 					'AD': 17,
 					'AP': 17,
+					'BonusRatio': 0.05000000074505806,
 					'HP': 170,
-					'{d04ae9af}': 0.05000000074505806,
 				},
 			},
 			{
@@ -534,8 +534,8 @@ export const traits: TraitData[] = [
 				variables: {
 					'AD': 34,
 					'AP': 34,
+					'BonusRatio': 0.05000000074505806,
 					'HP': 340,
-					'{d04ae9af}': 0.05000000074505806,
 				},
 			},
 			{
@@ -545,8 +545,8 @@ export const traits: TraitData[] = [
 				variables: {
 					'AD': 70,
 					'AP': 70,
+					'BonusRatio': 0.05000000074505806,
 					'HP': 700,
-					'{d04ae9af}': 0.05000000074505806,
 				},
 			},
 		],
@@ -604,12 +604,12 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
+					'BleedDuration': null,
 					'DamageReduction': 100,
 					'HPThreshold': 0.5,
-					'{0bc5955f}': null,
-					'{77df45b0}': null,
 					'HexRange': 4,
 					'StealthDuration': 1.5,
+					'{77df45b0}': null,
 				},
 			},
 			{
@@ -617,12 +617,12 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 4,
 				variables: {
+					'BleedDuration': 5,
 					'DamageReduction': 100,
 					'HPThreshold': 0.5,
-					'{0bc5955f}': 5,
-					'{77df45b0}': 0.5,
 					'HexRange': 4,
 					'StealthDuration': 1.5,
+					'{77df45b0}': 0.5,
 				},
 			},
 		],
@@ -638,11 +638,11 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
+					'DamageInstances': 10,
 					'Duration': 15,
-					'{0f5e9c98}': 10,
-					'TickRate': 1,
-					'MaxHPShield': 45,
 					'ManaRegen': 6,
+					'MaxHPShield': 45,
+					'TickRate': 1,
 				},
 			},
 			{
@@ -650,11 +650,11 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 4,
 				variables: {
+					'DamageInstances': 10,
 					'Duration': 15,
-					'{0f5e9c98}': 10,
-					'TickRate': 1,
-					'MaxHPShield': 80,
 					'ManaRegen': 12,
+					'MaxHPShield': 80,
+					'TickRate': 1,
 				},
 			},
 			{
@@ -662,11 +662,11 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 5,
 				variables: {
+					'DamageInstances': 10,
 					'Duration': 15,
-					'{0f5e9c98}': 10,
-					'TickRate': 1,
-					'MaxHPShield': 115,
 					'ManaRegen': 18,
+					'MaxHPShield': 115,
+					'TickRate': 1,
 				},
 			},
 		],
@@ -682,12 +682,12 @@ export const traits: TraitData[] = [
 				minUnits: 3,
 				style: 1,
 				variables: {
+					'AscensionStrengthBoost': null,
+					'BonusAAPercent': 0.44999998807907104,
+					'BonusHPPercent': 0.33000001311302185,
 					'HPRegen': 0.05000000074505806,
-					'{255e11cd}': 0.44999998807907104,
-					'{31128603}': 0.33000001311302185,
-					'{473e51f7}': 4,
-					'{975a6fed}': 8,
-					'{98193878}': null,
+					'PulsePeriod': 4,
+					'SecondsToAscend': 8,
 					'{e3dc0fc2}': 2,
 				},
 			},
@@ -696,12 +696,12 @@ export const traits: TraitData[] = [
 				minUnits: 5,
 				style: 3,
 				variables: {
+					'AscensionStrengthBoost': null,
+					'BonusAAPercent': 0.44999998807907104,
+					'BonusHPPercent': 0.33000001311302185,
 					'HPRegen': 0.05000000074505806,
-					'{255e11cd}': 0.44999998807907104,
-					'{31128603}': 0.33000001311302185,
-					'{473e51f7}': 4,
-					'{975a6fed}': 8,
-					'{98193878}': null,
+					'PulsePeriod': 4,
+					'SecondsToAscend': 8,
 					'{e3dc0fc2}': 2,
 				},
 			},
@@ -710,12 +710,12 @@ export const traits: TraitData[] = [
 				minUnits: 7,
 				style: 4,
 				variables: {
+					'AscensionStrengthBoost': 0.25,
+					'BonusAAPercent': 0.44999998807907104,
+					'BonusHPPercent': 0.33000001311302185,
 					'HPRegen': 0.05000000074505806,
-					'{255e11cd}': 0.44999998807907104,
-					'{31128603}': 0.33000001311302185,
-					'{473e51f7}': 4,
-					'{975a6fed}': 8,
-					'{98193878}': 0.25,
+					'PulsePeriod': 4,
+					'SecondsToAscend': 8,
 					'{e3dc0fc2}': 2,
 				},
 			},
@@ -724,12 +724,12 @@ export const traits: TraitData[] = [
 				minUnits: 9,
 				style: 5,
 				variables: {
+					'AscensionStrengthBoost': 0.25,
+					'BonusAAPercent': 0.44999998807907104,
+					'BonusHPPercent': 0.33000001311302185,
 					'HPRegen': 0.05000000074505806,
-					'{255e11cd}': 0.44999998807907104,
-					'{31128603}': 0.33000001311302185,
-					'{473e51f7}': 4,
-					'{975a6fed}': 8,
-					'{98193878}': 0.25,
+					'PulsePeriod': 4,
+					'SecondsToAscend': 8,
 					'{e3dc0fc2}': 2,
 				},
 			},
@@ -748,7 +748,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'BonusDamageBase': 5,
 					'HPThreshold': 0.6600000262260437,
-					'OmniVamp': 12,
+					'Omnivamp': 12,
 				},
 			},
 			{
@@ -758,7 +758,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'BonusDamageBase': 10,
 					'HPThreshold': 0.6600000262260437,
-					'OmniVamp': 12,
+					'Omnivamp': 12,
 				},
 			},
 			{
@@ -768,7 +768,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'BonusDamageBase': 20,
 					'HPThreshold': 0.6600000262260437,
-					'OmniVamp': 12,
+					'Omnivamp': 12,
 				},
 			},
 			{
@@ -778,7 +778,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'BonusDamageBase': 30,
 					'HPThreshold': 0.6600000262260437,
-					'OmniVamp': 12,
+					'Omnivamp': 12,
 				},
 			},
 			{
@@ -788,7 +788,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'BonusDamageBase': 40,
 					'HPThreshold': 0.6600000262260437,
-					'OmniVamp': 12,
+					'Omnivamp': 12,
 				},
 			},
 		],
@@ -804,10 +804,10 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
-					'{08335318}': 1,
-					'{6266505a}': 0.07000000029802322,
-					'{a34f32df}': 3,
 					'BonusAP': 25,
+					'HPPct': 0.07000000029802322,
+					'TargetNum': 1,
+					'{a34f32df}': 3,
 				},
 			},
 			{
@@ -815,10 +815,10 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 3,
 				variables: {
-					'{08335318}': 1,
-					'{6266505a}': 0.10000000149011612,
-					'{a34f32df}': 3,
 					'BonusAP': 50,
+					'HPPct': 0.10000000149011612,
+					'TargetNum': 1,
+					'{a34f32df}': 3,
 				},
 			},
 			{
@@ -826,10 +826,10 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 4,
 				variables: {
-					'{08335318}': 2,
-					'{6266505a}': 0.11999999731779099,
-					'{a34f32df}': 3,
 					'BonusAP': 80,
+					'HPPct': 0.11999999731779099,
+					'TargetNum': 2,
+					'{a34f32df}': 3,
 				},
 			},
 			{
@@ -837,10 +837,10 @@ export const traits: TraitData[] = [
 				minUnits: 8,
 				style: 5,
 				variables: {
-					'{08335318}': 2,
-					'{6266505a}': 0.20000000298023224,
-					'{a34f32df}': 3,
 					'BonusAP': 120,
+					'HPPct': 0.20000000298023224,
+					'TargetNum': 2,
+					'{a34f32df}': 3,
 				},
 			},
 		],
@@ -856,9 +856,9 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
-					'ShieldDuration': 15,
-					'{9d0939e8}': 250,
 					'BonusAP': 15,
+					'ShieldDuration': 15,
+					'ShieldHP': 250,
 				},
 			},
 			{
@@ -866,9 +866,9 @@ export const traits: TraitData[] = [
 				minUnits: 3,
 				style: 3,
 				variables: {
-					'ShieldDuration': 15,
-					'{9d0939e8}': 400,
 					'BonusAP': 25,
+					'ShieldDuration': 15,
+					'ShieldHP': 400,
 				},
 			},
 			{
@@ -876,9 +876,9 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 4,
 				variables: {
-					'ShieldDuration': 15,
-					'{9d0939e8}': 600,
 					'BonusAP': 40,
+					'ShieldDuration': 15,
+					'ShieldHP': 600,
 				},
 			},
 			{
@@ -886,9 +886,9 @@ export const traits: TraitData[] = [
 				minUnits: 5,
 				style: 5,
 				variables: {
-					'ShieldDuration': 15,
-					'{9d0939e8}': 900,
 					'BonusAP': 60,
+					'ShieldDuration': 15,
+					'ShieldHP': 900,
 				},
 			},
 		],
@@ -936,8 +936,8 @@ export const traits: TraitData[] = [
 				minUnits: 1,
 				style: 4,
 				variables: {
+					'GoldCost': 6,
 					'{8063e2fe}': 1,
-					'{cc5f430a}': 6,
 					'{db5e6ace}': 100,
 				},
 			},
@@ -954,7 +954,7 @@ export const traits: TraitData[] = [
 				minUnits: 3,
 				style: 1,
 				variables: {
-					'{1eb1d2ae}': 0.25,
+					'PercentHPAPPerStarLevel': 0.25,
 					'{a4dcb3da}': 0.4000000059604645,
 				},
 			},
@@ -963,7 +963,7 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 4,
 				variables: {
-					'{1eb1d2ae}': 0.25,
+					'PercentHPAPPerStarLevel': 0.25,
 					'{a4dcb3da}': 0.4000000059604645,
 				},
 			},
@@ -972,7 +972,7 @@ export const traits: TraitData[] = [
 				minUnits: 8,
 				style: 5,
 				variables: {
-					'{1eb1d2ae}': 0.25,
+					'PercentHPAPPerStarLevel': 0.25,
 					'{a4dcb3da}': 0.4000000059604645,
 				},
 			},
@@ -1004,11 +1004,11 @@ export const traits: TraitData[] = [
 				style: 1,
 				variables: {
 					'BonusAS': 0.10000000149011612,
-					'{25ec78e1}': 1,
-					'{7ccd3647}': 15,
-					'{852a9a90}': 2,
-					'{c235f1f1}': 0.5,
 					'DodgeChance': 100,
+					'DodgeDuration': 2,
+					'ManaReduction': 15,
+					'{25ec78e1}': 1,
+					'{c235f1f1}': 0.5,
 					'{eae1472b}': 1,
 				},
 			},
@@ -1018,11 +1018,11 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'BonusAS': 0.10000000149011612,
-					'{25ec78e1}': 2,
-					'{7ccd3647}': 15,
-					'{852a9a90}': 2,
-					'{c235f1f1}': 0.5,
 					'DodgeChance': 100,
+					'DodgeDuration': 2,
+					'ManaReduction': 15,
+					'{25ec78e1}': 2,
+					'{c235f1f1}': 0.5,
 					'{eae1472b}': 2,
 				},
 			},

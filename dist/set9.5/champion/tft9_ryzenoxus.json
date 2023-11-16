@@ -70,9 +70,9 @@
 					"mName": "NumAxes",
 					"mValues": [
 						3,
-						4,
 						5,
-						12,
+						5,
+						15,
 						7,
 						8,
 						9
@@ -350,7 +350,6 @@
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 120,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
@@ -405,7 +404,7 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 70,
+		"mInitialMana": 40,
 		"{22f5197d}": 180,
 		"__type": "TFTCharacterRecord"
 	}

@@ -113,7 +113,6 @@
 	"{7908173a}": {
 		"mScriptName": "TFT7_SettQ",
 		"mSpell": {
-			"flags": 4,
 			"mAffectsTypeFlags": 8193,
 			"mAffectsStatusFlags": 224,
 			"mDataValues": [
@@ -136,14 +135,14 @@
 					"mName": "ADRatio",
 					"mValues": [
 						0,
-						1.5,
-						1.5,
-						1.5,
-						1.5,
-						1.5,
-						1.5
+						1.600000023841858,
+						1.600000023841858,
+						1.600000023841858,
+						1.600000023841858,
+						1.600000023841858,
+						1.600000023841858
 					],
-					"mFormula": "1.5",
+					"mFormula": "1.6",
 					"__type": "SpellDataValue"
 				},
 				{
@@ -193,6 +192,7 @@
 					"__type": "GameCalculation"
 				}
 			},
+			"delayCastOffsetPercent": -0.9800000190734863,
 			"castRange": [
 				5000,
 				5000,
@@ -238,7 +238,7 @@
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 50,
+		"baseDamage": 65,
 		"baseArmor": 40,
 		"baseSpellBlock": 40,
 		"baseCritChance": 0.25,

@@ -211,8 +211,8 @@
 					"mName": "ChanceToSpawnGold",
 					"mValues": [
 						0.25,
-						0.20000000298023224,
 						0.3499999940395355,
+						0.5,
 						1,
 						0.25,
 						0.25,
@@ -224,9 +224,9 @@
 					"mName": "ChanceToSpawnItem",
 					"mValues": [
 						0.25,
-						0.019999999552965164,
 						0.05000000074505806,
-						0.30000001192092896,
+						0.10000000149011612,
+						0.5,
 						0.25,
 						0.25,
 						0.25
@@ -436,7 +436,7 @@
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 150,
+			"arBase": 120,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
@@ -491,7 +491,7 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 90,
+		"mInitialMana": 60,
 		"{22f5197d}": 180,
 		"__type": "TFTCharacterRecord"
 	}

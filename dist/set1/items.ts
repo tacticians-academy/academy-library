@@ -654,7 +654,7 @@ export const ornnItems: ItemData[] = []
 
 export const hexbuffItems: ItemData[] = []
 
-export const mercenaryDiceItems: ItemData[] = []
+export const modItems: ItemData[] = []
 
 export const unreleasedItems: ItemData[] = [
 	{

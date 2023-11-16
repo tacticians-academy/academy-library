@@ -5,7 +5,7 @@
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 80,
+			"arBase": 70,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
@@ -43,7 +43,7 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 40,
+		"mInitialMana": 30,
 		"{22f5197d}": 195,
 		"__type": "TFTCharacterRecord"
 	},
@@ -56,9 +56,9 @@
 					"mName": "MagicDamage",
 					"mValues": [
 						0,
-						220,
-						330,
-						500,
+						250,
+						375,
+						560,
 						0,
 						0,
 						0

@@ -124,9 +124,9 @@
 					"mName": "MagicDamage",
 					"mValues": [
 						0,
-						105,
-						155,
+						170,
 						255,
+						420,
 						0,
 						0,
 						0
@@ -137,9 +137,9 @@
 					"mName": "AttackSpeed",
 					"mValues": [
 						0,
+						20,
+						25,
 						35,
-						40,
-						45,
 						0,
 						0,
 						0
@@ -147,15 +147,15 @@
 					"__type": "SpellDataValue"
 				},
 				{
-					"mName": "Duration",
+					"mName": "FalloffPercent",
 					"mValues": [
-						5,
-						5,
-						5,
-						5,
-						5,
-						5,
-						5
+						0.33000001311302185,
+						0.33000001311302185,
+						0.33000001311302185,
+						0.33000001311302185,
+						0.33000001311302185,
+						0.33000001311302185,
+						0.33000001311302185
 					],
 					"__type": "SpellDataValue"
 				}
@@ -416,12 +416,12 @@
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 90,
+			"arBase": 80,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 40,
+		"baseDamage": 45,
 		"baseArmor": 25,
 		"baseSpellBlock": 25,
 		"baseCritChance": 0.25,
@@ -472,7 +472,7 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 40,
+		"mInitialMana": 35,
 		"{22f5197d}": 160,
 		"__type": "TFTCharacterRecord"
 	}

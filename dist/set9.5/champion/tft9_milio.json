@@ -5,7 +5,7 @@
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 80,
+			"arBase": 60,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
@@ -58,7 +58,6 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 20,
 		"{22f5197d}": 170,
 		"__type": "TFTCharacterRecord"
 	},
@@ -409,9 +408,9 @@
 					"mName": "MagicDamage",
 					"mValues": [
 						0,
-						160,
-						240,
-						360,
+						220,
+						330,
+						500,
 						240,
 						240,
 						240
@@ -435,9 +434,9 @@
 					"mName": "MagicDamageAOE",
 					"mValues": [
 						0,
-						170,
-						250,
-						380,
+						180,
+						270,
+						400,
 						160,
 						160,
 						160
@@ -448,9 +447,9 @@
 					"mName": "SplashDamage",
 					"mValues": [
 						0,
-						85,
-						125,
-						190,
+						90,
+						140,
+						200,
 						0,
 						0,
 						0

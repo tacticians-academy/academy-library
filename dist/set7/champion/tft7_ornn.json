@@ -209,8 +209,8 @@
 					"mName": "StunDuration",
 					"mValues": [
 						1,
-						1.5,
-						2,
+						1.25,
+						1.75,
 						8,
 						5,
 						6,
@@ -224,15 +224,15 @@
 				{
 					"mName": "SlowDuration",
 					"mValues": [
-						3,
-						3,
-						3,
-						3,
-						3,
-						3,
-						3
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2
 					],
-					"mBaseP": 3,
+					"mBaseP": 2,
 					"mFormula": "P + 0",
 					"__type": "SpellDataValue"
 				}
@@ -452,11 +452,11 @@
 		"mMoveHeight": 0,
 		"mInitialMana": 80,
 		"mCharacterName": "TFT7_Ornn",
-		"baseHP": 1100,
+		"baseHP": 1000,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 160,
+			"arBase": 180,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"

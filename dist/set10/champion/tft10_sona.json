@@ -1,0 +1,827 @@
+{
+	"{2f340dbd}": {
+		"mScriptName": "TFT10_SonaCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 512,
+			"delayCastOffsetPercent": -0.15279999375343323,
+			"castRange": [
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "WEAPON",
+					"mSpeed": 1500,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 13,
+			"missileSpeed": 1500,
+			"mHitEffectOrientType": 2,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT10_Sona/Spells/TFT10_Sona_EtherealMis": {
+		"mScriptName": "TFT10_Sona_EtherealMis",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 23567,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"castRange": [
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500
+			],
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mSpeed": 1300,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"mGravity": 2000,
+					"__type": "GravityHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 3,
+			"mMissileEffectKey": "{1ba56ece}",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT10_Sona/Spells/TFT10_Sona_DamageMis": {
+		"mScriptName": "TFT10_Sona_DamageMis",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 23567,
+			"mDataValues": [
+				{
+					"mName": "AutoAttackDamage",
+					"mValues": [
+						25,
+						50,
+						75,
+						120,
+						25,
+						25,
+						25
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"{6a9722cf}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{3902ec8f}",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"castRange": [
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500
+			],
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mTravelTime": 0.5,
+					"__type": "FixedTimeMovement"
+				},
+				"heightSolver": {
+					"mGravity": 2000,
+					"__type": "GravityHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 3,
+			"mMissileEffectKey": "{93289bea}",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT10_Sona/Spells/TFT10_SonaSpell3": {
+		"mScriptName": "TFT10_SonaSpell3",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 1029,
+			"mAffectsStatusFlags": 160,
+			"mDataValues": [
+				{
+					"mName": "AbilityPower",
+					"mValues": [
+						2,
+						2,
+						3,
+						100,
+						100,
+						100,
+						100
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "BaseMagicDamage",
+					"mValues": [
+						600,
+						450,
+						675,
+						9999,
+						9000,
+						9000,
+						9000
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "TargetCount",
+					"mValues": [
+						4,
+						5,
+						5,
+						11,
+						10,
+						10,
+						10
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "HeadlinerAttackSpeed",
+					"mValues": [
+						0.05000000074505806,
+						0.05000000074505806,
+						0.05000000074505806,
+						0.05000000074505806,
+						0.05000000074505806,
+						0.05000000074505806,
+						0.05000000074505806
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "HeadlinerAttackSpeedBoost",
+					"mValues": [
+						0.019999999552965164,
+						0.019999999552965164,
+						0.019999999552965164,
+						0.019999999552965164,
+						0.019999999552965164,
+						0.019999999552965164,
+						0.019999999552965164
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"ModifiedMagicDamage": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "BaseMagicDamage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"mImgIconName": [
+				"ASSETS/Maps/TFT/Icons/TFT10/TFT10_Item_DJ_ModeRed.TFT_Set10.dds"
+			],
+			"delayTotalTimePercent": -0.5,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT10_Sona/Spells/TFT10_SonaSpell2": {
+		"mScriptName": "TFT10_SonaSpell2",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 1029,
+			"mAffectsStatusFlags": 160,
+			"mDataValues": [
+				{
+					"mName": "PassiveAttackSpeed",
+					"mValues": [
+						0.07999999821186066,
+						0.25,
+						0.3499999940395355,
+						5,
+						5,
+						5,
+						5
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ActiveAttackSpeed",
+					"mValues": [
+						1.5,
+						1.25,
+						1.75,
+						7.769999980926514,
+						5,
+						5,
+						5
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ActiveDuration",
+					"mValues": [
+						5,
+						6,
+						6,
+						30,
+						5,
+						5,
+						5
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "BaseProcDamage",
+					"mValues": [
+						100,
+						90,
+						135,
+						777,
+						808,
+						808,
+						808
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "PassiveDuration",
+					"mValues": [
+						4,
+						4,
+						4,
+						4,
+						4,
+						4,
+						4
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "HeadlinerAttackSpeed",
+					"mValues": [
+						0.05000000074505806,
+						0.05000000074505806,
+						0.05000000074505806,
+						0.05000000074505806,
+						0.05000000074505806,
+						0.05000000074505806,
+						0.05000000074505806
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "HeadlinerAttackSpeedBoost",
+					"mValues": [
+						0.019999999552965164,
+						0.019999999552965164,
+						0.019999999552965164,
+						0.019999999552965164,
+						0.019999999552965164,
+						0.019999999552965164,
+						0.019999999552965164
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"{00c45eeb}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{1d399a91}",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"mImgIconName": [
+				"ASSETS/Maps/TFT/Icons/TFT10/TFT10_Item_DJ_ModePurple.TFT_Set10.dds"
+			],
+			"delayTotalTimePercent": -0.5,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{a17f3492}": {
+		"mScriptName": "TFT10_SonaPulseAttack",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 7183,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT10_Sona/Spells/TFT10_SonaSpell": {
+		"mScriptName": "TFT10_SonaSpell",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 1029,
+			"mAffectsStatusFlags": 160,
+			"mDataValues": [
+				{
+					"mName": "HealRatio",
+					"mValues": [
+						0.03999999910593033,
+						0.03999999910593033,
+						0.07000000029802322,
+						1,
+						1,
+						1,
+						1
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "Duration",
+					"mValues": [
+						6,
+						2,
+						2,
+						30,
+						30,
+						30,
+						30
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "BaseShieldAmount",
+					"mValues": [
+						400,
+						350,
+						550,
+						3333,
+						9000,
+						9000,
+						9000
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "HeadlinerAttackSpeed",
+					"mValues": [
+						0.05000000074505806,
+						0.05000000074505806,
+						0.05000000074505806,
+						0.05000000074505806,
+						0.05000000074505806,
+						0.05000000074505806,
+						0.05000000074505806
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "HeadlinerAttackSpeedBoost",
+					"mValues": [
+						0.009999999776482582,
+						0.009999999776482582,
+						0.009999999776482582,
+						0.009999999776482582,
+						0.009999999776482582,
+						0.009999999776482582,
+						0.009999999776482582
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"ModifiedShieldAmount": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "BaseShieldAmount",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"mImgIconName": [
+				"ASSETS/Maps/TFT/Icons/TFT10/TFT10_Item_DJ_ModeGreen.TFT_Set10.dds"
+			],
+			"delayTotalTimePercent": -0.5,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT10_Sona/Spells/TFT10_Sona_HealMis": {
+		"mScriptName": "TFT10_Sona_HealMis",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 7183,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"castRange": [
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500
+			],
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1300,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"mGravity": 2000,
+					"__type": "GravityHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 3,
+			"mMissileEffectKey": "{521e1acc}",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT10_Sona/Spells/TFT10_Sona_ConcussiveMis": {
+		"mScriptName": "TFT10_Sona_ConcussiveMis",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 23567,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"castRange": [
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500
+			],
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mSpeed": 1300,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"mGravity": 2000,
+					"__type": "GravityHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 3,
+			"mMissileEffectKey": "{93289bea}",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{e000387d}": {
+		"mScriptName": "TFT10_SonaBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 512,
+			"mAlternateName": "SonaBasicAttack",
+			"mImgIconName": [
+				"ASSETS/Spells/Icons2D/1041_Long_Staff.dds"
+			],
+			"delayCastOffsetPercent": -0.15279999375343323,
+			"castRange": [
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mSpeed": 1500,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 13,
+			"missileSpeed": 1500,
+			"mHitEffectOrientType": 2,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{ef58a45d}": {
+		"mScriptName": "TFT10_SonaBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 512,
+			"mAlternateName": "SonaBasicAttack2",
+			"delayCastOffsetPercent": -0.15279999375343323,
+			"castRange": [
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312,
+				622.7000122070312
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "L_Hand",
+					"mSpeed": 1500,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 13,
+			"missileSpeed": 1500,
+			"mHitEffectOrientType": 2,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT10_Sona/CharacterRecords/Root": {
+		"mCharacterName": "TFT10_Sona",
+		"baseHP": 850,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 170,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 5,
+		"baseArmor": 40,
+		"baseSpellBlock": 40,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 3000,
+		"attackSpeed": 0.8500000238418579,
+		"spellNames": [
+			"TFT10_SonaSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"TFT10_Sona_HealMis",
+			"TFT10_Sona_ConcussiveMis",
+			"TFT10_Sona_EtherealMis",
+			"TFT10_SonaSpell2",
+			"TFT10_SonaSpell3",
+			"TFT10_Sona_DamageMis",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 3,
+		"unitTagsString": "Champion",
+		"flags": 9446656,
+		"tier": 5,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{bdbcd3bf}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{c7e3ce1d}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{b8f51cf1}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"{22f5197d}": 220,
+		"__type": "TFTCharacterRecord"
+	}
+}

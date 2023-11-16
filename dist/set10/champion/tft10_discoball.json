@@ -1,0 +1,66 @@
+{
+	"{78efdc66}": {
+		"mScriptName": "TFT10_DiscoBallSpellTooltipOnly",
+		"mSpell": {
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{b36d1de6}": {
+		"mCharacterName": "TFT10_DiscoBall",
+		"baseHP": 1,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arBase": 0,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseArmor": 15,
+		"baseSpellBlock": 15,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.2999999523162842,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.6499999761581421,
+		"basicAttack": {
+			"mAttackName": "TFT10_DiscoBallBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"spellNames": [
+			"TFT10_DiscoBallSpellTooltipOnly",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"characterToolData": {
+			"championId": 900,
+			"__type": "CharacterToolData"
+		},
+		"flags": 8398208,
+		"{2cddddbb}": 0,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{6fac93d3}",
+				"Amount": 0,
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"{4e28a666}": "Root",
+		"{d9439003}": [
+			100,
+			250,
+			0
+		],
+		"{ef57098f}": false,
+		"{1f16e793}": true,
+		"{7cbc4762}": 0,
+		"__type": "TFTCharacterRecord",
+		"isSpawn": true
+	}
+}

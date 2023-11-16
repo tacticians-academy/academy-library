@@ -95,6 +95,7 @@ const milestoneIDForSet: Record<SetNumber, number | undefined> = {
 	8.5: undefined,
 	9: undefined,
 	9.5: undefined,
+	10: undefined,
 }
 
 const currentSetNumber = await getCurrentSetNumber()

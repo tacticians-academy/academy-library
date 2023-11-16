@@ -122,9 +122,9 @@
 					"mName": "StasisDuration",
 					"mValues": [
 						2,
+						1.25,
 						2,
-						2.5,
-						10,
+						15,
 						1.5,
 						1.5,
 						1.5
@@ -138,13 +138,14 @@
 					"mName": "DamageAmpRatio",
 					"mValues": [
 						0,
+						0.15000000596046448,
 						0.20000000298023224,
-						0.20000000298023224,
-						0.20000000298023224,
+						99.98999786376953,
 						0.20000000298023224,
 						0.20000000298023224,
 						0.20000000298023224
 					],
+					"{3f95426c}": false,
 					"mFormula": "0.2",
 					"__type": "SpellDataValue"
 				},
@@ -304,13 +305,13 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 120,
+		"mInitialMana": 160,
 		"mCharacterName": "TFT7_Bard",
 		"baseHP": 850,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 200,
+			"arBase": 240,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"

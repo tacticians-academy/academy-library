@@ -2,7 +2,7 @@ import { SetNumber } from '../dist/index.js'
 
 export async function importAugments(set: SetNumber) {
 	if (set < 6) {
-		type Augments = typeof import('./set6.5/augments.js')
+		type Augments = typeof import('./set6/augments.js')
 		return {} as Augments
 	}
 	if (set === 6) {
@@ -28,6 +28,9 @@ export async function importAugments(set: SetNumber) {
 	}
 	if (set === 9.5) {
 		return await import('./set9.5/augments.js')
+	}
+	if (set === 10) {
+		return await import('./set10/augments.js')
 	}
 	throw 'Unsupported set:' + set
 }
@@ -59,6 +62,9 @@ export async function importAugmentTiers(set: SetNumber) {
 		return await import('./set7/hardcoded/augment-tiers.js')
 	}
 	if (set === 9.5) {
+		return await import('./set7/hardcoded/augment-tiers.js') //TODO
+	}
+	if (set === 10) {
 		return await import('./set7/hardcoded/augment-tiers.js') //TODO
 	}
 	throw 'Unsupported set:' + set
@@ -113,6 +119,9 @@ export async function importChampions(set: SetNumber) {
 	if (set === 9.5) {
 		return await import('./set9.5/champions.js')
 	}
+	if (set === 10) {
+		return await import('./set10/champions.js')
+	}
 	throw 'Unsupported set:' + set
 }
 
@@ -164,6 +173,9 @@ export async function importItems(set: SetNumber) {
 	}
 	if (set === 9.5) {
 		return await import('./set9.5/items.js')
+	}
+	if (set === 10) {
+		return await import('./set10/items.js')
 	}
 	throw 'Unsupported set:' + set
 }
@@ -218,6 +230,9 @@ export async function importSetData(set: SetNumber) {
 	if (set === 9.5) {
 		return await import('./set9.5/hardcoded/set-data.js')
 	}
+	if (set === 10) {
+		return await import('./set10/hardcoded/set-data.js')
+	}
 	throw 'Unsupported set:' + set
 }
 
@@ -268,6 +283,9 @@ export async function importTraits(set: SetNumber) {
 		return await import('./set9/traits.js')
 	}
 	if (set === 9.5) {
+		return await import('./set9.5/traits.js')
+	}
+	if (set === 10) {
 		return await import('./set9.5/traits.js')
 	}
 	throw 'Unsupported set:' + set

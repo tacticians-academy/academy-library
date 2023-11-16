@@ -17,7 +17,7 @@
 		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
 		"attackRange": 420,
-		"attackSpeed": 0.8500000238418579,
+		"attackSpeed": 0.800000011920929,
 		"basicAttack": {
 			"mAttackProbability": 0.5,
 			"mAttackName": "TFT9_NilahBasicAttack",
@@ -88,8 +88,8 @@
 					"mName": "CleaveDamage",
 					"mValues": [
 						75,
-						0.75,
-						0.75,
+						0.550000011920929,
+						0.550000011920929,
 						1,
 						0.5,
 						0.5,
@@ -101,8 +101,8 @@
 					"mName": "AttackSpeed",
 					"mValues": [
 						0.20000000298023224,
-						0.20000000298023224,
-						0.20000000298023224,
+						0.18000000715255737,
+						0.18000000715255737,
 						0.4000000059604645,
 						0.20000000298023224,
 						0.20000000298023224,

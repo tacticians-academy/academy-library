@@ -11,7 +11,7 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
-					'CritDamage': 25,
+					'CritDamage': 5,
 					'CritChance': 15,
 				},
 			},
@@ -20,7 +20,7 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 3,
 				variables: {
-					'CritDamage': 45,
+					'CritDamage': 25,
 					'CritChance': 30,
 				},
 			},
@@ -29,7 +29,7 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 4,
 				variables: {
-					'CritDamage': 70,
+					'CritDamage': 45,
 					'CritChance': 45,
 				},
 			},
@@ -39,7 +39,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Set7_Astral`,
-		desc: `Every 5th Shop has increased odds to show Astral champions, and also grants an Astral orb.<br>Your team gains bonus Ability Power. <br><br><row>(@MinUnits@) @AP@ Ability Power</row><br><row>(@MinUnits@) @AP@ Ability Power; orb value increases</row><br><row>(@MinUnits@) @AP@ Ability Power; orbs may contain components</row>`,
+		desc: `After you've fielded an Astral team, every 5th shop has increased odds to show Astral champions, and grants a bonus Astral Orb. The orb's value comes from the Astral Trait tier you last fielded.<br>Your team gains bonus Ability Power. <br><br><row>(@MinUnits@) @AP@ Ability Power</row><br><row>(@MinUnits@) @AP@ Ability Power; orb value increases</row><br><row>(@MinUnits@) @AP@ Ability Power; orbs may contain components</row>`,
 		effects: [
 			{
 				maxUnits: 5,
@@ -48,27 +48,27 @@ export const traits: TraitData[] = [
 				variables: {
 					'{246b675b}': 1,
 					'{41233bac}': 5,
-					'AP': 5,
+					'AP': 10,
 				},
 			},
 			{
 				maxUnits: 8,
 				minUnits: 6,
-				style: 3,
+				style: 2,
 				variables: {
 					'{246b675b}': 1,
 					'{41233bac}': 5,
-					'AP': 30,
+					'AP': 40,
 				},
 			},
 			{
 				maxUnits: 25000,
 				minUnits: 9,
-				style: 4,
+				style: 3,
 				variables: {
 					'{246b675b}': 1,
 					'{41233bac}': 5,
-					'AP': 60,
+					'AP': 80,
 				},
 			},
 		],
@@ -101,7 +101,7 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
-					'BonusHP': 150,
+					'BonusHP': 200,
 				},
 			},
 			{
@@ -109,7 +109,7 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 2,
 				variables: {
-					'BonusHP': 300,
+					'BonusHP': 325,
 				},
 			},
 			{
@@ -141,7 +141,7 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
-					'{ff57f232}': 1.7999999523162842,
+					'{ff57f232}': 1.25,
 				},
 			},
 			{
@@ -149,7 +149,7 @@ export const traits: TraitData[] = [
 				minUnits: 3,
 				style: 2,
 				variables: {
-					'{ff57f232}': 2.4000000953674316,
+					'{ff57f232}': 2.25,
 				},
 			},
 			{
@@ -157,7 +157,7 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 3,
 				variables: {
-					'{ff57f232}': 3,
+					'{ff57f232}': 3.25,
 				},
 			},
 			{
@@ -165,7 +165,7 @@ export const traits: TraitData[] = [
 				minUnits: 5,
 				style: 4,
 				variables: {
-					'{ff57f232}': 3.75,
+					'{ff57f232}': 4.25,
 				},
 			},
 		],
@@ -174,16 +174,17 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Set7_Cavalier`,
-		desc: `Innate: Charge quickly towards their target whenever they move.<br><br>Cavaliers gain Armor and Magic Resist. At the start of combat and after each charge, gain double the amount for @Duration@ seconds. <br><br><expandRow>(@MinUnits@) @Armor@ Armor, @MR@ Magic Resist</expandRow>`,
+		desc: `Innate: Charge quickly towards their target whenever they move.<br><br>Cavaliers gain Armor and Magic Resist. At the start of combat and after each charge, gain @ChargeIncreasePct@% the amount for @Duration@ seconds. <br><br><expandRow>(@MinUnits@) @Armor@ Armor, @MR@ Magic Resist</expandRow>`,
 		effects: [
 			{
 				maxUnits: 2,
 				minUnits: 2,
 				style: 1,
 				variables: {
-					'Armor': 40,
+					'Armor': 35,
 					'Duration': 4,
-					'MR': 40,
+					'MR': 35,
+					'{c51d362c}': 200,
 				},
 			},
 			{
@@ -191,9 +192,10 @@ export const traits: TraitData[] = [
 				minUnits: 3,
 				style: 2,
 				variables: {
-					'Armor': 60,
+					'Armor': 55,
 					'Duration': 4,
-					'MR': 60,
+					'MR': 55,
+					'{c51d362c}': 200,
 				},
 			},
 			{
@@ -201,9 +203,10 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 3,
 				variables: {
-					'Armor': 80,
+					'Armor': 75,
 					'Duration': 4,
-					'MR': 80,
+					'MR': 75,
+					'{c51d362c}': 200,
 				},
 			},
 			{
@@ -214,6 +217,7 @@ export const traits: TraitData[] = [
 					'Armor': 100,
 					'Duration': 4,
 					'MR': 100,
+					'{c51d362c}': 200,
 				},
 			},
 		],
@@ -222,14 +226,14 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Set7_Dragon`,
-		desc: `(@MinUnits@) Dragons provide +3 to the marked trait, but require 2 team slots. They also gain @BonusHP@ bonus HP.<br><br>This trait is active with exactly 1 Dragon champion.`,
+		desc: `Innate: Require 2 team slots. <br><br>(@MinUnits@) Dragons provide +3 to the marked trait, and gain @BonusHP@ bonus HP. This is only active with exactly 1 Dragon champion.`,
 		effects: [
 			{
 				maxUnits: 1,
 				minUnits: 1,
 				style: 3,
 				variables: {
-					'BonusHP': 600,
+					'BonusHP': 700,
 				},
 			},
 			{
@@ -237,7 +241,7 @@ export const traits: TraitData[] = [
 				minUnits: 1,
 				style: 4,
 				variables: {
-					'BonusHP': 600,
+					'BonusHP': 700,
 				},
 			},
 		],
@@ -246,16 +250,16 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Set7_Dragonmancer`,
-		desc: `Use the Dragonmancer Blessing item to choose a Hero. The Hero gains massively increased HP and Ability Power, which increases by @StatIncreasePercent@% per star level of your Dragonmancers.<br><br><expandRow>(@MinUnits@) +@BonusHP@ HP, +@BonusAP@% Ability Power </expandRow>`,
+		desc: `Use the Dragonmancer Blessing item to choose a Hero. The Hero gains massively increased HP and Ability Power, which increases by @StatIncreasePercent@% per star level of your Dragonmancers.<br><br><expandRow>(@MinUnits@) +@BonusHP@ HP, +@BonusAP@ Ability Power </expandRow>`,
 		effects: [
 			{
 				maxUnits: 5,
 				minUnits: 3,
 				style: 1,
 				variables: {
-					'BonusHP': 500,
-					'{89626cbc}': 5,
-					'BonusAP': 25,
+					'BonusHP': 300,
+					'{89626cbc}': 20,
+					'BonusAP': 18,
 				},
 			},
 			{
@@ -263,9 +267,9 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 3,
 				variables: {
-					'BonusHP': 1250,
-					'{89626cbc}': 5,
-					'BonusAP': 50,
+					'BonusHP': 750,
+					'{89626cbc}': 20,
+					'BonusAP': 40,
 				},
 			},
 			{
@@ -273,9 +277,9 @@ export const traits: TraitData[] = [
 				minUnits: 9,
 				style: 4,
 				variables: {
-					'BonusHP': 2000,
-					'{89626cbc}': 5,
-					'BonusAP': 80,
+					'BonusHP': 1400,
+					'{89626cbc}': 20,
+					'BonusAP': 70,
 				},
 			},
 		],
@@ -299,7 +303,7 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 3,
 				variables: {
-					'{af2150c6}': 5,
+					'{af2150c6}': 7,
 				},
 			},
 			{
@@ -307,7 +311,7 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 4,
 				variables: {
-					'{af2150c6}': 8,
+					'{af2150c6}': 12,
 				},
 			},
 		],
@@ -325,7 +329,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'Duration': 60,
 					'HPThreshold': 50,
-					'{a77cf7ad}': 25,
+					'{a77cf7ad}': 30,
 				},
 			},
 			{
@@ -345,7 +349,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'Duration': 60,
 					'HPThreshold': 50,
-					'{a77cf7ad}': 80,
+					'{a77cf7ad}': 75,
 				},
 			},
 		],
@@ -354,21 +358,21 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Set7_Guild`,
-		desc: `Grant a unique bonus to your team; Guild members gain double the amount. Increases for each Guild member in play!<br><br>Sejuani: +@SejuaniHPBonus@ HP<br>Twitch: +@TwitchASBonus*100@% Attack Speed<br>Ryze: +@RyzeAPBonus@ Ability Power<br>Talon: +@TalonADBonus@ Attack Damage<br>Bard: +@BardMPABonus@ Mana per attack<br>Emblem: +@EmblemOmnivampBonus*100@% Omnivamp (healing for a percentage of damage dealt)<br><br><expandRow>(@MinUnits@) @Multiplier@% Guild bonus</expandRow>`,
+		desc: `Grant a unique bonus to your team; Guild members gain double the amount. Increases for each Guild member in play!<br><br><TFTGuildActive enabled=TFT7_Trait_Guild_ActiveSejuani alternate=TFTGuildInactive>Sejuani: +@SejuaniBonus@ HP</TFTGuildActive><br><TFTGuildActive enabled=TFT7_Trait_Guild_ActiveTwitch alternate=TFTGuildInactive>Twitch: +@TwitchBonus*100@% Attack Speed</TFTGuildActive><br><TFTGuildActive enabled=TFT7_Trait_Guild_ActiveRyze alternate=TFTGuildInactive>Ryze: +@RyzeBonus@ Ability Power</TFTGuildActive><br><TFTGuildActive enabled=TFT7_Trait_Guild_ActiveTalon alternate=TFTGuildInactive>Talon: +@TalonBonus@ Attack Damage</TFTGuildActive><br><TFTGuildActive enabled=TFT7_Trait_Guild_ActiveBard alternate=TFTGuildInactive>Bard: +@BardBonus@ Mana per attack</TFTGuildActive><br><TFTGuildActive enabled=TFT7_Trait_Guild_ActiveEmblem alternate=TFTGuildInactive>Emblem: +@EmblemBonus*100@% Omnivamp</TFTGuildActive><br><br><expandRow>(@MinUnits@) @TooltipMultiplier@% Guild bonus</expandRow>`,
 		effects: [
 			{
 				maxUnits: 1,
 				minUnits: 1,
 				style: 1,
 				variables: {
-					'{35965a4d}': 2,
-					'{59aa36e9}': 0.10000000149011612,
-					'{7047659f}': 100,
-					'{7a1a0dd5}': 0.029999999329447746,
-					'{8e3b4ed3}': 10,
-					'{c9877a75}': 10,
-					'{f506c7e6}': 100,
+					'{4a1c6695}': 100,
+					'{6a4951ed}': 2,
+					'{982e055c}': 10,
+					'{a7c768e7}': 100,
+					'{d2da7d1a}': 8,
+					'{f809601e}': 0.029999999329447746,
 					'{f9773fb7}': 2,
+					'{fe9fc6fd}': 0.10000000149011612,
 				},
 			},
 			{
@@ -376,14 +380,14 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
-					'{35965a4d}': 2,
-					'{59aa36e9}': 0.10000000149011612,
-					'{7047659f}': 100,
-					'{7a1a0dd5}': 0.029999999329447746,
-					'{8e3b4ed3}': 10,
-					'{c9877a75}': 10,
-					'{f506c7e6}': 120,
+					'{4a1c6695}': 120,
+					'{6a4951ed}': 2.4000000953674316,
+					'{982e055c}': 12,
+					'{a7c768e7}': 120,
+					'{d2da7d1a}': 9.600000381469727,
+					'{f809601e}': 0.035999998450279236,
 					'{f9773fb7}': 2,
+					'{fe9fc6fd}': 0.11999999731779099,
 				},
 			},
 			{
@@ -391,14 +395,14 @@ export const traits: TraitData[] = [
 				minUnits: 3,
 				style: 2,
 				variables: {
-					'{35965a4d}': 2,
-					'{59aa36e9}': 0.10000000149011612,
-					'{7047659f}': 100,
-					'{7a1a0dd5}': 0.029999999329447746,
-					'{8e3b4ed3}': 10,
-					'{c9877a75}': 10,
-					'{f506c7e6}': 140,
+					'{4a1c6695}': 140,
+					'{6a4951ed}': 2.799999952316284,
+					'{982e055c}': 14,
+					'{a7c768e7}': 140,
+					'{d2da7d1a}': 11.199999809265137,
+					'{f809601e}': 0.041999999433755875,
 					'{f9773fb7}': 2,
+					'{fe9fc6fd}': 0.14000000059604645,
 				},
 			},
 			{
@@ -406,14 +410,14 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 2,
 				variables: {
-					'{35965a4d}': 2,
-					'{59aa36e9}': 0.10000000149011612,
-					'{7047659f}': 100,
-					'{7a1a0dd5}': 0.029999999329447746,
-					'{8e3b4ed3}': 10,
-					'{c9877a75}': 10,
-					'{f506c7e6}': 180,
+					'{4a1c6695}': 160,
+					'{6a4951ed}': 3.200000047683716,
+					'{982e055c}': 16,
+					'{a7c768e7}': 160,
+					'{d2da7d1a}': 12.800000190734863,
+					'{f809601e}': 0.04800000041723251,
 					'{f9773fb7}': 2,
+					'{fe9fc6fd}': 0.1599999964237213,
 				},
 			},
 			{
@@ -421,29 +425,44 @@ export const traits: TraitData[] = [
 				minUnits: 5,
 				style: 3,
 				variables: {
-					'{35965a4d}': 2,
-					'{59aa36e9}': 0.10000000149011612,
-					'{7047659f}': 100,
-					'{7a1a0dd5}': 0.029999999329447746,
-					'{8e3b4ed3}': 10,
-					'{c9877a75}': 10,
-					'{f506c7e6}': 225,
+					'{4a1c6695}': 180,
+					'{6a4951ed}': 3.5999999046325684,
+					'{982e055c}': 18,
+					'{a7c768e7}': 180,
+					'{d2da7d1a}': 14.399999618530273,
+					'{f809601e}': 0.05400000140070915,
 					'{f9773fb7}': 2,
+					'{fe9fc6fd}': 0.18000000715255737,
+				},
+			},
+			{
+				maxUnits: 6,
+				minUnits: 6,
+				style: 4,
+				variables: {
+					'{4a1c6695}': 200,
+					'{6a4951ed}': 4,
+					'{982e055c}': 20,
+					'{a7c768e7}': 200,
+					'{d2da7d1a}': 16,
+					'{f809601e}': 0.05999999865889549,
+					'{f9773fb7}': 2,
+					'{fe9fc6fd}': 0.20000000298023224,
 				},
 			},
 			{
 				maxUnits: 25000,
-				minUnits: 6,
+				minUnits: 7,
 				style: 4,
 				variables: {
-					'{35965a4d}': 2,
-					'{59aa36e9}': 0.10000000149011612,
-					'{7047659f}': 100,
-					'{7a1a0dd5}': 0.029999999329447746,
-					'{8e3b4ed3}': 10,
-					'{c9877a75}': 10,
-					'{f506c7e6}': 275,
+					'{4a1c6695}': 250,
+					'{6a4951ed}': 5,
+					'{982e055c}': 25,
+					'{a7c768e7}': 250,
+					'{d2da7d1a}': 20,
+					'{f809601e}': 0.07500000298023224,
 					'{f9773fb7}': 2,
+					'{fe9fc6fd}': 0.25,
 				},
 			},
 		],
@@ -452,16 +471,16 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Set7_Jade`,
-		desc: `Summon movable Jade Statues that grow in power. <br><br>Each combat, allies adjacent to a statue gain Attack Speed and maximum HP healing every @Interval@ seconds. When a statue is destroyed, it deals @PercentHP@% of its HP as magic damage to nearby enemies.<br><br><row>(@MinUnits@) 1 statue, +@HPRegen@% healing, +@AS*100@% Attack Speed</row><br><row>(@MinUnits@) 2 statues, +@HPRegen@% healing, +@AS*100@% Attack Speed</row><br><row>(@MinUnits@) 3 statues, +@HPRegen@% healing, +@AS*100@% Attack Speed</row><br><row>(@MinUnits@) 4 statues, +@HPRegen@% healing, +@AS*100@% Attack Speed</row>`,
+		desc: `Summon movable Jade Statues that grow in power. <br><br>Each combat, allies who start combat adjacent to a statue gain maximum HP healing every @Interval@ seconds and bonus Attack Speed. When a statue is destroyed, it deals @PercentHP@% of its HP as magic damage to nearby enemies.<br><br><row>(@MinUnits@) 1 statue, +@HPRegen@% healing, +@AS*100@% Attack Speed</row><br><row>(@MinUnits@) 2 statues, +@HPRegen@% healing, +@AS*100@% Attack Speed</row><br><row>(@MinUnits@) 3 statues, +@HPRegen@% healing, +@AS*100@% Attack Speed</row><br><row>(@MinUnits@) 4 statues, +@HPRegen@% healing, +@AS*100@% Attack Speed</row>`,
 		effects: [
 			{
 				maxUnits: 5,
 				minUnits: 3,
 				style: 1,
 				variables: {
-					'AS': 0.20000000298023224,
+					'AS': 0.15000000596046448,
 					'HPRegen': 2,
-					'PercentHP': 50,
+					'PercentHP': 33,
 					'{25dee9e0}': 1,
 					'{288bc6fe}': 0.25,
 					'{cedd8578}': 2,
@@ -473,8 +492,8 @@ export const traits: TraitData[] = [
 				style: 2,
 				variables: {
 					'AS': 0.4000000059604645,
-					'HPRegen': 5,
-					'PercentHP': 50,
+					'HPRegen': 4,
+					'PercentHP': 33,
 					'{25dee9e0}': 2,
 					'{288bc6fe}': 0.25,
 					'{cedd8578}': 2,
@@ -485,9 +504,9 @@ export const traits: TraitData[] = [
 				minUnits: 9,
 				style: 3,
 				variables: {
-					'AS': 0.6000000238418579,
+					'AS': 0.699999988079071,
 					'HPRegen': 8,
-					'PercentHP': 50,
+					'PercentHP': 33,
 					'{25dee9e0}': 3,
 					'{288bc6fe}': 0.25,
 					'{cedd8578}': 2,
@@ -498,9 +517,9 @@ export const traits: TraitData[] = [
 				minUnits: 12,
 				style: 4,
 				variables: {
-					'AS': 1,
+					'AS': 2,
 					'HPRegen': 25,
-					'PercentHP': 50,
+					'PercentHP': 33,
 					'{25dee9e0}': 4,
 					'{288bc6fe}': 0.25,
 					'{cedd8578}': 2,
@@ -512,7 +531,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Set7_Legend`,
-		desc: `(3) Each combat: An adjacent ally sacrifices their life to the Legend, which gains @StatPercent@% of their HP, Armor, and Magic Resistance, plus @APPercent@% of their Ability Power.`,
+		desc: `(3) Each combat: An adjacent ally champion sacrifices their life to the Legend, which gains @StatPercent@% of their HP, Armor, and Magic Resistance, plus @APPercent@% of their Ability Power.`,
 		effects: [
 			{
 				maxUnits: 25000,
@@ -520,7 +539,7 @@ export const traits: TraitData[] = [
 				style: 3,
 				variables: {
 					'{92c2d0ac}': 100,
-					'{a68d353d}': 40,
+					'{a68d353d}': 30,
 				},
 			},
 		],
@@ -576,18 +595,18 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
-					'{03907b27}': 50,
+					'{03907b27}': 40,
 					'{2c8fe3dc}': 2,
 					'{34a68396}': 20,
 					'{48ffe45c}': 20,
 					'{67deaf34}': 10,
-					'{7845f61e}': 3,
+					'{7845f61e}': 6,
 					'{7fb6d810}': 50,
 					'{835c3290}': 6,
-					'{9ea1c8a7}': 25,
+					'{9ea1c8a7}': 50,
 					'{b04db727}': 200,
 					'{bd0f4998}': 8,
-					'{e32ac3a7}': 10,
+					'{e32ac3a7}': 20,
 					'{f25ff422}': 10,
 				},
 			},
@@ -596,18 +615,18 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 2,
 				variables: {
-					'{03907b27}': 75,
+					'{03907b27}': 65,
 					'{2c8fe3dc}': 4,
 					'{34a68396}': 25,
-					'{48ffe45c}': 35,
+					'{48ffe45c}': 30,
 					'{67deaf34}': 10,
-					'{7845f61e}': 6,
+					'{7845f61e}': 10,
 					'{7fb6d810}': 50,
 					'{835c3290}': 12,
-					'{9ea1c8a7}': 50,
-					'{b04db727}': 350,
+					'{9ea1c8a7}': 65,
+					'{b04db727}': 300,
 					'{bd0f4998}': 8,
-					'{e32ac3a7}': 20,
+					'{e32ac3a7}': 30,
 					'{f25ff422}': 10,
 				},
 			},
@@ -616,18 +635,18 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 3,
 				variables: {
-					'{03907b27}': 100,
+					'{03907b27}': 65,
 					'{2c8fe3dc}': 6,
 					'{34a68396}': 33,
-					'{48ffe45c}': 50,
+					'{48ffe45c}': 45,
 					'{67deaf34}': 10,
-					'{7845f61e}': 10,
+					'{7845f61e}': 14,
 					'{7fb6d810}': 50,
 					'{835c3290}': 20,
-					'{9ea1c8a7}': 75,
-					'{b04db727}': 500,
+					'{9ea1c8a7}': 80,
+					'{b04db727}': 450,
 					'{bd0f4998}': 8,
-					'{e32ac3a7}': 30,
+					'{e32ac3a7}': 40,
 					'{f25ff422}': 10,
 				},
 			},
@@ -636,16 +655,16 @@ export const traits: TraitData[] = [
 				minUnits: 8,
 				style: 4,
 				variables: {
-					'{03907b27}': 200,
+					'{03907b27}': 110,
 					'{2c8fe3dc}': 8,
 					'{34a68396}': 50,
-					'{48ffe45c}': 70,
+					'{48ffe45c}': 60,
 					'{67deaf34}': 10,
-					'{7845f61e}': 15,
+					'{7845f61e}': 18,
 					'{7fb6d810}': 50,
 					'{835c3290}': 30,
 					'{9ea1c8a7}': 100,
-					'{b04db727}': 700,
+					'{b04db727}': 600,
 					'{bd0f4998}': 8,
 					'{e32ac3a7}': 50,
 					'{f25ff422}': 10,
@@ -664,7 +683,7 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
-					'MR': 40,
+					'MR': 50,
 				},
 			},
 			{
@@ -672,7 +691,7 @@ export const traits: TraitData[] = [
 				minUnits: 3,
 				style: 2,
 				variables: {
-					'MR': 80,
+					'MR': 100,
 				},
 			},
 			{
@@ -705,7 +724,7 @@ export const traits: TraitData[] = [
 				style: 1,
 				variables: {
 					'AAPercent': 50,
-					'OmniVamp': 30,
+					'OmniVamp': 25,
 				},
 			},
 			{
@@ -713,7 +732,7 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 2,
 				variables: {
-					'AAPercent': 125,
+					'AAPercent': 135,
 					'OmniVamp': 50,
 				},
 			},
@@ -723,7 +742,7 @@ export const traits: TraitData[] = [
 				style: 3,
 				variables: {
 					'AAPercent': 250,
-					'OmniVamp': 80,
+					'OmniVamp': 75,
 				},
 			},
 		],
@@ -739,7 +758,7 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
-					'MagicDamage': 125,
+					'MagicDamage': 110,
 				},
 			},
 			{
@@ -747,7 +766,7 @@ export const traits: TraitData[] = [
 				minUnits: 3,
 				style: 2,
 				variables: {
-					'MagicDamage': 200,
+					'MagicDamage': 150,
 				},
 			},
 			{
@@ -755,7 +774,7 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 3,
 				variables: {
-					'MagicDamage': 300,
+					'MagicDamage': 210,
 				},
 			},
 			{
@@ -763,7 +782,7 @@ export const traits: TraitData[] = [
 				minUnits: 5,
 				style: 4,
 				variables: {
-					'MagicDamage': 450,
+					'MagicDamage': 290,
 				},
 			},
 		],
@@ -772,7 +791,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Set7_Scalescorn`,
-		desc: `If you don't have a Dragon on your team, Scalescorn champions deal bonus magic damage. They also take @PercentDamageReduction@% reduced damage from enemies with more than @HPThreshold@ HP.<br><br><expandRow>(@MinUnits@) @PercentBonusDamage@% magic damage</expandRow>`,
+		desc: `Scalescorns take @PercentDamageReduction@% reduced damage from enemies with more than @HPThreshold@ HP. If you don't have a Dragon on your team, they also deal a percent of their damage as additional magic damage.<br><br><expandRow>(@MinUnits@) @PercentBonusDamage@% magic damage</expandRow>`,
 		effects: [
 			{
 				maxUnits: 3,
@@ -780,8 +799,8 @@ export const traits: TraitData[] = [
 				style: 1,
 				variables: {
 					'HPThreshold': 2200,
-					'{bdd452e8}': 25,
-					'{cb6b5298}': 30,
+					'{bdd452e8}': 20,
+					'{cb6b5298}': 15,
 				},
 			},
 			{
@@ -790,8 +809,8 @@ export const traits: TraitData[] = [
 				style: 3,
 				variables: {
 					'HPThreshold': 2200,
-					'{bdd452e8}': 25,
-					'{cb6b5298}': 60,
+					'{bdd452e8}': 20,
+					'{cb6b5298}': 50,
 				},
 			},
 			{
@@ -800,8 +819,8 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'HPThreshold': 2200,
-					'{bdd452e8}': 25,
-					'{cb6b5298}': 100,
+					'{bdd452e8}': 20,
+					'{cb6b5298}': 115,
 				},
 			},
 		],
@@ -825,7 +844,7 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 2,
 				variables: {
-					'HPPercent': 75,
+					'HPPercent': 90,
 				},
 			},
 			{
@@ -833,7 +852,7 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 3,
 				variables: {
-					'HPPercent': 100,
+					'HPPercent': 145,
 				},
 			},
 		],
@@ -842,7 +861,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Set7_Shimmerscale`,
-		desc: `Grant exclusive random Shimmerscale items.<br><br><row>(@MinUnits@) @NumItems@ unique item</row><br><row>(@MinUnits@) @NumItems@ unique items</row><br><row>(@MinUnits@) @NumItems@ unique items</row><br><row>(@MinUnits@) @NumItems@ unique items, which includes Crown of Champions</row>`,
+		desc: `Grant exclusive random Shimmerscale items.<br><br><row>(@MinUnits@) @NumItems@ unique item</row><br><row>(@MinUnits@) @NumItems@ unique items</row><br><row>(@MinUnits@) @NumItems@ unique items</row><br><row>(@MinUnits@) @NumItems@ unique items, which includes Crown of Champions</row><br><br><tftitemrules>You can remove Shimmerscale items by benching the holder.</tftitemrules>`,
 		effects: [
 			{
 				maxUnits: 4,
@@ -865,7 +884,7 @@ export const traits: TraitData[] = [
 				minUnits: 7,
 				style: 3,
 				variables: {
-					'NumItems': 3,
+					'NumItems': 4,
 				},
 			},
 			{
@@ -882,15 +901,13 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Set7_SpellThief`,
-		desc: `(@MinUnits@) Nab a new Ability after each cast and at the start of every round.`,
+		desc: `(@MinUnits@) Zoe nabs a new Ability after each cast and at the start of every round.`,
 		effects: [
 			{
 				maxUnits: 25000,
 				minUnits: 1,
 				style: 3,
-				variables: {
-					'TestKey': 420,
-				},
+				variables: {},
 			},
 		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_7_SpellThief.tex`,
@@ -913,7 +930,7 @@ export const traits: TraitData[] = [
 					'{56034ed0}': 75,
 					'{9b24c7a2}': 2,
 					'{f305b0e7}': 3,
-					'{fa4f482e}': 15,
+					'{fa4f482e}': 20,
 					'{fd44bf8b}': 30,
 				},
 			},
@@ -930,7 +947,7 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
-					'BonusAS': 12,
+					'BonusAS': 10,
 				},
 			},
 			{
@@ -938,7 +955,7 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 3,
 				variables: {
-					'BonusAS': 25,
+					'BonusAS': 20,
 				},
 			},
 			{
@@ -955,18 +972,18 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Set7_Tempest`,
-		desc: `After @DelayTime@ seconds, lightning strikes the battlefield. Enemies are stunned for @StunDuration@ second and take a percent of their maximum HP as true damage. Tempest champions gain Attack Speed.<br><br><expandRow>(@MinUnits@) @PercentHPDamage@% damage, @AS*100@% Attack Speed</expandRow>`,
+		desc: `After @DelayTime@ seconds, lightning strikes the battlefield. Enemies are stunned for @StunDuration@ second and take a percent of their maximum HP as true damage. Then, Tempest champions gain Attack Speed.<br><br><expandRow>(@MinUnits@) @PercentHPDamage@% damage, @AS*100@% Attack Speed</expandRow>`,
 		effects: [
 			{
 				maxUnits: 3,
 				minUnits: 2,
 				style: 1,
 				variables: {
-					'AS': 0.25,
+					'AS': 0.20000000298023224,
 					'BuffDuration': 60,
-					'PercentHPDamage': 8,
+					'PercentHPDamage': 5,
 					'StunDuration': 1,
-					'{17f82fb1}': 9,
+					'{17f82fb1}': 8,
 					'{81ce23cf}': 1,
 				},
 			},
@@ -977,9 +994,9 @@ export const traits: TraitData[] = [
 				variables: {
 					'AS': 0.5,
 					'BuffDuration': 60,
-					'PercentHPDamage': 18,
+					'PercentHPDamage': 20,
 					'StunDuration': 1,
-					'{17f82fb1}': 9,
+					'{17f82fb1}': 8,
 					'{81ce23cf}': 2,
 				},
 			},
@@ -988,11 +1005,11 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 3,
 				variables: {
-					'AS': 0.800000011920929,
+					'AS': 1.2000000476837158,
 					'BuffDuration': 60,
-					'PercentHPDamage': 25,
+					'PercentHPDamage': 35,
 					'StunDuration': 1,
-					'{17f82fb1}': 9,
+					'{17f82fb1}': 8,
 					'{81ce23cf}': 3,
 				},
 			},
@@ -1001,11 +1018,11 @@ export const traits: TraitData[] = [
 				minUnits: 8,
 				style: 4,
 				variables: {
-					'AS': 1.5,
+					'AS': 2.5,
 					'BuffDuration': 60,
-					'PercentHPDamage': 40,
+					'PercentHPDamage': 50,
 					'StunDuration': 1,
-					'{17f82fb1}': 9,
+					'{17f82fb1}': 8,
 					'{81ce23cf}': 4,
 				},
 			},
@@ -1015,7 +1032,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Set7_Trainer`,
-		desc: `Every round, each Trainer feeds 1 Snax per star level to Nomsy, adding HP and Ability Power. Nomsy's star level increases every 25 Snax!<br><br><row>(@MinUnits@) Summon Nomsy!</row><br><row>(@MinUnits@) Nomsy's Ability deals 100% more damage</row>`,
+		desc: `After combat, each Trainer feeds 1 Snax per star level to Nomsy, adding HP and Ability Power. Nomsy's star level increases every 25 Snax!<br><br><row>(@MinUnits@) Summon Nomsy!</row><br><row>(@MinUnits@) Nomsy's Ability deals @DamageInc*100@% more damage</row>`,
 		effects: [
 			{
 				maxUnits: 2,
@@ -1023,6 +1040,7 @@ export const traits: TraitData[] = [
 				style: 1,
 				variables: {
 					'{a848d452}': 1,
+					'{cc4e6814}': null,
 				},
 			},
 			{
@@ -1031,6 +1049,7 @@ export const traits: TraitData[] = [
 				style: 3,
 				variables: {
 					'{a848d452}': 2,
+					'{cc4e6814}': 2,
 				},
 			},
 		],
@@ -1046,8 +1065,8 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
-					'PercentDamage': 180,
-					'ProcChance': 25,
+					'PercentDamage': 80,
+					'ProcChance': 50,
 				},
 			},
 			{
@@ -1055,8 +1074,8 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 3,
 				variables: {
-					'PercentDamage': 275,
-					'ProcChance': 25,
+					'PercentDamage': 175,
+					'ProcChance': 50,
 				},
 			},
 			{
@@ -1064,8 +1083,8 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 4,
 				variables: {
-					'PercentDamage': 400,
-					'ProcChance': 25,
+					'PercentDamage': 325,
+					'ProcChance': 50,
 				},
 			},
 		],
@@ -1082,7 +1101,7 @@ export const traits: TraitData[] = [
 				style: 1,
 				variables: {
 					'Duration': 6,
-					'{08a84200}': 3,
+					'{08a84200}': 1,
 				},
 			},
 			{
@@ -1091,7 +1110,7 @@ export const traits: TraitData[] = [
 				style: 2,
 				variables: {
 					'Duration': 6,
-					'{08a84200}': 6,
+					'{08a84200}': 3,
 				},
 			},
 			{
@@ -1100,7 +1119,7 @@ export const traits: TraitData[] = [
 				style: 3,
 				variables: {
 					'Duration': 6,
-					'{08a84200}': 9,
+					'{08a84200}': 5,
 				},
 			},
 			{
@@ -1109,7 +1128,7 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'Duration': 6,
-					'{08a84200}': 15,
+					'{08a84200}': 8,
 				},
 			},
 		],

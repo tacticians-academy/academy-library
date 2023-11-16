@@ -200,7 +200,7 @@
 					"mName": "PercentSharedDamage",
 					"mValues": [
 						0.15000000596046448,
-						0.15000000596046448,
+						0.30000001192092896,
 						0.30000001192092896,
 						5,
 						0.3499999940395355,
@@ -213,9 +213,9 @@
 					"mName": "AreaDuration",
 					"mValues": [
 						4,
-						3,
-						4,
-						8,
+						5,
+						5,
+						10,
 						4,
 						4,
 						4
@@ -320,6 +320,7 @@
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
+			"arBase": 75,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
@@ -374,7 +375,7 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 30,
+		"mInitialMana": 15,
 		"{22f5197d}": 180,
 		"__type": "TFTCharacterRecord"
 	}

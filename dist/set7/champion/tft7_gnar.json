@@ -276,9 +276,9 @@
 					"mName": "AttackDamage",
 					"mValues": [
 						0,
-						30,
 						50,
 						80,
+						150,
 						0,
 						0,
 						0
@@ -290,9 +290,9 @@
 					"mName": "Armor",
 					"mValues": [
 						0,
-						30,
 						40,
-						60,
+						50,
+						75,
 						0,
 						0,
 						0
@@ -383,7 +383,7 @@
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
 		"mCharacterName": "TFT7_Gnar",
-		"baseHP": 650,
+		"baseHP": 700,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
@@ -392,7 +392,7 @@
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 40,
+		"baseDamage": 50,
 		"baseArmor": 40,
 		"baseSpellBlock": 40,
 		"baseCritChance": 0.25,

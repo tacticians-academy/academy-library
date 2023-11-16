@@ -493,8 +493,8 @@
 					"mName": "BaseDamage",
 					"mValues": [
 						0,
-						75,
-						111,
+						80,
+						120,
 						240,
 						0,
 						0,
@@ -1207,7 +1207,7 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 40,
+		"mInitialMana": 60,
 		"{22f5197d}": 190,
 		"__type": "TFTCharacterRecord"
 	}

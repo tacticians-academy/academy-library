@@ -79,7 +79,6 @@
 			"mMissileSpec": {
 				"mMissileWidth": 40,
 				"movementComponent": {
-					"mProjectTargetToCastRange": true,
 					"mAcceleration": 1000,
 					"mMaxSpeed": 5000,
 					"mUseHeightOffsetAtEnd": true,
@@ -306,15 +305,16 @@
 				{
 					"mName": "PercentAttackDamage",
 					"mValues": [
-						1,
-						1,
-						1,
-						1,
-						1,
-						1,
-						1
+						0.5,
+						0.5,
+						0.699999988079071,
+						2,
+						0.5,
+						0.5,
+						0.5
 					],
-					"mBaseP": 1,
+					"{3f95426c}": false,
+					"mBaseP": 0.5,
 					"mFormula": "P",
 					"__type": "SpellDataValue"
 				},
@@ -337,9 +337,9 @@
 					"mName": "MagicDamage",
 					"mValues": [
 						50,
-						200,
-						300,
-						800,
+						90,
+						140,
+						600,
 						150,
 						175,
 						200
@@ -353,9 +353,9 @@
 					"mName": "BigPercentAttackDamage",
 					"mValues": [
 						0,
-						2,
-						2.0999999046325684,
-						2.5,
+						1.5499999523162842,
+						1.850000023841858,
+						4,
 						0,
 						0,
 						0
@@ -473,24 +473,25 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
+		"mInitialMana": 20,
 		"mCharacterName": "TFT7_Corki",
 		"baseHP": 750,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 60,
+			"arBase": 80,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 60,
+		"baseDamage": 75,
 		"baseArmor": 30,
 		"baseSpellBlock": 30,
 		"baseCritChance": 0.25,
 		"critDamageMultiplier": 1.2999999523162842,
 		"baseMoveSpeed": 500,
 		"attackRange": 890,
-		"attackSpeed": 0.75,
+		"attackSpeed": 0.699999988079071,
 		"basicAttack": {
 			"mAttackProbability": 0.5,
 			"mAttackName": "TFT7_CorkiBasicAttack",

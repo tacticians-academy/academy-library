@@ -1661,7 +1661,7 @@ export const hexbuffItems: ItemData[] = [
 	},
 ]
 
-export const mercenaryDiceItems: ItemData[] = [
+export const modItems: ItemData[] = [
 	{
 		desc: `tft_item_description_Mercenary_Dice`,
 		effects: {},

@@ -135,7 +135,7 @@
 						125,
 						300,
 						450,
-						999,
+						2000,
 						625,
 						750,
 						875
@@ -289,7 +289,6 @@
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 110,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"

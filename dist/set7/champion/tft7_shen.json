@@ -8,24 +8,29 @@
 					"mName": "ZoneDuration",
 					"mValues": [
 						2,
+						2.5,
 						3,
 						4,
-						5,
 						6,
 						7,
 						8
 					],
+					"{3f95426c}": false,
 					"mBaseP": 2,
 					"mFormula": "P + 1",
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "IfZoneDurChangesCheckLUA",
 					"__type": "SpellDataValue"
 				},
 				{
 					"mName": "MagicResist",
 					"mValues": [
 						0,
-						30,
-						40,
-						60,
+						50,
+						75,
+						100,
 						60,
 						75,
 						90
@@ -131,19 +136,19 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 45,
+		"mInitialMana": 60,
 		"mCharacterName": "TFT7_Shen",
 		"baseHP": 800,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 90,
+			"arBase": 105,
 			"arBaseStaticRegen": 0,
 			"arIncrements": 15,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 50,
+		"baseDamage": 60,
 		"baseArmor": 45,
 		"baseSpellBlock": 45,
 		"baseCritChance": 0.25,

@@ -126,9 +126,6 @@
 				2000,
 				2000
 			],
-			"mTargetingTypeData": {
-				"__type": "Location"
-			},
 			"__type": "SpellDataResource"
 		},
 		"__type": "SpellObject"

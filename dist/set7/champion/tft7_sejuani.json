@@ -18,7 +18,7 @@
 		"mMoveHeight": 0,
 		"mInitialMana": 50,
 		"mCharacterName": "TFT7_Sejuani",
-		"baseHP": 600,
+		"baseHP": 650,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
@@ -27,7 +27,7 @@
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 50,
+		"baseDamage": 60,
 		"baseArmor": 40,
 		"baseSpellBlock": 40,
 		"baseCritChance": 0.25,
@@ -147,15 +147,15 @@
 				{
 					"mName": "FractionMaxHealth",
 					"mValues": [
-						0.05000000074505806,
-						0.05000000074505806,
-						0.05000000074505806,
-						0.05000000074505806,
-						0.05000000074505806,
-						0.05000000074505806,
-						0.05000000074505806
+						0.05999999865889549,
+						0.05999999865889549,
+						0.05999999865889549,
+						0.05999999865889549,
+						0.05999999865889549,
+						0.05999999865889549,
+						0.05999999865889549
 					],
-					"mBaseP": 0.05000000074505806,
+					"mBaseP": 0.05999999865889549,
 					"__type": "SpellDataValue"
 				},
 				{

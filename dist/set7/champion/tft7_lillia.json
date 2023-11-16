@@ -8,9 +8,9 @@
 					"mName": "MagicDamage",
 					"mValues": [
 						0,
-						180,
+						215,
 						275,
-						400,
+						350,
 						0,
 						0,
 						0
@@ -22,9 +22,9 @@
 					"mName": "CenterBonusMagicDamage",
 					"mValues": [
 						0,
-						180,
-						275,
-						400,
+						190,
+						240,
+						320,
 						0,
 						0,
 						0
@@ -192,23 +192,23 @@
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
 		"mCharacterName": "TFT7_Lillia",
-		"baseHP": 700,
+		"baseHP": 750,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 60,
+			"arBase": 50,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 50,
+		"baseDamage": 40,
 		"baseArmor": 40,
 		"baseSpellBlock": 40,
 		"baseCritChance": 0.25,
 		"critDamageMultiplier": 1.2999999523162842,
 		"baseMoveSpeed": 500,
 		"attackRange": 180,
-		"attackSpeed": 0.6499999761581421,
+		"attackSpeed": 0.699999988079071,
 		"basicAttack": {
 			"mAttackProbability": 1,
 			"mAttackName": "TFT7_LilliaBasicAttack1",

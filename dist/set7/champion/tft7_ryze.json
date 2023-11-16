@@ -298,9 +298,9 @@
 					"mName": "PercentMana",
 					"mValues": [
 						0,
-						200,
-						300,
-						500,
+						180,
+						260,
+						420,
 						0,
 						0,
 						0
@@ -447,7 +447,7 @@
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
 		"mCharacterName": "TFT7_Ryze",
-		"baseHP": 650,
+		"baseHP": 600,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
@@ -463,7 +463,7 @@
 		"critDamageMultiplier": 1.2999999523162842,
 		"baseMoveSpeed": 500,
 		"attackRange": 890,
-		"attackSpeed": 0.6499999761581421,
+		"attackSpeed": 0.699999988079071,
 		"basicAttack": {
 			"mAttackProbability": 0.5,
 			"mAttackName": "TFT7_RyzeBasicAttack",

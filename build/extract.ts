@@ -1,6 +1,6 @@
 import type { SetNumber } from '../dist/index.js'
 
-const LOAD_SET: SetNumber = 9.5
+const LOAD_SET: SetNumber = 10
 
 import fetch from 'node-fetch'
 import fs from 'fs/promises'

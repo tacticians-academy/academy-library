@@ -96,8 +96,8 @@
 					"mName": "PercentHealthSteal",
 					"mValues": [
 						0.10000000149011612,
-						0.05000000074505806,
-						0.05000000074505806,
+						0.03999999910593033,
+						0.03999999910593033,
 						0.15000000596046448,
 						0.10000000149011612,
 						0.10000000149011612,
@@ -395,8 +395,8 @@
 			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 60,
-		"baseArmor": 50,
-		"baseSpellBlock": 50,
+		"baseArmor": 55,
+		"baseSpellBlock": 55,
 		"baseCritChance": 0.25,
 		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,

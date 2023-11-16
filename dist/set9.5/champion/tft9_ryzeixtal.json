@@ -8,8 +8,8 @@
 					"mName": "ArmorScalar",
 					"mValues": [
 						1.5,
-						1.850000023841858,
-						2.8499999046325684,
+						2,
+						3,
 						15,
 						1.5,
 						1.5,
@@ -21,8 +21,8 @@
 					"mName": "MRScalar",
 					"mValues": [
 						1.5,
-						1.850000023841858,
-						2.8499999046325684,
+						2,
+						3,
 						15,
 						1.5,
 						1.5,
@@ -35,7 +35,7 @@
 					"mValues": [
 						2,
 						2,
-						2,
+						2.5,
 						10,
 						2,
 						2,
@@ -324,7 +324,6 @@
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 120,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
@@ -377,7 +376,7 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 60,
+		"mInitialMana": 30,
 		"{22f5197d}": 180,
 		"__type": "TFTCharacterRecord"
 	}

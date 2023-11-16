@@ -167,9 +167,9 @@
 					"mName": "BonusMagicDamage",
 					"mValues": [
 						0,
-						400,
+						300,
 						500,
-						600,
+						700,
 						0,
 						0,
 						0
@@ -463,7 +463,7 @@
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 45,
+		"baseDamage": 50,
 		"baseArmor": 15,
 		"baseSpellBlock": 15,
 		"baseCritChance": 0.25,

@@ -53,13 +53,14 @@
 					"mName": "ShieldAmount",
 					"mValues": [
 						225,
-						275,
-						325,
-						375,
+						300,
+						360,
+						420,
 						425,
 						475,
 						525
 					],
+					"{3f95426c}": false,
 					"mBaseP": 225,
 					"mFormula": "P+50",
 					"__type": "SpellDataValue"
@@ -216,7 +217,7 @@
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 50,
+		"baseDamage": 55,
 		"baseArmor": 45,
 		"baseSpellBlock": 45,
 		"baseCritChance": 0.25,

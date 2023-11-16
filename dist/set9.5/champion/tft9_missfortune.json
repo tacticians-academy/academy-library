@@ -184,9 +184,9 @@
 					"mName": "MagicDamage",
 					"mValues": [
 						0,
-						225,
-						340,
-						550,
+						240,
+						360,
+						580,
 						0,
 						0,
 						0
@@ -322,7 +322,6 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 10,
 		"{22f5197d}": 155,
 		"__type": "TFTCharacterRecord"
 	}
