@@ -209,7 +209,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Druid`,
-		desc: `<row>(@MinUnits@) Druids regenerate @HealAmount@ health each second.</row>`,
+		desc: `<row>(@MinUnits@) Druids regenerate @HealAmount@ HP each second.</row>`,
 		effects: [
 			{
 				maxUnits: 25000,
@@ -337,7 +337,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Light`,
-		desc: `When a Light Champion dies, all other Light Champions gain Attack Speed and recover @HealAmount@% of the dying champion's maximum health.<br><br><expandRow>(@MinUnits@) +@ASPercent@% Attack Speed</expandRow><br>`,
+		desc: `When a Light Champion dies, all other Light Champions gain Attack Speed and recover @HealAmount@% of the dying champion's maximum HP.<br><br><expandRow>(@MinUnits@) +@ASPercent@% Attack Speed</expandRow><br>`,
 		effects: [
 			{
 				maxUnits: 5,
@@ -417,7 +417,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Mountain`,
-		desc: `<row>(@MinUnits@) At the start of combat, a random ally gains a @ShieldValue@ health Stoneshield.</row>`,
+		desc: `<row>(@MinUnits@) At the start of combat, a random ally gains a @ShieldValue@ HP Stoneshield.</row>`,
 		effects: [
 			{
 				maxUnits: 25000,
@@ -509,7 +509,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Predator`,
-		desc: `<row>(@MinUnits@) Predators instantly kill enemies they damage who are below @HPThreshold@% health.</row>`,
+		desc: `<row>(@MinUnits@) Predators instantly kill enemies they damage who are below @HPThreshold@% HP.</row>`,
 		effects: [
 			{
 				maxUnits: 25000,
@@ -608,7 +608,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Metal`,
-		desc: `Steel Champions gain damage immunity for a few seconds when they are reduced below @HPPercentThreshold@% health.<br><br><expandRow>(@MinUnits@) @ImmunityDuration@ seconds of immunity</expandRow>`,
+		desc: `Steel Champions gain damage immunity for a few seconds when they are reduced below @HPPercentThreshold@% HP.<br><br><expandRow>(@MinUnits@) @ImmunityDuration@ seconds of immunity</expandRow>`,
 		effects: [
 			{
 				maxUnits: 2,
@@ -643,7 +643,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Summoner`,
-		desc: `Summoned units gain bonus health and last longer.<br><br><expandRow>(@MinUnits@) +@SummonDurationBoost@% health and summon duration</expandRow>`,
+		desc: `Summoned units gain bonus HP and last longer.<br><br><expandRow>(@MinUnits@) +@SummonDurationBoost@% HP and summon duration</expandRow>`,
 		effects: [
 			{
 				maxUnits: 5,

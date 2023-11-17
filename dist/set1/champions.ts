@@ -1,5 +1,6 @@
-import { ChampionKey } from '../index.js'
 import type { ChampionData } from '../index'
+
+export enum ChampionKey { Aatrox = `TFT_Aatrox`, Ahri = `TFT_Ahri`, Akali = `TFT_Akali`, Anivia = `TFT_Anivia`, Ashe = `TFT_Ashe`, AurelionSol = `TFT_AurelionSol`, Blitzcrank = `TFT_Blitzcrank`, Brand = `TFT_Brand`, Braum = `TFT_Braum`, Camille = `TFT_Camille`, ChoGath = `TFT_ChoGath`, Darius = `TFT_Darius`, Draven = `TFT_Draven`, Elise = `TFT_Elise`, Evelynn = `TFT_Evelynn`, Fiora = `TFT_Fiora`, Gangplank = `TFT_Gangplank`, Garen = `TFT_Garen`, Gnar = `TFT_Gnar`, Graves = `TFT_Graves`, Jayce = `TFT_Jayce`, Jinx = `TFT_Jinx`, KaiSa = `TFT_KaiSa`, Karthus = `TFT_Karthus`, Kassadin = `TFT_Kassadin`, Katarina = `TFT_Katarina`, Kayle = `TFT_Kayle`, Kennen = `TFT_Kennen`, KhaZix = `TFT_KhaZix`, Kindred = `TFT_Kindred`, Leona = `TFT_Leona`, Lissandra = `TFT_Lissandra`, Lucian = `TFT_Lucian`, Lulu = `TFT_Lulu`, MissFortune = `TFT_MissFortune`, Mordekaiser = `TFT_Mordekaiser`, Morgana = `TFT_Morgana`, Nidalee = `TFT_Nidalee`, Pantheon = `TFT_Pantheon`, Poppy = `TFT_Poppy`, Pyke = `TFT_Pyke`, RekSai = `TFT_RekSai`, Rengar = `TFT_Rengar`, Sejuani = `TFT_Sejuani`, Shen = `TFT_Shen`, Shyvana = `TFT_Shyvana`, Swain = `TFT_Swain`, Tristana = `TFT_Tristana`, TwistedFate = `TFT_TwistedFate`, Varus = `TFT_Varus`, Vayne = `TFT_Vayne`, Veigar = `TFT_Veigar`, Vi = `TFT_Vi`, Volibear = `TFT_Volibear`, Warwick = `TFT_Warwick`, Yasuo = `TFT_Yasuo`, Zed = `TFT_Zed` }
 
 export const champions: ChampionData[] = [
 	{
@@ -151,24 +152,8 @@ export const champions: ChampionData[] = [
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
-			{
-				name: `TFT_AhriOrbMissile`,
-				castTime: undefined,
-				missile: {
-					width: 100,
-					travelTime: undefined,
-					speedInitial: 2500,
-					speedMin: 400,
-					speedMax: 2500,
-					acceleration: -3200,
-					startDelay: undefined,
-					tracksTarget: false,
-				},
-				variables: {},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
+		],
+		missiles: [
 			{
 				name: `TFT_AhriOrbReturn`,
 				castTime: undefined,
@@ -181,6 +166,24 @@ export const champions: ChampionData[] = [
 					acceleration: 1900,
 					startDelay: undefined,
 					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
+			},
+			{
+				name: `TFT_AhriOrbMissile`,
+				castTime: undefined,
+				missile: {
+					width: 100,
+					travelTime: undefined,
+					speedInitial: 2500,
+					speedMin: 400,
+					speedMax: 2500,
+					acceleration: -3200,
+					startDelay: undefined,
+					tracksTarget: false,
 				},
 				variables: {},
 				calculations: {},
@@ -206,7 +209,6 @@ export const champions: ChampionData[] = [
 				uninterruptable: true,
 			},
 		],
-		missiles: [],
 	},
 	{
 		apiName: `TFT_Akali`,
@@ -704,6 +706,8 @@ export const champions: ChampionData[] = [
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
+		],
+		missiles: [
 			{
 				name: `TFT_BlitzcrankPowerFist`,
 				castTime: undefined,
@@ -723,7 +727,6 @@ export const champions: ChampionData[] = [
 				uninterruptable: true,
 			},
 		],
-		missiles: [],
 	},
 	{
 		apiName: `TFT_Brand`,
@@ -827,6 +830,8 @@ export const champions: ChampionData[] = [
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
+		],
+		missiles: [
 			{
 				name: `TFT_BrandRMissile`,
 				castTime: undefined,
@@ -847,7 +852,6 @@ export const champions: ChampionData[] = [
 				uninterruptable: true,
 			},
 		],
-		missiles: [],
 	},
 	{
 		apiName: `TFT_Braum`,
@@ -887,6 +891,8 @@ export const champions: ChampionData[] = [
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
+		],
+		missiles: [
 			{
 				name: `TFT_BraumBasicAttackShieldOverride`,
 				castTime: undefined,
@@ -906,7 +912,6 @@ export const champions: ChampionData[] = [
 				uninterruptable: undefined,
 			},
 		],
-		missiles: [],
 	},
 	{
 		apiName: `TFT_Camille`,
@@ -1194,42 +1199,6 @@ export const champions: ChampionData[] = [
 				uninterruptable: true,
 			},
 			{
-				name: `TFT_DravenSpinningAttack`,
-				castTime: undefined,
-				missile: {
-					width: undefined,
-					travelTime: undefined,
-					speedInitial: 1700,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: undefined,
-			},
-			{
-				name: `TFT_DravenSpinningReturn`,
-				castTime: undefined,
-				missile: {
-					width: 120,
-					travelTime: 1.2000000476837158,
-					speedInitial: 700,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: undefined,
-			},
-			{
 				name: `TFT_DravenSpinningAttackCrit`,
 				castTime: 0.23330000042915344,
 				missile: {
@@ -1340,6 +1309,24 @@ export const champions: ChampionData[] = [
 				uninterruptable: undefined,
 			},
 			{
+				name: `TFT_DravenSpinningAttack`,
+				castTime: undefined,
+				missile: {
+					width: undefined,
+					travelTime: undefined,
+					speedInitial: 1700,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+			{
 				name: `TFT_DravenSpinningAttack2Crit`,
 				castTime: 0.23330000042915344,
 				missile: {
@@ -1400,6 +1387,24 @@ export const champions: ChampionData[] = [
 					width: undefined,
 					travelTime: undefined,
 					speedInitial: 1600,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+			{
+				name: `TFT_DravenSpinningReturn`,
+				castTime: undefined,
+				missile: {
+					width: 120,
+					travelTime: 1.2000000476837158,
+					speedInitial: 700,
 					speedMin: undefined,
 					speedMax: undefined,
 					acceleration: undefined,
@@ -1549,7 +1554,7 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `product`,
 								subparts: [
 									{
 										variable: `Damage`,
@@ -1681,6 +1686,8 @@ export const champions: ChampionData[] = [
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
+		],
+		missiles: [
 			{
 				name: `TFT_FioraWMissile`,
 				castTime: undefined,
@@ -1700,7 +1707,6 @@ export const champions: ChampionData[] = [
 				uninterruptable: undefined,
 			},
 		],
-		missiles: [],
 	},
 	{
 		apiName: `TFT_Gangplank`,
@@ -1756,6 +1762,19 @@ export const champions: ChampionData[] = [
 				cantCastWhileRooted: undefined,
 				uninterruptable: undefined,
 			},
+		],
+		missiles: [
+			{
+				name: `TFT_GangplankSpell1`,
+				castTime: 0.25,
+				missile: undefined,
+				variables: {
+					'Damage': [75, 200, 325, 450],
+				},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
+			},
 			{
 				name: `TFT_GangplankQMis`,
 				castTime: undefined,
@@ -1775,6 +1794,15 @@ export const champions: ChampionData[] = [
 				uninterruptable: undefined,
 			},
 			{
+				name: `TFT_GangplankBasicAttack2`,
+				castTime: undefined,
+				missile: undefined,
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+			{
 				name: `TFT_GangplankQFuseMis`,
 				castTime: undefined,
 				missile: {
@@ -1787,28 +1815,6 @@ export const champions: ChampionData[] = [
 					startDelay: undefined,
 					tracksTarget: true,
 				},
-				variables: {},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: undefined,
-			},
-		],
-		missiles: [
-			{
-				name: `TFT_GangplankSpell1`,
-				castTime: 0.25,
-				missile: undefined,
-				variables: {
-					'Damage': [75, 200, 325, 450],
-				},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-			{
-				name: `TFT_GangplankBasicAttack2`,
-				castTime: undefined,
-				missile: undefined,
 				variables: {},
 				calculations: {},
 				cantCastWhileRooted: undefined,
@@ -1865,7 +1871,7 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `product`,
 								subparts: [
 									{
 										variable: `{c30c4324}`,
@@ -2204,8 +2210,10 @@ export const champions: ChampionData[] = [
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
+		],
+		missiles: [
 			{
-				name: `TFT_JayceRangedAttack`,
+				name: `TFT_JayceRangedAttack2`,
 				castTime: undefined,
 				missile: {
 					width: undefined,
@@ -2223,7 +2231,7 @@ export const champions: ChampionData[] = [
 				uninterruptable: undefined,
 			},
 			{
-				name: `TFT_JayceRangedAttack2`,
+				name: `TFT_JayceRangedAttack`,
 				castTime: undefined,
 				missile: {
 					width: undefined,
@@ -2259,7 +2267,6 @@ export const champions: ChampionData[] = [
 				uninterruptable: undefined,
 			},
 		],
-		missiles: [],
 	},
 	{
 		apiName: `TFT_Jinx`,
@@ -2553,8 +2560,10 @@ export const champions: ChampionData[] = [
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
+		],
+		missiles: [
 			{
-				name: `TFT_KarthusFallenOneExtra`,
+				name: `TFT_KarthusFallenOneExtra2`,
 				castTime: undefined,
 				missile: {
 					width: undefined,
@@ -2571,10 +2580,8 @@ export const champions: ChampionData[] = [
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
-		],
-		missiles: [
 			{
-				name: `TFT_KarthusFallenOneExtra2`,
+				name: `TFT_KarthusFallenOneExtra`,
 				castTime: undefined,
 				missile: {
 					width: undefined,
@@ -2737,6 +2744,8 @@ export const champions: ChampionData[] = [
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
+		],
+		missiles: [
 			{
 				name: `TFT_KatarinaRMis`,
 				castTime: undefined,
@@ -2792,7 +2801,6 @@ export const champions: ChampionData[] = [
 				uninterruptable: true,
 			},
 		],
-		missiles: [],
 	},
 	{
 		apiName: `TFT_Kayle`,
@@ -3210,6 +3218,8 @@ export const champions: ChampionData[] = [
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
+		],
+		missiles: [
 			{
 				name: `TFT_LissandraREnemy`,
 				castTime: undefined,
@@ -3228,8 +3238,6 @@ export const champions: ChampionData[] = [
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
-		],
-		missiles: [
 			{
 				name: `TFT_LissandraRDamage`,
 				castTime: undefined,
@@ -3323,8 +3331,10 @@ export const champions: ChampionData[] = [
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
+		],
+		missiles: [
 			{
-				name: `TFT_LucianBasicAttack`,
+				name: `TFT_LucianPassiveAttack`,
 				castTime: undefined,
 				missile: {
 					width: undefined,
@@ -3339,43 +3349,7 @@ export const champions: ChampionData[] = [
 				variables: {},
 				calculations: {},
 				cantCastWhileRooted: undefined,
-				uninterruptable: undefined,
-			},
-			{
-				name: `TFT_LucianBasicAttack2`,
-				castTime: undefined,
-				missile: {
-					width: undefined,
-					travelTime: undefined,
-					speedInitial: 2800,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: undefined,
-			},
-			{
-				name: `TFT_LucianCritAttack`,
-				castTime: undefined,
-				missile: {
-					width: undefined,
-					travelTime: undefined,
-					speedInitial: 2800,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: undefined,
+				uninterruptable: true,
 			},
 			{
 				name: `TFT_LucianPassiveShot`,
@@ -3395,26 +3369,7 @@ export const champions: ChampionData[] = [
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
-			{
-				name: `TFT_LucianPassiveAttack`,
-				castTime: undefined,
-				missile: {
-					width: undefined,
-					travelTime: undefined,
-					speedInitial: 2800,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
 		],
-		missiles: [],
 	},
 	{
 		apiName: `TFT_Lulu`,
@@ -3569,6 +3524,8 @@ export const champions: ChampionData[] = [
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
+		],
+		missiles: [
 			{
 				name: `TFT_MissFortuneBulletEMPTY`,
 				castTime: undefined,
@@ -3588,7 +3545,6 @@ export const champions: ChampionData[] = [
 				uninterruptable: undefined,
 			},
 		],
-		missiles: [],
 	},
 	{
 		apiName: `TFT_Mordekaiser`,
@@ -4119,6 +4075,8 @@ export const champions: ChampionData[] = [
 				cantCastWhileRooted: true,
 				uninterruptable: true,
 			},
+		],
+		missiles: [
 			{
 				name: `TFT_PykeEMissile`,
 				castTime: undefined,
@@ -4138,7 +4096,6 @@ export const champions: ChampionData[] = [
 				uninterruptable: undefined,
 			},
 		],
-		missiles: [],
 	},
 	{
 		apiName: `TFT_RekSai`,
@@ -4533,15 +4490,14 @@ export const champions: ChampionData[] = [
 		basicAttackMissileSpeed: 467,
 		critAttackMissileSpeed: 467,
 		passive: undefined,
-		spells: [],
-		missiles: [
+		spells: [
 			{
-				name: `TFT_ShyvanaTransform`,
-				castTime: undefined,
+				name: `TFT_ShyvanaTransformLeap`,
+				castTime: 0.25,
 				missile: {
 					width: undefined,
 					travelTime: undefined,
-					speedInitial: 779.9000244140625,
+					speedInitial: 700,
 					speedMin: undefined,
 					speedMax: undefined,
 					acceleration: undefined,
@@ -4553,13 +4509,15 @@ export const champions: ChampionData[] = [
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
+		],
+		missiles: [
 			{
-				name: `TFT_ShyvanaTransformLeap`,
-				castTime: 0.25,
+				name: `TFT_ShyvanaTransform`,
+				castTime: undefined,
 				missile: {
 					width: undefined,
 					travelTime: undefined,
-					speedInitial: 700,
+					speedInitial: 779.9000244140625,
 					speedMin: undefined,
 					speedMax: undefined,
 					acceleration: undefined,
@@ -4932,26 +4890,10 @@ export const champions: ChampionData[] = [
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
+		],
+		missiles: [
 			{
-				name: `TFT_TwistedFateBlueCardAttack`,
-				castTime: undefined,
-				missile: {
-					width: undefined,
-					travelTime: undefined,
-					speedInitial: 1500,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-			{
-				name: `TFT_TwistedFateRedCardAttack`,
+				name: `TFT_TwistedFateGoldCardPreAttack`,
 				castTime: undefined,
 				missile: {
 					width: undefined,
@@ -4987,7 +4929,43 @@ export const champions: ChampionData[] = [
 				uninterruptable: true,
 			},
 			{
+				name: `TFT_TwistedFateBlueCardAttack`,
+				castTime: undefined,
+				missile: {
+					width: undefined,
+					travelTime: undefined,
+					speedInitial: 1500,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
+			},
+			{
 				name: `TFT_TwistedFateBlueCardPreAttack`,
+				castTime: undefined,
+				missile: {
+					width: undefined,
+					travelTime: undefined,
+					speedInitial: 1500,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
+			},
+			{
+				name: `TFT_TwistedFateRedCardAttack`,
 				castTime: undefined,
 				missile: {
 					width: undefined,
@@ -5022,26 +5000,7 @@ export const champions: ChampionData[] = [
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
-			{
-				name: `TFT_TwistedFateGoldCardPreAttack`,
-				castTime: undefined,
-				missile: {
-					width: undefined,
-					travelTime: undefined,
-					speedInitial: 1500,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
 		],
-		missiles: [],
 	},
 	{
 		apiName: `TFT_Varus`,
@@ -5452,8 +5411,7 @@ export const champions: ChampionData[] = [
 		basicAttackMissileSpeed: 347.79998779296875,
 		critAttackMissileSpeed: 347.79998779296875,
 		passive: undefined,
-		spells: [],
-		missiles: [
+		spells: [
 			{
 				name: `TFT_WarwickRChannel`,
 				castTime: 0.0010000000474974513,
@@ -5472,6 +5430,8 @@ export const champions: ChampionData[] = [
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
+		],
+		missiles: [
 			{
 				name: `TFT_WarwickR`,
 				castTime: 0.10000000149011612,
@@ -5714,6 +5674,8 @@ export const champions: ChampionData[] = [
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
+		],
+		missiles: [
 			{
 				name: `TFT_ZedQMissile`,
 				castTime: undefined,
@@ -5733,6 +5695,5 @@ export const champions: ChampionData[] = [
 				uninterruptable: undefined,
 			},
 		],
-		missiles: [],
 	},
 ]

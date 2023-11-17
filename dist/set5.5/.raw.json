@@ -1,6 +1,7 @@
 {
 	"items": [
 		{
+			"apiName": "TFT5_Item_ShroudOfStillnessRadiant",
 			"desc": "When combat begins, the holder shoots a <TFTRadiantItemBonus>wider beam</TFTRadiantItemBonus> straight ahead that delays affected enemies' first spellcast, increasing their max Mana by <TFTRadiantItemBonus>@CostIncrease@%</TFTRadiantItemBonus> until they cast.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@AllyBonusMana@ Starting Mana for all allies</TFTRadiantItemBonus> at the start of combat.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"Armor": 20,
@@ -16,6 +17,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_RunaansHurricaneRadiant",
 			"desc": "The holder's attacks fire a bolt at another nearby enemy, dealing <TFTRadiantItemBonus>@MultiplierForDamage@%</TFTRadiantItemBonus> of the holder's Attack Damage and applying on-hit effects. These bolts can critically strike.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@BonusAS@% Attack Speed.</TFTRadiantItemBonus>",
 			"effects": {
 				"AS": 40,
@@ -31,6 +33,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_LocketOfTheIronSolariRadiant",
 			"desc": "When combat begins, the holder and all allies within <TFTRadiantItemBonus>@HexRange@</TFTRadiantItemBonus> hexes in the same row gain a shield that blocks <TFTRadiantItemBonus>@1StarShieldValue@/@2StarShieldValue@/@3StarShieldValue@</TFTRadiantItemBonus> %i:star% damage for <TFTRadiantItemBonus>@ShieldDuration@</TFTRadiantItemBonus> seconds.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@BonusAllyHealth@ Health for all allies</TFTRadiantItemBonus> at the start of combat.",
 			"effects": {
 				"AP": 10,
@@ -50,6 +53,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_GargoyleStoneplateRadiant",
 			"desc": "The holder gains %i:scaleArmor% <TFTRadiantItemBonus>@ArmorPerEnemy@</TFTRadiantItemBonus> Armor and %i:scaleMR% <TFTRadiantItemBonus>@MRPerEnemy@</TFTRadiantItemBonus> Magic Resist for each enemy targeting them.<br><br><TFTRadiantItemBonus>Radiant Bonus: Regenerate @MaxHealthRegen@% max Health per second.</TFTRadiantItemBonus>",
 			"effects": {
 				"Armor": 20,
@@ -66,6 +70,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_WarmogsArmorRadiant",
 			"desc": "Grants %i:scaleHealth% <TFTRadiantItemBonus>@Health@</TFTRadiantItemBonus> bonus Health (including components).<br><br><TFTRadiantItemBonus>Radiant Bonus: Regenerate @MaxHealthRegen@% max Health per second.</TFTRadiantItemBonus>",
 			"effects": {
 				"Health": 1800,
@@ -79,6 +84,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_JeweledGauntletRadiant",
 			"desc": "The holder's magic and true damage from their Ability can critically strike. The holder gains <TFTRadiantItemBonus>@CritDamageAmp@%</TFTRadiantItemBonus> bonus Critical Strike Damage.",
 			"effects": {
 				"AP": 10,
@@ -92,6 +98,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_TitansResolveRadiant",
 			"desc": "When the holder attacks or takes damage, they gain <TFTRadiantItemBonus>@StackingAD@ Attack Damage and Ability Power</TFTRadiantItemBonus>.<br><br>This stacks up to @StackCap@ times, at which point the holder gains <TFTRadiantItemBonus>@BonusResistsAtStackCap@ Armor and Magic Resist</TFTRadiantItemBonus>.",
 			"effects": {
 				"AS": 10,
@@ -108,6 +115,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_StatikkShivRadiant",
 			"desc": "Every third attack from the holder unleashes a chain lightning that bounces to <TFTRadiantItemBonus>@1StarBounces@</TFTRadiantItemBonus> enemies, dealing <TFTRadiantItemBonus>@Damage@</TFTRadiantItemBonus> magic damage and reducing their Magic Resist by @MRShred@% for @MRShredDuration@ seconds.",
 			"effects": {
 				"AS": 10,
@@ -127,6 +135,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_HandOfJusticeRadiant",
 			"desc": "At the beginning of each planning phase, the holder gains <TFTRadiantItemBonus>both of the following</TFTRadiantItemBonus>:<li>+@BonusAD@ Attack Damage and +@BonusSP@ Ability Power.</li> <li>Attacks and Abilities heal for @TraitMultiplier@% of damage dealt.</li>",
 			"effects": {
 				"BonusAD": 40,
@@ -142,6 +151,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_ChaliceOfPowerRadiant",
 			"desc": "When combat begins, the holder and all allies within @HexRange@ hex in the same row gain %i:scaleAP% <TFTRadiantItemBonus>@BonusAP@</TFTRadiantItemBonus> Ability Power  <TFTRadiantItemBonus>and @Spellvamp@% Spellvamp</TFTRadiantItemBonus> for the rest of combat.",
 			"effects": {
 				"MagicResist": 20,
@@ -157,6 +167,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_LastWhisperRadiant",
 			"desc": "When the holder inflicts a critical hit, the target's Armor is reduced by @ArmorReductionPercent@% for <TFTRadiantItemBonus>the rest of combat.</TFTRadiantItemBonus> This effect does not stack.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@BonusCritChance@% Critical Strike Chance.</TFTRadiantItemBonus><br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"AS": 10,
@@ -172,6 +183,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_BloodthirsterRadiant",
 			"desc": "Physical damage heals the holder for <TFTRadiantItemBonus>@Lifesteal@%</TFTRadiantItemBonus> of the damage dealt. Upon falling below @HealthThreshold@% Health, the holder gains a <TFTRadiantItemBonus>@ShieldHealthPercent@%</TFTRadiantItemBonus> max Health shield that lasts up to @ShieldDuration@ seconds.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@BonusAD@ Attack Damage.</TFTRadiantItemBonus>",
 			"effects": {
 				"AD": 30,
@@ -189,6 +201,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_GuinsoosRagebladeRadiant",
 			"desc": "Attacks grant <TFTRadiantItemBonus>+@AttackSpeedPerStack@%</TFTRadiantItemBonus> bonus Attack Speed for the rest of combat.<br><br>This effect can stack any number of times.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@RadiantBonusAS@% Attack Speed.</TFTRadiantItemBonus>",
 			"effects": {
 				"AP": 10,
@@ -203,6 +216,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_IonicSparkRadiant",
 			"desc": "Enemies within <TFTRadiantItemBonus>@HexRange@</TFTRadiantItemBonus> hexes have their Magic Resist reduced by @MRShred@%. When they cast an Ability, they are zapped taking magic damage equal to <TFTRadiantItemBonus>@ManaRatio@%</TFTRadiantItemBonus> of their max Mana.<br><br><TFTRadiantItemBonus>Radiant Bonus: Regenerate @MaxHealthRegen@% max Health per second.</TFTRadiantItemBonus><br>",
 			"effects": {
 				"AP": 10,
@@ -220,6 +234,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_ArchangelsStaffRadiant",
 			"desc": "Each time the holder casts their Ability, they gain bonus Ability Power equal to <TFTRadiantItemBonus>@ManaRatio@%</TFTRadiantItemBonus> of their maximum Mana (this bonus applies to that Ability cast).<br><br><TFTRadiantItemBonus>Radiant Bonus: +@BonusMana@ Starting Mana.</TFTRadiantItemBonus>",
 			"effects": {
 				"AP": 10,
@@ -234,6 +249,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_ZekesHeraldRadiant",
 			"desc": "When combat begins, the holder and all allies within @HexRange@ hexes in the same row gain %i:scaleAS% <TFTRadiantItemBonus>@AttackSpeed@%</TFTRadiantItemBonus> Attack Speed <TFTRadiantItemBonus>and @Lifesteal@% Lifesteal</TFTRadiantItemBonus> for the rest of combat.",
 			"effects": {
 				"AD": 10,
@@ -249,6 +265,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_GuardianAngelRadiant",
 			"desc": "Prevents the holder's first death, placing them in stasis instead. After @StasisDuration@ seconds, they return with <TFTRadiantItemBonus>@HealthRestorePercent@%</TFTRadiantItemBonus> Health and shed all negative effects.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@AS@% Attack Speed.</TFTRadiantItemBonus><br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"AD": 10,
@@ -265,6 +282,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_HextechGunbladeRadiant",
 			"desc": "The holder's magic and true damage from Abilities heal them for <TFTRadiantItemBonus>@OmniVamp@%</TFTRadiantItemBonus> of the damage dealt. Excess healing fuels a shield that protects the holder against up to @ShieldMax@ damage. <TFTRadiantItemBonus>The holder also heals their lowest health ally for the same amount.</TFTRadiantItemBonus><br><br><TFTRadiantItemBonus>Radiant Bonus: +@BonusAP@ Ability Power.</TFTRadiantItemBonus>",
 			"effects": {
 				"AD": 10,
@@ -280,6 +298,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_MorellonomiconRadiant",
 			"desc": "When the holder deals magic or true damage with their Ability, they burn the target, dealing <TFTRadiantItemBonus>@BurnPercent@%</TFTRadiantItemBonus> of the target's maximum Health as true damage over <TFTRadiantItemBonus>@BurnDuration@</TFTRadiantItemBonus> seconds, and reducing healing by @GrievousWoundsPercent@% for the duration of the burn.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@Mana@ Starting Mana.</TFTRadiantItemBonus><br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"AP": 10,
@@ -298,6 +317,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_BlueBuffRadiant",
 			"desc": "After casting their Ability, the holder gains %i:scaleMana% <TFTRadiantItemBonus>@ManaRestore@</TFTRadiantItemBonus> mana.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@AP@ Ability Power. </TFTRadiantItemBonus><br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"AP": 40,
@@ -311,6 +331,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_GiantSlayerRadiant",
 			"desc": "The holder's Abilities and attacks do <TFTRadiantItemBonus>@SmallBonusPct@%</TFTRadiantItemBonus> bonus damage. If the target has more than <TFTRadiantItemBonus>@HealthThreshold@ maximum Health</TFTRadiantItemBonus>, the bonus increases to <TFTRadiantItemBonus>@LargeBonusPct@%</TFTRadiantItemBonus>.",
 			"effects": {
 				"AD": 10,
@@ -326,6 +347,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_SunfireCapeRadiant",
 			"desc": "Every <TFTRadiantItemBonus>@ICD@</TFTRadiantItemBonus> seconds, a random enemy within <TFTRadiantItemBonus>@HexRange@</TFTRadiantItemBonus> hexes is burned for <TFTRadiantItemBonus>@BurnPercent@% of their maximum Health as true damage over @BurnDuration@ seconds</TFTRadiantItemBonus>. Any healing they receive is reduced by @GrievousWoundsPercent@%.<br><br><TFTRadiantItemBonus>Radiant Bonus: Regenerate @MaxHealthRegen@% max Health per second.</TFTRadiantItemBonus><br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"Armor": 20,
@@ -346,6 +368,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_DeathbladeRadiant",
 			"desc": "Contributing to a kill grants the holder %i:scaleAD% <TFTRadiantItemBonus>@ADPerStack@</TFTRadiantItemBonus> Attack Damage for the rest of combat. This effect can stack any number of times (starting at @StartingStacks@).",
 			"effects": {
 				"AD": 20,
@@ -359,6 +382,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_InfinityEdgeRadiant",
 			"desc": "Grants @CritChance@% Critical Strike Chance (including components) and @BonusCritDamage@% Critical Strike Damage. Each point of Critical Strike Chance above 100% becomes +@BonusCritDmgPerCritAbove100@% Critical Strike Damage.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@RadiantBonusCritDamage@% Critical Strike Damage.</TFTRadiantItemBonus><br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"AD": 10,
@@ -374,6 +398,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_SpearOfShojinRadiant",
 			"desc": "The holder's attacks restore %i:scaleMana% <TFTRadiantItemBonus>@FlatManaRestore@</TFTRadiantItemBonus> additional Mana.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@AP@ Ability Power. </TFTRadiantItemBonus>",
 			"effects": {
 				"AD": 10,
@@ -388,6 +413,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_ZephyrRadiant",
 			"desc": "When combat begins, the wearer summons a whirlwind on the opposite side of the arena that removes the closest enemy from combat for <TFTRadiantItemBonus>@BanishDuration@</TFTRadiantItemBonus> seconds. Ignores CC immunity.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@AllyBonusAS@% Attack Speed for all allies</TFTRadiantItemBonus> at the start of combat.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"Health": 150,
@@ -402,6 +428,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_BrambleVestRadiant",
 			"desc": "Negates bonus damage from incoming critical strikes. On being hit by an attack, deal <TFTRadiantItemBonus>@1StarAoEDamage@/@2StarAoEDamage@/@3StarAoEDamage@</TFTRadiantItemBonus> %i:star% magic damage to all nearby enemies (once every @ICD@ seconds).<br><br><TFTRadiantItemBonus>Radiant Bonus: Regenerate @MaxHealthRegen@% max Health per second.</TFTRadiantItemBonus>",
 			"effects": {
 				"Armor": 40,
@@ -420,6 +447,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_RabadonsDeathcapRadiant",
 			"desc": "Grants %i:scaleAP% <TFTRadiantItemBonus>@AP@</TFTRadiantItemBonus> bonus Ability Power (including components).",
 			"effects": {
 				"AP": 120
@@ -431,6 +459,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_DragonsClawRadiant",
 			"desc": "Grants %i:scaleMR% <TFTRadiantItemBonus>@MagicResist@</TFTRadiantItemBonus> bonus Magic Resist (including components). On being hit by magic or true damage from an Ability, launch a fireball at the Ability's caster that deals magic damage equal to <TFTRadiantItemBonus>@PercentHealthDamage@% of their max Health</TFTRadiantItemBonus> (@ICD@ second cooldown).<br><br><TFTRadiantItemBonus>Radiant Bonus: Regenerate @MaxHealthRegen@% max Health per second.</TFTRadiantItemBonus>",
 			"effects": {
 				"ICD": 1,
@@ -446,6 +475,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_FrozenHeartRadiant",
 			"desc": "Reduces the Attack Speed of enemies within @HexRadius@ hexes by <TFTRadiantItemBonus>@AttackSpeedSlow@%</TFTRadiantItemBonus>.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@BonusMana@ Starting Mana.</TFTRadiantItemBonus><br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"Armor": 20,
@@ -461,6 +491,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_RapidFirecannonRadiant",
 			"desc": "Increases the holder's Attack Range by <TFTRadiantItemBonus>@HexRangeIncrease@</TFTRadiantItemBonus> hexes and grants %i:scaleAS% @TooltipBonusAS@% bonus Attack Speed (including components).<br><br>The wearer's attacks can no longer miss.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@RadiantBonusAS@% Attack Speed.</TFTRadiantItemBonus>",
 			"effects": {
 				"AS": 70,
@@ -475,6 +506,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_ThiefsGlovesRadiant",
 			"desc": "At the beginning of each planning phase, the holder equips 2 temporary <TFTRadiantItemBonus>Radiant items.</TFTRadiantItemBonus><br><br><tftitemrules>[Consumes Three Item Slots]</tftitemrules>",
 			"effects": {
 				"CritChance": 15,
@@ -487,6 +519,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_RedemptionRadiant",
 			"desc": "Every @HealTickRate@ seconds, the holder radiates an aura to allies within <TFTRadiantItemBonus>@HexRadius@</TFTRadiantItemBonus> hexes, healing them for <TFTRadiantItemBonus>@MissingHealthHeal@%</TFTRadiantItemBonus> of their missing Health. Affected allies take @AoEDamageReduction@% reduced damage from multi-target abilities and attacks for @HealTickRate@ seconds.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@BonusHealth@ Health.</TFTRadiantItemBonus>",
 			"effects": {
 				"BonusHealth": 350,
@@ -505,6 +538,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_ZzRotPortalRadiant",
 			"desc": "<TFTRadiantItemBonus>At the start of combat, a Radiant Voidmother with bonus Health and Attack Damage</TFTRadiantItemBonus> arises and taunts enemies within <TFTRadiantItemBonus>@HexRadius@</TFTRadiantItemBonus> hexes. Radiant Voidmothers that arise from summoned units are @SummonedStatReduction@% effective.",
 			"effects": {
 				"AS": 10,
@@ -521,6 +555,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_QuicksilverRadiant",
 			"desc": "The holder gains immunity to crowd control in combat for <TFTRadiantItemBonus>@SpellShieldDuration@</TFTRadiantItemBonus> seconds.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@AS@% Attack Speed.</TFTRadiantItemBonus><br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"AS": 45,
@@ -535,6 +570,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_TrapClawRadiant",
 			"desc": "When combat begins, the holder <TFTRadiantItemBonus>and all allies </TFTRadiantItemBonus> gain a shield that blocks the first enemy Ability.<br><br><TFTRadiantItemBonus>Radiant Bonus: +@BonusAllyHealth@ Health for all allies</TFTRadiantItemBonus> at the start of combat.",
 			"effects": {
 				"Health": 150,
@@ -549,6 +585,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_HandOfJusticeShadow",
 			"desc": "<TFTShadowItemBonus>At the beginning of combat, the holder gains both of the following:</TFTShadowItemBonus><li>+@BonusAD@ Attack Damage and +@BonusSP@ Ability Power.</li> <li>Attacks and Abilities heal for @TraitMultiplier@% of damage dealt.</li><br><TFTShadowItemPenalty>These bonuses expire after each takedown, and renew on the next.</TFTShadowItemPenalty>",
 			"effects": {
 				"BonusAD": 60,
@@ -568,6 +605,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_DragonsClawShadow",
 			"desc": "Reduces incoming magic damage by @MagicReduction@%.<br><br><TFTShadowItemBonus>Negates bonus damage from incoming critical hits.</TFTShadowItemBonus>",
 			"effects": {
 				"MagicReduction": 50,
@@ -583,6 +621,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_RedemptionShadow",
 			"desc": "The holder radiates an aura to <TFTShadowItemBonus>all allies on the board</TFTShadowItemBonus> except themself, and heals them for <TFTShadowItemPenalty>@MissingHealthHeal@%</TFTShadowItemPenalty> of their missing Health every @HealTickRate@ seconds.",
 			"effects": {
 				"Health": 150,
@@ -602,6 +641,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_MorellonomiconShadow",
 			"desc": "When the holder deals magic or true damage with their Ability, they burn the target, dealing <TFTShadowItemBonus>@BurnPercent@% of the target's maximum Health</TFTShadowItemBonus> as true damage over @BurnDuration@ seconds, and reducing healing by @GrievousWoundsPercent@% for the duration of the burn.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"AP": 10,
@@ -623,6 +663,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_BFSwordShadow",
 			"desc": "%i:scaleAD% +@AD@ Attack Damage",
 			"effects": {
 				"AD": 10
@@ -634,6 +675,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_SunfireCapeShadow",
 			"desc": "Every <TFTShadowItemBonus>@ICD@ second(s)</TFTShadowItemBonus>, a random enemy within <TFTShadowItemBonus>@HexRange@ hexes</TFTShadowItemBonus> is burned for @BurnPercent@% of their maximum Health as true damage over @BurnDuration@ seconds. Any healing they receive is reduced by @GrievousWoundsPercent@%.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"Armor": 20,
@@ -658,6 +700,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_HextechGunbladeShadow",
 			"desc": "The holder's magic and true damage from Abilities heals the ally with lowest percent Health for <TFTShadowItemBonus>@OmniVamp@% of the damage dealt.</TFTShadowItemBonus> <TFTShadowItemPenalty>This heal cannot affect the holder.</TFTShadowItemPenalty>",
 			"effects": {
 				"AD": 10,
@@ -675,6 +718,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_InfinityEdgeShadow",
 			"desc": "Grants @CritChance@% Critical Strike Chance (including components). Each point of Critical Strike Chance above 100% becomes +@BonusCritDmgPerCritAbove100@% Critical Strike Damage. <br><br><TFTShadowItemBonus>The holder also gains @BonusCritDamage@% Critical Strike Damage.</TFTShadowItemBonus><br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"AD": 10,
@@ -693,6 +737,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_BlueBuffShadow",
 			"desc": "After casting their Ability, the holder gains %i:scaleMana% <TFTShadowItemBonus>@PostCastMana@</TFTShadowItemBonus> Mana.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"HealthThreshold": 60,
@@ -711,6 +756,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_ChaliceOfPowerShadow",
 			"desc": "When combat begins, all of the holder's allies within @HexRange@ hex in the same row gain %i:scaleAP% <TFTShadowItemBonus>@BonusAP@ Ability Power</TFTShadowItemBonus> for the rest of combat. <TFTShadowItemPenalty>The holder loses %i:scaleAP% @APLost@ Ability Power instead of gaining any.</TFTShadowItemPenalty>",
 			"effects": {
 				"MagicResist": 20,
@@ -730,6 +776,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_SpatulaShadow",
 			"desc": "It must do <i>something <TFTShadowItemBonus>evil</TFTShadowItemBonus></i>...",
 			"effects": {
 				"{fe9818ef}": 5
@@ -741,6 +788,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_GiantSlayerShadow",
 			"desc": "The holder's Abilities and attacks do @SmallBonusPct@% bonus damage. If the target has more than @HealthThreshold@ maximum Health, the bonus increases to @LargeBonusPct@%.",
 			"effects": {
 				"AD": 10,
@@ -759,6 +807,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_ShroudOfStillnessShadow",
 			"desc": "When combat begins, the holder shoots a beam straight ahead <TFTShadowItemPenalty>and behind</TFTShadowItemPenalty> that delays affected enemies' first ability cast, increasing their maximum Mana by <TFTShadowItemBonus>@CostIncrease@%</TFTShadowItemBonus> until they cast.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"Armor": 20,
@@ -776,6 +825,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_SparringGlovesShadow",
 			"desc": "+@CritChance@ Critical Strike Chance<br>+@DodgeChance@ Dodge Chance",
 			"effects": {
 				"CritChance": 5,
@@ -788,6 +838,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_TrapClawShadow",
 			"desc": "When combat begins, the holder and all allies within @HexRange@ hexes in the same row gain a shield that blocks the first enemy Ability.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"BonusPercentDamage": 25,
@@ -805,6 +856,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_IonicSparkShadow",
 			"desc": "Enemies within @HexRange@ hexes have their Magic Resist reduced by @MRShred@%. When they cast an Ability, they are zapped taking magic damage equal to @ManaRatio@% of their max Mana.",
 			"effects": {
 				"AP": 10,
@@ -826,6 +878,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_WarmogsArmorShadow",
 			"desc": "Grants %i:scaleHealth% <TFTShadowItemBonus>@TooltipDisplayHealth@ bonus Health</TFTShadowItemBonus> (including components).",
 			"effects": {
 				"BonusHealth": 1700,
@@ -843,6 +896,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_SpatulaRadiant",
 			"desc": "tft_item_description_RadiantSpatula",
 			"effects": {
 				"{fe9818ef}": 5
@@ -854,6 +908,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_GuinsoosRagebladeShadow",
 			"desc": "Attacks grant <TFTShadowItemBonus>+@AttackSpeedPerStack@%</TFTShadowItemBonus> bonus Attack Speed for the rest of combat. The bonus Attack Speed can stack any number of times.",
 			"effects": {
 				"AP": 10,
@@ -871,6 +926,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_RunaansHurricaneShadow",
 			"desc": "The holder's attacks fire bolts at <TFTShadowItemBonus>@AdditionalTargets@ nearby enemies</TFTShadowItemBonus>, dealing <TFTShadowItemPenalty>@MultiplierForDamage@% of the holder's Attack Damage.</TFTShadowItemPenalty> These bolts can critically strike but do not apply on-hit effects. ",
 			"effects": {
 				"AS": 10,
@@ -889,6 +945,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_NegatronCloakShadow",
 			"desc": "%i:scaleMR% +@MagicResist@ Magic Resist",
 			"effects": {
 				"MagicResist": 20
@@ -900,6 +957,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_RapidFirecannonShadow",
 			"desc": "Increases the holder's Attack Range by @HexRangeIncrease@ hex. Additionally, the holder gains %i:scaleAS% <TFTShadowItemBonus>+@BonusAS@% bonus Attack Speed</TFTShadowItemBonus> <TFTShadowItemPenalty>when there are no enemies within @HexRequirement@ hex.</TFTShadowItemPenalty><br><br>The holder's attacks can no longer miss.<br><br>",
 			"effects": {
 				"AS": 20,
@@ -917,6 +975,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_ThiefsGlovesShadow",
 			"desc": "At the beginning of each planning phase, the holder equips 2 temporary items. These are always full shadow items.<br><br><tftitemrules>[Consumes Three Item Slots]</tftitemrules>",
 			"effects": {
 				"CritChance": 15,
@@ -932,6 +991,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_QuicksilverShadow",
 			"desc": "The holder gains immunity to crowd control <TFTShadowItemBonus>for the entirety of combat</TFTShadowItemBonus>.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"MagicResist": 20,
@@ -949,6 +1009,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_LocketOfTheIronSolariShadow",
 			"desc": "When combat begins, the holder and all allies within @HexRange@ hexes in the same row gain <TFTShadowItemBonus>@BonusDefenses@ bonus Armor and Magic Resist</TFTShadowItemBonus>.",
 			"effects": {
 				"AP": 10,
@@ -969,6 +1030,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_ZephyrShadow",
 			"desc": "When combat begins, the holder summons a whirlwind on the opposite side of the arena that removes the closest enemy from combat for <TFTShadowItemBonus>@BanishDuration@ seconds.</TFTShadowItemBonus><br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"Health": 150,
@@ -986,6 +1048,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_SpearOfShojinShadow",
 			"desc": "The holder's attacks restore %i:scaleMana% <TFTShadowItemBonus>@FlatManaRestore@ additional Mana.</TFTShadowItemBonus>",
 			"effects": {
 				"AD": 10,
@@ -1003,6 +1066,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_TitansResolveShadow",
 			"desc": "@PercentDamage@% of incoming damage is stored. Every @SecondsBetweenProcs@ seconds, the holder's next attack unleashes this stored damage as true damage.",
 			"effects": {
 				"AS": 10,
@@ -1020,6 +1084,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_ZzRotPortalShadow",
 			"desc": "At the start of combat, the holder taunts enemies within @HexRadius@ hexes.<br><br>When the holder dies, an Unstable Voidspawn with <TFTShadowItemPenalty>@ZombieHealth@ Health</TFTShadowItemPenalty> arises and taunts enemies again. When it dies <TFTShadowItemBonus>it deals @ExplosionDamage@ true damage to enemies within @ExplosionHexRange@ hex(es).</TFTShadowItemBonus><br><br>Voidspawns that arise from summoned units are @SummonedStatReduction@% effective.",
 			"effects": {
 				"AS": 10,
@@ -1042,6 +1107,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_BloodthirsterShadow",
 			"desc": "Physical damage heals the holder for @Lifesteal@% of the damage dealt. <TFTShadowItemBonus>Each time the holder heals to @HealthThresholdPercent@% Health, they gain @BonusAS@% Attack Speed for @BonusASDuration@ seconds.</TFTShadowItemBonus> <TFTShadowItemPenalty>The holder takes @HealthLossPercent@% of their maximum Health in true damage at the beginning of combat or upon being equipped.</TFTShadowItemPenalty>",
 			"effects": {
 				"AD": 10,
@@ -1062,6 +1128,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_NeedlesslyLargeRodShadow",
 			"desc": "%i:scaleAP% +@AP@ Ability Power",
 			"effects": {
 				"AP": 10
@@ -1073,6 +1140,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_LudensEchoShadow",
 			"desc": "Each time the holder casts their Ability, they gain empty maximum Health equal to @ManaRatio@% of their maximum Mana. The holder then heals for that amount.<br>",
 			"effects": {
 				"AP": 10,
@@ -1089,6 +1157,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_FrozenHeartShadow",
 			"desc": "Reduces the Attack Speed of all enemies within @HexRadius@ hexes by <TFTShadowItemBonus>@AttackSpeedSlow@%</TFTShadowItemBonus>.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"Armor": 20,
@@ -1108,6 +1177,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_StatikkShivShadow",
 			"desc": "<TFTShadowItemBonus>Every other</TFTShadowItemBonus> attack from the holder unleashes chain lightning that strikes @1StarBounces@ enemies, dealing @Damage@ magic damage and reducing their Magic Resist by @MRShred@% for @MRShredDuration@ seconds. ",
 			"effects": {
 				"AS": 10,
@@ -1131,6 +1201,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_BrambleVestShadow",
 			"desc": "Grants %i:scaleArmor% @TooltipDisplayArmor@ bonus Armor (including components).",
 			"effects": {
 				"Armor": 40,
@@ -1148,6 +1219,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_DeathbladeShadow",
 			"desc": "Contributing to a kill grants the holder %i:scaleAD% <TFTShadowItemBonus>@ADPerStack@ Attack Damage</TFTShadowItemBonus> for the rest of combat. This effect can stack any number of times (starting at @StartingStacks@).",
 			"effects": {
 				"AD": 20,
@@ -1165,6 +1237,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_JeweledGauntletShadow",
 			"desc": "The holder gains @CritDamageAmp@% Critical Strike Damage, and magic and true damage from their Ability can critically strike. <br><br><TFTShadowItemBonus>The first time they cast their Ability each combat, they gain an additional @BonusCritChance@% Critical Strike Chance for the remainder of combat (applies to that Ability cast).</TFTShadowItemBonus>",
 			"effects": {
 				"AP": 10,
@@ -1183,6 +1256,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_TearOfTheGoddessShadow",
 			"desc": "%i:scaleMana% +@Mana@ Mana",
 			"effects": {
 				"Mana": 15
@@ -1194,6 +1268,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_LastWhisperShadow",
 			"desc": "The holder's attacks and abilities reduce the target's Armor <TFTShadowItemBonus>and Magic Resist</TFTShadowItemBonus> by @ArmorMRReductionPercent@% for the rest of combat.<br><br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"AS": 10,
@@ -1213,6 +1288,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_GiantsBeltShadow",
 			"desc": "%i:scaleHealth% +@Health@ Health",
 			"effects": {
 				"Health": 150
@@ -1224,6 +1300,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_GuardianAngelShadow",
 			"desc": "Prevents the holder's first death, placing them in stasis instead. After @StasisDuration@ seconds, they return with <TFTShadowItemBonus>@HealthRestorePercent@% Health</TFTShadowItemBonus> and shed all negative effects.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"AD": 10,
@@ -1243,6 +1320,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_RecurveBowShadow",
 			"desc": "%i:scaleAS% +@AS@ Attack Speed",
 			"effects": {
 				"AS": 10
@@ -1254,6 +1332,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_ForceOfNatureShadow",
 			"desc": "The holder's team gains <TFTShadowItemBonus>+@MaxArmySizeIncrease@</TFTShadowItemBonus> maximum team size, but <TFTShadowItemPenalty>the player's Little Legend takes +@PercentDamageIncrease@% damage after losing a battle</TFTShadowItemPenalty>.",
 			"effects": {
 				"{75994f47}": 100,
@@ -1269,6 +1348,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_ChainVestShadow",
 			"desc": "%i:scaleArmor% +@Armor@ Armor",
 			"effects": {
 				"Armor": 20
@@ -1280,6 +1360,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_ZekesHeraldShadow",
 			"desc": "When combat begins, the holder <TFTShadowItemPenalty>reduces the Attack Speed of all allies within @HexRange@ hexes in the same row by %i:scaleAS% @AttackSpeedReduction@%.</TFTShadowItemPenalty> <TFTShadowItemBonus>The holder then gains %i:scaleAS% @AttackSpeed@% Attack Speed for each affected ally.</TFTShadowItemBonus>",
 			"effects": {
 				"AD": 10,
@@ -1298,6 +1379,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_RabadonsDeathcapShadow",
 			"desc": "Grants %i:scaleAP% <TFTShadowItemBonus>@TooltipDisplayAP@</TFTShadowItemBonus> bonus Ability Power (including components). ",
 			"effects": {
 				"AP": 20,
@@ -1315,6 +1397,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_GargoyleStoneplateShadow",
 			"desc": "The holder heals themself for @HealingPerEnemy@ Health every @SecondsBetweenHeals@ seconds for each unit targeting them.",
 			"effects": {
 				"Armor": 20,
@@ -1332,6 +1415,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT_Item_RabadonsDeathcap",
 			"desc": "Grants %i:scaleAP% @AP@ bonus Ability Power (including components).",
 			"effects": {
 				"AP": 75
@@ -1346,6 +1430,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT_Item_InfinityEdge",
 			"desc": "Grants @CritChance@% Critical Strike Chance (including components) and @BonusCritDamage@% Critical Strike Damage. Each point of Critical Strike Chance above 100% becomes +@BonusCritDmgPerCritAbove100@% Critical Strike Damage. <br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"AD": 10,
@@ -1363,6 +1448,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_FrozenHeart",
 			"desc": "Reduces the Attack Speed of enemies within @HexRadius@ hexes by @AttackSpeedSlow@%.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"Armor": 20,
@@ -1380,6 +1466,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT4_Item_DivineSpatulaItem",
 			"desc": "The holder gains the Divine trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"AD": 15
@@ -1394,6 +1481,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT4_Consumable_KaynBlue",
 			"desc": "Place on Kayn to free him from Rhaast, permanently improving his Reaping Slash spell to deal bonus damage at the start of combat.<br><br><tftitemrules>[KAYN CONSUMABLE - This item disappears when used and DESTROYS Rhaast's Embrace]</tftitemrules><br><br><tftitemrules>[Can only be used during the Planning Phase]</tftitemrules>",
 			"effects": {},
 			"from": [],
@@ -1403,6 +1491,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT2_Item_SteraksGage",
 			"desc": "The wearer is also Light.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"MagicResist": 25
@@ -1417,6 +1506,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_Hush",
 			"desc": "Basic Attacks have a @ChanceOnHitToSilence@% chance on-hit to silence the target, preventing mana gain for @SilenceDuration@ seconds.",
 			"effects": {
 				"MagicResist": 25,
@@ -1432,6 +1522,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT_Item_Shroud",
 			"desc": "When combat begins, the holder shoots a beam straight ahead that delays affected enemies' first spellcast, increasing their max Mana by @CostIncrease@% until they cast.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"Armor": 20,
@@ -1449,6 +1540,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Consumable_ShadowTransformer",
 			"desc": "Turns all items on a champion into shadow items when used.<br><br><tftitemrules>[CONSUMABLE - This item disappears when used.]</tftitemrules><br><tftitemrules>This Item cannot transform Force of Nature, which is above corruption.</tftitemrules>",
 			"effects": {},
 			"from": [],
@@ -1458,6 +1550,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_HellionSpatulaItem_Radiant",
 			"desc": "tft_item_description_Set5Hellion_RadiantSpat",
 			"effects": {
 				"AS": 10
@@ -1472,6 +1565,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_NightbringerSpatulaItem",
 			"desc": "The holder gains the Nightbringer trait.<br><br><tftitemrules>[Unique - only one per champion.<br>Elusive - cannot be crafted.]</tftitemrules>",
 			"effects": {
 				"Health": 150
@@ -1483,6 +1577,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_Redemption",
 			"desc": "Every @HealTickRate@ seconds, the holder radiates an aura to allies within @HexRadius@ hex, healing them for @MissingHealthHeal@% of their missing Health. Affected allies take @AoEDamageReduction@% reduced damage from multi-target abilities and attacks for @HealTickRate@ seconds.",
 			"effects": {
 				"Health": 150,
@@ -1503,6 +1598,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT2_Item_WardensMail",
 			"desc": "The wearer is also a Warden.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"Armor": 25
@@ -1517,6 +1613,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_Zephyr",
 			"desc": "When combat begins, the wearer summons a whirlwind on the opposite side of the arena that removes the closest enemy from combat for @BanishDuration@ seconds. Ignores CC immunity.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"Health": 150,
@@ -1533,6 +1630,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_Hex_Ocean",
 			"desc": "This champion starts combat with 30 additional mana.",
 			"effects": {
 				"{1a97299e}": 30
@@ -1544,6 +1642,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_DragonslayerSpatulaItem",
 			"desc": "The holder gains the Dragonslayer trait.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"AP": 10
@@ -1558,6 +1657,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT2_Item_LichBane",
 			"desc": "The wearer is also a Mage.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"Mana": 20
@@ -1572,6 +1672,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT4_Item_OrnnMuramana",
 			"desc": "After the wearer casts their spell for the first time each combat, they restore @ManaRestore@ Mana over @ManaDuration@ seconds.<br><br><tftitemrules>[Only One Ornn Artifact Per Champion]</tftitemrules>",
 			"effects": {
 				"AD": 15,
@@ -1587,6 +1688,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_RangerSpatulaItem",
 			"desc": "The holder gains the Ranger trait.<br><br><tftitemrules>[Unique - only one per champion.<br>Elusive - cannot be crafted.]</tftitemrules>",
 			"effects": {
 				"Health": 150
@@ -1598,6 +1700,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_NightbringerSpatulaItem_Radiant",
 			"desc": "tft_item_description_Set5Nightbringer_RadiantSpat",
 			"effects": {
 				"Health": 150
@@ -1612,6 +1715,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Consumable_ItemReroller",
 			"desc": "Use on a champion to unequip all items and randomly transform them into different new ones. <br><br><tftitemrules> [SAME QUALITY: Reforging an item will grant a new item of a similar type and quality.<br> Cannot be used on board champions in combat, or on Force of Nature.<br> CONSUMABLE - This item disappears when used.]</tftitemrules>",
 			"effects": {},
 			"from": [],
@@ -1621,6 +1725,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_KnightSpatulaItem",
 			"desc": "The holder gains the Knight trait.<br><br><tftitemrules>[Unique - only one per champion.<br>Elusive - cannot be crafted.]</tftitemrules>",
 			"effects": {
 				"Health": 150
@@ -1632,6 +1737,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_BladeOfTheRuinedKing",
 			"desc": "The wearer is also a Blademaster.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"AS": 30
@@ -1643,6 +1749,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_ZekesHerald",
 			"desc": "When combat begins, the holder and all allies within @HexRange@ hexes in the same row gain %i:scaleAS% @AttackSpeed@% Attack Speed for the rest of combat.",
 			"effects": {
 				"AD": 10,
@@ -1660,6 +1767,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT_Item_ThiefsGloves",
 			"desc": "At the beginning of each planning phase, the holder equips 2 temporary items. Temporary items increase in power based on your player level.<br><br><tftitemrules>[Consumes 3 item slots.]</tftitemrules>",
 			"effects": {
 				"CritChance": 15,
@@ -1675,6 +1783,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_RedeemedSpatulaItem_Radiant",
 			"desc": "tft_item_description_Set5Redeemed_RadiantSpat",
 			"effects": {
 				"MagicResist": 20
@@ -1689,6 +1798,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_GuinsoosRageblade",
 			"desc": "Attacks grant +@AttackSpeedPerStack@% bonus Attack Speed for the rest of combat.<br><br>This effect can stack any number of times.",
 			"effects": {
 				"AP": 10,
@@ -1705,6 +1815,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT4_Item_DuelistSpatulaItem",
 			"desc": "The holder gains the Duelist trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"AS": 15
@@ -1719,6 +1830,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_IonicSpark",
 			"desc": "Enemies within @HexRange@ hexes have their Magic Resist reduced by @MRShred@%. When they cast an Ability, they are zapped taking magic damage equal to @ManaRatio@% of their max Mana.",
 			"effects": {
 				"AP": 10,
@@ -1738,6 +1850,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_InvokerSpatulaItem",
 			"desc": "The holder gains the Invoker trait.<br><br><tftitemrules>[Unique - only one per champion.<br>Elusive - cannot be crafted.]</tftitemrules>",
 			"effects": {
 				"Health": 150
@@ -1749,6 +1862,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_DragonsClaw",
 			"desc": "Grants %i:scaleMR% @MagicResist@ bonus Magic Resist (including components). On being hit by magic or true damage from an Ability, launch a fireball at the Ability's caster that deals magic damage equal to @PercentHealthDamage@% of their max Health (@ICD@ second cooldown).",
 			"effects": {
 				"ICD": 1,
@@ -1766,6 +1880,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT_Consumable_ItemRemover",
 			"desc": "Use on a champion to unequip all items. <br><br><tftitemrules> [Cannot be used on board champions in combat.]<br>[CONSUMABLE - This item disappears when used.]</tftitemrules>",
 			"effects": {},
 			"from": [],
@@ -1775,6 +1890,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_RedeemedSpatulaItem",
 			"desc": "The holder gains the Redeemed trait.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"MagicResist": 20
@@ -1789,6 +1905,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_PhantomDancer",
 			"desc": "Critical hits against the wearer deal normal damage instead.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"AS": 15,
@@ -1801,6 +1918,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_PowerGauntlet",
 			"desc": "When combat begins, the holder and all allies within @HexRange@ hex(es) in the same row gain a shield that blocks the first enemy Ability.<br>",
 			"effects": {
 				"Health": 150,
@@ -1818,6 +1936,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_CannoneerSpatulaItem",
 			"desc": "The holder gains the Cannoneer trait.<br><br><tftitemrules>[Unique - only one per champion.<br>Elusive - cannot be crafted.]</tftitemrules>",
 			"effects": {
 				"Health": 150
@@ -1829,6 +1948,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_DraconicSpatulaItem",
 			"desc": "The holder gains the Draconic trait.<br><br><tftitemrules>[Unique - only one per champion.<br>Elusive - cannot be crafted.]</tftitemrules>",
 			"effects": {
 				"Health": 150
@@ -1840,6 +1960,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_EmptyBag",
 			"desc": "Loot goes here",
 			"effects": {},
 			"from": [],
@@ -1849,6 +1970,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT_Consumable_LightTransformer",
 			"desc": "Turns all items on a champion into standard items when used.<br><br><tftitemrules>[CONSUMABLE - This item disappears when used.]</tftitemrules><br><tftitemrules>This Item cannot transform Force of Darkness, which is beyond redemption.</tftitemrules>",
 			"effects": {},
 			"from": [],
@@ -1858,6 +1980,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT4_Consumable_KaynRed",
 			"desc": "Place on Kayn to force Rhaast to overtake him, permanently improving his Reaping Slash spell to heal him.<br><br><tftitemrules>[KAYN CONSUMABLE - This item disappears when used and DESTROYS Kayn's Liberation]</tftitemrules><br><br><tftitemrules>[Can only be used during the Planning Phase]</tftitemrules>",
 			"effects": {},
 			"from": [],
@@ -1867,6 +1990,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_SkirmisherSpatulaItem_Radiant",
 			"desc": "tft_item_description_Set5Skirmisher_RadiantSpat",
 			"effects": {
 				"AD": 10
@@ -1881,6 +2005,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Consumable_NeekosHelp",
 			"desc": "Place on a champion to create a one-star copy of them.<br><br><tftitemrules>[CONSUMABLE - This item disappears when used.]</tftitemrules>",
 			"effects": {},
 			"from": [],
@@ -1890,6 +2015,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFTTutorial_Item_BlueBuff",
 			"desc": "After casting their Ability, the holder gains %i:scaleMana% @ManaRestore@ mana.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"Mana": 30,
@@ -1903,6 +2029,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFTTutorial_Item_ChainVest",
 			"desc": "%i:scaleArmor% +@Armor@ Armor",
 			"effects": {
 				"Armor": 20
@@ -1914,6 +2041,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFTTutorial_Item_BFSword",
 			"desc": "%i:scaleAD% +@AD@ Attack Damage",
 			"effects": {
 				"AD": 10
@@ -1925,6 +2053,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFTTutorial_Item_GuardianAngel",
 			"desc": "Prevents the holder's first death, placing them in stasis instead. After @StasisDuration@ seconds, they return with @HealthRestore@ Health and shed all negative effects.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"AD": 10,
@@ -1942,6 +2071,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_Thornmail",
 			"desc": "Reflects @DamageReflect@% of the mitigated damage from enemy Basic Attacks as magic damage.",
 			"effects": {
 				"Armor": 50,
@@ -1954,6 +2084,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT_Consumable_EmblemArmory",
 			"desc": "tft_item_description_EmblemArmoryConsumable",
 			"effects": {},
 			"from": [],
@@ -1963,6 +2094,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT3_Item_CelestialSpatulaItem",
 			"desc": "The wearer gains the Celestial trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"MagicResist": 25
@@ -1977,6 +2109,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT4_Item_OrnnAnimaVisage",
 			"desc": "The wearer regenerates @PercentHealthRegen@% of their maximum Health each second.<br><br><tftitemrules>[Only One Ornn Artifact Per Champion]</tftitemrules>",
 			"effects": {
 				"Health": 200,
@@ -1990,6 +2123,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_GargoyleStoneplate",
 			"desc": "The holder gains %i:scaleArmor% @ArmorPerEnemy@ Armor and %i:scaleMR% @MRPerEnemy@ Magic Resist for each enemy targeting them.",
 			"effects": {
 				"Armor": 20,
@@ -2007,6 +2141,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT_Item_BrambleVest",
 			"desc": "Negates bonus damage from incoming critical strikes. On being hit by an attack, deal @1StarAoEDamage@/@2StarAoEDamage@/@3StarAoEDamage@ %i:star% magic damage to all nearby enemies (once every @ICD@ seconds).",
 			"effects": {
 				"Armor": 40,
@@ -2027,6 +2162,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_HellionSpatulaItem",
 			"desc": "The holder gains the Hellion trait.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"AS": 10
@@ -2041,6 +2177,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_ChainVest",
 			"desc": "%i:scaleArmor% +@Armor@ Armor",
 			"effects": {
 				"Armor": 20
@@ -2052,6 +2189,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_SkirmisherSpatulaItem",
 			"desc": "The holder gains the Skirmisher trait.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"AD": 10
@@ -2066,6 +2204,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT4_Item_OrnnRocketPropelledFist",
 			"desc": "At the start of combat, the wearer pulls the farthest enemy into melee range, stunning them for @StunDuration@ seconds. Allies within range will prioritize attacking that enemy.<br><br><tftitemrules>[Only One Ornn Artifact Per Champion]</tftitemrules>",
 			"effects": {
 				"Armor": 25,
@@ -2080,6 +2219,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT4_Item_AssassinSpatulaItem",
 			"desc": "The wearer gains the Assassin trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"CritChance": 10,
@@ -2095,6 +2235,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_IcebornGauntlet",
 			"desc": "After casting a spell, the wearer's next Basic Attack freezes the target for @FreezeDuration@ seconds.",
 			"effects": {
 				"Armor": 25,
@@ -2108,6 +2249,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_RevenantSpatulaItem_Radiant",
 			"desc": "tft_item_description_Set5Revenant_RadiantSpat",
 			"effects": {
 				"MagicResist": 20
@@ -2122,6 +2264,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_SpellThiefsEdge",
 			"desc": "@ChanceToSpellSteal@ chance to steal the enemy's spell and cast it",
 			"effects": {
 				"{0cc88d45}": 10
@@ -2133,6 +2276,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT4_Item_OrnnEternalWinter",
 			"desc": "Enemies who damage the wearer have their Attack Speed slowed by @AttackSpeedSlowPercent@% for @SlowDuration@ seconds. After being slowed this way @NumApplications@ times, the attacker is Frozen for the duration instead. An enemy can only be Frozen once every @FreezeCooldown@ seconds.<br><br><tftitemrules>[Only One Ornn Artifact Per Champion]</tftitemrules>",
 			"effects": {
 				"Armor": 25,
@@ -2150,6 +2294,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT4_Item_MageSpatulaItem",
 			"desc": "The holder gains the Mage trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"Mana": 15
@@ -2164,6 +2309,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_Catalyst",
 			"desc": "Whenever any unit dies, gain X Mana.",
 			"effects": {
 				"Mana": 20,
@@ -2176,6 +2322,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT2_Item_YoumuusGhostblade",
 			"desc": "The wearer is also an Assassin.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"AD": 15
@@ -2190,6 +2337,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_Hex_Wind",
 			"desc": "This champion has an additional @DodgeChancePercent@% chance to dodge enemy Basic Attacks.",
 			"effects": {
 				"{0e4779e5}": 20
@@ -2201,6 +2349,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT4_Item_VanguardSpatulaItem",
 			"desc": "The holder gains the Vanguard trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"Armor": 25
@@ -2215,6 +2364,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT3_Item_DemolitionistSpatulaItem",
 			"desc": "The wearer gains the Demolitionist trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"AP": 20
@@ -2226,6 +2376,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_RecurveBow",
 			"desc": "%i:scaleAS% +@AS@ Attack Speed",
 			"effects": {
 				"AS": 10
@@ -2237,6 +2388,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT_Item_MadredsBloodrazor",
 			"desc": "The holder's Abilities and attacks do @SmallBonusPct@% bonus damage. If the target has more than @HealthThreshold@ maximum Health, the bonus increases to @LargeBonusPct@%.",
 			"effects": {
 				"AD": 10,
@@ -2255,6 +2407,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT4_Item_ElderwoodSpatulaItem",
 			"desc": "The holder gains the Elderwood trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"MagicResist": 25
@@ -2269,6 +2422,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_Hex_Inferno",
 			"desc": "This champion starts combat with an additional @AttackSpeedPercent@% Attack Speed.",
 			"effects": {
 				"{a8ca7859}": 30
@@ -2280,6 +2434,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT4_Item_OrnnObsidianCleaver",
 			"desc": "The wearer's attacks and spell damage shred enemy Armor and Magic Resistance by 40% for @Duration@ seconds.<br><br><tftitemrules>[Only One Ornn Artifact Per Champion]</tftitemrules>",
 			"effects": {
 				"AD": 30,
@@ -2293,6 +2448,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_RedBuff",
 			"desc": "Every @ICD@ seconds, a random enemy within @HexRange@ hexes is burned for @BurnPercent@% of their maximum Health as true damage over @BurnDuration@ seconds. Any healing they receive is reduced by @GrievousWoundsPercent@%.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"Armor": 20,
@@ -2314,6 +2470,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_IroncladSpatulaItem_Radiant",
 			"desc": "tft_item_description_Set5Ironclad_RadiantSpat",
 			"effects": {
 				"Armor": 20
@@ -2328,6 +2485,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Consumable_Dissolver",
 			"desc": "tft_item_description_Consumable_Dissolver",
 			"effects": {},
 			"from": [],
@@ -2337,6 +2495,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT_Item_SwordOfTheDivine",
 			"desc": "When the wearer dies, Repeating Crossbow is re-equipped to a new ally. Each time Repeating Crossbow is re-equipped, it grants an additional +@AttackSpeedPerStack@% Attack Speed and +@CritChancePerStack@% Critical Strike Chance for the remainder of combat.<br><br>No stacking limit.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"{48ea2af8}": 7,
@@ -2349,6 +2508,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT_Item_UnstableConcoction",
 			"desc": "The holder gains both of the following:<li>+@BaseAD@ Attack Damage and +@BaseSP@ Ability Power.</li> <li>Attacks and Abilities heal for @BaseHeal@% of damage dealt.</li><br><br>At the beginning of each planning phase, one of these buffs is increased to @TooltipBonus@(%).<br>",
 			"effects": {
 				"BaseHeal": 10,
@@ -2372,6 +2532,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT_Item_CursedBlade",
 			"desc": "Basic Attacks have a @ChanceOnHitToShrink@% chance on-hit to decrease the target's star level by 1 for the rest of combat.",
 			"effects": {
 				"AS": 15,
@@ -2388,6 +2549,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT_Item_GuardianAngel",
 			"desc": "Prevents the holder's first death, placing them in stasis instead. After @StasisDuration@ seconds, they return with @HealthRestore@ Health and shed all negative effects.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"AD": 10,
@@ -2405,6 +2567,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_SeraphsEmbrace",
 			"desc": "After casting their Ability, the holder gains %i:scaleMana% @ManaRestore@ mana.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"Mana": 30,
@@ -2421,6 +2584,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_TearOfTheGoddess",
 			"desc": "%i:scaleMana% +@Mana@ Mana",
 			"effects": {
 				"Mana": 15
@@ -2432,6 +2596,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT_Item_FreeDeathblade",
 			"desc": "Contributing to a kill grants the holder %i:scaleAD% @ADPerStack@ Attack Damage for the rest of combat. This effect can stack any number of times (starting at @StartingStacks@).",
 			"effects": {
 				"AD": 30,
@@ -2445,6 +2610,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_CavalierSpatulaItem",
 			"desc": "The holder gains the Cavalier trait.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"Armor": 20
@@ -2459,6 +2625,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT4_Item_OrnnZhonyasParadox",
 			"desc": "The first instance of damage that would reduce the wearer below @PercentHealthThreshold@% Health is prevented, causing them to become invulnerable for @InvulnDuration@ seconds.<br><br><tftitemrules>[Only One Ornn Artifact Per Champion]</tftitemrules>",
 			"effects": {
 				"AP": 15,
@@ -2474,6 +2641,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_NegatronCloak",
 			"desc": "%i:scaleMR% +@MagicResist@ Magic Resist",
 			"effects": {
 				"MagicResist": 20
@@ -2485,6 +2653,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT_Item_TitansResolve",
 			"desc": "When the holder attacks or takes damage, they gain @StackingAD@ Attack Damage and Ability Power. <br><br>This stacks up to @StackCap@ times, at which point the holder gains @BonusResistsAtStackCap@ Armor and Magic Resist.",
 			"effects": {
 				"AS": 10,
@@ -2504,6 +2673,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT3_Item_DarkStarSpatulaItem",
 			"desc": "The wearer gains the Dark Star trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"CritChance": 10,
@@ -2519,6 +2689,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT3_Item_ProtectorSpatulaItem",
 			"desc": "The wearer gains the Protector trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"Health": 200
@@ -2533,6 +2704,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT2_Item_FrozenMallet",
 			"desc": "The wearer is also Glacial.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"Health": 200
@@ -2547,6 +2719,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_RunaansHurricane",
 			"desc": "The holder's attacks fire a bolt at another nearby enemy, dealing @MultiplierForDamage@% of the holder's Attack Damage and applying on-hit effects. These bolts can critically strike.",
 			"effects": {
 				"AS": 10,
@@ -2564,6 +2737,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_SentinelSpatulaItem",
 			"desc": "The holder gains the Sentinel trait.<br><br><tftitemrules>[Unique - only one per champion.<br>Elusive - cannot be crafted.]</tftitemrules>",
 			"effects": {
 				"Health": 150
@@ -2575,6 +2749,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_IsYordle",
 			"desc": "Wearer is also a Yordle<br>Extra +10% Critical Strike Chance, +10% Dodge Chance<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"CritChance": 20,
@@ -2587,6 +2762,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT3_Item_InfiltratorSpatulaItem",
 			"desc": "The wearer gains the Infiltrator trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"AS": 15
@@ -2601,6 +2777,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_FreeBFSword",
 			"desc": "%i:scaleAD% +@AD@ Attack Damage",
 			"effects": {
 				"AD": 15
@@ -2612,6 +2789,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT_Item_SparringGloves",
 			"desc": "+@CritChance@ Critical Strike Chance<br>+@DodgeChance@ Dodge Chance",
 			"effects": {
 				"CritChance": 5,
@@ -2624,6 +2802,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT_Item_Bloodthirster",
 			"desc": "Physical damage heals the holder for @Lifesteal@% of the damage dealt.<br><br>Upon falling below @HealthThreshold@% Health, the holder gains a @ShieldHealthPercent@% max Health shield that lasts up to @ShieldDuration@ seconds.",
 			"effects": {
 				"AD": 10,
@@ -2643,6 +2822,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT_Item_ArchangelsStaff",
 			"desc": "Each time the holder casts their Ability, they gain bonus Ability Power equal to @ManaRatio@% of their maximum Mana (this bonus applies to that Ability cast).",
 			"effects": {
 				"AP": 10,
@@ -2659,6 +2839,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT_Item_KnightsVow",
 			"desc": "Extra %i:scaleArmor% +@Armor@<br>Wearer is also a Knight<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"Armor": 40
@@ -2670,6 +2851,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_FrozenMallet",
 			"desc": "The wearer is also Glacial.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"Health": 400
@@ -2681,6 +2863,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT2_Item_VoidStaff",
 			"desc": "The wearer is also an Inferno.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"AP": 20
@@ -2695,6 +2878,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_TitanicHydra",
 			"desc": "At the start of combat, the holder taunts enemies within @HexRadius@ hexes. <br><br>When the holder dies, a Voidspawn arises taunting nearby enemies. Voidspawns that arise from summoned units are @SummonedStatReduction@% effective.",
 			"effects": {
 				"AS": 10,
@@ -2712,6 +2896,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT_Item_HextechChestguard",
 			"desc": "Wearer is also a Hextech",
 			"effects": {},
 			"from": [
@@ -2724,6 +2909,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_LegionnaireSpatulaItem",
 			"desc": "The holder gains the Legionnaire trait.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"Health": 150
@@ -2735,6 +2921,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_AssassinSpatulaItem_Radiant",
 			"desc": "tft_item_description_Set5Assassin_RadiantSpat",
 			"effects": {
 				"CritChance": 10,
@@ -2750,6 +2937,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_IroncladSpatulaItem",
 			"desc": "The holder gains the Ironclad trait.<br><br><tftitemrules>[Unique - only one per champion.<br>Elusive - cannot be crafted.]</tftitemrules>",
 			"effects": {
 				"Health": 150
@@ -2761,6 +2949,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT2_Item_EssenceReaver",
 			"desc": "The wearer is also a Berserker.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"CritChance": 10,
@@ -2776,6 +2965,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT4_Item_OrnnDeathsDefiance",
 			"desc": "@IgnorePainPercent@% of the damage the wearer receives is instead dealt over @BleedDuration@ seconds as non-lethal damage.<br><br><tftitemrules>[Only One Ornn Artifact Per Champion]</tftitemrules>",
 			"effects": {
 				"AD": 15,
@@ -2791,6 +2981,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_Darkin",
 			"desc": "Extra %i:scaleMana% +@Mana@<br>Wearer is also a Demon<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"Mana": 40
@@ -2802,6 +2993,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_CovenSpatulaItem_Radiant",
 			"desc": "tft_item_description_Set5Coven_RadiantSpat",
 			"effects": {
 				"Mana": 15
@@ -2816,6 +3008,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_SpearOfShojin",
 			"desc": "The holder's attacks restore %i:scaleMana% @FlatManaRestore@ additional Mana. ",
 			"effects": {
 				"AD": 10,
@@ -2832,6 +3025,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT_Item_YoumuusGhostblade",
 			"desc": "The wearer is also an Assassin.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"AD": 30
@@ -2843,6 +3037,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_Spatula",
 			"desc": "It must do <i>something</i>...",
 			"effects": {
 				"{fe9818ef}": 5
@@ -2854,6 +3049,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT3_Item_BattlecastSpatulaItem",
 			"desc": "The wearer gains the Battlecast trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"AP": 20
@@ -2868,6 +3064,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT3_Item_RebelSpatulaItem",
 			"desc": "The wearer gains the Rebel trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"Armor": 25
@@ -2882,6 +3079,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT4_Item_OrnnInfinityForce",
 			"desc": "<tftitemrules>[Only One Ornn Artifact Per Champion]</tftitemrules>",
 			"effects": {
 				"AD": 33,
@@ -2899,6 +3097,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_LocketOfTheIronSolari",
 			"desc": "When combat begins, the holder and all allies within @HexRange@ hexes in the same row gain a shield that blocks @1StarShieldValue@/@2StarShieldValue@/@3StarShieldValue@ %i:star% damage for @ShieldDuration@ seconds.",
 			"effects": {
 				"AP": 10,
@@ -2920,6 +3119,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_ForgottenSpatulaItem",
 			"desc": "The holder gains the Forgotten trait.<br><br><tftitemrules>[Unique - only one per champion.<br>Elusive - cannot be crafted.]</tftitemrules>",
 			"effects": {
 				"Health": 150
@@ -2931,6 +3131,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_Yuumi",
 			"desc": "Extra %i:scaleAP% +@AP@<br>Wearer is also a Sorcerer<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"AP": 40
@@ -2942,6 +3143,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_Morellonomicon",
 			"desc": "When the holder deals magic or true damage with their Ability, they burn the target, dealing @BurnPercent@% of the target's maximum Health as true damage over @BurnDuration@ seconds, and reducing healing by @GrievousWoundsPercent@% for the duration of the burn.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"AP": 10,
@@ -2962,6 +3164,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_RevenantSpatulaItem",
 			"desc": "The holder gains the Revenant trait.<br><br><tftitemrules>[Unique - only one per champion.<br>Elusive - cannot be crafted.]</tftitemrules>",
 			"effects": {
 				"Health": 150
@@ -2973,6 +3176,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_RapidFireCannon",
 			"desc": "Increases the holder's Attack Range by @HexRangeIncrease@ hex and grants %i:scaleAS% @TooltipBonusAS@% bonus Attack Speed (including components).<br><br>The wearer's attacks can no longer miss.<br><br>",
 			"effects": {
 				"AS": 40,
@@ -2990,6 +3194,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT_Consumable_TrainingDummy",
 			"desc": "Use on a champion to spawn a movable target dummy nearby. <br><br><tftitemrules> [Cannot be used in combat. <br>CONSUMABLE - This item disappears when used.]</tftitemrules>",
 			"effects": {},
 			"from": [],
@@ -2999,6 +3204,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_BrawlerSpatulaItem",
 			"desc": "The holder gains the Brawler trait.<br><br><tftitemrules>[Unique - only one per champion.<br>Elusive - cannot be crafted.]</tftitemrules>",
 			"effects": {
 				"Health": 150
@@ -3010,6 +3216,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_BFSword",
 			"desc": "%i:scaleAD% +@AD@ Attack Damage",
 			"effects": {
 				"AD": 10
@@ -3021,6 +3228,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT4_Item_DragonsoulSpatulaItem",
 			"desc": "The holder gains the Dragonsoul trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"AP": 15
@@ -3035,6 +3243,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Consumable_ShopReroller",
 			"desc": "Use on a champion to reroll a special Shop that contains only champions sharing a Trait with the source champion. <br><br><tftitemrules>[CONSUMABLE - This item disappears when used.]</tftitemrules>",
 			"effects": {},
 			"from": [],
@@ -3044,6 +3253,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT_Item_ZhonyasHourglass",
 			"desc": "On falling below @HealthPercent@% Health, become untargetable, invulnerable, but unable to move for @StasisDuration@ seconds.",
 			"effects": {
 				"AP": 20,
@@ -3058,6 +3268,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT2_Item_BladeOfTheRuinedKing",
 			"desc": "The wearer is also a Blademaster.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"AS": 15
@@ -3072,6 +3283,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_LegionnaireSpatulaItem_Radiant",
 			"desc": "tft_item_description_Set5Legionnaire_RadiantSpat",
 			"effects": {
 				"AS": 10
@@ -3086,6 +3298,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT3_Item_StarGuardianSpatulaItem",
 			"desc": "The wearer gains the Star Guardian trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"Mana": 15
@@ -3100,6 +3313,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT4_Item_WarlordSpatulaItem",
 			"desc": "The wearer gains the Warlord trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"Health": 200
@@ -3114,6 +3328,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_LastWhisper",
 			"desc": "When the holder inflicts a critical hit, the target's Armor is reduced by @ArmorReductionPercent@% for @ArmorBreakDuration@ seconds. This effect does not stack.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"AS": 10,
@@ -3131,6 +3346,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_RenewerSpatulaItem",
 			"desc": "The holder gains the Renewer trait.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"Mana": 15
@@ -3145,6 +3361,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_JeweledGauntlet",
 			"desc": "The holder's magic and true damage from their Ability can critically strike. The holder gains @CritDamageAmp@% bonus Critical Strike Damage.",
 			"effects": {
 				"AP": 10,
@@ -3161,6 +3378,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT_Item_GiantsBelt",
 			"desc": "%i:scaleHealth% +@Health@ Health",
 			"effects": {
 				"Health": 150
@@ -3172,6 +3390,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_AbominationSpatulaItem_Radiant",
 			"desc": "tft_item_description_Set5Abomination_RadiantSpat",
 			"effects": {
 				"CritChance": 10,
@@ -3187,6 +3406,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_CovenSpatulaItem",
 			"desc": "The holder gains the Coven trait.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"Mana": 15
@@ -3198,6 +3418,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_Unknown",
 			"desc": "It must do <i>something</i>...",
 			"effects": {},
 			"from": [],
@@ -3207,6 +3428,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT_Item_JammedSlot",
 			"desc": "Item temporarily disabled",
 			"effects": {},
 			"from": [],
@@ -3216,6 +3438,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT_Item_ThiefsGloves_Empty",
 			"desc": "Loot goes here",
 			"effects": {
 				"CritChance": 20,
@@ -3228,6 +3451,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT4_Item_DuskSpatulaItem",
 			"desc": "The holder gains the Dusk trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"AP": 15
@@ -3239,6 +3463,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_NeedlesslyLargeRod",
 			"desc": "%i:scaleAP% +@AP@ Ability Power",
 			"effects": {
 				"AP": 10
@@ -3250,6 +3475,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT_Item_MortalReminder",
 			"desc": "TFT_item_description_MortalReminder",
 			"effects": {},
 			"from": [],
@@ -3259,6 +3485,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT4_Item_OrnnRanduinsSanctum",
 			"desc": "At the start of combat, all allies adjacent to the wearer gain @BonusDefense@ Armor and Magic Resistance for the rest of combat.<br><br><tftitemrules>[Only One Ornn Artifact Per Champion]</tftitemrules>",
 			"effects": {
 				"Armor": 25,
@@ -3273,6 +3500,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_FreeVengeance",
 			"desc": "When the wearer dies, Repeating Crossbow is re-equipped to a new ally. Each time Repeating Crossbow is re-equipped, it grants an additional +@AttackSpeedPerStack@% Attack Speed and +@CritChancePerStack@% Critical Strike Chance for the remainder of combat.<br><br>No stacking limit.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"AS": 15,
@@ -3287,6 +3515,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_Vengeance",
 			"desc": "When the wearer dies, Repeating Crossbow is re-equipped to a new ally. Each time Repeating Crossbow is re-equipped, it grants an additional +@AttackSpeedPerStack@% Attack Speed and +@CritChancePerStack@% Critical Strike Chance for the remainder of combat.<br><br>No stacking limit.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"AS": 15,
@@ -3301,6 +3530,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_ForceOfNature",
 			"desc": "The holder's team gains +@MaxArmySizeIncrease@ maximum team size.",
 			"effects": {
 				"{ec9a04d1}": 1
@@ -3315,6 +3545,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_DawnbringerSpatulaItem",
 			"desc": "The holder gains the Dawnbringer trait.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"Health": 150
@@ -3329,6 +3560,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_Quicksilver",
 			"desc": "The holder gains immunity to crowd control in combat for @SpellShieldDuration@ seconds.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"MagicResist": 20,
@@ -3345,6 +3577,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_Deathblade",
 			"desc": "Contributing to a kill grants the holder %i:scaleAD% @ADPerStack@ Attack Damage for the rest of combat. This effect can stack any number of times (starting at @StartingStacks@).",
 			"effects": {
 				"AD": 20,
@@ -3361,6 +3594,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_SpellweaverSpatulaItem_Radiant",
 			"desc": "tft_item_description_Set5Spellweaver_RadiantSpat",
 			"effects": {
 				"AP": 10
@@ -3375,6 +3609,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_CavalierSpatulaItem_Radiant",
 			"desc": "tft_item_description_Set5Cavalier_RadiantSpat",
 			"effects": {
 				"Armor": 20
@@ -3389,6 +3624,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_DawnbringerSpatulaItem_Radiant",
 			"desc": "tft_item_description_Set5Dawnbringer_RadiantSpat",
 			"effects": {
 				"Health": 150
@@ -3403,6 +3639,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_SpellweaverSpatulaItem",
 			"desc": "The holder gains the Spellweaver trait.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"AP": 10
@@ -3417,6 +3654,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_MysticSpatulaItem",
 			"desc": "The holder gains the Mystic trait.<br><br><tftitemrules>[Unique - only one per champion.<br>Elusive - cannot be crafted.]</tftitemrules>",
 			"effects": {
 				"Health": 150
@@ -3428,6 +3666,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_Chalice",
 			"desc": "When combat begins, the holder and all allies within @HexRange@ hex in the same row gain %i:scaleAP% @BonusAP@ Ability Power for the rest of combat.",
 			"effects": {
 				"MagicResist": 20,
@@ -3447,6 +3686,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_AssassinSpatulaItem",
 			"desc": "The holder gains the Assassin trait.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>",
 			"effects": {
 				"CritChance": 10,
@@ -3462,6 +3702,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_WarmogsArmor",
 			"desc": "Grants %i:scaleHealth% @Health@ bonus Health (including components).",
 			"effects": {
 				"Health": 1000
@@ -3476,6 +3717,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT_Item_StatikkShiv",
 			"desc": "Every third attack from the holder unleashes a chain lightning that bounces to @1StarBounces@ enemies, dealing @Damage@ magic damage and reducing their Magic Resist by @MRShred@% for @MRShredDuration@ seconds.",
 			"effects": {
 				"AS": 10,
@@ -3498,6 +3740,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT3_Item_BlademasterSpatulaItem",
 			"desc": "The wearer gains the Blademaster trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>",
 			"effects": {
 				"AD": 15
@@ -3512,6 +3755,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_RenewerSpatulaItem_Radiant",
 			"desc": "tft_item_description_Set5Renewer_RadiantSpat",
 			"effects": {
 				"Mana": 15
@@ -3526,6 +3770,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT4_Item_OrnnTheCollector",
 			"desc": "The wearer executes enemies below @ExecutePercent@% on hit. Executions generate 1 gold.<br><br><tftitemrules>[Only One Ornn Artifact Per Champion]</tftitemrules>",
 			"effects": {
 				"AD": 30,
@@ -3540,6 +3785,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT_Item_UnusableSlot",
 			"desc": "This slot can't hold an item.",
 			"effects": {},
 			"from": [],
@@ -3549,6 +3795,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT_Item_HextechGunblade",
 			"desc": "The holder's magic and true damage from Abilities heal them for @OmniVamp@% of the damage dealt. Excess healing fuels a shield that protects the holder against up to @ShieldMax@ damage.",
 			"effects": {
 				"AD": 10,
@@ -3566,6 +3813,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT_Item_Hex_Mountain",
 			"desc": "At the end of each planning phase this champion permanently gains @HPPerRound@ max health.",
 			"effects": {
 				"{1bb18b94}": 30
@@ -3577,6 +3825,7 @@
 			"unique": false
 		},
 		{
+			"apiName": "TFT5_Item_ForgottenSpatulaItem_Radiant",
 			"desc": "tft_item_description_Set5Forgotten_RadiantSpat",
 			"effects": {
 				"AD": 10
@@ -3591,6 +3840,7 @@
 			"unique": true
 		},
 		{
+			"apiName": "TFT5_Item_AbominationSpatulaItem",
 			"desc": "The holder gains the Abomination trait.<br><br><tftitemrules>[Unique - only one per champion.<br>Elusive - cannot be crafted.]</tftitemrules>",
 			"effects": {
 				"Health": 150
@@ -5958,7 +6208,7 @@
 						]
 					},
 					"apiName": "TFT5_Teemo",
-					"cost": 7,
+					"cost": 5,
 					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT5_Teemo.TFT_Set5.dds",
 					"name": "Teemo",
 					"stats": {
@@ -11029,7 +11279,7 @@
 						]
 					},
 					"apiName": "TFT5_Teemo",
-					"cost": 7,
+					"cost": 5,
 					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT5_Teemo.TFT_Set5.dds",
 					"name": "Teemo",
 					"stats": {
@@ -16049,7 +16299,7 @@
 						]
 					},
 					"apiName": "TFT5_Teemo",
-					"cost": 7,
+					"cost": 5,
 					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT5_Teemo.TFT_Set5.dds",
 					"name": "Teemo",
 					"stats": {
@@ -20133,7 +20383,7 @@
 						]
 					},
 					"apiName": "TFT5_Teemo",
-					"cost": 7,
+					"cost": 5,
 					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT5_Teemo.TFT_Set5.dds",
 					"name": "Teemo",
 					"stats": {
@@ -25263,7 +25513,7 @@
 						]
 					},
 					"apiName": "TFT5_Teemo",
-					"cost": 7,
+					"cost": 5,
 					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT5_Teemo.TFT_Set5.dds",
 					"name": "Teemo",
 					"stats": {

@@ -15,28 +15,6 @@ const ALTERNATE_ITEM_VERSION_IDS = [
 	10004, // Deathblade
 	10005, // tft_item_name_SwordOfTheDivine2
 ]
-export const UNRELEASED_ITEM_NAME_KEYS = [
-	'one 3+ cost unit',
-	'two 1-cost & one 2-cost units',
-	'two 3+cost units',
-	'three 2-cost units',
-	'three 3+cost units',
-	'5 gold',
-	'6 gold',
-	'7 gold',
-	'8 gold',
-	'divine dissolver',
-	'jammed!',
-	'loot bag',
-	'mortal reminder',
-	'random component',
-	'special item + 4 gold',
-	'unusable slot',
-	'tft_item_name_catalyst',
-	'tft_item_description_emblemarmoryconsumable',
-	'tft_item_name_spellthiefsedge',
-	'tft6_item_name_elitespotlight',
-]
 
 export const NORMALIZE_EFFECT_KEYS: Record<string, BonusKey> = {
 	AbilityPower: BonusKey.AbilityPower,
@@ -46,6 +24,7 @@ export const NORMALIZE_EFFECT_KEYS: Record<string, BonusKey> = {
 	BaseAD: BonusKey.AttackDamage,
 	ADBoost: `Bonus${BonusKey.AttackDamage}` as BonusKey,
 	AttackSpeed: BonusKey.AttackSpeed,
+	health: BonusKey.Health,
 	Health: BonusKey.Health,
 	MagicResist: BonusKey.MagicResist,
 	CritChanceAmpPercent: BonusKey.CritChance,

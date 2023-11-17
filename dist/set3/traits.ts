@@ -536,7 +536,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Valkyrie`,
-		desc: `<expandRow>(@MinUnits@) Valkyrie attacks and spells always critically hit targets below @PercentHP@% health. </expandRow>`,
+		desc: `<expandRow>(@MinUnits@) Valkyrie attacks and spells always critically hit targets below @PercentHP@% HP. </expandRow>`,
 		effects: [
 			{
 				maxUnits: 25000,

@@ -1,7 +1,7 @@
 import { AugmentGroupKey } from '../index.js'
 import type { AugmentData } from '../index'
 
-export const emptyImplementationAugments: AugmentGroupKey[] =  []
+export const emptyImplementationAugments: AugmentGroupKey[] = []
 
 export const activeAugments: AugmentData[] = [
 	{
@@ -74,7 +74,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Beast's Den`,
 		groupID: `beastsDen`,
-		desc: `Units that start combat next to @ShapeshifterReq@+ Shapeshifters gain @AttackSpeed*100@% Attack Speed and Movement Speed. Shapeshifters always gain this bonus. Gain a Gnar.`,
+		desc: `Units that start combat next to @ShapeshifterReq@+ Shapeshifters gain @AS*100@% Attack Speed and Movement Speed. Shapeshifters always gain this bonus. Gain a Gnar.`,
 		effects: {
 			'AS': 0.3499999940395355,
 			'MoveSpeed': 400,
@@ -129,7 +129,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 1,
 		name: `Big Friend I`,
 		groupID: `bigFriend`,
-		desc: `Your units that start combat next to a unit with over @RequiredHealth@ Health take @DamageReductionPercent@% less damage for the rest of combat.`,
+		desc: `Your units that start combat next to a unit with over @RequiredHP@ HP take @DamageReductionPercent@% less damage for the rest of combat.`,
 		effects: {
 			'{5064373e}': 10,
 			'{ddd2dfa6}': 2000,
@@ -140,7 +140,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Big Friend II`,
 		groupID: `bigFriend`,
-		desc: `Your units that start combat next to a unit with over @RequiredHealth@ Health take @DamageReductionPercent@% less damage for the rest of combat.`,
+		desc: `Your units that start combat next to a unit with over @RequiredHP@ HP take @DamageReductionPercent@% less damage for the rest of combat.`,
 		effects: {
 			'{5064373e}': 18,
 			'{ddd2dfa6}': 2000,
@@ -250,7 +250,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 3,
 		name: `Cruel Pact`,
 		groupID: `cruelPact`,
-		desc: `Buying XP costs @HealthCost@ Health instead of gold. Heal @Heal@ Health each round.`,
+		desc: `Buying XP costs @HPCost@ HP instead of gold. Heal @Heal@ HP each round.`,
 		effects: {
 			'Heal': 3,
 			'{6c043596}': 6,
@@ -338,7 +338,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Eternal Protection`,
 		groupID: `eternalProtection`,
-		desc: `When one of your Jade champions would die, the nearest Jade Statue protects them, sacrificing @StatueDamagePct@% of its max Health and transferring @PercentHP@% of the sacrificed Health to the champion. Gain an Ashe.`,
+		desc: `When one of your Jade champions would die, the nearest Jade Statue protects them, sacrificing @StatueDamagePct@% of its max HP and transferring @PercentHP@% of the sacrificed HP to the champion. Gain an Ashe.`,
 		effects: {
 			'{f5278bb2}': 150,
 			'{f694bccb}': 70,
@@ -464,7 +464,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Heroic Presence`,
 		groupID: `heroicPresence`,
-		desc: `Every @TauntInterval@ seconds, Guardians taunt all enemies within range. Enemies that attack a Guardian's shield take magic damage equal to @HealthPercent@% of the shielded unit's max Health (up to once per second). Gain a Thresh.`,
+		desc: `Every @TauntInterval@ seconds, Guardians taunt all enemies within range. Enemies that attack a Guardian's shield take magic damage equal to @HPPercent@% of the shielded unit's max HP (up to once per second). Gain a Thresh.`,
 		effects: {
 			'HPPercent': 7,
 			'{d0c5caca}': 2,
@@ -475,7 +475,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Hot Shot`,
 		groupID: `hotShot`,
-		desc: `Cannoneer's cannon shots burn their targets, dealing @BurnPct@% of the target's maximum Health as true damage over @BurnDuration@ seconds, and reducing healing by @GrievousWoundsPct@% for the duration of the burn. Gain a Tristana.`,
+		desc: `Cannoneer's cannon shots burn their targets, dealing @BurnPct@% of the target's maximum HP as true damage over @BurnDuration@ seconds, and reducing healing by @GrievousWoundsPct@% for the duration of the burn. Gain a Tristana.`,
 		effects: {
 			'BurnDuration': 2,
 			'{b190d56f}': 6,
@@ -487,7 +487,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Inspire`,
 		groupID: `inspire`,
-		desc: `When the Dragonmancer Hero gets a takedown, champions that share a trait with the Dragonmancer Hero gain @AttackSpeed@% Attack Speed for @Duration@ seconds. Gain an Ashe.`,
+		desc: `When the Dragonmancer Hero gets a takedown, champions that share a trait with the Dragonmancer Hero gain @AS@% Attack Speed for @Duration@ seconds. Gain an Ashe.`,
 		effects: {
 			'AS': 70,
 			'Duration': 4,
@@ -532,7 +532,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Last Stand`,
 		groupID: `lastStand`,
-		desc: `The first time you would be eliminated or reduced to 1 Health, instead remain alive. After this effect triggers, your units permanently gain @Health@ Health, @Resists@ Armor and Magic Resist, and @Omnivamp@% Omnivamp.`,
+		desc: `The first time you would be eliminated or reduced to 1 HP, instead remain alive. After this effect triggers, your units permanently gain @HP@ HP, @Resists@ Armor and Magic Resist, and @Omnivamp@% Omnivamp.`,
 		effects: {
 			'HP': 200,
 			'Resists': 20,
@@ -731,7 +731,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Party Time!`,
 		groupID: `partyTime`,
-		desc: `After Revels score a takedown, they gain @AttackSpeedPercent@% Attack Speed for @Duration@ seconds. Gain a Jinx.`,
+		desc: `After Revels score a takedown, they gain @ASPercent@% Attack Speed for @Duration@ seconds. Gain a Jinx.`,
 		effects: {
 			'Duration': 4,
 			'AAPercent': 80,
@@ -752,7 +752,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Personal Training`,
 		groupID: `personalTraining`,
-		desc: `At the end of combat, champions that started combat adjacent to Bruisers permanently gain @Health@ Health, increased by @BonusHealth@ if they survived. Gain a Shen.`,
+		desc: `At the end of combat, champions that started combat adjacent to Bruisers permanently gain @HP@ HP, increased by @BonusHP@ if they survived. Gain a Shen.`,
 		effects: {
 			'BonusHP': 40,
 			'HP': 80,
@@ -763,7 +763,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Personal Training`,
 		groupID: `personalTraining`,
-		desc: `At the end of combat, champions that started combat adjacent to Bruisers permanently gain @Health@ Health, increased by @BonusHealth@ if they survived. Gain a Shen.`,
+		desc: `At the end of combat, champions that started combat adjacent to Bruisers permanently gain @HP@ HP, increased by @BonusHP@ if they survived. Gain a Shen.`,
 		effects: {
 			'BonusHP': 20,
 			'HP': 40,
@@ -840,7 +840,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Press the Attack`,
 		groupID: `pressTheAttack`,
-		desc: `Your Swiftshots' attacks apply a stack on their target for @StackDuration@ seconds. Every third stack deals true damage equal to @PercentHPDamage@% of the target's maximum Health. Gain a Twitch.`,
+		desc: `Your Swiftshots' attacks apply a stack on their target for @StackDuration@ seconds. Every third stack deals true damage equal to @PercentHPDamage@% of the target's maximum HP. Gain a Twitch.`,
 		effects: {
 			'PercentHPDamage': 4,
 			'{64f1bb9b}': 5,
@@ -1092,7 +1092,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Titanic Strength`,
 		groupID: `titanicStrength`,
-		desc: `Bruisers gain @HealthPercent*100@% of their Health as Attack Damage. Gain a Shen.`,
+		desc: `Bruisers gain @HPPercent*100@% of their HP as Attack Damage. Gain a Shen.`,
 		effects: {
 			'HPPercent': 0.014999999664723873,
 		},

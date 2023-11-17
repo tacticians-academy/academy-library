@@ -578,7 +578,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Set8_OxForce`,
-		desc: `Ox Force units gain a range of Attack Speed that ramps as they lose HP. Once per combat, when they would drop below one health, they instead go to one health and become immune to damage for @Seconds@ second.<br><br><expandRow>(@MinUnits@) @MinAS@% - @MaxAS@% Attack Speed</expandRow>`,
+		desc: `Ox Force units gain a range of Attack Speed that ramps as they lose HP. Once per combat, when they would drop below one HP, they instead go to one HP and become immune to damage for @Seconds@ second.<br><br><expandRow>(@MinUnits@) @MinAS@% - @MaxAS@% Attack Speed</expandRow>`,
 		effects: [
 			{
 				maxUnits: 3,

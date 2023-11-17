@@ -4,12 +4,12 @@ import fs from 'fs/promises'
 
 import { BonusKey, COMPONENT_ITEM_API_NAMES, COMPONENT_ITEM_IDS } from '../dist/index.js'
 import type { AugmentData, AugmentTier, ChampionData, ChampionSpellData, EffectVariables, ItemData, ItemTypeKey, SpellCalculations, SpellCalculationPart, SpellCalculationSubpart, SpellVariables, TraitData, SetNumber } from '../dist/index.js'
-import { AugmentGroupKey, ChampionKey, ItemKey, TraitKey } from '../dist/aggregated.js'
+import { AugmentGroupKey, ItemKey, TraitKey } from '../dist/aggregated.js'
 import { importSetData } from '../dist/imports.js'
 
 import { getCurrentSetNumber, getPathTo, loadHardcodedTXT } from './helpers/files.js'
 import { formatJS } from './helpers/formatting.js'
-import { BASE_UNIT_API_NAMES, UNRELEASED_ITEM_NAME_KEYS, NORMALIZE_EFFECT_KEYS, SUBSTITUTE_EFFECT_KEYS, normalizeEffects, mStatSubstitutions, spellCalculationOperatorSubstitutions } from './helpers/normalize.js'
+import { BASE_UNIT_API_NAMES, NORMALIZE_EFFECT_KEYS, SUBSTITUTE_EFFECT_KEYS, normalizeEffects, mStatSubstitutions, spellCalculationOperatorSubstitutions } from './helpers/normalize.js'
 import type { ChampionJSON, ChampionJSONType, ChampionJSONAttack, ChampionJSONSpell, ChampionJSONSpellAttack, ChampionJSONStats, ResponseJSON } from './helpers/types.js'
 import { getAPIName, getAugmentNameKey, getSetDataFrom, removeSymbols } from './helpers/utils.js'
 
@@ -22,7 +22,12 @@ function sortByName(a: {name: string}, b: {name: string}) {
 }
 
 function getEnumKeyFrom(apiName: string) {
-	return apiName.includes('_') ? apiName.split('_')[1] : apiName.replaceAll(' ', '')
+	const splitIndex = apiName.indexOf('_')
+	let key = splitIndex !== -1 ? apiName.slice(splitIndex + 1) : apiName.replaceAll(' ', '')
+	if (key.startsWith('8')) {
+		key = key.replace('8', 'Eight')
+	}
+	return key.replaceAll(/\/|-|\.|_/g, '')
 }
 
 // Load
@@ -64,7 +69,7 @@ itemsData.reverse().forEach(item => {
 	if (!item.name || item.desc == null || RETIRED_ITEM_NAMES?.includes(item.name) || (item.id != null && foundItemIDs.includes(item.id)) || item.desc.toLowerCase().startsWith('tft_item_')) {
 		return
 	}
-	if (item.desc?.length == 0) {
+	if (item.desc) {
 		for (const normalize in NORMALIZE_EFFECT_KEYS) {
 			item.desc = item.desc.replaceAll(normalize, NORMALIZE_EFFECT_KEYS[normalize])
 		}
@@ -86,11 +91,11 @@ itemsData.reverse().forEach(item => {
 		typeKey = 'shimmerscale'
 	} else if (name.includes('item_name')) {
 		typeKey = 'unreleased'
-	} else if (item.apiName != null) { // Set >= 7
-		if (item.apiName === 'TFT_Item_Unknown' || item.apiName === 'TFT_Item_TitanicHydra' || item.apiName === 'TFT_Item_SeraphsEmbrace') {
+	} else if (item.apiName != null) { // Set >= 5
+		if (item.apiName === 'TFT_Item_ForceOfNature' || item.apiName === 'TFT_Item_Unknown' || item.apiName === 'TFT_Item_TitanicHydra' || item.apiName === 'TFT_Item_SeraphsEmbrace') {
 			return
 		}
-		if (item.apiName === 'TFT_Item_ForceOfNature' || item.apiName === 'TFT_Item_KnightsVow' || item.apiName === 'TFT_Item_YoumuusGhostblade') { // Old emblems
+		if (currentSetNumber > 1 && (item.apiName === 'TFT_Item_KnightsVow' || item.apiName === 'TFT_Item_YoumuusGhostblade')) { // Old emblems
 			return
 		}
 		if (item.apiName.includes('_Augment_') || item.apiName.includes('_HyperRollAugment_') || item.apiName.startsWith('TFT_Assist_') || item.apiName.startsWith('TFTEvent_') || item.apiName.startsWith('TFT_Item_Free') || item.apiName.startsWith('TFT_Item_Grant') || item.apiName.startsWith('TFTTutorial_')) {
@@ -137,7 +142,7 @@ itemsData.reverse().forEach(item => {
 			}
 			typeKey = 'completed'
 		}
-	} else if (item.id != null) { // Set < 7
+	} else if (item.id != null) { // Set < 5
 		if (!item.from) {
 			// console.error('Invalid item', item)
 			return
@@ -146,8 +151,6 @@ itemsData.reverse().forEach(item => {
 			typeKey = 'consumable'
 		} else if (iconNormalized.includes('_hex_')) {
 			typeKey = 'hexbuff'
-		} else if (item.id < 0 || UNRELEASED_ITEM_NAME_KEYS.includes(name)) {
-			typeKey = 'unreleased'
 		} else if (item.from.length) {
 			if (item.id !== 88 && item.from.includes(8)) {
 				if (SPATULA_ITEM_IDS != null && item.id != null && !SPATULA_ITEM_IDS.includes(item.id)) {
@@ -364,7 +367,7 @@ if (activeAugments.length) {
 		.map(id => `AugmentGroupKey.${id[0].toUpperCase() + id.slice(1)}`).join(', ')
 	const outputAugmentSections = [
 		`import { AugmentGroupKey } from '../index.js'\nimport type { AugmentData } from '../index'`,
-		`export const emptyImplementationAugments: AugmentGroupKey[] =  [${emptyImplementationAugments ?? ''}]`,
+		`export const emptyImplementationAugments: AugmentGroupKey[] = [${emptyImplementationAugments ?? ''}]`,
 		`export const activeAugments: AugmentData[] = ` + formatJS(activeAugments),
 		`export const inactiveAugments: AugmentData[] = ` + formatJS(unreleasedAugments),
 	]
@@ -430,9 +433,6 @@ const playableChampions = champions
 			return false
 		}
 		if (!champion.icon) {
-			if (champion.apiName !== 'TFT6_Annie' && champion.apiName !== 'TFT_ArmoryKeyComponent' && champion.apiName !== 'TFT_ArmoryKeyCompleted' && champion.apiName !== 'TFT_ArmoryKeyOrnn') {
-				console.log('No icon for champion, excluding.', champion)
-			}
 			return false
 		}
 		return true
@@ -440,7 +440,7 @@ const playableChampions = champions
 	.sort(sortByName)
 
 const outputChampions = await Promise.all(playableChampions.map(async (champion): Promise<ChampionData> => {
-	const apiName = champion.apiName!
+	const apiName = champion.apiName
 	const path = getPathTo(currentSetNumber, `champion/${apiName.toLowerCase()}.json`)
 	const json = JSON.parse(await fs.readFile(path, 'utf8')) as ChampionJSON
 	const characterRecord = getCharacterRecord(json)
@@ -567,7 +567,7 @@ const outputChampions = await Promise.all(playableChampions.map(async (champion)
 			return traitAPIName
 		}
 		const enumKey = getEnumKeyFrom(traitAPIName)
-		return TraitKey != null ? TraitKey[enumKey as keyof typeof TraitKey] : enumKey
+		return TraitKey != null ? TraitKey[enumKey as keyof typeof TraitKey] ?? enumKey : enumKey
 	}) ?? []
 	return {
 		apiName,
@@ -590,9 +590,10 @@ const outputChampions = await Promise.all(playableChampions.map(async (champion)
 // Output
 
 await Promise.all([
-	fs.writeFile(getPathTo(currentSetNumber, 'champions.ts'), `import { ChampionKey } from '../index.js'\nimport type { ChampionData } from '../index'\n\nexport const champions: ChampionData[] = ${formatJS(outputChampions)}\n`),
+	fs.writeFile(getPathTo(currentSetNumber, 'champions.ts'), `import type { ChampionData } from '../index'\n\nexport enum ChampionKey { ${outputChampions.map(c => `${getEnumKeyFrom(c.apiName)} = \`${c.apiName}\``).join(', ')} }\n\nexport const champions: ChampionData[] = ${formatJS(outputChampions)}\n`),
+	// .map(c => { c.apiName = `ChampionKey.${getEnumKeyFrom(c.apiName)}` as ChampionKey; return c })
 	fs.writeFile(getPathTo(currentSetNumber, 'traits.ts'), `import { TraitKey } from '../index.js'\nimport type { TraitData } from '../index'\n\nexport const traits: TraitData[] = ${formatJS(traits)}\n`),
-	fs.writeFile(getPathTo(currentSetNumber, 'items.ts'), `import { ItemKey } from '../index.js'\nimport type { ItemData } from '../index'\n\n${outputItemSections.join('\n\n')}\n`),
+	fs.writeFile(getPathTo(currentSetNumber, 'items.ts'), `import type { ItemData } from '../index'\n\n${outputItemSections.join('\n\n')}\n`),
 ])
 
 // Transform
@@ -755,13 +756,6 @@ if (activeAugments != null) {
 	if (augmentKeys.length) {
 		console.log(`AGGREGATE AugmentGroupKey: ${Array.from(new Set(augmentKeys)).join(', ')}`)
 	}
-}
-
-const championKeys = playableChampions
-	.filter(champion => !(getEnumKeyFrom(champion.apiName!) in ChampionKey))
-	.map(champion => `${getEnumKeyFrom(champion.apiName!)} = \`${champion.name}\``)
-if (championKeys.length) {
-	console.log(`AGGREGATE ChampionKey: ${championKeys.join(', ')}`)
 }
 
 const itemKeys = currentItemsByType['component'].concat(currentItemsByType['completed'], currentItemsByType['spatula'])

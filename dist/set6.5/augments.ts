@@ -1,7 +1,7 @@
 import { AugmentGroupKey } from '../index.js'
 import type { AugmentData } from '../index'
 
-export const emptyImplementationAugments: AugmentGroupKey[] =  [AugmentGroupKey.AncientArchives, AugmentGroupKey.BandOfThieves, AugmentGroupKey.BinaryAirdrop, AugmentGroupKey.CalculatedLoss, AugmentGroupKey.ClearMind, AugmentGroupKey.ComponentGrabBag, AugmentGroupKey.Dominance, AugmentGroupKey.FourScore, AugmentGroupKey.FutureSight, AugmentGroupKey.GoldenGifts, AugmentGroupKey.GoldenTicket, AugmentGroupKey.HighEndShopping, AugmentGroupKey.HighFive, AugmentGroupKey.HighRoller, AugmentGroupKey.HyperRoll, AugmentGroupKey.ItemGrabBag, AugmentGroupKey.Junkyard, AugmentGroupKey.LevelUp, AugmentGroupKey.MarchOfProgress, AugmentGroupKey.MercenaryHeart, AugmentGroupKey.MercenaryCrest, AugmentGroupKey.MercenarySoul, AugmentGroupKey.MetabolicAccelerator, AugmentGroupKey.NewRecruit, AugmentGroupKey.PandorasItems, AugmentGroupKey.Payday, AugmentGroupKey.PhonyFrontline, AugmentGroupKey.Pirates, AugmentGroupKey.Recombobulator, AugmentGroupKey.RichGetRicher, AugmentGroupKey.SalvageBin, AugmentGroupKey.TheGoldenEgg, AugmentGroupKey.ThievingRascals, AugmentGroupKey.ThreesCompany, AugmentGroupKey.Tinker, AugmentGroupKey.TinyTitans, AugmentGroupKey.TradeSector, AugmentGroupKey.TreasureTrove, AugmentGroupKey.TrueTwos, AugmentGroupKey.Windfall, AugmentGroupKey.WiseSpending]
+export const emptyImplementationAugments: AugmentGroupKey[] = [AugmentGroupKey.AncientArchives, AugmentGroupKey.BandOfThieves, AugmentGroupKey.BinaryAirdrop, AugmentGroupKey.CalculatedLoss, AugmentGroupKey.ClearMind, AugmentGroupKey.ComponentGrabBag, AugmentGroupKey.Dominance, AugmentGroupKey.FourScore, AugmentGroupKey.FutureSight, AugmentGroupKey.GoldenGifts, AugmentGroupKey.GoldenTicket, AugmentGroupKey.HighEndShopping, AugmentGroupKey.HighFive, AugmentGroupKey.HighRoller, AugmentGroupKey.HyperRoll, AugmentGroupKey.ItemGrabBag, AugmentGroupKey.Junkyard, AugmentGroupKey.LevelUp, AugmentGroupKey.MarchOfProgress, AugmentGroupKey.MercenaryHeart, AugmentGroupKey.MercenaryCrest, AugmentGroupKey.MercenarySoul, AugmentGroupKey.MetabolicAccelerator, AugmentGroupKey.NewRecruit, AugmentGroupKey.PandorasItems, AugmentGroupKey.Payday, AugmentGroupKey.PhonyFrontline, AugmentGroupKey.Pirates, AugmentGroupKey.Recombobulator, AugmentGroupKey.RichGetRicher, AugmentGroupKey.SalvageBin, AugmentGroupKey.TheGoldenEgg, AugmentGroupKey.ThievingRascals, AugmentGroupKey.ThreesCompany, AugmentGroupKey.Tinker, AugmentGroupKey.TinyTitans, AugmentGroupKey.TradeSector, AugmentGroupKey.TreasureTrove, AugmentGroupKey.TrueTwos, AugmentGroupKey.Windfall, AugmentGroupKey.WiseSpending]
 
 export const activeAugments: AugmentData[] = [
 	{
@@ -1109,7 +1109,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 1,
 		name: `Keepers I`,
 		groupID: `keepers`,
-		desc: `At the start of combat, your units grant adjacent allies a @ShieldHP@ health shield for @ShieldDuration@ seconds.`,
+		desc: `At the start of combat, your units grant adjacent allies a @ShieldHP@ HP shield for @ShieldDuration@ seconds.`,
 		effects: {
 			'ShieldDuration': 8,
 			'ShieldHP': 160,
@@ -1120,7 +1120,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Keepers II`,
 		groupID: `keepers`,
-		desc: `At the start of combat, your units grant adjacent allies a @ShieldHP@ health shield for @ShieldDuration@ seconds.`,
+		desc: `At the start of combat, your units grant adjacent allies a @ShieldHP@ HP shield for @ShieldDuration@ seconds.`,
 		effects: {
 			'ShieldDuration': 8,
 			'ShieldHP': 240,
@@ -1640,7 +1640,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Smoke Bomb`,
 		groupID: `smokeBomb`,
-		desc: `The first time an Assassin drops to @HPThreshold@% health, they briefly enter stealth, becoming untargetable and shedding all negative effects. Any excess damage is reduced by @DamageReduction@%. Gain a Talon.`,
+		desc: `The first time an Assassin drops to @HPThreshold@% HP, they briefly enter stealth, becoming untargetable and shedding all negative effects. Any excess damage is reduced by @DamageReduction@%. Gain a Talon.`,
 		effects: {
 			'DamageReduction': 60,
 			'HPThreshold': 70,
@@ -2249,7 +2249,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Keepers III`,
 		groupID: `keepers`,
-		desc: `At the start of combat, your units grant adjacent allies a @ShieldHP@ health shield for @ShieldDuration@ seconds.`,
+		desc: `At the start of combat, your units grant adjacent allies a @ShieldHP@ HP shield for @ShieldDuration@ seconds.`,
 		effects: {
 			'ShieldDuration': 8,
 			'ShieldHP': 250,
@@ -2286,5 +2286,94 @@ export const inactiveAugments: AugmentData[] = [
 			'Delay': 10,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Second-Wind-III.TFT_Set6_Stage2.dds`,
+	},
+	{
+		tier: 3,
+		name: `TFT6_Augment_BrawlerHPVeteran_Name`,
+		groupID: `tFT6_Augment_BrawlerHPVeteran_Name`,
+		desc: `TFT6_Augment_BrawlerHPVeteran_Description`,
+		effects: {
+			'{cafcfa4a}': 100,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/TFT6_Augment_BrawlerVeterans.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `TFT6_Augment_ColossusPummel_Name`,
+		groupID: `tFT6_Augment_ColossusPummel_Name`,
+		desc: `TFT6_Augment_ColossusPummel_Description`,
+		effects: {
+			'CritChance': 75,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Pummel.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `TFT6_Augment_CriticalThinking_Name`,
+		groupID: `tFT6_Augment_CriticalThinking_Name`,
+		desc: `TFT6_Augment_CriticalThinking_Description`,
+		effects: {},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/TFT6_Augment_ScholarCriticalThinking.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `TFT6_Augment_ExperimentalChallenger_Name`,
+		groupID: `tFT6_Augment_ExperimentalChallenger_Name`,
+		desc: `TFT6_Augment_ExperimentalChallenger_Desc`,
+		effects: {},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Mutant.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `TFT6_Augment_InfinityCane_Name`,
+		groupID: `tFT6_Augment_InfinityCane_Name`,
+		desc: `TFT6_Augment_InfinityCane_Description`,
+		effects: {
+			'{dbb90075}': 0.5,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/TFT6_Augment_EnchanterInfinityCane.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `TFT6_Augment_NeekoNeeko_Name`,
+		groupID: `tFT6_Augment_NeekoNeeko_Name`,
+		desc: `TFT6_Augment_NeekoNeeko_Description`,
+		effects: {
+			'{c1186f58}': 2,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/TFT6_Augment_NeekoNeeko.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `TFT6_Augment_Overclock_Name`,
+		groupID: `tFT6_Augment_Overclock_Name`,
+		desc: `TFT6_Augment_Overclock_Description`,
+		effects: {
+			'AS': 200,
+			'Duration': 5,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/TFT6_Augment_ClockworkOverclock.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `TFT6_Augment_Overclock_Name`,
+		groupID: `tFT6_Augment_Overclock_Name`,
+		desc: `TFT6_Augment_Overclock_Description`,
+		effects: {
+			'AS': 400,
+			'Duration': 10,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/TFT6_Augment_ClockworkOverclock.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `TFT6_Augment_Overclock_Name`,
+		groupID: `tFT6_Augment_Overclock_Name`,
+		desc: `TFT6_Augment_Overclock_Description`,
+		effects: {
+			'AS': 400,
+			'Duration': 5,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/TFT6_Augment_ClockworkOverclock.TFT_Set6.dds`,
 	},
 ]

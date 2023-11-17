@@ -400,7 +400,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Set7_Guardian`,
-		desc: `Once per combat at @HPThreshold@% HP, Guardians shield themselves and their closest ally for a percent of their maximum HP. Shields stack!<br><br><expandRow> (@MinUnits@) @ShieldPercentAmount@% of max health shield</expandRow>`,
+		desc: `Once per combat at @HPThreshold@% HP, Guardians shield themselves and their closest ally for a percent of their maximum HP. Shields stack!<br><br><expandRow> (@MinUnits@) @ShieldPercentAmount@% of max HP shield</expandRow>`,
 		effects: [
 			{
 				maxUnits: 3,
@@ -849,7 +849,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Set7_Scalescorn`,
-		desc: `Scalescorn champions take @PercentDamageReduction@% reduced damage from enemies with more than @HPThreshold@ health, and they also deal a percent of their damage as additional magic damage.<br><br><expandRow>(@MinUnits@) @PercentBonusDamage@% magic damage</expandRow>`,
+		desc: `Scalescorn champions take @PercentDamageReduction@% reduced damage from enemies with more than @HPThreshold@ HP, and they also deal a percent of their damage as additional magic damage.<br><br><expandRow>(@MinUnits@) @PercentBonusDamage@% magic damage</expandRow>`,
 		effects: [
 			{
 				maxUnits: 3,

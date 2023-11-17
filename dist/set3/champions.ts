@@ -1,5 +1,6 @@
-import { ChampionKey } from '../index.js'
 import type { ChampionData } from '../index'
+
+export enum ChampionKey { Ahri = `TFT3_Ahri`, Annie = `TFT3_Annie`, Ashe = `TFT3_Ashe`, AurelionSol = `TFT3_AurelionSol`, Blitzcrank = `TFT3_Blitzcrank`, Caitlyn = `TFT3_Caitlyn`, ChoGath = `TFT3_ChoGath`, Darius = `TFT3_Darius`, Ekko = `TFT3_Ekko`, Ezreal = `TFT3_Ezreal`, Fiora = `TFT3_Fiora`, Fizz = `TFT3_Fizz`, Gangplank = `TFT3_Gangplank`, Graves = `TFT3_Graves`, Irelia = `TFT3_Irelia`, JarvanIV = `TFT3_JarvanIV`, Jayce = `TFT3_Jayce`, Jhin = `TFT3_Jhin`, Jinx = `TFT3_Jinx`, KaiSa = `TFT3_KaiSa`, Karma = `TFT3_Karma`, Kassadin = `TFT3_Kassadin`, Kayle = `TFT3_Kayle`, NPCKayn = `TFT3_NPC_Kayn`, NPCKaynElite = `TFT3_NPC_KaynElite`, KhaZix = `TFT3_KhaZix`, Leona = `TFT3_Leona`, Lucian = `TFT3_Lucian`, Lulu = `TFT3_Lulu`, Lux = `TFT3_Lux`, Malphite = `TFT3_Malphite`, MasterYi = `TFT3_MasterYi`, MissFortune = `TFT3_MissFortune`, Mordekaiser = `TFT3_Mordekaiser`, Neeko = `TFT3_Neeko`, Poppy = `TFT3_Poppy`, Rakan = `TFT3_Rakan`, Rumble = `TFT3_Rumble`, Shaco = `TFT3_Shaco`, Shen = `TFT3_Shen`, Sona = `TFT3_Sona`, Soraka = `TFT3_Soraka`, SuperMech = `TFT3_SuperMech`, Syndra = `TFT3_Syndra`, Thresh = `TFT3_Thresh`, TwistedFate = `TFT3_TwistedFate`, VelKoz = `TFT3_VelKoz`, Vi = `TFT3_Vi`, WuKong = `TFT3_WuKong`, Xayah = `TFT3_Xayah`, Xerath = `TFT3_Xerath`, XinZhao = `TFT3_XinZhao`, Yasuo = `TFT3_Yasuo`, Ziggs = `TFT3_Ziggs`, Zoe = `TFT3_Zoe` }
 
 export const champions: ChampionData[] = [
 	{
@@ -1314,7 +1315,7 @@ export const champions: ChampionData[] = [
 			moveSpeed: 500,
 			range: 1,
 		},
-		basicAttackMissileSpeed: 3000,
+		basicAttackMissileSpeed: 3800,
 		critAttackMissileSpeed: 3400,
 		passive: undefined,
 		spells: [
@@ -5642,7 +5643,7 @@ export const champions: ChampionData[] = [
 			moveSpeed: 500,
 			range: 3,
 		},
-		basicAttackMissileSpeed: 1600,
+		basicAttackMissileSpeed: 1900,
 		critAttackMissileSpeed: 2200,
 		passive: undefined,
 		spells: [

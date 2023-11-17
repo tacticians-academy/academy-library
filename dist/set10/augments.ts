@@ -1,14 +1,14 @@
 import { AugmentGroupKey } from '../index.js'
 import type { AugmentData } from '../index'
 
-export const emptyImplementationAugments: AugmentGroupKey[] =  []
+export const emptyImplementationAugments: AugmentGroupKey[] = []
 
 export const activeAugments: AugmentData[] = [
 	{
 		tier: 2,
 		name: `Big Gains`,
 		groupID: `bigGains`,
-		desc: `Your team gains @StartingHealth@ bonus Health, and permanently gains @Health@ Health every @NumTakedowns@ takedowns.`,
+		desc: `Your team gains @StartingHP@ bonus HP, and permanently gains @HP@ HP every @NumTakedowns@ takedowns.`,
 		effects: {
 			'HP': 10,
 			'StartingHP': 80,
@@ -43,7 +43,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Blinged Out`,
 		groupID: `blingedOut`,
-		desc: `Your True Damage champions gain @health@ Health and @attackspeed*100@% Attack Speed for each item they are holding. Gain a Yasuo and a Senna.`,
+		desc: `Your True Damage champions gain @HP@ HP and @attackspeed*100@% Attack Speed for each item they are holding. Gain a Yasuo and a Senna.`,
 		effects: {
 			'AS': 0.07999999821186066,
 			'HP': 100,
@@ -129,7 +129,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Encore!`,
 		groupID: `encore`,
-		desc: `The first time your Headliner dies, they become invulerable and heal @Heal*100@% of their max Health over @repairtime@ seconds instead.`,
+		desc: `The first time your Headliner dies, they become invulerable and heal @Heal*100@% of their max HP over @repairtime@ seconds instead.`,
 		effects: {
 			'Heal': 0.6000000238418579,
 			'RepairTime': 1.5,
@@ -212,7 +212,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Heartthrobs`,
 		groupID: `heartthrobs`,
-		desc: `Keep @percent*100@% of the Heartsteel hearts you convert into rewards. Your Heartsteel champions gain @Health@ Health. Gain a K'Sante and an Aphelios.`,
+		desc: `Keep @percent*100@% of the Heartsteel hearts you convert into rewards. Your Heartsteel champions gain @HP@ HP. Gain a K'Sante and an Aphelios.`,
 		effects: {
 			'HP': 200,
 			'{75f9fa5a}': 0.20000000298023224,
@@ -223,7 +223,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Heavy Hitters`,
 		groupID: `heavyHitters`,
-		desc: `Your units with at least @MaxHealthThreshold@ max Health gain Attack Damage and Ability Power equal to @PercentMaxHealthDamage*100@% of their max Health.`,
+		desc: `Your units with at least @MaxHPThreshold@ max HP gain Attack Damage and Ability Power equal to @PercentMaxHPDamage*100@% of their max HP.`,
 		effects: {
 			'PercentMaxHPDamage': 0.009999999776482582,
 			'{af701916}': 1500,
@@ -255,7 +255,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 3,
 		name: `Hologram`,
 		groupID: `hologram`,
-		desc: `Create a clone of your Headliner champion with @MinBonusTOOLTIPONLY*100@% -@MaxBonusTOOLTIPONLY*100@% of its base health (based on stage level). You cannot equip items on the clone.`,
+		desc: `Create a clone of your Headliner champion with @MinBonusTOOLTIPONLY*100@% -@MaxBonusTOOLTIPONLY*100@% of its base HP (based on stage level). You cannot equip items on the clone.`,
 		effects: {
 			'{1a08838d}': 1.2999999523162842,
 			'{2100fa3b}': 1,
@@ -268,7 +268,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Insert Coin`,
 		groupID: `insertCoin`,
-		desc: `Your 8-Bit champions execute targets below @ExecuteThreshold*100@% Health. Executions have a @BaseDropChance@% chance to drop @Gold@ gold, increased by @LevelScalar@% for each high score achieved. Gain a Corki and a Garen.<br><br><tftitemrules>Current drop chance: @TFTUnitProperty.item:TFT10_Augment_InsertCoin_GoldChance@%</tftitemrules>`,
+		desc: `Your 8-Bit champions execute targets below @ExecuteThreshold*100@% HP. Executions have a @BaseDropChance@% chance to drop @Gold@ gold, increased by @LevelScalar@% for each high score achieved. Gain a Corki and a Garen.<br><br><tftitemrules>Current drop chance: @TFTUnitProperty.item:TFT10_Augment_InsertCoin_GoldChance@%</tftitemrules>`,
 		effects: {
 			'Gold': 1,
 			'{2a5ab725}': 2,
@@ -281,7 +281,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Inspiring Epitaph`,
 		groupID: `inspiringEpitaph`,
-		desc: `When a unit dies, the nearest ally gains a @ShieldRatio*100@% max Health Shield and @AttackSpeed*100@% stacking Attack Speed.`,
+		desc: `When a unit dies, the nearest ally gains a @ShieldRatio*100@% max HP Shield and @AS*100@% stacking Attack Speed.`,
 		effects: {
 			'AS': 0.10000000149011612,
 			'ShieldRatio': 0.30000001192092896,
@@ -304,7 +304,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Little Buddies`,
 		groupID: `littleBuddies`,
-		desc: `Your 4-cost and 5-cost champions gain @health@ Health and @AttackSpeed*100@% Attack Speed  for every 1-cost and 2-cost champion on your board.`,
+		desc: `Your 4-cost and 5-cost champions gain @HP@ HP and @AS*100@% Attack Speed  for every 1-cost and 2-cost champion on your board.`,
 		effects: {
 			'AS': 0.10000000149011612,
 			'HP': 150,
@@ -347,7 +347,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Metalheads`,
 		groupID: `metalheads`,
-		desc: `Your Pentakill champions are immune to crowd control for the first @immuneduration@ seconds of combat. They heal @heal*100@% of their max Health on takedown. Gain a Kayle and a Gnar.`,
+		desc: `Your Pentakill champions are immune to crowd control for the first @immuneduration@ seconds of combat. They heal @heal*100@% of their max HP on takedown. Gain a Kayle and a Gnar.`,
 		effects: {
 			'Heal': 0.03999999910593033,
 			'{57482ad4}': 12,
@@ -390,7 +390,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Remember Your Roots`,
 		groupID: `rememberYourRoots`,
-		desc: `Allies sharing a trait with your Headliner gain @health@ Health and @as@% Attack Speed.`,
+		desc: `Allies sharing a trait with your Headliner gain @HP@ HP and @as@% Attack Speed.`,
 		effects: {
 			'AS': 10,
 			'HP': 200,
@@ -425,7 +425,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Share the Spotlight`,
 		groupID: `shareTheSpotlight`,
-		desc: `Your units that start combat in a lighted hex gain a @HealthShieldPercent*100@% max Health shield for @Duration@ seconds. Gain a Kaisa and Lillia.`,
+		desc: `Your units that start combat in a lighted hex gain a @HPShieldPercent*100@% max HP shield for @Duration@ seconds. Gain a Kaisa and Lillia.`,
 		effects: {
 			'Duration': 10,
 			'{3788e887}': 0.30000001192092896,
@@ -472,7 +472,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 1,
 		name: `Stimpack`,
 		groupID: `stimpack`,
-		desc: `Gain @NumComponents@ components after you lose @HealthThreshold@ player health.<br><br>(Health lost this game: @TFTUnitProperty.item:TFT10_Augment_Stimpack_HealthLost@)`,
+		desc: `Gain @NumComponents@ components after you lose @HPThreshold@ player HP.<br><br>(HP lost this game: @TFTUnitProperty.item:TFT10_Augment_Stimpack_HPLost@)`,
 		effects: {
 			'HPThreshold': 50,
 			'NumComponents': 4,
@@ -504,7 +504,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 3,
 		name: `Talent Search`,
 		groupID: `talentSearch`,
-		desc: `All of your champions gain their unique Headliner effect. In Addition, your Headliner gains @HLHealth@ Health and @HLAttackspeed*100@% Attack Speed.`,
+		desc: `All of your champions gain their unique Headliner effect. In Addition, your Headliner gains @HLHP@ HP and @HLAttackspeed*100@% Attack Speed.`,
 		effects: {
 			'{46364c93}': 100,
 			'{76821384}': 0.10000000149011612,
@@ -515,7 +515,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `That's Jazz, Baby!`,
 		groupID: `thatsJazzBaby`,
-		desc: `Gain a Bard. Combat start: Jazz champions gain permanent bonuses based on the number of active traits. <br>@firstBreakpoint@: @Health@ max Health<br>@secondBreakpoint@: and @AS@% Attack Speed<br>@thirdBreakpoint@: and @ad@% Attack Damage and @ap@ Ability Power`,
+		desc: `Gain a Bard. Combat start: Jazz champions gain permanent bonuses based on the number of active traits. <br>@firstBreakpoint@: @HP@ max HP<br>@secondBreakpoint@: and @AS@% Attack Speed<br>@thirdBreakpoint@: and @ad@% Attack Damage and @ap@ Ability Power`,
 		effects: {
 			'AD': 2,
 			'AP': 2,
@@ -553,7 +553,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Too Big to Fail`,
 		groupID: `tooBigToFail`,
-		desc: `On death, Bruisers deal @ExplosionMaxHealthPercent@% of their max Health to enemies within @Hex@ hex. After @TimeInCombat@ seconds, expand the range to @ImprovedHex@ hexes. Gain an Olaf and a Gragas.`,
+		desc: `On death, Bruisers deal @ExplosionMaxHPPercent@% of their max HP to enemies within @Hex@ hex. After @TimeInCombat@ seconds, expand the range to @ImprovedHex@ hexes. Gain an Olaf and a Gragas.`,
 		effects: {
 			'ExplosionMaxHPPercent': 30,
 			'{867b15cb}': 20,
@@ -566,7 +566,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Twin Terror I`,
 		groupID: `twinTerror`,
-		desc: `When you field exactly 2 copies of a champion, they both gain @BonusStats*10@ Health, @BonusStats@% Attack Speed, and @BonusStats@% Critical Strike Chance. Anytime you 3-star, gain a 2-star copy.`,
+		desc: `When you field exactly 2 copies of a champion, they both gain @BonusStats*10@ HP, @BonusStats@% Attack Speed, and @BonusStats@% Critical Strike Chance. Anytime you 3-star, gain a 2-star copy.`,
 		effects: {
 			'BonusStats': 25,
 		},
@@ -576,7 +576,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 3,
 		name: `Twin Terror II`,
 		groupID: `twinTerror`,
-		desc: `When you field exactly 2 copies of a champion, they both gain @BonusStats*10@ Health, @BonusStats@% Attack Speed, and @BonusStats@% Critical Strike Chance. Anytime you 3-star, gain a 2-star copy.`,
+		desc: `When you field exactly 2 copies of a champion, they both gain @BonusStats*10@ HP, @BonusStats@% Attack Speed, and @BonusStats@% Critical Strike Chance. Anytime you 3-star, gain a 2-star copy.`,
 		effects: {
 			'BonusStats': 35,
 		},
@@ -586,7 +586,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 1,
 		name: `Vampirism I`,
 		groupID: `vampirism`,
-		desc: `Your team gains @BaseHP@ Health. Gain another @BonusHPPer5MissingHealth@ Health and @OmnivampPercentPer5MissingHealth*100@% Omnivamp per 5 missing player health.<br><rules>(Omnivamp: healing for a percent of damage dealt)</rules>`,
+		desc: `Your team gains @BaseHP@ HP. Gain another @BonusHPPer5MissingHP@ HP and @OmnivampPercentPer5MissingHP*100@% Omnivamp per 5 missing player HP.<br><rules>(Omnivamp: healing for a percent of damage dealt)</rules>`,
 		effects: {
 			'BaseHP': 20,
 			'{26c36394}': 4,
@@ -598,7 +598,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Vampirism II`,
 		groupID: `vampirism`,
-		desc: `Your team gains @BaseHP@ Health. Gain another @BonusHPPer5MissingHealth@ Health and @OmnivampPercentPer5MissingHealth*100@% Omnivamp per 5 missing player health.<br><rules>(Omnivamp: healing for a percent of damage dealt)</rules>`,
+		desc: `Your team gains @BaseHP@ HP. Gain another @BonusHPPer5MissingHP@ HP and @OmnivampPercentPer5MissingHP*100@% Omnivamp per 5 missing player HP.<br><rules>(Omnivamp: healing for a percent of damage dealt)</rules>`,
 		effects: {
 			'BaseHP': 50,
 			'{26c36394}': 6,

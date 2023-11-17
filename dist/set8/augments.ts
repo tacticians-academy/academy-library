@@ -1,7 +1,7 @@
 import { AugmentGroupKey } from '../index.js'
 import type { AugmentData } from '../index'
 
-export const emptyImplementationAugments: AugmentGroupKey[] =  []
+export const emptyImplementationAugments: AugmentGroupKey[] = []
 
 export const activeAugments: AugmentData[] = [
 	{
@@ -520,7 +520,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Threat Level: Maximum`,
 		groupID: `threatLevelMaximum`,
-		desc: `Combat start: Threats gain @MaxHealthIncrease@ maximum Health for every Threat champion on your board.`,
+		desc: `Combat start: Threats gain @MaxHPIncrease@ maximum HP for every Threat champion on your board.`,
 		effects: {
 			'{20cc7fa3}': 66,
 		},
@@ -579,7 +579,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Adaptive Defensives`,
 		groupID: `adaptiveDefensives`,
-		desc: `Gain a Camille. She gains @BonusAD@% Attack Damage. The first time she drops below @HealthThreshold*100@% Health, she gains a shield equal to @ADScaling*100@% of her Attack Damage.`,
+		desc: `Gain a Camille. She gains @BonusAD@% Attack Damage. The first time she drops below @HPThreshold*100@% HP, she gains a shield equal to @ADScaling*100@% of her Attack Damage.`,
 		effects: {
 			'ADScaling': 5,
 			'BonusAD': 20,
@@ -591,7 +591,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Aim Assist`,
 		groupID: `aimAssist`,
-		desc: `Gain a LeBlanc. For every @SigilCount@ sigils fired by her Ability, she fires an extra sigil at the lowest Health enemy.`,
+		desc: `Gain a LeBlanc. For every @SigilCount@ sigils fired by her Ability, she fires an extra sigil at the lowest HP enemy.`,
 		effects: {
 			'{cd83dc7e}': 3,
 		},
@@ -677,7 +677,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Back for Blood`,
 		groupID: `backForBlood`,
-		desc: `Gain a Bel'Veth. She has @BaseOmnivamp*100@% <TFTKeyword>Omnivamp</TFTKeyword>, tripled while under @HealthThreshold*100@% Health.`,
+		desc: `Gain a Bel'Veth. She has @BaseOmnivamp*100@% <TFTKeyword>Omnivamp</TFTKeyword>, tripled while under @HPThreshold*100@% HP.`,
 		effects: {
 			'HPThreshold': 0.5,
 			'{bb5fb1b0}': 0.75,
@@ -689,7 +689,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Be the Stone`,
 		groupID: `beTheStone`,
-		desc: `Gain a Taliyah. Combat start: She shields the @TargetCount@ highest Health allies for @HealthPercent*100@% of their maximum Health.`,
+		desc: `Gain a Taliyah. Combat start: She shields the @TargetCount@ highest HP allies for @HPPercent*100@% of their maximum HP.`,
 		effects: {
 			'Duration': 60,
 			'HPPercent': 0.5,
@@ -701,7 +701,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Behemoth`,
 		groupID: `behemoth`,
-		desc: `Gain an Alistar. He has @BonusHealth@ bonus Health and his Ability deals bonus damage equal to @PercentHealth@% of his maximum Health.`,
+		desc: `Gain an Alistar. He has @BonusHP@ bonus HP and his Ability deals bonus damage equal to @PercentHP@% of his maximum HP.`,
 		effects: {
 			'BonusHP': 450,
 			'PercentHP': 30,
@@ -722,7 +722,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Boxing Lessons`,
 		groupID: `boxingLessons`,
-		desc: `Gain a Vi. When you field her, your team gains @BonusHealth@ bonus Health.`,
+		desc: `Gain a Vi. When you field her, your team gains @BonusHP@ bonus HP.`,
 		effects: {
 			'BonusHP': 180,
 		},
@@ -732,7 +732,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Bunny Mercenary`,
 		groupID: `bunnyMercenary`,
-		desc: `Gain a Miss Fortune. Her Ability covers a wider cone. When she casts her ability,  she gains a @ShieldAmount@ Health shield for @ShieldDuration@ seconds.`,
+		desc: `Gain a Miss Fortune. Her Ability covers a wider cone. When she casts her ability,  she gains a @ShieldAmount@ HP shield for @ShieldDuration@ seconds.`,
 		effects: {
 			'ShieldAmount': 200,
 			'ShieldDuration': 2,
@@ -743,7 +743,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Burning Spirit`,
 		groupID: `burningSpirit`,
-		desc: `Gain an Annie. When you field her, your team gains @BonusAP@ Ability Power, tripled while they are below @HealthThreshold*100@% Health.`,
+		desc: `Gain an Annie. When you field her, your team gains @BonusAP@ Ability Power, tripled while they are below @HPThreshold*100@% HP.`,
 		effects: {
 			'HPThreshold': 0.5,
 			'BonusAP': 15,
@@ -786,7 +786,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Cleansing Safeguard`,
 		groupID: `cleansingSafeguard`,
-		desc: `Gain a Lee Sin. His Ability costs @ManaReduction@ less Mana to cast. When he casts, he sheds all negative effects and heals @HealPercent*100@% of his missing Health.`,
+		desc: `Gain a Lee Sin. His Ability costs @ManaReduction@ less Mana to cast. When he casts, he sheds all negative effects and heals @HealPercent*100@% of his missing HP.`,
 		effects: {
 			'HealPercent': 0.18000000715255737,
 			'{7ccd3647}': 30,
@@ -905,7 +905,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Contempt for the Weak`,
 		groupID: `contemptForTheWeak`,
-		desc: `Gain a Zed. When you field him, your team gains @AttackSpeed*100@% Attack Speed. On takedown, your team dashes to a new enemy and triples this bonus for @Duration@ seconds.`,
+		desc: `Gain a Zed. When you field him, your team gains @AS*100@% Attack Speed. On takedown, your team dashes to a new enemy and triples this bonus for @Duration@ seconds.`,
 		effects: {
 			'AS': 0.07000000029802322,
 			'Duration': 2.5,
@@ -946,7 +946,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Cull the Meek`,
 		groupID: `cullTheMeek`,
-		desc: `Gain a Renekton. When you field him, your team deals @DamageAmp@% bonus damage, tripled against enemies below @HPPercent@% Health.`,
+		desc: `Gain a Renekton. When you field him, your team deals @DamageAmp@% bonus damage, tripled against enemies below @HPPercent@% HP.`,
 		effects: {
 			'DamageAmp': 8,
 			'HPPercent': 50,
@@ -967,7 +967,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Daredevil`,
 		groupID: `daredevil`,
-		desc: `Gain a Samira. Your team gains @AttackSpeed*100@% Attack Speed for each @Health@ Tactician Health missing.`,
+		desc: `Gain a Samira. Your team gains @AS*100@% Attack Speed for each @HP@ Tactician HP missing.`,
 		effects: {
 			'AS': 0.03500000014901161,
 			'HP': 10,
@@ -991,7 +991,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Divine Ascent`,
 		groupID: `divineAscent`,
-		desc: `Gain a Kayle. She gains bonuses per star level:<br>1: @AttackSpeed*100@% Attack Speed<br>2: And +@BonusRange@ Attack Range<br>3: And attacks fire @BonusAttacks@ extra bolts that deal @BonusAttackReducedDamage*100@% damage`,
+		desc: `Gain a Kayle. She gains bonuses per star level:<br>1: @AS*100@% Attack Speed<br>2: And +@BonusRange@ Attack Range<br>3: And attacks fire @BonusAttacks@ extra bolts that deal @BonusAttackReducedDamage*100@% damage`,
 		effects: {
 			'AS': 0.5,
 			'{0c712be9}': 3,
@@ -1067,7 +1067,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Endless Pizza`,
 		groupID: `endlessPizza`,
-		desc: `Gain a Sivir. When you field her, your team heals @HealPercent*100@% of their missing Health and sheds all negative effects every @Frequency@ seconds.`,
+		desc: `Gain a Sivir. When you field her, your team heals @HealPercent*100@% of their missing HP and sheds all negative effects every @Frequency@ seconds.`,
 		effects: {
 			'HealPercent': 0.11999999731779099,
 			'Frequency': 8,
@@ -1088,7 +1088,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Evasion`,
 		groupID: `evasion`,
-		desc: `Gain a Jax. When you field him, your team gains @DodgeChance@% Dodge Chance for @DodgeDuration@ seconds the first time they fall below @HealthThreshold@% Health each combat.`,
+		desc: `Gain a Jax. When you field him, your team gains @DodgeChance@% Dodge Chance for @DodgeDuration@ seconds the first time they fall below @HPThreshold@% HP each combat.`,
 		effects: {
 			'HPThreshold': 50,
 			'{852a9a90}': 2,
@@ -1440,7 +1440,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Growth Spurt`,
 		groupID: `growthSpurt`,
-		desc: `Gain a Lulu. When she casts her Ability, she gains @BonusHealth@ bonus Health and @BonusAP@ Ability Power (this can stack).`,
+		desc: `Gain a Lulu. When she casts her Ability, she gains @BonusHP@ bonus HP and @BonusAP@ Ability Power (this can stack).`,
 		effects: {
 			'BonusHP': 100,
 			'BonusAP': 20,
@@ -1451,7 +1451,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Guardian Spirit`,
 		groupID: `guardianSpirit`,
-		desc: `Gain a Malphite. When you field him, your team restores @HealPercent@% of their missing Health when they cast Abilities.`,
+		desc: `Gain a Malphite. When you field him, your team restores @HealPercent@% of their missing HP when they cast Abilities.`,
 		effects: {
 			'HealPercent': 20,
 		},
@@ -1469,7 +1469,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Heartstopper`,
 		groupID: `heartstopper`,
-		desc: `Gain a Viego. He has @BonusAP@ Ability Power, and his Ability deals up to @IncreasedDamagePercent*100@% increased damage based on the enemy's missing Health.`,
+		desc: `Gain a Viego. He has @BonusAP@ Ability Power, and his Ability deals up to @IncreasedDamagePercent*100@% increased damage based on the enemy's missing HP.`,
 		effects: {
 			'{7911d2bb}': 0.5,
 			'BonusAP': 10,
@@ -1586,7 +1586,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Kingslayer`,
 		groupID: `kingslayer`,
-		desc: `Gain a Sylas. He gains @HPMultiplier*100@% maximum Health and deals @BonusDamage*100@% increased damage.`,
+		desc: `Gain a Sylas. He gains @HPMultiplier*100@% maximum HP and deals @BonusDamage*100@% increased damage.`,
 		effects: {
 			'BonusDamage': 0.3499999940395355,
 			'HPMultiplier': 0.25,
@@ -1630,7 +1630,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Lucent Barrier`,
 		groupID: `lucentBarrier`,
-		desc: `Gain a Lux. Combat start: She grants her @NumAllies@ nearest allies a @ShieldAmount@ Health shield and @AP@ Ability Power.`,
+		desc: `Gain a Lux. Combat start: She grants her @NumAllies@ nearest allies a @ShieldAmount@ HP shield and @AP@ Ability Power.`,
 		effects: {
 			'AP': 35,
 			'ShieldAmount': 500,
@@ -1655,7 +1655,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Mirror Image`,
 		groupID: `mirrorImage`,
-		desc: `Gain a LeBlanc. Combat start: Your strongest LeBlanc duplicates her nearest ally (without items or traits at @HealthPercent@% Health).`,
+		desc: `Gain a LeBlanc. Combat start: Your strongest LeBlanc duplicates her nearest ally (without items or traits at @HPPercent@% HP).`,
 		effects: {
 			'HPPercent': 75,
 		},
@@ -1864,7 +1864,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `OX-ian Rage`,
 		groupID: `oXianRage`,
-		desc: `Gain a Talon. When you field him, your team gains @AD@% Attack Damage and @AP@ Ability Power, tripled when they are below @HealthThreshold@% Health.`,
+		desc: `Gain a Talon. When you field him, your team gains @AD@% Attack Damage and @AP@ Ability Power, tripled when they are below @HPThreshold@% HP.`,
 		effects: {
 			'AD': 10,
 			'AP': 10,
@@ -1993,7 +1993,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Reign of Anger`,
 		groupID: `reignOfAnger`,
-		desc: `Gain a Renekton. He gains @BaseAS@% Attack Speed and an extra @AS@% per @PerMissingHealth@ missing Health.`,
+		desc: `Gain a Renekton. He gains @BaseAS@% Attack Speed and an extra @AS@% per @PerMissingHP@ missing HP.`,
 		effects: {
 			'AS': 4,
 			'{27c79872}': 100,
@@ -2025,7 +2025,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Reverberation`,
 		groupID: `reverberation`,
-		desc: `Gain a Riven. She has @AP@ Ability Power and her Ability is also cast on her lowest Health ally.`,
+		desc: `Gain a Riven. She has @AP@ Ability Power and her Ability is also cast on her lowest HP ally.`,
 		effects: {
 			'AP': 15,
 		},
@@ -2035,7 +2035,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Righteous Range`,
 		groupID: `righteousRange`,
-		desc: `Gain a Kayle. Combat start: She and her @NumAllies@ nearest allies gain +@BonusRange@ Attack Range and @AttackSpeed*100@% Attack Speed.`,
+		desc: `Gain a Kayle. Combat start: She and her @NumAllies@ nearest allies gain +@BonusRange@ Attack Range and @AS*100@% Attack Speed.`,
 		effects: {
 			'AS': 0.25,
 			'{0c712be9}': 2,
@@ -2078,7 +2078,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Rocket Grab`,
 		groupID: `rocketGrab`,
-		desc: `Gain a Blitzcrank. He has @BonusHealth@ bonus Health. Combat start: He pulls the farthest enemy and <TFTKeyword>Stuns</TFTKeyword> them for @StunDuration@ seconds.`,
+		desc: `Gain a Blitzcrank. He has @BonusHP@ bonus HP. Combat start: He pulls the farthest enemy and <TFTKeyword>Stuns</TFTKeyword> them for @StunDuration@ seconds.`,
 		effects: {
 			'BonusHP': 400,
 			'StunDuration': 1.5,
@@ -2153,7 +2153,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Sleepy Time`,
 		groupID: `sleepyTime`,
-		desc: `Gain a Zoe. Combat start: She <TFTKeyword>Stuns</TFTKeyword> the @NumTargets@ lowest Health enemies for @StunDuration@ seconds.`,
+		desc: `Gain a Zoe. Combat start: She <TFTKeyword>Stuns</TFTKeyword> the @NumTargets@ lowest HP enemies for @StunDuration@ seconds.`,
 		effects: {
 			'StunDuration': 4,
 			'{f0f10b3f}': 4,
@@ -2175,7 +2175,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Soul Eater`,
 		groupID: `soulEater`,
-		desc: `Gain a Nasus. When you field him, your team heals @Heal@ Health on takedowns.`,
+		desc: `Gain a Nasus. When you field him, your team heals @Heal@ HP on takedowns.`,
 		effects: {
 			'Heal': 300,
 		},
@@ -2228,7 +2228,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Star-Crossed`,
 		groupID: `starCrossed`,
-		desc: `Gain a Kai'Sa. She grants @ASPercent@% of her Ability's Attack Speed bonus to her nearest ally.`,
+		desc: `Gain a Kai'Sa. She grants @AAPercent@% of her Ability's Attack Speed bonus to her nearest ally.`,
 		effects: {
 			'{fab7c982}': 100,
 		},
@@ -2238,7 +2238,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Steadfast Presence`,
 		groupID: `steadfastPresence`,
-		desc: `Gain a Poppy. Combat start: Your strongest Poppy grants your team a @ShieldAmount@ Health shield.`,
+		desc: `Gain a Poppy. Combat start: Your strongest Poppy grants your team a @ShieldAmount@ HP shield.`,
 		effects: {
 			'ShieldAmount': 325,
 		},
@@ -2248,7 +2248,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Stoneweaver`,
 		groupID: `stoneweaver`,
-		desc: `Gain a Taliyah. She has @BonusAP@ Ability Power, and her Ability deals @BonusDamage@% more damage to enemies above @HealthThreshold@ maximum Health.`,
+		desc: `Gain a Taliyah. She has @BonusAP@ Ability Power, and her Ability deals @BonusDamage@% more damage to enemies above @HPThreshold@ maximum HP.`,
 		effects: {
 			'BonusDamage': 20,
 			'HPThreshold': 1600,
@@ -2271,7 +2271,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Supersize`,
 		groupID: `supersize`,
-		desc: `Gain a Zac. He gains @BonusHealth@ bonus Health and is immune to crowd control.`,
+		desc: `Gain a Zac. He gains @BonusHP@ bonus HP and is immune to crowd control.`,
 		effects: {
 			'BonusHP': 1000,
 		},
@@ -2292,7 +2292,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Traumatic Memories`,
 		groupID: `traumaticMemories`,
-		desc: `Gain a Fiddlesticks. When an ally dies, Fiddlesticks gains @BonusHealth@ bonus Health for the rest of combat.`,
+		desc: `Gain a Fiddlesticks. When an ally dies, Fiddlesticks gains @BonusHP@ bonus HP for the rest of combat.`,
 		effects: {
 			'BonusHP': 350,
 		},
@@ -2302,7 +2302,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Triumphant Return`,
 		groupID: `triumphantReturn`,
-		desc: `Gain a Riven. Combat start: She grants herself and adjacent allies a shield for @ShieldDuration@ seconds equal to @MaxHealthPercent@% of their maximum Health.`,
+		desc: `Gain a Riven. Combat start: She grants herself and adjacent allies a shield for @ShieldDuration@ seconds equal to @MaxHPPercent@% of their maximum HP.`,
 		effects: {
 			'ShieldDuration': 15,
 			'{f12d8928}': 40,
@@ -2345,7 +2345,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Vitality of the Ox`,
 		groupID: `vitalityOfTheOx`,
-		desc: `Gain a Fiora. When you field her, your team heals @HealPercent*100@% of their maximum Health when they attack.`,
+		desc: `Gain a Fiora. When you field her, your team heals @HealPercent*100@% of their maximum HP when they attack.`,
 		effects: {
 			'HealPercent': 0.019999999552965164,
 		},
@@ -2355,7 +2355,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Voidmother`,
 		groupID: `voidmother`,
-		desc: `Gain a Bel'Veth. Combat start: Your strongest Bel'Veth creates 2 Voidspawns with @HealthPercent@% of their normal Health in front of her.`,
+		desc: `Gain a Bel'Veth. Combat start: Your strongest Bel'Veth creates 2 Voidspawns with @HPPercent@% of their normal HP in front of her.`,
 		effects: {
 			'HPPercent': 60,
 		},

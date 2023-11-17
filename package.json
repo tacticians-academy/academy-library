@@ -22,7 +22,15 @@
 		"typescript": "^5.2.2"
 	},
 	"eslintConfig": {
-		"extends": "@ky-is/eslint-config/typescript"
+		"extends": "@ky-is/eslint-config/typescript",
+		"rules": {
+			"@typescript-eslint/strict-boolean-expressions": [
+				"warn",
+				{
+					"allowNullableEnum": true
+				}
+			]
+		}
 	},
 	"eslintIgnore": [
 		"dist"

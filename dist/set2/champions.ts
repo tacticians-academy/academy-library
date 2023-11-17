@@ -1,5 +1,6 @@
-import { ChampionKey } from '../index.js'
 import type { ChampionData } from '../index'
+
+export enum ChampionKey { Aatrox = `TFT2_Aatrox`, Amumu = `TFT2_Amumu`, Annie = `TFT2_Annie`, Ashe = `TFT2_Ashe`, Azir = `TFT2_Azir`, Brand = `TFT2_Brand`, Braum = `TFT2_Braum`, Diana = `TFT2_Diana`, DrMundo = `TFT2_DrMundo`, Ezreal = `TFT2_Ezreal`, Ivern = `TFT2_Ivern`, Janna = `TFT2_Janna`, Jax = `TFT2_Jax`, Karma = `TFT2_Karma`, Khazix = `TFT2_Khazix`, Kindred = `TFT2_Kindred`, KogMaw = `TFT2_KogMaw`, LeBlanc = `TFT2_LeBlanc`, Leona = `TFT2_Leona`, Lucian = `TFT2_Lucian`, LuxCrystal = `TFT2_LuxCrystal`, LuxElectric = `TFT2_LuxElectric`, LuxGlacial = `TFT2_LuxGlacial`, LuxInferno = `TFT2_LuxInferno`, LuxLight = `TFT2_LuxLight`, LuxMetal = `TFT2_LuxMetal`, LuxOcean = `TFT2_LuxOcean`, LuxShadow = `TFT2_LuxShadow`, LuxWind = `TFT2_LuxWind`, LuxWoodland = `TFT2_LuxWoodland`, Malphite = `TFT2_Malphite`, Malzahar = `TFT2_Malzahar`, Maokai = `TFT2_Maokai`, MasterYi = `TFT2_MasterYi`, Nami = `TFT2_Nami`, Nasus = `TFT2_Nasus`, Nautilus = `TFT2_Nautilus`, Neeko = `TFT2_Neeko`, Nocturne = `TFT2_Nocturne`, Olaf = `TFT2_Olaf`, Ornn = `TFT2_Ornn`, Qiyana = `TFT2_Qiyana`, QiyanaOcean = `TFT2_QiyanaOcean`, QiyanaInferno = `TFT2_QiyanaInferno`, QiyanaWoodland = `TFT2_QiyanaWoodland`, QiyanaWind = `TFT2_QiyanaWind`, RekSai = `TFT2_RekSai`, Renekton = `TFT2_Renekton`, Senna = `TFT2_Senna`, Singed = `TFT2_Singed`, Sion = `TFT2_Sion`, Sivir = `TFT2_Sivir`, Skarner = `TFT2_Skarner`, Soraka = `TFT2_Soraka`, Syndra = `TFT2_Syndra`, Taliyah = `TFT2_Taliyah`, Taric = `TFT2_Taric`, Thresh = `TFT2_Thresh`, Twitch = `TFT2_Twitch`, Varus = `TFT2_Varus`, Vayne = `TFT2_Vayne`, Veigar = `TFT2_Veigar`, Vladimir = `TFT2_Vladimir`, Volibear = `TFT2_Volibear`, Warwick = `TFT2_Warwick`, Yasuo = `TFT2_Yasuo`, Yorick = `TFT2_Yorick`, Zed = `TFT2_Zed`, Zyra = `TFT2_Zyra` }
 
 export const champions: ChampionData[] = [
 	{
@@ -244,7 +245,7 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `product`,
 								subparts: [
 									{
 										variable: `{8aa86c33}`,
@@ -1414,6 +1415,7 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: false,
+					_missileSpeed: 0,
 				},
 				variables: {
 					'NumTargets': [1, 1, 1, 1],

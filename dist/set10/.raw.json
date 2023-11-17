@@ -38327,8 +38327,8 @@
 								"name": "damage",
 								"value": [
 									0,
-									300,
-									450,
+									275,
+									410,
 									1500,
 									0,
 									0,
@@ -39953,7 +39953,7 @@
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
 						"damage": 70,
-						"hp": 1100,
+						"hp": 1050,
 						"initialMana": 70,
 						"magicResist": 70,
 						"mana": 150,
@@ -41146,9 +41146,9 @@
 								"name": "StunDamage",
 								"value": [
 									0,
+									120,
 									180,
-									270,
-									430,
+									280,
 									0,
 									0,
 									0
@@ -42070,13 +42070,13 @@
 							{
 								"name": "SplashDamageADPercent",
 								"value": [
-									0.5,
-									0.5,
-									0.5,
-									0.5,
-									0.5,
-									0.5,
-									0.5
+									1.2000000476837158,
+									1.2000000476837158,
+									1.2000000476837158,
+									1.2000000476837158,
+									1.2000000476837158,
+									1.2000000476837158,
+									1.2000000476837158
 								]
 							},
 							{
@@ -42118,13 +42118,13 @@
 							{
 								"name": "HeadlinerHealth",
 								"value": [
-									200,
-									200,
-									200,
-									200,
-									200,
-									200,
-									200
+									100,
+									100,
+									100,
+									100,
+									100,
+									100,
+									100
 								]
 							},
 							{
@@ -43489,14 +43489,14 @@
 					"name": "Viego",
 					"squareIcon": "ASSETS/UX/TFT/ChampionSplashes/TFT10_Viego_Mobile.TFT_Set10.tex",
 					"stats": {
-						"armor": 60,
+						"armor": 65,
 						"attackSpeed": 0.8500000238418579,
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
-						"damage": 70,
+						"damage": 75,
 						"hp": 1000,
 						"initialMana": 70,
-						"magicResist": 60,
+						"magicResist": 65,
 						"mana": 120,
 						"range": 1
 					},
@@ -45067,14 +45067,14 @@
 					"name": "Akali",
 					"squareIcon": "ASSETS/UX/TFT/ChampionSplashes/TFT10_Akali_TrueDamage_Mobile.TFT_Set10.tex",
 					"stats": {
-						"armor": 60,
+						"armor": 65,
 						"attackSpeed": 0.8500000238418579,
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
 						"damage": 70,
 						"hp": 1000,
 						"initialMana": 0,
-						"magicResist": 60,
+						"magicResist": 65,
 						"mana": 60,
 						"range": 1
 					},
@@ -45350,7 +45350,7 @@
 							"style": 1,
 							"variables": {
 								"BonusArmor": 16,
-								"{a624ed1a}": 36
+								"{a624ed1a}": 32
 							}
 						},
 						{
@@ -54561,8 +54561,8 @@
 								"name": "damage",
 								"value": [
 									0,
-									300,
-									450,
+									275,
+									410,
 									1500,
 									0,
 									0,
@@ -56187,7 +56187,7 @@
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
 						"damage": 70,
-						"hp": 1100,
+						"hp": 1050,
 						"initialMana": 70,
 						"magicResist": 70,
 						"mana": 150,
@@ -57380,9 +57380,9 @@
 								"name": "StunDamage",
 								"value": [
 									0,
+									120,
 									180,
-									270,
-									430,
+									280,
 									0,
 									0,
 									0
@@ -58304,13 +58304,13 @@
 							{
 								"name": "SplashDamageADPercent",
 								"value": [
-									0.5,
-									0.5,
-									0.5,
-									0.5,
-									0.5,
-									0.5,
-									0.5
+									1.2000000476837158,
+									1.2000000476837158,
+									1.2000000476837158,
+									1.2000000476837158,
+									1.2000000476837158,
+									1.2000000476837158,
+									1.2000000476837158
 								]
 							},
 							{
@@ -58352,13 +58352,13 @@
 							{
 								"name": "HeadlinerHealth",
 								"value": [
-									200,
-									200,
-									200,
-									200,
-									200,
-									200,
-									200
+									100,
+									100,
+									100,
+									100,
+									100,
+									100,
+									100
 								]
 							},
 							{
@@ -59723,14 +59723,14 @@
 					"name": "Viego",
 					"squareIcon": "ASSETS/UX/TFT/ChampionSplashes/TFT10_Viego_Mobile.TFT_Set10.tex",
 					"stats": {
-						"armor": 60,
+						"armor": 65,
 						"attackSpeed": 0.8500000238418579,
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
-						"damage": 70,
+						"damage": 75,
 						"hp": 1000,
 						"initialMana": 70,
-						"magicResist": 60,
+						"magicResist": 65,
 						"mana": 120,
 						"range": 1
 					},
@@ -61301,14 +61301,14 @@
 					"name": "Akali",
 					"squareIcon": "ASSETS/UX/TFT/ChampionSplashes/TFT10_Akali_TrueDamage_Mobile.TFT_Set10.tex",
 					"stats": {
-						"armor": 60,
+						"armor": 65,
 						"attackSpeed": 0.8500000238418579,
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
 						"damage": 70,
 						"hp": 1000,
 						"initialMana": 0,
-						"magicResist": 60,
+						"magicResist": 65,
 						"mana": 60,
 						"range": 1
 					},
@@ -61584,7 +61584,7 @@
 							"style": 1,
 							"variables": {
 								"BonusArmor": 16,
-								"{a624ed1a}": 36
+								"{a624ed1a}": 32
 							}
 						},
 						{
@@ -79475,8 +79475,8 @@
 								"name": "damage",
 								"value": [
 									0,
-									300,
-									450,
+									275,
+									410,
 									1500,
 									0,
 									0,
@@ -81101,7 +81101,7 @@
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
 						"damage": 70,
-						"hp": 1100,
+						"hp": 1050,
 						"initialMana": 70,
 						"magicResist": 70,
 						"mana": 150,
@@ -82294,9 +82294,9 @@
 								"name": "StunDamage",
 								"value": [
 									0,
+									120,
 									180,
-									270,
-									430,
+									280,
 									0,
 									0,
 									0
@@ -83218,13 +83218,13 @@
 							{
 								"name": "SplashDamageADPercent",
 								"value": [
-									0.5,
-									0.5,
-									0.5,
-									0.5,
-									0.5,
-									0.5,
-									0.5
+									1.2000000476837158,
+									1.2000000476837158,
+									1.2000000476837158,
+									1.2000000476837158,
+									1.2000000476837158,
+									1.2000000476837158,
+									1.2000000476837158
 								]
 							},
 							{
@@ -83266,13 +83266,13 @@
 							{
 								"name": "HeadlinerHealth",
 								"value": [
-									200,
-									200,
-									200,
-									200,
-									200,
-									200,
-									200
+									100,
+									100,
+									100,
+									100,
+									100,
+									100,
+									100
 								]
 							},
 							{
@@ -84637,14 +84637,14 @@
 					"name": "Viego",
 					"squareIcon": "ASSETS/UX/TFT/ChampionSplashes/TFT10_Viego_Mobile.TFT_Set10.tex",
 					"stats": {
-						"armor": 60,
+						"armor": 65,
 						"attackSpeed": 0.8500000238418579,
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
-						"damage": 70,
+						"damage": 75,
 						"hp": 1000,
 						"initialMana": 70,
-						"magicResist": 60,
+						"magicResist": 65,
 						"mana": 120,
 						"range": 1
 					},
@@ -86215,14 +86215,14 @@
 					"name": "Akali",
 					"squareIcon": "ASSETS/UX/TFT/ChampionSplashes/TFT10_Akali_TrueDamage_Mobile.TFT_Set10.tex",
 					"stats": {
-						"armor": 60,
+						"armor": 65,
 						"attackSpeed": 0.8500000238418579,
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
 						"damage": 70,
 						"hp": 1000,
 						"initialMana": 0,
-						"magicResist": 60,
+						"magicResist": 65,
 						"mana": 60,
 						"range": 1
 					},
@@ -86498,7 +86498,7 @@
 							"style": 1,
 							"variables": {
 								"BonusArmor": 16,
-								"{a624ed1a}": 36
+								"{a624ed1a}": 32
 							}
 						},
 						{
@@ -122992,8 +122992,8 @@
 								"name": "damage",
 								"value": [
 									0,
-									300,
-									450,
+									275,
+									410,
 									1500,
 									0,
 									0,
@@ -124618,7 +124618,7 @@
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
 						"damage": 70,
-						"hp": 1100,
+						"hp": 1050,
 						"initialMana": 70,
 						"magicResist": 70,
 						"mana": 150,
@@ -125811,9 +125811,9 @@
 								"name": "StunDamage",
 								"value": [
 									0,
+									120,
 									180,
-									270,
-									430,
+									280,
 									0,
 									0,
 									0
@@ -126735,13 +126735,13 @@
 							{
 								"name": "SplashDamageADPercent",
 								"value": [
-									0.5,
-									0.5,
-									0.5,
-									0.5,
-									0.5,
-									0.5,
-									0.5
+									1.2000000476837158,
+									1.2000000476837158,
+									1.2000000476837158,
+									1.2000000476837158,
+									1.2000000476837158,
+									1.2000000476837158,
+									1.2000000476837158
 								]
 							},
 							{
@@ -126783,13 +126783,13 @@
 							{
 								"name": "HeadlinerHealth",
 								"value": [
-									200,
-									200,
-									200,
-									200,
-									200,
-									200,
-									200
+									100,
+									100,
+									100,
+									100,
+									100,
+									100,
+									100
 								]
 							},
 							{
@@ -128154,14 +128154,14 @@
 					"name": "Viego",
 					"squareIcon": "ASSETS/UX/TFT/ChampionSplashes/TFT10_Viego_Mobile.TFT_Set10.tex",
 					"stats": {
-						"armor": 60,
+						"armor": 65,
 						"attackSpeed": 0.8500000238418579,
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
-						"damage": 70,
+						"damage": 75,
 						"hp": 1000,
 						"initialMana": 70,
-						"magicResist": 60,
+						"magicResist": 65,
 						"mana": 120,
 						"range": 1
 					},
@@ -129732,14 +129732,14 @@
 					"name": "Akali",
 					"squareIcon": "ASSETS/UX/TFT/ChampionSplashes/TFT10_Akali_TrueDamage_Mobile.TFT_Set10.tex",
 					"stats": {
-						"armor": 60,
+						"armor": 65,
 						"attackSpeed": 0.8500000238418579,
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
 						"damage": 70,
 						"hp": 1000,
 						"initialMana": 0,
-						"magicResist": 60,
+						"magicResist": 65,
 						"mana": 60,
 						"range": 1
 					},
@@ -130013,7 +130013,7 @@
 							"style": 1,
 							"variables": {
 								"BonusArmor": 16,
-								"{a624ed1a}": 36
+								"{a624ed1a}": 32
 							}
 						},
 						{

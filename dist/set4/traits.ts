@@ -406,7 +406,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Set4_Exile`,
-		desc: `If an Exile has no adjacent allies at the start of combat, they gain:<br><br><row>(@MinUnits@) A shield equal to @ShieldPercent@% of their maximum health</row><br><row>(@MinUnits@) And @LifeSteal@% Lifesteal</row><br><br>`,
+		desc: `If an Exile has no adjacent allies at the start of combat, they gain:<br><br><row>(@MinUnits@) A shield equal to @ShieldPercent@% of their maximum HP</row><br><row>(@MinUnits@) And @LifeSteal@% Lifesteal</row><br><br>`,
 		effects: [
 			{
 				maxUnits: 1,

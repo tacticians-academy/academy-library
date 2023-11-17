@@ -1,7 +1,6 @@
 export function formatJS(json: any, indents: string = ''): string {
-	const type = typeof json
 	const nextIndents = indents + '\t'
-	if (type === 'object') {
+	if (typeof json === 'object') {
 		if (json === null) {
 			return 'null'
 		}
@@ -25,12 +24,12 @@ export function formatJS(json: any, indents: string = ''): string {
 			})
 			.join(`,\n${nextIndents}`)
 		return `{\n${nextIndents}${description},\n${indents}}`
-	} else if (type === 'string') {
-		return json === 'null' ? 'null' : `\`${json}\``
-	} else if (type === 'number' || type === 'boolean') {
+	} else if (typeof json === 'string') {
+		return json === 'null' ? json : `\`${json}\``
+	} else if (typeof json === 'number' || typeof json === 'boolean') {
 		return json.toString()
-	} else if (type === 'undefined') {
+	} else if (typeof json === 'undefined') {
 		return 'undefined'
 	}
-	throw `Unknown type ${type}: ${json}`
+	throw `Unknown type ${typeof json}: ${json}`
 }

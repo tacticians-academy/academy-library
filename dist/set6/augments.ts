@@ -1,7 +1,7 @@
 import { AugmentGroupKey } from '../index.js'
 import type { AugmentData } from '../index'
 
-export const emptyImplementationAugments: AugmentGroupKey[] =  [AugmentGroupKey.AncientArchives, AugmentGroupKey.BandOfThieves, AugmentGroupKey.BinaryAirdrop, AugmentGroupKey.CalculatedLoss, AugmentGroupKey.ClearMind, AugmentGroupKey.Dominance, AugmentGroupKey.GoldenTicket, AugmentGroupKey.HighEndShopping, AugmentGroupKey.HighRoller, AugmentGroupKey.HyperRoll, AugmentGroupKey.ItemGrabBag, AugmentGroupKey.Junkyard, AugmentGroupKey.LevelUp, AugmentGroupKey.MarchOfProgress, AugmentGroupKey.MercenaryHeart, AugmentGroupKey.MercenaryCrest, AugmentGroupKey.MercenarySoul, AugmentGroupKey.MetabolicAccelerator, AugmentGroupKey.NewRecruit, AugmentGroupKey.PandorasItems, AugmentGroupKey.Payday, AugmentGroupKey.PhonyFrontline, AugmentGroupKey.Pirates, AugmentGroupKey.RichGetRicher, AugmentGroupKey.SalvageBin, AugmentGroupKey.TradeSector, AugmentGroupKey.Windfall, AugmentGroupKey.WiseSpending]
+export const emptyImplementationAugments: AugmentGroupKey[] = [AugmentGroupKey.AncientArchives, AugmentGroupKey.BandOfThieves, AugmentGroupKey.BinaryAirdrop, AugmentGroupKey.CalculatedLoss, AugmentGroupKey.ClearMind, AugmentGroupKey.Dominance, AugmentGroupKey.GoldenTicket, AugmentGroupKey.HighEndShopping, AugmentGroupKey.HighRoller, AugmentGroupKey.HyperRoll, AugmentGroupKey.ItemGrabBag, AugmentGroupKey.Junkyard, AugmentGroupKey.LevelUp, AugmentGroupKey.MarchOfProgress, AugmentGroupKey.MercenaryHeart, AugmentGroupKey.MercenaryCrest, AugmentGroupKey.MercenarySoul, AugmentGroupKey.MetabolicAccelerator, AugmentGroupKey.NewRecruit, AugmentGroupKey.PandorasItems, AugmentGroupKey.Payday, AugmentGroupKey.PhonyFrontline, AugmentGroupKey.Pirates, AugmentGroupKey.RichGetRicher, AugmentGroupKey.SalvageBin, AugmentGroupKey.TradeSector, AugmentGroupKey.Windfall, AugmentGroupKey.WiseSpending]
 
 export const activeAugments: AugmentData[] = [
 	{
@@ -32,9 +32,9 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `All For One`,
 		groupID: `allForOne`,
-		desc: `When an ally dies, they grant the Imperial Tyrant @MaxHealth@% of their maximum Health.`,
+		desc: `When an ally dies, they grant the Imperial Tyrant @MaxHP@% of their maximum HP.`,
 		effects: {
-			'MaxHealth': 33,
+			'MaxHP': 33,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/AllForOne2.TFT_Set6.dds`,
 	},
@@ -1116,7 +1116,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Smoke Bomb`,
 		groupID: `smokeBomb`,
-		desc: `The first time an Assassin drops to @HPThreshold@% health, they briefly enter stealth, becoming untargetable and shedding all negative effects. Any excess damage is reduced by @DamageReduction@%.`,
+		desc: `The first time an Assassin drops to @HPThreshold@% HP, they briefly enter stealth, becoming untargetable and shedding all negative effects. Any excess damage is reduced by @DamageReduction@%.`,
 		effects: {
 			'DamageReduction': 80,
 			'HPThreshold': 60,
@@ -1422,6 +1422,160 @@ export const inactiveAugments: AugmentData[] = [
 			'HexRangeIncrease': 100,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/ScopedWeapons1.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `TFT6_Augment_AcademyLunchBreak1_Name`,
+		groupID: `tFT6_Augment_AcademyLunchBreak1_Name`,
+		desc: `TFT6_Augment_AcademyLunchBreak1_Description`,
+		effects: {
+			'{1e46f656}': 40,
+			'{f9be09da}': 10,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/LunchBreak.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `TFT6_Augment_AcademyLunchBreak2_Name`,
+		groupID: `tFT6_Augment_AcademyLunchBreak2_Name`,
+		desc: `TFT6_Augment_AcademyLunchBreak2_Description`,
+		effects: {
+			'{1e46f656}': 60,
+			'{f9be09da}': 10,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/LunchBreak.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `TFT6_Augment_AcademyLunchBreak3_Name`,
+		groupID: `tFT6_Augment_AcademyLunchBreak3_Name`,
+		desc: `TFT6_Augment_AcademyLunchBreak3_Description`,
+		effects: {
+			'{1e46f656}': 80,
+			'{f9be09da}': 10,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/LunchBreak.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `TFT6_Augment_BrawlerHPVeteran_Name`,
+		groupID: `tFT6_Augment_BrawlerHPVeteran_Name`,
+		desc: `TFT6_Augment_BrawlerHPVeteran_Description`,
+		effects: {
+			'{cafcfa4a}': 100,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/TFT6_Augment_BrawlerVeterans.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `TFT6_Augment_ChallengerForAllUnits_Name`,
+		groupID: `tFT6_Augment_ChallengerForAllUnits_Name`,
+		desc: `TFT6_Augment_ChallengerForAllUnits_Description`,
+		effects: {},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/ChallengerForAllUnits.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `TFT6_Augment_ChemtechForAllUnits_Name`,
+		groupID: `tFT6_Augment_ChemtechForAllUnits_Name`,
+		desc: `TFT6_Augment_ChemtechForAllUnits_Description`,
+		effects: {},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/ChemtechForAllUnits.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `TFT6_Augment_ColossusPummel_Name`,
+		groupID: `tFT6_Augment_ColossusPummel_Name`,
+		desc: `TFT6_Augment_ColossusPummel_Description`,
+		effects: {
+			'CritChance': 75,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Pummel.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `TFT6_Augment_CriticalThinking_Name`,
+		groupID: `tFT6_Augment_CriticalThinking_Name`,
+		desc: `TFT6_Augment_CriticalThinking_Description`,
+		effects: {},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/TFT6_Augment_ScholarCriticalThinking.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `TFT6_Augment_ExperimentalChallenger_Name`,
+		groupID: `tFT6_Augment_ExperimentalChallenger_Name`,
+		desc: `TFT6_Augment_ExperimentalChallenger_Desc`,
+		effects: {},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Mutant.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `TFT6_Augment_FuturePeepers_Name`,
+		groupID: `tFT6_Augment_FuturePeepers_Name`,
+		desc: `TFT6_Augment_FuturePeepers_Description`,
+		effects: {},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/TFT6_Augment_FuturePeepers.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `TFT6_Augment_InfinityCane_Name`,
+		groupID: `tFT6_Augment_InfinityCane_Name`,
+		desc: `TFT6_Augment_InfinityCane_Description`,
+		effects: {
+			'{dbb90075}': 0.5,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/TFT6_Augment_EnchanterInfinityCane.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `TFT6_Augment_NeekoNeeko_Name`,
+		groupID: `tFT6_Augment_NeekoNeeko_Name`,
+		desc: `TFT6_Augment_NeekoNeeko_Description`,
+		effects: {
+			'{c1186f58}': 2,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/TFT6_Augment_NeekoNeeko.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `TFT6_Augment_Overclock_Name`,
+		groupID: `tFT6_Augment_Overclock_Name`,
+		desc: `TFT6_Augment_Overclock_Description`,
+		effects: {
+			'AS': 200,
+			'Duration': 5,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/TFT6_Augment_ClockworkOverclock.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `TFT6_Augment_Overclock_Name`,
+		groupID: `tFT6_Augment_Overclock_Name`,
+		desc: `TFT6_Augment_Overclock_Description`,
+		effects: {
+			'AS': 400,
+			'Duration': 10,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/TFT6_Augment_ClockworkOverclock.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `TFT6_Augment_Overclock_Name`,
+		groupID: `tFT6_Augment_Overclock_Name`,
+		desc: `TFT6_Augment_Overclock_Description`,
+		effects: {
+			'AS': 400,
+			'Duration': 5,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/TFT6_Augment_ClockworkOverclock.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `TFT6_Augment_SyndicateForAllUnits_Name`,
+		groupID: `tFT6_Augment_SyndicateForAllUnits_Name`,
+		desc: `TFT6_Augment_SyndicateForAllUnits_Description`,
+		effects: {},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/SyndicateForAllUnits.TFT_Set6.dds`,
 	},
 	{
 		tier: 1,

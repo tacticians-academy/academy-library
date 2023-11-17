@@ -1,5 +1,6 @@
-import { ChampionKey } from '../index.js'
 import type { ChampionData } from '../index'
+
+export enum ChampionKey { Akali = `TFT6_Akali`, Blitzcrank = `TFT6_Blitzcrank`, Braum = `TFT6_Braum`, Caitlyn = `TFT6_Caitlyn`, Camille = `TFT6_Camille`, ChoGath = `TFT6_ChoGath`, Darius = `TFT6_Darius`, DrMundo = `TFT6_DrMundo`, Ekko = `TFT6_Ekko`, Ezreal = `TFT6_Ezreal`, Fiora = `TFT6_Fiora`, Galio = `TFT6_Galio`, Gangplank = `TFT6_Gangplank`, Garen = `TFT6_Garen`, Graves = `TFT6_Graves`, Heimerdinger = `TFT6_Heimerdinger`, Illaoi = `TFT6_Illaoi`, Janna = `TFT6_Janna`, Jayce = `TFT6_Jayce`, Jhin = `TFT6_Jhin`, Jinx = `TFT6_Jinx`, Kaisa = `TFT6_Kaisa`, Kassadin = `TFT6_Kassadin`, Katarina = `TFT6_Katarina`, KogMaw = `TFT6_KogMaw`, Leona = `TFT6_Leona`, Lissandra = `TFT6_Lissandra`, Lulu = `TFT6_Lulu`, Lux = `TFT6_Lux`, Malzahar = `TFT6_Malzahar`, Tibbers = `TFT6_Tibbers`, HexTechDragon = `TFT6_HexTechDragon`, MalzaharVoidling = `TFT6_MalzaharVoidling`, MissFortune = `TFT6_MissFortune`, Orianna = `TFT6_Orianna`, Poppy = `TFT6_Poppy`, Quinn = `TFT6_Quinn`, Samira = `TFT6_Samira`, Seraphine = `TFT6_Seraphine`, Shaco = `TFT6_Shaco`, Singed = `TFT6_Singed`, Sion = `TFT6_Sion`, Swain = `TFT6_Swain`, TahmKench = `TFT6_TahmKench`, Talon = `TFT6_Talon`, TrainingDummy = `TFT_TrainingDummy`, Taric = `TFT6_Taric`, Tristana = `TFT6_Tristana`, Trundle = `TFT6_Trundle`, TwistedFate = `TFT6_TwistedFate`, Twitch = `TFT6_Twitch`, Urgot = `TFT6_Urgot`, Veigar = `TFT6_Veigar`, Vex = `TFT6_Vex`, Vi = `TFT6_Vi`, Viktor = `TFT6_Viktor`, VoidSpawn = `TFT_VoidSpawn`, Warwick = `TFT6_Warwick`, Yone = `TFT6_Yone`, Yuumi = `TFT6_Yuumi`, Zac = `TFT6_Zac`, Ziggs = `TFT6_Ziggs`, Zilean = `TFT6_Zilean`, Zyra = `TFT6_Zyra` }
 
 export const champions: ChampionData[] = [
 	{
@@ -239,24 +240,6 @@ export const champions: ChampionData[] = [
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
-			{
-				name: `TFT6_BraumBasicAttackShieldOverride`,
-				castTime: undefined,
-				missile: {
-					width: undefined,
-					travelTime: undefined,
-					speedInitial: 347.79998779296875,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: undefined,
-			},
 		],
 		missiles: [
 			{
@@ -287,6 +270,24 @@ export const champions: ChampionData[] = [
 				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
+			},
+			{
+				name: `TFT6_BraumBasicAttackShieldOverride`,
+				castTime: undefined,
+				missile: {
+					width: undefined,
+					travelTime: undefined,
+					speedInitial: 347.79998779296875,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
 			},
 			{
 				name: `TFT6_BraumRMissile`,
@@ -3092,6 +3093,8 @@ export const champions: ChampionData[] = [
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
+		],
+		missiles: [
 			{
 				name: `TFT6_HextechDragonEmpoweredAttack`,
 				castTime: undefined,
@@ -3112,7 +3115,6 @@ export const champions: ChampionData[] = [
 				uninterruptable: true,
 			},
 		],
-		missiles: [],
 	},
 	{
 		apiName: `TFT6_MalzaharVoidling`,
@@ -5276,6 +5278,7 @@ export const champions: ChampionData[] = [
 					acceleration: 3000,
 					startDelay: 1.2000000476837158,
 					tracksTarget: false,
+					_missileSpeed: 0,
 				},
 				variables: {},
 				calculations: {},
@@ -5546,6 +5549,8 @@ export const champions: ChampionData[] = [
 				cantCastWhileRooted: undefined,
 				uninterruptable: undefined,
 			},
+		],
+		missiles: [
 			{
 				name: `TFT6_YuumiRMissile`,
 				castTime: undefined,
@@ -5565,7 +5570,6 @@ export const champions: ChampionData[] = [
 				uninterruptable: undefined,
 			},
 		],
-		missiles: [],
 	},
 	{
 		apiName: `TFT6_Zac`,

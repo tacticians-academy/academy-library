@@ -1,7 +1,7 @@
 import { AugmentGroupKey } from '../index.js'
 import type { AugmentData } from '../index'
 
-export const emptyImplementationAugments: AugmentGroupKey[] =  []
+export const emptyImplementationAugments: AugmentGroupKey[] = []
 
 export const activeAugments: AugmentData[] = [
 	{
@@ -30,7 +30,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Adrenaline Rush`,
 		groupID: `adrenalineRush`,
-		desc: `Your Juggernauts deal @MinBonusDamage*100@% more damage, increased to @MaxBonusDamage*100@% for the rest of combat when they fall below @HealthThreshold*100@% Health.  Gain 2 Juggernauts.`,
+		desc: `Your Juggernauts deal @MinBonusDamage*100@% more damage, increased to @MaxBonusDamage*100@% for the rest of combat when they fall below @HPThreshold*100@% HP.  Gain 2 Juggernauts.`,
 		effects: {
 			'HPThreshold': 0.6000000238418579,
 			'MaxBonusDamage': 0.20000000298023224,
@@ -42,7 +42,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 1,
 		name: `All Natural I`,
 		groupID: `allNatural`,
-		desc: `Your champions with no items equipped gain @health@ Health and heal for @Healing*100@% of their max Health each second.`,
+		desc: `Your champions with no items equipped gain @HP@ HP and heal for @Healing*100@% of their max HP each second.`,
 		effects: {
 			'Healing': 0.009999999776482582,
 			'HP': 120,
@@ -53,7 +53,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `All Natural II`,
 		groupID: `allNatural`,
-		desc: `Your champions with no items equipped gain @health@ Health and heal for @Healing*100@% of their max Health each second.`,
+		desc: `Your champions with no items equipped gain @HP@ HP and heal for @Healing*100@% of their max HP each second.`,
 		effects: {
 			'Healing': 0.019999999552965164,
 			'HP': 150,
@@ -228,7 +228,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 1,
 		name: `Blood Money`,
 		groupID: `bloodMoney`,
-		desc: `Gain @Gold@ gold per @HealthPerGold@ Health your Tactician loses.`,
+		desc: `Gain @Gold@ gold per @HPPerGold@ HP your Tactician loses.`,
 		effects: {
 			'Gold': 1,
 			'HPPerGold': 3,
@@ -239,7 +239,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 1,
 		name: `Blood Price I`,
 		groupID: `bloodPrice`,
-		desc: `Your units gain @AttackSpeed*100@% Attack Speed for each @Health@ Tactician Health missing.`,
+		desc: `Your units gain @AS*100@% Attack Speed for each @HP@ Tactician HP missing.`,
 		effects: {
 			'AS': 0.02500000037252903,
 			'HP': 10,
@@ -250,7 +250,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Blood Price II`,
 		groupID: `bloodPrice`,
-		desc: `Your team gains @AttackSpeed*100@% Attack Speed for each @Health@ Tactician Health missing.`,
+		desc: `Your team gains @AS*100@% Attack Speed for each @HP@ Tactician HP missing.`,
 		effects: {
 			'AS': 0.03500000014901161,
 			'HP': 10,
@@ -261,7 +261,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 3,
 		name: `Blood Price III`,
 		groupID: `bloodPrice`,
-		desc: `Your team gains @AttackSpeed*100@% Attack Speed for each @Health@ Tactician Health missing.`,
+		desc: `Your team gains @AS*100@% Attack Speed for each @HP@ Tactician HP missing.`,
 		effects: {
 			'AS': 0.05000000074505806,
 			'HP': 10,
@@ -426,7 +426,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Chemtech Enhancements`,
 		groupID: `chemtechEnhancements`,
-		desc: `Your units with Zaun's chem-mods gain @BonusHP@ Health. Allies that start combat adjacent to them gain @SharedHP@ Health. Gain 2 Zaun units.`,
+		desc: `Your units with Zaun's chem-mods gain @BonusHP@ HP. Allies that start combat adjacent to them gain @SharedHP@ HP. Gain 2 Zaun units.`,
 		effects: {
 			'BonusHP': 500,
 			'SharedHP': 250,
@@ -459,7 +459,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Contagion`,
 		groupID: `contagion`,
-		desc: `Combat start: Infect the highest Health enemy, causing them to take @DamageAmp*100@% more damage. Every @SpreadTimer@ seconds or on death, the infection spreads to @SpreadTargets@ nearby enemies.`,
+		desc: `Combat start: Infect the highest HP enemy, causing them to take @DamageAmp*100@% more damage. Every @SpreadTimer@ seconds or on death, the infection spreads to @SpreadTargets@ nearby enemies.`,
 		effects: {
 			'DamageAmp': 0.18000000715255737,
 			'SpreadTargets': 2,
@@ -491,7 +491,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 1,
 		name: `Cybernetic Bulk I`,
 		groupID: `cyberneticBulk`,
-		desc: `Your champions holding an item gain @health@ Health.`,
+		desc: `Your champions holding an item gain @HP@ HP.`,
 		effects: {
 			'HP': 225,
 		},
@@ -501,7 +501,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Cybernetic Bulk II`,
 		groupID: `cyberneticBulk`,
-		desc: `Your champions holding an item gain @health@ health.`,
+		desc: `Your champions holding an item gain @HP@ HP.`,
 		effects: {
 			'HP': 300,
 		},
@@ -511,7 +511,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 3,
 		name: `Cybernetic Bulk III`,
 		groupID: `cyberneticBulk`,
-		desc: `Your champions holding an item gain @health@ health.`,
+		desc: `Your champions holding an item gain @HP@ HP.`,
 		effects: {
 			'HP': 500,
 		},
@@ -521,7 +521,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 1,
 		name: `Cybernetic Leech I`,
 		groupID: `cyberneticLeech`,
-		desc: `Your units holding an item gain @health@ Health and @omnivamp@% Omnivamp.`,
+		desc: `Your units holding an item gain @HP@ HP and @omnivamp@% Omnivamp.`,
 		effects: {
 			'HP': 80,
 			'Omnivamp': 10,
@@ -532,7 +532,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Cybernetic Leech II`,
 		groupID: `cyberneticLeech`,
-		desc: `Your units holding an item gain @health@ Health and @omnivamp@% Omnivamp.`,
+		desc: `Your units holding an item gain @HP@ HP and @omnivamp@% Omnivamp.`,
 		effects: {
 			'HP': 120,
 			'Omnivamp': 15,
@@ -543,7 +543,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 3,
 		name: `Cybernetic Leech III`,
 		groupID: `cyberneticLeech`,
-		desc: `Your units holding an item gain @health@ Health and @omnivamp@% Omnivamp.`,
+		desc: `Your units holding an item gain @HP@ HP and @omnivamp@% Omnivamp.`,
 		effects: {
 			'HP': 250,
 			'Omnivamp': 20,
@@ -625,7 +625,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Demonflare`,
 		groupID: `demonflare`,
-		desc: `Gain a Swain. Your strongest Swain deals @DamageAmp*100@% increased damage per @Health@ max Health.`,
+		desc: `Gain a Swain. Your strongest Swain deals @DamageAmp*100@% increased damage per @HP@ max HP.`,
 		effects: {
 			'DamageAmp': 0.02500000037252903,
 			'HP': 100,
@@ -658,7 +658,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 3,
 		name: `Endless Hordes`,
 		groupID: `endlessHordes`,
-		desc: `Gain +@TeamSize@ maximum team size, but your units can only hold 1 item and their total health is reduced by @HealthReduction*100@%. Gain @Gold@ gold.`,
+		desc: `Gain +@TeamSize@ maximum team size, but your units can only hold 1 item and their total HP is reduced by @HPReduction*100@%. Gain @Gold@ gold.`,
 		effects: {
 			'Gold': 4,
 			'HPReduction': 0.15000000596046448,
@@ -670,7 +670,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 3,
 		name: `Endless Hordes +`,
 		groupID: `endlessHordesPlus`,
-		desc: `Gain +@TeamSize@ maximum team size, but your units can only hold 1 item and their total health is reduced by @HealthReduction*100@%. Gain @Gold@ gold.`,
+		desc: `Gain +@TeamSize@ maximum team size, but your units can only hold 1 item and their total HP is reduced by @HPReduction*100@%. Gain @Gold@ gold.`,
 		effects: {
 			'Gold': 14,
 			'HPReduction': 0.15000000596046448,
@@ -682,7 +682,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Endurance Training`,
 		groupID: `enduranceTraining`,
-		desc: `Your units permanently gain @Health@ Health every time they kill an enemy. Units start with @StartingHealth@ bonus Health.`,
+		desc: `Your units permanently gain @HP@ HP every time they kill an enemy. Units start with @StartingHP@ bonus HP.`,
 		effects: {
 			'HP': 18,
 			'StartingHP': 100,
@@ -751,7 +751,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 3,
 		name: `Final Reserves`,
 		groupID: `finalReserves`,
-		desc: `The first time you would be eliminated or reduced to 1 Health, instead remain alive. Then, at the beginning of your next planning phase gain @xp@ XP and set your gold to @gold@. Excess gold is converted to XP.`,
+		desc: `The first time you would be eliminated or reduced to 1 HP, instead remain alive. Then, at the beginning of your next planning phase gain @xp@ XP and set your gold to @gold@. Excess gold is converted to XP.`,
 		effects: {
 			'Gold': 66,
 			'XP': 60,
@@ -814,7 +814,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Glacial Breeze`,
 		groupID: `glacialBreeze`,
-		desc: `When your Freljordian Storm strikes, your units are shielded for @ShieldRatio*100@% of their maximum Health and gain @BonusAS*100@% Attack Speed. Gain 2 Freljord units.`,
+		desc: `When your Freljordian Storm strikes, your units are shielded for @ShieldRatio*100@% of their maximum HP and gain @BonusAS*100@% Attack Speed. Gain 2 Freljord units.`,
 		effects: {
 			'BonusAS': 0.07999999821186066,
 			'ShieldRatio': 0.15000000596046448,
@@ -1300,7 +1300,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Mana Burn`,
 		groupID: `manaBurn`,
-		desc: `Gain a Shroud of Stillness. All enemies take @MaxHealthPerSecond@% of their maximum Health as true damage each second until the first time they cast their Ability.`,
+		desc: `Gain a Shroud of Stillness. All enemies take @MaxHPPerSecond@% of their maximum HP as true damage each second until the first time they cast their Ability.`,
 		effects: {
 			'MaxHPPerSecond': 1.5,
 		},
@@ -1310,9 +1310,9 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Martyr`,
 		groupID: `martyr`,
-		desc: `Whenever one of your units dies, all allies heal for @Missinghealth@% of their maximum Health.`,
+		desc: `Whenever one of your units dies, all allies heal for @MissingHP@% of their maximum HP.`,
 		effects: {
-			'Missinghealth': 10,
+			'MissingHP': 10,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Martyr-II.TFT_Set9.tex`,
 	},
@@ -1412,7 +1412,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Morning Light`,
 		groupID: `morningLight`,
-		desc: `When your Bastion units drop below @HealthThreshold*100@% Health, they heal for @HealRatio*100@% of their maximum Health over @Duration@ seconds. Gain 2 Bastion units.`,
+		desc: `When your Bastion units drop below @HPThreshold*100@% HP, they heal for @HealRatio*100@% of their maximum HP over @Duration@ seconds. Gain 2 Bastion units.`,
 		effects: {
 			'Duration': 4,
 			'HealRatio': 0.4000000059604645,
@@ -1528,7 +1528,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Parting Gifts`,
 		groupID: `partingGifts`,
-		desc: `When a unit dies, they pass a temporary copy of one of their items to the nearest ally with open slots and shield them for @ShieldRatio*100@% of their maximum Health.`,
+		desc: `When a unit dies, they pass a temporary copy of one of their items to the nearest ally with open slots and shield them for @ShieldRatio*100@% of their maximum HP.`,
 		effects: {
 			'ShieldRatio': 0.5,
 		},
@@ -1749,7 +1749,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 1,
 		name: `Red Buff`,
 		groupID: `redBuff`,
-		desc: `Your units' attacks burn their targets for @BurnPercent@% of their maximum Health over @Duration@ seconds and reduce their targets' healing received by @HealingReductionPct@%.`,
+		desc: `Your units' attacks burn their targets for @BurnPercent@% of their maximum HP over @Duration@ seconds and reduce their targets' healing received by @HealingReductionPct@%.`,
 		effects: {
 			'BurnPercent': 5,
 			'Duration': 5,
@@ -1761,7 +1761,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Rejuvenating Flames`,
 		groupID: `rejuvenatingFlames`,
-		desc: `Allies heal for @BaseRegen*100@% of their max Health every @Frequency@ seconds. Allies that started combat in an elemental hex heal for @EnhancedRegen*100@% instead. Gain 2 Ixtal champions.`,
+		desc: `Allies heal for @BaseRegen*100@% of their max HP every @Frequency@ seconds. Allies that started combat in an elemental hex heal for @EnhancedRegen*100@% instead. Gain 2 Ixtal champions.`,
 		effects: {
 			'BaseRegen': 0.07999999821186066,
 			'EnhancedRegen': 0.15000000596046448,
@@ -1842,7 +1842,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 1,
 		name: `Risky Moves`,
 		groupID: `riskyMoves`,
-		desc: `Your Tactician loses @Health@ Health, but after @PlayerCombatNum@ player combats, gain @Gold@ gold.`,
+		desc: `Your Tactician loses @HP@ HP, but after @PlayerCombatNum@ player combats, gain @Gold@ gold.`,
 		effects: {
 			'Gold': 30,
 			'HP': 20,
@@ -1927,7 +1927,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Sentinel's Spirit`,
 		groupID: `sentinelsSpirit`,
-		desc: `While in spirit form, your Ionians gain @BonusAS*100@% Attack Speed and shield themselves for @ShieldRatio*100@% of their maximum Health. Gain 2 Ionians.`,
+		desc: `While in spirit form, your Ionians gain @BonusAS*100@% Attack Speed and shield themselves for @ShieldRatio*100@% of their maximum HP. Gain 2 Ionians.`,
 		effects: {
 			'BonusAS': 0.10000000149011612,
 			'ShieldRatio': 0.15000000596046448,
@@ -2084,7 +2084,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Sleight of Hand`,
 		groupID: `sleightOfHand`,
-		desc: `Gain a Thief's Gloves. Champions holding Thief's Gloves gain @Health@ Health and @AS@% Attack Speed.`,
+		desc: `Gain a Thief's Gloves. Champions holding Thief's Gloves gain @HP@ HP and @AS@% Attack Speed.`,
 		effects: {
 			'AS': 20,
 			'HP': 200,
@@ -2236,7 +2236,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Stable Evolution`,
 		groupID: `stableEvolution`,
-		desc: `Your Void units gain @bonushealth@ Health and @BonusStats@% Attack Damage and Ability Power for each star level they have. Gain 2 Void units.`,
+		desc: `Your Void units gain @bonusHP@ HP and @BonusStats@% Attack Damage and Ability Power for each star level they have. Gain 2 Void units.`,
 		effects: {
 			'BonusHP': 60,
 			'BonusStats': 6,
@@ -2344,7 +2344,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Stolen Vitality`,
 		groupID: `stolenVitality`,
-		desc: `When your Vanquisher's attacks and Abilities critically strike, they heal the ally with the most missing Health by @HealthPercent*100@% of that ally's max Health. Gain 2 Vanquishers.`,
+		desc: `When your Vanquisher's attacks and Abilities critically strike, they heal the ally with the most missing HP by @HPPercent*100@% of that ally's max HP. Gain 2 Vanquishers.`,
 		effects: {
 			'HPPercent': 0.009999999776482582,
 		},
@@ -2479,7 +2479,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Three's a Crowd`,
 		groupID: `threesACrowd`,
-		desc: `Your units gain @HealthPerUnit@ Health for each unique Tier @Tier@ unit you field. `,
+		desc: `Your units gain @HPPerUnit@ HP for each unique Tier @Tier@ unit you field. `,
 		effects: {
 			'HPPerUnit': 100,
 			'Tier': 3,
@@ -2538,7 +2538,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Tons of Stats!`,
 		groupID: `tonsOfStats`,
-		desc: `Your team gains @Health@ Health, @AttackDamage@% Attack Damage, @AbilityPower@ Ability Power, @Armor@ Armor, @MR@ Magic Resist, @AttackSpeed@% Attack Speed, and @Mana@ Mana.`,
+		desc: `Your team gains @HP@ HP, @AD@% Attack Damage, @AP@ Ability Power, @Armor@ Armor, @MR@ Magic Resist, @AS@% Attack Speed, and @Mana@ Mana.`,
 		effects: {
 			'AP': 4,
 			'Armor': 4,
@@ -2554,7 +2554,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Total Domination`,
 		groupID: `totalDomination`,
-		desc: `Noxus units' attacks and Abilities execute enemies below @BaseExecuteThreshold@% Health, increased by @StackingExecuteThreshold@% for each player you've Conquered. Gain 2 Noxians.`,
+		desc: `Noxus units' attacks and Abilities execute enemies below @BaseExecuteThreshold@% HP, increased by @StackingExecuteThreshold@% for each player you've Conquered. Gain 2 Noxians.`,
 		effects: {
 			'BaseExecuteThreshold': 5,
 			'StackingExecuteThreshold': 1,
@@ -2598,7 +2598,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 1,
 		name: `Transfusion I`,
 		groupID: `transfusion`,
-		desc: `Your units gain @BaseHP@ Health, plus @BonusHPPerMissingHealth@ Health per missing Tactician Health.`,
+		desc: `Your units gain @BaseHP@ HP, plus @BonusHPPerMissingHP@ HP per missing Tactician HP.`,
 		effects: {
 			'BaseHP': 20,
 			'BonusHPPerMissingHP': 2,
@@ -2609,7 +2609,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 1,
 		name: `Transfusion I`,
 		groupID: `transfusion`,
-		desc: `Your units gain @BaseHP@ Health, plus @BonusHPPerMissingHealth@ Health per missing Tactician Health.`,
+		desc: `Your units gain @BaseHP@ HP, plus @BonusHPPerMissingHP@ HP per missing Tactician HP.`,
 		effects: {
 			'BaseHP': 20,
 			'BonusHPPerMissingHP': 2,
@@ -2620,7 +2620,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Transfusion II`,
 		groupID: `transfusion`,
-		desc: `Your units gain @BaseHP@ Health, plus @BonusHPPerMissingHealth@ Health per missing Tactician Health.`,
+		desc: `Your units gain @BaseHP@ HP, plus @BonusHPPerMissingHP@ HP per missing Tactician HP.`,
 		effects: {
 			'BaseHP': 40,
 			'BonusHPPerMissingHP': 3,
@@ -2631,7 +2631,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Transfusion II`,
 		groupID: `transfusion`,
-		desc: `Your units gain @BaseHP@ Health, plus @BonusHPPerMissingHealth@ Health per missing Tactician Health.`,
+		desc: `Your units gain @BaseHP@ HP, plus @BonusHPPerMissingHP@ HP per missing Tactician HP.`,
 		effects: {
 			'BaseHP': 40,
 			'BonusHPPerMissingHP': 3,
@@ -2642,7 +2642,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 3,
 		name: `Transfusion III`,
 		groupID: `transfusion`,
-		desc: `Your units gain @BaseHP@ Health, plus @BonusHPPerMissingHealth@ Health per missing Tactician Health.`,
+		desc: `Your units gain @BaseHP@ HP, plus @BonusHPPerMissingHP@ HP per missing Tactician HP.`,
 		effects: {
 			'BaseHP': 50,
 			'BonusHPPerMissingHP': 5,
@@ -2653,7 +2653,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 3,
 		name: `Transfusion III`,
 		groupID: `transfusion`,
-		desc: `Your units gain @BaseHP@ Health, plus @BonusHPPerMissingHealth@ Health per missing Tactician Health.`,
+		desc: `Your units gain @BaseHP@ HP, plus @BonusHPPerMissingHP@ HP per missing Tactician HP.`,
 		effects: {
 			'BaseHP': 50,
 			'BonusHPPerMissingHP': 5,
@@ -2664,7 +2664,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Two Healthy`,
 		groupID: `twoHealthy`,
-		desc: `Your units gain @HealthPerUnit@ Health for each unique Tier @Tier@ unit you field. `,
+		desc: `Your units gain @HPPerUnit@ HP for each unique Tier @Tier@ unit you field. `,
 		effects: {
 			'HPPerUnit': 100,
 			'Tier': 2,
@@ -2675,7 +2675,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 1,
 		name: `Unburdened I`,
 		groupID: `unburdened`,
-		desc: `Your units without items equipped gain @AttackSpeed*100@% Attack Speed.`,
+		desc: `Your units without items equipped gain @AS*100@% Attack Speed.`,
 		effects: {
 			'AS': 0.30000001192092896,
 		},
@@ -2685,7 +2685,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Unburdened II`,
 		groupID: `unburdened`,
-		desc: `Your units without items equipped gain @AttackSpeed*100@% Attack Speed.`,
+		desc: `Your units without items equipped gain @AS*100@% Attack Speed.`,
 		effects: {
 			'AS': 0.550000011920929,
 		},
@@ -2833,7 +2833,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 1,
 		name: `Well-Earned Comforts I`,
 		groupID: `wellEarnedComforts`,
-		desc: `Your units gain @Health@ Health for each item equipped.`,
+		desc: `Your units gain @HP@ HP for each item equipped.`,
 		effects: {
 			'HP': 70,
 		},
@@ -2843,7 +2843,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Well-Earned Comforts II`,
 		groupID: `wellEarnedComforts`,
-		desc: `Your units gain @Health@ Health for each item equipped.`,
+		desc: `Your units gain @HP@ HP for each item equipped.`,
 		effects: {
 			'HP': 111,
 		},
@@ -2853,7 +2853,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 3,
 		name: `Well-Earned Comforts III`,
 		groupID: `wellEarnedComforts`,
-		desc: `Your units gain @Health@ Health and @AttackSpeed*100@% Attack Speed for each item equipped.`,
+		desc: `Your units gain @HP@ HP and @AS*100@% Attack Speed for each item equipped.`,
 		effects: {
 			'AS': 0.05999999865889549,
 			'HP': 120,
@@ -2864,7 +2864,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 3,
 		name: `Wellness Trust`,
 		groupID: `wellnessTrust`,
-		desc: `Round start: Gain @GoldPerTurn@ gold. If you have at least @GoldThreshhold@ gold, your Tactician heals @Health@ Health.`,
+		desc: `Round start: Gain @GoldPerTurn@ gold. If you have at least @GoldThreshhold@ gold, your Tactician heals @HP@ HP.`,
 		effects: {
 			'GoldPerTurn': 3,
 			'GoldThreshhold': 40,
@@ -2887,7 +2887,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 3,
 		name: `What The Forge`,
 		groupID: `whatTheForge`,
-		desc: `All completed items you own or receive are transformed into random Artifacts (excluding Tactician's Crown and Emblems). Units gain @Health@ Health per equipped Artifact.`,
+		desc: `All completed items you own or receive are transformed into random Artifacts (excluding Tactician's Crown and Emblems). Units gain @HP@ HP per equipped Artifact.`,
 		effects: {
 			'HP': 110,
 		},
@@ -2897,7 +2897,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Winds of War`,
 		groupID: `windsOfWar`,
-		desc: `Gain a Galio. Your strongest Galio's ability gets larger with each cast, and enemies hit take magic damage equal to @HealthRatio*100@% of his max Health each second.`,
+		desc: `Gain a Galio. Your strongest Galio's ability gets larger with each cast, and enemies hit take magic damage equal to @HPRatio*100@% of his max HP each second.`,
 		effects: {
 			'HPRatio': 0.11999999731779099,
 			'{b93c067c}': 150,
@@ -2976,7 +2976,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `No Scope`,
 		groupID: `noScope`,
-		desc: `Units in the first two rows have their range reduced to a maximum of @RangeMax@ but gain @Armor@ Armor, @MagicResist@ Magic Resist, and @AD*100@% Attack Damage per hex of range lost.`,
+		desc: `Units in the first two rows have their range reduced to a maximum of @RangeMax@ but gain @Armor@ Armor, @MR@ Magic Resist, and @AD*100@% Attack Damage per hex of range lost.`,
 		effects: {
 			'AD': 0.3499999940395355,
 			'Armor': 12,
@@ -2989,7 +2989,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Tiniest Titan`,
 		groupID: `tiniestTitan`,
-		desc: `Your Tactician is small and speedy. After each PVP round, heal @Heal@ Health and gain @Gold@ gold.`,
+		desc: `Your Tactician is small and speedy. After each PVP round, heal @Heal@ HP and gain @Gold@ gold.`,
 		effects: {
 			'Gold': 2,
 			'Heal': 2,
@@ -3000,7 +3000,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Tiniest Titan`,
 		groupID: `tiniestTitan`,
-		desc: `Your Tactician is small and speedy. After each PVP round, heal @Heal@ Health and gain @Gold@ gold.`,
+		desc: `Your Tactician is small and speedy. After each PVP round, heal @Heal@ HP and gain @Gold@ gold.`,
 		effects: {
 			'Gold': 2,
 			'Heal': 2,
@@ -3011,7 +3011,7 @@ export const inactiveAugments: AugmentData[] = [
 		tier: 3,
 		name: `Tiniest Titan+`,
 		groupID: `tiniestTitanplus`,
-		desc: `Your Tactician is small and speedy. After each PVP round, heal @Heal@ Health and gain @Gold@ gold. Gain @InitialGold@ gold now.`,
+		desc: `Your Tactician is small and speedy. After each PVP round, heal @Heal@ HP and gain @Gold@ gold. Gain @InitialGold@ gold now.`,
 		effects: {
 			'Gold': 2,
 			'Heal': 2,

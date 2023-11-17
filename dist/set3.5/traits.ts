@@ -20,7 +20,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Battlecast`,
-		desc: `After dealing or taking 10 instances of damage, Battlecast Champions deal magic damage to the nearest enemy. If below half health, they heal instead.<br><br><expandRow>(@MinUnits@) @HealOrDamageAmount@ Healing or Damage</expandRow>`,
+		desc: `After dealing or taking 10 instances of damage, Battlecast Champions deal magic damage to the nearest enemy. If below half HP, they heal instead.<br><br><expandRow>(@MinUnits@) @HealOrDamageAmount@ Healing or Damage</expandRow>`,
 		effects: [
 			{
 				maxUnits: 3,
@@ -355,7 +355,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `MechPilot`,
-		desc: `(@MinUnits@) At the start of combat, three random Mech-Pilots are teleported into a Super-Mech.<br><br>The Super-Mech has the Traits of its pilots, 3 random items from among them, and gains 60% of the combined Pilots' health and attack damage.<br><br>When the Super-Mech dies the Pilots are ejected with @EjectedPilotHPPercent@% of their maximum health and continue to fight.`,
+		desc: `(@MinUnits@) At the start of combat, three random Mech-Pilots are teleported into a Super-Mech.<br><br>The Super-Mech has the Traits of its pilots, 3 random items from among them, and gains 60% of the combined Pilots' HP and attack damage.<br><br>When the Super-Mech dies the Pilots are ejected with @EjectedPilotHPPercent@% of their maximum HP and continue to fight.`,
 		effects: [
 			{
 				maxUnits: 25000,

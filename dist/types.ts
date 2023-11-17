@@ -38,7 +38,7 @@ export interface AugmentFlashcard {
 	icons: string[]
 }
 export interface ItemFlashcard {
-	id: number
+	id: string
 	name: string
 	type: ItemTypeKey
 	description: string
@@ -126,7 +126,7 @@ export interface SpellCalculation {
 }
 
 export interface ChampionData {
-	apiName?: string
+	apiName: string
 	name: string
 	icon: string
 	cost?: number

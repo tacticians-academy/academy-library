@@ -1,5 +1,5 @@
 {
-	"{1f8015a9}": {
+	"Characters/TFT6_HexTechDragon/Spells/TFT6_HextechDragonBasicAttack": {
 		"mScriptName": "TFT6_HextechDragonBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 24527,
@@ -67,7 +67,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{c4e7c41d}": {
+	"Characters/TFT6_HexTechDragon/Spells/TFT6_HextechDragonEmpoweredAttack": {
 		"mScriptName": "TFT6_HextechDragonEmpoweredAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 24527,
@@ -135,7 +135,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{d0354720}": {
+	"Characters/TFT6_HexTechDragon/Spells/TFT6_HextechDragonQ": {
 		"mScriptName": "TFT6_HextechDragonQ",
 		"mSpell": {
 			"mAffectsTypeFlags": 14347,
@@ -286,7 +286,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{d2dacf7c}": {
+	"Characters/TFT6_HexTechDragon/CharacterRecords/Root": {
 		"mMoveInterval": 0.10000000149011612,
 		"mMoveProximity": 180,
 		"mMoveRange": 500,

@@ -24,9 +24,11 @@ export const TRAIT_DATA_SUBSTITUTIONS: Record<string, string> = {
 	'{18931112}': 'Guardian',
 	'{aeb6a5eb}': 'Heartsteel',
 	'{32777aa0}': 'Hyperpop',
+	'{8fcdf725}': 'ILLBEATS',
 	'{2951a0fc}': 'Jazz',
 	'{af6fb94d}': 'K/DA',
 	'{4da47dd2}': 'Maestro',
+	'{bdbcd3bf}': 'Mixmaster',
 	'{3afd9bd6}': 'Mosher',
 	'{11f20023}': 'Pentakill',
 	'{366931dc}': 'Punk',
@@ -35,4 +37,5 @@ export const TRAIT_DATA_SUBSTITUTIONS: Record<string, string> = {
 	'{c7e3ce1d}': 'Spellweaver',
 	'{fa7abfbd}': 'Superfan',
 	'{c9bbc394}': 'True Damage',
+	'{aa9fc9a7}': 'Wildcard',
 }

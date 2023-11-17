@@ -32,6 +32,7 @@ const newEtag = response.headers.get('etag')
 if (newEtag != null) {
 	if (newEtag === oldEtag) {
 		console.log('Cached etag unchanged. Terminating.\n')
+		await fs.writeFile(setNumberPath, LOAD_SET.toString())
 		process.exit(0) //SAMPLE
 	}
 	if (oldEtag !== undefined) {
@@ -93,7 +94,7 @@ function replaceKey(object: Record<string, any>, key: string, substituted: strin
 }
 
 await Promise.all(apiNames.map(async apiName => {
-	const pathName = apiName!.toLowerCase()
+	const pathName = apiName.toLowerCase()
 	const outputPath = path.resolve(championsPath, pathName + '.json')
 	const url = `${baseURL}/game/data/characters/${pathName}/${pathName}.bin.json`
 	// console.log('Loading champion', apiName, url)

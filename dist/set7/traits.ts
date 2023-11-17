@@ -320,7 +320,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Set7_Guardian`,
-		desc: `Once per combat at @HPThreshold@% HP, Guardians shield themselves and their closest ally for a percent of their maximum HP. Shields stack!<br><br><expandRow> (@MinUnits@) @ShieldPercentAmount@% of max health shield</expandRow>`,
+		desc: `Once per combat at @HPThreshold@% HP, Guardians shield themselves and their closest ally for a percent of their maximum HP. Shields stack!<br><br><expandRow> (@MinUnits@) @ShieldPercentAmount@% of max HP shield</expandRow>`,
 		effects: [
 			{
 				maxUnits: 3,

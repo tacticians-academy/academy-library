@@ -7,7 +7,7 @@ import { importAugments, importItems, importTraits, importChampions } from '../.
 import { BonusKey } from '../../dist/types.js'
 import type { AugmentData, EffectVariables } from '../../dist/types.js'
 
-import { AugmentGroupKey, ChampionKey, ItemKey, TraitKey } from '../../dist/aggregated.js'
+import { AugmentGroupKey, ItemKey, TraitKey } from '../../dist/aggregated.js'
 
 import { getCurrentSetNumber, githubTokenPath, loadHardcodedTXT } from '../helpers/files.js'
 import { getAugmentNameKey } from '../helpers/utils.js'
@@ -117,7 +117,6 @@ function wikiUrlFor({ name }: { name: string }) {
 // Champions
 
 for (const champion of champions) {
-	// if (champion.name !== ChampionKey.Alistar) { continue } //SAMPLE
 	// const canContinue = await createIssue({
 	// 	title: `${champion.name} ability`,
 	// 	body: `Implement ${champion.name} ability`,

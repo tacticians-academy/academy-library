@@ -841,7 +841,7 @@ export const traits: TraitData[] = [
 				style: 1,
 				variables: {
 					'BonusArmor': 16,
-					'{a624ed1a}': 36,
+					'{a624ed1a}': 32,
 				},
 			},
 			{
@@ -995,7 +995,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Set10_TwoSides`,
-		desc: `(unique) If you win player combat, Kayn becomes the Shadow Assassin. If not, he becomes Rhaast. You receive a reward based on his form every time he kills @NumOfKills@ enemy champions. <br><br><TFTBonus enabled=TFT10_WildcardShadowAssassin alternate=rules>Shadow Assassin: @AssassinGoldPerKill@g</TFTBonus><br><TFTBonus enabled=TFT10_WildcardRhaast alternate=rules>Rhaast: @RhaastPlayerHPPerKill@ player health</TFTBonus>`,
+		desc: `(unique) If you win player combat, Kayn becomes the Shadow Assassin. If not, he becomes Rhaast. You receive a reward based on his form every time he kills @NumOfKills@ enemy champions. <br><br><TFTBonus enabled=TFT10_WildcardShadowAssassin alternate=rules>Shadow Assassin: @AssassinGoldPerKill@g</TFTBonus><br><TFTBonus enabled=TFT10_WildcardRhaast alternate=rules>Rhaast: @RhaastPlayerHPPerKill@ player HP</TFTBonus>`,
 		effects: [
 			{
 				maxUnits: 25000,

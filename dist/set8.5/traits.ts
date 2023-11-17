@@ -579,7 +579,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Set8_OxForce`,
-		desc: `Ox Force units gain bonus defenses. Once per combat, when they would drop below one health, they instead shield themselves for @ShieldPercent@% of their maximum health for @Duration@ seconds.<br><br><expandRow>(@MinUnits@) @Defenses@ Armor and Magic Resist,</expandRow>`,
+		desc: `Ox Force units gain bonus defenses. Once per combat, when they would drop below one HP, they instead shield themselves for @ShieldPercent@% of their maximum HP for @Duration@ seconds.<br><br><expandRow>(@MinUnits@) @Defenses@ Armor and Magic Resist,</expandRow>`,
 		effects: [
 			{
 				maxUnits: 3,

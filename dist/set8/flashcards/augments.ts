@@ -159,7 +159,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `threat level maximum`,
 		name: `Threat Level: Maximum`,
 		tiers: [2],
-		description: `Combat start: Threats gain {MaxHealthIncrease} maximum Health for every Threat champion on your board.`,
+		description: `Combat start: Threats gain {MaxHPIncrease} maximum HP for every Threat champion on your board.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/threatlevelmaxiumum-ii.tft_set8`],
 	},
 	{

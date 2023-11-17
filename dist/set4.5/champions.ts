@@ -1,5 +1,6 @@
-import { ChampionKey } from '../index.js'
 import type { ChampionData } from '../index'
+
+export enum ChampionKey { Aatrox = `TFT4_Aatrox`, Ahri = `TFT4_Ahri`, Akali = `TFT4_Akali`, Annie = `TFT4_Annie`, Aphelios = `TFT4_Aphelios`, Ashe = `TFT4_Ashe`, Azir = `TFT4_Azir`, Cassiopeia = `TFT4_Cassiopeia`, Diana = `TFT4_Diana`, Elise = `TFT4_Elise`, Evelynn = `TFT4_Evelynn`, Ezreal = `TFT4_Ezreal`, Fiora = `TFT4_Fiora`, Galio = `TFT4_Galio`, Garen = `TFT4_Garen`, Hecarim = `TFT4_Hecarim`, Irelia = `TFT4_Irelia`, Janna = `TFT4_Janna`, JarvanIV = `TFT4_JarvanIV`, Jax = `TFT4_Jax`, Jhin = `TFT4_Jhin`, Jinx = `TFT4_Jinx`, Kalista = `TFT4_Kalista`, Katarina = `TFT4_Katarina`, Kayn = `TFT4_Kayn`, Kennen = `TFT4_Kennen`, Kindred = `TFT4_Kindred`, LeeSin = `TFT4_LeeSin`, Lillia = `TFT4_Lillia`, Lissandra = `TFT4_Lissandra`, Lulu = `TFT4_Lulu`, Lux = `TFT4_Lux`, Maokai = `TFT4_Maokai`, Morgana = `TFT4_Morgana`, Nami = `TFT4_Nami`, NPCNexus = `TFT4_NPC_Nexus`, Nidalee = `TFT4_Nidalee`, Nunu = `TFT4_Nunu`, Pyke = `TFT4_Pyke`, Riven = `TFT4_Riven`, AzirSoldier = `TFT4_AzirSoldier`, Sejuani = `TFT4_Sejuani`, Sett = `TFT4_Sett`, Shen = `TFT4_Shen`, Sylas = `TFT4_Sylas`, TahmKench = `TFT4_TahmKench`, Talon = `TFT4_Talon`, TrainingDummy = `TFT_TrainingDummy`, Teemo = `TFT4_Teemo`, Thresh = `TFT4_Thresh`, TwistedFate = `TFT4_TwistedFate`, Vayne = `TFT4_Vayne`, Veigar = `TFT4_Veigar`, Vi = `TFT4_Vi`, Warwick = `TFT4_Warwick`, Wukong = `TFT4_Wukong`, XinZhao = `TFT4_XinZhao`, Yasuo = `TFT4_Yasuo`, Yone = `TFT4_Yone`, Yuumi = `TFT4_Yuumi`, Zed = `TFT4_Zed`, Zilean = `TFT4_Zilean` }
 
 export const champions: ChampionData[] = [
 	{
@@ -5005,7 +5006,7 @@ export const champions: ChampionData[] = [
 			moveSpeed: 500,
 			range: 1,
 		},
-		basicAttackMissileSpeed: 0,
+		basicAttackMissileSpeed: 20,
 		critAttackMissileSpeed: 0,
 		passive: undefined,
 		spells: [

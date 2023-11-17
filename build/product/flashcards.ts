@@ -109,7 +109,7 @@ currentItems.forEach(item => {
 		.replaceAll(/ +/g, ' ')
 	const iconURL = getIconPath(item, true)
 	outputItemsObject.push({
-		id: item.id,
+		id: item.apiName ?? item.id!.toString(),
 		name: item.name,
 		type,
 		description,

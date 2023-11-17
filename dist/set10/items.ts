@@ -1,4 +1,3 @@
-import { ItemKey } from '../index.js'
 import type { ItemData } from '../index'
 
 export const componentItems: ItemData[] = [
@@ -36,7 +35,7 @@ export const componentItems: ItemData[] = [
 		apiName: `TFT_Item_GiantsBelt`,
 		associatedTraits: [],
 		composition: [],
-		desc: `%i:scaleHealth% +@Health@ Health`,
+		desc: `%i:scaleHP% +@HP@ HP`,
 		effects: {
 			'HP': 150,
 		},
@@ -66,7 +65,7 @@ export const componentItems: ItemData[] = [
 		apiName: `TFT_Item_NegatronCloak`,
 		associatedTraits: [],
 		composition: [],
-		desc: `%i:scaleMR% +@MagicResist@ Magic Resist`,
+		desc: `%i:scaleMR% +@MR@ Magic Resist`,
 		effects: {
 			'MR': 20,
 		},
@@ -185,7 +184,7 @@ export const completedItems: ItemData[] = [
 		apiName: `TFT_Item_Bloodthirster`,
 		associatedTraits: [],
 		composition: [`TFT_Item_BFSword`, `TFT_Item_NegatronCloak`],
-		desc: `Gain @Lifesteal@% <TFTKeyword>Omnivamp</TFTKeyword>.<br><br>Once per combat at @HealthThreshold@% Health, gain a @ShieldHealthPercent@% max Health Shield that lasts up to @ShieldDuration@ seconds.<br><br><tftitemrules><tftbold>Omnivamp</tftbold>: heal for some of damage dealt</tftitemrules>`,
+		desc: `Gain @Lifesteal@% <TFTKeyword>Omnivamp</TFTKeyword>.<br><br>Once per combat at @HPThreshold@% HP, gain a @ShieldHPPercent@% max HP Shield that lasts up to @ShieldDuration@ seconds.<br><br><tftitemrules><tftbold>Omnivamp</tftbold>: heal for some of damage dealt</tftitemrules>`,
 		effects: {
 			'AD': 0.20000000298023224,
 			'HPThreshold': 40,
@@ -224,7 +223,7 @@ export const completedItems: ItemData[] = [
 		apiName: `TFT_Item_BrambleVest`,
 		associatedTraits: [],
 		composition: [`TFT_Item_ChainVest`, `TFT_Item_ChainVest`],
-		desc: `Gain @PercentMaxHP*100@% max health.<br><br>Take @AutoDamageReduction*100@% reduced damage from attacks. When struck by any attack, deal <magicDamage>@1StarAoEDamage@ magic damage</magicDamage> to all adjacent enemies.<br><br><tftitemrules>Cooldown: @ICD@ seconds</tftitemrules>`,
+		desc: `Gain @PercentMaxHP*100@% max HP.<br><br>Take @AutoDamageReduction*100@% reduced damage from attacks. When struck by any attack, deal <magicDamage>@1StarAoEDamage@ magic damage</magicDamage> to all adjacent enemies.<br><br><tftitemrules>Cooldown: @ICD@ seconds</tftitemrules>`,
 		effects: {
 			'1StarAoEDamage': 100,
 			'2StarAoEDamage': 100,
@@ -247,7 +246,7 @@ export const completedItems: ItemData[] = [
 		apiName: `TFT_Item_Crownguard`,
 		associatedTraits: [],
 		composition: [`TFT_Item_NeedlesslyLargeRod`, `TFT_Item_ChainVest`],
-		desc: `Combat start: Gain a @ShieldSize@% max Health Shield for @ShieldDuration@ seconds.<br>When the shield expires, gain @ShieldBonusAP@ Ability Power.<br>`,
+		desc: `Combat start: Gain a @ShieldSize@% max HP Shield for @ShieldDuration@ seconds.<br>When the shield expires, gain @ShieldBonusAP@ Ability Power.<br>`,
 		effects: {
 			'AP': 20,
 			'Armor': 20,
@@ -285,7 +284,7 @@ export const completedItems: ItemData[] = [
 		apiName: `TFT_Item_DragonsClaw`,
 		associatedTraits: [],
 		composition: [`TFT_Item_NegatronCloak`, `TFT_Item_NegatronCloak`],
-		desc: `Gain @PercentMaxHP*100@% max health.<br><br>Every @HealthRegenInterval@ seconds, heal @PercentHealthDamage@% max Health.`,
+		desc: `Gain @PercentMaxHP*100@% max HP.<br><br>Every @HPRegenInterval@ seconds, heal @PercentHPDamage@% max HP.`,
 		effects: {
 			'HPRegenInterval': 2,
 			'ICD': 0.5,
@@ -304,7 +303,7 @@ export const completedItems: ItemData[] = [
 		apiName: `TFT_Item_GuardianAngel`,
 		associatedTraits: [],
 		composition: [`TFT_Item_BFSword`, `TFT_Item_ChainVest`],
-		desc: `Once per combat: At @HealthThreshold@% Health, briefly become untargetable and shed negative effects. Then, gain @AttackSpeed@% bonus Attack Speed.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
+		desc: `Once per combat: At @HPThreshold@% HP, briefly become untargetable and shed negative effects. Then, gain @AS@% bonus Attack Speed.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
 		effects: {
 			'AD': 0.10000000149011612,
 			'Armor': 20,
@@ -362,7 +361,7 @@ export const completedItems: ItemData[] = [
 		apiName: `TFT_Item_MadredsBloodrazor`,
 		associatedTraits: [],
 		composition: [`TFT_Item_BFSword`, `TFT_Item_RecurveBow`],
-		desc: `Deal @LargeBonusPct@% more damage to enemies with more than @HealthThreshold@ maximum Health.`,
+		desc: `Deal @LargeBonusPct@% more damage to enemies with more than @HPThreshold@ maximum HP.`,
 		effects: {
 			'AD': 0.30000001192092896,
 			'AP': 20,
@@ -401,7 +400,7 @@ export const completedItems: ItemData[] = [
 		apiName: `TFT_Item_GuinsoosRageblade`,
 		associatedTraits: [],
 		composition: [`TFT_Item_RecurveBow`, `TFT_Item_NeedlesslyLargeRod`],
-		desc: `Attacks grant @AttackSpeedPerStack@% stacking Attack Speed.`,
+		desc: `Attacks grant @ASPerStack@% stacking Attack Speed.`,
 		effects: {
 			'AP': 10,
 			'AS': 15,
@@ -418,7 +417,7 @@ export const completedItems: ItemData[] = [
 		apiName: `TFT_Item_UnstableConcoction`,
 		associatedTraits: [],
 		composition: [`TFT_Item_TearOfTheGoddess`, `TFT_Item_SparringGloves`],
-		desc: `Gain 2 effects:<li>@BaseAD*100@% Attack Damage and @BaseSP@ Ability Power.<li>@BaseHeal@% <TFTKeyword>Omnivamp</TFTKeyword>.<br><br>Each round, randomly double 1 of these effects.<br><br><tftitemrules><tftbold>Omnivamp</tftbold>: heal for some of damage dealt</tftitemrules>`,
+		desc: `Gain 2 effects:<li>@AD*100@% Attack Damage and @AP@ Ability Power.<li>@BaseHeal@% <TFTKeyword>Omnivamp</TFTKeyword>.<br><br>Each round, randomly double 1 of these effects.<br><br><tftitemrules><tftbold>Omnivamp</tftbold>: heal for some of damage dealt</tftitemrules>`,
 		effects: {
 			'AD': 0.15000000596046448,
 			'BaseHeal': 15,
@@ -440,7 +439,7 @@ export const completedItems: ItemData[] = [
 		apiName: `TFT_Item_HextechGunblade`,
 		associatedTraits: [],
 		composition: [`TFT_Item_BFSword`, `TFT_Item_NeedlesslyLargeRod`],
-		desc: `Gain @OmniVamp@% <TFTKeyword>Omnivamp</TFTKeyword>, which also heals the lowest percent Health ally.<br><br><TFTTrackerLabel>Healing:</TFTTrackerLabel> <TFTHighlight>@TFTUnitProperty.item:TFT_Tracker_Value1@</TFTHighlight><br><br><tftitemrules><tftbold>Omnivamp</tftbold>: heal for some of damage dealt</tftitemrules>`,
+		desc: `Gain @OmniVamp@% <TFTKeyword>Omnivamp</TFTKeyword>, which also heals the lowest percent HP ally.<br><br><TFTTrackerLabel>Healing:</TFTTrackerLabel> <TFTHighlight>@TFTUnitProperty.item:TFT_Tracker_Value1@</TFTHighlight><br><br><tftitemrules><tftbold>Omnivamp</tftbold>: heal for some of damage dealt</tftitemrules>`,
 		effects: {
 			'AD': 0.10000000149011612,
 			'AP': 10,
@@ -530,7 +529,7 @@ export const completedItems: ItemData[] = [
 		apiName: `TFT_Item_Morellonomicon`,
 		associatedTraits: [],
 		composition: [`TFT_Item_NeedlesslyLargeRod`, `TFT_Item_GiantsBelt`],
-		desc: `Attacks and Abilities deal @BurnPercent@% <TFTKeyword>Burn</TFTKeyword> and @GrievousWoundsPercent@% <TFTKeyword>Wound</TFTKeyword> to enemies for @BurnDuration@ seconds.<br><br><tftitemrules>[Unique - only 1 per champion]<br><tftbold>Burn</tftbold>: Deals a percent of the target's maximum Health as true damage every second<br><tftbold>Wound</tftbold>: Reduces healing received</tftitemrules>`,
+		desc: `Attacks and Abilities deal @BurnPercent@% <TFTKeyword>Burn</TFTKeyword> and @GrievousWoundsPercent@% <TFTKeyword>Wound</TFTKeyword> to enemies for @BurnDuration@ seconds.<br><br><tftitemrules>[Unique - only 1 per champion]<br><tftbold>Burn</tftbold>: Deals a percent of the target's maximum HP as true damage every second<br><tftbold>Wound</tftbold>: Reduces healing received</tftitemrules>`,
 		effects: {
 			'AP': 25,
 			'BurnDuration': 10,
@@ -551,7 +550,7 @@ export const completedItems: ItemData[] = [
 		apiName: `TFT_Item_Leviathan`,
 		associatedTraits: [],
 		composition: [`TFT_Item_RecurveBow`, `TFT_Item_GiantsBelt`],
-		desc: `After casting an Ability, gain @AttackSpeedToGive@% Attack Speed for @ASDuration@ seconds.`,
+		desc: `After casting an Ability, gain @ASToGive@% Attack Speed for @ASDuration@ seconds.`,
 		effects: {
 			'AP': 30,
 			'AS': 10,
@@ -570,7 +569,7 @@ export const completedItems: ItemData[] = [
 		apiName: `TFT_Item_FrozenHeart`,
 		associatedTraits: [],
 		composition: [`TFT_Item_TearOfTheGoddess`, `TFT_Item_ChainVest`],
-		desc: `Once per combat at @HealthThreshold@% Health, gain a @ShieldHealthPercent@% max Health Shield that lasts @ShieldDuration@ seconds and gain @Stats@ Armor and @Stats@ Magic Resist.`,
+		desc: `Once per combat at @HPThreshold@% HP, gain a @ShieldHPPercent@% max HP Shield that lasts @ShieldDuration@ seconds and gain @Stats@ Armor and @Stats@ Magic Resist.`,
 		effects: {
 			'Armor': 20,
 			'HPThreshold': 40,
@@ -590,7 +589,7 @@ export const completedItems: ItemData[] = [
 		apiName: `TFT_Item_Quicksilver`,
 		associatedTraits: [],
 		composition: [`TFT_Item_SparringGloves`, `TFT_Item_NegatronCloak`],
-		desc: `Combat start: Gain immunity to crowd control for @SpellShieldDuration@ seconds. During this time, gain @ProcAttackSpeed*100@% Attack Speed every @ProcInterval@ seconds.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
+		desc: `Combat start: Gain immunity to crowd control for @SpellShieldDuration@ seconds. During this time, gain @ProcAS*100@% Attack Speed every @ProcInterval@ seconds.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
 		effects: {
 			'AS': 30,
 			'CritChance': 20,
@@ -626,7 +625,7 @@ export const completedItems: ItemData[] = [
 		apiName: `TFT_Item_RapidFireCannon`,
 		associatedTraits: [],
 		composition: [`TFT_Item_RecurveBow`, `TFT_Item_RecurveBow`],
-		desc: `Deal @BonusDamage*100@% bonus damage.<br><br>Attacks and Abilities @BurnPercent@% <TFTKeyword>Burn</TFTKeyword> and @HealingReductionPct@% <TFTKeyword>Wound</TFTKeyword> enemies for @Duration@ seconds.<br><br><tftitemrules><tftbold>Burn</tftbold>: Deals a percent of the target's maximum Health as true damage every second<br><tftbold>Wound</tftbold>: Reduces healing received</tftitemrules>`,
+		desc: `Deal @BonusDamage*100@% bonus damage.<br><br>Attacks and Abilities @BurnPercent@% <TFTKeyword>Burn</TFTKeyword> and @HealingReductionPct@% <TFTKeyword>Wound</TFTKeyword> enemies for @Duration@ seconds.<br><br><tftitemrules><tftbold>Burn</tftbold>: Deals a percent of the target's maximum HP as true damage every second<br><tftbold>Wound</tftbold>: Reduces healing received</tftitemrules>`,
 		effects: {
 			'AS': 45,
 			'BonusDamage': 0.05000000074505806,
@@ -647,7 +646,7 @@ export const completedItems: ItemData[] = [
 		apiName: `TFT_Item_Redemption`,
 		associatedTraits: [],
 		composition: [`TFT_Item_TearOfTheGoddess`, `TFT_Item_GiantsBelt`],
-		desc: `Heal allies within 1 hex for @MissingHealthHeal@% of their missing Health every @HealTickRate@ seconds. They also take @AoEDamageReduction@% less damage for @HealTickRate@ seconds (damage reduction does not stack).<br><br><TFTTrackerLabel>Healing:</TFTTrackerLabel> <TFTHighlight>@TFTUnitProperty.item:TFT_Tracker_Value1@</TFTHighlight>`,
+		desc: `Heal allies within 1 hex for @MissingHPHeal@% of their missing HP every @HealTickRate@ seconds. They also take @AoEDamageReduction@% less damage for @HealTickRate@ seconds (damage reduction does not stack).<br><br><TFTTrackerLabel>Healing:</TFTTrackerLabel> <TFTHighlight>@TFTUnitProperty.item:TFT_Tracker_Value1@</TFTHighlight>`,
 		effects: {
 			'AoEDamageReduction': 10,
 			'HealTickRate': 5,
@@ -728,7 +727,7 @@ export const completedItems: ItemData[] = [
 		apiName: `TFT_Item_NightHarvester`,
 		associatedTraits: [],
 		composition: [`TFT_Item_ChainVest`, `TFT_Item_SparringGloves`],
-		desc: `Take @BaseDamageReduction@% less damage. While above @ThresholdForEmpower*100@% Health, take @EmpowerDamageReduction@% less damage, instead.<br><br><TFTTrackerLabel>Damage Blocked:</TFTTrackerLabel> <TFTHighlight>@TFTUnitProperty.item:TFT_Tracker_Value1@</TFTHighlight>`,
+		desc: `Take @BaseDamageReduction@% less damage. While above @ThresholdForEmpower*100@% HP, take @EmpowerDamageReduction@% less damage, instead.<br><br><TFTTrackerLabel>Damage Blocked:</TFTTrackerLabel> <TFTHighlight>@TFTUnitProperty.item:TFT_Tracker_Value1@</TFTHighlight>`,
 		effects: {
 			'Armor': 20,
 			'CritChance': 20,
@@ -748,7 +747,7 @@ export const completedItems: ItemData[] = [
 		apiName: `TFT_Item_SteraksGage`,
 		associatedTraits: [],
 		composition: [`TFT_Item_BFSword`, `TFT_Item_GiantsBelt`],
-		desc: `Once per combat at @HealthThreshold@% Health, gain @BonusMaxHealthPerc@% max Health and @BonusADToGive@% Attack Damage.`,
+		desc: `Once per combat at @HPThreshold@% HP, gain @BonusMaxHPPerc@% max HP and @BonusADToGive@% Attack Damage.`,
 		effects: {
 			'AD': 0.15000000596046448,
 			'BonusADToGive': 35,
@@ -767,7 +766,7 @@ export const completedItems: ItemData[] = [
 		apiName: `TFT_Item_RedBuff`,
 		associatedTraits: [],
 		composition: [`TFT_Item_ChainVest`, `TFT_Item_GiantsBelt`],
-		desc: `Every @ICD@ seconds, deal @BurnPercent@% <TFTKeyword>Burn</TFTKeyword> and @GrievousWoundsPercent@% <TFTKeyword>Wound</TFTKeyword> to an enemy within @HexRange@ hexes for @BurnDuration@ seconds.<br><br><tftitemrules>[Unique - only 1 per champion]<br><tftbold>Burn</tftbold>: Deals a percent of the target's maximum Health as true damage every second<br><tftbold>Wound</tftbold>: Reduces healing received</tftitemrules>`,
+		desc: `Every @ICD@ seconds, deal @BurnPercent@% <TFTKeyword>Burn</TFTKeyword> and @GrievousWoundsPercent@% <TFTKeyword>Wound</TFTKeyword> to an enemy within @HexRange@ hexes for @BurnDuration@ seconds.<br><br><tftitemrules>[Unique - only 1 per champion]<br><tftbold>Burn</tftbold>: Deals a percent of the target's maximum HP as true damage every second<br><tftbold>Wound</tftbold>: Reduces healing received</tftitemrules>`,
 		effects: {
 			'Armor': 20,
 			'BurnDuration': 10,
@@ -825,7 +824,7 @@ export const completedItems: ItemData[] = [
 		apiName: `TFT_Item_WarmogsArmor`,
 		associatedTraits: [],
 		composition: [`TFT_Item_GiantsBelt`, `TFT_Item_GiantsBelt`],
-		desc: `Gain @BonusPercentHP*100@% max health.`,
+		desc: `Gain @BonusPercentHP*100@% max HP.`,
 		effects: {
 			'HP': 600,
 			'{dd270afd}': 0.07999999821186066,
@@ -1194,7 +1193,7 @@ export const radiantItems: ItemData[] = [
 		apiName: `TFT5_Item_RedemptionRadiant`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Heal allies within <TFTRadiantItemBonus>@HexRadius@</TFTRadiantItemBonus> hexes for <TFTRadiantItemBonus>@MissingHealthHeal@%</TFTRadiantItemBonus> of their missing Health every @HealTickRate@ seconds. They also take @AoEDamageReduction@% less damage for @HealTickRate@ seconds (damage reduction does not stack).<br><br><TFTTrackerLabel>Healing:</TFTTrackerLabel> <TFTHighlight>@TFTUnitProperty.item:TFT_Tracker_Value1@</TFTHighlight>`,
+		desc: `Heal allies within <TFTRadiantItemBonus>@HexRadius@</TFTRadiantItemBonus> hexes for <TFTRadiantItemBonus>@MissingHPHeal@%</TFTRadiantItemBonus> of their missing HP every @HealTickRate@ seconds. They also take @AoEDamageReduction@% less damage for @HealTickRate@ seconds (damage reduction does not stack).<br><br><TFTTrackerLabel>Healing:</TFTTrackerLabel> <TFTHighlight>@TFTUnitProperty.item:TFT_Tracker_Value1@</TFTHighlight>`,
 		effects: {
 			'AoEDamageReduction': 10,
 			'HealTickRate': 5,
@@ -1215,7 +1214,7 @@ export const radiantItems: ItemData[] = [
 		apiName: `TFT5_Item_BloodthirsterRadiant`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Gain <TFTRadiantItemBonus>@Lifesteal@%</TFTRadiantItemBonus> <TFTKeyword>Omnivamp</TFTKeyword>.<br><br>Once per combat: At @HealthThreshold@% Health, gain a <TFTRadiantItemBonus>@ShieldHealthPercent@%</TFTRadiantItemBonus> max Health Shield that lasts up to @ShieldDuration@ seconds.<br><br><tftitemrules><tftbold>Omnivamp</tftbold>: heal for some of damage dealt</tftitemrules>`,
+		desc: `Gain <TFTRadiantItemBonus>@Lifesteal@%</TFTRadiantItemBonus> <TFTKeyword>Omnivamp</TFTKeyword>.<br><br>Once per combat: At @HPThreshold@% HP, gain a <TFTRadiantItemBonus>@ShieldHPPercent@%</TFTRadiantItemBonus> max HP Shield that lasts up to @ShieldDuration@ seconds.<br><br><tftitemrules><tftbold>Omnivamp</tftbold>: heal for some of damage dealt</tftitemrules>`,
 		effects: {
 			'AD': 0.4000000059604645,
 			'HPThreshold': 40,
@@ -1254,7 +1253,7 @@ export const radiantItems: ItemData[] = [
 		apiName: `TFT5_Item_GuardianAngelRadiant`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Once per combat: At @HealthThreshold@% Health, briefly become untargetable and shed negative effects. Then, <TFTRadiantItemBonus>heal @MissingHealthRestore*100@% missing health and gain @AttackSpeed@% bonus Attack Speed</TFTRadiantItemBonus>. <br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
+		desc: `Once per combat: At @HPThreshold@% HP, briefly become untargetable and shed negative effects. Then, <TFTRadiantItemBonus>heal @MissingHPRestore*100@% missing HP and gain @AS@% bonus Attack Speed</TFTRadiantItemBonus>. <br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
 		effects: {
 			'AD': 0.30000001192092896,
 			'Armor': 30,
@@ -1276,7 +1275,7 @@ export const radiantItems: ItemData[] = [
 		apiName: `TFT5_Item_FrozenHeartRadiant`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Once per combat at @HealthThreshold@% Health, gain a <TFTRadiantItemBonus>@ShieldHealthPercent@%</TFTRadiantItemBonus> max Health Shield that lasts <TFTRadiantItemBonus>@ShieldDuration@</TFTRadiantItemBonus> seconds and gain <TFTRadiantItemBonus>@Stats@</TFTRadiantItemBonus> Armor and <TFTRadiantItemBonus>@Stats@</TFTRadiantItemBonus> Magic Resist.<br>`,
+		desc: `Once per combat at @HPThreshold@% HP, gain a <TFTRadiantItemBonus>@ShieldHPPercent@%</TFTRadiantItemBonus> max HP Shield that lasts <TFTRadiantItemBonus>@ShieldDuration@</TFTRadiantItemBonus> seconds and gain <TFTRadiantItemBonus>@Stats@</TFTRadiantItemBonus> Armor and <TFTRadiantItemBonus>@Stats@</TFTRadiantItemBonus> Magic Resist.<br>`,
 		effects: {
 			'Armor': 40,
 			'HPThreshold': 40,
@@ -1315,7 +1314,7 @@ export const radiantItems: ItemData[] = [
 		apiName: `TFT5_Item_IonicSparkRadiant`,
 		associatedTraits: [],
 		composition: [],
-		desc: `@MRShred@% <TFTKeyword>Shred</TFTKeyword> enemies within <TFTRadiantItemBonus>@HexRange@</TFTRadiantItemBonus> hexes. When enemies cast an Ability, deal magic damage equal to <TFTRadiantItemBonus>@ManaRatio@%</TFTRadiantItemBonus> of their maximum Mana.<br><br><TFTRadiantItemBonus>Also, regenerate @MaxHealthRegen@% maximum Health per second.</TFTRadiantItemBonus><br><br><tftitemrules>[Direct damage item]<br><tftbold>Shred</tftbold>: Reduce Magic Resist</tftitemrules>`,
+		desc: `@MRShred@% <TFTKeyword>Shred</TFTKeyword> enemies within <TFTRadiantItemBonus>@HexRange@</TFTRadiantItemBonus> hexes. When enemies cast an Ability, deal magic damage equal to <TFTRadiantItemBonus>@ManaRatio@%</TFTRadiantItemBonus> of their maximum Mana.<br><br><TFTRadiantItemBonus>Also, regenerate @MaxHPRegen@% maximum HP per second.</TFTRadiantItemBonus><br><br><tftitemrules>[Direct damage item]<br><tftbold>Shred</tftbold>: Reduce Magic Resist</tftitemrules>`,
 		effects: {
 			'AP': 15,
 			'HPRegenInterval': 1,
@@ -1336,7 +1335,7 @@ export const radiantItems: ItemData[] = [
 		apiName: `TFT5_Item_RapidFirecannonRadiant`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Deal <TFTRadiantItemBonus>@BonusDamage*100@%</TFTRadiantItemBonus> bonus damage.<br><br>Attacks and Abilities <TFTRadiantItemBonus>@BurnPercent@%</TFTRadiantItemBonus> <TFTKeyword>Burn</TFTKeyword> and <TFTRadiantItemBonus>@HealingReductionPct@%</TFTRadiantItemBonus> <TFTKeyword>Wound</TFTKeyword> enemies for @Duration@ seconds.<br><br><tftitemrules><tftbold>Burn</tftbold>: Deals a percent of the target's maximum Health as true damage every second<br><tftbold>Wound</tftbold>: Reduces healing received</tftitemrules><br>`,
+		desc: `Deal <TFTRadiantItemBonus>@BonusDamage*100@%</TFTRadiantItemBonus> bonus damage.<br><br>Attacks and Abilities <TFTRadiantItemBonus>@BurnPercent@%</TFTRadiantItemBonus> <TFTKeyword>Burn</TFTKeyword> and <TFTRadiantItemBonus>@HealingReductionPct@%</TFTRadiantItemBonus> <TFTKeyword>Wound</TFTKeyword> enemies for @Duration@ seconds.<br><br><tftitemrules><tftbold>Burn</tftbold>: Deals a percent of the target's maximum HP as true damage every second<br><tftbold>Wound</tftbold>: Reduces healing received</tftitemrules><br>`,
 		effects: {
 			'AS': 70,
 			'BonusDamage': 0.10000000149011612,
@@ -1356,7 +1355,7 @@ export const radiantItems: ItemData[] = [
 		apiName: `TFT5_Item_GiantSlayerRadiant`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Deal <TFTRadiantItemBonus>@LargeBonusPct@%</TFTRadiantItemBonus> more damage to enemies with more than @HealthThreshold@ maximum Health.`,
+		desc: `Deal <TFTRadiantItemBonus>@LargeBonusPct@%</TFTRadiantItemBonus> more damage to enemies with more than @HPThreshold@ maximum HP.`,
 		effects: {
 			'AD': 0.5,
 			'AP': 40,
@@ -1375,7 +1374,7 @@ export const radiantItems: ItemData[] = [
 		apiName: `TFT5_Item_DragonsClawRadiant`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Gain <TFTRadiantItemBonus>@PercentMaxHP*100@%</TFTRadiantItemBonus> max health.<br><br>Every <TFTRadiantItemBonus>@HealthRegenInterval@</TFTRadiantItemBonus> seconds, heal <TFTRadiantItemBonus>@PercentHealthDamage@%</TFTRadiantItemBonus> max Health.<br>`,
+		desc: `Gain <TFTRadiantItemBonus>@PercentMaxHP*100@%</TFTRadiantItemBonus> max HP.<br><br>Every <TFTRadiantItemBonus>@HPRegenInterval@</TFTRadiantItemBonus> seconds, heal <TFTRadiantItemBonus>@PercentHPDamage@%</TFTRadiantItemBonus> max HP.<br>`,
 		effects: {
 			'HPRegenInterval': 2,
 			'ICD': 0.5,
@@ -1395,7 +1394,7 @@ export const radiantItems: ItemData[] = [
 		apiName: `TFT5_Item_GargoyleStoneplateRadiant`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Gain <TFTRadiantItemBonus>@ArmorPerEnemy@</TFTRadiantItemBonus> Armor and <TFTRadiantItemBonus>@MRPerEnemy@</TFTRadiantItemBonus> Magic Resist for each enemy targeting the holder.<br><br><TFTRadiantItemBonus>Also, regenerate @MaxHealthRegen@% maximum Health each second.</TFTRadiantItemBonus>`,
+		desc: `Gain <TFTRadiantItemBonus>@ArmorPerEnemy@</TFTRadiantItemBonus> Armor and <TFTRadiantItemBonus>@MRPerEnemy@</TFTRadiantItemBonus> Magic Resist for each enemy targeting the holder.<br><br><TFTRadiantItemBonus>Also, regenerate @MaxHPRegen@% maximum HP each second.</TFTRadiantItemBonus>`,
 		effects: {
 			'Armor': 30,
 			'ArmorPerEnemy': 20,
@@ -1490,7 +1489,7 @@ export const radiantItems: ItemData[] = [
 		apiName: `TFT5_Item_GuinsoosRagebladeRadiant`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Attacks grant <TFTRadiantItemBonus>@AttackSpeedPerStack@%</TFTRadiantItemBonus> stacking Attack Speed.`,
+		desc: `Attacks grant <TFTRadiantItemBonus>@ASPerStack@%</TFTRadiantItemBonus> stacking Attack Speed.`,
 		effects: {
 			'AP': 10,
 			'AS': 20,
@@ -1507,7 +1506,7 @@ export const radiantItems: ItemData[] = [
 		apiName: `TFT5_Item_HextechGunbladeRadiant`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Gain <TFTRadiantItemBonus>@OmniVamp@%</TFTRadiantItemBonus> Omnivamp. Damage dealt heals the lowest percent Health ally for the same amount.<br><br><TFTTrackerLabel>Healing:</TFTTrackerLabel> <TFTHighlight>@TFTUnitProperty.item:TFT_Tracker_Value1@</TFTHighlight>`,
+		desc: `Gain <TFTRadiantItemBonus>@OmniVamp@%</TFTRadiantItemBonus> Omnivamp. Damage dealt heals the lowest percent HP ally for the same amount.<br><br><TFTTrackerLabel>Healing:</TFTTrackerLabel> <TFTHighlight>@TFTUnitProperty.item:TFT_Tracker_Value1@</TFTHighlight>`,
 		effects: {
 			'AD': 0.10000000149011612,
 			'AP': 40,
@@ -1546,7 +1545,7 @@ export const radiantItems: ItemData[] = [
 		apiName: `TFT5_Item_NightHarvesterRadiant`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Take <TFTRadiantItemBonus>@BaseDamageReduction@%</TFTRadiantItemBonus> less damage. While above <TFTRadiantItemBonus>@ThresholdForEmpower*100@% Health</TFTRadiantItemBonus>, take <TFTRadiantItemBonus>@EmpowerDamageReduction@%</TFTRadiantItemBonus> less damage, instead.<br><br><TFTTrackerLabel>Damage Blocked:</TFTTrackerLabel> <TFTHighlight>@TFTUnitProperty.item:TFT_Tracker_Value1@</TFTHighlight>`,
+		desc: `Take <TFTRadiantItemBonus>@BaseDamageReduction@%</TFTRadiantItemBonus> less damage. While above <TFTRadiantItemBonus>@ThresholdForEmpower*100@% HP</TFTRadiantItemBonus>, take <TFTRadiantItemBonus>@EmpowerDamageReduction@%</TFTRadiantItemBonus> less damage, instead.<br><br><TFTTrackerLabel>Damage Blocked:</TFTTrackerLabel> <TFTHighlight>@TFTUnitProperty.item:TFT_Tracker_Value1@</TFTHighlight>`,
 		effects: {
 			'Armor': 40,
 			'CritChance': 20,
@@ -1566,7 +1565,7 @@ export const radiantItems: ItemData[] = [
 		apiName: `TFT5_Item_LocketOfTheIronSolariRadiant`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Combat start: Shields the holder and allies within <TFTRadiantItemBonus>@HexRange@</TFTRadiantItemBonus> hexes in the same row for <TFTRadiantItemBonus>@1StarShieldValue@/@2StarShieldValue@/@3StarShieldValue@</TFTRadiantItemBonus> %i:star% damage for <TFTRadiantItemBonus>@ShieldDuration@</TFTRadiantItemBonus> seconds.<br><TFTRadiantItemBonus>Your team gains %i:scaleHealth% @BonusAllyHealth@ Health.</TFTRadiantItemBonus>`,
+		desc: `Combat start: Shields the holder and allies within <TFTRadiantItemBonus>@HexRange@</TFTRadiantItemBonus> hexes in the same row for <TFTRadiantItemBonus>@1StarShieldValue@/@2StarShieldValue@/@3StarShieldValue@</TFTRadiantItemBonus> %i:star% damage for <TFTRadiantItemBonus>@ShieldDuration@</TFTRadiantItemBonus> seconds.<br><TFTRadiantItemBonus>Your team gains %i:scaleHP% @BonusAllyHP@ HP.</TFTRadiantItemBonus>`,
 		effects: {
 			'1StarShieldValue': 275,
 			'2StarShieldValue': 325,
@@ -1624,7 +1623,7 @@ export const radiantItems: ItemData[] = [
 		apiName: `TFT5_Item_MorellonomiconRadiant`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Attacks and Abilities deal <TFTRadiantItemBonus>@BurnPercent@%</TFTRadiantItemBonus> <TFTKeyword>Burn</TFTKeyword> and @GrievousWoundsPercent@% <TFTKeyword>Wound</TFTKeyword> to enemies for <TFTRadiantItemBonus>@BurnDuration@</TFTRadiantItemBonus> seconds.<br><br><tftitemrules>[Unique - only 1 per champion]<br><tftbold>Burn</tftbold>: Deals a percent of the target's maximum Health as true damage every second<br><tftbold>Wound</tftbold>: Reduces healing received</tftitemrules>`,
+		desc: `Attacks and Abilities deal <TFTRadiantItemBonus>@BurnPercent@%</TFTRadiantItemBonus> <TFTKeyword>Burn</TFTKeyword> and @GrievousWoundsPercent@% <TFTKeyword>Wound</TFTKeyword> to enemies for <TFTRadiantItemBonus>@BurnDuration@</TFTRadiantItemBonus> seconds.<br><br><tftitemrules>[Unique - only 1 per champion]<br><tftbold>Burn</tftbold>: Deals a percent of the target's maximum HP as true damage every second<br><tftbold>Wound</tftbold>: Reduces healing received</tftitemrules>`,
 		effects: {
 			'AP': 50,
 			'BurnDuration': 30,
@@ -1645,7 +1644,7 @@ export const radiantItems: ItemData[] = [
 		apiName: `TFT5_Item_QuicksilverRadiant`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Combat start: Gain immunity to crowd control for <TFTRadiantItemBonus>@SpellShieldDuration@</TFTRadiantItemBonus> seconds. <TFTRadiantItemBonus>For @ASTotalDuration@ seconds, gain @ProcAttackSpeed*100@% Attack Speed every @ProcInterval@ seconds.</TFTRadiantItemBonus><br><br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
+		desc: `Combat start: Gain immunity to crowd control for <TFTRadiantItemBonus>@SpellShieldDuration@</TFTRadiantItemBonus> seconds. <TFTRadiantItemBonus>For @ASTotalDuration@ seconds, gain @ProcAS*100@% Attack Speed every @ProcInterval@ seconds.</TFTRadiantItemBonus><br><br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
 		effects: {
 			'AS': 50,
 			'CritChance': 40,
@@ -1698,7 +1697,7 @@ export const radiantItems: ItemData[] = [
 		apiName: `TFT5_Item_BrambleVestRadiant`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Gain <TFTRadiantItemBonus>@PercentMaxHP*100@%</TFTRadiantItemBonus> max health.<br><br>Take <TFTRadiantItemBonus>@AutoDamageReduction*100@%</TFTRadiantItemBonus> reduced damage from attacks. When struck by any attack, deal <TFTRadiantItemBonus>@1StarAoEDamage@</TFTRadiantItemBonus> magic damage to all adjacent enemies.<br><br><tftitemrules>Cooldown: @ICD@ seconds</tftitemrules>`,
+		desc: `Gain <TFTRadiantItemBonus>@PercentMaxHP*100@%</TFTRadiantItemBonus> max HP.<br><br>Take <TFTRadiantItemBonus>@AutoDamageReduction*100@%</TFTRadiantItemBonus> reduced damage from attacks. When struck by any attack, deal <TFTRadiantItemBonus>@1StarAoEDamage@</TFTRadiantItemBonus> magic damage to all adjacent enemies.<br><br><tftitemrules>Cooldown: @ICD@ seconds</tftitemrules>`,
 		effects: {
 			'1StarAoEDamage': 175,
 			'2StarAoEDamage': 175,
@@ -1720,7 +1719,7 @@ export const radiantItems: ItemData[] = [
 		apiName: `TFT5_Item_CrownguardRadiant`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Combat start: Gain a <TFTRadiantItemBonus>@ShieldSize@%</TFTRadiantItemBonus> max Health Shield for @ShieldDuration@ seconds. <br>When the shield expires, gain <TFTRadiantItemBonus>@ShieldBonusAP@ Ability Power</TFTRadiantItemBonus>.`,
+		desc: `Combat start: Gain a <TFTRadiantItemBonus>@ShieldSize@%</TFTRadiantItemBonus> max HP Shield for @ShieldDuration@ seconds. <br>When the shield expires, gain <TFTRadiantItemBonus>@ShieldBonusAP@ Ability Power</TFTRadiantItemBonus>.`,
 		effects: {
 			'AP': 50,
 			'Armor': 40,
@@ -1822,7 +1821,7 @@ export const radiantItems: ItemData[] = [
 		apiName: `TFT5_Item_SteraksGageRadiant`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Once per combat at @HealthThreshold@% Health, gain <TFTRadiantItemBonus>@BonusMaxHealthPerc@% max Health</TFTRadiantItemBonus> and <TFTRadiantItemBonus>@BonusADToGive@% Attack Damage</TFTRadiantItemBonus>.`,
+		desc: `Once per combat at @HPThreshold@% HP, gain <TFTRadiantItemBonus>@BonusMaxHPPerc@% max HP</TFTRadiantItemBonus> and <TFTRadiantItemBonus>@BonusADToGive@% Attack Damage</TFTRadiantItemBonus>.`,
 		effects: {
 			'AD': 0.30000001192092896,
 			'BonusADToGive': 55,
@@ -1841,7 +1840,7 @@ export const radiantItems: ItemData[] = [
 		apiName: `TFT5_Item_SunfireCapeRadiant`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Every <TFTRadiantItemBonus>@ICD@</TFTRadiantItemBonus> seconds, deal <TFTRadiantItemBonus>@BurnPercent@%</TFTRadiantItemBonus> <TFTKeyword>Burn</TFTKeyword> and @GrievousWoundsPercent@% <TFTKeyword>Wound</TFTKeyword> to an enemy within <TFTRadiantItemBonus>@HexRange@</TFTRadiantItemBonus> hexes for <TFTRadiantItemBonus>@BurnDuration@</TFTRadiantItemBonus> seconds.<br><br><tftitemrules>[Unique - only 1 per champion]<br><tftbold>Burn</tftbold>: Deals a percent of the target's maximum Health as true damage every second<br><tftbold>Wound</tftbold>: reduces healing received</tftitemrules>`,
+		desc: `Every <TFTRadiantItemBonus>@ICD@</TFTRadiantItemBonus> seconds, deal <TFTRadiantItemBonus>@BurnPercent@%</TFTRadiantItemBonus> <TFTKeyword>Burn</TFTKeyword> and @GrievousWoundsPercent@% <TFTKeyword>Wound</TFTKeyword> to an enemy within <TFTRadiantItemBonus>@HexRange@</TFTRadiantItemBonus> hexes for <TFTRadiantItemBonus>@BurnDuration@</TFTRadiantItemBonus> seconds.<br><br><tftitemrules>[Unique - only 1 per champion]<br><tftbold>Burn</tftbold>: Deals a percent of the target's maximum HP as true damage every second<br><tftbold>Wound</tftbold>: reduces healing received</tftitemrules>`,
 		effects: {
 			'Armor': 20,
 			'BurnDuration': 30,
@@ -1865,7 +1864,7 @@ export const radiantItems: ItemData[] = [
 		apiName: `TFT5_Item_LeviathanRadiant`,
 		associatedTraits: [],
 		composition: [],
-		desc: `After casting an Ability, gain <TFTRadiantItemBonus>@AttackSpeedToGive@% Attack Speed</TFTRadiantItemBonus> for <TFTRadiantItemBonus>@ASDuration@ seconds</TFTRadiantItemBonus>.`,
+		desc: `After casting an Ability, gain <TFTRadiantItemBonus>@ASToGive@% Attack Speed</TFTRadiantItemBonus> for <TFTRadiantItemBonus>@ASDuration@ seconds</TFTRadiantItemBonus>.`,
 		effects: {
 			'AP': 55,
 			'AS': 20,
@@ -1884,7 +1883,7 @@ export const radiantItems: ItemData[] = [
 		apiName: `TFT5_Item_TitansResolveRadiant`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Gain <TFTRadiantItemBonus>@StackingAD*100@%</TFTRadiantItemBonus> Attack Damage and <TFTRadiantItemBonus>@StackingSP@</TFTRadiantItemBonus> Ability Power when attacking or taking damage, stacking up to @StackCap@ times.<br><br>At full stacks, gain <TFTRadiantItemBonus>@BonusResistsAtStackCap@</TFTRadiantItemBonus> Armor and <TFTRadiantItemBonus>@BonusResistsAtStackCap@</TFTRadiantItemBonus> Magic Resist.`,
+		desc: `Gain <TFTRadiantItemBonus>@StackingAD*100@%</TFTRadiantItemBonus> Attack Damage and <TFTRadiantItemBonus>@StackingAP@</TFTRadiantItemBonus> Ability Power when attacking or taking damage, stacking up to @StackCap@ times.<br><br>At full stacks, gain <TFTRadiantItemBonus>@BonusResistsAtStackCap@</TFTRadiantItemBonus> Armor and <TFTRadiantItemBonus>@BonusResistsAtStackCap@</TFTRadiantItemBonus> Magic Resist.`,
 		effects: {
 			'AS': 30,
 			'Armor': 35,
@@ -1922,7 +1921,7 @@ export const radiantItems: ItemData[] = [
 		apiName: `TFT5_Item_WarmogsArmorRadiant`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Gain <TFTRadiantItemBonus>@BonusPercentHP*100@%</TFTRadiantItemBonus> max health.<br><br><TFTRadiantItemBonus>Regenerate @MaxHealthRegen@% maximum Health per second.</TFTRadiantItemBonus>`,
+		desc: `Gain <TFTRadiantItemBonus>@BonusPercentHP*100@%</TFTRadiantItemBonus> max HP.<br><br><TFTRadiantItemBonus>Regenerate @MaxHPRegen@% maximum HP per second.</TFTRadiantItemBonus>`,
 		effects: {
 			'HP': 1000,
 			'HPRegenInterval': 1,
@@ -1960,7 +1959,7 @@ export const radiantItems: ItemData[] = [
 		apiName: `TFT5_Item_ZekesHeraldRadiant`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Combat start: Grant %i:scaleAS% <TFTRadiantItemBonus>@AttackSpeed@%</TFTRadiantItemBonus> Attack Speed and <TFTRadiantItemBonus>@Lifesteal@%</TFTRadiantItemBonus> <TFTKeyword>Omnivamp</TFTKeyword> to the holder and allies within 1 hex in the same row.<br><br>​​<tftitemrules><tftbold>Omnivamp</tftbold>: heal for some of damage dealt</tftitemrules>`,
+		desc: `Combat start: Grant %i:scaleAS% <TFTRadiantItemBonus>@AS@%</TFTRadiantItemBonus> Attack Speed and <TFTRadiantItemBonus>@Lifesteal@%</TFTRadiantItemBonus> <TFTKeyword>Omnivamp</TFTKeyword> to the holder and allies within 1 hex in the same row.<br><br>​​<tftitemrules><tftbold>Omnivamp</tftbold>: heal for some of damage dealt</tftitemrules>`,
 		effects: {
 			'AD': 0.3499999940395355,
 			'AS': 35,
@@ -1999,7 +1998,7 @@ export const ornnItems: ItemData[] = [
 		apiName: `TFT4_Item_OrnnAnimaVisage`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Heal @PercentHealthRegen@% max Health every second.`,
+		desc: `Heal @PercentHPRegen@% max HP every second.`,
 		effects: {
 			'HP': 450,
 			'MR': 25,
@@ -2084,7 +2083,7 @@ export const ornnItems: ItemData[] = [
 		apiName: `TFT9_Item_OrnnDeathfireGrasp`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Combat start: Blast the current target for @PercentMaxHealthDamage*100@% of their max Health as magic damage.<br><br>For the next @Duration@ seconds, deal @BaseAmp*100@% more damage. Damage dealt to the blasted target is increased to @BonusAmp*100@%.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
+		desc: `Combat start: Blast the current target for @PercentMaxHPDamage*100@% of their max HP as magic damage.<br><br>For the next @Duration@ seconds, deal @BaseAmp*100@% more damage. Damage dealt to the blasted target is increased to @BonusAmp*100@%.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
 		effects: {
 			'AP': 45,
 			'BaseAmp': 0.25,
@@ -2104,7 +2103,7 @@ export const ornnItems: ItemData[] = [
 		apiName: `TFT7_Item_ShimmerscaleDiamondHands`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Once per combat: At @HPThreshold1*100@% Health, become invulnerable for @BaseDamageImmunityTime@ seconds and grant %i:goldCoins% @GoldPerImmunityProc@ gold.`,
+		desc: `Once per combat: At @HPThreshold1*100@% HP, become invulnerable for @BaseDamageImmunityTime@ seconds and grant %i:goldCoins% @GoldPerImmunityProc@ gold.`,
 		effects: {
 			'AP': 25,
 			'BaseDamageImmunityTime': 1.5,
@@ -2124,7 +2123,7 @@ export const ornnItems: ItemData[] = [
 		apiName: `TFT7_Item_ShimmerscaleDiamondHands_HR`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Once per combat: At @HPThreshold1*100@% Health, become invulnerable for @BaseDamageImmunityTime@ seconds and grant %i:goldCoins% @GoldPerImmunityProc@ gold.`,
+		desc: `Once per combat: At @HPThreshold1*100@% HP, become invulnerable for @BaseDamageImmunityTime@ seconds and grant %i:goldCoins% @GoldPerImmunityProc@ gold.`,
 		effects: {
 			'AP': 25,
 			'BaseDamageImmunityTime': 1.5,
@@ -2144,7 +2143,7 @@ export const ornnItems: ItemData[] = [
 		apiName: `TFT4_Item_OrnnEternalWinter`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Enemies who damage the holder are @AttackSpeedSlowPercent@% <TFTKeyword>Chilled</TFTKeyword> for @SlowDuration@ seconds. After @NumApplications@ <TFTKeyword>Chills</TFTKeyword> from this item, the attacker is <TFTKeyword>Stunned</TFTKeyword> instead (Cooldown: @FreezeCooldown@ seconds).<br><br><tftitemrules>[Unique - only 1 per champion]<br><tftbold>Chill</tftbold>: reduce Attack Speed<br><tftbold>Stun</tftbold>: cannot move, attack, or cast Abilities</tftitemrules>`,
+		desc: `Enemies who damage the holder are @ASSlowPercent@% <TFTKeyword>Chilled</TFTKeyword> for @SlowDuration@ seconds. After @NumApplications@ <TFTKeyword>Chills</TFTKeyword> from this item, the attacker is <TFTKeyword>Stunned</TFTKeyword> instead (Cooldown: @FreezeCooldown@ seconds).<br><br><tftitemrules>[Unique - only 1 per champion]<br><tftbold>Chill</tftbold>: reduce Attack Speed<br><tftbold>Stun</tftbold>: cannot move, attack, or cast Abilities</tftitemrules>`,
 		effects: {
 			'Armor': 20,
 			'ASSlowPercent': 20,
@@ -2165,7 +2164,7 @@ export const ornnItems: ItemData[] = [
 		apiName: `TFT7_Item_ShimmerscaleGamblersBlade`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Grant %i:scaleAS% @AttackSpeedPerGold*100@% bonus Attack Speed per %i:goldCoins% gold in your bank (up to %i:goldCoins% @AttackSpeedGoldLimit@ gold).<br><br>Each attack has a @ChanceToProc*100@% chance to drop %i:goldCoins% @GoldPerProc@ gold.<br><br><tftitemrules>Gold generated this game: @TFTUnitProperty.item:TFT_Item_GoldGenerated@</tftitemrules>`,
+		desc: `Grant %i:scaleAS% @ASPerGold*100@% bonus Attack Speed per %i:goldCoins% gold in your bank (up to %i:goldCoins% @ASGoldLimit@ gold).<br><br>Each attack has a @ChanceToProc*100@% chance to drop %i:goldCoins% @GoldPerProc@ gold.<br><br><tftitemrules>Gold generated this game: @TFTUnitProperty.item:TFT_Item_GoldGenerated@</tftitemrules>`,
 		effects: {
 			'AP': 10,
 			'AS': 20,
@@ -2187,7 +2186,7 @@ export const ornnItems: ItemData[] = [
 		apiName: `TFT7_Item_ShimmerscaleGamblersBlade_HR`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Grant %i:scaleAS% @AttackSpeedPerGold*100@% bonus Attack Speed per %i:goldCoins% gold in your bank (up to %i:goldCoins% @AttackSpeedGoldLimit@ gold).<br><br>Each attack has a @ChanceToProc*100@% chance to drop %i:goldCoins% @GoldPerProc@ gold.<br><br><tftitemrules>Gold generated this game: @TFTUnitProperty.item:TFT_Item_GoldGenerated@</tftitemrules>`,
+		desc: `Grant %i:scaleAS% @ASPerGold*100@% bonus Attack Speed per %i:goldCoins% gold in your bank (up to %i:goldCoins% @ASGoldLimit@ gold).<br><br>Each attack has a @ChanceToProc*100@% chance to drop %i:goldCoins% @GoldPerProc@ gold.<br><br><tftitemrules>Gold generated this game: @TFTUnitProperty.item:TFT_Item_GoldGenerated@</tftitemrules>`,
 		effects: {
 			'AP': 10,
 			'AS': 15,
@@ -2209,7 +2208,7 @@ export const ornnItems: ItemData[] = [
 		apiName: `TFT4_Item_OrnnTheCollector`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Attacks and Abilities execute enemies below @ExecutePercent@% of their maximum Health. Executions have a @GoldChance@% chance to drop %i:goldCoins% 1 gold.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
+		desc: `Attacks and Abilities execute enemies below @ExecutePercent@% of their maximum HP. Executions have a @GoldChance@% chance to drop %i:goldCoins% 1 gold.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
 		effects: {
 			'AD': 0.20000000298023224,
 			'CritChance': 30,
@@ -2227,7 +2226,7 @@ export const ornnItems: ItemData[] = [
 		apiName: `TFT7_Item_ShimmerscaleGoldmancersStaff_HR`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Grant %i:scaleAP% @AbilityPowerPerGold@ Ability Power per %i:goldCoins% gold in your bank (up to %i:goldCoins% @AbilityPowerGoldMax@ gold) and a @OnKillProcChance*100@% chance to drop %i:goldCoins% @OnKillProcGold@ gold on enemy kill.<br><br><tftitemrules>Gold generated this game: @TFTUnitProperty.item:TFT_Item_GoldGenerated@</tftitemrules>`,
+		desc: `Grant %i:scaleAP% @APPerGold@ Ability Power per %i:goldCoins% gold in your bank (up to %i:goldCoins% @APGoldMax@ gold) and a @OnKillProcChance*100@% chance to drop %i:goldCoins% @OnKillProcGold@ gold on enemy kill.<br><br><tftitemrules>Gold generated this game: @TFTUnitProperty.item:TFT_Item_GoldGenerated@</tftitemrules>`,
 		effects: {
 			'AP': 30,
 			'APGoldMax': 0.5,
@@ -2247,7 +2246,7 @@ export const ornnItems: ItemData[] = [
 		apiName: `TFT7_Item_ShimmerscaleGoldmancersStaff`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Grant %i:scaleAP% @AbilityPowerPerGold@ Ability Power per %i:goldCoins% gold in your bank (up to %i:goldCoins% @AbilityPowerGoldMax@ gold) and a @OnKillProcChance*100@% chance to drop %i:goldCoins% @OnKillProcGold@ gold on enemy kill.<br><br><tftitemrules>Gold generated this game: @TFTUnitProperty.item:TFT_Item_GoldGenerated@</tftitemrules>`,
+		desc: `Grant %i:scaleAP% @APPerGold@ Ability Power per %i:goldCoins% gold in your bank (up to %i:goldCoins% @APGoldMax@ gold) and a @OnKillProcChance*100@% chance to drop %i:goldCoins% @OnKillProcGold@ gold on enemy kill.<br><br><tftitemrules>Gold generated this game: @TFTUnitProperty.item:TFT_Item_GoldGenerated@</tftitemrules>`,
 		effects: {
 			'AP': 30,
 			'APGoldMax': 30,
@@ -2267,7 +2266,7 @@ export const ornnItems: ItemData[] = [
 		apiName: `TFT9_Item_OrnnHullbreaker`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Combat start: If there are no adjacent allies, gain @ExtraHealth@ Health.`,
+		desc: `Combat start: If there are no adjacent allies, gain @ExtraHP@ HP.`,
 		effects: {
 			'AS': 30,
 			'Armor': 35,
@@ -2326,7 +2325,7 @@ export const ornnItems: ItemData[] = [
 		apiName: `TFT7_Item_ShimmerscaleMogulsMail`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Grants @BaseResistsPerStack@ Armor, @BaseResistsPerStack@ Magic Resist, and @BaseHealthPerStack@ Health when taking damage, stacking up to @StackCap@ times.<br><br>At full stacks, grant %i:goldCoins% @GoldAtFullStacks@ gold.<br><br><tftitemrules>Gold generated this game: @TFTUnitProperty.item:TFT_Item_GoldGenerated@<br>[Unique - only 1 per champion]</tftitemrules>`,
+		desc: `Grants @BaseResistsPerStack@ Armor, @BaseResistsPerStack@ Magic Resist, and @BaseHPPerStack@ HP when taking damage, stacking up to @StackCap@ times.<br><br>At full stacks, grant %i:goldCoins% @GoldAtFullStacks@ gold.<br><br><tftitemrules>Gold generated this game: @TFTUnitProperty.item:TFT_Item_GoldGenerated@<br>[Unique - only 1 per champion]</tftitemrules>`,
 		effects: {
 			'BaseHPPerStack': 6,
 			'BaseResistsPerStack': 1,
@@ -2345,7 +2344,7 @@ export const ornnItems: ItemData[] = [
 		apiName: `TFT7_Item_ShimmerscaleMogulsMail_HR`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Grants @BaseResistsPerStack@ Armor, @BaseResistsPerStack@ Magic Resist, and @BaseHealthPerStack@ Health when taking damage, stacking up to @StackCap@ times.<br><br>At full stacks, grant %i:goldCoins% @GoldAtFullStacks@ gold.<br><br><tftitemrules>Gold generated this game: @TFTUnitProperty.item:TFT_Item_GoldGenerated@<br>[Unique - only 1 per champion]</tftitemrules>`,
+		desc: `Grants @BaseResistsPerStack@ Armor, @BaseResistsPerStack@ Magic Resist, and @BaseHPPerStack@ HP when taking damage, stacking up to @StackCap@ times.<br><br>At full stacks, grant %i:goldCoins% @GoldAtFullStacks@ gold.<br><br><tftitemrules>Gold generated this game: @TFTUnitProperty.item:TFT_Item_GoldGenerated@<br>[Unique - only 1 per champion]</tftitemrules>`,
 		effects: {
 			'BaseHPPerStack': 6,
 			'BaseResistsPerStack': 1,
@@ -2383,7 +2382,7 @@ export const ornnItems: ItemData[] = [
 		apiName: `TFT9_Item_OrnnTrickstersGlass`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Summon a clone with @HealthPercent@% max Health and +@ManaIncrease*100@% max Mana. You cannot equip items to the clone.<br><br><tftitemrules>The clone benefits from active traits</tftitemrules><br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules><br>`,
+		desc: `Summon a clone with @HPPercent@% max HP and +@ManaIncrease*100@% max Mana. You cannot equip items to the clone.<br><br><tftitemrules>The clone benefits from active traits</tftitemrules><br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules><br>`,
 		effects: {
 			'AS': 10,
 			'Armor': 10,
@@ -2403,7 +2402,7 @@ export const ornnItems: ItemData[] = [
 		apiName: `TFT4_Item_OrnnZhonyasParadox`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Once per combat at @PercentHealthThreshold@% Health, become invulnerable and untargetable for @InvulnDuration@ seconds.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
+		desc: `Once per combat at @PercentHPThreshold@% HP, become invulnerable and untargetable for @InvulnDuration@ seconds.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
 		effects: {
 			'AP': 45,
 			'Armor': 30,
@@ -2443,7 +2442,7 @@ export const supportItems: ItemData[] = [
 		apiName: `TFT_Item_BansheesVeil`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Combat start: Grant the holder and allies within @HexRange@ hexes in the same row immunity to crowd control and @BuffAttackSpeed*100@% Attack Speed for @Duration@ seconds.<br><br><tftitemrules>[Support item] [Unique - only 1 per champion]</tftitemrules>`,
+		desc: `Combat start: Grant the holder and allies within @HexRange@ hexes in the same row immunity to crowd control and @BuffAS*100@% Attack Speed for @Duration@ seconds.<br><br><tftitemrules>[Support item] [Unique - only 1 per champion]</tftitemrules>`,
 		effects: {
 			'Duration': 18,
 			'HP': 250,
@@ -2480,7 +2479,7 @@ export const supportItems: ItemData[] = [
 		apiName: `TFT_Item_CrestOfCinders`,
 		associatedTraits: [],
 		composition: [],
-		desc: `When combat begins, the holder and all allies within @HexRange@ hexes in the same row gain the Crest of Cinders.<br><br>Units with the Crest of Cinders empower their attacks to Burn their target for @BurnAmount*100@% of their maximum health as true damage and apply 33% <TFTKeyword>Wound</TFTKeyword>.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>`,
+		desc: `When combat begins, the holder and all allies within @HexRange@ hexes in the same row gain the Crest of Cinders.<br><br>Units with the Crest of Cinders empower their attacks to Burn their target for @BurnAmount*100@% of their maximum HP as true damage and apply 33% <TFTKeyword>Wound</TFTKeyword>.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>`,
 		effects: {
 			'BurnAmount': 0.07999999821186066,
 			'BurnDuration': 8,
@@ -2574,7 +2573,7 @@ export const supportItems: ItemData[] = [
 		apiName: `TFT_Item_Shroud`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Combat start: Shoot a beam that @CostIncrease@% <TFTKeyword>Mana Reaves</TFTKeyword> enemies.<br><br>Your team gains @BonusAllyHealth@ Health.<br><br><tftitemrules>​​[Support item] [Unique - only 1 per champion]<br><tftbold>Mana Reave</tftbold>: increase maximum Mana until the next cast</tftitemrules>`,
+		desc: `Combat start: Shoot a beam that @CostIncrease@% <TFTKeyword>Mana Reaves</TFTKeyword> enemies.<br><br>Your team gains @BonusAllyHP@ HP.<br><br><tftitemrules>​​[Support item] [Unique - only 1 per champion]<br><tftbold>Mana Reave</tftbold>: increase maximum Mana until the next cast</tftitemrules>`,
 		effects: {
 			'BonusAllyHP': 60,
 			'CostIncrease': 30,
@@ -2592,7 +2591,7 @@ export const supportItems: ItemData[] = [
 		apiName: `TFT_Item_RadiantVirtue`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Every @HealTickRate@ seconds, heal your team for @MaxHealthHeal@% of their max Health. When the holder dies, the healing increases to @TOOLTIPEmpoweredHeal@% max Health and continues for @PostDeathDuration@ seconds.<br><br><TFTTrackerLabel>Healing:</TFTTrackerLabel> <TFTHighlight>@TFTUnitProperty.item:TFT_Tracker_Value1@</TFTHighlight><br><br>​​<tftitemrules>[Support item]</tftitemrules>`,
+		desc: `Every @HealTickRate@ seconds, heal your team for @MaxHPHeal@% of their max HP. When the holder dies, the healing increases to @TOOLTIPEmpoweredHeal@% max HP and continues for @PostDeathDuration@ seconds.<br><br><TFTTrackerLabel>Healing:</TFTTrackerLabel> <TFTHighlight>@TFTUnitProperty.item:TFT_Tracker_Value1@</TFTHighlight><br><br>​​<tftitemrules>[Support item]</tftitemrules>`,
 		effects: {
 			'HealTickRate': 5,
 			'HP': 250,
@@ -2613,7 +2612,7 @@ export const supportItems: ItemData[] = [
 		apiName: `TFT_Item_ZekesHerald`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Combat start: Grant %i:scaleAS% @AttackSpeed@% Attack Speed to the holder and allies within 2 hexes in the same row.<br><br>​​<tftitemrules>[Support item]</tftitemrules>`,
+		desc: `Combat start: Grant %i:scaleAS% @AS@% Attack Speed to the holder and allies within 2 hexes in the same row.<br><br>​​<tftitemrules>[Support item]</tftitemrules>`,
 		effects: {
 			'AS': 30,
 			'HP': 250,
@@ -2719,7 +2718,7 @@ export const shimmerscaleItems: ItemData[] = [
 		apiName: `TFT7_Item_ShimmerscaleDravensAxe`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Gain %i:scaleAD% @AttackDamagePerGold@% Attack Damage per %i:goldCoins% gold in your bank (up to %i:goldCoins% @AttackDamageGoldLimit@ gold).<br><br>Attacks grant @StacksPerAttack@ stack, up to @CashoutStacks@ times. At full stacks, grant %i:goldCoins% @CashoutGold@ gold.<br><br><tftitemrules>Gold generated this game: @TFTUnitProperty.item:TFT_Item_GoldGenerated@</tftitemrules>`,
+		desc: `Gain %i:scaleAD% @ADPerGold@% Attack Damage per %i:goldCoins% gold in your bank (up to %i:goldCoins% @ADGoldLimit@ gold).<br><br>Attacks grant @StacksPerAttack@ stack, up to @CashoutStacks@ times. At full stacks, grant %i:goldCoins% @CashoutGold@ gold.<br><br><tftitemrules>Gold generated this game: @TFTUnitProperty.item:TFT_Item_GoldGenerated@</tftitemrules>`,
 		effects: {
 			'AD': 0.15000000596046448,
 			'AS': 10,
@@ -2742,7 +2741,7 @@ export const shimmerscaleItems: ItemData[] = [
 		apiName: `TFT7_Item_ShimmerscaleDravensAxe_HR`,
 		associatedTraits: [],
 		composition: [],
-		desc: `Gain %i:scaleAD% @AttackDamagePerGold@% Attack Damage per %i:goldCoins% gold in your bank (up to %i:goldCoins% @AttackDamageGoldLimit@ gold).<br><br>Attacks grant @StacksPerAttack@ stack, up to @CashoutStacks@ times. At full stacks, grant %i:goldCoins% @CashoutGold@ gold.<br><br><tftitemrules>Gold generated this game: @TFTUnitProperty.item:TFT_Item_GoldGenerated@</tftitemrules>`,
+		desc: `Gain %i:scaleAD% @ADPerGold@% Attack Damage per %i:goldCoins% gold in your bank (up to %i:goldCoins% @ADGoldLimit@ gold).<br><br>Attacks grant @StacksPerAttack@ stack, up to @CashoutStacks@ times. At full stacks, grant %i:goldCoins% @CashoutGold@ gold.<br><br><tftitemrules>Gold generated this game: @TFTUnitProperty.item:TFT_Item_GoldGenerated@</tftitemrules>`,
 		effects: {
 			'AD': 0.15000000596046448,
 			'AS': 10,
