@@ -373,15 +373,15 @@
 		"tier": 5,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{11f20023}",
+				"TraitData": "Pentakill",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{3afd9bd6}",
+				"TraitData": "Mosher",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{18931112}",
+				"TraitData": "Guardian",
 				"__type": "TFTTraitContributionData"
 			}
 		],

@@ -528,11 +528,11 @@
 		"tier": 4,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{4995a396}",
+				"TraitData": "8-bit",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{c505a558}",
+				"TraitData": "Rapidfire",
 				"__type": "TFTTraitContributionData"
 			}
 		],

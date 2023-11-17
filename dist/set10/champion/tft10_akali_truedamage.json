@@ -336,8 +336,8 @@
 			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 70,
-		"baseArmor": 60,
-		"baseSpellBlock": 60,
+		"baseArmor": 65,
+		"baseSpellBlock": 65,
 		"baseCritChance": 0.25,
 		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
@@ -355,15 +355,15 @@
 		"tier": 4,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{c9bbc394}",
+				"TraitData": "True Damage",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{d435e732}",
+				"TraitData": "Executioner",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{383e2598}",
+				"TraitData": "Breakout",
 				"__type": "TFTTraitContributionData"
 			}
 		],

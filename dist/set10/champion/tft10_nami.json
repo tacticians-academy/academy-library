@@ -404,11 +404,11 @@
 		"tier": 1,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{6fac93d3}",
+				"TraitData": "Disco",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{a432b261}",
+				"TraitData": "Dazzler",
 				"__type": "TFTTraitContributionData"
 			}
 		],

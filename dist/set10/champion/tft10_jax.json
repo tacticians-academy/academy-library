@@ -30,11 +30,11 @@
 		"tier": 2,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{f208ad7f}",
+				"TraitData": "EDM",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{3afd9bd6}",
+				"TraitData": "Mosher",
 				"__type": "TFTTraitContributionData"
 			}
 		],

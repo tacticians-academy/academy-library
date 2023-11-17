@@ -98,9 +98,9 @@
 					"mName": "StunDamage",
 					"mValues": [
 						0,
+						120,
 						180,
-						270,
-						430,
+						280,
 						0,
 						0,
 						0
@@ -508,11 +508,11 @@
 		"tier": 3,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{32777aa0}",
+				"TraitData": "Hyperpop",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{c7e3ce1d}",
+				"TraitData": "Spellweaver",
 				"__type": "TFTTraitContributionData"
 			}
 		],

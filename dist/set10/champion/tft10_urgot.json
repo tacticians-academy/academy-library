@@ -357,11 +357,11 @@
 		"tier": 3,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{eb00b415}",
+				"TraitData": "Country",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{3afd9bd6}",
+				"TraitData": "Mosher",
 				"__type": "TFTTraitContributionData"
 			}
 		],

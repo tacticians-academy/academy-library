@@ -551,11 +551,11 @@
 		"tier": 5,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{32777aa0}",
+				"TraitData": "Hyperpop",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{a432b261}",
+				"TraitData": "Dazzler",
 				"__type": "TFTTraitContributionData"
 			}
 		],

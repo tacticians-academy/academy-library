@@ -39,11 +39,11 @@
 		"tier": 2,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{366931dc}",
+				"TraitData": "Punk",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{d435e732}",
+				"TraitData": "Executioner",
 				"__type": "TFTTraitContributionData"
 			}
 		],

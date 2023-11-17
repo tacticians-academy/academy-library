@@ -322,15 +322,15 @@
 		"tier": 3,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{aeb6a5eb}",
+				"TraitData": "Heartsteel",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{e89aa978}",
+				"TraitData": "Bruiser",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{3afd9bd6}",
+				"TraitData": "Mosher",
 				"__type": "TFTTraitContributionData"
 			}
 		],

@@ -350,7 +350,7 @@
 	},
 	"Characters/TFT10_Illaoi/CharacterRecords/Root": {
 		"mCharacterName": "TFT10_Illaoi",
-		"baseHP": 1100,
+		"baseHP": 1050,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
@@ -379,11 +379,11 @@
 		"tier": 5,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{8fcdf725}",
+				"TraitData": "ILLBEATS",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{e89aa978}",
+				"TraitData": "Bruiser",
 				"__type": "TFTTraitContributionData"
 			}
 		],

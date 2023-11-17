@@ -30,11 +30,11 @@
 		"tier": 4,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{f208ad7f}",
+				"TraitData": "EDM",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{e89aa978}",
+				"TraitData": "Bruiser",
 				"__type": "TFTTraitContributionData"
 			}
 		],

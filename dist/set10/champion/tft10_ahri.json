@@ -375,8 +375,8 @@
 					"mName": "damage",
 					"mValues": [
 						0,
-						300,
-						450,
+						275,
+						410,
 						1500,
 						0,
 						0,
@@ -534,11 +534,11 @@
 		"tier": 4,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{af6fb94d}",
+				"TraitData": "K/DA",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{c7e3ce1d}",
+				"TraitData": "Spellweaver",
 				"__type": "TFTTraitContributionData"
 			}
 		],

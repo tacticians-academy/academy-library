@@ -333,11 +333,11 @@
 		"tier": 1,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{366931dc}",
+				"TraitData": "Punk",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{3afd9bd6}",
+				"TraitData": "Mosher",
 				"__type": "TFTTraitContributionData"
 			}
 		],

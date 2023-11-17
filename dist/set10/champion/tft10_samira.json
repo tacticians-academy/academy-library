@@ -517,11 +517,11 @@
 		"tier": 3,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{eb00b415}",
+				"TraitData": "Country",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{d435e732}",
+				"TraitData": "Executioner",
 				"__type": "TFTTraitContributionData"
 			}
 		],

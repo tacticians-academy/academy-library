@@ -328,11 +328,11 @@
 		"tier": 1,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{366931dc}",
+				"TraitData": "Punk",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{c505a558}",
+				"TraitData": "Rapidfire",
 				"__type": "TFTTraitContributionData"
 			}
 		],

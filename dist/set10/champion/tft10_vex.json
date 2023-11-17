@@ -318,11 +318,11 @@
 		"tier": 3,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{f3f76784}",
+				"TraitData": "Emo",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{d435e732}",
+				"TraitData": "Executioner",
 				"__type": "TFTTraitContributionData"
 			}
 		],

@@ -256,11 +256,11 @@
 		"tier": 1,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{11f20023}",
+				"TraitData": "Pentakill",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{e89aa978}",
+				"TraitData": "Bruiser",
 				"__type": "TFTTraitContributionData"
 			}
 		],

@@ -234,11 +234,11 @@
 		"tier": 3,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{f3f76784}",
+				"TraitData": "Emo",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{18931112}",
+				"TraitData": "Guardian",
 				"__type": "TFTTraitContributionData"
 			}
 		],

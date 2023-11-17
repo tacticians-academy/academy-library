@@ -30,11 +30,11 @@
 		"tier": 2,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{af6fb94d}",
+				"TraitData": "K/DA",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{c7e3ce1d}",
+				"TraitData": "Spellweaver",
 				"__type": "TFTTraitContributionData"
 			}
 		],

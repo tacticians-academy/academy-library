@@ -262,15 +262,15 @@
 		"tier": 5,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{aeb6a5eb}",
+				"TraitData": "Heartsteel",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{0f07fb2f}",
+				"TraitData": "Edgelord",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{aa9fc9a7}",
+				"TraitData": "Wildcard",
 				"__type": "TFTTraitContributionData"
 			}
 		],

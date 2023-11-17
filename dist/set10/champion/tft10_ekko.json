@@ -317,15 +317,15 @@
 		"tier": 3,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{c9bbc394}",
+				"TraitData": "True Damage",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{c7e3ce1d}",
+				"TraitData": "Spellweaver",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{427c0889}",
+				"TraitData": "Sentinel",
 				"__type": "TFTTraitContributionData"
 			}
 		],

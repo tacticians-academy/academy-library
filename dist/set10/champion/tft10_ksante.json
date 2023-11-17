@@ -305,11 +305,11 @@
 		"tier": 1,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{aeb6a5eb}",
+				"TraitData": "Heartsteel",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{427c0889}",
+				"TraitData": "Sentinel",
 				"__type": "TFTTraitContributionData"
 			}
 		],

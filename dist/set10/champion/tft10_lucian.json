@@ -623,11 +623,11 @@
 		"tier": 5,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{2951a0fc}",
+				"TraitData": "Jazz",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{c505a558}",
+				"TraitData": "Rapidfire",
 				"__type": "TFTTraitContributionData"
 			}
 		],

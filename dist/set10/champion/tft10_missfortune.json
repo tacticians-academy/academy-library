@@ -453,11 +453,11 @@
 		"tier": 3,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{2951a0fc}",
+				"TraitData": "Jazz",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{b540ffc4}",
+				"TraitData": "Big Shot",
 				"__type": "TFTTraitContributionData"
 			}
 		],

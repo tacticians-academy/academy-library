@@ -399,11 +399,11 @@
 		"tier": 3,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{f208ad7f}",
+				"TraitData": "EDM",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{a432b261}",
+				"TraitData": "Dazzler",
 				"__type": "TFTTraitContributionData"
 			}
 		],

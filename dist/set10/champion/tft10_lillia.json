@@ -353,15 +353,15 @@
 		"tier": 1,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{af6fb94d}",
+				"TraitData": "K/DA",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{fa7abfbd}",
+				"TraitData": "Superfan",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{427c0889}",
+				"TraitData": "Sentinel",
 				"__type": "TFTTraitContributionData"
 			}
 		],

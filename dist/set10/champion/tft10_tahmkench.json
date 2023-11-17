@@ -127,11 +127,11 @@
 		"tier": 1,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{eb00b415}",
+				"TraitData": "Country",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{e89aa978}",
+				"TraitData": "Bruiser",
 				"__type": "TFTTraitContributionData"
 			}
 		],

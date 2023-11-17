@@ -468,11 +468,11 @@
 		"tier": 4,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{eb00b415}",
+				"TraitData": "Country",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{18931112}",
+				"TraitData": "Guardian",
 				"__type": "TFTTraitContributionData"
 			}
 		],

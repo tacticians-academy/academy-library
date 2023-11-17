@@ -319,15 +319,15 @@
 		"tier": 3,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{af6fb94d}",
+				"TraitData": "K/DA",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{fa7abfbd}",
+				"TraitData": "Superfan",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{18931112}",
+				"TraitData": "Guardian",
 				"__type": "TFTTraitContributionData"
 			}
 		],

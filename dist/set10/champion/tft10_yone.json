@@ -497,15 +497,15 @@
 		"tier": 3,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{aeb6a5eb}",
+				"TraitData": "Heartsteel",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{0f07fb2f}",
+				"TraitData": "Edgelord",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{4f14e6c8}",
+				"TraitData": "Crowd Diver",
 				"__type": "TFTTraitContributionData"
 			}
 		],

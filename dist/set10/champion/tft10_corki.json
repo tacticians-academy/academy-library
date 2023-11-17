@@ -501,11 +501,11 @@
 		"tier": 1,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{4995a396}",
+				"TraitData": "8-bit",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{b540ffc4}",
+				"TraitData": "Big Shot",
 				"__type": "TFTTraitContributionData"
 			}
 		],

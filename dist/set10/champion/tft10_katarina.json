@@ -48,11 +48,11 @@
 		"tier": 2,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{eb00b415}",
+				"TraitData": "Country",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{4f14e6c8}",
+				"TraitData": "Crowd Diver",
 				"__type": "TFTTraitContributionData"
 			}
 		],

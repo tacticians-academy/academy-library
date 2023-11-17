@@ -427,11 +427,11 @@
 		"tier": 2,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{4995a396}",
+				"TraitData": "8-bit",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{427c0889}",
+				"TraitData": "Sentinel",
 				"__type": "TFTTraitContributionData"
 			}
 		],

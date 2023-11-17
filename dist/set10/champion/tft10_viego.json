@@ -365,9 +365,9 @@
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 70,
-		"baseArmor": 60,
-		"baseSpellBlock": 60,
+		"baseDamage": 75,
+		"baseArmor": 65,
+		"baseSpellBlock": 65,
 		"baseCritChance": 0.25,
 		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
@@ -385,11 +385,11 @@
 		"tier": 4,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{11f20023}",
+				"TraitData": "Pentakill",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{0f07fb2f}",
+				"TraitData": "Edgelord",
 				"__type": "TFTTraitContributionData"
 			}
 		],

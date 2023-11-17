@@ -524,11 +524,11 @@
 		"tier": 2,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{2951a0fc}",
+				"TraitData": "Jazz",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{a432b261}",
+				"TraitData": "Dazzler",
 				"__type": "TFTTraitContributionData"
 			}
 		],

@@ -30,15 +30,15 @@
 		"tier": 4,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{af6fb94d}",
+				"TraitData": "K/DA",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{d435e732}",
+				"TraitData": "Executioner",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{383e2598}",
+				"TraitData": "Breakout",
 				"__type": "TFTTraitContributionData"
 			}
 		],

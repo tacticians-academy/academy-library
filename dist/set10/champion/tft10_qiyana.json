@@ -471,11 +471,11 @@
 		"tier": 5,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{c9bbc394}",
+				"TraitData": "True Damage",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{4f14e6c8}",
+				"TraitData": "Crowd Diver",
 				"__type": "TFTTraitContributionData"
 			}
 		],

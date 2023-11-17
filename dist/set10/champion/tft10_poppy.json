@@ -273,11 +273,11 @@
 		"tier": 4,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{f3f76784}",
+				"TraitData": "Emo",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{3afd9bd6}",
+				"TraitData": "Mosher",
 				"__type": "TFTTraitContributionData"
 			}
 		],

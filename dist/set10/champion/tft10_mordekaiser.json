@@ -306,11 +306,11 @@
 		"tier": 3,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{11f20023}",
+				"TraitData": "Pentakill",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{427c0889}",
+				"TraitData": "Sentinel",
 				"__type": "TFTTraitContributionData"
 			}
 		],

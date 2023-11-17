@@ -135,13 +135,13 @@
 				{
 					"mName": "SplashDamageADPercent",
 					"mValues": [
-						0.5,
-						0.5,
-						0.5,
-						0.5,
-						0.5,
-						0.5,
-						0.5
+						1.2000000476837158,
+						1.2000000476837158,
+						1.2000000476837158,
+						1.2000000476837158,
+						1.2000000476837158,
+						1.2000000476837158,
+						1.2000000476837158
 					],
 					"__type": "SpellDataValue"
 				},
@@ -187,13 +187,13 @@
 				{
 					"mName": "HeadlinerHealth",
 					"mValues": [
-						200,
-						200,
-						200,
-						200,
-						200,
-						200,
-						200
+						100,
+						100,
+						100,
+						100,
+						100,
+						100,
+						100
 					],
 					"__type": "SpellDataValue"
 				},
@@ -283,6 +283,9 @@
 					"__type": "GameCalculation"
 				}
 			},
+			"mCastTime": 0.5,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
 			"castRange": [
 				5000,
 				5000,
@@ -350,11 +353,11 @@
 		"tier": 3,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{4995a396}",
+				"TraitData": "8-bit",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{0f07fb2f}",
+				"TraitData": "Edgelord",
 				"__type": "TFTTraitContributionData"
 			}
 		],

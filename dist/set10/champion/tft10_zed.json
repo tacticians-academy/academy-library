@@ -30,11 +30,11 @@
 		"tier": 4,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{f208ad7f}",
+				"TraitData": "EDM",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{4f14e6c8}",
+				"TraitData": "Crowd Diver",
 				"__type": "TFTTraitContributionData"
 			}
 		],

@@ -454,11 +454,11 @@
 		"tier": 2,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{aeb6a5eb}",
+				"TraitData": "Heartsteel",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{c505a558}",
+				"TraitData": "Rapidfire",
 				"__type": "TFTTraitContributionData"
 			}
 		],

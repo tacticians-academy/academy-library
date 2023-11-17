@@ -594,15 +594,15 @@
 		"tier": 5,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{4da47dd2}",
+				"TraitData": "Maestro",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{b540ffc4}",
+				"TraitData": "Big Shot",
 				"__type": "TFTTraitContributionData"
 			}
 		],
-		"{b6b01440}": "{109d6820}",
+		"{b6b01440}": "{2ae695df}",
 		"mMoveInterval": -0.10000000149011612,
 		"mMoveProximity": 180,
 		"mMoveRange": 250,

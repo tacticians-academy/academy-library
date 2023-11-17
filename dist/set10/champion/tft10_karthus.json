@@ -30,11 +30,11 @@
 		"tier": 4,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{11f20023}",
+				"TraitData": "Pentakill",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{d435e732}",
+				"TraitData": "Executioner",
 				"__type": "TFTTraitContributionData"
 			}
 		],

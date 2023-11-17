@@ -502,11 +502,11 @@
 		"tier": 1,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{f3f76784}",
+				"TraitData": "Emo",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{c7e3ce1d}",
+				"TraitData": "Spellweaver",
 				"__type": "TFTTraitContributionData"
 			}
 		],

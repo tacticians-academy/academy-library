@@ -808,11 +808,11 @@
 		"tier": 5,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{bdbcd3bf}",
+				"TraitData": "Mixmaster",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{c7e3ce1d}",
+				"TraitData": "Spellweaver",
 				"__type": "TFTTraitContributionData"
 			}
 		],

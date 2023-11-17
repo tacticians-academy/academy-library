@@ -679,11 +679,11 @@
 		"tier": 4,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{aeb6a5eb}",
+				"TraitData": "Heartsteel",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{b540ffc4}",
+				"TraitData": "Big Shot",
 				"__type": "TFTTraitContributionData"
 			}
 		],

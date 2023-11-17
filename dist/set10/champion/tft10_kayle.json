@@ -351,11 +351,11 @@
 		"tier": 2,
 		"mLinkedTraits": [
 			{
-				"TraitData": "{11f20023}",
+				"TraitData": "Pentakill",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "{0f07fb2f}",
+				"TraitData": "Edgelord",
 				"__type": "TFTTraitContributionData"
 			}
 		],
