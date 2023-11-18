@@ -286,7 +286,7 @@ export async function importTraits(set: SetNumber) {
 		return await import('./set9.5/traits.js')
 	}
 	if (set === 10) {
-		return await import('./set9.5/traits.js')
+		return await import('./set10/traits.js')
 	}
 	throw 'Unsupported set:' + set
 }

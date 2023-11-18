@@ -1,12 +1,13 @@
 import { SET_DATA } from './index.js'
 import type { SetNumber } from './index.js'
 
-export function getAssetPrefixFor(set: SetNumber) {
-	return `https://raw.communitydragon.org/${SET_DATA[set].patchLine}/game/`
+export function getAssetPrefixFor(set: SetNumber, allowsPBE: boolean) {
+	const patchLine = SET_DATA[set].patchLine
+	return `https://raw.communitydragon.org/${!allowsPBE && patchLine === 'pbe' ? 'latest' : patchLine}/game/`
 }
 
 export function getIconURL(set: SetNumber, deriveAsset: {icon: string | null | undefined}, isRaw: boolean = true) {
-	return getAssetPrefixFor(set) + getIconPath(deriveAsset, isRaw)
+	return getAssetPrefixFor(set, true) + getIconPath(deriveAsset, isRaw)
 }
 
 export function getIconPath(deriveAsset: {icon: string | null | undefined}, isRaw: boolean = true) {
