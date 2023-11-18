@@ -1143,6 +1143,8 @@ export const spatulaItems: ItemData[] = [
 	},
 ]
 
+export const shadowItems: ItemData[] = []
+
 export const radiantItems: ItemData[] = [
 	{
 		apiName: `TFT5_Item_RedemptionRadiant`,

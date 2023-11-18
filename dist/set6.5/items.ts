@@ -425,29 +425,6 @@ export const completedItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		apiName: `TFT_Item_ThiefsGloves_Empty`,
-		desc: `Loot goes here`,
-		effects: {
-			'CritChance': 20,
-			'DodgeChance': 20,
-		},
-		from: [],
-		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_Unknown.dds`,
-		id: 10001,
-		name: `Loot Bag`,
-		unique: false,
-	},
-	{
-		apiName: `TFT_Item_EmptyBag`,
-		desc: `Loot goes here`,
-		effects: {},
-		from: [],
-		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_EmptySlot.dds`,
-		id: 10006,
-		name: `Loot Bag`,
-		unique: false,
-	},
-	{
 		apiName: `TFT_Item_Morellonomicon`,
 		desc: `When the holder deals magic or true damage with their Ability, they burn the target, dealing @BurnPercent@% of the target's maximum HP as true damage over @BurnDuration@ seconds, and reducing healing by @GrievousWoundsPercent@% for the duration of the burn.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
 		effects: {
@@ -965,6 +942,8 @@ export const spatulaItems: ItemData[] = [
 		unique: true,
 	},
 ]
+
+export const shadowItems: ItemData[] = []
 
 export const radiantItems: ItemData[] = [
 	{

@@ -62,7 +62,7 @@ for (const apiName of BASE_UNIT_API_NAMES) {
 
 const { LOCKED_STAR_LEVEL, SPATULA_ITEM_IDS, RETIRED_ITEM_NAMES, RETIRED_AUGMENT_NAME_KEYS, UNUSED_AUGMENT_NAME_KEYS, TRAIT_DATA_SUBSTITUTIONS } = await importSetData(currentSetNumber)
 
-const currentItemsByType: Record<ItemTypeKey, ItemData[]> = {component: [], completed: [], spatula: [], radiant: [], ornn: [], support: [], shimmerscale: [], consumable: [], hexbuff: [], mod: [], unreleased: []}
+const currentItemsByType: Record<ItemTypeKey, ItemData[]> = {component: [], completed: [], spatula: [], shadow: [], radiant: [], ornn: [], support: [], shimmerscale: [], consumable: [], hexbuff: [], mod: [], unreleased: []}
 
 const foundItemIDs: number[] = []
 itemsData.reverse().forEach(item => {
@@ -77,11 +77,13 @@ itemsData.reverse().forEach(item => {
 	normalizeEffects(item.effects, unreplacedIDs)
 	const name = item.name.toLowerCase()
 	const iconNormalized = item.icon.toLowerCase()
-	if (iconNormalized.includes('/augments/') || iconNormalized.includes('/set6_mercenary/') || iconNormalized.includes('/mercenary/') || iconNormalized.includes('/pairs/')) {
+	if (iconNormalized.includes('/augments/') || iconNormalized.includes('/set6_mercenary/') || iconNormalized.includes('/mercenary/') || iconNormalized.includes('/pairs/') || iconNormalized.includes('tft_item_unknown') || iconNormalized.includes('tft_item_emptyslot')) {
 		return
 	}
 	let typeKey: ItemTypeKey | undefined
-	if (iconNormalized.includes('/radiant/')) {
+	if (iconNormalized.includes('tft_item_hex_')) {
+		typeKey = 'hexbuff'
+	} else if (iconNormalized.includes('/radiant/')) {
 		typeKey = 'radiant'
 	} else if (iconNormalized.includes('ornnitem') || iconNormalized.includes('ornn_item')) {
 		typeKey = 'ornn'
@@ -92,7 +94,7 @@ itemsData.reverse().forEach(item => {
 	} else if (name.includes('item_name')) {
 		typeKey = 'unreleased'
 	} else if (item.apiName != null) { // Set >= 5
-		if (item.apiName === 'TFT_Item_ForceOfNature' || item.apiName === 'TFT_Item_Unknown' || item.apiName === 'TFT_Item_TitanicHydra' || item.apiName === 'TFT_Item_SeraphsEmbrace') {
+		if (item.apiName === 'TFT_Item_ForceOfNature' || item.apiName === 'TFT_Item_TitanicHydra' || item.apiName === 'TFT_Item_SeraphsEmbrace') {
 			return
 		}
 		if (currentSetNumber > 1 && (item.apiName === 'TFT_Item_KnightsVow' || item.apiName === 'TFT_Item_YoumuusGhostblade')) { // Old emblems
@@ -129,11 +131,13 @@ itemsData.reverse().forEach(item => {
 
 		} else if (COMPONENT_ITEM_API_NAMES.includes(item.apiName) == true) {
 			typeKey = 'component'
-		} else if (item.apiName.endsWith('Emblem') || item.apiName.endsWith('EmblemItem')) {
+		} else if (item.apiName.endsWith('Emblem') || item.apiName.endsWith('EmblemItem') || item.apiName.endsWith('SpatulaItem')) {
 			if (!item.apiName.startsWith(`TFT${parentSetNumber}_`)) {
 				return
 			}
 			typeKey = 'spatula'
+		} else if (iconNormalized.includes('/shadow/') || iconNormalized.includes('_shadow.')) {
+			typeKey = 'shadow'
 		} else if (item.apiName.includes('_Consumable_')) {
 			typeKey = 'consumable'
 		} else {
@@ -149,8 +153,6 @@ itemsData.reverse().forEach(item => {
 		}
 		if (iconNormalized.includes('consumable')) {
 			typeKey = 'consumable'
-		} else if (iconNormalized.includes('_hex_')) {
-			typeKey = 'hexbuff'
 		} else if (item.from.length) {
 			if (item.id !== 88 && item.from.includes(8)) {
 				if (SPATULA_ITEM_IDS != null && item.id != null && !SPATULA_ITEM_IDS.includes(item.id)) {

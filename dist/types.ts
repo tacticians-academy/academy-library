@@ -28,7 +28,7 @@ export interface ItemData {
 
 export type AugmentTierProbability = [probability: number, children?: [AugmentTierProbability, AugmentTierProbability, AugmentTierProbability]]
 
-export type ItemTypeKey = 'component' | 'completed' | 'spatula' | 'radiant' | 'ornn' | 'support' | 'shimmerscale' | 'consumable' | 'hexbuff' | 'mod' | 'unreleased'
+export type ItemTypeKey = 'component' | 'completed' | 'spatula' | 'shadow' | 'radiant' | 'ornn' | 'support' | 'shimmerscale' | 'consumable' | 'hexbuff' | 'mod' | 'unreleased'
 
 export interface AugmentFlashcard {
 	id: string

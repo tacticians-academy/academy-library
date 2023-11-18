@@ -2,8 +2,7 @@ import { SetNumber } from '../dist/index.js'
 
 export async function importAugments(set: SetNumber) {
 	if (set < 6) {
-		type Augments = typeof import('./set6/augments.js')
-		return {} as Augments
+		return {} as typeof import('./set6/augments.js')
 	}
 	if (set === 6) {
 		return await import('./set6/augments.js')
@@ -37,8 +36,7 @@ export async function importAugments(set: SetNumber) {
 
 export async function importAugmentTiers(set: SetNumber) {
 	if (set < 6) {
-		type AugmentTiers = typeof import('./set6.5/hardcoded/augment-tiers.js')
-		return {} as AugmentTiers
+		return {} as typeof import('./set6.5/hardcoded/augment-tiers.js')
 	}
 	if (set === 6) {
 		return await import('./set6/hardcoded/augment-tiers.js')

@@ -643,6 +643,8 @@ export const spatulaItems: ItemData[] = [
 	},
 ]
 
+export const shadowItems: ItemData[] = []
+
 export const radiantItems: ItemData[] = []
 
 export const ornnItems: ItemData[] = []
@@ -657,55 +659,6 @@ export const hexbuffItems: ItemData[] = []
 
 export const modItems: ItemData[] = []
 
-export const unreleasedItems: ItemData[] = [
-	{
-		desc: `Wearer is also a Hextech`,
-		effects: {},
-		from: [-1, -1],
-		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_HextechChestguard.TFT.dds`,
-		id: -1,
-		name: `Hextech Chestguard`,
-		unique: false,
-	},
-	{
-		desc: `Item temporarily disabled`,
-		effects: {},
-		from: [],
-		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_Jammed.TFT.dds`,
-		id: 10002,
-		name: `Jammed!`,
-		unique: false,
-	},
-	{
-		desc: `Loot goes here`,
-		effects: {},
-		from: [],
-		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_Unknown.TFT.dds`,
-		id: 10001,
-		name: `Loot Bag`,
-		unique: false,
-	},
-	{
-		desc: `Loot goes here`,
-		effects: {},
-		from: [],
-		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_EmptySlot.TFT916CritComponent.dds`,
-		id: 10006,
-		name: `Loot Bag`,
-		unique: false,
-	},
-	{
-		desc: `When the wearer dies, Repeating Crossbow is re-equipped to a new ally. Each time Repeating Crossbow is re-equipped, it grants an additional +@ASPerStack@% Attack Speed and +@CritChancePerStack@% Critical Strike Chance for the remainder of combat.<br><br>This effect can stack any number of times.`,
-		effects: {
-			'{48ea2af8}': 7,
-			'{98ac43ce}': 50,
-		},
-		from: [-100, -100],
-		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_SwordOfTheDivine.TFT.dds`,
-		id: -100,
-		name: `Repeating Crossbow`,
-		unique: false,
-	},
-]
+export const unreleasedItems: ItemData[] = []
 
 export const currentItems: ItemData[] = componentItems.concat(completedItems, spatulaItems)
