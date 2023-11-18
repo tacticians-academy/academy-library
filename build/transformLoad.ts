@@ -758,7 +758,7 @@ if (activeAugments != null) {
 	}
 }
 
-const itemKeys = currentItemsByType['component'].concat(currentItemsByType['completed'], currentItemsByType['spatula'])
+const itemKeys = currentItemsByType['component'].concat(currentItemsByType['completed'])
 	.filter(item => !(toKey(item.name) in ItemKey))
 	.sort((a, b) => toKey(a.name).localeCompare(toKey(b.name)))
 	.map(({name}) => `${toKey(name)} = \`${name}\``)

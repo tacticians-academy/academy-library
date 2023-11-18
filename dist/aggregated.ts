@@ -19,29 +19,29 @@ export enum AugmentGroupKey {
 
 export enum ItemKey {
 	// Set 1
-	BFSword = `B. F. Sword`, BladeOfTheRuinedKing = `Blade of the Ruined King`, Bloodthirster = `Bloodthirster`, ChainVest = `Chain Vest`, CursedBlade = `Cursed Blade`, Darkin = `Darkin`, Deathblade = `Deathblade`, DragonsClaw = `Dragon's Claw`, ForceOfNature = `Force of Nature`, FrozenHeart = `Frozen Heart`, FrozenMallet = `Frozen Mallet`, GiantsBelt = `Giant's Belt`, GiantSlayer = `Giant Slayer`, GuardianAngel = `Guardian Angel`, GuinsoosRageblade = `Guinsoo's Rageblade`, HandOfJustice = `Hand Of Justice`, HextechGunblade = `Hextech Gunblade`, Hush = `Hush`, IcebornGauntlet = `Iceborn Gauntlet`, InfinityEdge = `Infinity Edge`, IonicSpark = `Ionic Spark`, JeweledGauntlet = `Jeweled Gauntlet`, KnightsVow = `Knight's Vow`, LocketOfTheIronSolari = `Locket of the Iron Solari`, LudensEcho = `Luden's Echo`, Mittens = `Mittens`, Morellonomicon = `Morellonomicon`, NeedlesslyLargeRod = `Needlessly Large Rod`, NegatronCloak = `Negatron Cloak`, PhantomDancer = `Phantom Dancer`, Quicksilver = `Quicksilver`, RabadonsDeathcap = `Rabadon's Deathcap`, RapidFirecannon = `Rapid Firecannon`, RecurveBow = `Recurve Bow`, RedBuff = `Red Buff`, Redemption = `Redemption`, RepeatingCrossbow = `Repeating Crossbow`, RunaansHurricane = `Runaan's Hurricane`, SeraphsEmbrace = `Seraph's Embrace`, SparringGloves = `Sparring Gloves`, Spatula = `Spatula`, SpearOfShojin = `Spear of Shojin`, StatikkShiv = `Statikk Shiv`, SwordBreaker = `Sword Breaker`, TearOfTheGoddess = `Tear of the Goddess`, ThiefsGloves = `Thief's Gloves`, Thornmail = `Thornmail`, TitanicHydra = `Titanic Hydra`, TrapClaw = `Trap Claw`, WarmogsArmor = `Warmog's Armor`, YoumuusGhostblade = `Youmuu's Ghostblade`, Yuumi = `Yuumi`, ZekesHerald = `Zeke's Herald`, Zephyr = `Zephyr`,
+	BFSword = `B. F. Sword`, Bloodthirster = `Bloodthirster`, ChainVest = `Chain Vest`, CursedBlade = `Cursed Blade`, Deathblade = `Deathblade`, DragonsClaw = `Dragon's Claw`, ForceOfNature = `Force of Nature`, FrozenHeart = `Frozen Heart`, GiantsBelt = `Giant's Belt`, GiantSlayer = `Giant Slayer`, GuardianAngel = `Guardian Angel`, GuinsoosRageblade = `Guinsoo's Rageblade`, HandOfJustice = `Hand Of Justice`, HextechGunblade = `Hextech Gunblade`, Hush = `Hush`, IcebornGauntlet = `Iceborn Gauntlet`, InfinityEdge = `Infinity Edge`, IonicSpark = `Ionic Spark`, JeweledGauntlet = `Jeweled Gauntlet`, LocketOfTheIronSolari = `Locket of the Iron Solari`, LudensEcho = `Luden's Echo`, Morellonomicon = `Morellonomicon`, NeedlesslyLargeRod = `Needlessly Large Rod`, NegatronCloak = `Negatron Cloak`, PhantomDancer = `Phantom Dancer`, Quicksilver = `Quicksilver`, RabadonsDeathcap = `Rabadon's Deathcap`, RapidFirecannon = `Rapid Firecannon`, RecurveBow = `Recurve Bow`, RedBuff = `Red Buff`, Redemption = `Redemption`, RepeatingCrossbow = `Repeating Crossbow`, RunaansHurricane = `Runaan's Hurricane`, SeraphsEmbrace = `Seraph's Embrace`, SparringGloves = `Sparring Gloves`, Spatula = `Spatula`, SpearOfShojin = `Spear of Shojin`, StatikkShiv = `Statikk Shiv`, SwordBreaker = `Sword Breaker`, TearOfTheGoddess = `Tear of the Goddess`, ThiefsGloves = `Thief's Gloves`, Thornmail = `Thornmail`, TitanicHydra = `Titanic Hydra`, TrapClaw = `Trap Claw`, WarmogsArmor = `Warmog's Armor`, ZekesHerald = `Zeke's Herald`, Zephyr = `Zephyr`,
 	// Set 2
-	BerserkersAxe = `Berserker's Axe`, InfernosCinder = `Inferno's Cinder`, MagesCap = `Mages Cap`, TalismanOfLight = `Talisman of Light`, WardensMail = `Warden's Mail`,
+	BrambleVest = `Bramble Vest`, LastWhisper = `Last Whisper`, TitansResolve = `Titan's Resolve`,
 	// Set 3
-	CelestialOrb = `Celestial Orb`, ChaliceOfFavor = `Chalice of Favor`, RebelMedal = `Rebel Medal`, StarGuardiansCharm = `Star Guardian's Charm`,
+	ChaliceOfFavor = `Chalice of Favor`, ShroudOfStillness = `Shroud of Stillness`, ZzRotPortal = `Zz'Rot Portal`,
 	// Set 3.5
-	BattlecastPlating = `Battlecast Plating`,
+	BlueBuff = `Blue Buff`, ChaliceOfPower = `Chalice of Power`,
 	// Set 4
-	AspectOfDusk = `Aspect of Dusk`, ElderwoodSprout = `Elderwood Sprout`, WarlordsBanner = `Warlord's Banner`,
-	// Set 4.5
-	SpiritOfTheDragon = `Spirit of the Dragon`,
+	GargoyleStoneplate = `Gargoyle Stoneplate`, SunfireCape = `Sunfire Cape`,
 	// Set 5
-	DawnbringerEmblem = `Dawnbringer Emblem`, RenewerEmblem = `Renewer Emblem`, SpellweaverEmblem = `Spellweaver Emblem`,
-	// Set 5.5
-	CavalierEmblem = `Cavalier Emblem`, HellionEmblem = `Hellion Emblem`,
+	ArchangelsStaff = `Archangel's Staff`,BansheesClaw = `Banshee's Claw`,
 	// Set 6
-	AcademyEmblem = `Academy Emblem`, ArcanistEmblem = `Arcanist Emblem`, ArchangelsStaff = `Archangel's Staff`, AssassinEmblem = `Assassin Emblem`, BansheesClaw = `Banshee's Claw`, BlueBuff = `Blue Buff`, BodyguardEmblem = `Bodyguard Emblem`, BrambleVest = `Bramble Vest`, BruiserEmblem = `Bruiser Emblem`, ChaliceOfPower = `Chalice of Power`, ChallengerEmblem = `Challenger Emblem`, ChemtechEmblem = `Chemtech Emblem`, ClockworkEmblem = `Clockwork Emblem`, EnforcerEmblem = `Enforcer Emblem`, GargoyleStoneplate = `Gargoyle Stoneplate`, InnovatorEmblem = `Innovator Emblem`, LastWhisper = `Last Whisper`, MercenaryEmblem = `Mercenary Emblem`, MutantEmblem = `Mutant Emblem`, ProtectorEmblem = `Protector Emblem`, ScholarEmblem = `Scholar Emblem`, ScrapEmblem = `Scrap Emblem`, ShroudOfStillness = `Shroud of Stillness`, SniperEmblem = `Sniper Emblem`, SocialiteEmblem = `Socialite Emblem`, SunfireCape = `Sunfire Cape`, SyndicateEmblem = `Syndicate Emblem`, TacticiansCrown = `Tactician's Crown`, TitansResolve = `Titan's Resolve`, ZzRotPortal = `Zz'Rot Portal`,
+	TacticiansCrown = `Tactician's Crown`,
 	// Set 6.5
-	DebonairEmblem = `Debonair Emblem`, EdgeOfNight = `Edge of Night`, HextechEmblem = `Hextech Emblem`, StrikerEmblem = `Striker Emblem`,
-	// Set 7
-	AstralEmblem = `Astral Emblem`, CannoneerEmblem = `Cannoneer Emblem`, DragonmancerEmblem = `Dragonmancer Emblem`, EvokerEmblem = `Evoker Emblem`, GuardianEmblem = `Guardian Emblem`, GuildEmblem = `Guild Emblem`, JadeEmblem = `Jade Emblem`, LegendEmblem = `Legend Emblem`, MageEmblem = `Mage Emblem`, MirageEmblem = `Mirage Emblem`, MysticEmblem = `Mystic Emblem`, RagewingEmblem = `Ragewing Emblem`, RevelEmblem = `Revel Emblem`, ScalescornEmblem = `Scalescorn Emblem`, ShimmerscaleEmblem = `Shimmerscale Emblem`, SwiftshotEmblem = `Swiftshot Emblem`, TempestEmblem = `Tempest Emblem`, TrainerEmblem = `Trainer Emblem`, WarriorEmblem = `Warrior Emblem`, WhispersEmblem = `Whispers Emblem`,
+	EdgeOfNight = `Edge of Night`,
 	// Set 7.5
 	ProtectorsVow = `Protector's Vow`,
+	// Set 8
+	Guardbreaker = `Guardbreaker`,
+	// Set 9.5
+	AdaptiveHelm = `Adaptive Helm`, Crownguard = `Crownguard`, Evenshroud = `Evenshroud`, NashorsTooth = `Nashor's Tooth`, NightHarvester = `Night Harvester`, SteraksGage = `Sterak's Gage`,
+	// Set 10
+	SteadfastHeart = `Steadfast Heart`,
 }
 
 export enum TraitKey {
