@@ -80,6 +80,14 @@ itemsData.reverse().forEach(item => {
 	if (iconNormalized.includes('/augments/') || iconNormalized.includes('/set6_mercenary/') || iconNormalized.includes('/mercenary/') || iconNormalized.includes('/pairs/') || iconNormalized.includes('tft_item_unknown') || iconNormalized.includes('tft_item_emptyslot')) {
 		return
 	}
+	if (item.apiName != null) {
+		if (item.apiName.includes('_Augment_') || item.apiName.includes('_HyperRollAugment_') || item.apiName.startsWith('TFT_Assist_') || item.apiName.startsWith('TFTEvent_') || item.apiName.startsWith('TFT_Item_Free') || item.apiName.startsWith('TFT_Item_Grant') || item.apiName.startsWith('TFTTutorial_')) {
+			return
+		}
+		if (item.apiName.endsWith('Slot') || item.apiName.endsWith('_DU') || item.apiName.endsWith('_HR')) {
+			return
+		}
+	}
 	let typeKey: ItemTypeKey | undefined
 	if (iconNormalized.includes('tft_item_hex_')) {
 		typeKey = 'hexbuff'
@@ -100,15 +108,12 @@ itemsData.reverse().forEach(item => {
 		if (currentSetNumber > 1 && (item.apiName === 'TFT_Item_KnightsVow' || item.apiName === 'TFT_Item_YoumuusGhostblade')) { // Old emblems
 			return
 		}
-		if (item.apiName.includes('_Augment_') || item.apiName.includes('_HyperRollAugment_') || item.apiName.startsWith('TFT_Assist_') || item.apiName.startsWith('TFTEvent_') || item.apiName.startsWith('TFT_Item_Free') || item.apiName.startsWith('TFT_Item_Grant') || item.apiName.startsWith('TFTTutorial_')) {
-			return
-		}
-		if (item.apiName.endsWith('Slot') || item.apiName.endsWith('_DU') || item.apiName.endsWith('_HR')) {
-			return
-		}
+
+		if (item.name.startsWith(`Choncc's `)) {
+			typeKey = 'unreleased'
 
 		// Mods
-		if (item.apiName === 'TFT7_Item_TrainerSnax') {
+		} else if (item.apiName === 'TFT7_Item_TrainerSnax') {
 			if (currentSetNumber !== 7) {
 				return
 			}
@@ -230,7 +235,22 @@ for (const key in currentItemsByType) {
 	const itemsData = currentItemsByType[itemKey]
 	outputItemSections.push(`export const ${itemKey}Items: ItemData[] = ` + (itemsData.length ? formatJS(itemsData) : '[]'))
 }
-outputItemSections.push(`export const currentItems: ItemData[] = componentItems.concat(completedItems, spatulaItems)`)
+const currentItemNames = ['completedItems', 'spatulaItems']
+if (currentSetNumber === 4.5 || currentSetNumber >= 6) {
+	currentItemNames.splice(2, 0, 'ornnItems')
+}
+if (currentSetNumber === 5) {
+	currentItemNames.splice(1, 0, 'shadowItems')
+} else if (currentSetNumber >= 5.5) {
+	currentItemNames.splice(1, 0, 'radiantItems')
+}
+if (currentSetNumber >= 7 && currentSetNumber < 9.5) {
+	currentItemNames.splice(2, 0, 'shimmerscaleItems')
+}
+if (currentSetNumber >= 9.5) {
+	currentItemNames.splice(2, 0, 'supportItems')
+}
+outputItemSections.push(`export const currentItems: ItemData[] = componentItems.concat(${currentItemNames.join(', ')})`)
 
 // Augments
 
@@ -496,7 +516,7 @@ const outputChampions = await Promise.all(playableChampions.map(async (champion)
 			}
 			const [spellName, spellData] = spellNameEntry
 			if (spellData.mDataValues == null) {
-				if (isFirstSpell && spellName !== 'TFT6_JayceR' && spellName !== 'TFT6_TibbersMissileEffect' && spellName !== 'TFT_TrainingDummy_Spell' && spellName !== 'TFT_VoidSpawn_Passive') {
+				if (isFirstSpell && spellName !== 'TFT_TrainingDummy_Spell' && spellName !== 'TFT_VoidSpawn_Passive') {
 					console.log('!mDataValues', spellName)
 				}
 				if (spellData.mCastTime == null) {

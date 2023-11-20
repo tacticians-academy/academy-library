@@ -2456,4 +2456,4 @@ export const unreleasedItems: ItemData[] = [
 	},
 ]
 
-export const currentItems: ItemData[] = componentItems.concat(completedItems, spatulaItems)
+export const currentItems: ItemData[] = componentItems.concat(completedItems, radiantItems, spatulaItems, ornnItems)
