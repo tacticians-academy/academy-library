@@ -1,5 +1,5 @@
 {
-	"{1319f00c}": {
+	"Characters/TFT10_Evelynn/CharacterRecords/Root": {
 		"mCharacterName": "TFT10_Evelynn",
 		"baseHP": 550,
 		"baseStaticHPRegen": 0,
@@ -50,7 +50,7 @@
 		],
 		"__type": "TFTCharacterRecord"
 	},
-	"{42bbab3d}": {
+	"Characters/TFT10_Evelynn/Spells/TFT10_EvelynnSpell": {
 		"mScriptName": "TFT10_EvelynnSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 1029,
@@ -73,12 +73,12 @@
 					"mName": "AttackSpeedPercent",
 					"mValues": [
 						0,
-						175,
-						175,
-						175,
-						175,
-						175,
-						175
+						120,
+						120,
+						120,
+						120,
+						120,
+						120
 					],
 					"__type": "SpellDataValue"
 				},

@@ -20,7 +20,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Bigger Shot`,
 		groupID: `biggerShot`,
-		desc: `Every @BonusAttackThreshold@ attacks, Big Shots also fire a bomb that deals @ADPercent*100@% Attack Damage to enemies within 1 hex of the target. Gain a Kaisa.`,
+		desc: `Every @BonusAttackThreshold@ attacks, Big Shots also fire a bomb that deals @ADPercent*100@% Attack Damage to enemies within 1 hex of the target. Gain a Kai'Sa.`,
 		effects: {
 			'ADPercent': 0.6499999761581421,
 			'{063ab443}': 3,
@@ -307,7 +307,7 @@ export const activeAugments: AugmentData[] = [
 		desc: `Your 4-cost and 5-cost champions gain @HP@ HP and @AS*100@% Attack Speed  for every 1-cost and 2-cost champion on your board.`,
 		effects: {
 			'AS': 0.10000000149011612,
-			'HP': 150,
+			'HP': 100,
 			'{0d14760d}': 4,
 			'{82aeb8a7}': 2,
 		},
@@ -425,7 +425,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Share the Spotlight`,
 		groupID: `shareTheSpotlight`,
-		desc: `Your units that start combat in a lighted hex gain a @HPShieldPercent*100@% max HP shield for @Duration@ seconds. Gain a Kaisa and Lillia.`,
+		desc: `Your units that start combat in a lighted hex gain a @HPShieldPercent*100@% max HP shield for @Duration@ seconds. Gain a Kai'Sa and Lillia.`,
 		effects: {
 			'Duration': 10,
 			'{3788e887}': 0.30000001192092896,

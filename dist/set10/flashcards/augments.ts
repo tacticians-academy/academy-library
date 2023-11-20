@@ -12,7 +12,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `bigger shot`,
 		name: `Bigger Shot`,
 		tiers: [2],
-		description: `Every {BonusAttackThreshold} attacks, Big Shots also fire a bomb that deals 65% Attack Damage to enemies within 1 hex of the target. Gain a Kaisa.`,
+		description: `Every {BonusAttackThreshold} attacks, Big Shots also fire a bomb that deals 65% Attack Damage to enemies within 1 hex of the target. Gain a Kai'Sa.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/bigger-shot-ii.tft_set10`],
 	},
 	{
@@ -187,7 +187,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `little buddies`,
 		name: `Little Buddies`,
 		tiers: [2],
-		description: `Your 4-cost and 5-cost champions gain 150 HP and 10% Attack Speed  for every 1-cost and 2-cost champion on your board.`,
+		description: `Your 4-cost and 5-cost champions gain 100 HP and 10% Attack Speed  for every 1-cost and 2-cost champion on your board.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/little-buddies-ii.tft_set10`],
 	},
 	{
@@ -264,7 +264,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `share the spotlight`,
 		name: `Share the Spotlight`,
 		tiers: [2],
-		description: `Your units that start combat in a lighted hex gain a {HPShieldPercent}% max HP shield for 10 seconds. Gain a Kaisa and Lillia.`,
+		description: `Your units that start combat in a lighted hex gain a {HPShieldPercent}% max HP shield for 10 seconds. Gain a Kai'Sa and Lillia.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/mesmerizing-performance-ii.tft_set10`],
 	},
 	{

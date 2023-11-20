@@ -1,5 +1,5 @@
 {
-	"{2876c243}": {
+	"Characters/TFT10_Zac/CharacterRecords/Root": {
 		"mCharacterName": "TFT10_Zac",
 		"baseHP": 1000,
 		"baseStaticHPRegen": 0,
@@ -84,7 +84,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{3cc508df}": {
+	"Characters/TFT10_Zac/Spells/TFT10_ZacR": {
 		"mScriptName": "TFT10_ZacR",
 		"mSpell": {
 			"flags": 4,
@@ -121,8 +121,8 @@
 					"mName": "BaseHeal",
 					"mValues": [
 						0,
-						180,
-						240,
+						100,
+						140,
 						800,
 						0.6000000238418579,
 						0.6000000238418579,
