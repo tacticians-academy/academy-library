@@ -1,4 +1,72 @@
 {
+	"{0146c02b}": {
+		"mScriptName": "TFT7_DragonBlueBarrageAttack2",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 8143,
+			"delayCastOffsetPercent": -0.3399999737739563,
+			"delayTotalTimePercent": -0.19999998807907104,
+			"canCastOrQueueWhileCasting": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2000,
+					"mSplineInfo": {
+						"mControlPoint1": [
+							0.7423292994499207,
+							0,
+							0.9819419384002686
+						],
+						"mControlPoint2": [
+							-0.2771989107131958,
+							0,
+							0.40948599576950073
+						],
+						"mUseMissilePositionAsOrigin": true,
+						"__type": "HermiteSplineInfo"
+					},
+					"mUseHeightOffsetAtEnd": true,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_Wing4_SKN",
+					"mTargetBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+					"__type": "FixedSpeedSplineMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 1600,
+			"mMissileEffectKey": "{e2fc3418}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
 	"{0c3e5c9c}": {
 		"mScriptName": "TFT7_DragonBlueQ",
 		"mSpell": {
@@ -92,10 +160,26 @@
 			"mMissileSpec": {
 				"movementComponent": {
 					"mSpeed": 1600,
+					"mSplineInfo": {
+						"mControlPoint1": [
+							0.7423292994499207,
+							0,
+							0.9819419384002686
+						],
+						"mControlPoint2": [
+							-0.2771989107131958,
+							0,
+							0.40948599576950073
+						],
+						"mUseMissilePositionAsOrigin": true,
+						"__type": "HermiteSplineInfo"
+					},
+					"mUseHeightOffsetAtEnd": true,
 					"mTargetHeightAugment": 100,
 					"mOffsetInitialTargetHeight": 100,
-					"mStartBoneName": "Spine2",
-					"__type": "FixedSpeedMovement"
+					"mStartBoneName": "R_Wing4_SKN",
+					"mTargetBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+					"__type": "FixedSpeedSplineMovement"
 				},
 				"verticalFacing": {
 					"__type": "VeritcalFacingMatchVelocity"
@@ -111,7 +195,7 @@
 				"__type": "MissileSpecification"
 			},
 			"mCastType": 1,
-			"castFrame": 14.220000267028809,
+			"castFrame": 6,
 			"missileSpeed": 1600,
 			"mMissileEffectKey": "{e2fc3418}",
 			"mHitEffectOrientType": 2,
@@ -142,10 +226,26 @@
 			"mMissileSpec": {
 				"movementComponent": {
 					"mSpeed": 1600,
+					"mSplineInfo": {
+						"mControlPoint1": [
+							0.7423292994499207,
+							0,
+							0.9819419384002686
+						],
+						"mControlPoint2": [
+							-0.2771989107131958,
+							0,
+							0.40948599576950073
+						],
+						"mUseMissilePositionAsOrigin": true,
+						"__type": "HermiteSplineInfo"
+					},
+					"mUseHeightOffsetAtEnd": true,
 					"mTargetHeightAugment": 100,
 					"mOffsetInitialTargetHeight": 100,
-					"mStartBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
-					"__type": "FixedSpeedMovement"
+					"mStartBoneName": "R_Wing4_SKN",
+					"mTargetBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+					"__type": "FixedSpeedSplineMovement"
 				},
 				"verticalFacing": {
 					"__type": "VeritcalFacingMatchVelocity"
@@ -161,7 +261,7 @@
 				"__type": "MissileSpecification"
 			},
 			"mCastType": 1,
-			"castFrame": 12,
+			"castFrame": 6,
 			"missileSpeed": 1600,
 			"mMissileEffectKey": "{e2fc3418}",
 			"mHitEffectOrientType": 2,
@@ -194,10 +294,26 @@
 			"mMissileSpec": {
 				"movementComponent": {
 					"mSpeed": 2000,
+					"mSplineInfo": {
+						"mControlPoint1": [
+							-0.7432187795639038,
+							0,
+							0.9786344766616821
+						],
+						"mControlPoint2": [
+							0.2745090126991272,
+							0,
+							0.40948599576950073
+						],
+						"mUseMissilePositionAsOrigin": true,
+						"__type": "HermiteSplineInfo"
+					},
+					"mUseHeightOffsetAtEnd": true,
 					"mTargetHeightAugment": 100,
 					"mOffsetInitialTargetHeight": 100,
-					"mStartBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
-					"__type": "FixedSpeedMovement"
+					"mStartBoneName": "L_Wing2_B",
+					"mTargetBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+					"__type": "FixedSpeedSplineMovement"
 				},
 				"verticalFacing": {
 					"__type": "VeritcalFacingMatchVelocity"
@@ -244,10 +360,26 @@
 			"mMissileSpec": {
 				"movementComponent": {
 					"mSpeed": 1600,
+					"mSplineInfo": {
+						"mControlPoint1": [
+							-0.7432187795639038,
+							0,
+							0.9786344766616821
+						],
+						"mControlPoint2": [
+							0.2745090126991272,
+							0,
+							0.40948599576950073
+						],
+						"mUseMissilePositionAsOrigin": true,
+						"__type": "HermiteSplineInfo"
+					},
+					"mUseHeightOffsetAtEnd": true,
 					"mTargetHeightAugment": 100,
 					"mOffsetInitialTargetHeight": 100,
-					"mStartBoneName": "R_BUFFBONE_GLB_HAND_LOC",
-					"__type": "FixedSpeedMovement"
+					"mStartBoneName": "L_Wing2_B",
+					"mTargetBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+					"__type": "FixedSpeedSplineMovement"
 				},
 				"verticalFacing": {
 					"__type": "VeritcalFacingMatchVelocity"
@@ -263,7 +395,7 @@
 				"__type": "MissileSpecification"
 			},
 			"mCastType": 1,
-			"castFrame": 8,
+			"castFrame": 6,
 			"missileSpeed": 1600,
 			"mMissileEffectKey": "{e2fc3418}",
 			"mHitEffectOrientType": 2,
@@ -353,9 +485,9 @@
 					"mName": "PassiveDamage",
 					"mValues": [
 						0,
-						50,
-						90,
-						250,
+						20,
+						35,
+						150,
 						0,
 						0,
 						0
@@ -367,34 +499,6 @@
 					"mName": "MRReduction",
 					"mValues": [
 						0,
-						3,
-						3,
-						3,
-						3,
-						3,
-						3
-					],
-					"mFormula": "3",
-					"__type": "SpellDataValue"
-				},
-				{
-					"mName": "BlastDamage",
-					"mValues": [
-						0,
-						100,
-						200,
-						600,
-						0,
-						0,
-						0
-					],
-					"{3f95426c}": false,
-					"__type": "SpellDataValue"
-				},
-				{
-					"mName": "BuffDuration",
-					"mValues": [
-						0,
 						5,
 						5,
 						5,
@@ -403,6 +507,20 @@
 						5
 					],
 					"mFormula": "5",
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "BlastDamage",
+					"mValues": [
+						0,
+						275,
+						375,
+						1800,
+						0,
+						0,
+						0
+					],
+					"{3f95426c}": false,
 					"__type": "SpellDataValue"
 				}
 			],
@@ -471,7 +589,6 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 40,
 		"mCharacterName": "TFT7_DragonBlue",
 		"baseHP": 900,
 		"baseStaticHPRegen": 0,
@@ -481,9 +598,9 @@
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 50,
-		"baseArmor": 40,
-		"baseSpellBlock": 40,
+		"baseDamage": 20,
+		"baseArmor": 30,
+		"baseSpellBlock": 30,
 		"baseCritChance": 0.25,
 		"critDamageMultiplier": 1.2999999523162842,
 		"baseMoveSpeed": 500,
@@ -517,7 +634,7 @@
 			"TFT7_DragonBlueQ",
 			"TFT7_DragonBlueQ2",
 			"TFT7_DragonBlueBarrageAttack",
-			"BaseSpell",
+			"TFT7_DragonBlueBarrageAttack2",
 			"BaseSpell",
 			"BaseSpell",
 			"BaseSpell",

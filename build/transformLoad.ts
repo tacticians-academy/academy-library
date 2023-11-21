@@ -17,6 +17,11 @@ const BASE_AP_RATIO = 0.009999999776482582
 
 const unreplacedIDs = new Set(Object.keys(SUBSTITUTE_EFFECT_KEYS))
 
+const GLOBAL_UNUSED_AUGMENT_NAME_KEYS = ['no scope', 'eagle eye']
+
+const MANUAL_TIER_DESIGNATIONS: Record<string, AugmentTier> = {
+}
+
 function sortByName(a: {name: string}, b: {name: string}) {
 	return a.name.localeCompare(b.name)
 }
@@ -44,7 +49,22 @@ try {
 	throw 'Missing Set data. Erase the current Set directory and re-run `prepare`.'
 }
 const { champions, traits } = getSetDataFrom(currentSetNumber, parentSetNumber, responseJSON)
-const itemsData = (responseJSON.items as ItemData[]).filter(item => item.name)
+const itemsData = (responseJSON.items as ItemData[]).filter(item => item.name != null && (item.apiName == null || (!item.apiName.startsWith('TFTTutorial_') && !item.apiName.endsWith('_DU') && !item.apiName.endsWith('HR'))))
+
+const allItemKeys = itemsData.map(i => i.apiName)
+const allTraitKeys = traits.map(t => t.apiName)
+
+function validateTraits(item: ItemData) {
+	const traits = (item.associatedTraits?.length ?? 0) ? item.associatedTraits : item.incompatibleTraits
+	if (traits && traits.length) {
+		for (const trait of traits) {
+			if (!allTraitKeys.includes(trait)) {
+				return false
+			}
+		}
+	}
+	return true
+}
 
 const baseSet = responseJSON.sets['1']
 for (const apiName of BASE_UNIT_API_NAMES) {
@@ -60,13 +80,16 @@ for (const apiName of BASE_UNIT_API_NAMES) {
 
 // Items
 
-const { LOCKED_STAR_LEVEL, SPATULA_ITEM_IDS, RETIRED_ITEM_NAMES, RETIRED_AUGMENT_NAME_KEYS, UNUSED_AUGMENT_NAME_KEYS, TRAIT_DATA_SUBSTITUTIONS } = await importSetData(currentSetNumber)
+const { LOCKED_STAR_LEVEL, SPATULA_ITEM_IDS, RETIRED_ITEM_NAMES, RETIRED_AUGMENT_NAME_KEYS, UNUSED_AUGMENT_NAME_KEYS, TRAIT_DATA_SUBSTITUTIONS, UNPLAYABLE_CHAMPION_APINAMES } = await importSetData(currentSetNumber)
 
 const currentItemsByType: Record<ItemTypeKey, ItemData[]> = {component: [], completed: [], spatula: [], shadow: [], radiant: [], ornn: [], support: [], shimmerscale: [], consumable: [], hexbuff: [], mod: [], unreleased: []}
 
 const foundItemIDs: number[] = []
 itemsData.reverse().forEach(item => {
 	if (!item.name || item.desc == null || RETIRED_ITEM_NAMES?.includes(item.name) || (item.id != null && foundItemIDs.includes(item.id)) || item.desc.toLowerCase().startsWith('tft_item_')) {
+		return
+	}
+	if (!validateTraits(item)) {
 		return
 	}
 	if (item.desc) {
@@ -81,10 +104,10 @@ itemsData.reverse().forEach(item => {
 		return
 	}
 	if (item.apiName != null) {
-		if (item.apiName.includes('_Augment_') || item.apiName.includes('_HyperRollAugment_') || item.apiName.startsWith('TFT_Assist_') || item.apiName.startsWith('TFTEvent_') || item.apiName.startsWith('TFT_Item_Free') || item.apiName.startsWith('TFT_Item_Grant') || item.apiName.startsWith('TFTTutorial_')) {
+		if (item.apiName.includes('_Augment_') || item.apiName.includes('_HyperRollAugment_') || item.apiName.startsWith('TFT_Assist_') || item.apiName.startsWith('TFTEvent_') || item.apiName.startsWith('TFT_Item_Free') || item.apiName.startsWith('TFT_Item_Grant')) {
 			return
 		}
-		if (item.apiName.endsWith('Slot') || item.apiName.endsWith('_DU') || item.apiName.endsWith('_HR')) {
+		if (item.apiName.endsWith('Slot')) {
 			return
 		}
 	}
@@ -171,7 +194,7 @@ itemsData.reverse().forEach(item => {
 			if (iconNormalized.includes('/hexcore/')) {
 				return false
 			}
-			if (SPATULA_ITEM_IDS && SPATULA_ITEM_IDS?.includes(item.id)) {
+			if (SPATULA_ITEM_IDS?.includes(item.id)) {
 				typeKey = 'spatula'
 			} else if (COMPONENT_ITEM_IDS.includes(item.id)) {
 				typeKey = 'component'
@@ -255,7 +278,8 @@ outputItemSections.push(`export const currentItems: ItemData[] = componentItems.
 // Augments
 
 const activeAugments: AugmentData[] = []
-const unreleasedAugments: AugmentData[] = []
+const inactiveAugments: AugmentData[] = []
+const choiceAugments: AugmentData[] = []
 
 const parentSetName = `tft_set${parentSetNumber}`
 
@@ -272,32 +296,30 @@ function getTierFromWord(word: string): AugmentTier | undefined {
 	return undefined
 }
 
-const MANUAL_TIER_DESIGNATIONS: Record<string, AugmentTier> = {
-}
-
 for (const item of itemsData.sort((a, b) => a.name.localeCompare(b.name))) {
-	const icon = item.icon.toLowerCase()
-	const pathComponents = icon.split('/')
+	const iconNormalized = item.icon.toLowerCase()
+	const pathComponents = iconNormalized.split('/')
 	const pathNameComponent = pathComponents[pathComponents.length - 1]
 	const pathCategoryComponent = pathComponents[pathComponents.length - 3]
 	const isAugment = pathCategoryComponent === 'augments' || (item.apiName != null && item.apiName.includes('_Augment_'))
 	const [ pathName, setKey ] = pathNameComponent.split('.')
-	if (!setKey.startsWith(parentSetName)) {
-		if (isAugment) {
-			// console.log('Augment with invalid set marker', pathNameComponent)
+	if (isAugment && item.apiName != null) {
+		if (item.apiName.includes('_Legend_') && allItemKeys.includes(item.apiName.replace('Legend_', ''))) {
+			continue
 		}
-		continue
-	}
-	if (isAugment) {
+		if (!validateTraits(item)) {
+			continue
+		}
 		if (item.from != null && item.from.length > 0) {
 			console.log('Augment should not have components', item)
 		}
-		const nameKey = item.name.toLowerCase()
-		if (RETIRED_AUGMENT_NAME_KEYS && RETIRED_AUGMENT_NAME_KEYS.includes(nameKey)) {
+		const nameNormalized = item.name.toLowerCase()
+		if (RETIRED_AUGMENT_NAME_KEYS != null && RETIRED_AUGMENT_NAME_KEYS.includes(nameNormalized)) {
 			continue
 		}
-		let tier: AugmentTier | undefined = getTierFromWord(nameKey.split(' ').pop()!)
+		let tier: AugmentTier | undefined = getTierFromWord(nameNormalized.split(' ').pop()!)
 		const lastNumber = parseInt(pathName.slice(-1), 10)
+		const addedAugments: string[] = []
 		if (!isNaN(lastNumber)) {
 			if (lastNumber && lastNumber !== tier) {
 				if (tier && tier !== lastNumber - 1) {
@@ -314,21 +336,21 @@ for (const item of itemsData.sort((a, b) => a.name.localeCompare(b.name))) {
 				tier = wordTier
 			}
 		}
-		if (nameKey.endsWith(' heart')) {
+		if (nameNormalized.endsWith(' heart')) {
 			if (tier && tier !== 1) {
-				if (currentSetNumber < 9 && nameKey !== 'innovator heart' && nameKey !== 'hextech heart') {
+				if (currentSetNumber < 9 && nameNormalized !== 'innovator heart' && nameNormalized !== 'hextech heart') {
 					console.log('ERR Multiple tier designations for heart', tier, 1, item)
 				}
 			} else {
 				tier = 1
 			}
-		} else if (nameKey.endsWith(' crest')) {
+		} else if (nameNormalized.endsWith(' crest')) {
 			if (tier && tier !== 2) {
 				console.log('ERR Multiple tier designations for crest', tier, 2, item)
 			} else {
 				tier = 2
 			}
-		} else if (nameKey.endsWith(' crown')) {
+		} else if (nameNormalized.endsWith(' crown')) {
 			if (tier && tier !== 3) {
 				console.log('ERR Multiple tier designations for crown', tier, 3, item)
 			} else {
@@ -342,7 +364,6 @@ for (const item of itemsData.sort((a, b) => a.name.localeCompare(b.name))) {
 			}
 			tier = manualTier
 		}
-		const isUnused = !tier || UNUSED_AUGMENT_NAME_KEYS.includes(nameKey) || icon.includes('/missing-t')
 		if (!tier) {
 			console.error('No tier for augment item entry: ' + JSON.stringify(item))
 			tier = 3
@@ -368,11 +389,24 @@ for (const item of itemsData.sort((a, b) => a.name.localeCompare(b.name))) {
 			effects: effects as EffectVariables,
 			icon: item.icon,
 		}
-		if (isUnused) {
-			if (data.desc == null) {
-				data.desc = ''
-			}
-			unreleasedAugments.push(data)
+
+		const keyID = nameNormalized + data.desc //JSON.stringify(data)
+		if (addedAugments.includes(keyID)) {
+			continue
+		}
+		addedAugments.push(keyID)
+
+		const isUnused = GLOBAL_UNUSED_AUGMENT_NAME_KEYS.includes(nameNormalized) || UNUSED_AUGMENT_NAME_KEYS.includes(nameNormalized) || iconNormalized.includes('/missing-t')
+		if (data.desc == null) {
+			data.desc = ''
+		}
+		const hasInternalName = nameNormalized.startsWith('tft')
+		if (!isUnused && (iconNormalized.includes('/choiceui/admin_armorery_') || hasInternalName)) {
+			choiceAugments.push(data)
+		} else if (hasInternalName) {
+			continue
+		} else if (isUnused || !tier) {
+			inactiveAugments.push(data)
 		} else {
 			activeAugments.push(data)
 		}
@@ -390,8 +424,9 @@ if (activeAugments.length) {
 	const outputAugmentSections = [
 		`import { AugmentGroupKey } from '../index.js'\nimport type { AugmentData } from '../index'`,
 		`export const emptyImplementationAugments: AugmentGroupKey[] = [${emptyImplementationAugments ?? ''}]`,
-		`export const activeAugments: AugmentData[] = ` + formatJS(activeAugments),
-		`export const inactiveAugments: AugmentData[] = ` + formatJS(unreleasedAugments),
+		`export const activeAugments: AugmentData[] = ${formatJS(activeAugments)}`,
+		`export const inactiveAugments: AugmentData[] = ${formatJS(inactiveAugments)}`,
+		`export const choiceAugments: AugmentData[] = ${formatJS(choiceAugments)}`,
 	]
 	fs.writeFile(getPathTo(currentSetNumber, 'augments.ts'), outputAugmentSections.join('\n\n'))
 }
@@ -788,7 +823,7 @@ if (itemKeys.length) {
 	console.log(`AGGREGATE ItemKey: ${itemKeys.join(', ')}`)
 }
 
-const traitKeys = (traits as TraitData[])
+const traitKeys = traits
 	.filter(trait => !(getEnumKeyFrom(trait.apiName ?? trait.name) in TraitKey))
 	.map(trait => `${getEnumKeyFrom(trait.apiName ?? trait.name)} = \`${trait.name}\``)
 if (traitKeys.length) {

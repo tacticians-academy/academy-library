@@ -115,9 +115,9 @@
 					"mName": "BonusHealth",
 					"mValues": [
 						0,
-						200,
-						300,
-						500,
+						375,
+						650,
+						1200,
 						0,
 						0,
 						0
@@ -129,23 +129,23 @@
 					"mName": "NumTargets",
 					"mValues": [
 						0,
-						3,
 						4,
-						5,
-						0,
-						0,
-						0
+						4,
+						4,
+						4,
+						4,
+						4
 					],
-					"{3f95426c}": false,
+					"mFormula": "4",
 					"__type": "SpellDataValue"
 				},
 				{
 					"mName": "DamagePerTarget",
 					"mValues": [
 						0,
-						200,
+						110,
+						160,
 						225,
-						275,
 						0,
 						0,
 						0
@@ -188,14 +188,8 @@
 				"ModifiedBonusHealth": {
 					"mFormulaParts": [
 						{
-							"mSubpart": {
-								"mDataValue": "BonusHealth",
-								"__type": "NamedDataValueCalculationPart"
-							},
-							"mRatio": 0.009999999776482582,
-							"mStyleTag": "noScale",
-							"{a5749b52}": "scaleAP",
-							"__type": "SubPartScaledProportionalToStat"
+							"mDataValue": "BonusHealth",
+							"__type": "NamedDataValueCalculationPart"
 						}
 					],
 					"__type": "GameCalculation"
@@ -256,7 +250,7 @@
 		"critDamageMultiplier": 1.2999999523162842,
 		"baseMoveSpeed": 500,
 		"attackRange": 180,
-		"attackSpeed": 0.699999988079071,
+		"attackSpeed": 0.75,
 		"basicAttack": {
 			"mAttackProbability": 0.5,
 			"mAttackName": "TFT7_VolibearBasicAttack",

@@ -2287,6 +2287,9 @@ export const inactiveAugments: AugmentData[] = [
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Second-Wind-III.TFT_Set6_Stage2.dds`,
 	},
+]
+
+export const choiceAugments: AugmentData[] = [
 	{
 		tier: 3,
 		name: `TFT6_Augment_BrawlerHPVeteran_Name`,
@@ -2322,16 +2325,6 @@ export const inactiveAugments: AugmentData[] = [
 		desc: `TFT6_Augment_ExperimentalChallenger_Desc`,
 		effects: {},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Mutant.TFT_Set6.dds`,
-	},
-	{
-		tier: 3,
-		name: `TFT6_Augment_InfinityCane_Name`,
-		groupID: `tFT6_Augment_InfinityCane_Name`,
-		desc: `TFT6_Augment_InfinityCane_Description`,
-		effects: {
-			'{dbb90075}': 0.5,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/TFT6_Augment_EnchanterInfinityCane.TFT_Set6.dds`,
 	},
 	{
 		tier: 3,

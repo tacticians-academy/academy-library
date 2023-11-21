@@ -1424,6 +1424,35 @@ export const inactiveAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/ScopedWeapons1.TFT_Set6.dds`,
 	},
 	{
+		tier: 1,
+		name: `Tinker`,
+		groupID: `tinker`,
+		desc: `Gain a Magnetic Remover or Reforger every @Combats@ combat round(s) with the Scrap trait active.`,
+		effects: {
+			'Combats': 1,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Tinker1.TFT_Set6.dds`,
+	},
+]
+
+export const choiceAugments: AugmentData[] = [
+	{
+		tier: 3,
+		name: `tft_item_name_TFT6_Augment_AssassinForAllUnits`,
+		groupID: `tft_item_name_TFT6_Augment_AssassinForAllUnits`,
+		desc: `tft_item_description_TFT6_Augment_ForAllUnits`,
+		effects: {},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/TFT6_Augment_AssassinForAll.dds`,
+	},
+	{
+		tier: 3,
+		name: `tft_item_name_TFT6_Augment_ForAllUnits`,
+		groupID: `tft_item_name_TFT6_Augment_ForAllUnits`,
+		desc: `tft_item_description_TFT6_Augment_Academy_ForAllUnits`,
+		effects: {},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/TFT6_Augment_AcademyForAll.dds`,
+	},
+	{
 		tier: 3,
 		name: `TFT6_Augment_AcademyLunchBreak1_Name`,
 		groupID: `tFT6_Augment_AcademyLunchBreak1_Name`,
@@ -1576,15 +1605,5 @@ export const inactiveAugments: AugmentData[] = [
 		desc: `TFT6_Augment_SyndicateForAllUnits_Description`,
 		effects: {},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/SyndicateForAllUnits.TFT_Set6.dds`,
-	},
-	{
-		tier: 1,
-		name: `Tinker`,
-		groupID: `tinker`,
-		desc: `Gain a Magnetic Remover or Reforger every @Combats@ combat round(s) with the Scrap trait active.`,
-		effects: {
-			'Combats': 1,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Tinker1.TFT_Set6.dds`,
 	},
 ]

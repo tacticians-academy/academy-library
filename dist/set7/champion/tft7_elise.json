@@ -204,9 +204,9 @@
 					"mName": "Damage",
 					"mValues": [
 						0,
-						180,
-						220,
-						275,
+						230,
+						270,
+						310,
 						0,
 						0,
 						0
@@ -259,7 +259,7 @@
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
 		"mCharacterName": "TFT7_Elise",
-		"baseHP": 650,
+		"baseHP": 700,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
@@ -269,8 +269,8 @@
 			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 50,
-		"baseArmor": 35,
-		"baseSpellBlock": 35,
+		"baseArmor": 30,
+		"baseSpellBlock": 30,
 		"baseCritChance": 0.25,
 		"critDamageMultiplier": 1.2999999523162842,
 		"baseMoveSpeed": 500,

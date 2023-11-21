@@ -23,18 +23,18 @@
 		"mMoveHeight": 0,
 		"mInitialMana": 80,
 		"mCharacterName": "TFT7_DragonGold",
-		"baseHP": 1000,
+		"baseHP": 1100,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 150,
+			"arBase": 160,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 80,
-		"baseArmor": 50,
-		"baseSpellBlock": 50,
+		"baseDamage": 100,
+		"baseArmor": 60,
+		"baseSpellBlock": 60,
 		"baseCritChance": 0.25,
 		"critDamageMultiplier": 1.2999999523162842,
 		"baseMoveSpeed": 500,
@@ -201,8 +201,8 @@
 					"mName": "DamageReduction",
 					"mValues": [
 						0,
-						50,
-						75,
+						35,
+						55,
 						300,
 						0,
 						0,
@@ -215,9 +215,9 @@
 					"mName": "Heal",
 					"mValues": [
 						0,
-						300,
-						500,
-						2500,
+						450,
+						600,
+						3000,
 						0,
 						0,
 						0
@@ -228,15 +228,15 @@
 				{
 					"mName": "ASBonusBase",
 					"mValues": [
-						0.4000000059604645,
-						0.4000000059604645,
-						0.4000000059604645,
-						0.4000000059604645,
-						0.4000000059604645,
-						0.4000000059604645,
-						0.4000000059604645
+						0.30000001192092896,
+						0.30000001192092896,
+						0.30000001192092896,
+						0.30000001192092896,
+						0.30000001192092896,
+						0.30000001192092896,
+						0.30000001192092896
 					],
-					"mBaseP": 0.4000000059604645,
+					"mBaseP": 0.30000001192092896,
 					"__type": "SpellDataValue"
 				},
 				{
@@ -257,9 +257,9 @@
 					"mName": "ShieldValue",
 					"mValues": [
 						0,
-						150,
-						250,
-						777,
+						180,
+						275,
+						2000,
 						0,
 						0,
 						0

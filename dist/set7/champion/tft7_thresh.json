@@ -200,7 +200,7 @@
 				"mMissileWidth": 70,
 				"movementComponent": {
 					"mProjectTargetToCastRange": true,
-					"mSpeed": 1900,
+					"mSpeed": 3000,
 					"mUseHeightOffsetAtEnd": true,
 					"mOffsetInitialTargetHeight": 100,
 					"mStartBoneName": "root",
@@ -225,7 +225,7 @@
 			},
 			"mCastType": 3,
 			"missileSpeed": 800,
-			"mMissileEffectKey": "{bd8d7df8}",
+			"mMissileEffectKey": "{61e0ec66}",
 			"bHaveHitBone": true,
 			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
 			"__type": "SpellDataResource"
@@ -260,7 +260,7 @@
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 60,
+		"baseDamage": 70,
 		"baseArmor": 45,
 		"baseSpellBlock": 45,
 		"baseCritChance": 0.25,
@@ -292,7 +292,7 @@
 		],
 		"passiveRange": 2,
 		"unitTagsString": "Champion",
-		"flags": 9446656,
+		"flags": 9446664,
 		"__type": "TFTCharacterRecord"
 	}
 }

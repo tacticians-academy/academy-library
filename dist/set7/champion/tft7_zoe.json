@@ -12,8 +12,8 @@
 					"mName": "Damage",
 					"mValues": [
 						200,
-						425,
-						650,
+						375,
+						575,
 						9001,
 						1400,
 						1700,
@@ -373,8 +373,8 @@
 					"mName": "StunDuration",
 					"mValues": [
 						0,
-						1.5,
-						1.5,
+						1.25,
+						1.25,
 						8,
 						0,
 						0,
@@ -546,8 +546,8 @@
 					"mValues": [
 						0,
 						1600,
-						2600,
-						10000,
+						2800,
+						25000,
 						0,
 						0,
 						0
@@ -559,8 +559,8 @@
 					"mName": "TooltipDaisyDamage",
 					"mValues": [
 						0,
-						750,
-						1500,
+						500,
+						1000,
 						10000,
 						0,
 						0,
@@ -714,7 +714,7 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 40,
+		"mInitialMana": 30,
 		"mCharacterName": "TFT7_Zoe",
 		"baseHP": 800,
 		"baseStaticHPRegen": 0,
@@ -731,7 +731,7 @@
 		"critDamageMultiplier": 1.2999999523162842,
 		"baseMoveSpeed": 500,
 		"attackRange": 890,
-		"attackSpeed": 0.699999988079071,
+		"attackSpeed": 0.75,
 		"basicAttack": {
 			"mAttackProbability": 0.5,
 			"mAttackName": "TFT7_ZoeBasicAttack",

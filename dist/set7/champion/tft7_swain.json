@@ -21,7 +21,7 @@
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
 		"mCharacterName": "TFT7_Swain",
-		"baseHP": 650,
+		"baseHP": 600,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
@@ -38,7 +38,7 @@
 		"critDamageMultiplier": 1.2999999523162842,
 		"baseMoveSpeed": 500,
 		"attackRange": 890,
-		"attackSpeed": 0.75,
+		"attackSpeed": 0.699999988079071,
 		"basicAttack": {
 			"mAttackProbability": 0.5,
 			"mAttackName": "TFT7_SwainBasicAttack",
@@ -151,9 +151,9 @@
 					"mName": "FireballDamage",
 					"mValues": [
 						0,
-						85,
-						135,
-						210,
+						65,
+						105,
+						165,
 						0,
 						0,
 						0

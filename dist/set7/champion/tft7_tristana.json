@@ -68,9 +68,9 @@
 					"mName": "Damage",
 					"mValues": [
 						0,
-						100,
-						150,
-						225,
+						130,
+						160,
+						200,
 						0,
 						0,
 						0
@@ -110,30 +110,31 @@
 				{
 					"mName": "Duration",
 					"mValues": [
-						3,
-						3,
-						3,
-						3,
-						3,
-						3,
-						3
+						1,
+						1,
+						1,
+						1,
+						1,
+						1,
+						1
 					],
-					"mBaseP": 3,
+					"mBaseP": 1,
 					"__type": "SpellDataValue"
 				},
 				{
 					"mName": "PercentAD",
 					"mValues": [
-						1.399999976158142,
-						1.5,
 						1.600000023841858,
+						1.399999976158142,
 						1.7000000476837158,
+						2.0999999046325684,
 						1.7999999523162842,
-						1.899999976158142,
-						2
+						1.850000023841858,
+						1.899999976158142
 					],
-					"mBaseP": 1.399999976158142,
-					"mFormula": "P + 0.10",
+					"{3f95426c}": false,
+					"mBaseP": 1.600000023841858,
+					"mFormula": "P + 0.05",
 					"__type": "SpellDataValue"
 				}
 			],
@@ -171,7 +172,8 @@
 					"__type": "GameCalculation"
 				}
 			},
-			"delayTotalTimePercent": -0.25,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
 			"castRange": [
 				5000,
 				5000,
@@ -454,7 +456,7 @@
 		"critDamageMultiplier": 1.2999999523162842,
 		"baseMoveSpeed": 500,
 		"attackRange": 890,
-		"attackSpeed": 0.75,
+		"attackSpeed": 0.699999988079071,
 		"basicAttack": {
 			"mAttackName": "TFT7_TristanaBasicAttack",
 			"__type": "AttackSlotData"

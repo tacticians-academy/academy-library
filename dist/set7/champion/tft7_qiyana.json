@@ -10,8 +10,8 @@
 					"mValues": [
 						50,
 						200,
-						300,
-						425,
+						275,
+						375,
 						450,
 						450,
 						450
@@ -24,16 +24,16 @@
 				{
 					"mName": "CCDuration",
 					"mValues": [
-						1,
+						1.25,
 						1.5,
+						1.75,
 						2,
+						2.25,
 						2.5,
-						3,
-						3.5,
-						4
+						2.75
 					],
-					"mBaseP": 1,
-					"mFormula": "P + 0.5",
+					"mBaseP": 1.25,
+					"mFormula": "P + 0.25",
 					"__type": "SpellDataValue"
 				}
 			],
@@ -59,13 +59,13 @@
 			"delayTotalTimePercent": -0.25,
 			"useAnimatorFramerate": true,
 			"castRange": [
-				5000,
-				5000,
-				5000,
-				5000,
-				5000,
-				5000,
-				5000
+				480,
+				480,
+				480,
+				480,
+				480,
+				480,
+				480
 			],
 			"castFrame": 8,
 			"mHitEffectOrientType": 2,
@@ -265,12 +265,11 @@
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 80,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 55,
+		"baseDamage": 50,
 		"baseArmor": 30,
 		"baseSpellBlock": 30,
 		"baseCritChance": 0.25,

@@ -1,3 +1,6 @@
+export const SPATULA_ITEM_IDS: number[] = [
+]
+
 export const TRAIT_DATA_SUBSTITUTIONS: Record<string, string> = {
 	'{cb1da648}': 'Assassin',
 	'{f110587b}': 'Blademaster',

@@ -57,30 +57,31 @@
 				{
 					"mName": "AttackSpeedRatio",
 					"mValues": [
-						0.4000000059604645,
-						0.44999998807907104,
+						0.30000001192092896,
+						0.3499999940395355,
 						0.5,
-						0.550000011920929,
-						0.6000000238418579,
-						0.6499999761581421,
-						0.699999988079071
+						0.75,
+						0.699999988079071,
+						0.800000011920929,
+						0.8999999761581421
 					],
-					"mBaseP": 0.4000000059604645,
-					"mFormula": "P + .05",
+					"{3f95426c}": false,
+					"mBaseP": 0.30000001192092896,
+					"mFormula": "P + .1",
 					"__type": "SpellDataValue"
 				},
 				{
 					"mName": "BuffDuration",
 					"mValues": [
 						0,
-						4,
-						4,
-						4,
-						4,
-						4,
-						4
+						6,
+						6,
+						6,
+						6,
+						6,
+						6
 					],
-					"mFormula": "4",
+					"mFormula": "6",
 					"__type": "SpellDataValue"
 				},
 				{
@@ -253,17 +254,17 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
+		"mInitialMana": 50,
 		"mCharacterName": "TFT7_Olaf",
 		"baseHP": 800,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 60,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 60,
+		"baseDamage": 55,
 		"baseArmor": 50,
 		"baseSpellBlock": 50,
 		"baseCritChance": 0.25,

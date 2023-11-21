@@ -80,9 +80,9 @@
 					"mName": "Damage",
 					"mValues": [
 						75,
-						450,
-						650,
-						5000,
+						375,
+						475,
+						15000,
 						475,
 						575,
 						675
@@ -96,9 +96,9 @@
 					"mName": "SecondaryDamage",
 					"mValues": [
 						1,
-						315,
-						455,
-						3500,
+						180,
+						250,
+						15000,
 						1,
 						1,
 						1
@@ -112,9 +112,9 @@
 					"mName": "HealthThreshold",
 					"mValues": [
 						0,
-						30,
-						40,
-						100,
+						25,
+						33,
+						1,
 						0,
 						0,
 						0
@@ -252,6 +252,7 @@
 		"__type": "SpellObject"
 	},
 	"{35407efa}": {
+		"PortraitIcon": "ASSETS/Characters/TFT7_Pyke/HUD/TFT7_Pyke_Square.TFT_Set7.dds",
 		"tier": 5,
 		"mLinkedTraits": [
 			{
@@ -268,18 +269,18 @@
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
 		"mCharacterName": "TFT7_Pyke",
-		"baseHP": 800,
+		"baseHP": 900,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 50,
+			"arBase": 60,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 70,
-		"baseArmor": 30,
-		"baseSpellBlock": 30,
+		"baseArmor": 40,
+		"baseSpellBlock": 40,
 		"baseCritChance": 0.25,
 		"critDamageMultiplier": 1.2999999523162842,
 		"baseMoveSpeed": 500,

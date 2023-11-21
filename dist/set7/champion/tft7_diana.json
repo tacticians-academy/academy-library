@@ -204,9 +204,9 @@
 					"mName": "Orbs",
 					"mValues": [
 						2,
+						5,
 						6,
 						7,
-						8,
 						8,
 						7,
 						8
@@ -219,15 +219,16 @@
 				{
 					"mName": "OrbDamage",
 					"mValues": [
+						70,
 						90,
-						100,
+						105,
+						120,
 						110,
 						120,
-						130,
-						140,
-						150
+						130
 					],
-					"mBaseP": 90,
+					"{3f95426c}": false,
+					"mBaseP": 70,
 					"mFormula": "P+ 10",
 					"__type": "SpellDataValue"
 				},
@@ -235,9 +236,9 @@
 					"mName": "ShieldValue",
 					"mValues": [
 						50,
+						300,
 						350,
 						400,
-						500,
 						500,
 						550,
 						650
