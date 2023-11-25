@@ -1,12 +1,12 @@
 {
-	"{78efdc66}": {
+	"Characters/TFT10_DiscoBall/Spells/TFT10_DiscoBallSpellTooltipOnly": {
 		"mScriptName": "TFT10_DiscoBallSpellTooltipOnly",
 		"mSpell": {
 			"__type": "SpellDataResource"
 		},
 		"__type": "SpellObject"
 	},
-	"{b36d1de6}": {
+	"Characters/TFT10_DiscoBall/CharacterRecords/Root": {
 		"mCharacterName": "TFT10_DiscoBall",
 		"baseHP": 1,
 		"baseStaticHPRegen": 0,

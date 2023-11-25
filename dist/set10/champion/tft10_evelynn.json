@@ -73,12 +73,12 @@
 					"mName": "AttackSpeedPercent",
 					"mValues": [
 						0,
-						120,
-						120,
-						120,
-						120,
-						120,
-						120
+						175,
+						175,
+						175,
+						175,
+						175,
+						175
 					],
 					"__type": "SpellDataValue"
 				},

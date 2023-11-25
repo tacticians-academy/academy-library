@@ -1,5 +1,5 @@
 {
-	"{51c414ad}": {
+	"Characters/TFT_ArmoryKeySupport/Spells/TFT_ArmoryKeySupport": {
 		"mScriptName": "TFT_ArmoryKeySupport",
 		"mSpell": {
 			"mDataValues": [
@@ -26,7 +26,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{bda85e16}": {
+	"Characters/TFT_ArmoryKeySupport/CharacterRecords/Root": {
 		"mCharacterName": "TFT_ArmoryKeySupport",
 		"baseHP": 10,
 		"baseStaticHPRegen": 0,

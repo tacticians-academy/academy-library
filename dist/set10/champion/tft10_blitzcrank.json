@@ -69,7 +69,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{3ea059a1}": {
+	"Characters/TFT10_Blitzcrank/Spells/TFT10_BlitzcrankSpell": {
 		"mScriptName": "TFT10_BlitzcrankSpell",
 		"mSpell": {
 			"mDataValues": [
@@ -461,7 +461,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{c1683d63}": {
+	"Characters/TFT10_Blitzcrank/CharacterRecords/Root": {
 		"mCharacterName": "TFT10_Blitzcrank",
 		"baseHP": 1000,
 		"baseStaticHPRegen": 0,

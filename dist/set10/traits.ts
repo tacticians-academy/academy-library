@@ -233,7 +233,7 @@ export const traits: TraitData[] = [
 				style: 1,
 				variables: {
 					'AS': 0.05000000074505806,
-					'Healing': 0.019999999552965164,
+					'Healing': 0.029999999329447746,
 					'{11b35e1c}': 1,
 				},
 			},
@@ -243,7 +243,7 @@ export const traits: TraitData[] = [
 				style: 3,
 				variables: {
 					'AS': 0.10000000149011612,
-					'Healing': 0.029999999329447746,
+					'Healing': 0.03999999910593033,
 					'{11b35e1c}': 1,
 				},
 			},
@@ -253,7 +253,7 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'AS': 0.15000000596046448,
-					'Healing': 0.029999999329447746,
+					'Healing': 0.03999999910593033,
 					'{11b35e1c}': 2,
 				},
 			},
@@ -263,7 +263,7 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'AS': 0.20000000298023224,
-					'Healing': 0.05000000074505806,
+					'Healing': 0.05999999865889549,
 					'{11b35e1c}': 2,
 				},
 			},
@@ -288,7 +288,7 @@ export const traits: TraitData[] = [
 				minUnits: 5,
 				style: 3,
 				variables: {
-					'AS': 0.44999998807907104,
+					'AS': 0.5,
 				},
 			},
 			{
@@ -296,7 +296,7 @@ export const traits: TraitData[] = [
 				minUnits: 7,
 				style: 4,
 				variables: {
-					'AS': 0.699999988079071,
+					'AS': 0.8500000238418579,
 				},
 			},
 		],

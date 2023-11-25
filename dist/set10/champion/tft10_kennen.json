@@ -353,13 +353,13 @@
 				{
 					"mName": "BLING_SECONDARY_DAMAGE",
 					"mValues": [
-						50,
-						50,
-						50,
-						50,
-						50,
-						50,
-						50
+						80,
+						80,
+						80,
+						80,
+						80,
+						80,
+						80
 					],
 					"__type": "SpellDataValue"
 				},

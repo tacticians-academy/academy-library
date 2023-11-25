@@ -207,7 +207,7 @@ export const completedItems: ItemData[] = [
 		desc: `Max mana reduced by @ManaReduction@. <br><br>When the holder gets a takedown, they deal @DamageAmp*100@% more damage for @TakedownTimer@ seconds.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
 		effects: {
 			'AP': 20,
-			'DamageAmp': 0.15000000596046448,
+			'DamageAmp': 0.11999999731779099,
 			'Mana': 20,
 			'ManaReduction': 10,
 			'TakedownTimer': 8,
@@ -628,7 +628,7 @@ export const completedItems: ItemData[] = [
 		desc: `Deal @BonusDamage*100@% bonus damage.<br><br>Attacks and Abilities @BurnPercent@% <TFTKeyword>Burn</TFTKeyword> and @HealingReductionPct@% <TFTKeyword>Wound</TFTKeyword> enemies for @Duration@ seconds.<br><br><tftitemrules><tftbold>Burn</tftbold>: Deals a percent of the target's maximum HP as true damage every second<br><tftbold>Wound</tftbold>: Reduces healing received</tftitemrules>`,
 		effects: {
 			'AS': 45,
-			'BonusDamage': 0.07999999821186066,
+			'BonusDamage': 0.05000000074505806,
 			'BurnPercent': 1,
 			'Duration': 5,
 			'HealingReductionPct': 33,
@@ -2164,7 +2164,7 @@ export const ornnItems: ItemData[] = [
 		desc: `Grant %i:scaleAS% @ASPerGold*100@% bonus Attack Speed per %i:goldCoins% gold in your bank (up to %i:goldCoins% @ASGoldLimit@ gold).<br><br>Each attack has a @ChanceToProc*100@% chance to drop %i:goldCoins% @GoldPerProc@ gold.<br><br><tftitemrules>Gold generated this game: @TFTUnitProperty.item:TFT_Item_GoldGenerated@</tftitemrules>`,
 		effects: {
 			'AP': 10,
-			'AS': 40,
+			'AS': 20,
 			'ASGoldLimit': 30,
 			'ASPerGold': 0.009999999776482582,
 			'ChanceToProc': 0.03999999910593033,

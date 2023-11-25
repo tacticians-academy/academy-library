@@ -1,6 +1,6 @@
 import type { ChampionData } from '../index'
 
-export enum ChampionKey { Ahri = `TFT10_Ahri`, Akali = `TFT10_Akali`, AkaliTrueDamage = `TFT10_Akali_TrueDamage`, Amumu = `TFT10_Amumu`, Annie = `TFT10_Annie`, Aphelios = `TFT10_Aphelios`, Bard = `TFT10_Bard`, Blitzcrank = `TFT10_Blitzcrank`, Caitlyn = `TFT10_Caitlyn`, Corki = `TFT10_Corki`, DiscoBall = `TFT10_DiscoBall`, Ekko = `TFT10_Ekko`, Evelynn = `TFT10_Evelynn`, Ezreal = `TFT10_Ezreal`, Garen = `TFT10_Garen`, Gnar = `TFT10_Gnar`, Gragas = `TFT10_Gragas`, Illaoi = `TFT10_Illaoi`, Jax = `TFT10_Jax`, Jhin = `TFT10_Jhin`, Jinx = `TFT10_Jinx`, KSante = `TFT10_KSante`, Kaisa = `TFT10_Kaisa`, Karthus = `TFT10_Karthus`, Katarina = `TFT10_Katarina`, Kayle = `TFT10_Kayle`, Kayn = `TFT10_Kayn`, Kennen = `TFT10_Kennen`, Lillia = `TFT10_Lillia`, Lucian = `TFT10_Lucian`, Lulu = `TFT10_Lulu`, LuluPolymorph = `TFT10_LuluPolymorph`, Lux = `TFT10_Lux`, MissFortune = `TFT10_MissFortune`, Mordekaiser = `TFT10_Mordekaiser`, Nami = `TFT10_Nami`, Neeko = `TFT10_Neeko`, Olaf = `TFT10_Olaf`, Pantheon = `TFT10_Pantheon`, Poppy = `TFT10_Poppy`, Qiyana = `TFT10_Qiyana`, Riven = `TFT10_Riven`, Samira = `TFT10_Samira`, Senna = `TFT10_Senna`, Seraphine = `TFT10_Seraphine`, Sett = `TFT10_Sett`, DesperadoProp = `TFT10_DesperadoProp`, PBJProp = `TFT10_PBJProp`, SLIMECrab = `TFT9_SLIME_Crab`, Sona = `TFT10_Sona`, TahmKench = `TFT10_TahmKench`, TrainingDummy = `TFT_TrainingDummy`, Taric = `TFT10_Taric`, IllaoiMinion = `TFT10_IllaoiMinion`, CountryHecarim = `TFT10_CountryHecarim`, Thresh = `TFT10_Thresh`, TwistedFate = `TFT10_TwistedFate`, Twitch = `TFT10_Twitch`, Urgot = `TFT10_Urgot`, Vex = `TFT10_Vex`, Vi = `TFT10_Vi`, Viego = `TFT10_Viego`, Voidspawn = `TFT_Voidspawn`, Yasuo = `TFT10_Yasuo`, Yone = `TFT10_Yone`, Yorick = `TFT10_Yorick`, YorickGhoulMelee = `TFT10_YorickGhoulMelee`, Zac = `TFT10_Zac`, Zed = `TFT10_Zed`, Ziggs = `TFT10_Ziggs` }
+export enum ChampionKey { Ahri = `TFT10_Ahri`, Akali = `TFT10_Akali`, AkaliTrueDamage = `TFT10_Akali_TrueDamage`, Amumu = `TFT10_Amumu`, Annie = `TFT10_Annie`, Aphelios = `TFT10_Aphelios`, Bard = `TFT10_Bard`, Blitzcrank = `TFT10_Blitzcrank`, Caitlyn = `TFT10_Caitlyn`, Corki = `TFT10_Corki`, DiscoBall = `TFT10_DiscoBall`, Ekko = `TFT10_Ekko`, Evelynn = `TFT10_Evelynn`, Ezreal = `TFT10_Ezreal`, Garen = `TFT10_Garen`, Gnar = `TFT10_Gnar`, Gragas = `TFT10_Gragas`, Illaoi = `TFT10_Illaoi`, Jax = `TFT10_Jax`, Jhin = `TFT10_Jhin`, Jinx = `TFT10_Jinx`, KSante = `TFT10_KSante`, Kaisa = `TFT10_Kaisa`, Karthus = `TFT10_Karthus`, Katarina = `TFT10_Katarina`, Kayle = `TFT10_Kayle`, Kayn = `TFT10_Kayn`, Kennen = `TFT10_Kennen`, Lillia = `TFT10_Lillia`, Lucian = `TFT10_Lucian`, Lulu = `TFT10_Lulu`, LuluPolymorph = `TFT10_LuluPolymorph`, Lux = `TFT10_Lux`, MercenaryChest = `TFT6_MercenaryChest`, MissFortune = `TFT10_MissFortune`, Mordekaiser = `TFT10_Mordekaiser`, Nami = `TFT10_Nami`, Neeko = `TFT10_Neeko`, Olaf = `TFT10_Olaf`, Pantheon = `TFT10_Pantheon`, Poppy = `TFT10_Poppy`, Qiyana = `TFT10_Qiyana`, Riven = `TFT10_Riven`, Samira = `TFT10_Samira`, Senna = `TFT10_Senna`, Seraphine = `TFT10_Seraphine`, Sett = `TFT10_Sett`, DesperadoProp = `TFT10_DesperadoProp`, PBJProp = `TFT10_PBJProp`, SLIMECrab = `TFT9_SLIME_Crab`, Sona = `TFT10_Sona`, TahmKench = `TFT10_TahmKench`, TrainingDummy = `TFT_TrainingDummy`, Taric = `TFT10_Taric`, IllaoiMinion = `TFT10_IllaoiMinion`, CountryHecarim = `TFT10_CountryHecarim`, Thresh = `TFT10_Thresh`, EmblemArmoryKey = `TFT5_EmblemArmoryKey`, TwistedFate = `TFT10_TwistedFate`, Twitch = `TFT10_Twitch`, Urgot = `TFT10_Urgot`, Vex = `TFT10_Vex`, Vi = `TFT10_Vi`, Viego = `TFT10_Viego`, Voidspawn = `TFT_Voidspawn`, Yasuo = `TFT10_Yasuo`, Yone = `TFT10_Yone`, Yorick = `TFT10_Yorick`, YorickGhoulMelee = `TFT10_YorickGhoulMelee`, Zac = `TFT10_Zac`, Zed = `TFT10_Zed`, Ziggs = `TFT10_Ziggs` }
 
 export const champions: ChampionData[] = [
 	{
@@ -415,10 +415,10 @@ export const champions: ChampionData[] = [
 				missile: undefined,
 				variables: {
 					'ManaGain': [20, 20, 20, 20],
-					'ArmorGain': [4, 4, 4, 4],
-					'StackCap': [25, 25, 25, 25],
-					'MagicDamage': [0, 80, 120, 190],
-					'ARRatio': [1, 1.5, 1.75, 2],
+					'ArmorGain': [2, 2, 2, 2],
+					'StackCap': [30, 30, 30, 30],
+					'MagicDamage': [0, 60, 90, 145],
+					'ARRatio': [1, 1.399999976158142, 1.600000023841858, 1.7999999523162842],
 					'StunDuration': [1.5, 1.5, 1.5, 1.5],
 					'HeadlinerHealth': [150, 150, 150, 150],
 				},
@@ -431,7 +431,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `MagicDamage`,
-										starValues: [0, 80, 120, 190],
+										starValues: [0, 60, 90, 145],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -499,7 +499,7 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {
-					'MagicDamage': [0, 195, 295, 440],
+					'MagicDamage': [0, 170, 255, 385],
 					'HealthThreshold': [0.3499999940395355, 0.3499999940395355, 0.3499999940395355, 0.3499999940395355],
 					'DamageRatio': [0.05000000074505806, 0.05000000074505806, 0.05000000074505806, 0.05000000074505806],
 					'HeadlinerAbilityPower': [20, 20, 20, 20],
@@ -517,7 +517,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `MagicDamage`,
-										starValues: [0, 195, 295, 440],
+										starValues: [0, 170, 255, 385],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -732,7 +732,7 @@ export const champions: ChampionData[] = [
 			hp: 550,
 			initialMana: 15,
 			magicResist: 20,
-			mana: 60,
+			mana: 75,
 			moveSpeed: 500,
 			range: 4,
 		},
@@ -1024,7 +1024,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'ADPercent': [2, 3.75, 3.75, 7.5],
+					'ADPercent': [2, 3.4000000953674316, 3.4000000953674316, 6.800000190734863],
 					'APRatio': [0, 0.25, 0.4000000059604645, 1.2000000476837158],
 					'NumShots': [4, 4, 4, 4],
 					'HeadlinerAttackDamage': [0.05000000074505806, 0.05000000074505806, 0.05000000074505806, 0.05000000074505806],
@@ -1045,7 +1045,7 @@ export const champions: ChampionData[] = [
 									},
 									{
 										variable: `ADPercent`,
-										starValues: [2, 3.75, 3.75, 7.5],
+										starValues: [2, 3.4000000953674316, 3.4000000953674316, 6.800000190734863],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -1092,7 +1092,7 @@ export const champions: ChampionData[] = [
 			attackSpeed: 0.699999988079071,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
-			damage: 48,
+			damage: 42,
 			hp: 450,
 			initialMana: 15,
 			magicResist: 15,
@@ -1333,7 +1333,7 @@ export const champions: ChampionData[] = [
 				missile: undefined,
 				variables: {
 					'MagicDamage': [0, 200, 300, 450],
-					'AttackSpeedPercent': [0, 120, 120, 120],
+					'AttackSpeedPercent': [0, 175, 175, 175],
 					'Duration': [0, 4, 4, 4],
 					'Healing': [0, 25, 30, 35],
 					'HeadlinerHealth': [100, 100, 100, 100],
@@ -1558,7 +1558,7 @@ export const champions: ChampionData[] = [
 					'PercentMaxHealthHealing': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
 					'PercentAD': [1.600000023841858, 1.600000023841858, 1.600000023841858, 1.600000023841858],
 					'HeadlinerHealth': [400, 400, 400, 400],
-					'MaxHealthAPScalar': [150, 200, 215, 230],
+					'MaxHealthAPScalar': [150, 170, 190, 210],
 				},
 				calculations: {
 					'{4acd9f14}': {
@@ -2017,7 +2017,7 @@ export const champions: ChampionData[] = [
 			hp: 850,
 			initialMana: 0,
 			magicResist: 30,
-			mana: 50,
+			mana: 60,
 			moveSpeed: 500,
 			range: 4,
 		},
@@ -2366,7 +2366,7 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {
-					'ADDamage': [0, 2.799999952316284, 2.799999952316284, 2.8499999046325684],
+					'ADDamage': [0, 2.5, 2.5, 2.549999952316284],
 					'DashRange': [2, 2, 2, 2],
 					'HeadlinerAttackDamage': [0.15000000596046448, 0.15000000596046448, 0.15000000596046448, 0.15000000596046448],
 					'HeadlinerDashBonus': [3, 3, 3, 3],
@@ -2382,7 +2382,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `ADDamage`,
-										starValues: [0, 2.799999952316284, 2.799999952316284, 2.8499999046325684],
+										starValues: [0, 2.5, 2.5, 2.549999952316284],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -2691,7 +2691,7 @@ export const champions: ChampionData[] = [
 				castTime: 0.05000000074505806,
 				missile: undefined,
 				variables: {
-					'Damage': [300, 380, 575, 4000],
+					'Damage': [300, 350, 525, 4000],
 					'PercentRestored': [0.5, 0.5, 0.5, 0.5],
 					'ChillDuration': [3, 3, 3, 3],
 					'HeadlinerAbilityPower': [5, 5, 5, 5],
@@ -2707,7 +2707,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [300, 380, 575, 4000],
+										starValues: [300, 350, 525, 4000],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2767,7 +2767,7 @@ export const champions: ChampionData[] = [
 					'StunDuration': [0.75, 0.75, 0.75, 0.75],
 					'SpellDuration': [2, 2, 2, 2],
 					'BASE_HEAL': [50, 200, 250, 300],
-					'BLING_SECONDARY_DAMAGE': [50, 50, 50, 50],
+					'BLING_SECONDARY_DAMAGE': [80, 80, 80, 80],
 					'BLING_SECONDARY_DAMAGE_EMPOWERED': [120, 120, 120, 120],
 					'HeadlinerHealth': [75, 75, 75, 75],
 					'HeadlinerPercentMaxHealthHeal': [0.03999999910593033, 0.03999999910593033, 0.03999999910593033, 0.03999999910593033],
@@ -3383,6 +3383,46 @@ export const champions: ChampionData[] = [
 		],
 	},
 	{
+		apiName: `TFT6_MercenaryChest`,
+		name: `Mercenary Chest`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT6_MercenaryChest.dds`,
+		cost: undefined,
+		starLevel: undefined,
+		teamSize: 0,
+		isSpawn: false,
+		traits: [],
+		stats: {
+			armor: 0,
+			attackSpeed: undefined,
+			critChance: 0.25,
+			critMultiplier: 1.2999999523162842,
+			damage: 0,
+			hp: 1,
+			initialMana: 0,
+			magicResist: 0,
+			mana: 12,
+			moveSpeed: 500,
+			range: 0,
+		},
+		basicAttackMissileSpeed: undefined,
+		critAttackMissileSpeed: undefined,
+		passive: undefined,
+		spells: [
+			{
+				name: `TFT6_MercenaryChest`,
+				castTime: 0.5,
+				missile: undefined,
+				variables: {
+					'RoundsToHatch': [2, 2, 2, 2],
+				},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
+			},
+		],
+		missiles: [],
+	},
+	{
 		apiName: `TFT10_MissFortune`,
 		name: `Miss Fortune`,
 		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT10_MissFortune.TFT_Set10.tex`,
@@ -3981,11 +4021,11 @@ export const champions: ChampionData[] = [
 				variables: {
 					'PercentHealthAsAD': [0.029999999329447746, 0.029999999329447746, 0.029999999329447746, 0.029999999329447746],
 					'TargetNumber': [3, 3, 3, 3],
-					'ArmorAndMR': [100, 100, 100, 100],
+					'ArmorAndMR': [60, 80, 80, 80],
 					'ADRatio': [2.25, 2.4000000953674316, 2.4000000953674316, 5],
 					'ExtraSlams': [1, 1, 1, 1],
 					'Duration': [6, 6, 6, 6],
-					'PercentHealthHeal': [0.05999999865889549, 0.05999999865889549, 0.05999999865889549, 0.05999999865889549],
+					'PercentHealthHeal': [0.03999999910593033, 0.03999999910593033, 0.03999999910593033, 0.03999999910593033],
 					'HeadlinerHealth': [150, 150, 150, 150],
 					'HeadlinerAttackDamage': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
 				},
@@ -4030,7 +4070,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `PercentHealthHeal`,
-										starValues: [0.05999999865889549, 0.05999999865889549, 0.05999999865889549, 0.05999999865889549],
+										starValues: [0.03999999910593033, 0.03999999910593033, 0.03999999910593033, 0.03999999910593033],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4052,7 +4092,7 @@ export const champions: ChampionData[] = [
 									},
 									{
 										variable: `PercentHealthHeal`,
-										starValues: [0.05999999865889549, 0.05999999865889549, 0.05999999865889549, 0.05999999865889549],
+										starValues: [0.03999999910593033, 0.03999999910593033, 0.03999999910593033, 0.03999999910593033],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4085,7 +4125,7 @@ export const champions: ChampionData[] = [
 			hp: 1050,
 			initialMana: 0,
 			magicResist: 60,
-			mana: 40,
+			mana: 50,
 			moveSpeed: 500,
 			range: 1,
 		},
@@ -4234,7 +4274,7 @@ export const champions: ChampionData[] = [
 				missile: undefined,
 				variables: {
 					'SplashRadiusHexes': [1, 1, 1, 1],
-					'SplashDamageADPercent': [1, 1, 1, 1],
+					'SplashDamageADPercent': [1.2000000476837158, 1.2000000476837158, 1.2000000476837158, 1.2000000476837158],
 					'Duration': [6, 6, 6, 6],
 					'ShieldAP': [0, 100, 120, 140],
 					'ShieldADPercent': [2.5, 2.5, 2.5, 2.5],
@@ -5521,6 +5561,46 @@ export const champions: ChampionData[] = [
 		],
 	},
 	{
+		apiName: `TFT5_EmblemArmoryKey`,
+		name: `Tome of Traits`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT5_EmblemArmoryKey.dds`,
+		cost: undefined,
+		starLevel: undefined,
+		teamSize: undefined,
+		isSpawn: false,
+		traits: [],
+		stats: {
+			armor: 10,
+			attackSpeed: 1,
+			critChance: null,
+			critMultiplier: 0,
+			damage: 10,
+			hp: 10,
+			initialMana: 0,
+			magicResist: 10,
+			mana: 100,
+			moveSpeed: 1,
+			range: NaN,
+		},
+		basicAttackMissileSpeed: undefined,
+		critAttackMissileSpeed: undefined,
+		passive: undefined,
+		spells: [
+			{
+				name: `TFT5_EmblemArmoryKey`,
+				castTime: 0.5,
+				missile: undefined,
+				variables: {
+					'RoundsToHatch': [2, 2, 2, 2],
+				},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
+			},
+		],
+		missiles: [],
+	},
+	{
 		apiName: `TFT10_TwistedFate`,
 		name: `Twisted Fate`,
 		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT10_TwistedFate.TFT_Set10.tex`,
@@ -5875,7 +5955,7 @@ export const champions: ChampionData[] = [
 				variables: {
 					'ADRatio': [1.7000000476837158, 1.75, 1.75, 1.7999999523162842],
 					'Duration': [0, 8, 8, 8],
-					'ShieldRatio': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
+					'ShieldRatio': [0.30000001192092896, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
 					'ShieldDuration': [5, 5, 5, 5],
 					'ADPerASConversion': [1, 1, 1, 1],
 					'AbilityScaleDamage': [10, 15, 25, 40],
@@ -6266,7 +6346,7 @@ export const champions: ChampionData[] = [
 			attackSpeed: 0.75,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
-			damage: 50,
+			damage: 45,
 			hp: 600,
 			initialMana: 0,
 			magicResist: 40,
@@ -6643,7 +6723,7 @@ export const champions: ChampionData[] = [
 				variables: {
 					'MagicDamage': [0, 120, 180, 1200],
 					'StunDuration': [1, 1, 1, 1],
-					'BaseHeal': [0, 100, 140, 800],
+					'BaseHeal': [0, 180, 240, 800],
 					'BounceCount': [3, 3, 3, 3],
 					'HeadlinerHealth': [150, 150, 150, 150],
 					'HeadlinerAbilityPower': [10, 10, 10, 10],
@@ -6673,7 +6753,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `BaseHeal`,
-										starValues: [0, 100, 140, 800],
+										starValues: [0, 180, 240, 800],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},

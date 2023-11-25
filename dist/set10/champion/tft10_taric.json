@@ -1,5 +1,5 @@
 {
-	"{0a726a9d}": {
+	"Characters/TFT10_Taric/Spells/TFT10_TaricBasicAttack2": {
 		"mScriptName": "TFT10_TaricBasicAttack2",
 		"mSpell": {
 			"flags": 128,
@@ -43,7 +43,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{3044413d}": {
+	"Characters/TFT10_Taric/Spells/TFT10_TaricBasicAttack": {
 		"mScriptName": "TFT10_TaricBasicAttack",
 		"mSpell": {
 			"flags": 128,
@@ -132,7 +132,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{b9653e7d}": {
+	"Characters/TFT10_Taric/Spells/TFT10_TaricCritAttack": {
 		"mScriptName": "TFT10_TaricCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 6826,
@@ -218,7 +218,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{f4a7bd41}": {
+	"Characters/TFT10_Taric/Spells/TFT10_TaricSpell": {
 		"mScriptName": "TFT10_TaricSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 11333,
@@ -378,7 +378,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{5dd01342}": {
+	"Characters/TFT10_Taric/CharacterRecords/Root": {
 		"mCharacterName": "TFT10_Taric",
 		"baseHP": 650,
 		"baseStaticHPRegen": 0,

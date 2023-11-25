@@ -1,5 +1,5 @@
 {
-	"{3cf29d5d}": {
+	"Characters/TFT10_Thresh/Spells/TFT10_ThreshBasicAttack2": {
 		"mScriptName": "TFT10_ThreshBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 512,
@@ -39,7 +39,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{7e5dfb7d}": {
+	"Characters/TFT10_Thresh/Spells/TFT10_ThreshBasicAttack": {
 		"mScriptName": "TFT10_ThreshBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 512,
@@ -145,7 +145,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{cdc51ebd}": {
+	"Characters/TFT10_Thresh/Spells/TFT10_ThreshCritAttack": {
 		"mScriptName": "TFT10_ThreshCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 512,
@@ -185,7 +185,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{e5894406}": {
+	"Characters/TFT10_Thresh/Spells/TFT10_ThreshSpell_Missile": {
 		"mScriptName": "TFT10_ThreshSpell_Missile",
 		"mSpell": {
 			"flags": 4,
@@ -253,7 +253,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{ff552681}": {
+	"Characters/TFT10_Thresh/Spells/TFT10_ThreshSpell": {
 		"mScriptName": "TFT10_ThreshSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 11349,
@@ -403,7 +403,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{f48421c3}": {
+	"Characters/TFT10_Thresh/CharacterRecords/Root": {
 		"mCharacterName": "TFT10_Thresh",
 		"baseHP": 1000,
 		"baseStaticHPRegen": 0,
