@@ -1,6 +1,6 @@
-import type { ChampionData } from '../../dist/types'
+import type { ChampionData, TraitData } from '../../dist/types'
 
-export type ResponseJSON = { items: Record<string, any>[], traits: Record<string, any>[], setData: {champions: ChampionData[], traits: any[]}[], sets: {champions: ChampionData[], traits: any[]}[] }
+export type ResponseJSON = { items: Record<string, any>[], traits: Record<string, any>[], setData: {champions: ChampionData[], traits: TraitData[]}[], sets: {champions: ChampionData[], traits: any[]}[] }
 
 export type ChampionJSON = Record<string, Record<string, any>>
 export type ChampionJSONType = 'SpellObject' | 'TFTCharacterRecord'

@@ -4,12 +4,12 @@ export type EffectVariables = {[key in string]?: number | null}
 export type AugmentTier = 1 | 2 | 3
 
 export interface AugmentData {
-	tier: AugmentTier,
+	tier: AugmentTier
 	name: string
 	groupID: string
 	desc: string
 	icon: string
-	effects: EffectVariables,
+	effects: EffectVariables
 }
 
 export interface ItemData {
@@ -146,7 +146,7 @@ export interface ChampionData {
 		mana: number
 		moveSpeed: number
 		range: number
-	},
+	}
 	basicAttackMissileSpeed?: number
 	critAttackMissileSpeed?: number
 	passive: ChampionSpellData | undefined
