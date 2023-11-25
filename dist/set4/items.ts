@@ -189,17 +189,6 @@ export const completedItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		desc: `Wearer's team gains +@MaxArmySizeIncrease@ maximum team size.`,
-		effects: {
-			'MaxArmySizeIncrease': 1,
-		},
-		from: [8, 8],
-		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_ForceOfNature.dds`,
-		id: 88,
-		name: `Force of Nature`,
-		unique: false,
-	},
-	{
 		desc: `Reduces the Attack Speed of nearby enemies by 50%. Each Frozen Heart a champion carries beyond the first increases the radius of this effect.`,
 		effects: {
 			'Armor': 25,
@@ -643,7 +632,7 @@ export const completedItems: ItemData[] = [
 	},
 ]
 
-export const spatulaItems: ItemData[] = [
+export const emblemItems: ItemData[] = [
 	{
 		desc: `The holder gains the Dusk trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>`,
 		effects: {
@@ -701,6 +690,17 @@ export const spatulaItems: ItemData[] = [
 		unique: true,
 	},
 	{
+		desc: `Wearer's team gains +@MaxArmySizeIncrease@ maximum team size.`,
+		effects: {
+			'MaxArmySizeIncrease': 1,
+		},
+		from: [8, 8],
+		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_ForceOfNature.dds`,
+		id: 88,
+		name: `Force of Nature`,
+		unique: false,
+	},
+	{
 		desc: `The wearer gains the Rebel trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>`,
 		effects: {
 			'Armor': 25,
@@ -747,12 +747,12 @@ export const shimmerscaleItems: ItemData[] = []
 
 export const consumableItems: ItemData[] = [
 	{
-		desc: `Place on Kayn to force Rhaast to overtake him, permanently improving his Reaping Slash spell to heal him.<br><br><tftitemrules>[KAYN CONSUMABLE - This item disappears when used and DESTROYS Kayn's Liberation]</tftitemrules><br><br><tftitemrules>[Can only be used during the Planning Phase]</tftitemrules>`,
+		desc: `Place on a champion to create a one-star copy of them.<br><br><tftitemrules>[CONSUMABLE - This item disappears when used.]</tftitemrules>`,
 		effects: {},
 		from: [],
-		icon: `ASSETS/Maps/Particles/TFT/TFT4_Consumable_KaynRed.TFT_Set4.dds`,
+		icon: `ASSETS/Maps/Particles/TFT/TFT_Blessing_WildCard.dds`,
 		id: 200,
-		name: `Rhaast's Embrace`,
+		name: `Neeko's Help`,
 		unique: false,
 	},
 ]
@@ -806,6 +806,30 @@ export const hexbuffItems: ItemData[] = [
 
 export const modItems: ItemData[] = []
 
-export const unreleasedItems: ItemData[] = []
+export const unreleasedItems: ItemData[] = [
+	{
+		desc: `Whenever any unit dies, gain X Mana.`,
+		effects: {
+			'Mana': 20,
+			'DodgeChance': 20,
+		},
+		from: [],
+		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_GiantSlayer.dds`,
+		id: 149,
+		name: `Catalyst`,
+		unique: false,
+	},
+	{
+		desc: `@ChanceToSpellSteal@ chance to steal the enemy's spell and cast it`,
+		effects: {
+			'{0cc88d45}': 10,
+		},
+		from: [],
+		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_SpellThiefsEdge.dds`,
+		id: 529,
+		name: `Spell Thief`,
+		unique: false,
+	},
+]
 
-export const currentItems: ItemData[] = componentItems.concat(completedItems, spatulaItems)
+export const currentItems: ItemData[] = componentItems.concat(completedItems, emblemItems)

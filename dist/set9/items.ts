@@ -779,7 +779,7 @@ export const completedItems: ItemData[] = [
 	},
 ]
 
-export const spatulaItems: ItemData[] = [
+export const emblemItems: ItemData[] = [
 	{
 		apiName: `TFT9_Item_BastionEmblem`,
 		associatedTraits: [],
@@ -853,21 +853,6 @@ export const spatulaItems: ItemData[] = [
 		id: null,
 		incompatibleTraits: [`Set9_Demacia`],
 		name: `Demacia Emblem`,
-		unique: true,
-	},
-	{
-		apiName: `TFT9_Item_ForsakenEmblem`,
-		associatedTraits: [],
-		composition: [],
-		desc: `The holder gains the Forsaken trait.<br><br><tftitemrules>[Unique - only 1 per champion.]</tftitemrules>`,
-		effects: {
-			'HP': 150,
-		},
-		from: null,
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Forgotten.tex`,
-		id: null,
-		incompatibleTraits: [`Set9_Forsaken`],
-		name: `Forsaken Emblem`,
 		unique: true,
 	},
 	{
@@ -977,36 +962,6 @@ export const spatulaItems: ItemData[] = [
 		unique: true,
 	},
 	{
-		apiName: `TFT9_Item_SeekerEmblem`,
-		associatedTraits: [],
-		composition: [],
-		desc: `The holder gains the Protector trait.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
-		effects: {
-			'HP': 150,
-		},
-		from: null,
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Vanquisher.tex`,
-		id: null,
-		incompatibleTraits: [`Set9_DefTrait`],
-		name: `Protector Emblem`,
-		unique: true,
-	},
-	{
-		apiName: `TFT9_Item_QuickdrawEmblem`,
-		associatedTraits: [],
-		composition: [],
-		desc: `The holder gains the Quickdraw trait.<br><br><tftitemrules>[Unique - only 1 per champion.]</tftitemrules>`,
-		effects: {
-			'HP': 150,
-		},
-		from: null,
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Ranger.tex`,
-		id: null,
-		incompatibleTraits: [`Set9_Quickdraw`],
-		name: `Quickdraw Emblem`,
-		unique: true,
-	},
-	{
 		apiName: `TFT9_Item_RogueEmblem`,
 		associatedTraits: [],
 		composition: [],
@@ -1095,6 +1050,21 @@ export const spatulaItems: ItemData[] = [
 		incompatibleTraits: [`Set9_Strategist`],
 		name: `Strategist Emblem`,
 		unique: true,
+	},
+	{
+		apiName: `TFT_Item_ForceOfNature`,
+		associatedTraits: [],
+		composition: [`TFT_Item_Spatula`, `TFT_Item_Spatula`],
+		desc: `Your team gains +@MaxArmySizeIncrease@ maximum team size.`,
+		effects: {
+			'MaxArmySizeIncrease': 1,
+		},
+		from: null,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Tacticians_Crown.tex`,
+		id: null,
+		incompatibleTraits: [],
+		name: `Tactician's Crown`,
+		unique: false,
 	},
 	{
 		apiName: `TFT9_Item_TargonEmblem`,
@@ -2773,6 +2743,25 @@ export const modItems: ItemData[] = [
 
 export const unreleasedItems: ItemData[] = [
 	{
+		apiName: `TFT_Item_SeraphsEmbrace`,
+		associatedTraits: [],
+		composition: [`TFT_Item_TearOfTheGoddess`, `TFT_Item_TearOfTheGoddess`],
+		desc: `Abilities cost %i:scaleMana% @ManaReduction@ less Mana to cast. <br><br>If the holder gets at least 1 takedown within @TakedownTimer@ seconds of casting, gain %i:scaleMana% @ManaOnTakedown@ Mana.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules><br>`,
+		effects: {
+			'AP': 10,
+			'Mana': 40,
+			'ManaOnTakedown': 10,
+			'ManaReduction': 10,
+			'TakedownTimer': 3,
+		},
+		from: null,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Blue_Buff.tex`,
+		id: null,
+		incompatibleTraits: [],
+		name: `Blue Buff`,
+		unique: true,
+	},
+	{
 		apiName: `TFT6_Item_EliteSpotlight`,
 		associatedTraits: [],
 		composition: [],
@@ -2785,6 +2774,23 @@ export const unreleasedItems: ItemData[] = [
 		name: `TFT6_Item_Name_EliteSpotlight`,
 		unique: true,
 	},
+	{
+		apiName: `TFT_Item_TitanicHydra`,
+		associatedTraits: [],
+		composition: [`TFT_Item_RecurveBow`, `TFT_Item_GiantsBelt`],
+		desc: `Combat start: <TFTKeyword>Taunt</TFTKeyword>.<br>On death, a Voidspawn arises, <TFTKeyword>Taunting</TFTKeyword> nearby enemies. The Voidspawn has massively reduced effectiveness when created by a summoned unit.<br><br><tftitemrules><tftbold>Taunt</tftbold>: enemies that are able and in range must attack the taunter</tftitemrules>`,
+		effects: {
+			'AS': 10,
+			'HP': 150,
+			'SummonedStatReduction': 25,
+		},
+		from: null,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/ZZRot_Portal.tex`,
+		id: null,
+		incompatibleTraits: [],
+		name: `Zz'Rot Portal`,
+		unique: false,
+	},
 ]
 
-export const currentItems: ItemData[] = componentItems.concat(completedItems, radiantItems, shimmerscaleItems, spatulaItems, ornnItems)
+export const currentItems: ItemData[] = componentItems.concat(completedItems, radiantItems, shimmerscaleItems, emblemItems, ornnItems)

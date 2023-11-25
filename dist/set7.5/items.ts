@@ -800,7 +800,7 @@ export const completedItems: ItemData[] = [
 	},
 ]
 
-export const spatulaItems: ItemData[] = [
+export const emblemItems: ItemData[] = [
 	{
 		apiName: `TFT7_Item_AssassinEmblemItem`,
 		associatedTraits: [],
@@ -877,21 +877,6 @@ export const spatulaItems: ItemData[] = [
 		unique: true,
 	},
 	{
-		apiName: `TFT7_Item_DarkflightEmblemItem`,
-		associatedTraits: [],
-		composition: [],
-		desc: `The holder gains the Darkflight trait.`,
-		effects: {
-			'HP': 150,
-		},
-		from: [],
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set7/Darkflight.TFT_Set7_Stage2.dds`,
-		id: 2101,
-		incompatibleTraits: [`Set7_Darkflight`],
-		name: `Darkflight Emblem`,
-		unique: true,
-	},
-	{
 		apiName: `TFT7_Item_DragonmancerEmblemItem`,
 		associatedTraits: [],
 		composition: [`TFT_Item_Spatula`, `TFT_Item_NeedlesslyLargeRod`],
@@ -965,22 +950,6 @@ export const spatulaItems: ItemData[] = [
 		id: 2324,
 		incompatibleTraits: [`Set7_Jade`],
 		name: `Jade Emblem`,
-		unique: true,
-	},
-	{
-		apiName: `TFT7_Item_LagoonEmblemItem`,
-		associatedTraits: [],
-		composition: [`TFT_Item_SparringGloves`, `TFT_Item_Spatula`],
-		desc: `The holder gains the Lagoon trait.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
-		effects: {
-			'CritChance': 10,
-			'DodgeChance': 5,
-		},
-		from: [9, 8],
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set7/Lagoon.TFT_Set7_Stage2.dds`,
-		id: 2100,
-		incompatibleTraits: [`Set7_Lagoon`],
-		name: `Lagoon Emblem`,
 		unique: true,
 	},
 	{
@@ -1117,6 +1086,21 @@ export const spatulaItems: ItemData[] = [
 		incompatibleTraits: [`Set7_Swiftshot`],
 		name: `Swiftshot Emblem`,
 		unique: true,
+	},
+	{
+		apiName: `TFT_Item_ForceOfNature`,
+		associatedTraits: [],
+		composition: [`TFT_Item_Spatula`, `TFT_Item_Spatula`],
+		desc: `Your team gains +@MaxArmySizeIncrease@ maximum team size.`,
+		effects: {
+			'MaxArmySizeIncrease': 1,
+		},
+		from: [8, 8],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Tacticians_Crown.dds`,
+		id: 88,
+		incompatibleTraits: [],
+		name: `Tactician's Crown`,
+		unique: false,
 	},
 	{
 		apiName: `TFT7_Item_TempestEmblemItem`,
@@ -2430,6 +2414,24 @@ export const modItems: ItemData[] = [
 
 export const unreleasedItems: ItemData[] = [
 	{
+		apiName: `TFT_Item_SeraphsEmbrace`,
+		associatedTraits: [],
+		composition: [`TFT_Item_TearOfTheGoddess`, `TFT_Item_TearOfTheGoddess`],
+		desc: `Combat Start: Grant %i:scaleMana% @BonusMana@ bonus starting Mana. After casting an Ability, set Mana to %i:scaleMana% @ManaRestore@.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules><br>`,
+		effects: {
+			'Mana': 30,
+			'ManaRestore': 20,
+			'{43012963}': 20,
+			'{71bc3700}': 200,
+		},
+		from: [4, 4],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Blue_Buff.dds`,
+		id: 44,
+		incompatibleTraits: [],
+		name: `Blue Buff`,
+		unique: true,
+	},
+	{
 		apiName: `TFT6_Item_EliteSpotlight`,
 		associatedTraits: [],
 		composition: [],
@@ -2442,6 +2444,23 @@ export const unreleasedItems: ItemData[] = [
 		name: `TFT6_Item_Name_EliteSpotlight`,
 		unique: true,
 	},
+	{
+		apiName: `TFT_Item_TitanicHydra`,
+		associatedTraits: [],
+		composition: [`TFT_Item_RecurveBow`, `TFT_Item_GiantsBelt`],
+		desc: `Combat start: Taunt all enemies that are in range to attack the holder.<br><br>On death, a Voidspawn arises, taunting nearby enemies. Voidspawns that arise from summoned units are @SummonedStatReduction@% effective.`,
+		effects: {
+			'AS': 10,
+			'HP': 150,
+			'SummonedStatReduction': 25,
+		},
+		from: [2, 7],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/ZZRot_Portal.dds`,
+		id: 27,
+		incompatibleTraits: [],
+		name: `Zz'Rot Portal`,
+		unique: false,
+	},
 ]
 
-export const currentItems: ItemData[] = componentItems.concat(completedItems, radiantItems, shimmerscaleItems, spatulaItems, ornnItems)
+export const currentItems: ItemData[] = componentItems.concat(completedItems, radiantItems, shimmerscaleItems, emblemItems, ornnItems)

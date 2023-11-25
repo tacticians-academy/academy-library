@@ -389,15 +389,6 @@ export const itemFlashcards: ItemFlashcard[] = [
 		unique: true,
 	},
 	{
-		id: `TFT_Item_ZhonyasHourglass`,
-		name: `Zhonya's Hourglass`,
-		type: `completed`,
-		description: `On falling below 30% HP, become untargetable, invulnerable, but unable to move for 4 seconds.`,
-		icon: `assets/maps/particles/tft/tft_item_zhonyashourglass`,
-		from: [],
-		unique: false,
-	},
-	{
 		id: `TFT5_Item_TrapClawRadiant`,
 		name: `Banshee's Silence`,
 		type: `completed`,
@@ -724,7 +715,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT6_Item_AcademyEmblemItem`,
 		name: `Academy Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Academy trait. [Unique - only 1 per champion]`,
 		icon: `assets/maps/particles/tft/item_icons/spatula/set6/academy.tft_set6`,
 		from: [8, 4],
@@ -733,7 +724,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT6_Item_ArcanistEmblemItem`,
 		name: `Arcanist Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Arcanist trait. [Unique - only 1 per champion`,
 		icon: `assets/maps/particles/tft/item_icons/spatula/set6/arcanist.tft_set6`,
 		from: [3, 8],
@@ -742,7 +733,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT6_Item_AssassinEmblemItem`,
 		name: `Assassin Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Assassin trait. [Unique - only 1 per champion]`,
 		icon: `assets/maps/particles/tft/item_icons/spatula/set6/assassin.tft_set6`,
 		from: [9, 8],
@@ -751,7 +742,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT6_Item_BodyguardEmblemItem`,
 		name: `Bodyguard Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Bodyguard trait. [Unique - only 1 per champion Elusive - cannot be crafted.]`,
 		icon: `assets/maps/particles/tft/item_icons/spatula/set6/bodyguard.tft_set6`,
 		from: [],
@@ -760,7 +751,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT6_Item_BruiserEmblemItem`,
 		name: `Bruiser Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Bruiser trait. [Unique - only 1 per champion Elusive - cannot be crafted.]`,
 		icon: `assets/maps/particles/tft/item_icons/spatula/set6/bruiser.tft_set6`,
 		from: [],
@@ -769,7 +760,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT6_Item_ChallengerEmblemItem`,
 		name: `Challenger Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Challenger trait. [Unique - only 1 per champion]`,
 		icon: `assets/maps/particles/tft/item_icons/spatula/set6/challenger.tft_set6`,
 		from: [2, 8],
@@ -778,7 +769,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT6_Item_ChemtechEmblemItem`,
 		name: `Chemtech Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Chemtech trait. [Unique - only 1 per champion]`,
 		icon: `assets/maps/particles/tft/item_icons/spatula/set6/chemtech.tft_set6`,
 		from: [7, 8],
@@ -787,7 +778,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT6_Item_ClockworkEmblemItem`,
 		name: `Clockwork Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Clockwork trait. [Unique - only 1 per champion Elusive - cannot be crafted.]`,
 		icon: `assets/maps/particles/tft/item_icons/spatula/set6/clockwork.tft_set6`,
 		from: [],
@@ -796,7 +787,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT6_Item_DebonairEmblemItem`,
 		name: `Debonair Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Debonair trait. [Unique - only 1 per champion]`,
 		icon: `assets/maps/particles/tft/item_icons/spatula/set6/debonair.tft_set6_stage2`,
 		from: [5, 8],
@@ -805,7 +796,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT6_Item_EnforcerEmblemItem`,
 		name: `Enforcer Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Enforcer trait. [Unique - only 1 per champion Elusive - cannot be crafted.]`,
 		icon: `assets/maps/particles/tft/item_icons/spatula/set6/enforcer.tft_set6`,
 		from: [],
@@ -814,7 +805,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT6_Item_HextechEmblemItem`,
 		name: `Hextech Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Hextech trait. [Unique - only 1 per champion]`,
 		icon: `assets/maps/particles/tft/item_icons/spatula/set6/hextech.tft_set6_stage2`,
 		from: [8, 4],
@@ -823,7 +814,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT6_Item_ImperialEmblemItem`,
 		name: `Imperial Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Imperial trait. [Unique - only 1 per champion]`,
 		icon: `assets/maps/particles/tft/item_icons/spatula/set6/imperial.tft_set6`,
 		from: [8, 1],
@@ -832,7 +823,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT6_Item_InnovatorEmblemItem`,
 		name: `Innovator Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Innovator trait. [Unique - only 1 per champion Elusive - cannot be crafted.]`,
 		icon: `assets/maps/particles/tft/item_icons/spatula/set6/innovator.tft_set6`,
 		from: [],
@@ -841,7 +832,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT6_Item_MercenaryEmblemItem`,
 		name: `Mercenary Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Mercenary trait. [Unique - only 1 per champion Elusive - cannot be crafted.]`,
 		icon: `assets/maps/particles/tft/item_icons/spatula/set6/mercenary.tft_set6`,
 		from: [],
@@ -850,7 +841,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT6_Item_MutantEmblemItem`,
 		name: `Mutant Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Mutant trait. [Unique - only 1 per champion]`,
 		icon: `assets/maps/particles/tft/item_icons/spatula/set6/mutant.tft_set6`,
 		from: [6, 8],
@@ -859,7 +850,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT6_Item_ProtectorEmblemItem`,
 		name: `Protector Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Protector trait. [Unique - only 1 per champion Elusive - cannot be crafted.]`,
 		icon: `assets/maps/particles/tft/item_icons/spatula/set6/protector.tft_set6`,
 		from: [],
@@ -868,7 +859,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT6_Item_ScholarEmblemItem`,
 		name: `Scholar Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Scholar trait. [Unique - only 1 per champion Elusive - cannot be crafted.]`,
 		icon: `assets/maps/particles/tft/item_icons/spatula/set6/scholar.tft_set6`,
 		from: [],
@@ -877,7 +868,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT6_Item_ScrapEmblemItem`,
 		name: `Scrap Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Scrap trait. [Unique - only 1 per champion Elusive - cannot be crafted.]`,
 		icon: `assets/maps/particles/tft/item_icons/spatula/set6/scrap.tft_set6`,
 		from: [],
@@ -886,7 +877,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT6_Item_SniperEmblemItem`,
 		name: `Sniper Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Sniper trait. [Unique - only 1 per champion Elusive - cannot be crafted.]`,
 		icon: `assets/maps/particles/tft/item_icons/spatula/set6/sniper.tft_set6`,
 		from: [],
@@ -895,7 +886,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT6_Item_SocialiteEmblemItem`,
 		name: `Socialite Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Socialite trait. [Unique - only 1 per champion Elusive - cannot be crafted.]`,
 		icon: `assets/maps/particles/tft/item_icons/spatula/set6/socialite.tft_set6`,
 		from: [],
@@ -904,7 +895,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT6_Item_StrikerEmblemItem`,
 		name: `Striker Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Striker trait. [Unique - only 1 per champion]`,
 		icon: `assets/maps/particles/tft/item_icons/spatula/set6/striker.tft_set6_stage2`,
 		from: [8, 1],
@@ -913,11 +904,20 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT6_Item_SyndicateEmblemItem`,
 		name: `Syndicate Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Syndicate trait. [Unique - only 1 per champion]`,
 		icon: `assets/maps/particles/tft/item_icons/spatula/set6/syndicate.tft_set6`,
 		from: [],
 		unique: true,
+	},
+	{
+		id: `TFT_Item_ForceOfNature`,
+		name: `Tactician's Crown`,
+		type: `emblem`,
+		description: `The holder's team gains +1 maximum team size.`,
+		icon: `assets/maps/particles/tft/item_icons/standard_new/tacticians_crown`,
+		from: [8, 8],
+		unique: false,
 	},
 	{
 		id: `TFT4_Item_OrnnAnimaVisage`,

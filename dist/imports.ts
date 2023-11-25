@@ -179,7 +179,7 @@ export async function importItems(set: SetNumber) {
 }
 
 export async function importSetData(set: SetNumber) {
-	type SetData = typeof import('./set6.5/hardcoded/set-data.js')
+	type SetData = typeof import('./set1/hardcoded/set-data.js') & typeof import('./set6.5/hardcoded/set-data.js') & typeof import('./set10/hardcoded/set-data.js')
 	if (set === 1) {
 		return await import('./set1/hardcoded/set-data.js') as SetData
 	}
@@ -205,31 +205,31 @@ export async function importSetData(set: SetNumber) {
 		return await import('./set5.5/hardcoded/set-data.js') as SetData
 	}
 	if (set === 6) {
-		return await import('./set6/hardcoded/set-data.js')
+		return await import('./set6/hardcoded/set-data.js') as SetData
 	}
 	if (set === 6.5) {
-		return await import('./set6.5/hardcoded/set-data.js')
+		return await import('./set6.5/hardcoded/set-data.js') as SetData
 	}
 	if (set === 7) {
-		return await import('./set7/hardcoded/set-data.js')
+		return await import('./set7/hardcoded/set-data.js') as SetData
 	}
 	if (set === 7.5) {
-		return await import('./set7/hardcoded/set-data.js')
+		return await import('./set7/hardcoded/set-data.js') as SetData
 	}
 	if (set === 8) {
-		return await import('./set7/hardcoded/set-data.js') //TODO
+		return await import('./set7/hardcoded/set-data.js') as SetData
 	}
 	if (set === 8.5) {
-		return await import('./set7/hardcoded/set-data.js')
+		return await import('./set7/hardcoded/set-data.js') as SetData
 	}
 	if (set === 9) {
-		return await import('./set9/hardcoded/set-data.js')
+		return await import('./set9/hardcoded/set-data.js') as SetData
 	}
 	if (set === 9.5) {
-		return await import('./set9.5/hardcoded/set-data.js')
+		return await import('./set9.5/hardcoded/set-data.js') as SetData
 	}
 	if (set === 10) {
-		return await import('./set10/hardcoded/set-data.js')
+		return await import('./set10/hardcoded/set-data.js') as SetData
 	}
 	throw 'Unsupported set:' + set
 }

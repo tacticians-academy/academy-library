@@ -1,6 +1,6 @@
 import type { ChampionData } from '../index'
 
-export enum ChampionKey { Aatrox = `TFT5_Aatrox`, Akshan = `TFT5_Akshan`, Aphelios = `TFT5_Aphelios`, Ashe = `TFT5_Ashe`, HeimerTurret = `TFT5_HeimerTurret`, Brand = `TFT5_Brand`, IvernMinion = `TFT5_IvernMinion`, Diana = `TFT5_Diana`, Draven = `TFT5_Draven`, Fiddlesticks = `TFT5_Fiddlesticks`, Galio = `TFT5_Galio`, Garen = `TFT5_Garen`, Gragas = `TFT5_Gragas`, Gwen = `TFT5_Gwen`, Hecarim = `TFT5_Hecarim`, Heimerdinger = `TFT5_Heimerdinger`, Irelia = `TFT5_Irelia`, Ivern = `TFT5_Ivern`, Jax = `TFT5_Jax`, Kalista = `TFT5_Kalista`, Karma = `TFT5_Karma`, Kayle = `TFT5_Kayle`, Kennen = `TFT5_Kennen`, Khazix = `TFT5_Khazix`, Kled = `TFT5_Kled`, LeeSin = `TFT5_LeeSin`, Leona = `TFT5_Leona`, Lucian = `TFT5_Lucian`, Lulu = `TFT5_Lulu`, Lux = `TFT5_Lux`, MissFortune = `TFT5_MissFortune`, Nautilus = `TFT5_Nautilus`, Nidalee = `TFT5_Nidalee`, Nocturne = `TFT5_Nocturne`, Nunu = `TFT5_Nunu`, Olaf = `TFT5_Olaf`, Poppy = `TFT5_Poppy`, Pyke = `TFT5_Pyke`, Rakan = `TFT5_Rakan`, Rell = `TFT5_Rell`, Riven = `TFT5_Riven`, Sejuani = `TFT5_Sejuani`, Senna = `TFT5_Senna`, Sett = `TFT5_Sett`, Soraka = `TFT5_Soraka`, Syndra = `TFT5_Syndra`, TrainingDummy = `TFT_TrainingDummy`, Teemo = `TFT5_Teemo`, Monstrosity = `TFT5_Monstrosity`, Thresh = `TFT5_Thresh`, Tristana = `TFT5_Tristana`, Udyr = `TFT5_Udyr`, Varus = `TFT5_Varus`, Vayne = `TFT5_Vayne`, Velkoz = `TFT5_Velkoz`, Viego = `TFT5_Viego`, Vladimir = `TFT5_Vladimir`, VoidSpawn = `TFT_VoidSpawn`, Volibear = `TFT5_Volibear`, Yasuo = `TFT5_Yasuo`, Ziggs = `TFT5_Ziggs`, Zyra = `TFT5_Zyra` }
+export enum ChampionKey { Aatrox = `TFT5_Aatrox`, Akshan = `TFT5_Akshan`, Aphelios = `TFT5_Aphelios`, Ashe = `TFT5_Ashe`, HeimerTurret = `TFT5_HeimerTurret`, Brand = `TFT5_Brand`, IvernMinion = `TFT5_IvernMinion`, Diana = `TFT5_Diana`, DraconicEgg = `TFT5_DraconicEgg`, Draven = `TFT5_Draven`, Fiddlesticks = `TFT5_Fiddlesticks`, Galio = `TFT5_Galio`, Garen = `TFT5_Garen`, Gragas = `TFT5_Gragas`, Gwen = `TFT5_Gwen`, Hecarim = `TFT5_Hecarim`, Heimerdinger = `TFT5_Heimerdinger`, Irelia = `TFT5_Irelia`, Ivern = `TFT5_Ivern`, Jax = `TFT5_Jax`, Kalista = `TFT5_Kalista`, Karma = `TFT5_Karma`, Kayle = `TFT5_Kayle`, Kennen = `TFT5_Kennen`, Khazix = `TFT5_Khazix`, Kled = `TFT5_Kled`, LeeSin = `TFT5_LeeSin`, Leona = `TFT5_Leona`, Lucian = `TFT5_Lucian`, Lulu = `TFT5_Lulu`, Lux = `TFT5_Lux`, MissFortune = `TFT5_MissFortune`, Nautilus = `TFT5_Nautilus`, Nidalee = `TFT5_Nidalee`, Nocturne = `TFT5_Nocturne`, Nunu = `TFT5_Nunu`, Olaf = `TFT5_Olaf`, Poppy = `TFT5_Poppy`, Pyke = `TFT5_Pyke`, Rakan = `TFT5_Rakan`, Rell = `TFT5_Rell`, Riven = `TFT5_Riven`, Sejuani = `TFT5_Sejuani`, Senna = `TFT5_Senna`, Sett = `TFT5_Sett`, Soraka = `TFT5_Soraka`, Syndra = `TFT5_Syndra`, TrainingDummy = `TFT_TrainingDummy`, Teemo = `TFT5_Teemo`, Monstrosity = `TFT5_Monstrosity`, Thresh = `TFT5_Thresh`, EmblemArmoryKey = `TFT5_EmblemArmoryKey`, Tristana = `TFT5_Tristana`, Udyr = `TFT5_Udyr`, Varus = `TFT5_Varus`, Vayne = `TFT5_Vayne`, Velkoz = `TFT5_Velkoz`, Viego = `TFT5_Viego`, Vladimir = `TFT5_Vladimir`, VoidSpawn = `TFT_VoidSpawn`, Volibear = `TFT5_Volibear`, Yasuo = `TFT5_Yasuo`, Ziggs = `TFT5_Ziggs`, Zyra = `TFT5_Zyra` }
 
 export const champions: ChampionData[] = [
 	{
@@ -648,6 +648,46 @@ export const champions: ChampionData[] = [
 				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: undefined,
+			},
+		],
+		missiles: [],
+	},
+	{
+		apiName: `TFT5_DraconicEgg`,
+		name: `Draconic Egg`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT5_DraconicEgg.TFT_Set5.dds`,
+		cost: undefined,
+		starLevel: undefined,
+		teamSize: undefined,
+		isSpawn: false,
+		traits: [],
+		stats: {
+			armor: 10,
+			attackSpeed: 1,
+			critChance: null,
+			critMultiplier: 0,
+			damage: 10,
+			hp: 10,
+			initialMana: 0,
+			magicResist: 10,
+			mana: 100,
+			moveSpeed: 0,
+			range: NaN,
+		},
+		basicAttackMissileSpeed: undefined,
+		critAttackMissileSpeed: undefined,
+		passive: undefined,
+		spells: [
+			{
+				name: `TFT5_DraconicEgg`,
+				castTime: 0.5,
+				missile: undefined,
+				variables: {
+					'RoundsToHatch': [2, 2, 2, 2],
+				},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
 			},
 		],
 		missiles: [],
@@ -4410,6 +4450,46 @@ export const champions: ChampionData[] = [
 						],
 					},
 				},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
+			},
+		],
+		missiles: [],
+	},
+	{
+		apiName: `TFT5_EmblemArmoryKey`,
+		name: `Tome of Traits`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT5_EmblemArmoryKey.dds`,
+		cost: undefined,
+		starLevel: undefined,
+		teamSize: undefined,
+		isSpawn: false,
+		traits: [],
+		stats: {
+			armor: 10,
+			attackSpeed: 1,
+			critChance: null,
+			critMultiplier: 0,
+			damage: 10,
+			hp: 10,
+			initialMana: 0,
+			magicResist: 10,
+			mana: 100,
+			moveSpeed: 0,
+			range: NaN,
+		},
+		basicAttackMissileSpeed: undefined,
+		critAttackMissileSpeed: undefined,
+		passive: undefined,
+		spells: [
+			{
+				name: `TFT5_EmblemArmoryKey`,
+				castTime: 0.5,
+				missile: undefined,
+				variables: {
+					'RoundsToHatch': [2, 2, 2, 2],
+				},
+				calculations: {},
 				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},

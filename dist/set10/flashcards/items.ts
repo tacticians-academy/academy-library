@@ -113,7 +113,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 		id: `TFT_Item_BlueBuff`,
 		name: `Blue Buff`,
 		type: `completed`,
-		description: `Max mana reduced by 10. When the holder gets a takedown, they deal 15% more damage for 8 seconds. [Unique - only 1 per champion]`,
+		description: `Max mana reduced by 10. When the holder gets a takedown, they deal 12% more damage for 8 seconds. [Unique - only 1 per champion]`,
 		icon: `assets/maps/particles/tft/item_icons/standard/blue_buff`,
 		from: [],
 		unique: true,
@@ -311,7 +311,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 		id: `TFT_Item_RapidFireCannon`,
 		name: `Red Buff`,
 		type: `completed`,
-		description: `Deal 8% bonus damage. Attacks and Abilities 1% Burn and 33% Wound enemies for 5 seconds. Burn : Deals a percent of the target's maximum HP as true damage every second Wound : Reduces healing received`,
+		description: `Deal 5% bonus damage. Attacks and Abilities 1% Burn and 33% Wound enemies for 5 seconds. Burn : Deals a percent of the target's maximum HP as true damage every second Wound : Reduces healing received`,
 		icon: `assets/maps/particles/tft/item_icons/standard/redbuff`,
 		from: [],
 		unique: false,
@@ -895,7 +895,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT10_Item_8bitEmblem`,
 		name: `8-bit Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder joins the 8-bit band. [Unique - only 1 per champion]`,
 		icon: `assets/maps/particles/tft/item_icons/traits/spatula/set10/tft_set10_emblem_8-bit`,
 		from: [],
@@ -904,7 +904,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT10_Item_BigShotEmblem`,
 		name: `Big Shot Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Big Shot trait. [Unique - only 1 per champion Elusive - cannot be crafted.]`,
 		icon: `assets/maps/particles/tft/item_icons/traits/spatula/set10/tft_set10_emblem_bigshot`,
 		from: [],
@@ -913,7 +913,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT10_Item_BrawlerEmblem`,
 		name: `Bruiser Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Bruiser trait. [Unique - only 1 per champion Elusive - cannot be crafted.]`,
 		icon: `assets/maps/particles/tft/item_icons/traits/spatula/set10/tft_set10_emblem_brawler`,
 		from: [],
@@ -922,7 +922,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT10_Item_CountryEmblem`,
 		name: `Country Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder joins the Country band. [Unique - only 1 per champion Elusive - cannot be crafted.]`,
 		icon: `assets/maps/particles/tft/item_icons/traits/spatula/set10/tft_set10_emblem_desperado`,
 		from: [],
@@ -931,7 +931,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT10_Item_CrowdDiverEmblem`,
 		name: `Crowd Diver Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Crowd Diver trait. [Unique - only 1 per champion Elusive - cannot be crafted.]`,
 		icon: `assets/maps/particles/tft/item_icons/traits/spatula/set10/tft_set10_emblem_crowddiver`,
 		from: [],
@@ -940,7 +940,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT10_Item_DazzlerEmblem`,
 		name: `Dazzler Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Dazzler trait. [Unique - only 1 per champion Elusive - cannot be crafted.]`,
 		icon: `assets/maps/particles/tft/item_icons/traits/spatula/set10/tft_set10_emblem_dazzler`,
 		from: [],
@@ -949,7 +949,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT10_Item_DiscoEmblem`,
 		name: `Disco Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder joins the Disco band. [Unique - only 1 per champion Elusive - cannot be crafted.]`,
 		icon: `assets/maps/particles/tft/item_icons/traits/spatula/set10/tft_set10_emblem_disconaut`,
 		from: [],
@@ -958,7 +958,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT10_Item_EdgelordEmblem`,
 		name: `Edgelord Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Edgelord trait. [Unique - only 1 per champion Elusive - cannot be crafted.]`,
 		icon: `assets/maps/particles/tft/item_icons/traits/spatula/set10/tft_set10_emblem_edgelord`,
 		from: [],
@@ -967,7 +967,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT10_Item_EmoEmblem`,
 		name: `Emo Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder joins the Emo band. [Unique - only 1 per champion]`,
 		icon: `assets/maps/particles/tft/item_icons/traits/spatula/set10/tft_set10_emblem_bigsad`,
 		from: [],
@@ -976,7 +976,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT10_Item_ExecutionerEmblem`,
 		name: `Executioner Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Executioner trait. [Unique - only 1 per champion Elusive - cannot be crafted.]`,
 		icon: `assets/maps/particles/tft/item_icons/traits/spatula/set10/tft_set10_emblem_executioner`,
 		from: [],
@@ -985,7 +985,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT10_Item_GuardianEmblem`,
 		name: `Guardian Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Guardian trait. [Unique - only 1 per champion Elusive - cannot be crafted.]`,
 		icon: `assets/maps/particles/tft/item_icons/traits/spatula/set10/tft_set10_emblem_guardian`,
 		from: [],
@@ -994,7 +994,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT10_Item_PBJEmblem`,
 		name: `Heartsteel Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder joins the Heartsteel band. [Unique - only 1 per champion]`,
 		icon: `assets/maps/particles/tft/item_icons/traits/spatula/set10/tft_set10_emblem_pbj`,
 		from: [],
@@ -1003,7 +1003,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT10_Item_HyperPopEmblem`,
 		name: `Hyperpop Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder joins the Hyperpop band. [Unique - only 1 per champion Elusive - cannot be crafted.]`,
 		icon: `assets/maps/particles/tft/item_icons/traits/spatula/set10/tft_set10_emblem_glitt3rglitch`,
 		from: [],
@@ -1012,7 +1012,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT10_Item_JazzEmblem`,
 		name: `Jazz Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder joins the Jazz band. [Unique - only 1 per champion]`,
 		icon: `assets/maps/particles/tft/item_icons/traits/spatula/set10/tft_set10_emblem_jazz`,
 		from: [],
@@ -1021,7 +1021,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT10_Item_KDAEmblem`,
 		name: `K/DA Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder joins the K/DA band. [Unique - only 1 per champion]`,
 		icon: `assets/maps/particles/tft/item_icons/traits/spatula/set10/tft_set10_emblem_kda`,
 		from: [],
@@ -1030,7 +1030,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT10_Item_FighterEmblem`,
 		name: `Mosher Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Mosher trait. [Unique - only 1 per champion Elusive - cannot be crafted.]`,
 		icon: `assets/maps/particles/tft/item_icons/traits/spatula/set10/tft_set10_emblem_mosher`,
 		from: [],
@@ -1039,7 +1039,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT10_Item_PentakillEmblem`,
 		name: `Pentakill Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder joins the Pentakill band. [Unique - only 1 per champion]`,
 		icon: `assets/maps/particles/tft/item_icons/traits/spatula/set10/tft_set10_emblem_pentakill`,
 		from: [],
@@ -1048,7 +1048,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT10_Item_PunkEmblem`,
 		name: `Punk Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder joins the Punk band. [Unique - only 1 per champion]`,
 		icon: `assets/maps/particles/tft/item_icons/traits/spatula/set10/tft_set10_emblem_punk`,
 		from: [],
@@ -1057,7 +1057,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT10_Item_RapidfireEmblem`,
 		name: `Rapidfire Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Rapidfire trait. [Unique - only 1 per champion Elusive - cannot be crafted.]`,
 		icon: `assets/maps/particles/tft/item_icons/traits/spatula/set10/tft_set10_emblem_rapidfire`,
 		from: [],
@@ -1066,7 +1066,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT10_Item_WardenEmblem`,
 		name: `Sentinel Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Sentinel trait. [Unique - only 1 per champion Elusive - cannot be crafted.]`,
 		icon: `assets/maps/particles/tft/item_icons/traits/spatula/set10/tft_set10_emblem_warden`,
 		from: [],
@@ -1075,7 +1075,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT10_Item_SpellweaverEmblem`,
 		name: `Spellweaver Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Spellweaver trait. [Unique - only 1 per champion Elusive - cannot be crafted.]`,
 		icon: `assets/maps/particles/tft/item_icons/traits/spatula/set10/tft_set10_emblem_spellweaver`,
 		from: [],
@@ -1084,16 +1084,25 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `TFT10_Item_SuperfanEmblem`,
 		name: `Superfan Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder gains the Superfan trait. [Unique - only 1 per champion Elusive - cannot be crafted.]`,
 		icon: `assets/maps/particles/tft/item_icons/traits/spatula/set10/tft_set10_emblem_superfan`,
 		from: [],
 		unique: true,
 	},
 	{
+		id: `TFT_Item_ForceOfNature`,
+		name: `Tactician's Crown`,
+		type: `emblem`,
+		description: `Your team gains +1 maximum team size.`,
+		icon: `assets/maps/particles/tft/item_icons/standard/tacticians_crown`,
+		from: [],
+		unique: false,
+	},
+	{
 		id: `TFT10_Item_TrueDamageEmblem`,
 		name: `True Damage Emblem`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The holder joins the True Damage band. Bling Bonus: Deal @TFTUnitProperty.:TFT10_TrueDamageEmblemBonus@% bonus true damage [Unique - only 1 per champion]`,
 		icon: `assets/maps/particles/tft/item_icons/traits/spatula/set10/tft_set10_emblem_truedamage`,
 		from: [],

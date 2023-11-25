@@ -658,24 +658,9 @@ export const completedItems: ItemData[] = [
 		name: `Zephyr`,
 		unique: true,
 	},
-	{
-		apiName: `TFT_Item_ZhonyasHourglass`,
-		desc: `On falling below @HPPercent@% HP, become untargetable, invulnerable, but unable to move for @StasisDuration@ seconds.`,
-		effects: {
-			'AP': 20,
-			'Armor': 25,
-			'HPPercent': 30,
-			'StasisDuration': 4,
-		},
-		from: [],
-		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_ZhonyasHourglass.dds`,
-		id: -35,
-		name: `Zhonya's Hourglass`,
-		unique: false,
-	},
 ]
 
-export const spatulaItems: ItemData[] = [
+export const emblemItems: ItemData[] = [
 	{
 		apiName: `TFT6_Item_AcademyEmblemItem`,
 		desc: `The holder gains the Academy trait.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
@@ -940,6 +925,18 @@ export const spatulaItems: ItemData[] = [
 		id: 68,
 		name: `Syndicate Emblem`,
 		unique: true,
+	},
+	{
+		apiName: `TFT_Item_ForceOfNature`,
+		desc: `The holder's team gains +@MaxArmySizeIncrease@ maximum team size.`,
+		effects: {
+			'MaxArmySizeIncrease': 1,
+		},
+		from: [8, 8],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard_New/Tacticians_Crown.dds`,
+		id: 88,
+		name: `Tactician's Crown`,
+		unique: false,
 	},
 ]
 
@@ -1814,6 +1811,21 @@ export const modItems: ItemData[] = []
 
 export const unreleasedItems: ItemData[] = [
 	{
+		apiName: `TFT_Item_SeraphsEmbrace`,
+		desc: `The holder gains %i:scaleMana% @Mana@ Starting Mana (including components). After casting their Ability, the holder gains %i:scaleMana% @ManaRestore@ mana.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
+		effects: {
+			'Mana': 50,
+			'ManaRestore': 20,
+			'{71bc3700}': 200,
+			'{af1d4d88}': 20,
+		},
+		from: [4, 4],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Blue_Buff.dds`,
+		id: 44,
+		name: `Blue Buff`,
+		unique: true,
+	},
+	{
 		apiName: `TFT6_Item_EliteSpotlight`,
 		desc: `TFT6_Item_Description_EliteSpotlight`,
 		effects: {},
@@ -1823,6 +1835,21 @@ export const unreleasedItems: ItemData[] = [
 		name: `TFT6_Item_Name_EliteSpotlight`,
 		unique: true,
 	},
+	{
+		apiName: `TFT_Item_TitanicHydra`,
+		desc: `At the start of combat, the holder taunts enemies within @HexRadius@ hexes. <br><br>When the holder dies, a Voidspawn arises taunting nearby enemies. Voidspawns that arise from summoned units are @SummonedStatReduction@% effective.`,
+		effects: {
+			'AS': 10,
+			'HP': 150,
+			'HexRadius': 4,
+			'SummonedStatReduction': 25,
+		},
+		from: [2, 7],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/ZZRot_Portal.dds`,
+		id: 27,
+		name: `Zz'Rot Portal`,
+		unique: false,
+	},
 ]
 
-export const currentItems: ItemData[] = componentItems.concat(completedItems, radiantItems, spatulaItems, ornnItems)
+export const currentItems: ItemData[] = componentItems.concat(completedItems, radiantItems, emblemItems, ornnItems)

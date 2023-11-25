@@ -5,17 +5,6 @@ export const BASE_UNIT_API_NAMES = ['TFT_TrainingDummy', 'TFT_VoidSpawn']
 
 // Traits/Items
 
-const CONSUMABLE_ITEM_IDS = [
-	200, // Neeko's Help
-]
-
-const ALTERNATE_ITEM_VERSION_IDS = [
-	61, // Blue Buff
-	10003, // B.F. Sword
-	10004, // Deathblade
-	10005, // tft_item_name_SwordOfTheDivine2
-]
-
 export const NORMALIZE_EFFECT_KEYS: Record<string, BonusKey> = {
 	AbilityPower: BonusKey.AbilityPower,
 	SP: BonusKey.AbilityPower,

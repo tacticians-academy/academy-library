@@ -119,15 +119,6 @@ export const itemFlashcards: ItemFlashcard[] = [
 		unique: false,
 	},
 	{
-		id: `88`,
-		name: `Force of Nature`,
-		type: `completed`,
-		description: `Wearer's team gains +1 maximum team size.`,
-		icon: `assets/maps/particles/tft/tft_item_forceofnature`,
-		from: [8, 8],
-		unique: false,
-	},
-	{
 		id: `45`,
 		name: `Frozen Heart`,
 		type: `completed`,
@@ -418,7 +409,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `89`,
 		name: `Berserker's Axe`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The wearer is also a Berserker. [Unique - Only One Per Champion]`,
 		icon: `assets/maps/particles/tft/tft_item_berserkeraxe`,
 		from: [9, 8],
@@ -427,16 +418,25 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `28`,
 		name: `Blade of the Ruined King`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The wearer is also a Blademaster. [Unique - Only One Per Champion]`,
 		icon: `assets/maps/particles/tft/tft_item_bladeoftheruinedking`,
 		from: [2, 8],
 		unique: true,
 	},
 	{
+		id: `88`,
+		name: `Force of Nature`,
+		type: `emblem`,
+		description: `Wearer's team gains +1 maximum team size.`,
+		icon: `assets/maps/particles/tft/tft_item_forceofnature`,
+		from: [8, 8],
+		unique: false,
+	},
+	{
 		id: `78`,
 		name: `Frozen Mallet`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The wearer is also Glacial. [Unique - Only One Per Champion]`,
 		icon: `assets/maps/particles/tft/tft_item_frozenmallet`,
 		from: [8, 7],
@@ -445,7 +445,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `38`,
 		name: `Inferno's Cinder`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The wearer is also an Inferno. [Unique - Only One Per Champion]`,
 		icon: `assets/maps/particles/tft/tft_item_infernocinder`,
 		from: [3, 8],
@@ -454,7 +454,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `48`,
 		name: `Mages Cap`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The wearer is also a Mage. [Unique - Only One Per Champion]`,
 		icon: `assets/maps/particles/tft/tft_item_magescap`,
 		from: [4, 8],
@@ -463,7 +463,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `68`,
 		name: `Talisman of Light`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The wearer is also Light. [Unique - Only One Per Champion]`,
 		icon: `assets/maps/particles/tft/tft_item_talismanoflight`,
 		from: [6, 8],
@@ -472,7 +472,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `58`,
 		name: `Warden's Mail`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The wearer is also a Warden. [Unique - Only One Per Champion]`,
 		icon: `assets/maps/particles/tft/tft_item_wardensmail`,
 		from: [5, 8],
@@ -481,7 +481,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `18`,
 		name: `Youmuu's Ghostblade`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `The wearer is also an Assassin. [Unique - Only One Per Champion]`,
 		icon: `assets/maps/particles/tft/tft_item_youmuusghostblade`,
 		from: [1, 8],

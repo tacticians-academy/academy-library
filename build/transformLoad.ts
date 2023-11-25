@@ -19,6 +19,21 @@ const unreplacedIDs = new Set(Object.keys(SUBSTITUTE_EFFECT_KEYS))
 
 const GLOBAL_UNUSED_AUGMENT_NAME_KEYS = ['no scope', 'eagle eye']
 
+const GLOBAL_UNUSED_ITEM_IDS = [
+	999, // Unusable Slot
+	10003, // B. F. Sword (free)
+	10004, // Deathblade (free)
+	10005, // Repeating Crossbow (free)
+]
+const GLOBAL_UNRELEASED_ITEM_IDS = [
+	149, // Catalyst
+	529, // Spell Thief
+]
+const GLOBAL_UNRELEASED_ITEM_APIKEYS = [
+	'TFT_Item_TitanicHydra',
+	'TFT_Item_SeraphsEmbrace',
+]
+
 const MANUAL_TIER_DESIGNATIONS: Record<string, AugmentTier> = {
 }
 
@@ -56,7 +71,7 @@ const allTraitKeys = traits.map(t => t.apiName)
 
 function validateTraits(item: ItemData) {
 	const traits = (item.associatedTraits?.length ?? 0) ? item.associatedTraits : item.incompatibleTraits
-	if (traits && traits.length) {
+	if (traits) {
 		for (const trait of traits) {
 			if (!allTraitKeys.includes(trait)) {
 				return false
@@ -80,22 +95,27 @@ for (const apiName of BASE_UNIT_API_NAMES) {
 
 // Items
 
-const { LOCKED_STAR_LEVEL, SPATULA_ITEM_IDS, RETIRED_ITEM_NAMES, RETIRED_AUGMENT_NAME_KEYS, UNUSED_AUGMENT_NAME_KEYS, TRAIT_DATA_SUBSTITUTIONS, UNPLAYABLE_CHAMPION_APINAMES } = await importSetData(currentSetNumber)
+const { LOCKED_STAR_LEVEL, EMBLEM_ITEM_IDS, RETIRED_ITEM_NAMES, RETIRED_AUGMENT_NAME_KEYS, UNUSED_AUGMENT_NAME_KEYS, TRAIT_DATA_SUBSTITUTIONS, UNPLAYABLE_CHAMPION_APINAMES } = await importSetData(currentSetNumber)
 
-const currentItemsByType: Record<ItemTypeKey, ItemData[]> = {component: [], completed: [], spatula: [], shadow: [], radiant: [], ornn: [], support: [], shimmerscale: [], consumable: [], hexbuff: [], mod: [], unreleased: []}
+const currentItemsByType: Record<ItemTypeKey, ItemData[]> = {component: [], completed: [], emblem: [], shadow: [], radiant: [], ornn: [], support: [], shimmerscale: [], consumable: [], hexbuff: [], mod: [], unreleased: []}
 
 const foundItemIDs: number[] = []
 itemsData.reverse().forEach(item => {
-	if (!item.name || item.desc == null || RETIRED_ITEM_NAMES?.includes(item.name) || (item.id != null && foundItemIDs.includes(item.id)) || item.desc.toLowerCase().startsWith('tft_item_')) {
+	if (!item.name || item.desc == null || RETIRED_ITEM_NAMES?.includes(item.name)) {
+		return
+	}
+	if (item.id != null && (item.id < 0 || foundItemIDs.includes(item.id) || GLOBAL_UNUSED_ITEM_IDS.includes(item.id))) {
 		return
 	}
 	if (!validateTraits(item)) {
 		return
 	}
-	if (item.desc) {
-		for (const normalize in NORMALIZE_EFFECT_KEYS) {
-			item.desc = item.desc.replaceAll(normalize, NORMALIZE_EFFECT_KEYS[normalize])
-		}
+	const descNormalized = item.desc.toLowerCase()
+	if (descNormalized.startsWith('tft_item_') || descNormalized.includes('item temporarily disabled')) {
+		return
+	}
+	for (const normalize in NORMALIZE_EFFECT_KEYS) {
+		item.desc = item.desc.replaceAll(normalize, NORMALIZE_EFFECT_KEYS[normalize])
 	}
 	normalizeEffects(item.effects, unreplacedIDs)
 	const name = item.name.toLowerCase()
@@ -112,7 +132,9 @@ itemsData.reverse().forEach(item => {
 		}
 	}
 	let typeKey: ItemTypeKey | undefined
-	if (iconNormalized.includes('tft_item_hex_')) {
+	if (item.id != null && GLOBAL_UNRELEASED_ITEM_IDS.includes(item.id)) {
+		typeKey = 'unreleased'
+	} else if (iconNormalized.includes('tft_item_hex_')) {
 		typeKey = 'hexbuff'
 	} else if (iconNormalized.includes('/radiant/')) {
 		typeKey = 'radiant'
@@ -124,15 +146,11 @@ itemsData.reverse().forEach(item => {
 		typeKey = 'shimmerscale'
 	} else if (name.includes('item_name')) {
 		typeKey = 'unreleased'
-	} else if (item.apiName != null) { // Set >= 5
-		if (item.apiName === 'TFT_Item_ForceOfNature' || item.apiName === 'TFT_Item_TitanicHydra' || item.apiName === 'TFT_Item_SeraphsEmbrace') {
-			return
-		}
-		if (currentSetNumber > 1 && (item.apiName === 'TFT_Item_KnightsVow' || item.apiName === 'TFT_Item_YoumuusGhostblade')) { // Old emblems
-			return
-		}
+	} else if (item.id === 88 || item.apiName === 'TFT_Item_ForceOfNature') {
+		typeKey = 'emblem'
 
-		if (item.name.startsWith(`Choncc's `)) {
+	} else if (item.apiName != null) { // Set >= 5
+		if (GLOBAL_UNRELEASED_ITEM_APIKEYS.includes(item.apiName) || item.name.startsWith(`Choncc's `)) {
 			typeKey = 'unreleased'
 
 		// Mods
@@ -159,11 +177,11 @@ itemsData.reverse().forEach(item => {
 
 		} else if (COMPONENT_ITEM_API_NAMES.includes(item.apiName) == true) {
 			typeKey = 'component'
-		} else if (item.apiName.endsWith('Emblem') || item.apiName.endsWith('EmblemItem') || item.apiName.endsWith('SpatulaItem')) {
+		} else if (item.apiName.endsWith('Emblem') || item.apiName.endsWith('EmblemItem') || item.apiName.endsWith('SpatulaItem') || (item.from && item.from.includes(8))) {
 			if (!item.apiName.startsWith(`TFT${parentSetNumber}_`)) {
 				return
 			}
-			typeKey = 'spatula'
+			typeKey = 'emblem'
 		} else if (iconNormalized.includes('/shadow/') || iconNormalized.includes('_shadow.')) {
 			typeKey = 'shadow'
 		} else if (item.apiName.includes('_Consumable_')) {
@@ -174,19 +192,21 @@ itemsData.reverse().forEach(item => {
 			}
 			typeKey = 'completed'
 		}
+
 	} else if (item.id != null) { // Set < 5
+		const hasHardcodedEmblems = EMBLEM_ITEM_IDS != null && EMBLEM_ITEM_IDS.length > 0
 		if (!item.from) {
 			// console.error('Invalid item', item)
 			return
 		}
-		if (iconNormalized.includes('consumable')) {
+		if (iconNormalized.includes('consumable') || descNormalized.includes('consumable ')) {
 			typeKey = 'consumable'
 		} else if (item.from.length) {
-			if (item.id !== 88 && item.from.includes(8)) {
-				if (SPATULA_ITEM_IDS != null && item.id != null && !SPATULA_ITEM_IDS.includes(item.id)) {
+			if (item.from.includes(8)) {
+				if (hasHardcodedEmblems && EMBLEM_ITEM_IDS.includes(item.id) === false) {
 					return
 				}
-				typeKey = 'spatula'
+				typeKey = 'emblem'
 			} else if (item.from.every(itemID => COMPONENT_ITEM_IDS.includes(itemID))) {
 				typeKey = 'completed'
 			}
@@ -194,18 +214,20 @@ itemsData.reverse().forEach(item => {
 			if (iconNormalized.includes('/hexcore/')) {
 				return false
 			}
-			if (SPATULA_ITEM_IDS?.includes(item.id)) {
-				typeKey = 'spatula'
+			if (EMBLEM_ITEM_IDS?.includes(item.id) === true) {
+				typeKey = 'emblem'
 			} else if (COMPONENT_ITEM_IDS.includes(item.id)) {
 				typeKey = 'component'
 			} else if (!typeKey) {
-				if (SPATULA_ITEM_IDS == null) {
-					console.log('Unknown emblem item', item)
+				if (hasHardcodedEmblems) {
+					return false
 				}
-				return false
+				console.log('Unknown emblem item', item)
+				typeKey = descNormalized.includes('wearer is also ') ? 'emblem' : 'completed'
 			}
 		}
 	}
+	if (item.id === 89) console.log('\n\n\nIIIIIIII\n\n\n', typeKey)
 	if (typeKey) {
 		if (item.id != null) {
 			foundItemIDs.push(item.id)
@@ -256,9 +278,9 @@ for (const key in currentItemsByType) {
 	const itemKey = key as ItemTypeKey
 	currentItemsByType[itemKey].sort((a, b) => a.name.localeCompare(b.name))
 	const itemsData = currentItemsByType[itemKey]
-	outputItemSections.push(`export const ${itemKey}Items: ItemData[] = ` + (itemsData.length ? formatJS(itemsData) : '[]'))
+	outputItemSections.push(`export const ${itemKey}Items: ItemData[] = ${formatJS(itemsData)}`)
 }
-const currentItemNames = ['completedItems', 'spatulaItems']
+const currentItemNames = ['completedItems', 'emblemItems']
 if (currentSetNumber === 4.5 || currentSetNumber >= 6) {
 	currentItemNames.splice(2, 0, 'ornnItems')
 }
@@ -396,7 +418,7 @@ for (const item of itemsData.sort((a, b) => a.name.localeCompare(b.name))) {
 		}
 		addedAugments.push(keyID)
 
-		const isUnused = GLOBAL_UNUSED_AUGMENT_NAME_KEYS.includes(nameNormalized) || UNUSED_AUGMENT_NAME_KEYS.includes(nameNormalized) || iconNormalized.includes('/missing-t')
+		const isUnused = GLOBAL_UNUSED_AUGMENT_NAME_KEYS.includes(nameNormalized) || UNUSED_AUGMENT_NAME_KEYS?.includes(nameNormalized) || iconNormalized.includes('/missing-t')
 		if (data.desc == null) {
 			data.desc = ''
 		}
@@ -481,12 +503,10 @@ function getSpell(name: string, json: ChampionJSON): ChampionJSONSpell | undefin
 	return spellContainer.mSpell
 }
 
-const unplayableAPINames = ['TFT5_EmblemArmoryKey', 'TFT5_DraconicEgg', 'TFT6_MercenaryChest', 'TFT6_TheGoldenEgg', 'TFT6_DragonEgg']
-
 const playableChampions = champions
 	.filter(champion => {
 		champion.apiName = getAPIName(champion)
-		if (champion.apiName == null || unplayableAPINames.includes(champion.apiName)) {
+		if (champion.apiName == null || UNPLAYABLE_CHAMPION_APINAMES?.includes(champion.apiName)) {
 			return false
 		}
 		if (!champion.icon) {

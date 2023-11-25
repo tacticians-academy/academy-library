@@ -32,9 +32,9 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `All For One`,
 		groupID: `allForOne`,
-		desc: `When an ally dies, they grant the Imperial Tyrant @MaxHP@% of their maximum HP.`,
+		desc: `When an ally dies, they grant the Imperial Tyrant @MaxHealth@% of their maximum Health.`,
 		effects: {
-			'MaxHP': 33,
+			'MaxHealth': 33,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/AllForOne2.TFT_Set6.dds`,
 	},
@@ -1571,7 +1571,7 @@ export const choiceAugments: AugmentData[] = [
 		groupID: `tFT6_Augment_Overclock_Name`,
 		desc: `TFT6_Augment_Overclock_Description`,
 		effects: {
-			'AS': 200,
+			'AttackSpeed': 200,
 			'Duration': 5,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/TFT6_Augment_ClockworkOverclock.TFT_Set6.dds`,
@@ -1582,7 +1582,7 @@ export const choiceAugments: AugmentData[] = [
 		groupID: `tFT6_Augment_Overclock_Name`,
 		desc: `TFT6_Augment_Overclock_Description`,
 		effects: {
-			'AS': 400,
+			'AttackSpeed': 400,
 			'Duration': 10,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/TFT6_Augment_ClockworkOverclock.TFT_Set6.dds`,
@@ -1593,7 +1593,7 @@ export const choiceAugments: AugmentData[] = [
 		groupID: `tFT6_Augment_Overclock_Name`,
 		desc: `TFT6_Augment_Overclock_Description`,
 		effects: {
-			'AS': 400,
+			'AttackSpeed': 400,
 			'Duration': 5,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/TFT6_Augment_ClockworkOverclock.TFT_Set6.dds`,

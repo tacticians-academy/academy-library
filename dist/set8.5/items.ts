@@ -779,7 +779,7 @@ export const completedItems: ItemData[] = [
 	},
 ]
 
-export const spatulaItems: ItemData[] = [
+export const emblemItems: ItemData[] = [
 	{
 		apiName: `TFT8_Item_ADMINEmblemItem`,
 		associatedTraits: [],
@@ -853,21 +853,6 @@ export const spatulaItems: ItemData[] = [
 		id: null,
 		incompatibleTraits: [`Set8_Brawler`],
 		name: `Brawler Emblem`,
-		unique: true,
-	},
-	{
-		apiName: `TFT8_Item_CivilianEmblemItem`,
-		associatedTraits: [],
-		composition: [],
-		desc: `The holder gains the Civilian Trait.<br><br><tftitemrules>[Unique - only 1 per champion<br>Elusive - cannot be crafted.]</tftitemrules>`,
-		effects: {
-			'HP': 150,
-		},
-		from: null,
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set8/Civilian.TFT_Set8.tex`,
-		id: null,
-		incompatibleTraits: [`Set8_Civilian`],
-		name: `Civilian Emblem`,
 		unique: true,
 	},
 	{
@@ -1036,21 +1021,6 @@ export const spatulaItems: ItemData[] = [
 		unique: true,
 	},
 	{
-		apiName: `TFT8_Item_ReconEmblemItem`,
-		associatedTraits: [],
-		composition: [],
-		desc: `The holder gains the Recon Trait.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
-		effects: {
-			'HP': 150,
-		},
-		from: null,
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Traits/Spatula/Set8/Recon.TFT_Set8.tex`,
-		id: null,
-		incompatibleTraits: [`Set8_Recon`],
-		name: `Recon Emblem`,
-		unique: true,
-	},
-	{
 		apiName: `TFT8_Item_RenegadeEmblemItem`,
 		associatedTraits: [],
 		composition: [`TFT_Item_SparringGloves`, `TFT_Item_Spatula`],
@@ -1124,6 +1094,21 @@ export const spatulaItems: ItemData[] = [
 		incompatibleTraits: [`Set8_Deadeye`],
 		name: `Sureshot Emblem`,
 		unique: true,
+	},
+	{
+		apiName: `TFT_Item_ForceOfNature`,
+		associatedTraits: [],
+		composition: [`TFT_Item_Spatula`, `TFT_Item_Spatula`],
+		desc: `Your team gains +@MaxArmySizeIncrease@ maximum team size.`,
+		effects: {
+			'MaxArmySizeIncrease': 1,
+		},
+		from: null,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Tacticians_Crown.tex`,
+		id: null,
+		incompatibleTraits: [],
+		name: `Tactician's Crown`,
+		unique: false,
 	},
 	{
 		apiName: `TFT8_Item_UndergroundTheEmblemItem`,
@@ -2572,6 +2557,25 @@ export const modItems: ItemData[] = [
 
 export const unreleasedItems: ItemData[] = [
 	{
+		apiName: `TFT_Item_SeraphsEmbrace`,
+		associatedTraits: [],
+		composition: [`TFT_Item_TearOfTheGoddess`, `TFT_Item_TearOfTheGoddess`],
+		desc: `Abilities cost %i:scaleMana% @ManaReduction@ less Mana to cast. <br><br>If the holder gets at least 1 takedown within @TakedownTimer@ seconds of casting, gain %i:scaleMana% @ManaOnTakedown@ Mana.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules><br>`,
+		effects: {
+			'AP': 10,
+			'Mana': 40,
+			'ManaOnTakedown': 10,
+			'ManaReduction': 10,
+			'TakedownTimer': 3,
+		},
+		from: null,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Blue_Buff.tex`,
+		id: null,
+		incompatibleTraits: [],
+		name: `Blue Buff`,
+		unique: true,
+	},
+	{
 		apiName: `TFT6_Item_EliteSpotlight`,
 		associatedTraits: [],
 		composition: [],
@@ -2584,6 +2588,23 @@ export const unreleasedItems: ItemData[] = [
 		name: `TFT6_Item_Name_EliteSpotlight`,
 		unique: true,
 	},
+	{
+		apiName: `TFT_Item_TitanicHydra`,
+		associatedTraits: [],
+		composition: [`TFT_Item_RecurveBow`, `TFT_Item_GiantsBelt`],
+		desc: `Combat start: <TFTKeyword>Taunt</TFTKeyword>.<br>On death, a Voidspawn arises, <TFTKeyword>Taunting</TFTKeyword> nearby enemies. The Voidspawn has massively reduced effectiveness when created by a summoned unit.<br><br><tftitemrules><tftbold>Taunt</tftbold>: enemies that are able and in range must attack the taunter</tftitemrules>`,
+		effects: {
+			'AS': 10,
+			'HP': 150,
+			'SummonedStatReduction': 25,
+		},
+		from: null,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/ZZRot_Portal.tex`,
+		id: null,
+		incompatibleTraits: [],
+		name: `Zz'Rot Portal`,
+		unique: false,
+	},
 ]
 
-export const currentItems: ItemData[] = componentItems.concat(completedItems, radiantItems, shimmerscaleItems, spatulaItems, ornnItems)
+export const currentItems: ItemData[] = componentItems.concat(completedItems, radiantItems, shimmerscaleItems, emblemItems, ornnItems)

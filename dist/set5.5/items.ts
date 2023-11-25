@@ -143,30 +143,6 @@ export const completedItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		apiName: `TFT2_Item_BladeOfTheRuinedKing`,
-		desc: `The wearer is also a Blademaster.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>`,
-		effects: {
-			'AS': 15,
-		},
-		from: [2, 8],
-		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_BladeOfTheRuinedKing.dds`,
-		id: 28,
-		name: `Blade of the Ruined King`,
-		unique: true,
-	},
-	{
-		apiName: `TFT_Item_BladeOfTheRuinedKing`,
-		desc: `The wearer is also a Blademaster.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>`,
-		effects: {
-			'AS': 30,
-		},
-		from: [],
-		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_BladeOfTheRuinedKing.dds`,
-		id: -28,
-		name: `Blade of the Ruined King`,
-		unique: true,
-	},
-	{
 		apiName: `TFT_Item_Bloodthirster`,
 		desc: `Physical damage heals the holder for @Lifesteal@% of the damage dealt.<br><br>Upon falling below @HPThreshold@% HP, the holder gains a @ShieldHPPercent@% max HP shield that lasts up to @ShieldDuration@ seconds.`,
 		effects: {
@@ -202,19 +178,6 @@ export const completedItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		apiName: `TFT_Item_Catalyst`,
-		desc: `Whenever any unit dies, gain X Mana.`,
-		effects: {
-			'Mana': 20,
-			'DodgeChance': 20,
-		},
-		from: [],
-		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_GiantSlayer.dds`,
-		id: 149,
-		name: `Catalyst`,
-		unique: false,
-	},
-	{
 		apiName: `TFT_Item_Chalice`,
 		desc: `When combat begins, the holder and all allies within @HexRange@ hex in the same row gain %i:scaleAP% @BonusAP@ Ability Power for the rest of combat.`,
 		effects: {
@@ -230,32 +193,6 @@ export const completedItems: ItemData[] = [
 		id: 46,
 		name: `Chalice of Power`,
 		unique: false,
-	},
-	{
-		apiName: `TFT_Item_CursedBlade`,
-		desc: `Basic Attacks have a @ChanceOnHitToShrink@% chance on-hit to decrease the target's star level by 1 for the rest of combat.`,
-		effects: {
-			'AS': 15,
-			'MR': 25,
-			'ChanceOnHitToShrink': 20,
-		},
-		from: [-26, -26],
-		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_CursedBlade.dds`,
-		id: -26,
-		name: `Cursed Blade`,
-		unique: false,
-	},
-	{
-		apiName: `TFT_Item_Darkin`,
-		desc: `Extra %i:scaleMana% +@Mana@<br>Wearer is also a Demon<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>`,
-		effects: {
-			'Mana': 40,
-		},
-		from: [],
-		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_Darkin.dds`,
-		id: -48,
-		name: `Darkin`,
-		unique: true,
 	},
 	{
 		apiName: `TFT_Item_Deathblade`,
@@ -300,31 +237,6 @@ export const completedItems: ItemData[] = [
 		id: 45,
 		name: `Frozen Heart`,
 		unique: true,
-	},
-	{
-		apiName: `TFT_Item_FrozenMallet`,
-		desc: `The wearer is also Glacial.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>`,
-		effects: {
-			'HP': 400,
-		},
-		from: [],
-		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_FrozenMallet.dds`,
-		id: -78,
-		name: `Frozen Mallet`,
-		unique: true,
-	},
-	{
-		apiName: `TFT_Item_Thornmail`,
-		desc: `Reflects @DamageReflect@% of the mitigated damage from enemy Basic Attacks as magic damage.`,
-		effects: {
-			'Armor': 50,
-			'CritDamageBlock': 100,
-		},
-		from: [],
-		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_Thornmail.dds`,
-		id: -55,
-		name: `game_item_displayname_3075`,
-		unique: false,
 	},
 	{
 		apiName: `TFT_Item_GargoyleStoneplate`,
@@ -407,16 +319,6 @@ export const completedItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		apiName: `TFT_Item_HextechChestguard`,
-		desc: `Wearer is also a Hextech`,
-		effects: {},
-		from: [-1, -1],
-		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_HextechChestguard.dds`,
-		id: -1,
-		name: `Hextech Chestguard`,
-		unique: false,
-	},
-	{
 		apiName: `TFT_Item_HextechGunblade`,
 		desc: `The holder's magic and true damage from Abilities heal them for @OmniVamp@% of the damage dealt. Excess healing fuels a shield that protects the holder against up to @ShieldMax@ damage.`,
 		effects: {
@@ -429,35 +331,6 @@ export const completedItems: ItemData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Hextech_Gunblade.dds`,
 		id: 13,
 		name: `Hextech Gunblade`,
-		unique: false,
-	},
-	{
-		apiName: `TFT_Item_Hush`,
-		desc: `Basic Attacks have a @ChanceOnHitToSilence@% chance on-hit to silence the target, preventing mana gain for @SilenceDuration@ seconds.`,
-		effects: {
-			'MR': 25,
-			'Mana': 20,
-			'ChanceOnHitToSilence': 20,
-			'SilenceDuration': 4,
-		},
-		from: [],
-		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_Hush.dds`,
-		id: -46,
-		name: `Hush`,
-		unique: false,
-	},
-	{
-		apiName: `TFT_Item_IcebornGauntlet`,
-		desc: `After casting a spell, the wearer's next Basic Attack freezes the target for @FreezeDuration@ seconds.`,
-		effects: {
-			'Armor': 25,
-			'{aaa03dde}': 2.5,
-			'DodgeChance': 20,
-		},
-		from: [],
-		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_IcebornGauntlet.dds`,
-		id: -59,
-		name: `Iceborn Gauntlet`,
 		unique: false,
 	},
 	{
@@ -541,19 +414,6 @@ export const completedItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		apiName: `TFT_Item_IsYordle`,
-		desc: `Wearer is also a Yordle<br>Extra +10% Critical Strike Chance, +10% Dodge Chance<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>`,
-		effects: {
-			'CritChance': 20,
-			'DodgeChance': 20,
-		},
-		from: [],
-		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_Mittens.dds`,
-		id: -89,
-		name: `Mittens`,
-		unique: true,
-	},
-	{
 		apiName: `TFT_Item_Morellonomicon`,
 		desc: `When the holder deals magic or true damage with their Ability, they burn the target, dealing @BurnPercent@% of the target's maximum HP as true damage over @BurnDuration@ seconds, and reducing healing by @GrievousWoundsPercent@% for the duration of the burn.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>`,
 		effects: {
@@ -569,19 +429,6 @@ export const completedItems: ItemData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Morellonomicon.dds`,
 		id: 37,
 		name: `Morellonomicon`,
-		unique: true,
-	},
-	{
-		apiName: `TFT_Item_PhantomDancer`,
-		desc: `Critical hits against the wearer deal normal damage instead.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>`,
-		effects: {
-			'AS': 15,
-			'Armor': 25,
-		},
-		from: [],
-		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_PhantomDancer.dds`,
-		id: -25,
-		name: `Phantom Dancer`,
 		unique: true,
 	},
 	{
@@ -644,34 +491,6 @@ export const completedItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		apiName: `TFT_Item_Vengeance`,
-		desc: `When the wearer dies, Repeating Crossbow is re-equipped to a new ally. Each time Repeating Crossbow is re-equipped, it grants an additional +@ASPerStack@% Attack Speed and +@CritChancePerStack@% Critical Strike Chance for the remainder of combat.<br><br>No stacking limit.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>`,
-		effects: {
-			'AS': 15,
-			'ASPerStack': 30,
-			'CritChance': 20,
-			'{cb57edb0}': 30,
-		},
-		from: [],
-		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_RepeatingCrossbow.dds`,
-		id: -29,
-		name: `Repeating Crossbow`,
-		unique: true,
-	},
-	{
-		apiName: `TFT_Item_SwordOfTheDivine`,
-		desc: `When the wearer dies, Repeating Crossbow is re-equipped to a new ally. Each time Repeating Crossbow is re-equipped, it grants an additional +@ASPerStack@% Attack Speed and +@CritChancePerStack@% Critical Strike Chance for the remainder of combat.<br><br>No stacking limit.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>`,
-		effects: {
-			'{48ea2af8}': 7,
-			'{98ac43ce}': 50,
-		},
-		from: [],
-		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_SwordOfTheDivine.dds`,
-		id: -100,
-		name: `Repeating Crossbow`,
-		unique: true,
-	},
-	{
 		apiName: `TFT_Item_RunaansHurricane`,
 		desc: `The holder's attacks fire a bolt at another nearby enemy, dealing @MultiplierForDamage@% of the holder's Attack Damage and applying on-hit effects. These bolts can critically strike.`,
 		effects: {
@@ -713,18 +532,6 @@ export const completedItems: ItemData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Spear_of_Shojin.dds`,
 		id: 14,
 		name: `Spear of Shojin`,
-		unique: false,
-	},
-	{
-		apiName: `TFT_Item_SpellThiefsEdge`,
-		desc: `@ChanceToSpellSteal@ chance to steal the enemy's spell and cast it`,
-		effects: {
-			'{0cc88d45}': 10,
-		},
-		from: [],
-		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_SpellThiefsEdge.dds`,
-		id: 529,
-		name: `Spell Thief`,
 		unique: false,
 	},
 	{
@@ -809,30 +616,6 @@ export const completedItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		apiName: `TFT2_Item_YoumuusGhostblade`,
-		desc: `The wearer is also an Assassin.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>`,
-		effects: {
-			'AD': 15,
-		},
-		from: [1, 8],
-		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_YoumuusGhostblade.dds`,
-		id: 18,
-		name: `Youmuu's Ghostblade`,
-		unique: true,
-	},
-	{
-		apiName: `TFT_Item_Yuumi`,
-		desc: `Extra %i:scaleAP% +@AP@<br>Wearer is also a Sorcerer<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>`,
-		effects: {
-			'AP': 40,
-		},
-		from: [],
-		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_Yuumi.dds`,
-		id: -38,
-		name: `Yuumi`,
-		unique: true,
-	},
-	{
 		apiName: `TFT_Item_ZekesHerald`,
 		desc: `When combat begins, the holder and all allies within @HexRange@ hexes in the same row gain %i:scaleAS% @AS@% Attack Speed for the rest of combat.`,
 		effects: {
@@ -861,24 +644,9 @@ export const completedItems: ItemData[] = [
 		name: `Zephyr`,
 		unique: true,
 	},
-	{
-		apiName: `TFT_Item_ZhonyasHourglass`,
-		desc: `On falling below @HPPercent@% HP, become untargetable, invulnerable, but unable to move for @StasisDuration@ seconds.`,
-		effects: {
-			'AP': 20,
-			'Armor': 25,
-			'HPPercent': 30,
-			'StasisDuration': 4,
-		},
-		from: [],
-		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_ZhonyasHourglass.dds`,
-		id: -35,
-		name: `Zhonya's Hourglass`,
-		unique: false,
-	},
 ]
 
-export const spatulaItems: ItemData[] = [
+export const emblemItems: ItemData[] = [
 	{
 		apiName: `TFT5_Item_AbominationSpatulaItem`,
 		desc: `The holder gains the Abomination trait.<br><br><tftitemrules>[Unique - only one per champion.<br>Elusive - cannot be crafted.]</tftitemrules>`,
@@ -989,6 +757,18 @@ export const spatulaItems: ItemData[] = [
 		unique: true,
 	},
 	{
+		apiName: `TFT_Item_ForceOfNature`,
+		desc: `The holder's team gains +@MaxArmySizeIncrease@ maximum team size.`,
+		effects: {
+			'MaxArmySizeIncrease': 1,
+		},
+		from: [8, 8],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Force_of_Nature.dds`,
+		id: 88,
+		name: `Force of Nature`,
+		unique: false,
+	},
+	{
 		apiName: `TFT5_Item_ForgottenSpatulaItem`,
 		desc: `The holder gains the Forgotten trait.<br><br><tftitemrules>[Unique - only one per champion.<br>Elusive - cannot be crafted.]</tftitemrules>`,
 		effects: {
@@ -1046,6 +826,18 @@ export const spatulaItems: ItemData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Knight.dds`,
 		id: 1196,
 		name: `Knight Emblem`,
+		unique: true,
+	},
+	{
+		apiName: `TFT5_Item_LegionnaireSpatulaItem`,
+		desc: `The holder gains the Legionnaire trait.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>`,
+		effects: {
+			'HP': 150,
+		},
+		from: [],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Vanquisher.dds`,
+		id: 28,
+		name: `Legionnaire Emblem`,
 		unique: true,
 	},
 	{
@@ -1130,6 +922,18 @@ export const spatulaItems: ItemData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Sentinel.dds`,
 		id: 1194,
 		name: `Sentinel Emblem`,
+		unique: true,
+	},
+	{
+		apiName: `TFT5_Item_SkirmisherSpatulaItem`,
+		desc: `The holder gains the Skirmisher trait.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>`,
+		effects: {
+			'AD': 10,
+		},
+		from: [8, 1],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Spatula/Skirmisher.dds`,
+		id: 18,
+		name: `Skirmisher Emblem`,
 		unique: true,
 	},
 	{
@@ -2723,6 +2527,61 @@ export const hexbuffItems: ItemData[] = [
 
 export const modItems: ItemData[] = []
 
-export const unreleasedItems: ItemData[] = []
+export const unreleasedItems: ItemData[] = [
+	{
+		apiName: `TFT_Item_SeraphsEmbrace`,
+		desc: `After casting their Ability, the holder gains %i:scaleMana% @ManaRestore@ mana.<br><br><tftitemrules>[Unique - only one per champion]</tftitemrules>`,
+		effects: {
+			'Mana': 30,
+			'ManaRestore': 20,
+			'{71bc3700}': 200,
+		},
+		from: [4, 4],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Blue_Buff.dds`,
+		id: 44,
+		name: `Blue Buff`,
+		unique: true,
+	},
+	{
+		apiName: `TFT_Item_Catalyst`,
+		desc: `Whenever any unit dies, gain X Mana.`,
+		effects: {
+			'Mana': 20,
+			'DodgeChance': 20,
+		},
+		from: [],
+		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_GiantSlayer.dds`,
+		id: 149,
+		name: `Catalyst`,
+		unique: false,
+	},
+	{
+		apiName: `TFT_Item_SpellThiefsEdge`,
+		desc: `@ChanceToSpellSteal@ chance to steal the enemy's spell and cast it`,
+		effects: {
+			'{0cc88d45}': 10,
+		},
+		from: [],
+		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_SpellThiefsEdge.dds`,
+		id: 529,
+		name: `Spell Thief`,
+		unique: false,
+	},
+	{
+		apiName: `TFT_Item_TitanicHydra`,
+		desc: `At the start of combat, the holder taunts enemies within @HexRadius@ hexes. <br><br>When the holder dies, a Voidspawn arises taunting nearby enemies. Voidspawns that arise from summoned units are @SummonedStatReduction@% effective.`,
+		effects: {
+			'AS': 10,
+			'HP': 150,
+			'HexRadius': 4,
+			'SummonedStatReduction': 25,
+		},
+		from: [2, 7],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/ZZRot_Portal.dds`,
+		id: 27,
+		name: `Zz'Rot Portal`,
+		unique: false,
+	},
+]
 
-export const currentItems: ItemData[] = componentItems.concat(completedItems, radiantItems, spatulaItems)
+export const currentItems: ItemData[] = componentItems.concat(completedItems, radiantItems, emblemItems)

@@ -1,3 +1,5 @@
+export const UNPLAYABLE_CHAMPION_APINAMES = []
+
 export const LOCKED_STAR_LEVEL: Record<string, number> = {
 	TFT6_MalzaharVoidling: 1,
 	TFT6_Tibbers: 2,
@@ -14,9 +16,7 @@ export const RETIRED_ITEM_NAMES = [
 	`Vanguard's Cuirass`,
 ]
 
-export const RETIRED_SPATULA_ITEM_IDS = []
-
-export const SPATULA_ITEM_IDS = [
+export const EMBLEM_ITEM_IDS = [
 	18, // Imperial
 	28, // Challenger
 	38, // Arcanist

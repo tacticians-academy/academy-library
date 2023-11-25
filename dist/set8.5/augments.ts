@@ -1150,19 +1150,6 @@ export const activeAugments: AugmentData[] = [
 	},
 	{
 		tier: 3,
-		name: `Delivery Tips`,
-		groupID: `deliveryTips`,
-		desc: `Gain a Sivir. Every @CastCycle@ Ability casts, your strongest Sivir drops @BaseGold@ gold with a @GoldChance@% chance to drop @AdditionalGold@ extra gold.`,
-		effects: {
-			'AdditionalGold': 1,
-			'BaseGold': 1,
-			'CastCycle': 2,
-			'GoldChance': 5,
-		},
-		icon: `ASSETS/Characters/TFT8_Sivir/HUD/TFT8_Sivir.TFT_Set8.tex`,
-	},
-	{
-		tier: 3,
 		name: `Destructive Resonance`,
 		groupID: `destructiveResonance`,
 		desc: `Gain an Ekko. Your strongest Ekko's Ability hits all enemies within @Range@ hexes and deals @DamageAmp*100@% increased damage, but no longer slows enemies' Attack Speed.`,
@@ -1426,17 +1413,6 @@ export const activeAugments: AugmentData[] = [
 			'StackingAP': 5,
 		},
 		icon: `ASSETS/Characters/TFT8_Vex/HUD/TFT8_Vex_Square.TFT_Set8_Stage2.tex`,
-	},
-	{
-		tier: 3,
-		name: `Endless Pizza`,
-		groupID: `endlessPizza`,
-		desc: `Gain a Sivir. When you field her, your team heals @HealPercent*100@% of their missing HP and sheds all negative effects every @Frequency@ seconds.`,
-		effects: {
-			'Frequency': 8,
-			'HealPercent': 0.11999999731779099,
-		},
-		icon: `ASSETS/Characters/TFT8_Sivir/HUD/TFT8_Sivir.TFT_Set8.tex`,
 	},
 	{
 		tier: 3,
@@ -2126,18 +2102,6 @@ export const activeAugments: AugmentData[] = [
 			'NumAllies': 6,
 		},
 		icon: `ASSETS/Characters/TFT8_Nilah/HUD/TFT8_Nilah.TFT_Set8.tex`,
-	},
-	{
-		tier: 3,
-		name: `Justice Punch`,
-		groupID: `justicePunch`,
-		desc: `Gain a Galio. Your strongest Galio's Ability costs @ManaReduction@ less Mana to cast, deals @DamageAmp@% more damage and knocks up its target for @StunDuration@ seconds.`,
-		effects: {
-			'DamageAmp': 150,
-			'ManaReduction': 70,
-			'StunDuration': 2,
-		},
-		icon: `ASSETS/Characters/TFT8_Galio/HUD/TFT8_Galio.TFT_Set8.tex`,
 	},
 	{
 		tier: 1,
@@ -3128,17 +3092,6 @@ export const activeAugments: AugmentData[] = [
 			'CritChance': 75,
 		},
 		icon: `ASSETS/Characters/TFT8_Draven/HUD/TFT8_Draven.TFT_Set8.tex`,
-	},
-	{
-		tier: 3,
-		name: `Safety First`,
-		groupID: `safetyFirst`,
-		desc: `Gain a Galio. When you field him, your team gains @ArmorMR@ Armor and Magic Resist, doubled for @Duration@ seconds after being shielded.`,
-		effects: {
-			'ArmorMR': 20,
-			'Duration': 4,
-		},
-		icon: `ASSETS/Characters/TFT8_Galio/HUD/TFT8_Galio.TFT_Set8.tex`,
 	},
 	{
 		tier: 2,

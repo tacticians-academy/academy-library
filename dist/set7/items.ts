@@ -660,7 +660,7 @@ export const completedItems: ItemData[] = [
 	},
 ]
 
-export const spatulaItems: ItemData[] = [
+export const emblemItems: ItemData[] = [
 	{
 		apiName: `TFT7_Item_AssassinEmblemItem`,
 		desc: `The holder gains the Assassin trait.<br><br><tftitemrules>[Unique - only 1 per champion</tftitemrules>`,
@@ -890,6 +890,18 @@ export const spatulaItems: ItemData[] = [
 		id: 2313,
 		name: `Swiftshot Emblem`,
 		unique: true,
+	},
+	{
+		apiName: `TFT_Item_ForceOfNature`,
+		desc: `Your team gains +@MaxArmySizeIncrease@ maximum team size.`,
+		effects: {
+			'MaxArmySizeIncrease': 1,
+		},
+		from: [8, 8],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Tacticians_Crown.dds`,
+		id: 88,
+		name: `Tactician's Crown`,
+		unique: false,
 	},
 	{
 		apiName: `TFT7_Item_TempestEmblemItem`,
@@ -1975,6 +1987,21 @@ export const modItems: ItemData[] = [
 
 export const unreleasedItems: ItemData[] = [
 	{
+		apiName: `TFT_Item_SeraphsEmbrace`,
+		desc: `Grant %i:scaleMana% @Mana@ starting Mana (including components). After casting an Ability, set Mana to %i:scaleMana% @ManaRestore@.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
+		effects: {
+			'Mana': 50,
+			'ManaRestore': 20,
+			'{71bc3700}': 200,
+			'{af1d4d88}': 20,
+		},
+		from: [4, 4],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Blue_Buff.dds`,
+		id: 44,
+		name: `Blue Buff`,
+		unique: true,
+	},
+	{
 		apiName: `TFT6_Item_EliteSpotlight`,
 		desc: `TFT6_Item_Description_EliteSpotlight`,
 		effects: {},
@@ -1984,6 +2011,21 @@ export const unreleasedItems: ItemData[] = [
 		name: `TFT6_Item_Name_EliteSpotlight`,
 		unique: true,
 	},
+	{
+		apiName: `TFT_Item_TitanicHydra`,
+		desc: `Combat start: Taunt enemies within @HexRadius@ hexes.<br><br>On death, a Voidspawn arises, taunting nearby enemies. Voidspawns that arise from summoned units are @SummonedStatReduction@% effective.`,
+		effects: {
+			'AS': 10,
+			'HP': 150,
+			'HexRadius': 4,
+			'SummonedStatReduction': 25,
+		},
+		from: [2, 7],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/ZZRot_Portal.dds`,
+		id: 27,
+		name: `Zz'Rot Portal`,
+		unique: false,
+	},
 ]
 
-export const currentItems: ItemData[] = componentItems.concat(completedItems, radiantItems, shimmerscaleItems, spatulaItems, ornnItems)
+export const currentItems: ItemData[] = componentItems.concat(completedItems, radiantItems, shimmerscaleItems, emblemItems, ornnItems)

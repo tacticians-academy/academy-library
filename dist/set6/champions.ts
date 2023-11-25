@@ -1,6 +1,6 @@
 import type { ChampionData } from '../index'
 
-export enum ChampionKey { Akali = `TFT6_Akali`, Blitzcrank = `TFT6_Blitzcrank`, Braum = `TFT6_Braum`, Caitlyn = `TFT6_Caitlyn`, Camille = `TFT6_Camille`, ChoGath = `TFT6_ChoGath`, Darius = `TFT6_Darius`, DrMundo = `TFT6_DrMundo`, Ekko = `TFT6_Ekko`, Ezreal = `TFT6_Ezreal`, Fiora = `TFT6_Fiora`, Galio = `TFT6_Galio`, Gangplank = `TFT6_Gangplank`, Garen = `TFT6_Garen`, Graves = `TFT6_Graves`, Heimerdinger = `TFT6_Heimerdinger`, Illaoi = `TFT6_Illaoi`, Janna = `TFT6_Janna`, Jayce = `TFT6_Jayce`, Jhin = `TFT6_Jhin`, Jinx = `TFT6_Jinx`, Kaisa = `TFT6_Kaisa`, Kassadin = `TFT6_Kassadin`, Katarina = `TFT6_Katarina`, KogMaw = `TFT6_KogMaw`, Leona = `TFT6_Leona`, Lissandra = `TFT6_Lissandra`, Lulu = `TFT6_Lulu`, Lux = `TFT6_Lux`, Malzahar = `TFT6_Malzahar`, Tibbers = `TFT6_Tibbers`, HexTechDragon = `TFT6_HexTechDragon`, MalzaharVoidling = `TFT6_MalzaharVoidling`, MissFortune = `TFT6_MissFortune`, Orianna = `TFT6_Orianna`, Poppy = `TFT6_Poppy`, Quinn = `TFT6_Quinn`, Samira = `TFT6_Samira`, Seraphine = `TFT6_Seraphine`, Shaco = `TFT6_Shaco`, Singed = `TFT6_Singed`, Sion = `TFT6_Sion`, Swain = `TFT6_Swain`, TahmKench = `TFT6_TahmKench`, Talon = `TFT6_Talon`, TrainingDummy = `TFT_TrainingDummy`, Taric = `TFT6_Taric`, Tristana = `TFT6_Tristana`, Trundle = `TFT6_Trundle`, TwistedFate = `TFT6_TwistedFate`, Twitch = `TFT6_Twitch`, Urgot = `TFT6_Urgot`, Veigar = `TFT6_Veigar`, Vex = `TFT6_Vex`, Vi = `TFT6_Vi`, Viktor = `TFT6_Viktor`, VoidSpawn = `TFT_VoidSpawn`, Warwick = `TFT6_Warwick`, Yone = `TFT6_Yone`, Yuumi = `TFT6_Yuumi`, Zac = `TFT6_Zac`, Ziggs = `TFT6_Ziggs`, Zilean = `TFT6_Zilean`, Zyra = `TFT6_Zyra` }
+export enum ChampionKey { Akali = `TFT6_Akali`, Blitzcrank = `TFT6_Blitzcrank`, Braum = `TFT6_Braum`, Caitlyn = `TFT6_Caitlyn`, Camille = `TFT6_Camille`, ChoGath = `TFT6_ChoGath`, Darius = `TFT6_Darius`, DrMundo = `TFT6_DrMundo`, Ekko = `TFT6_Ekko`, Ezreal = `TFT6_Ezreal`, Fiora = `TFT6_Fiora`, Galio = `TFT6_Galio`, Gangplank = `TFT6_Gangplank`, Garen = `TFT6_Garen`, Graves = `TFT6_Graves`, Heimerdinger = `TFT6_Heimerdinger`, Illaoi = `TFT6_Illaoi`, Janna = `TFT6_Janna`, Jayce = `TFT6_Jayce`, Jhin = `TFT6_Jhin`, Jinx = `TFT6_Jinx`, Kaisa = `TFT6_Kaisa`, Kassadin = `TFT6_Kassadin`, Katarina = `TFT6_Katarina`, KogMaw = `TFT6_KogMaw`, Leona = `TFT6_Leona`, Lissandra = `TFT6_Lissandra`, Lulu = `TFT6_Lulu`, Lux = `TFT6_Lux`, Malzahar = `TFT6_Malzahar`, Tibbers = `TFT6_Tibbers`, HexTechDragon = `TFT6_HexTechDragon`, MalzaharVoidling = `TFT6_MalzaharVoidling`, MercenaryChest = `TFT6_MercenaryChest`, MissFortune = `TFT6_MissFortune`, Orianna = `TFT6_Orianna`, Poppy = `TFT6_Poppy`, Quinn = `TFT6_Quinn`, Samira = `TFT6_Samira`, Seraphine = `TFT6_Seraphine`, Shaco = `TFT6_Shaco`, Singed = `TFT6_Singed`, Sion = `TFT6_Sion`, Swain = `TFT6_Swain`, TahmKench = `TFT6_TahmKench`, Talon = `TFT6_Talon`, TrainingDummy = `TFT_TrainingDummy`, Taric = `TFT6_Taric`, EmblemArmoryKey = `TFT5_EmblemArmoryKey`, Tristana = `TFT6_Tristana`, Trundle = `TFT6_Trundle`, TwistedFate = `TFT6_TwistedFate`, Twitch = `TFT6_Twitch`, Urgot = `TFT6_Urgot`, Veigar = `TFT6_Veigar`, Vex = `TFT6_Vex`, Vi = `TFT6_Vi`, Viktor = `TFT6_Viktor`, VoidSpawn = `TFT_VoidSpawn`, Warwick = `TFT6_Warwick`, Yone = `TFT6_Yone`, Yuumi = `TFT6_Yuumi`, Zac = `TFT6_Zac`, Ziggs = `TFT6_Ziggs`, Zilean = `TFT6_Zilean`, Zyra = `TFT6_Zyra` }
 
 export const champions: ChampionData[] = [
 	{
@@ -3176,6 +3176,46 @@ export const champions: ChampionData[] = [
 		missiles: [],
 	},
 	{
+		apiName: `TFT6_MercenaryChest`,
+		name: `Mercenary Chest`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT6_MercenaryChest.TFT_Set6.dds`,
+		cost: undefined,
+		starLevel: undefined,
+		teamSize: 0,
+		isSpawn: false,
+		traits: [],
+		stats: {
+			armor: 0,
+			attackSpeed: undefined,
+			critChance: 0.25,
+			critMultiplier: 1.2999999523162842,
+			damage: 0,
+			hp: 1,
+			initialMana: 0,
+			magicResist: 0,
+			mana: 12,
+			moveSpeed: 500,
+			range: 0,
+		},
+		basicAttackMissileSpeed: undefined,
+		critAttackMissileSpeed: undefined,
+		passive: undefined,
+		spells: [
+			{
+				name: `TFT6_MercenaryChest`,
+				castTime: 0.5,
+				missile: undefined,
+				variables: {
+					'RoundsToHatch': [2, 2, 2, 2],
+				},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
+			},
+		],
+		missiles: [],
+	},
+	{
 		apiName: `TFT6_MissFortune`,
 		name: `Miss Fortune`,
 		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT6_MissFortune.TFT_Set6.dds`,
@@ -4417,6 +4457,46 @@ export const champions: ChampionData[] = [
 				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: undefined,
+			},
+		],
+		missiles: [],
+	},
+	{
+		apiName: `TFT5_EmblemArmoryKey`,
+		name: `Tome of Traits`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT5_EmblemArmoryKey.dds`,
+		cost: undefined,
+		starLevel: undefined,
+		teamSize: undefined,
+		isSpawn: false,
+		traits: [],
+		stats: {
+			armor: 10,
+			attackSpeed: 1,
+			critChance: null,
+			critMultiplier: 0,
+			damage: 10,
+			hp: 10,
+			initialMana: 0,
+			magicResist: 10,
+			mana: 100,
+			moveSpeed: 0,
+			range: NaN,
+		},
+		basicAttackMissileSpeed: undefined,
+		critAttackMissileSpeed: undefined,
+		passive: undefined,
+		spells: [
+			{
+				name: `TFT5_EmblemArmoryKey`,
+				castTime: 0.5,
+				missile: undefined,
+				variables: {
+					'RoundsToHatch': [2, 2, 2, 2],
+				},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
 			},
 		],
 		missiles: [],

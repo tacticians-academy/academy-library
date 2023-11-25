@@ -119,15 +119,6 @@ export const itemFlashcards: ItemFlashcard[] = [
 		unique: false,
 	},
 	{
-		id: `88`,
-		name: `Force of Nature`,
-		type: `completed`,
-		description: `Wearer's team gains +1 maximum team size.`,
-		icon: `assets/maps/particles/tft/tft_item_forceofnature.tft`,
-		from: [8, 8],
-		unique: false,
-	},
-	{
 		id: `45`,
 		name: `Frozen Heart`,
 		type: `completed`,
@@ -418,7 +409,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `28`,
 		name: `Blade of the Ruined King`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `Extra +20 Wearer is also a Blademaster [Unique - Only One Per Champion]`,
 		icon: `assets/maps/particles/tft/tft_item_bladeoftheruinedking.tft`,
 		from: [2, 8],
@@ -427,16 +418,25 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `48`,
 		name: `Darkin`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `Extra +20 Wearer is also a Demon [Unique - Only One Per Champion]`,
 		icon: `assets/maps/particles/tft/tft_item_darkin.tft`,
 		from: [4, 8],
 		unique: true,
 	},
 	{
+		id: `88`,
+		name: `Force of Nature`,
+		type: `emblem`,
+		description: `Wearer's team gains +1 maximum team size.`,
+		icon: `assets/maps/particles/tft/tft_item_forceofnature.tft`,
+		from: [8, 8],
+		unique: false,
+	},
+	{
 		id: `78`,
 		name: `Frozen Mallet`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `Extra +200 Wearer is also glacial [Unique - Only One Per Champion]`,
 		icon: `assets/maps/particles/tft/tft_item_frozenmallet.tft`,
 		from: [8, 7],
@@ -445,7 +445,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `58`,
 		name: `Knight's Vow`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `Extra +20 Wearer is also a Knight [Unique - Only One Per Champion]`,
 		icon: `assets/maps/particles/tft/tft_item_knightsvow.tft`,
 		from: [5, 8],
@@ -454,7 +454,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `89`,
 		name: `Mittens`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `Wearer is also a Yordle Extra +10% Critical Strike Chance, +10% Dodge Chance [Unique - Only One Per Champion]`,
 		icon: `assets/maps/particles/tft/tft_item_mittens.tft`,
 		from: [9, 8],
@@ -463,7 +463,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `68`,
 		name: `Runaan's Hurricane`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `Extra +{ExtraMR} Basic Attack fire an additional missile at another nearby enemy, dealing 75% of the wearer's Attack Damage and applying on-hit effects.`,
 		icon: `assets/maps/particles/tft/tft_item_runaanshurricane.tft`,
 		from: [6, 8],
@@ -472,7 +472,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `18`,
 		name: `Youmuu's Ghostblade`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `Extra +15 Wearer is also an Assassin [Unique - Only One Per Champion]`,
 		icon: `assets/maps/particles/tft/tft_item_youmuusghostblade.tft`,
 		from: [1, 8],
@@ -481,7 +481,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 	{
 		id: `38`,
 		name: `Yuumi`,
-		type: `spatula`,
+		type: `emblem`,
 		description: `Extra +20 Wearer is also a Sorcerer [Unique - Only One Per Champion]`,
 		icon: `assets/maps/particles/tft/tft_item_yuumi.tft`,
 		from: [3, 8],

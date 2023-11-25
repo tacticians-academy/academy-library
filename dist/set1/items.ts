@@ -150,17 +150,6 @@ export const completedItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		desc: `Wearer's team gains +@MaxArmySizeIncrease@ maximum team size.`,
-		effects: {
-			'MaxArmySizeIncrease': 1,
-		},
-		from: [8, 8],
-		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_ForceOfNature.TFT.dds`,
-		id: 88,
-		name: `Force of Nature`,
-		unique: false,
-	},
-	{
 		desc: `Reduces the Attack Speed of adjacent enemies by @ASSlow@%.`,
 		effects: {
 			'ASSlow': 35,
@@ -549,7 +538,7 @@ export const completedItems: ItemData[] = [
 	},
 ]
 
-export const spatulaItems: ItemData[] = [
+export const emblemItems: ItemData[] = [
 	{
 		desc: `Extra %i:scaleAS% +@AS@<br>Wearer is also a Blademaster<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>`,
 		effects: {
@@ -571,6 +560,17 @@ export const spatulaItems: ItemData[] = [
 		id: 48,
 		name: `Darkin`,
 		unique: true,
+	},
+	{
+		desc: `Wearer's team gains +@MaxArmySizeIncrease@ maximum team size.`,
+		effects: {
+			'MaxArmySizeIncrease': 1,
+		},
+		from: [8, 8],
+		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_ForceOfNature.TFT.dds`,
+		id: 88,
+		name: `Force of Nature`,
+		unique: false,
 	},
 	{
 		desc: `Extra %i:scaleHP% +@HP@<br>Wearer is also glacial<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>`,
@@ -653,12 +653,34 @@ export const supportItems: ItemData[] = []
 
 export const shimmerscaleItems: ItemData[] = []
 
-export const consumableItems: ItemData[] = []
+export const consumableItems: ItemData[] = [
+	{
+		desc: `Place on a champion to create a one-star copy of them.<br><br><tftitemrules>[CONSUMABLE - This item disappears when used.]</tftitemrules>`,
+		effects: {},
+		from: [],
+		icon: `ASSETS/Maps/Particles/TFT/TFT_Blessing_WildCard.TFT.dds`,
+		id: 200,
+		name: `Neeko's Help`,
+		unique: false,
+	},
+]
 
 export const hexbuffItems: ItemData[] = []
 
 export const modItems: ItemData[] = []
 
-export const unreleasedItems: ItemData[] = []
+export const unreleasedItems: ItemData[] = [
+	{
+		desc: `@ChanceToSpellSteal@ chance to steal the enemy's spell and cast it`,
+		effects: {
+			'{0cc88d45}': 10,
+		},
+		from: [],
+		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_SpellThiefsEdge.TFT.dds`,
+		id: 529,
+		name: `Spell Thief`,
+		unique: false,
+	},
+]
 
-export const currentItems: ItemData[] = componentItems.concat(completedItems, spatulaItems)
+export const currentItems: ItemData[] = componentItems.concat(completedItems, emblemItems)

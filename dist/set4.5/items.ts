@@ -189,17 +189,6 @@ export const completedItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		desc: `Wearer's team gains +@MaxArmySizeIncrease@ maximum team size.`,
-		effects: {
-			'MaxArmySizeIncrease': 1,
-		},
-		from: [8, 8],
-		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_ForceOfNature.dds`,
-		id: 88,
-		name: `Force of Nature`,
-		unique: false,
-	},
-	{
 		desc: `Reduces the Attack Speed of nearby enemies by @ASSlow@%. Each Frozen Heart a champion carries beyond the first increases the radius of this effect.`,
 		effects: {
 			'Armor': 25,
@@ -644,18 +633,7 @@ export const completedItems: ItemData[] = [
 	},
 ]
 
-export const spatulaItems: ItemData[] = [
-	{
-		desc: `The holder gains the Dusk trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>`,
-		effects: {
-			'AP': 15,
-		},
-		from: [3, 8],
-		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_Set4Dusk.TFT_Set4.dds`,
-		id: -38,
-		name: `Aspect of Dusk`,
-		unique: true,
-	},
+export const emblemItems: ItemData[] = [
 	{
 		desc: `The wearer is also a Berserker.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>`,
 		effects: {
@@ -700,6 +678,17 @@ export const spatulaItems: ItemData[] = [
 		id: 68,
 		name: `Elderwood Sprout`,
 		unique: true,
+	},
+	{
+		desc: `Wearer's team gains +@MaxArmySizeIncrease@ maximum team size.`,
+		effects: {
+			'MaxArmySizeIncrease': 1,
+		},
+		from: [8, 8],
+		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_ForceOfNature.dds`,
+		id: 88,
+		name: `Force of Nature`,
+		unique: false,
 	},
 	{
 		desc: `The wearer gains the Rebel trait.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>`,
@@ -925,21 +914,21 @@ export const consumableItems: ItemData[] = [
 		unique: false,
 	},
 	{
+		desc: `Place on a champion to create a one-star copy of them.<br><br><tftitemrules>[CONSUMABLE - This item disappears when used.]</tftitemrules>`,
+		effects: {},
+		from: [],
+		icon: `ASSETS/Maps/Particles/TFT/TFT_Blessing_WildCard.dds`,
+		id: 200,
+		name: `Neeko's Help`,
+		unique: false,
+	},
+	{
 		desc: `Use on a champion to unequip all items and randomly transform them into new ones. <br><br><tftitemrules> [SAME QUALITY: Reforging a completed item or an Artifact will grant a new item of the same quality.] <br> [Cannot be used on board champions in combat, or on Force of Nature.]<br> [CONSUMABLE - This item disappears when used.]</tftitemrules>`,
 		effects: {},
 		from: [],
 		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_Consumable_ItemReroller.dds`,
 		id: 202,
 		name: `Reforger`,
-		unique: false,
-	},
-	{
-		desc: `Place on Kayn to force Rhaast to overtake him, permanently improving his Reaping Slash spell to heal him.<br><br><tftitemrules>[KAYN CONSUMABLE - This item disappears when used and DESTROYS Kayn's Liberation]</tftitemrules><br><br><tftitemrules>[Can only be used during the Planning Phase]</tftitemrules>`,
-		effects: {},
-		from: [],
-		icon: `ASSETS/Maps/Particles/TFT/TFT4_Consumable_KaynRed.TFT_Set4.dds`,
-		id: 200,
-		name: `Rhaast's Embrace`,
 		unique: false,
 	},
 	{
@@ -1002,6 +991,30 @@ export const hexbuffItems: ItemData[] = [
 
 export const modItems: ItemData[] = []
 
-export const unreleasedItems: ItemData[] = []
+export const unreleasedItems: ItemData[] = [
+	{
+		desc: `Whenever any unit dies, gain X Mana.`,
+		effects: {
+			'Mana': 20,
+			'DodgeChance': 20,
+		},
+		from: [],
+		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_GiantSlayer.dds`,
+		id: 149,
+		name: `Catalyst`,
+		unique: false,
+	},
+	{
+		desc: `@ChanceToSpellSteal@ chance to steal the enemy's spell and cast it`,
+		effects: {
+			'{0cc88d45}': 10,
+		},
+		from: [],
+		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_SpellThiefsEdge.dds`,
+		id: 529,
+		name: `Spell Thief`,
+		unique: false,
+	},
+]
 
-export const currentItems: ItemData[] = componentItems.concat(completedItems, spatulaItems, ornnItems)
+export const currentItems: ItemData[] = componentItems.concat(completedItems, emblemItems, ornnItems)

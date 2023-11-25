@@ -12,7 +12,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `all for one`,
 		name: `All For One`,
 		tiers: [2],
-		description: `When an ally dies, they grant the Imperial Tyrant 33% of their maximum HP.`,
+		description: `When an ally dies, they grant the Imperial Tyrant 33% of their maximum Health.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/allforone2.tft_set6`],
 	},
 	{

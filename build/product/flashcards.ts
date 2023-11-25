@@ -93,14 +93,14 @@ if (activeAugments != null) {
 
 // Items
 
-const { currentItems, spatulaItems, componentItems } = await importItems(currentSetNumber)
+const { currentItems, emblemItems, componentItems } = await importItems(currentSetNumber)
 
 const outputItemsObject: ItemFlashcard[] = []
 currentItems.forEach(item => {
 	const type = componentItems.some(component => item === component)
 		? 'component'
-		: spatulaItems.some(component => item === component)
-			? 'spatula'
+		: emblemItems.some(component => item === component) === true
+			? 'emblem'
 			: 'completed'
 	const description = substituteVariables(item.desc ?? '', [getNormalizedEffects(item.effects)])
 		.replaceAll(/%i.+?%/g, '')

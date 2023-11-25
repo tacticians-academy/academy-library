@@ -388,6 +388,19 @@ export const completedItems: ItemData[] = [
 		unique: false,
 	},
 	{
+		apiName: `TFT_Item_KnightsVow`,
+		composition: [],
+		desc: `Extra %i:scaleArmor% +@Armor@<br>Holder is also a Knight<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
+		effects: {
+			'Armor': 40,
+		},
+		from: null,
+		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_KnightsVow.dds`,
+		id: null,
+		name: `Knight's Vow`,
+		unique: true,
+	},
+	{
 		apiName: `TFT_Item_LastWhisper`,
 		composition: [`TFT_Item_RecurveBow`, `TFT_Item_SparringGloves`],
 		desc: `Any physical damage dealt @ArmorReductionPercent@% <TFTKeyword>Sunders</TFTKeyword> the target for @ArmorBreakDuration@ seconds. This effect does not stack.<br><br><tftitemrules>[Unique - only 1 per champion]<br><tftbold>Sunder</tftbold>: reduce Armor</tftitemrules>`,
@@ -661,6 +674,19 @@ export const completedItems: ItemData[] = [
 		unique: false,
 	},
 	{
+		apiName: `TFT_Item_YoumuusGhostblade`,
+		composition: [],
+		desc: `The holder is also an Assassin.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules>`,
+		effects: {
+			'AD': 30,
+		},
+		from: null,
+		icon: `ASSETS/Maps/Particles/TFT/TFT_Item_YoumuusGhostblade.dds`,
+		id: null,
+		name: `Youmuu's Ghostblade`,
+		unique: true,
+	},
+	{
 		apiName: `TFT_Item_ZekesHerald`,
 		composition: [`TFT_Item_BFSword`, `TFT_Item_GiantsBelt`],
 		desc: `Combat start: Grant %i:scaleAS% @AS@% Attack Speed to the holder and allies within 1 hex in the same row.<br><br>​​<tftitemrules>[Aura item]</tftitemrules>`,
@@ -694,7 +720,7 @@ export const completedItems: ItemData[] = [
 	},
 ]
 
-export const spatulaItems: ItemData[] = [
+export const emblemItems: ItemData[] = [
 	{
 		apiName: `TFT8_Item_ADMINEmblemItem`,
 		composition: [`TFT_Item_NegatronCloak`, `TFT_Item_Spatula`],
@@ -967,6 +993,19 @@ export const spatulaItems: ItemData[] = [
 		id: null,
 		name: `Sureshot Emblem`,
 		unique: true,
+	},
+	{
+		apiName: `TFT_Item_ForceOfNature`,
+		composition: [`TFT_Item_Spatula`, `TFT_Item_Spatula`],
+		desc: `Your team gains +@MaxArmySizeIncrease@ maximum team size.`,
+		effects: {
+			'MaxArmySizeIncrease': 1,
+		},
+		from: null,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Tacticians_Crown.dds`,
+		id: null,
+		name: `Tactician's Crown`,
+		unique: false,
 	},
 	{
 		apiName: `TFT8_Item_UndergroundTheEmblemItem`,
@@ -2258,6 +2297,23 @@ export const modItems: ItemData[] = [
 
 export const unreleasedItems: ItemData[] = [
 	{
+		apiName: `TFT_Item_SeraphsEmbrace`,
+		composition: [`TFT_Item_TearOfTheGoddess`, `TFT_Item_TearOfTheGoddess`],
+		desc: `Abilities cost %i:scaleMana% @ManaReduction@ less Mana to cast. <br><br>If the holder gets at least 1 takedown within @TakedownTimer@ seconds of casting, gain %i:scaleMana% @ManaOnTakedown@ Mana.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules><br>`,
+		effects: {
+			'AP': 10,
+			'Mana': 40,
+			'{0cea77dc}': 10,
+			'{2a5b6a9f}': 3,
+			'{7ccd3647}': 10,
+		},
+		from: null,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Blue_Buff.dds`,
+		id: null,
+		name: `Blue Buff`,
+		unique: true,
+	},
+	{
 		apiName: `TFT6_Item_EliteSpotlight`,
 		composition: [],
 		desc: `TFT6_Item_Description_EliteSpotlight`,
@@ -2268,6 +2324,21 @@ export const unreleasedItems: ItemData[] = [
 		name: `TFT6_Item_Name_EliteSpotlight`,
 		unique: true,
 	},
+	{
+		apiName: `TFT_Item_TitanicHydra`,
+		composition: [`TFT_Item_RecurveBow`, `TFT_Item_GiantsBelt`],
+		desc: `Combat start: <TFTKeyword>Taunt</TFTKeyword>.<br>On death, a Voidspawn arises, <TFTKeyword>Taunting</TFTKeyword> nearby enemies. <br><br><tftitemrules><tftbold>Taunt</tftbold>: enemies that are able and in range must attack the taunter</tftitemrules>`,
+		effects: {
+			'AS': 10,
+			'HP': 150,
+			'SummonedStatReduction': 25,
+		},
+		from: null,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/ZZRot_Portal.dds`,
+		id: null,
+		name: `Zz'Rot Portal`,
+		unique: false,
+	},
 ]
 
-export const currentItems: ItemData[] = componentItems.concat(completedItems, radiantItems, shimmerscaleItems, spatulaItems, ornnItems)
+export const currentItems: ItemData[] = componentItems.concat(completedItems, radiantItems, shimmerscaleItems, emblemItems, ornnItems)

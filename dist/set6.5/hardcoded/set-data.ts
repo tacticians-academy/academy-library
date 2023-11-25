@@ -1,3 +1,11 @@
+export const UNPLAYABLE_CHAMPION_APINAMES = [
+	'TFT5_EmblemArmoryKey',
+	'TFT5_DraconicEgg',
+	'TFT6_MercenaryChest',
+	'TFT6_TheGoldenEgg',
+	'TFT6_DragonEgg',
+]
+
 export const LOCKED_STAR_LEVEL: Record<string, number> = {
 	TFT6_MalzaharVoidling: 1,
 	TFT6_Tibbers: 2,
@@ -6,35 +14,7 @@ export const LOCKED_STAR_LEVEL: Record<string, number> = {
 
 export const RETIRED_ITEM_NAMES: string[] = []
 
-export const RETIRED_SPATULA_ITEM_IDS = [
-	48, // Academy Emblem
-	18, // Imperial Emblem
-	126, // Renewer Emblem
-	1128, // Hellion Emblem
-	125, // Assassin Emblem
-	124, // Dawnbringer Emblem
-	1158, // Cavalier Emblem
-	105, // Spellweaver Emblem
-	123, // Skirmisher Emblem
-	104, // Redeemed Emblem
-	111, // Elderwood Sprout
-	112, // Youmuu's Ghostblade
-	115, // Spirit of the Dragon
-	113, // Mage's Hat
-	110, // Warlord's Banner
-	109, // Duelist's Zeal
-	114, // Vanguard's Cuirass
-	108, // Sword of the Divine
-	130, // Youmuu's Ghostblade
-	132, // Talisman of Light
-	134, // Warden's Mail
-	122, // Inferno's Cinder
-	131, // Berserker's Axe
-	128, // Battlecast Plating
-	120, // Protector's Chestguard
-]
-
-export const SPATULA_ITEM_IDS = [
+export const EMBLEM_ITEM_IDS = [
 	28, // Challenger
 	38, // Arcanist
 	58, // Bodyguard
