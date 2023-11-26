@@ -78,7 +78,7 @@ const renameNormalizations: Record<string, Record<string, string>> = {
 }
 
 const apiNames = champions.map(champion => getAPIName(champion))
-if (parentSetNumber > 4) {
+if (parentSetNumber >= 5) {
 	for (const apiName of BASE_UNIT_API_NAMES) {
 		if (!apiNames.includes(apiName)) {
 			apiNames.push(apiName)

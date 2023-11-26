@@ -10,7 +10,6 @@ export const setNumberPath = path.resolve(cachePath, 'set_number.local')
 export const githubTokenPath = path.resolve(cachePath, 'github_token.local')
 
 export async function getCurrentSetNumber() {
-	console.log(setNumberPath)
 	const setString = await fs.readFile(setNumberPath, 'utf8')
 	return (parseFloat(setString) ?? 1) as SetNumber
 }

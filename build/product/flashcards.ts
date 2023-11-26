@@ -120,3 +120,5 @@ currentItems.forEach(item => {
 })
 
 await fs.writeFile(path.resolve(flashcardsPath, 'items.ts'), `import type { ItemFlashcard } from '../../index'\n\nexport const itemFlashcards: ItemFlashcard[] = ` + formatJS(outputItemsObject))
+
+console.log('Generated Set', currentSetNumber)

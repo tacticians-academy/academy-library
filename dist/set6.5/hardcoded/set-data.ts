@@ -1,3 +1,7 @@
+export const IGNORE_UNIT_APINAMES = [
+	'TFT6_DragonEgg',
+]
+
 export const LOCKED_STAR_LEVEL: Record<string, number> = {
 	TFT6_MalzaharVoidling: 1,
 	TFT6_Tibbers: 2,
