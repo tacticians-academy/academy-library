@@ -1,6 +1,6 @@
 import type { ChampionData } from '../index'
 
-export enum ChampionKey { Ahri = `TFT6_Ahri`, Alistar = `TFT6_Alistar`, Ashe = `TFT6_Ashe`, Blitzcrank = `TFT6_Blitzcrank`, Brand = `TFT6_Brand`, Braum = `TFT6_Braum`, Caitlyn = `TFT6_Caitlyn`, Camille = `TFT6_Camille`, ChoGath = `TFT6_ChoGath`, Corki = `TFT6_Corki`, Darius = `TFT6_Darius`, Draven = `TFT6_Draven`, Ekko = `TFT6_Ekko`, Ezreal = `TFT6_Ezreal`, Galio = `TFT6_Galio`, Gangplank = `TFT6_Gangplank`, Gnar = `TFT6_Gnar`, Illaoi = `TFT6_Illaoi`, Irelia = `TFT6_Irelia`, JarvanIV = `TFT6_JarvanIV`, Jayce = `TFT6_Jayce`, Jhin = `TFT6_Jhin`, Jinx = `TFT6_Jinx`, Kaisa = `TFT6_Kaisa`, Kassadin = `TFT6_Kassadin`, KhaZix = `TFT6_KhaZix`, Leona = `TFT6_Leona`, Lucian = `TFT6_Lucian`, Lulu = `TFT6_Lulu`, Malzahar = `TFT6_Malzahar`, Tibbers = `TFT6_Tibbers`, HexTechDragon = `TFT6_HexTechDragon`, MalzaharVoidling = `TFT6_MalzaharVoidling`, MissFortune = `TFT6_MissFortune`, Morgana = `TFT6_Morgana`, Nocturne = `TFT6_Nocturne`, Orianna = `TFT6_Orianna`, Poppy = `TFT6_Poppy`, Quinn = `TFT6_Quinn`, RekSai = `TFT6_RekSai`, Renata = `TFT6_Renata`, Sejuani = `TFT6_Sejuani`, Senna = `TFT6_Senna`, Seraphine = `TFT6_Seraphine`, Silco = `TFT6_Silco`, Singed = `TFT6_Singed`, Sivir = `TFT6_Sivir`, Swain = `TFT6_Swain`, Syndra = `TFT6_Syndra`, TahmKench = `TFT6_TahmKench`, Talon = `TFT6_Talon`, TrainingDummy = `TFT_TrainingDummy`, Tryndamere = `TFT6_Tryndamere`, Twitch = `TFT6_Twitch`, Veigar = `TFT6_Veigar`, Vex = `TFT6_Vex`, Vi = `TFT6b_Vi`, Viktor = `TFT6_Viktor`, VoidSpawn = `TFT_VoidSpawn`, Warwick = `TFT6_Warwick`, Zac = `TFT6_Zac`, Zeri = `TFT6_Zeri`, Ziggs = `TFT6_Ziggs`, Zilean = `TFT6_Zilean`, Zyra = `TFT6_Zyra` }
+export enum ChampionKey { Ahri = `TFT6_Ahri`, Alistar = `TFT6_Alistar`, Ashe = `TFT6_Ashe`, Blitzcrank = `TFT6_Blitzcrank`, Brand = `TFT6_Brand`, Braum = `TFT6_Braum`, Caitlyn = `TFT6_Caitlyn`, Camille = `TFT6_Camille`, ChoGath = `TFT6_ChoGath`, Corki = `TFT6_Corki`, Darius = `TFT6_Darius`, Draven = `TFT6_Draven`, Ekko = `TFT6_Ekko`, Ezreal = `TFT6_Ezreal`, Galio = `TFT6_Galio`, Gangplank = `TFT6_Gangplank`, Gnar = `TFT6_Gnar`, Illaoi = `TFT6_Illaoi`, Irelia = `TFT6_Irelia`, JarvanIV = `TFT6_JarvanIV`, Jayce = `TFT6_Jayce`, Jhin = `TFT6_Jhin`, Jinx = `TFT6_Jinx`, Kaisa = `TFT6_Kaisa`, Kassadin = `TFT6_Kassadin`, KhaZix = `TFT6_KhaZix`, Leona = `TFT6_Leona`, Lucian = `TFT6_Lucian`, Lulu = `TFT6_Lulu`, Malzahar = `TFT6_Malzahar`, Tibbers = `TFT6_Tibbers`, HexTechDragon = `TFT6_HexTechDragon`, MalzaharVoidling = `TFT6_MalzaharVoidling`, MissFortune = `TFT6_MissFortune`, Morgana = `TFT6_Morgana`, Nocturne = `TFT6_Nocturne`, Orianna = `TFT6_Orianna`, Poppy = `TFT6_Poppy`, Quinn = `TFT6_Quinn`, RekSai = `TFT6_RekSai`, Renata = `TFT6_Renata`, Sejuani = `TFT6_Sejuani`, Senna = `TFT6_Senna`, Seraphine = `TFT6_Seraphine`, Silco = `TFT6_Silco`, Singed = `TFT6_Singed`, Sivir = `TFT6_Sivir`, Swain = `TFT6_Swain`, Syndra = `TFT6_Syndra`, TahmKench = `TFT6_TahmKench`, Talon = `TFT6_Talon`, TrainingDummy = `TFT_TrainingDummy`, DragonEgg = `TFT6_DragonEgg`, Tryndamere = `TFT6_Tryndamere`, Twitch = `TFT6_Twitch`, Veigar = `TFT6_Veigar`, Vex = `TFT6_Vex`, Vi = `TFT6b_Vi`, Viktor = `TFT6_Viktor`, VoidSpawn = `TFT_VoidSpawn`, Warwick = `TFT6_Warwick`, Zac = `TFT6_Zac`, Zeri = `TFT6_Zeri`, Ziggs = `TFT6_Ziggs`, Zilean = `TFT6_Zilean`, Zyra = `TFT6_Zyra` }
 
 export const champions: ChampionData[] = [
 	{
@@ -5249,6 +5249,46 @@ export const champions: ChampionData[] = [
 		],
 	},
 	{
+		apiName: `TFT6_DragonEgg`,
+		name: `Treasure Dragon Egg`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT6_DragonEgg.TFT_1209.dds`,
+		cost: 5,
+		starLevel: undefined,
+		teamSize: undefined,
+		isSpawn: false,
+		traits: [],
+		stats: {
+			armor: 10,
+			attackSpeed: 1,
+			critChance: null,
+			critMultiplier: 0,
+			damage: 10,
+			hp: 10,
+			initialMana: 0,
+			magicResist: 10,
+			mana: 100,
+			moveSpeed: 0,
+			range: NaN,
+		},
+		basicAttackMissileSpeed: undefined,
+		critAttackMissileSpeed: undefined,
+		passive: undefined,
+		spells: [
+			{
+				name: `TFT6_DragonEgg`,
+				castTime: 0.5,
+				missile: undefined,
+				variables: {
+					'EggTurns': [7, 7, 7, 7],
+				},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
+			},
+		],
+		missiles: [],
+	},
+	{
 		apiName: `TFT6_Tryndamere`,
 		name: `Tryndamere`,
 		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT6_Tryndamere.TFT_Set6_Stage2.dds`,
@@ -6600,6 +6640,89 @@ export const champions: ChampionData[] = [
 				},
 				cantCastWhileRooted: undefined,
 				uninterruptable: undefined,
+			},
+		],
+		missiles: [],
+	},
+]
+
+export const otherUnits: ChampionData[] = [
+	{
+		apiName: `TFT6_MercenaryChest`,
+		name: `Mercenary Chest`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT6_MercenaryChest.TFT_Set6.dds`,
+		cost: undefined,
+		starLevel: undefined,
+		teamSize: 0,
+		isSpawn: false,
+		traits: [],
+		stats: {
+			armor: 0,
+			attackSpeed: undefined,
+			critChance: 0.25,
+			critMultiplier: 1.2999999523162842,
+			damage: 0,
+			hp: 1,
+			initialMana: 0,
+			magicResist: 0,
+			mana: 12,
+			moveSpeed: 500,
+			range: 0,
+		},
+		basicAttackMissileSpeed: undefined,
+		critAttackMissileSpeed: undefined,
+		passive: undefined,
+		spells: [
+			{
+				name: `TFT6_MercenaryChest`,
+				castTime: 0.5,
+				missile: undefined,
+				variables: {
+					'RoundsToHatch': [2, 2, 2, 2],
+				},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
+			},
+		],
+		missiles: [],
+	},
+	{
+		apiName: `TFT6_TheGoldenEgg`,
+		name: `The Golden Egg`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT6_TheGoldenEgg.TFT_Set6_Stage2.dds`,
+		cost: undefined,
+		starLevel: undefined,
+		teamSize: undefined,
+		isSpawn: false,
+		traits: [],
+		stats: {
+			armor: 10,
+			attackSpeed: 1,
+			critChance: null,
+			critMultiplier: 0,
+			damage: 10,
+			hp: 10,
+			initialMana: 0,
+			magicResist: 10,
+			mana: 100,
+			moveSpeed: 0,
+			range: NaN,
+		},
+		basicAttackMissileSpeed: undefined,
+		critAttackMissileSpeed: undefined,
+		passive: undefined,
+		spells: [
+			{
+				name: `TFT6_TheGoldenEgg`,
+				castTime: 0.5,
+				missile: undefined,
+				variables: {
+					'EggTurns': [7, 7, 7, 7],
+				},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
 			},
 		],
 		missiles: [],

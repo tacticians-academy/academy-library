@@ -4256,7 +4256,7 @@ export const champions: ChampionData[] = [
 		cost: undefined,
 		starLevel: undefined,
 		teamSize: undefined,
-		isSpawn: true,
+		isSpawn: false,
 		traits: [],
 		stats: {
 			armor: 40,
@@ -5497,3 +5497,5 @@ export const champions: ChampionData[] = [
 		missiles: [],
 	},
 ]
+
+export const otherUnits: ChampionData[] = []

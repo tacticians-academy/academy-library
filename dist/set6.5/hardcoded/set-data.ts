@@ -1,11 +1,3 @@
-export const UNPLAYABLE_CHAMPION_APINAMES = [
-	'TFT5_EmblemArmoryKey',
-	'TFT5_DraconicEgg',
-	'TFT6_MercenaryChest',
-	'TFT6_TheGoldenEgg',
-	'TFT6_DragonEgg',
-]
-
 export const LOCKED_STAR_LEVEL: Record<string, number> = {
 	TFT6_MalzaharVoidling: 1,
 	TFT6_Tibbers: 2,

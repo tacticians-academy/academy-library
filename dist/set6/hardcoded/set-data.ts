@@ -1,5 +1,3 @@
-export const UNPLAYABLE_CHAMPION_APINAMES = []
-
 export const LOCKED_STAR_LEVEL: Record<string, number> = {
 	TFT6_MalzaharVoidling: 1,
 	TFT6_Tibbers: 2,

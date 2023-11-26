@@ -34,6 +34,13 @@ const GLOBAL_UNRELEASED_ITEM_APIKEYS = [
 	'TFT_Item_SeraphsEmbrace',
 ]
 
+const GLOBAL_IGNORE_UNIT_APINAMES = [
+	'TFT5_DraconicEgg',
+	'TFT5_EmblemArmoryKey',
+	'TFT6_MercenaryChest',
+	'TFT6_TheGoldenEgg',
+]
+
 const MANUAL_TIER_DESIGNATIONS: Record<string, AugmentTier> = {
 }
 
@@ -95,7 +102,7 @@ for (const apiName of BASE_UNIT_API_NAMES) {
 
 // Items
 
-const { LOCKED_STAR_LEVEL, EMBLEM_ITEM_IDS, RETIRED_ITEM_NAMES, RETIRED_AUGMENT_NAME_KEYS, UNUSED_AUGMENT_NAME_KEYS, TRAIT_DATA_SUBSTITUTIONS, UNPLAYABLE_CHAMPION_APINAMES } = await importSetData(currentSetNumber)
+const { LOCKED_STAR_LEVEL, EMBLEM_ITEM_IDS, RETIRED_ITEM_NAMES, RETIRED_AUGMENT_NAME_KEYS, UNUSED_AUGMENT_NAME_KEYS, TRAIT_DATA_SUBSTITUTIONS, IGNORE_UNIT_APINAMES } = await importSetData(currentSetNumber)
 
 const currentItemsByType: Record<ItemTypeKey, ItemData[]> = {component: [], completed: [], emblem: [], shadow: [], radiant: [], ornn: [], support: [], shimmerscale: [], consumable: [], hexbuff: [], mod: [], unreleased: []}
 
@@ -503,21 +510,18 @@ function getSpell(name: string, json: ChampionJSON): ChampionJSONSpell | undefin
 	return spellContainer.mSpell
 }
 
-const playableChampions = champions
-	.filter(champion => {
-		champion.apiName = getAPIName(champion)
-		if (champion.apiName == null || UNPLAYABLE_CHAMPION_APINAMES?.includes(champion.apiName)) {
-			return false
-		}
-		if (!champion.icon) {
+const playableUnits = champions
+	.filter(unit => {
+		unit.apiName = getAPIName(unit)
+		if (!unit.icon || IGNORE_UNIT_APINAMES?.includes(unit.apiName) === true) {
 			return false
 		}
 		return true
 	})
 	.sort(sortByName)
 
-const outputChampions = await Promise.all(playableChampions.map(async (champion): Promise<ChampionData> => {
-	const apiName = champion.apiName
+const formattedUnits = await Promise.all(playableUnits.map(async (unit): Promise<ChampionData> => {
+	const apiName = unit.apiName
 	const path = getPathTo(currentSetNumber, `champion/${apiName.toLowerCase()}.json`)
 	const json = JSON.parse(await fs.readFile(path, 'utf8')) as ChampionJSON
 	const characterRecord = getCharacterRecord(json)
@@ -527,7 +531,7 @@ const outputChampions = await Promise.all(playableChampions.map(async (champion)
 	if (characterRecord.baseStaticHPRegen !== 0) {
 		console.log('ERR HP Regen', apiName, characterRecord.baseStaticHPRegen)
 	}
-	let totalMana = characterRecord.primaryAbilityResource.arBase ?? champion.stats.mana
+	let totalMana = characterRecord.primaryAbilityResource.arBase ?? unit.stats.mana
 	let initialMana = characterRecord.mInitialMana ?? 0
 	if (totalMana == null) {
 		totalMana = initialMana
@@ -636,11 +640,11 @@ const outputChampions = await Promise.all(playableChampions.map(async (champion)
 	}
 
 	const knownTraits = Object.values(TRAIT_DATA_SUBSTITUTIONS)
-	const isSpawn = characterRecord.isSpawn ?? BASE_UNIT_API_NAMES.includes(apiName)
+	const isSpawn = characterRecord.isSpawn || unit.cost === 8 || unit.cost === 11 || unit.apiName === 'TFT_VoidSpawn'
 	const traits = characterRecord.mLinkedTraits?.map(traitData => {
 		const traitAPIName = traitData.TraitData!
 		if (traitAPIName.startsWith('{')) {
-			console.log('ERR Unknown trait', apiName, traitAPIName, champion.traits.filter(t => !knownTraits.includes(t)))
+			console.log('ERR Unknown trait', apiName, traitAPIName, unit.traits.filter(t => !knownTraits.includes(t)))
 			return traitAPIName
 		}
 		const enumKey = getEnumKeyFrom(traitAPIName)
@@ -648,8 +652,8 @@ const outputChampions = await Promise.all(playableChampions.map(async (champion)
 	}) ?? []
 	return {
 		apiName,
-		name: champion.name,
-		icon: champion.icon,
+		name: unit.name,
+		icon: unit.icon,
 		cost: characterRecord.tier,
 		starLevel: LOCKED_STAR_LEVEL?.[apiName],
 		teamSize: characterRecord.teamSize,
@@ -664,11 +668,20 @@ const outputChampions = await Promise.all(playableChampions.map(async (champion)
 	}
 }))
 
+const outputChampions: ChampionData[] = []
+const outputOtherUnits: ChampionData[] = []
+formattedUnits.forEach(unit => {
+	if (GLOBAL_IGNORE_UNIT_APINAMES.includes(unit.apiName)) {
+		outputOtherUnits.push(unit)
+	} else {
+		outputChampions.push(unit)
+	}
+})
+
 // Output
 
 await Promise.all([
-	fs.writeFile(getPathTo(currentSetNumber, 'champions.ts'), `import type { ChampionData } from '../index'\n\nexport enum ChampionKey { ${outputChampions.map(c => `${getEnumKeyFrom(c.apiName)} = \`${c.apiName}\``).join(', ')} }\n\nexport const champions: ChampionData[] = ${formatJS(outputChampions)}\n`),
-	// .map(c => { c.apiName = `ChampionKey.${getEnumKeyFrom(c.apiName)}` as ChampionKey; return c })
+	fs.writeFile(getPathTo(currentSetNumber, 'champions.ts'), `import type { ChampionData } from '../index'\n\nexport enum ChampionKey { ${outputChampions.map(c => `${getEnumKeyFrom(c.apiName)} = \`${c.apiName}\``).join(', ')} }\n\nexport const champions: ChampionData[] = ${formatJS(outputChampions)}\n\nexport const otherUnits: ChampionData[] = ${formatJS(outputOtherUnits)}\n`),
 	fs.writeFile(getPathTo(currentSetNumber, 'traits.ts'), `import { TraitKey } from '../index.js'\nimport type { TraitData } from '../index'\n\nexport const traits: TraitData[] = ${formatJS(traits)}\n`),
 	fs.writeFile(getPathTo(currentSetNumber, 'items.ts'), `import type { ItemData } from '../index'\n\n${outputItemSections.join('\n\n')}\n`),
 ])

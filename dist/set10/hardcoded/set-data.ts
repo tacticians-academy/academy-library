@@ -1,5 +1,3 @@
-export const UNPLAYABLE_CHAMPION_APINAMES = []
-
 export const TRAIT_DATA_SUBSTITUTIONS: Record<string, string> = {
 	'{4995a396}': '8-bit',
 	'{b540ffc4}': 'Big Shot',

@@ -1,6 +1,6 @@
 import type { ChampionData } from '../index'
 
-export enum ChampionKey { Ahri = `TFT10_Ahri`, Akali = `TFT10_Akali`, AkaliTrueDamage = `TFT10_Akali_TrueDamage`, Amumu = `TFT10_Amumu`, Annie = `TFT10_Annie`, Aphelios = `TFT10_Aphelios`, Bard = `TFT10_Bard`, Blitzcrank = `TFT10_Blitzcrank`, Caitlyn = `TFT10_Caitlyn`, Corki = `TFT10_Corki`, DiscoBall = `TFT10_DiscoBall`, Ekko = `TFT10_Ekko`, Evelynn = `TFT10_Evelynn`, Ezreal = `TFT10_Ezreal`, Garen = `TFT10_Garen`, Gnar = `TFT10_Gnar`, Gragas = `TFT10_Gragas`, Illaoi = `TFT10_Illaoi`, Jax = `TFT10_Jax`, Jhin = `TFT10_Jhin`, Jinx = `TFT10_Jinx`, KSante = `TFT10_KSante`, Kaisa = `TFT10_Kaisa`, Karthus = `TFT10_Karthus`, Katarina = `TFT10_Katarina`, Kayle = `TFT10_Kayle`, Kayn = `TFT10_Kayn`, Kennen = `TFT10_Kennen`, Lillia = `TFT10_Lillia`, Lucian = `TFT10_Lucian`, Lulu = `TFT10_Lulu`, LuluPolymorph = `TFT10_LuluPolymorph`, Lux = `TFT10_Lux`, MercenaryChest = `TFT6_MercenaryChest`, MissFortune = `TFT10_MissFortune`, Mordekaiser = `TFT10_Mordekaiser`, Nami = `TFT10_Nami`, Neeko = `TFT10_Neeko`, Olaf = `TFT10_Olaf`, Pantheon = `TFT10_Pantheon`, Poppy = `TFT10_Poppy`, Qiyana = `TFT10_Qiyana`, Riven = `TFT10_Riven`, Samira = `TFT10_Samira`, Senna = `TFT10_Senna`, Seraphine = `TFT10_Seraphine`, Sett = `TFT10_Sett`, DesperadoProp = `TFT10_DesperadoProp`, PBJProp = `TFT10_PBJProp`, SLIMECrab = `TFT9_SLIME_Crab`, Sona = `TFT10_Sona`, TahmKench = `TFT10_TahmKench`, TrainingDummy = `TFT_TrainingDummy`, Taric = `TFT10_Taric`, IllaoiMinion = `TFT10_IllaoiMinion`, CountryHecarim = `TFT10_CountryHecarim`, Thresh = `TFT10_Thresh`, EmblemArmoryKey = `TFT5_EmblemArmoryKey`, TwistedFate = `TFT10_TwistedFate`, Twitch = `TFT10_Twitch`, Urgot = `TFT10_Urgot`, Vex = `TFT10_Vex`, Vi = `TFT10_Vi`, Viego = `TFT10_Viego`, Voidspawn = `TFT_Voidspawn`, Yasuo = `TFT10_Yasuo`, Yone = `TFT10_Yone`, Yorick = `TFT10_Yorick`, YorickGhoulMelee = `TFT10_YorickGhoulMelee`, Zac = `TFT10_Zac`, Zed = `TFT10_Zed`, Ziggs = `TFT10_Ziggs` }
+export enum ChampionKey { Ahri = `TFT10_Ahri`, Akali = `TFT10_Akali`, AkaliTrueDamage = `TFT10_Akali_TrueDamage`, Amumu = `TFT10_Amumu`, Annie = `TFT10_Annie`, Aphelios = `TFT10_Aphelios`, Bard = `TFT10_Bard`, Blitzcrank = `TFT10_Blitzcrank`, Caitlyn = `TFT10_Caitlyn`, Corki = `TFT10_Corki`, DiscoBall = `TFT10_DiscoBall`, Ekko = `TFT10_Ekko`, Evelynn = `TFT10_Evelynn`, Ezreal = `TFT10_Ezreal`, Garen = `TFT10_Garen`, Gnar = `TFT10_Gnar`, Gragas = `TFT10_Gragas`, Illaoi = `TFT10_Illaoi`, Jax = `TFT10_Jax`, Jhin = `TFT10_Jhin`, Jinx = `TFT10_Jinx`, KSante = `TFT10_KSante`, Kaisa = `TFT10_Kaisa`, Karthus = `TFT10_Karthus`, Katarina = `TFT10_Katarina`, Kayle = `TFT10_Kayle`, Kayn = `TFT10_Kayn`, Kennen = `TFT10_Kennen`, Lillia = `TFT10_Lillia`, Lucian = `TFT10_Lucian`, Lulu = `TFT10_Lulu`, LuluPolymorph = `TFT10_LuluPolymorph`, Lux = `TFT10_Lux`, MissFortune = `TFT10_MissFortune`, Mordekaiser = `TFT10_Mordekaiser`, Nami = `TFT10_Nami`, Neeko = `TFT10_Neeko`, Olaf = `TFT10_Olaf`, Pantheon = `TFT10_Pantheon`, Poppy = `TFT10_Poppy`, Qiyana = `TFT10_Qiyana`, Riven = `TFT10_Riven`, Samira = `TFT10_Samira`, Senna = `TFT10_Senna`, Seraphine = `TFT10_Seraphine`, Sett = `TFT10_Sett`, DesperadoProp = `TFT10_DesperadoProp`, PBJProp = `TFT10_PBJProp`, SLIMECrab = `TFT9_SLIME_Crab`, Sona = `TFT10_Sona`, TahmKench = `TFT10_TahmKench`, TrainingDummy = `TFT_TrainingDummy`, Taric = `TFT10_Taric`, IllaoiMinion = `TFT10_IllaoiMinion`, CountryHecarim = `TFT10_CountryHecarim`, Thresh = `TFT10_Thresh`, TwistedFate = `TFT10_TwistedFate`, Twitch = `TFT10_Twitch`, Urgot = `TFT10_Urgot`, Vex = `TFT10_Vex`, Vi = `TFT10_Vi`, Viego = `TFT10_Viego`, Voidspawn = `TFT_Voidspawn`, Yasuo = `TFT10_Yasuo`, Yone = `TFT10_Yone`, Yorick = `TFT10_Yorick`, YorickGhoulMelee = `TFT10_YorickGhoulMelee`, Zac = `TFT10_Zac`, Zed = `TFT10_Zed`, Ziggs = `TFT10_Ziggs` }
 
 export const champions: ChampionData[] = [
 	{
@@ -3247,7 +3247,7 @@ export const champions: ChampionData[] = [
 		cost: undefined,
 		starLevel: undefined,
 		teamSize: undefined,
-		isSpawn: false,
+		isSpawn: true,
 		traits: [],
 		stats: {
 			armor: 0,
@@ -3381,46 +3381,6 @@ export const champions: ChampionData[] = [
 				uninterruptable: undefined,
 			},
 		],
-	},
-	{
-		apiName: `TFT6_MercenaryChest`,
-		name: `Mercenary Chest`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT6_MercenaryChest.dds`,
-		cost: undefined,
-		starLevel: undefined,
-		teamSize: 0,
-		isSpawn: false,
-		traits: [],
-		stats: {
-			armor: 0,
-			attackSpeed: undefined,
-			critChance: 0.25,
-			critMultiplier: 1.2999999523162842,
-			damage: 0,
-			hp: 1,
-			initialMana: 0,
-			magicResist: 0,
-			mana: 12,
-			moveSpeed: 500,
-			range: 0,
-		},
-		basicAttackMissileSpeed: undefined,
-		critAttackMissileSpeed: undefined,
-		passive: undefined,
-		spells: [
-			{
-				name: `TFT6_MercenaryChest`,
-				castTime: 0.5,
-				missile: undefined,
-				variables: {
-					'RoundsToHatch': [2, 2, 2, 2],
-				},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-		],
-		missiles: [],
 	},
 	{
 		apiName: `TFT10_MissFortune`,
@@ -4717,7 +4677,7 @@ export const champions: ChampionData[] = [
 		cost: undefined,
 		starLevel: undefined,
 		teamSize: undefined,
-		isSpawn: false,
+		isSpawn: true,
 		traits: [],
 		stats: {
 			armor: 0,
@@ -4745,7 +4705,7 @@ export const champions: ChampionData[] = [
 		cost: undefined,
 		starLevel: undefined,
 		teamSize: undefined,
-		isSpawn: false,
+		isSpawn: true,
 		traits: [],
 		stats: {
 			armor: 0,
@@ -4785,7 +4745,7 @@ export const champions: ChampionData[] = [
 		cost: undefined,
 		starLevel: undefined,
 		teamSize: undefined,
-		isSpawn: false,
+		isSpawn: true,
 		traits: [],
 		stats: {
 			armor: 10,
@@ -5559,46 +5519,6 @@ export const champions: ChampionData[] = [
 				uninterruptable: true,
 			},
 		],
-	},
-	{
-		apiName: `TFT5_EmblemArmoryKey`,
-		name: `Tome of Traits`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT5_EmblemArmoryKey.dds`,
-		cost: undefined,
-		starLevel: undefined,
-		teamSize: undefined,
-		isSpawn: false,
-		traits: [],
-		stats: {
-			armor: 10,
-			attackSpeed: 1,
-			critChance: null,
-			critMultiplier: 0,
-			damage: 10,
-			hp: 10,
-			initialMana: 0,
-			magicResist: 10,
-			mana: 100,
-			moveSpeed: 1,
-			range: NaN,
-		},
-		basicAttackMissileSpeed: undefined,
-		critAttackMissileSpeed: undefined,
-		passive: undefined,
-		spells: [
-			{
-				name: `TFT5_EmblemArmoryKey`,
-				castTime: 0.5,
-				missile: undefined,
-				variables: {
-					'RoundsToHatch': [2, 2, 2, 2],
-				},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-		],
-		missiles: [],
 	},
 	{
 		apiName: `TFT10_TwistedFate`,
@@ -7030,5 +6950,88 @@ export const champions: ChampionData[] = [
 				uninterruptable: true,
 			},
 		],
+	},
+]
+
+export const otherUnits: ChampionData[] = [
+	{
+		apiName: `TFT6_MercenaryChest`,
+		name: `Mercenary Chest`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT6_MercenaryChest.dds`,
+		cost: undefined,
+		starLevel: undefined,
+		teamSize: 0,
+		isSpawn: true,
+		traits: [],
+		stats: {
+			armor: 0,
+			attackSpeed: undefined,
+			critChance: 0.25,
+			critMultiplier: 1.2999999523162842,
+			damage: 0,
+			hp: 1,
+			initialMana: 0,
+			magicResist: 0,
+			mana: 12,
+			moveSpeed: 500,
+			range: 0,
+		},
+		basicAttackMissileSpeed: undefined,
+		critAttackMissileSpeed: undefined,
+		passive: undefined,
+		spells: [
+			{
+				name: `TFT6_MercenaryChest`,
+				castTime: 0.5,
+				missile: undefined,
+				variables: {
+					'RoundsToHatch': [2, 2, 2, 2],
+				},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
+			},
+		],
+		missiles: [],
+	},
+	{
+		apiName: `TFT5_EmblemArmoryKey`,
+		name: `Tome of Traits`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT5_EmblemArmoryKey.dds`,
+		cost: undefined,
+		starLevel: undefined,
+		teamSize: undefined,
+		isSpawn: true,
+		traits: [],
+		stats: {
+			armor: 10,
+			attackSpeed: 1,
+			critChance: null,
+			critMultiplier: 0,
+			damage: 10,
+			hp: 10,
+			initialMana: 0,
+			magicResist: 10,
+			mana: 100,
+			moveSpeed: 1,
+			range: NaN,
+		},
+		basicAttackMissileSpeed: undefined,
+		critAttackMissileSpeed: undefined,
+		passive: undefined,
+		spells: [
+			{
+				name: `TFT5_EmblemArmoryKey`,
+				castTime: 0.5,
+				missile: undefined,
+				variables: {
+					'RoundsToHatch': [2, 2, 2, 2],
+				},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
+			},
+		],
+		missiles: [],
 	},
 ]

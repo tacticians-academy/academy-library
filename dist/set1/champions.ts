@@ -5697,3 +5697,5 @@ export const champions: ChampionData[] = [
 		],
 	},
 ]
+
+export const otherUnits: ChampionData[] = []

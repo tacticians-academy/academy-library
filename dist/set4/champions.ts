@@ -5454,3 +5454,5 @@ export const champions: ChampionData[] = [
 		missiles: [],
 	},
 ]
+
+export const otherUnits: ChampionData[] = []
