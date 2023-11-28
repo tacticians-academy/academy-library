@@ -145,6 +145,20 @@ export const completedItems: ItemData[] = [
 		unique: false,
 	},
 	{
+		apiName: `TFT_Item_SeraphsEmbrace`,
+		desc: `After casting their Ability, the holder gains %i:scaleMana% @ManaRestore@ mana.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>`,
+		effects: {
+			'Mana': 30,
+			'ManaRestore': 20,
+			'{71bc3700}': 200,
+		},
+		from: [4, 4],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Blue_Buff.dds`,
+		id: 44,
+		name: `Blue Buff`,
+		unique: true,
+	},
+	{
 		apiName: `TFT_Item_BrambleVest`,
 		desc: `Negates bonus damage from incoming critical strikes. On being hit by an attack, deal @1StarAoEDamage@/@2StarAoEDamage@/@3StarAoEDamage@ %i:star% magic damage to all nearby enemies (once every @ICD@ seconds).`,
 		effects: {
@@ -1859,20 +1873,6 @@ export const hexbuffItems: ItemData[] = [
 export const modItems: ItemData[] = []
 
 export const unreleasedItems: ItemData[] = [
-	{
-		apiName: `TFT_Item_SeraphsEmbrace`,
-		desc: `After casting their Ability, the holder gains %i:scaleMana% @ManaRestore@ mana.<br><br><tftitemrules>[Unique - Only One Per Champion]</tftitemrules>`,
-		effects: {
-			'Mana': 30,
-			'ManaRestore': 20,
-			'{71bc3700}': 200,
-		},
-		from: [4, 4],
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Blue_Buff.dds`,
-		id: 44,
-		name: `Blue Buff`,
-		unique: true,
-	},
 	{
 		apiName: `TFT_Item_Catalyst`,
 		desc: `Whenever any unit dies, gain X Mana.`,

@@ -101,6 +101,15 @@ export const itemFlashcards: ItemFlashcard[] = [
 		unique: false,
 	},
 	{
+		id: `TFT_Item_SeraphsEmbrace`,
+		name: `Blue Buff`,
+		type: `completed`,
+		description: `Abilities cost 10 less Mana to cast. If the holder gets at least 1 takedown within 3 seconds of casting, gain 10 Mana. [Unique - only 1 per champion]`,
+		icon: `assets/maps/particles/tft/item_icons/standard/blue_buff`,
+		from: [],
+		unique: true,
+	},
+	{
 		id: `TFT_Item_BrambleVest`,
 		name: `Bramble Vest`,
 		type: `completed`,

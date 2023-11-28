@@ -101,6 +101,15 @@ export const itemFlashcards: ItemFlashcard[] = [
 		unique: false,
 	},
 	{
+		id: `TFT_Item_SeraphsEmbrace`,
+		name: `Blue Buff`,
+		type: `completed`,
+		description: `After casting their Ability, the holder gains 20 mana. [Unique - Only One Per Champion]`,
+		icon: `assets/maps/particles/tft/item_icons/standard/blue_buff`,
+		from: [4, 4],
+		unique: true,
+	},
+	{
 		id: `TFT_Item_BrambleVest`,
 		name: `Bramble Vest`,
 		type: `completed`,

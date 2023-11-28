@@ -110,6 +110,15 @@ export const itemFlashcards: ItemFlashcard[] = [
 		unique: false,
 	},
 	{
+		id: `TFT_Item_SeraphsEmbrace`,
+		name: `Blue Buff`,
+		type: `completed`,
+		description: `Combat Start: Grant {BonusMana} bonus starting Mana. After casting an Ability, set Mana to 20. [Unique - only 1 per champion]`,
+		icon: `assets/maps/particles/tft/item_icons/standard/blue_buff`,
+		from: [4, 4],
+		unique: true,
+	},
+	{
 		id: `TFT_Item_BrambleVest`,
 		name: `Bramble Vest`,
 		type: `completed`,

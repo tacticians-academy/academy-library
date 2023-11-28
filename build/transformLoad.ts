@@ -29,7 +29,8 @@ const GLOBAL_UNRELEASED_ITEM_IDS = [
 	149, // Catalyst
 	529, // Spell Thief
 ]
-const GLOBAL_UNRELEASED_ITEM_APIKEYS = [
+const SET_9_5_REWORK_REMOVED_ITEM_APIKEYS = [
+	'TFT_Item_TitanicHydra',
 	'TFT_Item_SeraphsEmbrace',
 ]
 
@@ -155,10 +156,19 @@ itemsData.reverse().forEach(item => {
 		typeKey = 'emblem'
 
 	} else if (item.apiName != null) { // Set >= 5
-		if (GLOBAL_UNRELEASED_ITEM_APIKEYS.includes(item.apiName) || item.name.startsWith(`Choncc's `)) {
+		if (currentSetNumber >= 9.5 && SET_9_5_REWORK_REMOVED_ITEM_APIKEYS.includes(item.apiName)) {
+			return
+		}
+
+		if (item.name.startsWith(`Choncc's `)) {
 			typeKey = 'unreleased'
 
 		// Mods
+		} else if (item.apiName === 'TFT6_Item_EliteSpotlight') {
+			if (parentSetNumber !== 6) {
+				return
+			}
+			typeKey = 'mod'
 		} else if (item.apiName === 'TFT7_Item_TrainerSnax') {
 			if (currentSetNumber !== 7) {
 				return

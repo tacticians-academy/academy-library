@@ -199,6 +199,24 @@ export const completedItems: ItemData[] = [
 		unique: false,
 	},
 	{
+		apiName: `TFT_Item_SeraphsEmbrace`,
+		associatedTraits: [],
+		composition: [`TFT_Item_TearOfTheGoddess`, `TFT_Item_TearOfTheGoddess`],
+		desc: `Combat Start: Grant %i:scaleMana% @BonusMana@ bonus starting Mana. After casting an Ability, set Mana to %i:scaleMana% @ManaRestore@.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules><br>`,
+		effects: {
+			'Mana': 30,
+			'ManaRestore': 20,
+			'{43012963}': 20,
+			'{71bc3700}': 200,
+		},
+		from: [4, 4],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Blue_Buff.dds`,
+		id: 44,
+		incompatibleTraits: [],
+		name: `Blue Buff`,
+		unique: true,
+	},
+	{
 		apiName: `TFT_Item_BrambleVest`,
 		associatedTraits: [],
 		composition: [`TFT_Item_ChainVest`, `TFT_Item_ChainVest`],
@@ -2430,24 +2448,6 @@ export const modItems: ItemData[] = [
 ]
 
 export const unreleasedItems: ItemData[] = [
-	{
-		apiName: `TFT_Item_SeraphsEmbrace`,
-		associatedTraits: [],
-		composition: [`TFT_Item_TearOfTheGoddess`, `TFT_Item_TearOfTheGoddess`],
-		desc: `Combat Start: Grant %i:scaleMana% @BonusMana@ bonus starting Mana. After casting an Ability, set Mana to %i:scaleMana% @ManaRestore@.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules><br>`,
-		effects: {
-			'Mana': 30,
-			'ManaRestore': 20,
-			'{43012963}': 20,
-			'{71bc3700}': 200,
-		},
-		from: [4, 4],
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Blue_Buff.dds`,
-		id: 44,
-		incompatibleTraits: [],
-		name: `Blue Buff`,
-		unique: true,
-	},
 	{
 		apiName: `TFT6_Item_EliteSpotlight`,
 		associatedTraits: [],

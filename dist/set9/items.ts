@@ -178,6 +178,25 @@ export const completedItems: ItemData[] = [
 		unique: false,
 	},
 	{
+		apiName: `TFT_Item_SeraphsEmbrace`,
+		associatedTraits: [],
+		composition: [`TFT_Item_TearOfTheGoddess`, `TFT_Item_TearOfTheGoddess`],
+		desc: `Abilities cost %i:scaleMana% @ManaReduction@ less Mana to cast. <br><br>If the holder gets at least 1 takedown within @TakedownTimer@ seconds of casting, gain %i:scaleMana% @ManaOnTakedown@ Mana.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules><br>`,
+		effects: {
+			'AP': 10,
+			'Mana': 40,
+			'ManaOnTakedown': 10,
+			'ManaReduction': 10,
+			'TakedownTimer': 3,
+		},
+		from: null,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Blue_Buff.tex`,
+		id: null,
+		incompatibleTraits: [],
+		name: `Blue Buff`,
+		unique: true,
+	},
+	{
 		apiName: `TFT_Item_BrambleVest`,
 		associatedTraits: [],
 		composition: [`TFT_Item_ChainVest`, `TFT_Item_ChainVest`],
@@ -2759,25 +2778,6 @@ export const modItems: ItemData[] = [
 ]
 
 export const unreleasedItems: ItemData[] = [
-	{
-		apiName: `TFT_Item_SeraphsEmbrace`,
-		associatedTraits: [],
-		composition: [`TFT_Item_TearOfTheGoddess`, `TFT_Item_TearOfTheGoddess`],
-		desc: `Abilities cost %i:scaleMana% @ManaReduction@ less Mana to cast. <br><br>If the holder gets at least 1 takedown within @TakedownTimer@ seconds of casting, gain %i:scaleMana% @ManaOnTakedown@ Mana.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules><br>`,
-		effects: {
-			'AP': 10,
-			'Mana': 40,
-			'ManaOnTakedown': 10,
-			'ManaReduction': 10,
-			'TakedownTimer': 3,
-		},
-		from: null,
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Blue_Buff.tex`,
-		id: null,
-		incompatibleTraits: [],
-		name: `Blue Buff`,
-		unique: true,
-	},
 	{
 		apiName: `TFT6_Item_EliteSpotlight`,
 		associatedTraits: [],
