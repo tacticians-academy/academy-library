@@ -718,6 +718,21 @@ export const completedItems: ItemData[] = [
 		name: `Zephyr`,
 		unique: true,
 	},
+	{
+		apiName: `TFT_Item_TitanicHydra`,
+		composition: [`TFT_Item_RecurveBow`, `TFT_Item_GiantsBelt`],
+		desc: `Combat start: <TFTKeyword>Taunt</TFTKeyword>.<br>On death, a Voidspawn arises, <TFTKeyword>Taunting</TFTKeyword> nearby enemies. <br><br><tftitemrules><tftbold>Taunt</tftbold>: enemies that are able and in range must attack the taunter</tftitemrules>`,
+		effects: {
+			'AS': 10,
+			'HP': 150,
+			'SummonedStatReduction': 25,
+		},
+		from: null,
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/ZZRot_Portal.dds`,
+		id: null,
+		name: `Zz'Rot Portal`,
+		unique: false,
+	},
 ]
 
 export const emblemItems: ItemData[] = [
@@ -2323,21 +2338,6 @@ export const unreleasedItems: ItemData[] = [
 		id: null,
 		name: `TFT6_Item_Name_EliteSpotlight`,
 		unique: true,
-	},
-	{
-		apiName: `TFT_Item_TitanicHydra`,
-		composition: [`TFT_Item_RecurveBow`, `TFT_Item_GiantsBelt`],
-		desc: `Combat start: <TFTKeyword>Taunt</TFTKeyword>.<br>On death, a Voidspawn arises, <TFTKeyword>Taunting</TFTKeyword> nearby enemies. <br><br><tftitemrules><tftbold>Taunt</tftbold>: enemies that are able and in range must attack the taunter</tftitemrules>`,
-		effects: {
-			'AS': 10,
-			'HP': 150,
-			'SummonedStatReduction': 25,
-		},
-		from: null,
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/ZZRot_Portal.dds`,
-		id: null,
-		name: `Zz'Rot Portal`,
-		unique: false,
 	},
 ]
 

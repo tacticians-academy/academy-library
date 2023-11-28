@@ -655,6 +655,21 @@ export const completedItems: ItemData[] = [
 		name: `Zephyr`,
 		unique: true,
 	},
+	{
+		apiName: `TFT_Item_TitanicHydra`,
+		desc: `At the start of combat, the holder taunts enemies within @HexRadius@ hexes. <br><br>When the holder dies, a Voidspawn arises taunting nearby enemies. Voidspawns that arise from summoned units are @SummonedStatReduction@% effective.`,
+		effects: {
+			'AS': 10,
+			'HP': 150,
+			'HexRadius': 4,
+			'SummonedStatReduction': 25,
+		},
+		from: [2, 7],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/ZZRot_Portal.dds`,
+		id: 27,
+		name: `Zz'Rot Portal`,
+		unique: false,
+	},
 ]
 
 export const emblemItems: ItemData[] = [
@@ -2465,21 +2480,6 @@ export const unreleasedItems: ItemData[] = [
 		id: 9100,
 		name: `TFT6_Item_Name_EliteSpotlight`,
 		unique: true,
-	},
-	{
-		apiName: `TFT_Item_TitanicHydra`,
-		desc: `At the start of combat, the holder taunts enemies within @HexRadius@ hexes. <br><br>When the holder dies, a Voidspawn arises taunting nearby enemies. Voidspawns that arise from summoned units are @SummonedStatReduction@% effective.`,
-		effects: {
-			'AS': 10,
-			'HP': 150,
-			'HexRadius': 4,
-			'SummonedStatReduction': 25,
-		},
-		from: [2, 7],
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/ZZRot_Portal.dds`,
-		id: 27,
-		name: `Zz'Rot Portal`,
-		unique: false,
 	},
 ]
 

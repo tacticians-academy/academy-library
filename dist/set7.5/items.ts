@@ -798,6 +798,23 @@ export const completedItems: ItemData[] = [
 		name: `Zephyr`,
 		unique: true,
 	},
+	{
+		apiName: `TFT_Item_TitanicHydra`,
+		associatedTraits: [],
+		composition: [`TFT_Item_RecurveBow`, `TFT_Item_GiantsBelt`],
+		desc: `Combat start: Taunt all enemies that are in range to attack the holder.<br><br>On death, a Voidspawn arises, taunting nearby enemies. Voidspawns that arise from summoned units are @SummonedStatReduction@% effective.`,
+		effects: {
+			'AS': 10,
+			'HP': 150,
+			'SummonedStatReduction': 25,
+		},
+		from: [2, 7],
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/ZZRot_Portal.dds`,
+		id: 27,
+		incompatibleTraits: [],
+		name: `Zz'Rot Portal`,
+		unique: false,
+	},
 ]
 
 export const emblemItems: ItemData[] = [
@@ -2443,23 +2460,6 @@ export const unreleasedItems: ItemData[] = [
 		incompatibleTraits: [],
 		name: `TFT6_Item_Name_EliteSpotlight`,
 		unique: true,
-	},
-	{
-		apiName: `TFT_Item_TitanicHydra`,
-		associatedTraits: [],
-		composition: [`TFT_Item_RecurveBow`, `TFT_Item_GiantsBelt`],
-		desc: `Combat start: Taunt all enemies that are in range to attack the holder.<br><br>On death, a Voidspawn arises, taunting nearby enemies. Voidspawns that arise from summoned units are @SummonedStatReduction@% effective.`,
-		effects: {
-			'AS': 10,
-			'HP': 150,
-			'SummonedStatReduction': 25,
-		},
-		from: [2, 7],
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/ZZRot_Portal.dds`,
-		id: 27,
-		incompatibleTraits: [],
-		name: `Zz'Rot Portal`,
-		unique: false,
 	},
 ]
 

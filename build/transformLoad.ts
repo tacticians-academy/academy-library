@@ -30,7 +30,6 @@ const GLOBAL_UNRELEASED_ITEM_IDS = [
 	529, // Spell Thief
 ]
 const GLOBAL_UNRELEASED_ITEM_APIKEYS = [
-	'TFT_Item_TitanicHydra',
 	'TFT_Item_SeraphsEmbrace',
 ]
 

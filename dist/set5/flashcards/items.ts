@@ -389,6 +389,15 @@ export const itemFlashcards: ItemFlashcard[] = [
 		unique: true,
 	},
 	{
+		id: `TFT_Item_TitanicHydra`,
+		name: `Zz'Rot Portal`,
+		type: `completed`,
+		description: `At the start of combat, the holder taunts enemies within 2 hexes. When the holder dies, a Voidspawn arises taunting nearby enemies. Voidspawns that arise from summoned units are 25% effective.`,
+		icon: `assets/maps/particles/tft/item_icons/standard/zzrot_portal`,
+		from: [2, 7],
+		unique: false,
+	},
+	{
 		id: `TFT5_Item_LudensEchoShadow`,
 		name: `Archdemon's Staff Of Immortality`,
 		type: `completed`,

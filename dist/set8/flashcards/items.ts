@@ -407,6 +407,15 @@ export const itemFlashcards: ItemFlashcard[] = [
 		unique: true,
 	},
 	{
+		id: `TFT_Item_TitanicHydra`,
+		name: `Zz'Rot Portal`,
+		type: `completed`,
+		description: `Combat start: Taunt . On death, a Voidspawn arises, Taunting nearby enemies. Taunt : enemies that are able and in range must attack the taunter`,
+		icon: `assets/maps/particles/tft/item_icons/standard/zzrot_portal`,
+		from: [],
+		unique: false,
+	},
+	{
 		id: `TFT5_Item_RedemptionRadiant`,
 		name: `Absolution`,
 		type: `completed`,
