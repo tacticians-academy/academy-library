@@ -37,7 +37,6 @@ const GLOBAL_UNRELEASED_ITEM_APIKEYS = [
 const GLOBAL_IGNORE_UNIT_APINAMES = [
 	'TFT5_DraconicEgg',
 	'TFT5_EmblemArmoryKey',
-	'TFT6_MercenaryChest',
 	'TFT6_TheGoldenEgg',
 ]
 
@@ -512,11 +511,11 @@ function getSpell(name: string, json: ChampionJSON): ChampionJSONSpell | undefin
 
 const playableUnits = champions
 	.filter(unit => {
-		unit.apiName = getAPIName(unit)
-		if (!unit.icon || IGNORE_UNIT_APINAMES?.includes(unit.apiName) === true) {
+		if (!unit.icon || unit.stats.attackSpeed == null) {
 			return false
 		}
-		return true
+		unit.apiName = getAPIName(unit)
+		return !IGNORE_UNIT_APINAMES?.includes(unit.apiName)
 	})
 	.sort(sortByName)
 

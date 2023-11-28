@@ -6788,46 +6788,6 @@ export const champions: ChampionData[] = [
 
 export const otherUnits: ChampionData[] = [
 	{
-		apiName: `TFT6_MercenaryChest`,
-		name: `Mercenary Chest`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT6_MercenaryChest.dds`,
-		cost: undefined,
-		starLevel: undefined,
-		teamSize: 0,
-		isSpawn: true,
-		traits: [],
-		stats: {
-			armor: 0,
-			attackSpeed: undefined,
-			critChance: 0.25,
-			critMultiplier: 1.2999999523162842,
-			damage: 0,
-			hp: 1,
-			initialMana: 0,
-			magicResist: 0,
-			mana: 12,
-			moveSpeed: 500,
-			range: 0,
-		},
-		basicAttackMissileSpeed: undefined,
-		critAttackMissileSpeed: undefined,
-		passive: undefined,
-		spells: [
-			{
-				name: `TFT6_MercenaryChest`,
-				castTime: 0.5,
-				missile: undefined,
-				variables: {
-					'RoundsToHatch': [2, 2, 2, 2],
-				},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-		],
-		missiles: [],
-	},
-	{
 		apiName: `TFT6_TheGoldenEgg`,
 		name: `The Golden Egg`,
 		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT6_TheGoldenEgg.dds`,
