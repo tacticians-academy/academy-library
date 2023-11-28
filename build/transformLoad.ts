@@ -639,7 +639,7 @@ const formattedUnits = await Promise.all(playableUnits.map(async (unit): Promise
 	}
 
 	const knownTraits = Object.values(TRAIT_DATA_SUBSTITUTIONS)
-	const isSpawn = characterRecord.isSpawn || unit.cost === 8 || unit.cost === 11 || unit.apiName === 'TFT_VoidSpawn'
+	const isSpawn = characterRecord.isSpawn || unit.stats.hp == null || unit.cost === 8 || unit.cost === 11
 	const traits = characterRecord.mLinkedTraits?.map(traitData => {
 		const traitAPIName = traitData.TraitData!
 		if (traitAPIName.startsWith('{')) {
