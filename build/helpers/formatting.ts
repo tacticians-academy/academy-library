@@ -19,7 +19,7 @@ export function formatJS(json: any, indents: string = ''): string {
 		}
 		const description = keys
 			.map(key => {
-				const needsQuotes = key[0] === '{' || !isNaN(parseInt(key[0], 10)) || key[0] !== key[0].toLowerCase()
+				const needsQuotes = key[0] === '{' || !isNaN(parseFloat(key[0])) || key[0] !== key[0].toLowerCase()
 				return `${needsQuotes ? `'${key}'` : key}: ${formatJS(json[key], nextIndents)}`
 			})
 			.join(`,\n${nextIndents}`)
