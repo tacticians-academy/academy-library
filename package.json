@@ -8,8 +8,8 @@
 	"main": "dist/index.ts",
 	"types": "dist/index.ts",
 	"scripts": {
-		"prepare": "node --loader ts-node/esm build/extract.ts && node --loader ts-node/esm build/transformLoad.ts && node --loader ts-node/esm build/product/validate.ts && node --loader ts-node/esm build/product/flashcards.ts",
-		"github": "node --loader ts-node/esm build/product/github.ts"
+		"prepare": "node --loader ts-node/esm build/update-current.ts",
+		"etl:all": "node --loader ts-node/esm build/update-all.ts"
 	},
 	"devDependencies": {
 		"@ky-is/eslint-config": "^2.5.1",

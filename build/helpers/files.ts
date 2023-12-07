@@ -4,27 +4,27 @@ import path from 'path'
 import type { SetNumber } from '../../dist'
 
 const cachePath = path.resolve('build', 'cache')
+const patchesPath = path.resolve('build', 'patches')
+
 await fs.mkdir(cachePath, { recursive: true })
 
-export const setNumberPath = path.resolve(cachePath, 'set_number.local')
 export const githubTokenPath = path.resolve(cachePath, 'github_token.local')
 
-export async function getCurrentSetNumber() {
-	const setString = await fs.readFile(setNumberPath, 'utf8')
-	return (parseFloat(setString) ?? 1) as SetNumber
+export function getOutputFolderForSet(setNumber: SetNumber) {
+	return path.join('dist', `set${setNumber}`)
 }
 
-export function getOutputFolder(setNumber: SetNumber) {
-	return `dist/set${setNumber}`
+export function getPathToPatch(patchLine: string, filename: string) {
+	return path.join(patchesPath, patchLine, filename)
 }
 
-export function getPathTo(setNumber: SetNumber, filename: string) {
-	return path.resolve(getOutputFolder(setNumber), filename)
+export function getPathToSet(setNumber: SetNumber, filename: string) {
+	return path.resolve(getOutputFolderForSet(setNumber), filename)
 }
 
 export async function loadHardcodedTXT(currentSetNumber: SetNumber, name: string) {
 	try {
-		const text = await fs.readFile(getPathTo(currentSetNumber, `hardcoded/${name}.txt`), 'utf8')
+		const text = await fs.readFile(getPathToSet(currentSetNumber, `hardcoded/${name}.txt`), 'utf8')
 		return text
 			.split('\n')
 			.filter(line => line)

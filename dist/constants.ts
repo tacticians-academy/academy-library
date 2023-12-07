@@ -1,4 +1,4 @@
-export const SET_DATA = {
+export const SET_DATA: Record<number, {patchLine: string, milestoneID?: number}> = {
 	1: {
 		patchLine: '9.21',
 	},
@@ -28,6 +28,7 @@ export const SET_DATA = {
 	},
 	6.5: {
 		patchLine: '12.10',
+		milestoneID: 1,
 	},
 	7: {
 		patchLine: '12.16',
