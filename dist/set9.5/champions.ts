@@ -5014,23 +5014,170 @@ export const champions: ChampionData[] = [
 		isSpawn: false,
 		traits: [`{c50fe1eb}`, `{d7ded6a9}`],
 		stats: {
-			armor: 30,
+			armor: 50,
 			attackSpeed: 0.8500000238418579,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
 			damage: 50,
 			hp: 1111,
-			initialMana: 0,
-			magicResist: 30,
+			initialMana: 30,
+			magicResist: 50,
 			mana: 999,
 			moveSpeed: 500,
-			range: 4,
+			range: 2,
 		},
-		basicAttackMissileSpeed: 2400,
-		critAttackMissileSpeed: 2400,
+		basicAttackMissileSpeed: undefined,
+		critAttackMissileSpeed: undefined,
 		passive: undefined,
-		spells: [],
-		missiles: [],
+		spells: [
+			{
+				name: `TFT9_RyzeSpellIxtal`,
+				castTime: 0.25,
+				missile: undefined,
+				variables: {
+					'ArmorScalar': [1.5, 2, 3, 15],
+					'MRScalar': [1.5, 2, 3, 15],
+					'StunDuration': [2, 2, 2.5, 10],
+					'BarkskinDuration': [4, 4, 4, 4],
+					'BarskinDefenceScalar': [1, 1, 1, 1],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `ArmorScalar`,
+										starValues: [1.5, 2, 3, 15],
+										stat: `Armor`,
+										ratio: 1,
+									},
+								],
+							},
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `MRScalar`,
+										starValues: [1.5, 2, 3, 15],
+										stat: undefined,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+					'Armor': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `BarskinDefenceScalar`,
+										starValues: [1, 1, 1, 1],
+										stat: `Armor`,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+					'MR': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `BarskinDefenceScalar`,
+										starValues: [1, 1, 1, 1],
+										stat: undefined,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+					'BarkskinDuration': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `BarkskinDuration`,
+										starValues: [4, 4, 4, 4],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+		],
+		missiles: [
+			{
+				name: `TFT9_RyzeIxtalBasicAttack2`,
+				castTime: undefined,
+				missile: {
+					width: undefined,
+					travelTime: undefined,
+					speedInitial: 2400,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+			{
+				name: `TFT9_RyzeIxtalBasicAttack`,
+				castTime: undefined,
+				missile: {
+					width: undefined,
+					travelTime: undefined,
+					speedInitial: 2400,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+			{
+				name: `TFT9_RyzeIxtalCritAttack`,
+				castTime: undefined,
+				missile: {
+					width: undefined,
+					travelTime: undefined,
+					speedInitial: 2400,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+		],
 	},
 	{
 		apiName: `TFT9_RyzeDemacia`,

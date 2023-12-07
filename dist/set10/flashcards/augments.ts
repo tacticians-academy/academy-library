@@ -117,14 +117,14 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `bigger shot`,
 		name: `Bigger Shot`,
 		tiers: [2],
-		description: `Every {BonusAttackThreshold} attacks, Big Shots also fire a bomb that deals 65% Attack Damage to enemies within 1 hex of the target. Gain a Kaisa.`,
+		description: `Every {BonusAttackThreshold} attacks, Big Shots also fire a bomb that deals 65% Attack Damage to enemies within 1 hex of the target. Gain a Kai'Sa.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/bigger-shot-ii.tft_set10`],
 	},
 	{
 		id: `binary airdrop`,
 		name: `Binary Airdrop`,
 		tiers: [3],
-		description: `Combat start: champions holding 2 items gain a random 3rd completed item.<br><br>Gain 1 random component now.`,
+		description: `Combat start: champions holding 2 items gain a random 3rd completed item. Gain 2 gold.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/binaryairdrop3`],
 	},
 	{
@@ -138,7 +138,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `blank slate`,
 		name: `Blank Slate`,
 		tiers: [2],
-		description: `Immediately sell your team (including bench) for {BonusGoldTOOLTIPONLY}% of their value. Your next {FreeRerolls} Shop rerolls are free.`,
+		description: `Immediately sell your team (including bench) for {BonusGoldTOOLTIPONLY}% of their value. Your next {FreeRerolls} Shop rerolls this round are free.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/blank-slate-ii.tft_set10`],
 	},
 	{
@@ -313,7 +313,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `contagion`,
 		name: `Contagion`,
 		tiers: [2],
-		description: `Combat start: The highest HP enemy takes 18% more damage. Every 5 seconds, this effect spreads to 2 nearby enemies.`,
+		description: `Combat start: The highest HP enemy takes 18% more damage. Every 5 seconds or on death, this effect spreads to 2 nearby enemies.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/contagion-ii`],
 	},
 	{
@@ -348,7 +348,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `cutting corners`,
 		name: `Cutting Corners`,
 		tiers: [1],
-		description: `Leveling up costs 4 XP less.<br><br><rules>(Level 4 to 5 costs 6 XP instead of 10.)</rules>`,
+		description: `Leveling up costs 4 XP less.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/cutting-corners-i`],
 	},
 	{
@@ -446,21 +446,21 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `encore`,
 		name: `Encore!`,
 		tiers: [2],
-		description: `The first time your Headliner dies, they become invulerable and heal 60% of their max HP over 1.5 seconds instead.`,
+		description: `The first time your Headliner dies, they become invulnerable and heal 60% of their max HP over 1.5 seconds instead.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/encore-ii.tft_set10`],
 	},
 	{
 		id: `endless hordes`,
 		name: `Endless Hordes`,
 		tiers: [3],
-		description: `Gain +3 maximum team size, but your units can only hold 1 item and their total HP is reduced by 15%. Gain 4 gold.`,
+		description: `Gain +3 maximum team size, but your units can only hold 1 item and their total HP is reduced by 20%. Gain 4 gold.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/100-duck-sized-horses-iii`],
 	},
 	{
 		id: `endless hordes `,
 		name: `Endless Hordes +`,
 		tiers: [3],
-		description: `Gain +3 maximum team size, but your units can only hold 1 item and their total HP is reduced by 15%. Gain 14 gold.`,
+		description: `Gain +3 maximum team size, but your units can only hold 1 item and their total HP is reduced by 20%. Gain 14 gold.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/100-duck-sized-horses-iii`],
 	},
 	{
@@ -495,7 +495,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `extended play`,
 		name: `Extended Play`,
 		tiers: [2],
-		description: `Gain bonuses for starring Punk champions.<br>2-star: Your next Shop reroll costs {costreduction} gold less<br>3-star: Gain 1 component`,
+		description: `Gain bonuses for starring Punk champions.<br>2-star: Your next Shop reroll costs {costreduction} less gold<br>3-star: Gain 1 component`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/repetitive-riffing-ii.tft_set10`],
 	},
 	{
@@ -586,14 +586,14 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `give me your energy`,
 		name: `Give Me Your Energy!`,
 		tiers: [2],
-		description: `Crowd Divers gain 3 Armor, 3 Magic Resist, 3 Ability Power, 3% Attack Dower and 3% Attack Speed for each adjacent enemy. Gain an Evelynn and a Katarina.`,
+		description: `Crowd Divers gain 3 Armor, 3 Magic Resist, 3 Ability Power, 3% Attack Damage and 3% Attack Speed for each adjacent enemy. Gain an Evelynn and a Katarina.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/give-me-your-energy-ii.tft_set10`],
 	},
 	{
 		id: `going long`,
 		name: `Going Long`,
 		tiers: [3],
-		description: `You no longer gain interest. Round start: gain 4 XP.<br><br><rules>Interest is extra gold you gain per 10g saved.</rules>`,
+		description: `You no longer gain interest. Gain 8 gold now. Round start: gain 4 XP.<br><br><rules>Interest is extra gold you gain per 10g saved.</rules>`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/going-long-iii.tft_set10`],
 	},
 	{
@@ -691,7 +691,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `heroic presence`,
 		name: `Heroic Presence`,
 		tiers: [2],
-		description: `Enemies that attack a Guardian�s shield take magic damage equal to 7% of the shielded unit�s max HP (up to once per second). Gain a Pantheon.`,
+		description: `Enemies that attack a Guardian's shield take magic damage equal to 7% of the shielded unit's max HP (up to once per second). Gain a Pantheon.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/heroic-presence-ii`],
 	},
 	{
@@ -719,7 +719,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `hologram`,
 		name: `Hologram`,
 		tiers: [3],
-		description: `Create a clone of your Headliner champion with {MinBonusTOOLTIPONLY}% -{MaxBonusTOOLTIPONLY}% of its base HP (based on stage level). You cannot equip items on the clone.`,
+		description: `Create a clone of your Headliner with {MinBonusTOOLTIPONLY}% -{MaxBonusTOOLTIPONLY}% of their base HP (based on stage level). You cannot equip items on the clone.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/hologram-iii.tft_set10`],
 	},
 	{
@@ -761,7 +761,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `infernal contract`,
 		name: `Infernal Contract`,
 		tiers: [3],
-		description: `Your max level is 7. Gain 75 gold.`,
+		description: `Your max level is 7. Gain 90 gold.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/infernal-contract-iii`],
 	},
 	{
@@ -922,14 +922,14 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `little buddies`,
 		name: `Little Buddies`,
 		tiers: [2],
-		description: `Your 4-cost and 5-cost champions gain 150 HP and 10% Attack Speed  for every 1-cost and 2-cost champion on your board.`,
+		description: `Your 4-cost and 5-cost champions gain 100 HP and 10% Attack Speed  for every 1-cost and 2-cost champion on your board.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/little-buddies-ii.tft_set10`],
 	},
 	{
 		id: `live for danger`,
 		name: `Live for Danger`,
 		tiers: [2],
-		description: `Edgelords attacks deal {cleave}% of their damage to enemies within 1 hexes of their target. Gain a Yasuo and a Kayle.`,
+		description: `Edgelords' attacks deal {cleave}% of their damage to enemies within 1 hexes of their target. Gain a Yasuo and a Kayle.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/cold-steel-ii.tft_set10`],
 	},
 	{
@@ -963,6 +963,13 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 	{
 		id: `lucky gloves`,
 		name: `Lucky Gloves`,
+		tiers: [3],
+		description: `Thief's Gloves will always give your champions ideal items. Gain 2 Sparring Gloves.`,
+		icons: [`assets/maps/tft/icons/augments/hexcore/lucky-gloves-iii`],
+	},
+	{
+		id: `lucky gloves`,
+		name: `Lucky Gloves+`,
 		tiers: [3],
 		description: `Thief's Gloves will always give your champions ideal items. Gain 3 Sparring Gloves.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/lucky-gloves-iii`],
@@ -1251,14 +1258,14 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `ramping rhythm`,
 		name: `Ramping Rhythm`,
 		tiers: [2],
-		description: `Rapidfire champions can gain Attack Speed from their trait up to {NewMaxStacks} stacks. Gain a Jinx and a Senna.`,
+		description: `Rapidfire champions start combat with 3 stacks of Attack Speed from their trait, and can now go up to {NewMaxStacks} stacks. Gain a Jinx and a Senna.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/ramping-rhythm-ii.tft_set10`],
 	},
 	{
 		id: `reach the summit`,
 		name: `Reach the Summit`,
 		tiers: [1],
-		description: `When you reach Level 9, gain {ExpBonus} XP.`,
+		description: `When you reach Level 9, gain {ExpBonus} XP and 10 Gold.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/reach-the-summit-i.tft_set10`],
 	},
 	{
@@ -1370,7 +1377,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `share the spotlight`,
 		name: `Share the Spotlight`,
 		tiers: [2],
-		description: `Your units that start combat in a lighted hex gain a {HPShieldPercent}% max HP shield for 10 seconds. Gain a Kaisa and Lillia.`,
+		description: `Your units that start combat in a lighted hex gain a {HPShieldPercent}% max HP shield for 10 seconds. Gain a Kai'Sa and Lillia.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/mesmerizing-performance-ii.tft_set10`],
 	},
 	{
@@ -1496,7 +1503,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `submit to the pit`,
 		name: `Submit to the Pit`,
 		tiers: [2],
-		description: `For each adjacent enemy, Moshers gain 3 Armor, 3 Magic Resist, 3% Attack Damage, 3 Ability Power, and 3% Attack Speed. Gain a Jax and a Gnar.`,
+		description: `For each adjacent enemy, Moshers gain 5 Armor, 5 Magic Resist, 5% Attack Damage, 5 Ability Power, and 5% Attack Speed. Gain a Jax and a Gnar.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/submit-to-the-pit-ii.tft_set10`],
 	},
 	{
@@ -1552,7 +1559,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `thats jazz baby`,
 		name: `That's Jazz, Baby!`,
 		tiers: [2],
-		description: `Gain a Bard. Combat start: Jazz champions gain permanent bonuses based on the number of active traits. <br>{firstBreakpoint}: 40 max HP<br>{secondBreakpoint}: and 3% Attack Speed<br>{thirdBreakpoint}: and 2% Attack Damage and 2 Ability Power`,
+		description: `Gain a Bard. Combat start: Jazz champions gain permanent bonuses based on the number of active traits. <br>{firstBreakpoint}: 20 max HP<br>{secondBreakpoint}: and 2% Attack Speed<br>{thirdBreakpoint}: and 2% Attack Damage and 2 Ability Power`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/thats-jazz-baby-ii.tft_set10`],
 	},
 	{
@@ -1587,7 +1594,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `threes a crowd`,
 		name: `Three's a Crowd`,
 		tiers: [2],
-		description: `Your team gains 100 HP for each unique 3-cost champion on your board.`,
+		description: `Your team gains 85 HP for each unique 3-cost champion on your board.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/three_s-a-crowd-ii`],
 	},
 	{
@@ -1846,7 +1853,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `young and wild and free`,
 		name: `Young and Wild and Free`,
 		tiers: [1],
-		description: `You can always move freely on Carousel rounds. Gain 3 gold.`,
+		description: `You can always move freely on Carousel rounds. Gain 2 gold.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/young-and-wild-and-free-i`],
 	},
 ]

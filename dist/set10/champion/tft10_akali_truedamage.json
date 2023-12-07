@@ -47,9 +47,9 @@
 					"mName": "BASE_DAMAGE",
 					"mValues": [
 						0,
-						2.5,
-						2.5,
-						5,
+						2.75,
+						2.75,
+						5.5,
 						0,
 						0,
 						0
@@ -342,7 +342,7 @@
 		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
 		"attackRange": 180,
-		"attackSpeed": 0.8500000238418579,
+		"attackSpeed": 0.8999999761581421,
 		"spellNames": [
 			"TFT10_Akali_TrueDamageSpell",
 			"BaseSpell",

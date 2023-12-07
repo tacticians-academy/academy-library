@@ -44,8 +44,8 @@
 					"mName": "Damage",
 					"mValues": [
 						300,
-						350,
-						525,
+						400,
+						600,
 						4000,
 						1200,
 						1200,
@@ -249,7 +249,7 @@
 		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
 		"attackRange": 180,
-		"attackSpeed": 0.8500000238418579,
+		"attackSpeed": 0.949999988079071,
 		"spellNames": [
 			"TFT10_KaynQ",
 			"BaseSpell",

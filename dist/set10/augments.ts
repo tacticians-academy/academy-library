@@ -113,17 +113,6 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Axiom-Arc-II.tex`,
 	},
 	{
-		tier: 2,
-		name: `Balanced Budget`,
-		groupID: `balancedBudget`,
-		desc: `At the start of the next @rounds@ rounds, gain @gold@ gold.`,
-		effects: {
-			'Gold': 7,
-			rounds: 4,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Balanced-Budget-II.tex`,
-	},
-	{
 		tier: 1,
 		name: `Balanced Budget`,
 		groupID: `balancedBudget`,
@@ -133,6 +122,17 @@ export const activeAugments: AugmentData[] = [
 			rounds: 4,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Balanced-Budget-I.tex`,
+	},
+	{
+		tier: 2,
+		name: `Balanced Budget`,
+		groupID: `balancedBudget`,
+		desc: `At the start of the next @rounds@ rounds, gain @gold@ gold.`,
+		effects: {
+			'Gold': 7,
+			rounds: 4,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Balanced-Budget-II.tex`,
 	},
 	{
 		tier: 3,
@@ -324,7 +324,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Bigger Shot`,
 		groupID: `biggerShot`,
-		desc: `Every @BonusAttackThreshold@ attacks, Big Shots also fire a bomb that deals @ADPercent*100@% Attack Damage to enemies within 1 hex of the target. Gain a Kaisa.`,
+		desc: `Every @BonusAttackThreshold@ attacks, Big Shots also fire a bomb that deals @ADPercent*100@% Attack Damage to enemies within 1 hex of the target. Gain a Kai'Sa.`,
 		effects: {
 			'ADPercent': 0.6499999761581421,
 			'{063ab443}': 3,
@@ -335,8 +335,10 @@ export const activeAugments: AugmentData[] = [
 		tier: 3,
 		name: `Binary Airdrop`,
 		groupID: `binaryAirdrop`,
-		desc: `Combat start: champions holding 2 items gain a random 3rd completed item.<br><br>Gain 1 random component now.`,
-		effects: {},
+		desc: `Combat start: champions holding 2 items gain a random 3rd completed item. Gain @Gold@ gold.`,
+		effects: {
+			'Gold': 2,
+		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/BinaryAirdrop3.tex`,
 	},
 	{
@@ -351,7 +353,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Blank Slate`,
 		groupID: `blankSlate`,
-		desc: `Immediately sell your team (including bench) for @BonusGoldTOOLTIPONLY*100@% of their value. Your next @FreeRerolls@ Shop rerolls are free.`,
+		desc: `Immediately sell your team (including bench) for @BonusGoldTOOLTIPONLY*100@% of their value. Your next @FreeRerolls@ Shop rerolls this round are free.`,
 		effects: {
 			'{13a2134b}': 2,
 			'{678004c2}': 8,
@@ -776,7 +778,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Contagion`,
 		groupID: `contagion`,
-		desc: `Combat start: The highest HP enemy takes @DamageAmp*100@% more damage. Every @SpreadTimer@ seconds, this effect spreads to @SpreadTargets@ nearby enemies.`,
+		desc: `Combat start: The highest HP enemy takes @DamageAmp*100@% more damage. Every @SpreadTimer@ seconds or on death, this effect spreads to @SpreadTargets@ nearby enemies.`,
 		effects: {
 			'DamageAmp': 0.18000000715255737,
 			'SpreadTargets': 2,
@@ -832,7 +834,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 1,
 		name: `Cutting Corners`,
 		groupID: `cuttingCorners`,
-		desc: `Leveling up costs @Experience@ XP less.<br><br><rules>(Level 4 to 5 costs 6 XP instead of 10.)</rules>`,
+		desc: `Leveling up costs @Experience@ XP less.`,
 		effects: {
 			'Experience': 4,
 		},
@@ -1139,7 +1141,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Encore!`,
 		groupID: `encore`,
-		desc: `The first time your Headliner dies, they become invulerable and heal @Heal*100@% of their max HP over @repairtime@ seconds instead.`,
+		desc: `The first time your Headliner dies, they become invulnerable and heal @Heal*100@% of their max HP over @repairtime@ seconds instead.`,
 		effects: {
 			'Heal': 0.6000000238418579,
 			'RepairTime': 1.5,
@@ -1153,7 +1155,7 @@ export const activeAugments: AugmentData[] = [
 		desc: `Gain +@TeamSize@ maximum team size, but your units can only hold 1 item and their total HP is reduced by @HPReduction*100@%. Gain @Gold@ gold.`,
 		effects: {
 			'Gold': 4,
-			'HPReduction': 0.15000000596046448,
+			'HPReduction': 0.20000000298023224,
 			'TeamSize': 3,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/100-Duck-Sized-Horses-III.tex`,
@@ -1165,7 +1167,7 @@ export const activeAugments: AugmentData[] = [
 		desc: `Gain +@TeamSize@ maximum team size, but your units can only hold 1 item and their total HP is reduced by @HPReduction*100@%. Gain @Gold@ gold.`,
 		effects: {
 			'Gold': 14,
-			'HPReduction': 0.15000000596046448,
+			'HPReduction': 0.20000000298023224,
 			'TeamSize': 3,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/100-Duck-Sized-Horses-III.tex`,
@@ -1239,7 +1241,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Extended Play`,
 		groupID: `extendedPlay`,
-		desc: `Gain bonuses for starring Punk champions.<br>2-star: Your next Shop reroll costs @costreduction@ gold less<br>3-star: Gain @numcomponents@ component`,
+		desc: `Gain bonuses for starring Punk champions.<br>2-star: Your next Shop reroll costs @costreduction@ less gold<br>3-star: Gain @numcomponents@ component`,
 		effects: {
 			'NumComponents': 1,
 			'{b2630e29}': 1,
@@ -1429,7 +1431,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Give Me Your Energy!`,
 		groupID: `giveMeYourEnergy`,
-		desc: `Crowd Divers gain @Stats@ Armor, @Stats@ Magic Resist, @Stats@ Ability Power, @Stats@% Attack Dower and @Stats@% Attack Speed for each adjacent enemy. Gain an Evelynn and a Katarina.`,
+		desc: `Crowd Divers gain @Stats@ Armor, @Stats@ Magic Resist, @Stats@ Ability Power, @Stats@% Attack Damage and @Stats@% Attack Speed for each adjacent enemy. Gain an Evelynn and a Katarina.`,
 		effects: {
 			'Stats': 3,
 		},
@@ -1439,8 +1441,9 @@ export const activeAugments: AugmentData[] = [
 		tier: 3,
 		name: `Going Long`,
 		groupID: `goingLong`,
-		desc: `You no longer gain interest. Round start: gain @XP@ XP.<br><br><rules>Interest is extra gold you gain per 10g saved.</rules>`,
+		desc: `You no longer gain interest. Gain @Gold@ gold now. Round start: gain @XP@ XP.<br><br><rules>Interest is extra gold you gain per 10g saved.</rules>`,
 		effects: {
+			'Gold': 8,
 			'XP': 4,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Going-Long-III.TFT_Set10.tex`,
@@ -1646,7 +1649,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Heroic Presence`,
 		groupID: `heroicPresence`,
-		desc: `Enemies that attack a Guardian�s shield take magic damage equal to @HPPercent@% of the shielded unit�s max HP (up to once per second). Gain a Pantheon.`,
+		desc: `Enemies that attack a Guardian's shield take magic damage equal to @HPPercent@% of the shielded unit's max HP (up to once per second). Gain a Pantheon.`,
 		effects: {
 			'HPPercent': 7,
 			'TauntInterval': 2,
@@ -1689,7 +1692,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 3,
 		name: `Hologram`,
 		groupID: `hologram`,
-		desc: `Create a clone of your Headliner champion with @MinBonusTOOLTIPONLY*100@% -@MaxBonusTOOLTIPONLY*100@% of its base HP (based on stage level). You cannot equip items on the clone.`,
+		desc: `Create a clone of your Headliner with @MinBonusTOOLTIPONLY*100@% -@MaxBonusTOOLTIPONLY*100@% of their base HP (based on stage level). You cannot equip items on the clone.`,
 		effects: {
 			'{1a08838d}': 1.2999999523162842,
 			'{2100fa3b}': 1,
@@ -1753,7 +1756,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `infernalContract`,
 		desc: `Your max level is 7. Gain @augmentgold@ gold.`,
 		effects: {
-			'AugmentGold': 75,
+			'AugmentGold': 90,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Infernal-Contract-III.tex`,
 	},
@@ -2136,7 +2139,7 @@ export const activeAugments: AugmentData[] = [
 		desc: `Your 4-cost and 5-cost champions gain @HP@ HP and @AS*100@% Attack Speed  for every 1-cost and 2-cost champion on your board.`,
 		effects: {
 			'AS': 0.10000000149011612,
-			'HP': 150,
+			'HP': 100,
 			'{0d14760d}': 4,
 			'{82aeb8a7}': 2,
 		},
@@ -2146,10 +2149,10 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Live for Danger`,
 		groupID: `liveForDanger`,
-		desc: `Edgelords attacks deal @cleave*10@% of their damage to enemies within @HexRange@ hexes of their target. Gain a Yasuo and a Kayle.`,
+		desc: `Edgelords' attacks deal @cleave*10@% of their damage to enemies within @HexRange@ hexes of their target. Gain a Yasuo and a Kayle.`,
 		effects: {
 			'HexRange': 1,
-			'{e83c6ac9}': 3,
+			'{e83c6ac9}': 4,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Cold-Steel-II.TFT_Set10.tex`,
 	},
@@ -2217,8 +2220,8 @@ export const activeAugments: AugmentData[] = [
 	},
 	{
 		tier: 3,
-		name: `Lucky Gloves`,
-		groupID: `luckyGloves`,
+		name: `Lucky Gloves+`,
+		groupID: `luckyGlovesplus`,
 		desc: `Thief's Gloves will always give your champions ideal items. Gain @NumGloves@ Sparring Gloves.`,
 		effects: {
 			'NumGloves': 3,
@@ -2780,7 +2783,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Ramping Rhythm`,
 		groupID: `rampingRhythm`,
-		desc: `Rapidfire champions can gain Attack Speed from their trait up to @NewMaxStacks@ stacks. Gain a Jinx and a Senna.`,
+		desc: `Rapidfire champions start combat with @StartingStacks@ stacks of Attack Speed from their trait, and can now go up to @NewMaxStacks@ stacks. Gain a Jinx and a Senna.`,
 		effects: {
 			'StartingStacks': 3,
 			'{fdf21c94}': 30,
@@ -2791,8 +2794,9 @@ export const activeAugments: AugmentData[] = [
 		tier: 1,
 		name: `Reach the Summit`,
 		groupID: `reachTheSummit`,
-		desc: `When you reach Level @LevelReq@, gain @ExpBonus@ XP.`,
+		desc: `When you reach Level @LevelReq@, gain @ExpBonus@ XP and @Gold@ Gold.`,
 		effects: {
+			'Gold': 10,
 			'LevelReq': 9,
 			'{0777a7af}': 50,
 		},
@@ -2993,7 +2997,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Share the Spotlight`,
 		groupID: `shareTheSpotlight`,
-		desc: `Your units that start combat in a lighted hex gain a @HPShieldPercent*100@% max HP shield for @Duration@ seconds. Gain a Kaisa and Lillia.`,
+		desc: `Your units that start combat in a lighted hex gain a @HPShieldPercent*100@% max HP shield for @Duration@ seconds. Gain a Kai'Sa and Lillia.`,
 		effects: {
 			'Duration': 10,
 			'{3788e887}': 0.30000001192092896,
@@ -3274,7 +3278,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `submitToThePit`,
 		desc: `For each adjacent enemy, Moshers gain @Stats@ Armor, @Stats@ Magic Resist, @Stats@% Attack Damage, @Stats@ Ability Power, and @Stats@% Attack Speed. Gain a Jax and a Gnar.`,
 		effects: {
-			'Stats': 3,
+			'Stats': 5,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Submit-To-The-Pit-II.TFT_Set10.tex`,
 	},
@@ -3385,8 +3389,8 @@ export const activeAugments: AugmentData[] = [
 		effects: {
 			'AD': 2,
 			'AP': 2,
-			'AS': 3,
-			'HP': 40,
+			'AS': 2,
+			'HP': 20,
 			'{0f109a01}': 7,
 			'{19ed613a}': 3,
 			'{dc055ca6}': 5,
@@ -3441,7 +3445,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `threesACrowd`,
 		desc: `Your team gains @HPPerUnit@ HP for each unique @Tier@-cost champion on your board.`,
 		effects: {
-			'HPPerUnit': 100,
+			'HPPerUnit': 85,
 			'Tier': 3,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Three_s-a-Crowd-II.tex`,
@@ -4026,7 +4030,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `youngAndWildAndFree`,
 		desc: `You can always move freely on Carousel rounds. Gain @Gold@ gold.`,
 		effects: {
-			'Gold': 3,
+			'Gold': 2,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Young-and-wild-and-free-I.tex`,
 	},

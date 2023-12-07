@@ -1,56 +1,176 @@
 {
-	"Characters/TFT9_Ryze/Spells/TFT9_RyzeBasicAttack": {
-		"mScriptName": "TFT9_RyzeBasicAttack",
+	"{0ccd5d45}": {
+		"mScriptName": "TFT9_RyzeSpellIxtal",
 		"mSpell": {
-			"mAffectsTypeFlags": 24527,
-			"mAlternateName": "RyzeBasicAttack",
-			"bHaveHitEffect": true,
-			"castRange": [
-				402,
-				402,
-				402,
-				402,
-				402,
-				402,
-				402
+			"mAffectsTypeFlags": 2053,
+			"mDataValues": [
+				{
+					"mName": "ArmorScalar",
+					"mValues": [
+						1.5,
+						2,
+						3,
+						15,
+						1.5,
+						1.5,
+						1.5
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "MRScalar",
+					"mValues": [
+						1.5,
+						2,
+						3,
+						15,
+						1.5,
+						1.5,
+						1.5
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "StunDuration",
+					"mValues": [
+						2,
+						2,
+						2.5,
+						10,
+						2,
+						2,
+						2
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "BarkskinDuration",
+					"mValues": [
+						4,
+						4,
+						4,
+						4,
+						4,
+						4,
+						4
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "BarskinDefenceScalar",
+					"mValues": [
+						1,
+						1,
+						1,
+						1,
+						1,
+						1,
+						1
+					],
+					"__type": "SpellDataValue"
+				}
 			],
-			"castConeDistance": 100,
-			"mMissileSpec": {
-				"movementComponent": {
-					"mTargetHeightAugment": 100,
-					"mOffsetInitialTargetHeight": 100,
-					"mStartBoneName": "R_hand",
-					"mSpeed": 2400,
-					"__type": "FixedSpeedMovement"
+			"mSpellCalculations": {
+				"TotalDamage": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "ArmorScalar",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 1,
+							"mStat": 1,
+							"__type": "SubPartScaledProportionalToStat"
+						},
+						{
+							"mSubpart": {
+								"mDataValue": "MRScalar",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 1,
+							"mStat": 5,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
 				},
-				"verticalFacing": {
-					"__type": "VeritcalFacingMatchVelocity"
+				"ModifiedArmor": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "BarskinDefenceScalar",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 1,
+							"mStat": 1,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
 				},
-				"behaviors": [
-					{
-						"__type": "CastOnMovementComplete"
-					},
-					{
-						"__type": "DestroyOnMovementComplete"
-					}
-				],
-				"__type": "MissileSpecification"
+				"ModifiedMR": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "BarskinDefenceScalar",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 1,
+							"mStat": 5,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"ModifiedBarkskinDuration": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "BarkskinDuration",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
 			},
-			"mCastType": 1,
-			"castFrame": 9,
-			"missileSpeed": 2400,
-			"mMissileEffectKey": "{d039d7a3}",
-			"mHitEffectOrientType": 2,
-			"mHitEffectKey": "TFT_Global_BA_Hit",
-			"bHaveHitBone": true,
-			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
-			"selectionPriority": 1,
+			"mCastTime": 0.25,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"canCastOrQueueWhileCasting": true,
+			"castRange": [
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000
+			],
+			"luaOnMissileUpdateDistanceInterval": 51,
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
 			"__type": "SpellDataResource"
 		},
 		"__type": "SpellObject"
 	},
-	"Characters/TFT9_Ryze/Spells/TFT9_RyzeBasicAttack2": {
-		"mScriptName": "TFT9_RyzeBasicAttack2",
+	"{6dc75dd9}": {
+		"mScriptName": "TFT9_RyzeIxtalBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 24527,
 			"mAlternateName": "RyzeBasicAttack2",
@@ -99,8 +219,58 @@
 		},
 		"__type": "SpellObject"
 	},
-	"Characters/TFT9_Ryze/Spells/TFT9_RyzeCritAttack": {
-		"mScriptName": "TFT9_RyzeCritAttack",
+	"{89df7651}": {
+		"mScriptName": "TFT9_RyzeIxtalBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 24527,
+			"mAlternateName": "RyzeBasicAttack",
+			"bHaveHitEffect": true,
+			"castRange": [
+				402,
+				402,
+				402,
+				402,
+				402,
+				402,
+				402
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_hand",
+					"mSpeed": 2400,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 9,
+			"missileSpeed": 2400,
+			"mMissileEffectKey": "{d039d7a3}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{e7543a81}": {
+		"mScriptName": "TFT9_RyzeIxtalCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 24527,
 			"bHaveHitEffect": true,
@@ -148,24 +318,23 @@
 		},
 		"__type": "SpellObject"
 	},
-	"Characters/TFT9_Ryze/CharacterRecords/Root": {
+	"{e22bdf01}": {
 		"mCharacterName": "TFT9_Ryze",
 		"baseHP": 1111,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 999,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 50,
-		"baseArmor": 30,
-		"baseSpellBlock": 30,
+		"baseArmor": 50,
+		"baseSpellBlock": 50,
 		"baseCritChance": 0.25,
 		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
-		"attackRange": 890,
+		"attackRange": 420,
 		"attackSpeed": 0.8500000238418579,
 		"basicAttack": {
 			"mAttackName": "TFT9_RyzeBasicAttack",
@@ -184,7 +353,7 @@
 			}
 		],
 		"spellNames": [
-			"TFT9_RyzeSpellBandleCity",
+			"TFT9_RyzeSpellIxtal",
 			"BaseSpell",
 			"BaseSpell",
 			"BaseSpell"
@@ -202,11 +371,12 @@
 				"__type": "TFTTraitContributionData"
 			}
 		],
-		"{b6b01440}": "{32cdc033}",
+		"{b6b01440}": "{2ccf900f}",
 		"mMoveInterval": -0.10000000149011612,
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
+		"mInitialMana": 30,
 		"{22f5197d}": 180,
 		"__type": "TFTCharacterRecord"
 	}

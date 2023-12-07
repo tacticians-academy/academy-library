@@ -43,10 +43,11 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					damage: [0, 275, 410, 1500],
-					kissDamage: [1.600000023841858, 480, 720, 2400],
+					damage: [0, 275, 410, 820],
+					kissDamage: [1.600000023841858, 480, 720, 1440],
 					stunduration: [0.25, 0.25, 0.25, 0.25],
 					'HeadlinerAbilityPower': [15, 15, 15, 15],
+					'ExtraCasts': [0, 0, 0, 1],
 				},
 				calculations: {
 					'Damage': {
@@ -296,7 +297,7 @@ export const champions: ChampionData[] = [
 		traits: [`True Damage`, `Executioner`, `Breakout`],
 		stats: {
 			armor: 65,
-			attackSpeed: 0.8500000238418579,
+			attackSpeed: 0.8999999761581421,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
 			damage: 70,
@@ -316,7 +317,7 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {
-					'BASE_DAMAGE': [0, 2.5, 2.5, 5],
+					'BASE_DAMAGE': [0, 2.75, 2.75, 5.5],
 					'KUNAI_BASE_COUNT': [18, 18, 18, 27],
 					'BLING_HEAL_PERCENT': [20, 20, 20, 20],
 					'BLING_HEAL_PERCENT_EMPOWERED': [40, 40, 40, 40],
@@ -415,10 +416,10 @@ export const champions: ChampionData[] = [
 				missile: undefined,
 				variables: {
 					'ManaGain': [20, 20, 20, 20],
-					'ArmorGain': [2, 2, 2, 2],
-					'StackCap': [30, 30, 30, 30],
-					'MagicDamage': [0, 60, 90, 145],
-					'ARRatio': [1, 1.399999976158142, 1.600000023841858, 1.7999999523162842],
+					'ArmorGain': [4, 4, 4, 4],
+					'StackCap': [25, 25, 25, 25],
+					'MagicDamage': [0, 80, 120, 190],
+					'ARRatio': [1, 1.5, 1.75, 2],
 					'StunDuration': [1.5, 1.5, 1.5, 1.5],
 					'HeadlinerHealth': [150, 150, 150, 150],
 				},
@@ -431,7 +432,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `MagicDamage`,
-										starValues: [0, 60, 90, 145],
+										starValues: [0, 80, 120, 190],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -499,7 +500,7 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {
-					'MagicDamage': [0, 170, 255, 385],
+					'MagicDamage': [0, 195, 295, 440],
 					'HealthThreshold': [0.3499999940395355, 0.3499999940395355, 0.3499999940395355, 0.3499999940395355],
 					'DamageRatio': [0.05000000074505806, 0.05000000074505806, 0.05000000074505806, 0.05000000074505806],
 					'HeadlinerAbilityPower': [20, 20, 20, 20],
@@ -517,7 +518,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `MagicDamage`,
-										starValues: [0, 170, 255, 385],
+										starValues: [0, 195, 295, 440],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -732,7 +733,7 @@ export const champions: ChampionData[] = [
 			hp: 550,
 			initialMana: 15,
 			magicResist: 20,
-			mana: 75,
+			mana: 60,
 			moveSpeed: 500,
 			range: 4,
 		},
@@ -749,7 +750,7 @@ export const champions: ChampionData[] = [
 					'SingleTarDmg': [1, 190, 285, 430],
 					'Heal': [0, 120, 150, 180],
 					'HeadlinerCastsPerMeep': [8, 8, 8, 8],
-					'HeadlinerDootDamage': [190, 95, 140, 215],
+					'HeadlinerDootDamage': [190, 85, 125, 190],
 					'TipChance': [2, 1, 1, 3],
 					'TipGold': [1, 1, 1, 1],
 					'TipGold_HR': [3, 3, 3, 3],
@@ -1024,7 +1025,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'ADPercent': [2, 3.4000000953674316, 3.4000000953674316, 6.800000190734863],
+					'ADPercent': [2, 3.9000000953674316, 3.9000000953674316, 8],
 					'APRatio': [0, 0.25, 0.4000000059604645, 1.2000000476837158],
 					'NumShots': [4, 4, 4, 4],
 					'HeadlinerAttackDamage': [0.05000000074505806, 0.05000000074505806, 0.05000000074505806, 0.05000000074505806],
@@ -1045,7 +1046,7 @@ export const champions: ChampionData[] = [
 									},
 									{
 										variable: `ADPercent`,
-										starValues: [2, 3.4000000953674316, 3.4000000953674316, 6.800000190734863],
+										starValues: [2, 3.9000000953674316, 3.9000000953674316, 8],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -1092,7 +1093,7 @@ export const champions: ChampionData[] = [
 			attackSpeed: 0.699999988079071,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
-			damage: 42,
+			damage: 48,
 			hp: 450,
 			initialMana: 15,
 			magicResist: 15,
@@ -1333,7 +1334,7 @@ export const champions: ChampionData[] = [
 				missile: undefined,
 				variables: {
 					'MagicDamage': [0, 200, 300, 450],
-					'AttackSpeedPercent': [0, 175, 175, 175],
+					'AttackSpeedPercent': [0, 120, 120, 120],
 					'Duration': [0, 4, 4, 4],
 					'Healing': [0, 25, 30, 35],
 					'HeadlinerHealth': [100, 100, 100, 100],
@@ -1374,7 +1375,7 @@ export const champions: ChampionData[] = [
 		traits: [`Heartsteel`, `BigShot`],
 		stats: {
 			armor: 30,
-			attackSpeed: 0.800000011920929,
+			attackSpeed: 0.8500000238418579,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
 			damage: 70,
@@ -1394,7 +1395,7 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {
-					'ADRatioNormalCast': [2.5999999046325684, 3.299999952316284, 3.299999952316284, 6.599999904632568],
+					'ADRatioNormalCast': [2.5999999046325684, 3.5, 3.5, 7],
 					'APRatioSpecialCast': [0, 80, 120, 360],
 					'ADRatioSpecialCast': [0, 3.5, 3.5, 7],
 					'MaxDashDistanceHexesNormalCast': [3, 3, 3, 3],
@@ -1558,7 +1559,7 @@ export const champions: ChampionData[] = [
 					'PercentMaxHealthHealing': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
 					'PercentAD': [1.600000023841858, 1.600000023841858, 1.600000023841858, 1.600000023841858],
 					'HeadlinerHealth': [400, 400, 400, 400],
-					'MaxHealthAPScalar': [150, 170, 190, 210],
+					'MaxHealthAPScalar': [150, 200, 215, 230],
 				},
 				calculations: {
 					'{4acd9f14}': {
@@ -2017,7 +2018,7 @@ export const champions: ChampionData[] = [
 			hp: 850,
 			initialMana: 0,
 			magicResist: 30,
-			mana: 60,
+			mana: 50,
 			moveSpeed: 500,
 			range: 4,
 		},
@@ -2256,7 +2257,7 @@ export const champions: ChampionData[] = [
 			hp: 650,
 			initialMana: 0,
 			magicResist: 40,
-			mana: 60,
+			mana: 40,
 			moveSpeed: 500,
 			range: 1,
 		},
@@ -2272,7 +2273,7 @@ export const champions: ChampionData[] = [
 					'Duration': [2.5, 2.5, 2.5, 2.5],
 					'BaseDR': [0.30000001192092896, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
 					'DRAPRatio': [0, 0.20000000298023224, 0.20000000298023224, 0.25],
-					'ADRatio': [7, 7, 7, 7],
+					'ADRatio': [8, 8, 8, 8],
 					'HeadlinerHealth': [225, 225, 225, 225],
 					'DR_CAP_tooltip_only': [0.75, 0.75, 0.75, 0.75],
 				},
@@ -2301,7 +2302,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `ADRatio`,
-										starValues: [7, 7, 7, 7],
+										starValues: [8, 8, 8, 8],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -2366,7 +2367,7 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {
-					'ADDamage': [0, 2.5, 2.5, 2.549999952316284],
+					'ADDamage': [0, 2.799999952316284, 2.799999952316284, 2.8499999046325684],
 					'DashRange': [2, 2, 2, 2],
 					'HeadlinerAttackDamage': [0.15000000596046448, 0.15000000596046448, 0.15000000596046448, 0.15000000596046448],
 					'HeadlinerDashBonus': [3, 3, 3, 3],
@@ -2382,7 +2383,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `ADDamage`,
-										starValues: [0, 2.5, 2.5, 2.549999952316284],
+										starValues: [0, 2.799999952316284, 2.799999952316284, 2.8499999046325684],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -2518,8 +2519,8 @@ export const champions: ChampionData[] = [
 					'MagicDamage': [0, 140, 210, 315],
 					'WoundPercent': [0.33000001311302185, 0.33000001311302185, 0.33000001311302185, 0.33000001311302185],
 					'WoundDuration': [6, 6, 6, 6],
-					'HeadlinerHealth': [200, 200, 200, 200],
-					'HeadlinerBladeBonus': [0.44999998807907104, 0.44999998807907104, 0.44999998807907104, 0.44999998807907104],
+					'HeadlinerHealth': [150, 150, 150, 150],
+					'HeadlinerBladeBonus': [0.25, 0.25, 0.25, 0.25],
 				},
 				calculations: {
 					'MagicDamage': {
@@ -2671,7 +2672,7 @@ export const champions: ChampionData[] = [
 		traits: [`Heartsteel`, `Edgelord`, `Wildcard`],
 		stats: {
 			armor: 70,
-			attackSpeed: 0.8500000238418579,
+			attackSpeed: 0.949999988079071,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
 			damage: 75,
@@ -2691,7 +2692,7 @@ export const champions: ChampionData[] = [
 				castTime: 0.05000000074505806,
 				missile: undefined,
 				variables: {
-					'Damage': [300, 350, 525, 4000],
+					'Damage': [300, 400, 600, 4000],
 					'PercentRestored': [0.5, 0.5, 0.5, 0.5],
 					'ChillDuration': [3, 3, 3, 3],
 					'HeadlinerAbilityPower': [5, 5, 5, 5],
@@ -2707,7 +2708,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [300, 350, 525, 4000],
+										starValues: [300, 400, 600, 4000],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2762,15 +2763,15 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'JoltDamage': [0, 160, 240, 360],
+					'JoltDamage': [0, 145, 215, 325],
 					'NumJolts': [2, 2, 2, 2],
 					'StunDuration': [0.75, 0.75, 0.75, 0.75],
 					'SpellDuration': [2, 2, 2, 2],
 					'BASE_HEAL': [50, 200, 250, 300],
-					'BLING_SECONDARY_DAMAGE': [80, 80, 80, 80],
+					'BLING_SECONDARY_DAMAGE': [50, 50, 50, 50],
 					'BLING_SECONDARY_DAMAGE_EMPOWERED': [120, 120, 120, 120],
 					'HeadlinerHealth': [75, 75, 75, 75],
-					'HeadlinerPercentMaxHealthHeal': [0.03999999910593033, 0.03999999910593033, 0.03999999910593033, 0.03999999910593033],
+					'HeadlinerPercentMaxHealthHeal': [0.019999999552965164, 0.019999999552965164, 0.019999999552965164, 0.019999999552965164],
 				},
 				calculations: {
 					'Damage': {
@@ -3415,7 +3416,7 @@ export const champions: ChampionData[] = [
 				variables: {
 					'PrimaryADRatio': [2.799999952316284, 2.700000047683716, 2.700000047683716, 2.75],
 					'SecondaryADRatio': [1.7999999523162842, 1.7999999523162842, 1.7999999523162842, 1.7999999523162842],
-					'HeadlinerAttackDamage': [0.25, 0.25, 0.25, 0.25],
+					'HeadlinerAttackDamage': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
 					'APRatio': [40, 40, 40, 40],
 					'ASDuration': [4, 4, 4, 4],
 				},
@@ -3981,11 +3982,11 @@ export const champions: ChampionData[] = [
 				variables: {
 					'PercentHealthAsAD': [0.029999999329447746, 0.029999999329447746, 0.029999999329447746, 0.029999999329447746],
 					'TargetNumber': [3, 3, 3, 3],
-					'ArmorAndMR': [60, 80, 80, 80],
+					'ArmorAndMR': [100, 100, 100, 100],
 					'ADRatio': [2.25, 2.4000000953674316, 2.4000000953674316, 5],
 					'ExtraSlams': [1, 1, 1, 1],
 					'Duration': [6, 6, 6, 6],
-					'PercentHealthHeal': [0.03999999910593033, 0.03999999910593033, 0.03999999910593033, 0.03999999910593033],
+					'PercentHealthHeal': [0.05999999865889549, 0.05999999865889549, 0.05999999865889549, 0.05999999865889549],
 					'HeadlinerHealth': [150, 150, 150, 150],
 					'HeadlinerAttackDamage': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
 				},
@@ -4030,7 +4031,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `PercentHealthHeal`,
-										starValues: [0.03999999910593033, 0.03999999910593033, 0.03999999910593033, 0.03999999910593033],
+										starValues: [0.05999999865889549, 0.05999999865889549, 0.05999999865889549, 0.05999999865889549],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4052,7 +4053,7 @@ export const champions: ChampionData[] = [
 									},
 									{
 										variable: `PercentHealthHeal`,
-										starValues: [0.03999999910593033, 0.03999999910593033, 0.03999999910593033, 0.03999999910593033],
+										starValues: [0.05999999865889549, 0.05999999865889549, 0.05999999865889549, 0.05999999865889549],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4085,7 +4086,7 @@ export const champions: ChampionData[] = [
 			hp: 1050,
 			initialMana: 0,
 			magicResist: 60,
-			mana: 50,
+			mana: 40,
 			moveSpeed: 500,
 			range: 1,
 		},
@@ -4234,7 +4235,7 @@ export const champions: ChampionData[] = [
 				missile: undefined,
 				variables: {
 					'SplashRadiusHexes': [1, 1, 1, 1],
-					'SplashDamageADPercent': [1.2000000476837158, 1.2000000476837158, 1.2000000476837158, 1.2000000476837158],
+					'SplashDamageADPercent': [1, 1, 1, 1],
 					'Duration': [6, 6, 6, 6],
 					'ShieldAP': [0, 100, 120, 140],
 					'ShieldADPercent': [2.5, 2.5, 2.5, 2.5],
@@ -4325,7 +4326,7 @@ export const champions: ChampionData[] = [
 					'PercentAD': [1.100000023841858, 1.100000023841858, 1.100000023841858, 1.100000023841858],
 					'SimulateLaunchAttackNum': [5, 5, 5, 5],
 					'MaxStacks': [6, 6, 6, 6],
-					'HeadlinerAttackDamage': [0.15000000596046448, 0.15000000596046448, 0.15000000596046448, 0.15000000596046448],
+					'HeadlinerAttackDamage': [0.05000000074505806, 0.05000000074505806, 0.05000000074505806, 0.05000000074505806],
 					'HeadlinerCritChance': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
 				},
 				calculations: {
@@ -4626,7 +4627,7 @@ export const champions: ChampionData[] = [
 					'ShieldMin': [300, 375, 425, 475],
 					'MissingHealthThreshold': [4, 4, 4, 4],
 					'ShieldIncreasePerHealthThreshold': [1, 1, 1, 1],
-					'HeadlinerHealth': [250, 250, 250, 250],
+					'HeadlinerHealth': [150, 150, 150, 150],
 					'HeadlinerHealthThreshold': [0.5, 0.5, 0.5, 0.5],
 					'HeadlinerPermanentHealth': [50, 50, 50, 50],
 				},
@@ -5290,7 +5291,7 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {
-					'AttackSpeed': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
+					'AttackSpeed': [0.15000000596046448, 0.15000000596046448, 0.15000000596046448, 0.15000000596046448],
 					'ADRatio': [2, 2, 2, 2],
 				},
 				calculations: {
@@ -5319,8 +5320,8 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {
-					'AttackSpeed': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
-					'Omnivamp': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
+					'AttackSpeed': [0.15000000596046448, 0.15000000596046448, 0.15000000596046448, 0.15000000596046448],
+					'Omnivamp': [0.15000000596046448, 0.15000000596046448, 0.15000000596046448, 0.15000000596046448],
 					'ADRatio': [2, 2, 2, 2],
 					'Duration': [4, 4, 4, 4],
 					'DamageAmp': [0.15000000596046448, 0.15000000596046448, 0.15000000596046448, 0.15000000596046448],
@@ -5352,8 +5353,8 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {
-					'AttackSpeed': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
-					'Omnivamp': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
+					'AttackSpeed': [0.15000000596046448, 0.15000000596046448, 0.15000000596046448, 0.15000000596046448],
+					'Omnivamp': [0.15000000596046448, 0.15000000596046448, 0.15000000596046448, 0.15000000596046448],
 					'ADRatio': [2, 2, 2, 2],
 					'Duration': [4, 4, 4, 4],
 					'DamageAmp': [0.15000000596046448, 0.15000000596046448, 0.15000000596046448, 0.15000000596046448],
@@ -5875,7 +5876,7 @@ export const champions: ChampionData[] = [
 				variables: {
 					'ADRatio': [1.7000000476837158, 1.75, 1.75, 1.7999999523162842],
 					'Duration': [0, 8, 8, 8],
-					'ShieldRatio': [0.30000001192092896, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
+					'ShieldRatio': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
 					'ShieldDuration': [5, 5, 5, 5],
 					'ADPerASConversion': [1, 1, 1, 1],
 					'AbilityScaleDamage': [10, 15, 25, 40],
@@ -6114,7 +6115,7 @@ export const champions: ChampionData[] = [
 				castTime: 0.550000011920929,
 				missile: undefined,
 				variables: {
-					'SlamDamage': [0, 1.5, 1.5, 3],
+					'SlamDamage': [0, 2, 2, 4],
 					'BonusAttackDamage': [0, 1.7000000476837158, 1.7000000476837158, 3.4000000953674316],
 					'MarkDuration': [5, 5, 5, 5],
 					'MarkBonusDamage': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
@@ -6266,7 +6267,7 @@ export const champions: ChampionData[] = [
 			attackSpeed: 0.75,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
-			damage: 45,
+			damage: 50,
 			hp: 600,
 			initialMana: 0,
 			magicResist: 40,
@@ -6283,7 +6284,7 @@ export const champions: ChampionData[] = [
 				castTime: 0.4000000059604645,
 				missile: undefined,
 				variables: {
-					'DAMAGE_RATIO': [2.75, 2.75, 2.75, 2.75],
+					'DAMAGE_RATIO': [2.9000000953674316, 2.9000000953674316, 2.9000000953674316, 2.9000000953674316],
 					'AD_KILL_GAIN': [1, 1, 1, 1],
 					'AD_KILL_GAIN_HYPERROLL': [2, 2, 2, 2],
 					'MAGIC_DAMAGE': [20, 20, 20, 20],
@@ -6411,7 +6412,7 @@ export const champions: ChampionData[] = [
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
 			damage: 65,
-			hp: 750,
+			hp: 800,
 			initialMana: 0,
 			magicResist: 40,
 			mana: 70,
@@ -6437,7 +6438,7 @@ export const champions: ChampionData[] = [
 				},
 				variables: {
 					'Omnivamp': [0.07999999821186066, 0.07999999821186066, 0.07999999821186066, 0.07999999821186066],
-					'ADRatio': [1.7999999523162842, 2, 2, 2.049999952316284],
+					'ADRatio': [1.7999999523162842, 2.0999999046325684, 2.0999999046325684, 2.1500000953674316],
 					'HealPercent': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
 					'MovementSpeedPerCast': [150, 150, 150, 150],
 					'HeadlinerHealth': [200, 200, 200, 200],
@@ -6452,7 +6453,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `ADRatio`,
-										starValues: [1.7999999523162842, 2, 2, 2.049999952316284],
+										starValues: [1.7999999523162842, 2.0999999046325684, 2.0999999046325684, 2.1500000953674316],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -6643,10 +6644,10 @@ export const champions: ChampionData[] = [
 				variables: {
 					'MagicDamage': [0, 120, 180, 1200],
 					'StunDuration': [1, 1, 1, 1],
-					'BaseHeal': [0, 180, 240, 800],
+					'BaseHeal': [0, 100, 140, 800],
 					'BounceCount': [3, 3, 3, 3],
-					'HeadlinerHealth': [150, 150, 150, 150],
-					'HeadlinerAbilityPower': [10, 10, 10, 10],
+					'HeadlinerHealth': [200, 200, 200, 200],
+					'HeadlinerAbilityPower': [15, 15, 15, 15],
 				},
 				calculations: {
 					'MagicDamage': {
@@ -6673,7 +6674,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `BaseHeal`,
-										starValues: [0, 180, 240, 800],
+										starValues: [0, 100, 140, 800],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -6719,7 +6720,7 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {
-					'ADPercent': [0, 1.75, 1.75, 3.5],
+					'ADPercent': [0, 1.850000023841858, 1.850000023841858, 3.700000047683716],
 					'Duration': [4, 4, 4, 4],
 					'MarkDelayTime': [0, 1.100000023841858, 1.100000023841858, 1.100000023841858],
 					'MarkDamageADRatio': [0, 3.5, 3.5, 7],
@@ -6753,7 +6754,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `ADPercent`,
-										starValues: [0, 1.75, 1.75, 3.5],
+										starValues: [0, 1.850000023841858, 1.850000023841858, 3.700000047683716],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -6769,7 +6770,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `ADPercent`,
-										starValues: [0, 1.75, 1.75, 3.5],
+										starValues: [0, 1.850000023841858, 1.850000023841858, 3.700000047683716],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -6843,7 +6844,7 @@ export const champions: ChampionData[] = [
 			hp: 800,
 			initialMana: 30,
 			magicResist: 40,
-			mana: 70,
+			mana: 75,
 			moveSpeed: 500,
 			range: 4,
 		},
@@ -6869,9 +6870,9 @@ export const champions: ChampionData[] = [
 					'BombDamage': [40, 70, 105, 400],
 					'StartingBombs': [8, 5, 5, 35],
 					'ShredDuration': [4, 4, 4, 4],
-					'NumToIncreasePerCast': [2, 2, 2, 2],
+					'NumToIncreasePerCast': [1, 1, 1, 1],
 					'HeadlinerAbilityPower': [5, 5, 5, 5],
-					'HeadlinerManaReduction': [10, 10, 10, 10],
+					'HeadlinerManaReduction': [5, 5, 5, 5],
 				},
 				calculations: {
 					'MagicDamage': {
