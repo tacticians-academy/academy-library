@@ -26,11 +26,11 @@ const UNIT_NORMALIZE_RENAME_KEYS: Record<string, Record<string, string>> = {
 export async function extractLatestPatchFor(setNumber: SetNumber) {
 	await fs.mkdir(getOutputFolderForSet(setNumber), { recursive: true })
 	const championsPath = getPathToSet(setNumber, 'champion')
-	for (const json of await getPatchFor(setNumber)) {
+	for (const championJSON of await getPatchFor(setNumber)) {
 		await fs.mkdir(championsPath, { recursive: true })
-		const pathName = Object.values(json).find(entry => entry.mCharacterName)!.mCharacterName.toLowerCase()
+		const pathName = Object.values(championJSON).find(entry => entry.mCharacterName)!.mCharacterName.toLowerCase()
 		const outputPath = path.resolve(championsPath, pathName + '.json')
-		fs.writeFile(outputPath, JSON.stringify(json, undefined, '\t'))
+		fs.writeFile(outputPath, JSON.stringify(championJSON, undefined, '\t'))
 	}
 }
 
@@ -54,9 +54,7 @@ export async function getPatchFor(loadSet: SetNumber, customPatchLine?: string) 
 		if (newEtag === oldEtag) {
 			return []
 		}
-		if (oldEtag !== undefined) {
-			console.log('File updated! Rebuilding data.', newEtag, oldEtag)
-		}
+		console.log(oldEtag === undefined ? 'Loading new Set' : 'File updated! Rebuilding data.', newEtag, oldEtag)
 		await fs.writeFile(etagPath, newEtag)
 	} else {
 		console.log('No cache etag for resource, reloading data.')
