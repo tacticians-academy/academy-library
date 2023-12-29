@@ -1,3 +1,37 @@
+export const LEVEL_SHOP_ODDS = [
+	[100, 0,  0,  0,  0],
+	[75,  25, 0,  0,  0],
+	[55,  30, 15, 0,  0],
+	[45,  33, 20, 2,  0],
+	[30,  40, 25, 5,  0],
+	[19,  35, 35, 10, 1],
+	[18,  25, 36, 18, 3],
+	[10,  20, 25, 35, 10],
+	[5,   10, 20, 40, 25],
+	[1,   2,  12, 50, 35],
+]
+
+export const LEVEL_XP = [
+	0,
+	0,
+	2,
+	8,
+	18,
+	38,
+	74,
+	122,
+	202,
+	286,
+]
+
+export const UNIT_COST_POOL_SIZES = [
+	22,
+	20,
+	17,
+	10,
+	9,
+]
+
 export const TRAIT_DATA_SUBSTITUTIONS: Record<string, string> = {
 	'{4995a396}': '8-bit',
 	'{b540ffc4}': 'Big Shot',

@@ -179,7 +179,7 @@ export async function importItems(set: SetNumber) {
 }
 
 export async function importSetData(set: SetNumber) {
-	type SetData = typeof import('./set1/hardcoded/set-data.js') & typeof import('./set6.5/hardcoded/set-data.js') & typeof import('./set9/hardcoded/set-data.js')
+	type SetData = typeof import('./set1/hardcoded/set-data.js') & typeof import('./set6.5/hardcoded/set-data.js') & typeof import('./set10/hardcoded/set-data.js')
 	if (set === 1) {
 		return await import('./set1/hardcoded/set-data.js') as SetData
 	}
