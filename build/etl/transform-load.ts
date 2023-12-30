@@ -18,8 +18,8 @@ export async function transformLoad(setNumber: SetNumber) {
 
 	let responseJSON: ResponseJSON
 	try {
-		// const raw = await fs.readFile(getPathToPatch(patchLine, '.raw.json'), 'utf8')
-		const raw = await fs.readFile(getPathToSet(setNumber, '.raw.json'), 'utf8')
+		// const raw = await fs.readFile(getPathToPatch(patchLine, '.game.raw.json'), 'utf8')
+		const raw = await fs.readFile(getPathToSet(setNumber, '.game.raw.json'), 'utf8')
 		responseJSON = JSON.parse(raw)
 	} catch (error) {
 		console.log(error)

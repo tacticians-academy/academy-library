@@ -37,9 +37,12 @@ export async function extractLatestPatchFor(setNumber: SetNumber) {
 export async function getPatchFor(loadSet: SetNumber, customPatchLine?: string) {
 	const patchLine = customPatchLine ?? SET_DATA[loadSet].patchLine
 	const baseURL = `https://raw.communitydragon.org/${patchLine}`
-	const url = `${baseURL}/cdragon/tft/en_us.json`
-	const response = await fetch(url)
-	if (!response.ok) { throw response }
+	const gameURL = `${baseURL}/cdragon/tft/en_us.json`
+	const mapURL = `${baseURL}/game/data/maps/shipping/map22/map22.bin.json`
+	const gameResponse = await fetch(gameURL)
+	const mapResponse = await fetch(mapURL)
+	if (!gameResponse.ok) { throw gameResponse }
+	if (!mapResponse.ok) { throw mapResponse }
 
 	// const etagPath = getPathToPatch(patchLine, `.etag.local`)
 	const etagPath = getPathToSet(loadSet, `.etag.local`)
@@ -47,9 +50,9 @@ export async function getPatchFor(loadSet: SetNumber, customPatchLine?: string) 
 	try {
 		oldEtag = await fs.readFile(etagPath, 'utf8')
 	} catch {
-		console.log('No local hash. Reloading data from:', url)
+		console.log('No local hash. Reloading data from:', gameURL)
 	}
-	const newEtag = response.headers.get('etag')
+	const newEtag = mapResponse.headers.get('etag')
 	if (newEtag != null) {
 		if (newEtag === oldEtag) {
 			return []
@@ -61,19 +64,29 @@ export async function getPatchFor(loadSet: SetNumber, customPatchLine?: string) 
 	}
 	console.log('')
 
-	const responseJSON = await response.json() as ResponseJSON
-	const parentSetNumber = getLatestSetNumberFrom(responseJSON.sets)
+	const mapResponseJSON = await mapResponse.json() as Record<string, Record<string, any>>
+	for (const rootKey in mapResponseJSON) {
+		const childObject = mapResponseJSON[rootKey]
+		const deleteTypes = ['BankUnitList', 'VfxSystemDefinitionData']
+		if (childObject.complexEmitterDefinitionData != null || (childObject.mScriptName != null && (childObject.mScriptName as string).startsWith('TFT_PlayerDamage_')) || deleteTypes.includes(childObject.__type)) {
+			delete mapResponseJSON[rootKey]
+		}
+	}
+
+	const gameResponseJSON = await gameResponse.json() as ResponseJSON
+	const parentSetNumber = getLatestSetNumberFrom(gameResponseJSON.sets)
 
 	const currentSetNumber = parentSetNumber === Math.floor(loadSet) ? loadSet : parentSetNumber
 	if (SET_DATA[currentSetNumber] == null) {
 		throw 'New Set!! ' + currentSetNumber
 	}
-	const { champions } = getSetDataFrom(loadSet, parentSetNumber, responseJSON)
+	const { champions } = getSetDataFrom(loadSet, parentSetNumber, gameResponseJSON)
 
 	await fs.mkdir(getPathToSet(currentSetNumber, 'hardcoded'), { recursive: true })
 
-	// await fs.writeFile(getPathToPatch(patchLine, '.raw.json'), JSON.stringify(responseJSON, undefined, '\t'))
-	await fs.writeFile(getPathToSet(currentSetNumber, '.raw.json'), JSON.stringify(responseJSON, undefined, '\t'))
+	// await fs.writeFile(getPathToPatch(patchLine, '.game.raw.json'), JSON.stringify(gameResponseJSON, undefined, '\t'))
+	await fs.writeFile(getPathToSet(currentSetNumber, '.game.raw.json'), JSON.stringify(gameResponseJSON, undefined, '\t'))
+	await fs.writeFile(getPathToSet(currentSetNumber, '.map.raw.json'), JSON.stringify(mapResponseJSON, undefined, '\t'))
 	console.log('Loading set', currentSetNumber, 'patch', patchLine.toUpperCase(), '...', 'Units:', champions.length, '\n')
 
 	const setData = await importSetData(currentSetNumber)
