@@ -22,3 +22,19 @@ export function removeSymbols(raw: string) {
 export function getSetDataFrom(set: SetNumber, parentSet: SetNumber, responseJSON: ResponseJSON) {
 	return set === 9.5 ? responseJSON.setData[0] : responseJSON.sets[parentSet]
 }
+
+export function validateTraits(item: ItemData, allTraitKeys: string[]) {
+	const traits = (item.associatedTraits?.length ?? 0) ? item.associatedTraits : item.incompatibleTraits
+	if (traits) {
+		for (const trait of traits) {
+			if (!allTraitKeys.includes(trait)) {
+				return false
+			}
+		}
+	}
+	return true
+}
+
+export function sortByName(a: {name: string}, b: {name: string}) {
+	return a.name.localeCompare(b.name)
+}
