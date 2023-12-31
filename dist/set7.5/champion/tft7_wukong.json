@@ -1,0 +1,303 @@
+{
+	"Characters/TFT7_Wukong/Spells/TFT7_WukongBasicAttack": {
+		"mScriptName": "TFT7_WukongBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "MonkeyKingBasicAttack",
+			"delayCastOffsetPercent": -0.30000001192092896,
+			"mCantCancelWhileChanneling": true,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				20,
+				20,
+				20,
+				20,
+				20,
+				20,
+				20
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 19,
+			"missileSpeed": 20,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT7_Wukong/Spells/TFT7_WukongQ": {
+		"mScriptName": "TFT7_WukongQ",
+		"mSpell": {
+			"mAffectsTypeFlags": 4106,
+			"mAlternateName": "TFT7_WukongQ",
+			"mDataValues": [
+				{
+					"mName": "PercentAD",
+					"mValues": [
+						1.5,
+						1.850000023841858,
+						2,
+						2.5,
+						3.5,
+						4,
+						4.5
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "Duration",
+					"mValues": [
+						1.5,
+						1,
+						1.25,
+						1.5,
+						2,
+						2,
+						2
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "BaseDamage",
+					"mValues": [
+						25,
+						50,
+						75,
+						100,
+						125,
+						150,
+						175
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"ModifiedDamage": {
+					"mFormulaParts": [
+						{
+							"mSubparts": [
+								{
+									"mSubpart": {
+										"mDataValue": "BaseDamage",
+										"__type": "NamedDataValueCalculationPart"
+									},
+									"mRatio": 0.009999999776482582,
+									"mStyleTag": "noScale",
+									"{a5749b52}": "ScaleAP",
+									"__type": "SubPartScaledProportionalToStat"
+								},
+								{
+									"mStat": 2,
+									"mDataValue": "PercentAD",
+									"__type": "StatByNamedDataValueCalculationPart"
+								}
+							],
+							"__type": "SumOfSubPartsCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"TooltipBaseDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "BaseDamage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "ScaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"mImgIconName": [
+				""
+			],
+			"mCastTime": 0.5,
+			"delayTotalTimePercent": -0.75,
+			"mAmmoUsed": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"alwaysSnapFacing": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castConeDistance": 100,
+			"castFrame": 20,
+			"missileSpeed": 20,
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"selectionPriority": 1,
+			"{00f7e5bc}": true,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT7_Wukong/Spells/TFT7_WukongCritAttack": {
+		"mScriptName": "TFT7_WukongCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.30000001192092896,
+			"mCantCancelWhileChanneling": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				20,
+				20,
+				20,
+				20,
+				20,
+				20,
+				20
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9.5,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT7_Wukong/Spells/TFT7_WukongBasicAttack2": {
+		"mScriptName": "TFT7_WukongBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "MonkeyKingBasicAttack2",
+			"delayCastOffsetPercent": -0.30000001192092896,
+			"mCantCancelWhileChanneling": true,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				20,
+				20,
+				20,
+				20,
+				20,
+				20,
+				20
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9.5,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT7_Wukong/CharacterRecords/Root": {
+		"mCharacterName": "TFT7_Wukong",
+		"baseHP": 650,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 60,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 65,
+		"baseArmor": 45,
+		"baseSpellBlock": 45,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.2999999523162842,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.699999988079071,
+		"spellNames": [
+			"TFT7_WukongQ",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 2,
+		"unitTagsString": "Champion",
+		"flags": 9446664,
+		"PortraitIcon": "ASSETS/Characters/TFT7_Wukong/HUD/TFT7_Wukong_Square.TFT_Set7_Stage2.dds",
+		"tier": 1,
+		"mLinkedTraits": [
+			{
+				"TraitData": "Jade",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "Warrior",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"__type": "TFTCharacterRecord"
+	}
+}

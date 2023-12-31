@@ -1,0 +1,357 @@
+{
+	"Characters/TFT7_Taliyah/Spells/TFT7_TaliyahQ": {
+		"mScriptName": "TFT7_TaliyahQ",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						80,
+						160,
+						240,
+						380,
+						280,
+						330,
+						380
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"ModifiedMagicDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"mCastTime": 0.25,
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.875,
+			"canCastOrQueueWhileCasting": true,
+			"useAnimatorFramerate": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"mMissileSpec": {
+				"mMissileWidth": 60,
+				"movementComponent": {
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mTargetBoneName": "C_buffbone_Glb_Center_Loc",
+					"mSpeed": 1000,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"__type": "BlendedLinearHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VerticalFacingFaceTarget"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnHit"
+					},
+					{
+						"__type": "DestroyOnHit"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"castFrame": 7.5,
+			"mMissileEffectKey": "{5053abfb}",
+			"mLineWidth": 60,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "{a898e5ff}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_buffbone_Glb_Center_Loc",
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT7_Taliyah/Spells/TFT7_TaliyahQMIssile": {
+		"mScriptName": "TFT7_TaliyahQMIssile",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						80,
+						130,
+						190,
+						230,
+						280,
+						330,
+						380
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"ModifiedMagicDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"mDisplayAsPercent": true,
+					"__type": "GameCalculation"
+				}
+			},
+			"mCastTime": 0.25,
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.875,
+			"canCastOrQueueWhileCasting": true,
+			"useAnimatorFramerate": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"mMissileSpec": {
+				"mMissileWidth": 50,
+				"movementComponent": {
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mStartBoneName": "C_buffbone_Glb_Ground_Loc",
+					"mTargetBoneName": "C_buffbone_Glb_Center_Loc",
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 1750,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"__type": "BlendedLinearHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VerticalFacingFaceTarget"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnHit"
+					},
+					{
+						"__type": "DestroyOnHit"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					},
+					{
+						"__type": "{e357c116}"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 3,
+			"castFrame": 7.5,
+			"mMissileEffectKey": "{5053abfb}",
+			"mLineWidth": 60,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "{a898e5ff}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_buffbone_Glb_Center_Loc",
+			"mTargetingTypeData": {
+				"__type": "Direction"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT7_Taliyah/Spells/TFT7_TaliyahBasicAttack": {
+		"mScriptName": "TFT7_TaliyahBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 7375,
+			"mCastTime": 0.25,
+			"bHaveHitEffect": true,
+			"castRange": [
+				300,
+				300,
+				300,
+				300,
+				300,
+				300,
+				300
+			],
+			"mMissileSpec": {
+				"mMissileWidth": 60,
+				"movementComponent": {
+					"mTargetHeightAugment": 20,
+					"mOffsetInitialTargetHeight": 20,
+					"mStartBoneName": "Buffbone_glb_ground_loc",
+					"mSpeed": 2100,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"mHeightOffset": 20,
+					"__type": "FollowTerrainHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 7,
+			"missileSpeed": 2100,
+			"mMissileEffectKey": "{e72c2a0e}",
+			"mLineWidth": 60,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "BUFFBONE_GLB_GROUND_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT7_Taliyah/Spells/TFT7_TaliyahCritAttack": {
+		"mScriptName": "TFT7_TaliyahCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 7375,
+			"mAlternateName": "TaliyahCritAttack",
+			"delayCastOffsetPercent": -0.34850001335144043,
+			"bHaveHitEffect": true,
+			"castRange": [
+				300,
+				300,
+				300,
+				300,
+				300,
+				300,
+				300
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 20,
+					"mOffsetInitialTargetHeight": 20,
+					"mStartBoneName": "Buffbone_Glb_Ground_Loc",
+					"mSpeed": 2200,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"mHeightOffset": 20,
+					"__type": "FollowTerrainHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 7.75,
+			"missileSpeed": 2200,
+			"mMissileEffectKey": "{e72c2a0e}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"mHitEffectName": "globalhit_physical_crit.troy",
+			"bHaveHitBone": true,
+			"mHitBoneName": "Buffbone_Glb_Ground_Loc",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT7_Taliyah/CharacterRecords/Root": {
+		"mCharacterName": "TFT7_Taliyah",
+		"baseHP": 550,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 60,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 30,
+		"baseArmor": 15,
+		"baseSpellBlock": 15,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.2999999523162842,
+		"baseMoveSpeed": 500,
+		"attackRange": 890,
+		"attackSpeed": 0.699999988079071,
+		"spellNames": [
+			"TFT7_TaliyahQ",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"PortraitIcon": "ASSETS/Characters/TFT7_Taliyah/HUD/TFT7_Taliyah_Square.TFT_Set7_Stage2.dds",
+		"tier": 1,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{a0bc9af5}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "Mage",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"__type": "TFTCharacterRecord"
+	}
+}

@@ -41,7 +41,7 @@ export async function transformLoad(setNumber: SetNumber) {
 	}
 
 	const outputTraitData = await transformTraits(setNumber, parentSetNumber, traits)
-	const allTraitKeys = traits.map(t => t.apiName)
+	const allTraitKeys = traits.map(t => t.apiName ?? t.name)
 
 	const outputItemExports = await transformItems(setNumber, parentSetNumber, itemsData, allTraitKeys)
 	const outputAugmentSections = await transformAugments(setNumber, parentSetNumber, itemsData, allTraitKeys)

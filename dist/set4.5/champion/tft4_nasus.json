@@ -1,0 +1,284 @@
+{
+	"Characters/TFT4_Nasus/Spells/TFT4_NasusBasicAttack2": {
+		"mScriptName": "TFT4_NasusBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 8143,
+			"mAlternateName": "NasusBasicAttack2",
+			"delayCastOffsetPercent": -0.31220000982284546,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 10,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {
+				"__type": "Area"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT4_Nasus/Spells/TFT4_NasusW": {
+		"mScriptName": "TFT4_NasusW",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mAffectsStatusFlags": 160,
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						0,
+						350,
+						550,
+						850,
+						0,
+						0,
+						0
+					],
+					"{3f95426c}": false,
+					"mFormula": "P + 0",
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "Duration",
+					"mValues": [
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5
+					],
+					"mBaseP": 5,
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "SlowPercent",
+					"mValues": [
+						0.5,
+						0.5,
+						0.5,
+						0.5,
+						0.5,
+						0.5,
+						0.5
+					],
+					"mBaseP": 0.5,
+					"__type": "SpellDataValue"
+				}
+			],
+			"mCastTime": 0.5,
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000,
+				5000
+			],
+			"castRadius": [
+				210,
+				210,
+				210,
+				210,
+				210,
+				210,
+				210
+			],
+			"castConeDistance": 100,
+			"castFrame": 7.5,
+			"missileSpeed": 0,
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"selectionPriority": 1,
+			"{00f7e5bc}": true,
+			"__type": "SpellDataResource",
+			"mSpellCalculations": {
+				"ModifiedDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat",
+							"mStyleTag": "noScale"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			}
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT4_Nasus/Spells/TFT4_NasusCritAttack": {
+		"mScriptName": "TFT4_NasusCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 8143,
+			"delayCastOffsetPercent": -0.31220000982284546,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 10,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {
+				"__type": "Area"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT4_Nasus/Spells/TFT4_NasusBasicAttack": {
+		"mScriptName": "TFT4_NasusBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 8143,
+			"mAlternateName": "NasusBasicAttack",
+			"delayCastOffsetPercent": -0.31220000982284546,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906,
+				49.400001525878906
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 10,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {
+				"__type": "Area"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT4_Nasus/CharacterRecords/Root": {
+		"PortraitIcon": "ASSETS/Characters/TFT4_Nasus/HUD/TFT4_Nasus_Square.TFT_Set4_Act2.dds",
+		"tier": 1,
+		"mLinkedTraits": [
+			{
+				"__type": "TFTTraitContributionData",
+				"TraitData": "{20401a01}"
+			},
+			{
+				"__type": "TFTTraitContributionData",
+				"TraitData": "{b464271d}"
+			}
+		],
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mCharacterName": "TFT4_Nasus",
+		"baseHP": 650,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 70,
+			"arBaseStaticRegen": 0,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 45,
+		"baseArmor": 50,
+		"baseSpellBlock": 40,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.6499999761581421,
+		"spellNames": [
+			"TFT4_NasusW",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446664,
+		"__type": "TFTCharacterRecord"
+	}
+}

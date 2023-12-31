@@ -1,0 +1,41 @@
+{
+	"{521bf754}": {
+		"mScriptName": "TFT7_LagoonRelicQ",
+		"mSpell": {
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{6d0d8ff6}": {
+		"mCharacterName": "TFT7_LagoonRelic",
+		"baseHP": 1,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 80,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.2999999523162842,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.800000011920929,
+		"spellNames": [
+			"TFT7_LagoonRelicQ",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"{d75e19ad}": 2,
+		"{22f5197d}": 260,
+		"__type": "TFTCharacterRecord"
+	}
+}

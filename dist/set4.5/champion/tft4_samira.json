@@ -1,0 +1,755 @@
+{
+	"Characters/TFT4_Samira/Spells/TFT4_SamiraPMissileOffhand": {
+		"mScriptName": "TFT4_SamiraPMissileOffhand",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"mAffectsStatusFlags": 8,
+			"mAlternateName": "SamiraR",
+			"bHaveHitEffect": true,
+			"mDoNotNeedToFaceTarget": true,
+			"{898fbad4}": true,
+			"castRange": [
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000
+			],
+			"mMissileSpec": {
+				"mMissileWidth": 110,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 2800,
+					"mUseHeightOffsetAtEnd": true,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Revolver_Muzzle",
+					"mTargetBoneName": "C_buffbone_Glb_Center_Loc",
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"__type": "BlendedLinearHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VerticalFacingFaceTarget"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{0b897c09}",
+			"mLineWidth": 110,
+			"mHitEffectKey": "{85580d0b}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_buffbone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT4_Samira/Spells/TFT4_SamiraPMissile": {
+		"mScriptName": "TFT4_SamiraPMissile",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"mAffectsStatusFlags": 8,
+			"mAlternateName": "SamiraR",
+			"bHaveHitEffect": true,
+			"mDoNotNeedToFaceTarget": true,
+			"mTurnSpeedScalar": 5,
+			"{898fbad4}": true,
+			"castRange": [
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000
+			],
+			"mMissileSpec": {
+				"mMissileWidth": 110,
+				"movementComponent": {
+					"mProjectTargetToCastRange": true,
+					"mSpeed": 2800,
+					"mUseHeightOffsetAtEnd": true,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Pistol_Muzzle",
+					"mTargetBoneName": "C_buffbone_Glb_Center_Loc",
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"__type": "BlendedLinearHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VerticalFacingFaceTarget"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{0b897c09}",
+			"mLineWidth": 110,
+			"mHitEffectKey": "{85580d0b}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_buffbone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT4_Samira/Spells/TFT4_SamiraRMissile": {
+		"mScriptName": "TFT4_SamiraRMissile",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 15018,
+			"mAlternateName": "_BasicAttack",
+			"mCoefficient": 1.2000000476837158,
+			"bHaveHitEffect": true,
+			"{898fbad4}": true,
+			"castRange": [
+				950,
+				950,
+				950,
+				950,
+				950,
+				950,
+				950
+			],
+			"mMissileSpec": {
+				"mMissileWidth": 50,
+				"movementComponent": {
+					"mSpeed": 2800,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "",
+					"__type": "FixedSpeedMovement"
+				},
+				"visibilityComponent": {
+					"mPerceptionBubbleRadius": 100,
+					"__type": "Defaultvisibility"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{b0957452}",
+			"mLineWidth": 50,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "{8a8308be}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT4_Samira/Spells/TFT4_SamiraBasicAttack": {
+		"mScriptName": "TFT4_SamiraBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "SamiraBasicAttack",
+			"mApplyAttackDamage": true,
+			"bHaveHitEffect": true,
+			"mTurnSpeedScalar": 1.7999999523162842,
+			"castRange": [
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2800,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Pistol_Muzzle",
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{b042a6dd}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT4_Samira/Spells/TFT4_SamiraDaredevilBonusAttack": {
+		"mScriptName": "TFT4_SamiraDaredevilBonusAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "SamiraBasicAttack",
+			"canCastOrQueueWhileCasting": true,
+			"mApplyAttackDamage": true,
+			"bHaveHitEffect": true,
+			"mTurnSpeedScalar": 1.7999999523162842,
+			"castRange": [
+				30000,
+				30000,
+				30000,
+				30000,
+				30000,
+				30000,
+				30000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2800,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Pistol_Muzzle",
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"castFrame": 8,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{b042a6dd}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT4_Samira/Spells/TFT4_SamiraR": {
+		"mScriptName": "TFT4_SamiraR",
+		"mSpell": {
+			"mAffectsTypeFlags": 14347,
+			"mSpellTags": [
+				"Trait_Ultimate",
+				"Trait_ChannelSpell"
+			],
+			"mDataValues": [
+				{
+					"mName": "Duration",
+					"mValues": [
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2
+					],
+					"mBaseP": 2,
+					"mFormula": "P",
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ShotsPerSecond",
+					"mValues": [
+						0.20000000298023224,
+						3,
+						3,
+						10,
+						0.20000000298023224,
+						0.20000000298023224,
+						0.20000000298023224
+					],
+					"{3f95426c}": false,
+					"mBaseP": 0.20000000298023224,
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "NumTargets",
+					"mValues": [
+						0,
+						3,
+						3,
+						9,
+						0,
+						0,
+						0
+					],
+					"{3f95426c}": false,
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "PercentAD",
+					"mValues": [
+						0,
+						0.30000001192092896,
+						0.4000000059604645,
+						0.6000000238418579,
+						0.800000011920929,
+						0.800000011920929,
+						0.800000011920929
+					],
+					"{3f95426c}": false,
+					"mFormula": ".8",
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "BaseDamage",
+					"mValues": [
+						0,
+						10,
+						20,
+						777,
+						0,
+						0,
+						0
+					],
+					"{3f95426c}": false,
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"{1f2711a6}": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{a1ffaaf9}",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{4b595dba}": {
+					"mModifiedGameCalculation": "{1f2711a6}",
+					"mMultiplier": {
+						"mPart1": {
+							"mDataValue": "Duration",
+							"__type": "NamedDataValueCalculationPart"
+						},
+						"mPart2": {
+							"mDataValue": "{f0f10b3f}",
+							"__type": "NamedDataValueCalculationPart"
+						},
+						"__type": "ProductOfSubPartsCalculationPart"
+					},
+					"__type": "GameCalculationModified"
+				},
+				"DamagePerShot": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "PercentAD",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 1,
+							"mStat": 2,
+							"mStyleTag": "scaleAD",
+							"{a5749b52}": "scaleAD",
+							"__type": "SubPartScaledProportionalToStat"
+						},
+						{
+							"mDataValue": "BaseDamage",
+							"__type": "NamedDataValueCalculationPart"
+						}
+					],
+					"{cbcac618}": 6,
+					"{37070a8d}": 6,
+					"__type": "GameCalculation"
+				}
+			},
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -0.5,
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"mCantCancelWhileChanneling": true,
+			"mShowChannelBar": false,
+			"useAnimatorFramerate": true,
+			"castRange": [
+				550,
+				550,
+				550,
+				550,
+				550,
+				550,
+				550
+			],
+			"castRadius": [
+				550,
+				550,
+				550,
+				550,
+				550,
+				550,
+				550
+			],
+			"castConeDistance": 100,
+			"castFrame": 9,
+			"missileSpeed": 1450,
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"selectionPriority": 1,
+			"mTargetingTypeData": {
+				"__type": "SelfAoe"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT4_Samira/Spells/TFT4_SamiraCritAttack": {
+		"mScriptName": "TFT4_SamiraCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "SamiraCritAttack",
+			"bHaveHitEffect": true,
+			"mTurnSpeedScalar": 1.7999999523162842,
+			"castRange": [
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2800,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "",
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{e86621ea}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT4_Samira/Spells/TFT4_SamiraSharpshooterBounce": {
+		"mScriptName": "TFT4_SamiraSharpshooterBounce",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "SamiraBasicAttack",
+			"canCastOrQueueWhileCasting": true,
+			"mApplyAttackDamage": true,
+			"bHaveHitEffect": true,
+			"mTurnSpeedScalar": 1.7999999523162842,
+			"mConsideredAsAutoAttack": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2800,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Pistol_Muzzle",
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{b042a6dd}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT4_Samira/Spells/TFT4_SamiraBasicAttack2": {
+		"mScriptName": "TFT4_SamiraBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "SamiraBasicAttack",
+			"mApplyAttackDamage": true,
+			"bHaveHitEffect": true,
+			"mTurnSpeedScalar": 1.7999999523162842,
+			"castRange": [
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375,
+				552.0999755859375
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 2800,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Pistol",
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{b042a6dd}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT4_Samira/CharacterRecords/Root": {
+		"PortraitIcon": "ASSETS/Characters/TFT4_Samira/HUD/TFT4_Samira_Square.TFT_Set4_Act2.dds",
+		"tier": 5,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{908710fd}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{91d4636a}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{775722b9}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"{7cbc4762}": 0,
+		"mCharacterName": "TFT4_Samira",
+		"baseHP": 900,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 7,
+			"arBase": 4,
+			"arBaseStaticRegen": 0,
+			"arIncrements": 1,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 65,
+		"baseArmor": 30,
+		"baseSpellBlock": 30,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.5,
+		"baseMoveSpeed": 500,
+		"attackRange": 420,
+		"attackSpeed": 0.8500000238418579,
+		"basicAttack": {
+			"mAttackProbability": 0.5,
+			"mAttackName": "TFT4_SamiraBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 0.5,
+				"mAttackName": "TFT4_SamiraBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT4_SamiraCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT4_SamiraR",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"extraSpells": [
+			"TFT4_SamiraDaredevilBonusAttack",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"__type": "TFTCharacterRecord"
+	}
+}

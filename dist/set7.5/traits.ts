@@ -227,6 +227,46 @@ export const traits: TraitData[] = [
 		name: `Cavalier`,
 	},
 	{
+		apiName: `Set7_Darkflight`,
+		desc: `Summon a sacrificial altar. Combat start: the unit placed on the altar is sacrificed, granting a copy of one of the items and bonus HP to each Darkflight champion.<br><br><tftitemrules> Emblems and non-craftable items are corrupted when they're copied, instead becoming Darkflight Essence.</tftitemrules><br><br><expandRow>(@MinUnits@) @BonusHP@ HP</expandRow><br>`,
+		effects: [
+			{
+				maxUnits: 3,
+				minUnits: 2,
+				style: 1,
+				variables: {
+					'BonusHP': 500,
+				},
+			},
+			{
+				maxUnits: 5,
+				minUnits: 4,
+				style: 3,
+				variables: {
+					'BonusHP': 750,
+				},
+			},
+			{
+				maxUnits: 7,
+				minUnits: 6,
+				style: 4,
+				variables: {
+					'BonusHP': 1000,
+				},
+			},
+			{
+				maxUnits: 25000,
+				minUnits: 8,
+				style: 5,
+				variables: {
+					'BonusHP': 1600,
+				},
+			},
+		],
+		icon: `ASSETS/UX/TraitIcons/Trait_Icon_Darkflight.TFT_Set7_Stage2.tex`,
+		name: `Darkflight`,
+	},
+	{
 		apiName: `Set7_Dragon`,
 		desc: `Innate: Require 2 team slots. <br><br>Dragons provide +3 to the marked trait, and gain additional bonuses based on how many Dragons are on your team. <br><br><row>(@MinUnits@) @BonusHP@ bonus HP</row><br><row>(@MinUnits@) and @Defenses@ Armor and Magic Resist</row><br><row>(@MinUnits@) and @PercentBonusDamage*100@% bonus damage</row><br><row>(@MinUnits@) and +@TeamSizeIncrease@ to team size</row><br><row>(@MinUnits@) and heal @Healing@ HP every second</row><br><row>(@MinUnits@) and your Dragons ascend!</row>`,
 		effects: [
@@ -579,21 +619,48 @@ export const traits: TraitData[] = [
 		name: `Jade`,
 	},
 	{
-		apiName: `Set7_Legend`,
-		desc: `(3) Each combat: An adjacent ally champion sacrifices their life to the Legend, which gains @StatPercent@% of their HP, Armor, and Magic Resistance, plus @APPercent@% of their Ability Power.`,
+		apiName: `Set7_Lagoon`,
+		desc: `Summon a Seastone which grants loot based on the number of Abilities cast by Lagoon champions over time. Lagoon champions also gain Ability Power and Attack Speed.<br><br><expandRow>(@MinUnits@) @AP@ Ability Power, @AS*100@% Attack Speed</expandRow><br><br>Total casts: <active>@TFTUnitProperty.trait:TFT7_LagoonCount@</active><br>Gold granted: <active>@TFTUnitProperty.trait:TFT7_LagoonRewardCountGold@</active><br>Rewards granted: <active>@TFTUnitProperty.trait:TFT7_LagoonRewardCount@</active>@TFTUnitProperty.trait:TFT_Modes_TRA1@`,
 		effects: [
 			{
-				maxUnits: 25000,
+				maxUnits: 5,
 				minUnits: 3,
+				style: 1,
+				variables: {
+					'AS': 0.07999999821186066,
+					'AP': 8,
+				},
+			},
+			{
+				maxUnits: 8,
+				minUnits: 6,
+				style: 3,
+				variables: {
+					'AS': 0.30000001192092896,
+					'AP': 30,
+				},
+			},
+			{
+				maxUnits: 11,
+				minUnits: 9,
 				style: 4,
 				variables: {
-					'{92c2d0ac}': 100,
-					'{a68d353d}': 30,
+					'AS': 0.550000011920929,
+					'AP': 55,
+				},
+			},
+			{
+				maxUnits: 999,
+				minUnits: 12,
+				style: 5,
+				variables: {
+					'AS': 2,
+					'AP': 200,
 				},
 			},
 		],
-		icon: `ASSETS/UX/TraitIcons/Trait_Icon_7_Legend.tex`,
-		name: `Legend`,
+		icon: `ASSETS/UX/TraitIcons/Trait_Icon_Lagoon.TFT_Set7_Stage2.tex`,
+		name: `Lagoon`,
 	},
 	{
 		apiName: `Set7_Mage`,
@@ -724,6 +791,22 @@ export const traits: TraitData[] = [
 		name: `Mirage`,
 	},
 	{
+		apiName: `Set7_Monolith`,
+		desc: `(@MinUnits@) Terra empowers 3 hexes on the battlefield. Combat start: units standing in the hex at the start of combat gain @DamageReductionPercent@% damage reduction.`,
+		effects: [
+			{
+				maxUnits: 25000,
+				minUnits: 3,
+				style: 4,
+				variables: {
+					'{5064373e}': 18,
+				},
+			},
+		],
+		icon: `ASSETS/UX/TraitIcons/Trait_Icon_Monolith.TFT_Set7_Stage2.tex`,
+		name: `Monolith`,
+	},
+	{
 		apiName: `Set7_Mystic`,
 		desc: `Your team gains Magic Resist. <br><br><expandRow>(@MinUnits@) @MR@ Magic Resist</expandRow>`,
 		effects: [
@@ -762,6 +845,22 @@ export const traits: TraitData[] = [
 		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_2_Mystic.tex`,
 		name: `Mystic`,
+	},
+	{
+		apiName: `Set7_Prodigy`,
+		desc: `(@MinUnits@) Nomsy gains a random trait each game. She summons a former Trainer to aid her in battle, who also gains this trait.<br><br>Trainers' Ability Power is always equal to Nomsy's Ability Power. When Nomsy dies, Trainers gain @AS*100@% Attack Speed.`,
+		effects: [
+			{
+				maxUnits: 25000,
+				minUnits: 3,
+				style: 4,
+				variables: {
+					'AS': 1,
+				},
+			},
+		],
+		icon: `ASSETS/UX/TraitIcons/Trait_Icon_Prodigy.TFT_Set7_Stage2.tex`,
+		name: `Prodigy`,
 	},
 	{
 		apiName: `Set7_Ragewing`,
@@ -806,46 +905,6 @@ export const traits: TraitData[] = [
 		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_7_Ragewing.tex`,
 		name: `Ragewing`,
-	},
-	{
-		apiName: `Set7_Revel`,
-		desc: `After dealing damage with an Ability, launch a firecracker that deals magic damage to a random enemy.<br><br><expandRow>(@MinUnits@) @MagicDamage@ magic damage</expandRow>`,
-		effects: [
-			{
-				maxUnits: 2,
-				minUnits: 2,
-				style: 1,
-				variables: {
-					'MagicDamage': 110,
-				},
-			},
-			{
-				maxUnits: 3,
-				minUnits: 3,
-				style: 3,
-				variables: {
-					'MagicDamage': 150,
-				},
-			},
-			{
-				maxUnits: 4,
-				minUnits: 4,
-				style: 4,
-				variables: {
-					'MagicDamage': 210,
-				},
-			},
-			{
-				maxUnits: 25000,
-				minUnits: 5,
-				style: 5,
-				variables: {
-					'MagicDamage': 290,
-				},
-			},
-		],
-		icon: `ASSETS/UX/TraitIcons/Trait_Icon_7_Revel.tex`,
-		name: `Revel`,
 	},
 	{
 		apiName: `Set7_Scalescorn`,
@@ -1087,32 +1146,6 @@ export const traits: TraitData[] = [
 		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_7_Tempest.tex`,
 		name: `Tempest`,
-	},
-	{
-		apiName: `Set7_Trainer`,
-		desc: `After combat, each Trainer feeds 1 Snax per star level to Nomsy, adding HP and Ability Power. Nomsy's star level increases every 25 Snax!<br><br><row>(@MinUnits@) Summon Nomsy!</row><br><row>(@MinUnits@) Nomsy's Ability deals @DamageInc*100@% more damage</row>`,
-		effects: [
-			{
-				maxUnits: 2,
-				minUnits: 2,
-				style: 1,
-				variables: {
-					'{a848d452}': 1,
-					'{cc4e6814}': null,
-				},
-			},
-			{
-				maxUnits: 25000,
-				minUnits: 3,
-				style: 4,
-				variables: {
-					'{a848d452}': 2,
-					'{cc4e6814}': 2,
-				},
-			},
-		],
-		icon: `ASSETS/UX/TraitIcons/Trait_Icon_7_Trainers.tex`,
-		name: `Trainer`,
 	},
 	{
 		apiName: `Set7_Warrior`,

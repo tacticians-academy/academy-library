@@ -275,6 +275,13 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		icons: [`assets/maps/tft/icons/augments/hexcore/cybernetic-uplink-i.tft_set6_stage2`, `assets/maps/tft/icons/augments/hexcore/cybernetic-uplink-ii.tft_set6_stage2`, `assets/maps/tft/icons/augments/hexcore/cybernetic-uplink-iii.tft_set6_stage2`],
 	},
 	{
+		id: `darkflight`,
+		name: `Darkflight Heart/Crest/Crown`,
+		tiers: [1, 2, 3],
+		description: `1: Your team counts as having 1 additional Darkflight. Gain an Aphelios.  2: Gain a Darkflight Emblem and a Rell.  3: Gain a Darkflight Emblem, a Titan's Resolve, and a Rengar.`,
+		icons: [`assets/maps/tft/icons/augments/hexcore/darkflightheart-1`, `assets/maps/tft/icons/augments/hexcore/darkflightcrest-2`, `assets/maps/tft/icons/augments/hexcore/darkflightcrown-3`],
+	},
+	{
 		id: `devastating charge`,
 		name: `Devastating Charge`,
 		tiers: [2],
@@ -506,6 +513,13 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		icons: [`assets/maps/tft/icons/augments/hexcore/grandgambler3`],
 	},
 	{
+		id: `high tide`,
+		name: `High Tide`,
+		tiers: [2],
+		description: `Until they cast {CastCount} times, Lagoon champions attack {ASReductionPct}% slower but gain 12 Mana per second. Gain a Kai'sa.`,
+		icons: [`assets/maps/tft/icons/augments/hexcore/hightide-2`],
+	},
+	{
 		id: `hot shot`,
 		name: `Hot Shot`,
 		tiers: [2],
@@ -567,6 +581,13 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		tiers: [1, 2, 3],
 		description: `Your units that start combat in the front 2 rows gain 15/25/35 Attack Damage.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/cqctraining1`, `assets/maps/tft/icons/augments/hexcore/cqctraining2`, `assets/maps/tft/icons/augments/hexcore/cqctraining3`],
+	},
+	{
+		id: `lagoon`,
+		name: `Lagoon Heart/Crest/Crown`,
+		tiers: [1, 2, 3],
+		description: `1: Your team counts as having 1 additional Lagoon. Gain a Kai'Sa.  2: Gain a Lagoon Emblem and a Zac.  3: Gain a Lagoon Emblem, a Spear of Shojin, and a Zeri.`,
+		icons: [`assets/maps/tft/icons/augments/hexcore/lagoonheart-1`, `assets/maps/tft/icons/augments/hexcore/lagooncrest-2`, `assets/maps/tft/icons/augments/hexcore/lagooncrown-3`],
 	},
 	{
 		id: `last stand`,
@@ -681,6 +702,13 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		icons: [`assets/maps/tft/icons/augments/hexcore/newrecruit3`],
 	},
 	{
+		id: `oasis`,
+		name: `Oasis`,
+		tiers: [2],
+		description: `Every {HealTimer} seconds, Lagoon champions remove all negative effects on themselves and heal for {MissingHPPercent}% of their missing HP. Gain a Zac.`,
+		icons: [`assets/maps/tft/icons/augments/hexcore/oasis-2`],
+	},
+	{
 		id: `pandoras bench`,
 		name: `Pandora's Bench`,
 		tiers: [1],
@@ -700,20 +728,6 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		tiers: [3],
 		description: `The Assassin Trait grants its bonuses to your champions that start combat in the middle 2 rows. This does not increase the number of Assassins. Gain a Qiyana.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/assassin-unity-iii`],
-	},
-	{
-		id: `party favors`,
-		name: `Party Favors`,
-		tiers: [2],
-		description: `Gain 1 gold for every {GoldReq} firecrackers launched by Revel champions each combat. Additionally, gain a special prize the first time {SpecialPrizeReq} total firecrackers are launched. Gain a Jinx.`,
-		icons: [`assets/maps/tft/icons/augments/hexcore/party-favors-ii.tft_set7`],
-	},
-	{
-		id: `party time`,
-		name: `Party Time!`,
-		tiers: [2],
-		description: `After Revels score a takedown, they gain {ASPercent}% Attack Speed for 4 seconds. Gain a Jinx.`,
-		icons: [`assets/maps/tft/icons/augments/hexcore/party-time-ii.tft_set7`],
 	},
 	{
 		id: `pay to win`,
@@ -807,20 +821,6 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		icons: [`assets/maps/tft/icons/augments/hexcore/recombobulator-i.tft_set6_stage2`],
 	},
 	{
-		id: `revel`,
-		name: `Revel Heart/Crest/Crown`,
-		tiers: [1, 2, 3],
-		description: `1: Your team counts as having 1 additional Revel. Gain a Jinx.  2: Gain a Revel Emblem and a Jinx.`,
-		icons: [`assets/maps/tft/icons/augments/hexcore/revel-heart-i.tft_set7`, `assets/maps/tft/icons/augments/hexcore/revel-crest-ii.tft_set7`, `assets/maps/tft/icons/augments/hexcore/revel-crown-iii.tft_set7`],
-	},
-	{
-		id: `revel unity`,
-		name: `Revel Unity`,
-		tiers: [2],
-		description: `The Revel trait grants its bonuses to all of your champions. This does not increase your number of Revel units. Gain a Jinx.`,
-		icons: [`assets/maps/tft/icons/augments/hexcore/revel-unity-ii.tft_set7`],
-	},
-	{
 		id: `rich get richer`,
 		name: `Rich Get Richer`,
 		tiers: [2],
@@ -877,13 +877,6 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		icons: [`assets/maps/tft/icons/augments/hexcore/second--wind-i.tft_set6_stage2`, `assets/maps/tft/icons/augments/hexcore/second--wind-ii.tft_set6_stage2`, `assets/maps/tft/icons/augments/hexcore/second-wind-iii.tft_set6_stage2`],
 	},
 	{
-		id: `secret snax`,
-		name: `Secret Snax`,
-		tiers: [2],
-		description: `While feeding their dragonling, Trainers have a {FeedChance}% chance to secretly feed a bonus Snax. Gain a Tristana.`,
-		icons: [`assets/maps/tft/icons/augments/hexcore/secret-snax-ii.tft_set7`],
-	},
-	{
 		id: `shapeshifter`,
 		name: `Shapeshifter Heart/Soul`,
 		tiers: [1, 3],
@@ -896,6 +889,13 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		tiers: [1, 2, 3],
 		description: `1: Gain a Shimmerscale Emblem and a Jax.  2: Your team counts as having 1 additional Shimmerscale. Gain a Jax.  3: Your team counts as having 1 additional Shimmerscale. Gain a Titan's Resolve and a Volibear.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/shimmerscale-crest-i.tft_set7`, `assets/maps/tft/icons/augments/hexcore/shimmerscale-heart-ii.tft_set7`, `assets/maps/tft/icons/augments/hexcore/shimmerscale-crown-iii.tft_set7`],
+	},
+	{
+		id: `soul siphon`,
+		name: `Soul Siphon`,
+		tiers: [1],
+		description: `Darkflight champions benefit from the first-listed trait of a sacrificed champion. This does not increase the trait count for that trait. Gain an Aphelios.`,
+		icons: [`assets/maps/tft/icons/augments/hexcore/soulsiphon-1`],
 	},
 	{
 		id: `stand united`,

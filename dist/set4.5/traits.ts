@@ -70,6 +70,20 @@ export const traits: TraitData[] = [
 		name: `Assassin`,
 	},
 	{
+		apiName: `Set4_Blacksmith`,
+		desc: `After each combat a Blacksmith participates in, they will make progress forging an Artifact. The higher their star-level, the faster they work. Once the Artifact is complete, it will become available to bestow upon an ally.<br><br>Each ally may only equip one Artifact.`,
+		effects: [
+			{
+				maxUnits: 25000,
+				minUnits: 1,
+				style: 3,
+				variables: {},
+			},
+		],
+		icon: `ASSETS/UX/TraitIcons/Trait_Icon_4_Blacksmith.dds`,
+		name: `Blacksmith`,
+	},
+	{
 		apiName: `Set4_Brawler`,
 		desc: `Brawlers gain bonus HP and Attack Damage.<br><br><expandRow>(@MinUnits@) @BonusHP@ HP and @BonusAD@ Attack Damage</expandRow><br>`,
 		effects: [
@@ -164,30 +178,22 @@ export const traits: TraitData[] = [
 		name: `Cultist`,
 	},
 	{
-		apiName: `Set4_Dazzler`,
-		desc: `Dazzlers' spells reduce the Attack Damage of enemies hit for @Duration@ seconds.<br><br><expandRow>(@MinUnits@) @ADReduction@% Attack Damage reduction</expandRow><br>`,
+		apiName: `Set4_Daredevil`,
+		desc: `Daredevils seek the thrill of battle, dashing after every other attack. After every dash, they shield themselves for @DaredevilShieldHPPercent@% of their max HP and their next attack fires @DaredevilShots@ shots, gaining Style. At max Style, they cast their spell.<br>`,
 		effects: [
 			{
-				maxUnits: 3,
-				minUnits: 2,
-				style: 1,
-				variables: {
-					'Duration': 8,
-					'{b890a4c9}': 40,
-				},
-			},
-			{
 				maxUnits: 25000,
-				minUnits: 4,
+				minUnits: 1,
 				style: 3,
 				variables: {
-					'Duration': 8,
-					'{b890a4c9}': 80,
+					'ShieldDuration': 4,
+					'{5789a3c4}': 2,
+					'{cead01e5}': 10,
 				},
 			},
 		],
-		icon: `ASSETS/UX/TraitIcons/Trait_Icon_4_Dazzler.dds`,
-		name: `Dazzler`,
+		icon: `ASSETS/UX/TraitIcons/Trait_Icon_4_Daredevil.dds`,
+		name: `Daredevil`,
 	},
 	{
 		apiName: `Divine`,
@@ -246,6 +252,47 @@ export const traits: TraitData[] = [
 		name: `Divine`,
 	},
 	{
+		apiName: `Set4_Dragonsoul`,
+		desc: `The first Dragonsoul allies to take damage in combat receive the Dragon's Blessing. While blessed, the unit gains bonus stats, and every 5th attack fires a Dragonsoul blast, dealing @DragonBreathDamage@% of the target's maximum HP in magic damage.<br><br>On death, this blessing passes to the closest Dragonsoul ally without a blessing.<br><br><row>(@MinUnits@) @NumBlessings@ Blessing; @BonusAP@ AS & AP </row><br><row>(@MinUnits@) @NumBlessings@ Blessings; @BonusAP@ AS & AP</row><br><row>(@MinUnits@) @NumBlessings@ Blessings; @BonusAP@ AS & AP</row><br>`,
+		effects: [
+			{
+				maxUnits: 5,
+				minUnits: 3,
+				style: 1,
+				variables: {
+					'BonusAS': 40,
+					'{7f667f2b}': 1,
+					'AdditionalHeal': 40,
+					'{ce431481}': 40,
+				},
+			},
+			{
+				maxUnits: 8,
+				minUnits: 6,
+				style: 3,
+				variables: {
+					'BonusAS': 70,
+					'{7f667f2b}': 3,
+					'AdditionalHeal': 70,
+					'{ce431481}': 40,
+				},
+			},
+			{
+				maxUnits: 25000,
+				minUnits: 9,
+				style: 4,
+				variables: {
+					'BonusAS': 140,
+					'{7f667f2b}': 6,
+					'AdditionalHeal': 140,
+					'{ce431481}': 40,
+				},
+			},
+		],
+		icon: `ASSETS/UX/TraitIcons/Trait_Icon_4_Dragonblood.dds`,
+		name: `Dragonsoul`,
+	},
+	{
 		apiName: `Duelist`,
 		desc: `Innate: Duelists gain bonus Movement Speed.<br><br>Duelists' attacks grant Attack Speed, up to @MaxStacks@ stacks.<br><br><expandRow>(@MinUnits@) +@AS@% Attack Speed per stack</expandRow>`,
 		effects: [
@@ -288,41 +335,6 @@ export const traits: TraitData[] = [
 		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_4_Duelist.dds`,
 		name: `Duelist`,
-	},
-	{
-		apiName: `Dusk`,
-		desc: `Dusk champions increase all allies' Spell Power.<br><row>(@MinUnits@) All allies gain @TeamSpellPower@% Spell Power</row><br><row>(@MinUnits@) And Dusk champions gain an additional @DuskSpellPower@%</row><br><row>(@MinUnits@) @TeamSpellPower@% Spell Power for all, and an extra @DuskSpellPower@% for Dusk champions</row><br>`,
-		effects: [
-			{
-				maxUnits: 3,
-				minUnits: 2,
-				style: 1,
-				variables: {
-					'{845f7bf3}': null,
-					'{aa5d5de7}': 20,
-				},
-			},
-			{
-				maxUnits: 5,
-				minUnits: 4,
-				style: 3,
-				variables: {
-					'{845f7bf3}': 50,
-					'{aa5d5de7}': 20,
-				},
-			},
-			{
-				maxUnits: 25000,
-				minUnits: 6,
-				style: 4,
-				variables: {
-					'{845f7bf3}': 70,
-					'{aa5d5de7}': 40,
-				},
-			},
-		],
-		icon: `ASSETS/UX/TraitIcons/Trait_Icon_4_Dusk.dds`,
-		name: `Dusk`,
 	},
 	{
 		apiName: `Set4_Elderwood`,
@@ -415,6 +427,38 @@ export const traits: TraitData[] = [
 		name: `Enlightened`,
 	},
 	{
+		apiName: `Set4_Executioner`,
+		desc: `Executioner attacks and spells always critically hit targets beneath a certain HP threshold.<br><br><expandRow>(@MinUnits@) below @PercentHP@% HP </expandRow><br><br>`,
+		effects: [
+			{
+				maxUnits: 2,
+				minUnits: 2,
+				style: 1,
+				variables: {
+					'PercentHP': 33,
+				},
+			},
+			{
+				maxUnits: 3,
+				minUnits: 3,
+				style: 3,
+				variables: {
+					'PercentHP': 66,
+				},
+			},
+			{
+				maxUnits: 9999,
+				minUnits: 4,
+				style: 4,
+				variables: {
+					'PercentHP': 99,
+				},
+			},
+		],
+		icon: `ASSETS/UX/TraitIcons/Trait_Icon_4_Executioner.dds`,
+		name: `Executioner`,
+	},
+	{
 		apiName: `Set4_Exile`,
 		desc: `If an Exile has no adjacent allies at the start of combat, they gain:<br><br><row>(@MinUnits@) A shield equal to @ShieldPercent@% of their maximum HP</row><br><row>(@MinUnits@) And @LifeSteal@% Lifesteal</row><br><br>`,
 		effects: [
@@ -441,6 +485,20 @@ export const traits: TraitData[] = [
 		name: `Exile`,
 	},
 	{
+		apiName: `Set4_Fabled`,
+		desc: `<row>(@MinUnits@) Fabled champions' abilities are empowered from tales of their past valor.</row><br><br><br>`,
+		effects: [
+			{
+				maxUnits: 25000,
+				minUnits: 3,
+				style: 3,
+				variables: {},
+			},
+		],
+		icon: `ASSETS/UX/TraitIcons/Trait_Icon_4_Myth.dds`,
+		name: `Fabled`,
+	},
+	{
 		apiName: `Fortune`,
 		desc: `<row>(@MinUnits@) Winning combat against a player will give bonus orbs. The longer you've gone without an orb, the bigger the payout! </row><br><row>(@MinUnits@) Wins give an extra bonus orb with rare loot.</row><br>`,
 		effects: [
@@ -464,50 +522,6 @@ export const traits: TraitData[] = [
 		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_4_Fortune.dds`,
 		name: `Fortune`,
-	},
-	{
-		apiName: `Hunter`,
-		desc: `Every few seconds, all Hunters will attack the lowest percent HP enemy, dealing bonus damage.<br><br><expandRow>(@MinUnits@) @DamageAmp@% bonus damage every @ShotFrequency@ seconds</expandRow>`,
-		effects: [
-			{
-				maxUnits: 2,
-				minUnits: 2,
-				style: 1,
-				variables: {
-					'DamageAmp': 125,
-					'{428a4c11}': 3.5,
-				},
-			},
-			{
-				maxUnits: 3,
-				minUnits: 3,
-				style: 2,
-				variables: {
-					'DamageAmp': 150,
-					'{428a4c11}': 3,
-				},
-			},
-			{
-				maxUnits: 4,
-				minUnits: 4,
-				style: 3,
-				variables: {
-					'DamageAmp': 175,
-					'{428a4c11}': 2.5,
-				},
-			},
-			{
-				maxUnits: 25000,
-				minUnits: 5,
-				style: 4,
-				variables: {
-					'DamageAmp': 200,
-					'{428a4c11}': 2,
-				},
-			},
-		],
-		icon: `ASSETS/UX/TraitIcons/Trait_Icon_4_Hunter.dds`,
-		name: `Hunter`,
 	},
 	{
 		apiName: `Keeper`,
@@ -583,30 +597,6 @@ export const traits: TraitData[] = [
 		name: `Mage`,
 	},
 	{
-		apiName: `Moonlight`,
-		desc: `(@MinUnits@) At the start of combat, a number of Moonlight Champions star up once until combat ends.<br><br>(Prioritizes the lowest star-level champions. If tied, champions with the most items are chosen.)<br><br><row>(@MinUnits@) @NumberOfChampions@ Champion</row><br><row>(@MinUnits@) @NumberOfChampions@ Champions</row>`,
-		effects: [
-			{
-				maxUnits: 4,
-				minUnits: 3,
-				style: 3,
-				variables: {
-					'{a6d1e24b}': 1,
-				},
-			},
-			{
-				maxUnits: 25000,
-				minUnits: 5,
-				style: 4,
-				variables: {
-					'{a6d1e24b}': 2,
-				},
-			},
-		],
-		icon: `ASSETS/UX/TraitIcons/Trait_Icon_4_Moonlight.dds`,
-		name: `Moonlight`,
-	},
-	{
 		apiName: `Set4_Mystic`,
 		desc: `All allies gain Magic Resistance.<br><br><expandRow>(@MinUnits@) @MR@ Magic Resistance</expandRow>`,
 		effects: [
@@ -663,41 +653,6 @@ export const traits: TraitData[] = [
 		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_Ninja.dds`,
 		name: `Ninja`,
-	},
-	{
-		apiName: `Set4_Shade`,
-		desc: `Innate: When combat starts, Shades teleport to the enemy backline.<br><br>Shades dip into the shadows after every @NumberOfAttacks@ attacks, stealthing and causing their next basic attack to deal bonus magic damage.<br><br><expandRow>(@MinUnits@) @Damage@ bonus damage</expandRow>`,
-		effects: [
-			{
-				maxUnits: 2,
-				minUnits: 2,
-				style: 1,
-				variables: {
-					'Damage': 125,
-					'{0140347e}': 3,
-				},
-			},
-			{
-				maxUnits: 3,
-				minUnits: 3,
-				style: 3,
-				variables: {
-					'Damage': 400,
-					'{0140347e}': 3,
-				},
-			},
-			{
-				maxUnits: 28,
-				minUnits: 4,
-				style: 4,
-				variables: {
-					'Damage': 750,
-					'{0140347e}': 3,
-				},
-			},
-		],
-		icon: `ASSETS/UX/TraitIcons/Trait_Icon_4_Shade.dds`,
-		name: `Shade`,
 	},
 	{
 		apiName: `Sharpshooter`,
@@ -789,6 +744,32 @@ export const traits: TraitData[] = [
 		name: `Spirit`,
 	},
 	{
+		apiName: `Set4_Syphoner`,
+		desc: `All allies heal for some of the damage they deal with spells and attacks.<br><br><row>(@MinUnits@) @AlliedOmnivampPercent@% for Allies; @TraitOmnivampPercent@% for Syphoners </row><br><row>(@MinUnits@) @AlliedOmnivampPercent@% for Allies; @TraitOmnivampPercent@% for Syphoners </row><br><br>`,
+		effects: [
+			{
+				maxUnits: 3,
+				minUnits: 2,
+				style: 1,
+				variables: {
+					'{56fbd890}': 10,
+					'{f7ac24b3}': 40,
+				},
+			},
+			{
+				maxUnits: 25000,
+				minUnits: 4,
+				style: 3,
+				variables: {
+					'{56fbd890}': 25,
+					'{f7ac24b3}': 100,
+				},
+			},
+		],
+		icon: `ASSETS/UX/TraitIcons/Trait_Icon_4_Soulstealer.dds`,
+		name: `Syphoner`,
+	},
+	{
 		apiName: `Boss`,
 		desc: `When The Boss first drops below 40% HP, he leaves combat to start doing sit-ups. Each sit-up restores @HealPercent@% of his maximum HP and gives him @ASPercent@% Attack and Movement Speed. If he reaches full HP he returns to combat Pumped Up: all of his attacks and spells deal true damage. If all of his allies die, he will immediately return to combat.`,
 		effects: [
@@ -804,22 +785,6 @@ export const traits: TraitData[] = [
 		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_4_Theboss.dds`,
 		name: `The Boss`,
-	},
-	{
-		apiName: `Set4_Tormented`,
-		desc: `Tormented can be transformed after participating in @RoundsToTransform@ combats, enhancing their abilities.`,
-		effects: [
-			{
-				maxUnits: 25000,
-				minUnits: 1,
-				style: 3,
-				variables: {
-					'{5ef02437}': 3,
-				},
-			},
-		],
-		icon: `ASSETS/UX/TraitIcons/Trait_Icon_4_Tormented.dds`,
-		name: `Tormented`,
 	},
 	{
 		apiName: `Set4_Vanguard`,

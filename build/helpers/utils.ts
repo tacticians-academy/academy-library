@@ -20,7 +20,16 @@ export function removeSymbols(raw: string) {
 }
 
 export function getSetDataFrom(set: SetNumber, parentSet: SetNumber, responseJSON: ResponseJSON) {
-	return set === 9.5 ? responseJSON.setData[0] : responseJSON.sets[parentSet]
+	if (responseJSON.setData) {
+		const findSet = responseJSON.setData.find(data => {
+			if (data.number !== parentSet) return false
+			return (set === parentSet) !== (data.mutator.endsWith('2'))
+		})
+		if (findSet) {
+			return findSet
+		}
+	}
+	return responseJSON.sets[parentSet]
 }
 
 export function validateTraits(item: ItemData, allTraitKeys: string[]) {
