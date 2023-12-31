@@ -1,7 +1,9 @@
 import type { SetNumber } from '../../dist'
 import type { ChampionData, TraitData } from '../../dist/types'
 
-export type ResponseJSON = { items: Record<string, any>[], setData?: {number: number, mutator: string, champions: ChampionData[], traits: TraitData[]}[], sets: Record<SetNumber, {champions: ChampionData[], traits: TraitData[]}> }
+type SetData = {name: string, number?: number, mutator?: string, champions: ChampionData[], traits: TraitData[]}
+export type GameResponseJSON = { items: Record<string, any>[], setData?: SetData[], sets: Record<SetNumber, SetData> }
+export type MapResponseJSON = Record<string, Record<string, any>>
 
 export type ChampionJSON = Record<string, Record<string, any>>
 export type ChampionJSONType = 'SpellObject' | 'TFTCharacterRecord'

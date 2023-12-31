@@ -1,5 +1,5 @@
 import type { AugmentData, ChampionData, ItemData, SetNumber } from '../../dist/index.js'
-import type { ResponseJSON } from './types'
+import type { GameResponseJSON } from './types'
 
 export function getAugmentNameKey(item: AugmentData | ItemData) {
 	if (item.name === 'Arcane Crest') {
@@ -19,11 +19,12 @@ export function removeSymbols(raw: string) {
 	return raw.replaceAll(/['.:+\-!,]/g, '')
 }
 
-export function getSetDataFrom(set: SetNumber, parentSet: SetNumber, responseJSON: ResponseJSON) {
+export function getSetDataFrom(set: SetNumber, parentSet: SetNumber, responseJSON: GameResponseJSON) {
 	if (responseJSON.setData) {
 		const findSet = responseJSON.setData.find(data => {
-			if (data.number !== parentSet) return false
-			return (set === parentSet) !== (data.mutator.endsWith('2'))
+			if (data.number !== parentSet || data.mutator == null || data.mutator.includes('TURBO')) return false
+
+			return (set === parentSet) != (set >= 4 && data.mutator.endsWith('2'))
 		})
 		if (findSet) {
 			return findSet

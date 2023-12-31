@@ -167,3 +167,5 @@ export interface TraitData {
 	icon: string
 	name: string
 }
+
+export type UnitPools = Record<string, Record<string, number>>

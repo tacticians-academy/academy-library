@@ -288,3 +288,59 @@ export async function importTraits(set: SetNumber) {
 	}
 	throw 'Unsupported set:' + set
 }
+
+export async function importMap(set: SetNumber) {
+	type MapData = typeof import('./set1/map.js') & typeof import('./set10/map.js')
+	if (set === 1) {
+		return await import('./set1/map.js') as MapData
+	}
+	if (set === 2) {
+		return await import('./set2/map.js') as MapData
+	}
+	if (set === 3) {
+		return await import('./set3/map.js') as MapData
+	}
+	if (set === 3.5) {
+		return await import('./set3.5/map.js') as MapData
+	}
+	if (set === 4) {
+		return await import('./set4/map.js') as MapData
+	}
+	if (set === 4.5) {
+		return await import('./set4.5/map.js') as MapData
+	}
+	if (set === 5) {
+		return await import('./set5/map.js') as MapData
+	}
+	if (set === 5.5) {
+		return await import('./set5.5/map.js') as MapData
+	}
+	if (set === 6) {
+		return await import('./set6/map.js') as MapData
+	}
+	if (set === 6.5) {
+		return await import('./set6.5/map.js') as MapData
+	}
+	if (set === 7) {
+		return await import('./set7/map.js') as MapData
+	}
+	if (set === 7.5) {
+		return await import('./set7.5/map.js') as MapData
+	}
+	if (set === 8) {
+		return await import('./set8/map.js') as MapData
+	}
+	if (set === 8.5) {
+		return await import('./set8.5/map.js') as MapData
+	}
+	if (set === 9) {
+		return await import('./set9/map.js') as MapData
+	}
+	if (set === 9.5) {
+		return await import('./set9.5/map.js') as MapData
+	}
+	if (set === 10) {
+		return await import('./set10/map.js') as MapData
+	}
+	throw 'Unsupported set:' + set
+}

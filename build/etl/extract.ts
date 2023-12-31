@@ -9,7 +9,7 @@ import { importSetData } from '../../dist/imports.js'
 
 import { getOutputFolderForSet, getPathToSet, getPathToPatch } from '../helpers/files.js'
 import { BASE_UNIT_API_NAMES, mDataValueSubstitutions, mSpellCalculationsSubstitutions } from '../helpers/normalize.js'
-import type { ChampionJSON, ChampionJSONStats, ResponseJSON } from '../helpers/types.js'
+import type { ChampionJSON, ChampionJSONStats, GameResponseJSON, MapResponseJSON } from '../helpers/types.js'
 import { getAPIName, getSetDataFrom } from '../helpers/utils.js'
 
 const UNIT_NORMALIZE_DELETE_KEYS: Record<string, string[]> = {
@@ -64,16 +64,16 @@ export async function getPatchFor(loadSet: SetNumber, customPatchLine?: string) 
 	}
 	console.log('')
 
-	const mapResponseJSON = await mapResponse.json() as Record<string, Record<string, any>>
+	const mapResponseJSON = await mapResponse.json() as MapResponseJSON
 	for (const rootKey in mapResponseJSON) {
 		const childObject = mapResponseJSON[rootKey]
-		const deleteTypes = ['BankUnitList', 'VfxSystemDefinitionData']
+		const deleteTypes = ['BankUnitList', 'VfxSystemDefinitionData', 'StaticMaterialDef']
 		if (childObject.complexEmitterDefinitionData != null || (childObject.mScriptName != null && (childObject.mScriptName as string).startsWith('TFT_PlayerDamage_')) || deleteTypes.includes(childObject.__type)) {
 			delete mapResponseJSON[rootKey]
 		}
 	}
 
-	const gameResponseJSON = await gameResponse.json() as ResponseJSON
+	const gameResponseJSON = await gameResponse.json() as GameResponseJSON
 	const parentSetNumber = getLatestSetNumberFrom(gameResponseJSON.sets)
 
 	const currentSetNumber = parentSetNumber === Math.floor(loadSet) ? loadSet : parentSetNumber
