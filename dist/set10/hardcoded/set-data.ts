@@ -11,14 +11,6 @@ export const LEVEL_XP = [
 	286,
 ]
 
-export const UNIT_COST_POOL_SIZES = [
-	22,
-	20,
-	17,
-	10,
-	9,
-]
-
 export const TRAIT_DATA_SUBSTITUTIONS: Record<string, string> = {
 	'{4995a396}': '8-bit',
 	'{b540ffc4}': 'Big Shot',
