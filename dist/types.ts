@@ -168,4 +168,4 @@ export interface TraitData {
 	name: string
 }
 
-export type UnitPools = Record<string, Record<string, number>>
+export type UnitPools = Record<string, Record<string, number | undefined>>

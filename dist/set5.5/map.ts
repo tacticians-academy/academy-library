@@ -1,3 +1,5 @@
+import type { UnitPools } from '../index'
+
 export const shopBadLuckProtection: Record<string, number> | undefined = {
 	'ForceFunctionMax': 40,
 	'ForceFunctionDivisor': 2,
@@ -14,6 +16,8 @@ export const shopBadLuckProtection: Record<string, number> | undefined = {
 	'BeginTrackingTier5AtThisLevel': 9,
 }
 
+export const headlinerSystemParameters: Record<string, number> | undefined = undefined
+
 export const dropRates: Record<string, number[][]> = {
 	'Shop': [
 		[1, 0, 0, 0, 0],
@@ -28,4 +32,4 @@ export const dropRates: Record<string, number[][]> = {
 	],
 }
 
-export const tierBags: Record<string, Record<string, number>> = {}
+export const tierBags: UnitPools = {}

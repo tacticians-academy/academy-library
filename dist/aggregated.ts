@@ -74,5 +74,5 @@ export enum TraitKey {
 	// Set 9.5
 	Vanquisher = `Vanquisher`,
 	// Set 10
-	EightBit = `8-bit`, Breakout = `Breakout`, Country = `Country`, CrowdDive = `Crowd Diver`, Funk = `Disco`, Edgelord = `Edgelord`, EDM = `EDM`, Emo = `Emo`, Executioner = `Executioner`, PopBand = `Heartsteel`, Hyperpop = `Hyperpop`, IllBeats = `ILLBEATS`, Jazz = `Jazz`, KDA = `K/DA`, Classical = `Maestro`, DJ = `Mixmaster`, Fighter = `Mosher`, Pentakill = `Pentakill`, PunkRock = `Punk`, Quickshot = `Rapidfire`, Superfan = `Superfan`, TrueDamage = `True Damage`, TwoSides = `Wildcard`,
+	Eightbit = `8-bit`, BigShot = `Big Shot`, Breakout = `Breakout`, Country = `Country`, CrowdDiver = `Crowd Diver`, Funk = `Disco`, Edgelord = `Edgelord`, EDM = `EDM`, Emo = `Emo`, Executioner = `Executioner`, PopBand = `Heartsteel`, Hyperpop = `Hyperpop`, IllBeats = `ILLBEATS`, Jazz = `Jazz`, KDA = `K/DA`, Classical = `Maestro`, DJ = `Mixmaster`, Fighter = `Mosher`, Pentakill = `Pentakill`, PunkRock = `Punk`, Quickshot = `Rapidfire`, Superfan = `Superfan`, TrueDamage = `True Damage`, TwoSides = `Wildcard`,
 }
