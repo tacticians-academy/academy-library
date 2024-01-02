@@ -1,6 +1,7 @@
 build/
 dist/set*/champion/
 dist/set*/**/*.txt
-dist/set*/*.raw.json
+dist/**/*.raw.json
+dist/**/*.local
 pnpm-lock.yaml
 tsconfig.*json
