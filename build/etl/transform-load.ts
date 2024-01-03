@@ -52,15 +52,15 @@ export async function transformLoad(setNumber: SetNumber) {
 	const outputChampionExports = await transformChampions(setNumber, parentSetNumber, champions)
 
 	if (outputAugmentSections) {
-		await fs.writeFile(getPathToSet(setNumber, 'augments.ts'), outputAugmentSections.join('\n\n'))
+		await fs.writeFile(getPathToSet(setNumber, 'augments.ts'), outputAugmentSections.join('\n\n') + '\n')
 	}
-	await fs.writeFile(getPathToSet(setNumber, 'champions.ts'), `import type { ChampionData } from '../index'\n\n${outputChampionExports.join('\n\n')}\n`)
+	await fs.writeFile(getPathToSet(setNumber, 'champions.ts'), outputChampionExports.join('\n\n') + '\n')
 	await fs.writeFile(getPathToSet(setNumber, 'traits.ts'), `import { TraitKey } from '../index.js'\nimport type { TraitData } from '../index'\n\nexport const traits: TraitData[] = ${outputTraitData}\n`)
 	await fs.writeFile(getPathToSet(setNumber, 'items.ts'), `import type { ItemData } from '../index'\n\n${outputItemExports.join('\n\n')}\n`)
 
 	const mutatorName = mutator ?? `TFTSet${parentSetNumber}`
 	const outputMap = await transformMap(setNumber, parentSetNumber, mutatorName, mapResponseJSON)
 	if (outputMap) {
-		await fs.writeFile(getPathToSet(setNumber, 'map.ts'), `import type { UnitPools } from '../index'\n\n${outputMap.join('\n\n')}\n`)
+		await fs.writeFile(getPathToSet(setNumber, 'map.ts'), outputMap.join('\n\n') + '\n')
 	}
 }

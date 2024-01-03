@@ -154,6 +154,12 @@ export interface ChampionData {
 	missiles: ChampionSpellData[]
 }
 
+export interface StreakData {
+	mMinimumStreakLength: number
+	mMaximumStreakLength: number | null
+	mGoldRewardAmount: number
+}
+
 export interface TraitEffectData {
 	maxUnits: number
 	minUnits: number

@@ -22,6 +22,12 @@ export const NORMALIZE_EFFECT_KEYS: Record<string, BonusKey> = {
 	CriticalStrikeAmp: BonusKey.CritMultiplier,
 }
 
+export const SUBSTITUTE_STREAK_KEYS: Record<string, string> = {
+	'{af41a3d2}': 'mMinimumStreakLength',
+	'{b76209f0}': 'mMaximumStreakLength',
+	'{c36f01bd}': 'mGoldRewardAmount',
+}
+
 export const SUBSTITUTE_EFFECT_KEYS: Record<string, string> = {
 	// Set 1
 	'4724fc58': BonusKey.AttackDamage,

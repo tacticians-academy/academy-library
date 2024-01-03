@@ -1,4 +1,4 @@
-import type { UnitPools } from '../index'
+import type { StreakData, UnitPools } from '../index'
 
 export const shopBadLuckProtection: Record<string, number> | undefined = {
 	'ForceFunctionMax': 30,
@@ -46,6 +46,42 @@ export const dropRates: Record<string, number[][]> = {
 		[0.009999999776482582, 0.019999999552965164, 0.11999999731779099, 0.5, 0.3499999940395355],
 	],
 }
+
+export const winStreaks: StreakData[] = [
+	{
+		mMinimumStreakLength: 2,
+		mMaximumStreakLength: 3,
+		mGoldRewardAmount: 1,
+	},
+	{
+		mMinimumStreakLength: 4,
+		mMaximumStreakLength: 4,
+		mGoldRewardAmount: 2,
+	},
+	{
+		mMinimumStreakLength: 5,
+		mMaximumStreakLength: null,
+		mGoldRewardAmount: 3,
+	},
+]
+
+export const lossStreaks: StreakData[] = [
+	{
+		mMinimumStreakLength: 2,
+		mMaximumStreakLength: 3,
+		mGoldRewardAmount: 1,
+	},
+	{
+		mMinimumStreakLength: 4,
+		mMaximumStreakLength: 4,
+		mGoldRewardAmount: 2,
+	},
+	{
+		mMinimumStreakLength: 5,
+		mMaximumStreakLength: null,
+		mGoldRewardAmount: 3,
+	},
+]
 
 export const tierBags: UnitPools = {
 	'1': {

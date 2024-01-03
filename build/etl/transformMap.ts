@@ -1,6 +1,7 @@
 import type { SetNumber } from '../../dist/index.js'
 
 import { formatJS } from '../helpers/formatting.js'
+import { SUBSTITUTE_STREAK_KEYS } from '../helpers/normalize.js'
 import type { MapResponseJSON } from '../helpers/types.js'
 
 export async function transformMap(setNumber: SetNumber, parentSetNumber: SetNumber, mutator: string, mapResponse: MapResponseJSON) {
@@ -39,12 +40,30 @@ export async function transformMap(setNumber: SetNumber, parentSetNumber: SetNum
 	const rawHeadlinerSystemParameters = mapResponse['{1787a45d}']
 	const headlinerSystemParameters = rawHeadlinerSystemParameters != null ? formatConstValues(rawHeadlinerSystemParameters) : undefined
 
+	const rawStreaks = mapResponse['{4cb79a04}']
+	const winStreaks: any[] = rawStreaks['mWinStreaks'] ?? rawStreaks['{c3f540ed}']
+	const lossStreaks: any[] = rawStreaks['mLossStreaks'] ?? rawStreaks['{b30e3de6}']
+	Array.from([...winStreaks, ...lossStreaks]).forEach((entry: Record<string, any>) => {
+		delete entry['__type']
+		delete entry['{c0ca1779}']
+		delete entry['mStreakFormat']
+		for (const oldKey in SUBSTITUTE_STREAK_KEYS) {
+			if (entry.hasOwnProperty(oldKey)) { // eslint-disable-line no-prototype-builtins
+				entry[SUBSTITUTE_STREAK_KEYS[oldKey]] = entry[oldKey]
+				delete entry[oldKey]
+			}
+		}
+	})
+
 	// const commonTierBagSizes = formatConstValues(mapResponse['{a5b47f29}']) // Not updated
 
 	return [
+		`import type { StreakData, UnitPools } from '../index'`,
 		`export const shopBadLuckProtection: Record<string, number> | undefined = ${formatJS(shopBadLuckProtection)}`,
 		`export const headlinerSystemParameters: Record<string, number> | undefined = ${formatJS(headlinerSystemParameters)}`,
 		`export const dropRates: Record<string, number[][]> = ${formatJS(outputDropRates)}`,
+		`export const winStreaks: StreakData[] = ${formatJS(winStreaks)}`,
+		`export const lossStreaks: StreakData[] = ${formatJS(lossStreaks)}`,
 		`export const tierBags: UnitPools = ${formatJS(tierBags)}`,
 		// `export const commonTierBagSizes: Record<string, number> = ${formatJS(commonTierBagSizes)}`,
 	]

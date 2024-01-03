@@ -197,6 +197,7 @@ export async function transformChampions(setNumber: SetNumber, parentSetNumber: 
 	})
 
 	return [
+		`import type { ChampionData } from '../index'`,
 		`export enum ChampionKey { ${outputChampions.map(c => `${getEnumKeyFrom(c.apiName)} = \`${c.apiName}\``).join(', ')} }`,
 		`export const champions: ChampionData[] = ${formatJS(outputChampions)}`,
 		`export const otherUnits: ChampionData[] = ${formatJS(outputOtherUnits)}`,
