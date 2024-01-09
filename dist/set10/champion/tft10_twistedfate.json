@@ -72,9 +72,9 @@
 					"mName": "BaseDamage",
 					"mValues": [
 						0,
-						50,
-						75,
-						225,
+						55,
+						80,
+						240,
 						0,
 						0,
 						0
@@ -123,13 +123,13 @@
 				{
 					"mName": "BonusASBreakpoint",
 					"mValues": [
-						40,
-						40,
-						40,
-						40,
-						40,
-						40,
-						40
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20
 					],
 					"__type": "SpellDataValue"
 				},
@@ -199,7 +199,7 @@
 										"__type": "{803dae4c}"
 									},
 									"mPart2": {
-										"mNumber": 2.5,
+										"mNumber": 5,
 										"__type": "NumberCalculationPart"
 									},
 									"__type": "ProductOfSubPartsCalculationPart"

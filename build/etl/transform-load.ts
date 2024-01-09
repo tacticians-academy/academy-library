@@ -55,7 +55,7 @@ export async function transformLoad(setNumber: SetNumber) {
 		await fs.writeFile(getPathToSet(setNumber, 'augments.ts'), outputAugmentSections.join('\n\n') + '\n')
 	}
 	await fs.writeFile(getPathToSet(setNumber, 'champions.ts'), outputChampionExports.join('\n\n') + '\n')
-	await fs.writeFile(getPathToSet(setNumber, 'traits.ts'), `import { TraitKey } from '../index.js'\nimport type { TraitData } from '../index'\n\nexport const traits: TraitData[] = ${outputTraitData}\n`)
+	await fs.writeFile(getPathToSet(setNumber, 'traits.ts'), `import type { TraitData } from '../index'\n\nexport const traits: TraitData[] = ${outputTraitData}\n`)
 	await fs.writeFile(getPathToSet(setNumber, 'items.ts'), `import type { ItemData } from '../index'\n\n${outputItemExports.join('\n\n')}\n`)
 
 	const mutatorName = mutator ?? `TFTSet${parentSetNumber}`

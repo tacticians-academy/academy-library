@@ -69,9 +69,6 @@
 		"mScriptName": "TFT_VoidSpawn_Passive",
 		"mSpell": {
 			"mAlternateName": "DummyPassive",
-			"mImgIconName": [
-				"ASSETS/Characters/TFT_VoidSpawn/HUD/Voidspawn_square.dds"
-			],
 			"__type": "SpellDataResource"
 		},
 		"__type": "SpellObject"

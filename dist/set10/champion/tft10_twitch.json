@@ -11,8 +11,8 @@
 			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 45,
-		"baseArmor": 20,
-		"baseSpellBlock": 20,
+		"baseArmor": 25,
+		"baseSpellBlock": 25,
 		"baseCritChance": 0.25,
 		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
@@ -179,13 +179,13 @@
 				{
 					"mName": "InitialADDamage",
 					"mValues": [
-						2,
-						2,
-						2,
-						2,
-						2,
-						2,
-						2
+						2.5,
+						2.5,
+						2.5,
+						2.5,
+						2.5,
+						2.5,
+						2.5
 					],
 					"__type": "SpellDataValue"
 				},
@@ -205,13 +205,13 @@
 				{
 					"mName": "SecondaryExplosions",
 					"mValues": [
-						6,
-						6,
-						6,
-						6,
-						6,
-						6,
-						6
+						4,
+						4,
+						4,
+						4,
+						4,
+						4,
+						4
 					],
 					"__type": "SpellDataValue"
 				},

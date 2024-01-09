@@ -71,13 +71,13 @@
 				{
 					"mName": "STUN_DURATION",
 					"mValues": [
-						1.5,
-						1.5,
-						1.5,
-						1.5,
-						1.5,
-						1.5,
-						1.5
+						1,
+						1,
+						1,
+						1,
+						1,
+						1,
+						1
 					],
 					"__type": "SpellDataValue"
 				},

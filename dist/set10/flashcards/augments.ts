@@ -82,7 +82,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `best friends`,
 		name: `Best Friends`,
 		tiers: [1, 2, 3],
-		description: `Units isolated in pairs gain 10/15/20% Attack Speed and 10/20/35 Armor at the start of combat.`,
+		description: `Units isolated in pairs gain 12/15/20% Attack Speed and 12/20/35 Armor at the start of combat.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/best-friends-i`, `assets/maps/tft/icons/augments/hexcore/best-friends-ii`, `assets/maps/tft/icons/augments/hexcore/best-friends-iii`],
 	},
 	{
@@ -117,14 +117,14 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `bigger shot`,
 		name: `Bigger Shot`,
 		tiers: [2],
-		description: `Every {BonusAttackThreshold} attacks, Big Shots also fire a bomb that deals 65% Attack Damage to enemies within 1 hex of the target. Gain a Kai'Sa.`,
+		description: `Every {BonusAttackThreshold} attacks, Big Shots also fire a bomb that deals 75% Attack Damage to enemies within 1 hex of the target. Gain a Kai'Sa.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/bigger-shot-ii.tft_set10`],
 	},
 	{
 		id: `binary airdrop`,
 		name: `Binary Airdrop`,
 		tiers: [3],
-		description: `Combat start: champions holding 2 items gain a random 3rd completed item. Gain 2 gold.`,
+		description: `Combat start: champions holding 2 items gain a recommended 3rd completed item. Gain 2 gold.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/binaryairdrop3`],
 	},
 	{
@@ -152,7 +152,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `blinged out`,
 		name: `Blinged Out`,
 		tiers: [2],
-		description: `Your True Damage champions gain 100 HP and {attackspeed}% Attack Speed for each item they are holding. Gain a Yasuo and a Senna.`,
+		description: `Your True Damage champions gain 80 HP and {attackspeed}% Attack Speed for each item they are holding. Gain a Yasuo and a Senna.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/blinged-out-ii.tft_set10`],
 	},
 	{
@@ -320,7 +320,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `crash test dummies`,
 		name: `Crash Test Dummies`,
 		tiers: [2],
-		description: `Gain 2 Target Dummies. Combat start: Your Target Dummies launch themselves towards the largest clump of enemies and Stun them for 2 seconds. `,
+		description: `Gain 2 Target Dummies. Combat start: Your Target Dummies launch themselves towards the largest clump of enemies and Stun them for 1.25 seconds. `,
 		icons: [`assets/maps/tft/icons/augments/hexcore/crash-test-dummies-ii.tft_set10`],
 	},
 	{
@@ -348,14 +348,14 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `cutting corners`,
 		name: `Cutting Corners`,
 		tiers: [1],
-		description: `Leveling up costs 4 XP less.`,
+		description: `Leveling up costs 3 XP less.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/cutting-corners-i`],
 	},
 	{
 		id: `cybernetic bulk`,
 		name: `Cybernetic Bulk`,
 		tiers: [1, 2, 3],
-		description: `Your champions holding an item gain 222/333/555 HP.`,
+		description: `Your champions holding an item gain 200/300/500 HP.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/cybernetic-bulk-i`, `assets/maps/tft/icons/augments/hexcore/cybernetic-bulk-ii`, `assets/maps/tft/icons/augments/hexcore/cybernetic-bulk-iii`],
 	},
 	{
@@ -488,14 +488,14 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `expose weakness`,
 		name: `Expose Weakness`,
 		tiers: [2],
-		description: `Damage from Executioners' attacks and spells Shred and Sunder enemies by 40% for 3 seconds. Gain a Twitch.<br><br><rules>(Shred: reduce Magic Resist, Sunder: reduce Armor)</rules>`,
+		description: `Damage from Executioners' attacks and spells Shred and Sunder enemies by 30% for 3 seconds. Gain a Twitch.<br><br><rules>(Shred: reduce Magic Resist, Sunder: reduce Armor)</rules>`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/expose-weakness-ii.tft_set10`],
 	},
 	{
 		id: `extended play`,
 		name: `Extended Play`,
 		tiers: [2],
-		description: `Gain bonuses for starring Punk champions.<br>2-star: Your next Shop reroll costs {costreduction} less gold<br>3-star: Gain 1 component`,
+		description: `Gain bonuses for starring Punk champions.<br>2-star: Gain 2 gold<br>3-star: Gain 1 component`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/repetitive-riffing-ii.tft_set10`],
 	},
 	{
@@ -677,14 +677,14 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `help is on the way`,
 		name: `Help Is On The Way`,
 		tiers: [1],
-		description: `After 6 player combats, choose 1 of 4 Support items.`,
+		description: `After 8 player combats, choose 1 of 4 Support items.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/help-is-on-the-way-i.tft_set10`],
 	},
 	{
 		id: `heroic grab bag`,
 		name: `Heroic Grab Bag`,
 		tiers: [2],
-		description: `Gain {LesserDuplicatorAmount} Lesser Champion Duplicators and 2 gold.<br><br><rules>This item allows you to copy a 3-cost or less champion.</rules>`,
+		description: `Gain {LesserDuplicatorAmount} Lesser Champion Duplicators and 4 gold.<br><br><rules>This item allows you to copy a 3-cost or less champion.</rules>`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/heroic-grab-bag-ii.tft_set10`],
 	},
 	{
@@ -782,7 +782,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `inspiring epitaph`,
 		name: `Inspiring Epitaph`,
 		tiers: [2],
-		description: `When a unit dies, the nearest ally gains a 30% max HP Shield and 10% stacking Attack Speed.`,
+		description: `When a unit dies, the nearest ally gains a 25% max HP Shield and 10% stacking Attack Speed.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/inspiring-epitaph-ii.tft_set10`],
 	},
 	{
@@ -922,7 +922,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `little buddies`,
 		name: `Little Buddies`,
 		tiers: [2],
-		description: `Your 4-cost and 5-cost champions gain 100 HP and 10% Attack Speed  for every 1-cost and 2-cost champion on your board.`,
+		description: `Your 4-cost and 5-cost champions gain 75 HP and 9% Attack Speed  for every 1-cost and 2-cost champion on your board.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/little-buddies-ii.tft_set10`],
 	},
 	{
@@ -957,7 +957,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `low interest rates`,
 		name: `Low Interest Rates`,
 		tiers: [2],
-		description: `Your max interest is capped at 2 gold but you gain 2 gold at the start of every player combat.<br><br><rules>Interest is extra gold you gain per 10g saved.</rules>`,
+		description: `Your max interest is capped at 3 gold but you gain 2 gold at the start of every player combat.<br><br><rules>Interest is extra gold you gain per 10g saved.</rules>`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/low-interest-rates-ii.tft_set10`],
 	},
 	{
@@ -1118,7 +1118,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `on a roll`,
 		name: `On a Roll`,
 		tiers: [1],
-		description: `Whenever you star up a champion, gain up to 2 free Shop rerolls per round. Gain 2 gold.`,
+		description: `Whenever you star up a champion, gain up to 3 free Shop rerolls per round. Gain 3 gold.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/on-a-roll-i`],
 	},
 	{
@@ -1258,7 +1258,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `ramping rhythm`,
 		name: `Ramping Rhythm`,
 		tiers: [2],
-		description: `Rapidfire champions start combat with 3 stacks of Attack Speed from their trait, and can now go up to {NewMaxStacks} stacks. Gain a Jinx and a Senna.`,
+		description: `Rapidfire champions start combat with 4 stacks of Attack Speed from their trait, and can now go up to {NewMaxStacks} stacks. Gain a Jinx and a Senna.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/ramping-rhythm-ii.tft_set10`],
 	},
 	{
@@ -1286,7 +1286,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `return on investment`,
 		name: `Return on Investment`,
 		tiers: [2],
-		description: `When you reroll your Shop 18 times, gain a Tactician's Crown.<br><br>(Refreshes this game: @TFTUnitProperty.item:TFT9_ReturnOnInvestmentRolls@)`,
+		description: `When you reroll your Shop 16 times, gain a Tactician's Crown.<br><br>(Refreshes this game: @TFTUnitProperty.item:TFT9_ReturnOnInvestmentRolls@)`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/goldreserves2`],
 	},
 	{
@@ -1321,7 +1321,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `rolling for days`,
 		name: `Rolling For Days`,
 		tiers: [1, 2, 3],
-		description: `Gain 8/15/25 free Shop rerolls that never expire.`,
+		description: `Gain 9/15/25 free Shop rerolls that never expire.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/rolling-for-days-i`, `assets/maps/tft/icons/augments/hexcore/rolling-for-days-ii`, `assets/maps/tft/icons/augments/hexcore/rolling-for-days-iii`],
 	},
 	{
@@ -1468,7 +1468,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `stars are born`,
 		name: `Stars are Born`,
 		tiers: [2],
-		description: `The first 1-cost and 2-cost champions you buy are instantly upgraded to 2-star. Gain 1 gold.`,
+		description: `The first 1-cost and 2-cost champions you buy are instantly upgraded to 2-star. Gain 5 gold.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/stars-are-born-ii`],
 	},
 	{
@@ -1482,8 +1482,8 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `stationary support`,
 		name: `Stationary Support`,
 		tiers: [1, 2, 3],
-		description: `1: After 7 player combats, gain 1 Training Dummy(s) with 1 permanently attached Support item(s).  2: Gain 1 Training Dummy with 1 permanently attached Support item(s).`,
-		icons: [`assets/maps/tft/icons/augments/hexcore/stationary-support-i.tft_set9_stage2`, `assets/maps/tft/icons/augments/hexcore/stationary-support-ii.tft_set9_stage2`, `assets/maps/tft/icons/augments/hexcore/stationary-support-iii.tft_set9_stage2`],
+		description: `1: After 8 player combats, gain 1 Training Dummy(s) with 1 permanently attached Support item(s).  2: Gain 1 Training Dummy with 1 permanently attached Support item(s).`,
+		icons: [`assets/maps/tft/icons/augments/hexcore/stationary-support-i`, `assets/maps/tft/icons/augments/hexcore/stationary-support-ii`, `assets/maps/tft/icons/augments/hexcore/stationary-support-iii`],
 	},
 	{
 		id: `sticks and stones`,
@@ -1503,7 +1503,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `submit to the pit`,
 		name: `Submit to the Pit`,
 		tiers: [2],
-		description: `For each adjacent enemy, Moshers gain 5 Armor, 5 Magic Resist, 5% Attack Damage, 5 Ability Power, and 5% Attack Speed. Gain a Jax and a Gnar.`,
+		description: `Combat Start: For each adjacent ally, Moshers gain 3 Armor, 3 Magic Resist, 3% Attack Damage, 3 Ability Power, and 3% Attack Speed. Gain a Jax and a Gnar.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/submit-to-the-pit-ii.tft_set10`],
 	},
 	{
@@ -1518,7 +1518,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		name: `Support Cache`,
 		tiers: [2],
 		description: `Choose 1 of 4 Support items.`,
-		icons: [`assets/maps/tft/icons/augments/hexcore/support-cache-ii.tft_set9_stage2`],
+		icons: [`assets/maps/tft/icons/augments/hexcore/support-cache-ii`],
 	},
 	{
 		id: `switching gears`,
@@ -1553,7 +1553,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		name: `Teaming Up`,
 		tiers: [1, 2, 3],
 		description: `1: Gain 1 random component and 2 random Tier 3 champions.  2: Gain 1 random Support item and 2 random 4-cost champions.  3: Gain 1 Support Anvil, 1 random component, and 2 random Tier 4 champions.`,
-		icons: [`assets/maps/tft/icons/augments/hexcore/teaming-up-i.tft_set9_stage2`, `assets/maps/tft/icons/augments/hexcore/teaming-up-ii.tft_set9_stage2`, `assets/maps/tft/icons/augments/hexcore/teaming-up-iii.tft_set9_stage2`],
+		icons: [`assets/maps/tft/icons/augments/hexcore/teaming-up-i`, `assets/maps/tft/icons/augments/hexcore/teaming-up-ii`, `assets/maps/tft/icons/augments/hexcore/teaming-up-iii`],
 	},
 	{
 		id: `thats jazz baby`,
@@ -1594,7 +1594,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `threes a crowd`,
 		name: `Three's a Crowd`,
 		tiers: [2],
-		description: `Your team gains 85 HP for each unique 3-cost champion on your board.`,
+		description: `Your team gains 75 HP for each unique 3-cost champion on your board.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/three_s-a-crowd-ii`],
 	},
 	{
@@ -1657,7 +1657,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `too big to fail`,
 		name: `Too Big to Fail`,
 		tiers: [2],
-		description: `On death, Bruisers deal 30% of their max HP to enemies within {Hex} hex. After {TimeInCombat} seconds, expand the range to {ImprovedHex} hexes. Gain an Olaf and a Gragas.`,
+		description: `On death, Bruisers deal 40% of their max HP to enemies within {Hex} hex. After {TimeInCombat} seconds, expand the range to {ImprovedHex} hexes. Gain an Olaf and a Gragas.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/too-big-to-fail-ii.tft_set10`],
 	},
 	{

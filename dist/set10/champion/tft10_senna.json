@@ -217,9 +217,6 @@
 			"flags": 4,
 			"mAffectsTypeFlags": 6154,
 			"mCoefficient": -0.5,
-			"mImgIconName": [
-				""
-			],
 			"canCastOrQueueWhileCasting": true,
 			"mProjectTargetToCastRange": true,
 			"mSpellRevealsChampion": false,

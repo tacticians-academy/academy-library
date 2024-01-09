@@ -18,9 +18,6 @@
 				}
 			],
 			"mCoefficient": 0.6000000238418579,
-			"mImgIconName": [
-				"ASSETS/Characters/Corki/HUD/Icons2D/Corki_PhosphorusBomb.dds"
-			],
 			"delayCastOffsetPercent": -1,
 			"delayTotalTimePercent": -1,
 			"mMaxAmmo": [
@@ -255,13 +252,13 @@
 				{
 					"mName": "RocketDamage",
 					"mValues": [
-						3.200000047683716,
-						3.200000047683716,
-						3.200000047683716,
-						3.200000047683716,
-						3.200000047683716,
-						3.200000047683716,
-						3.200000047683716
+						3,
+						3,
+						3,
+						3,
+						3,
+						3,
+						3
 					],
 					"__type": "SpellDataValue"
 				},
@@ -337,9 +334,6 @@
 				}
 			},
 			"mCoefficient": 0.6000000238418579,
-			"mImgIconName": [
-				"ASSETS/Characters/Corki/HUD/Icons2D/Corki_PhosphorusBomb.dds"
-			],
 			"delayCastOffsetPercent": -0.699999988079071,
 			"delayTotalTimePercent": -0.824999988079071,
 			"{3d746f1f}": 1,

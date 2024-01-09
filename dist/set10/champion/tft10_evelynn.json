@@ -73,12 +73,12 @@
 					"mName": "AttackSpeedPercent",
 					"mValues": [
 						0,
-						120,
-						120,
-						120,
-						120,
-						120,
-						120
+						150,
+						150,
+						150,
+						150,
+						150,
+						150
 					],
 					"__type": "SpellDataValue"
 				},
@@ -124,13 +124,13 @@
 				{
 					"mName": "HeadlinerAbilityPower",
 					"mValues": [
-						15,
-						15,
-						15,
-						15,
-						15,
-						15,
-						15
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20
 					],
 					"__type": "SpellDataValue"
 				}

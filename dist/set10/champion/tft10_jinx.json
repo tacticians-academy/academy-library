@@ -4,9 +4,6 @@
 		"mSpell": {
 			"mAffectsTypeFlags": 7306,
 			"mAlternateName": "JinxBasicAttack",
-			"mImgIconName": [
-				"Udyr_TigerStance.dds"
-			],
 			"delayCastOffsetPercent": -0.5,
 			"canCastWhileDisabled": true,
 			"mApplyMaterialOnHitSound": true,

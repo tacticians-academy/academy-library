@@ -10,8 +10,8 @@
 			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 50,
-		"baseArmor": 40,
-		"baseSpellBlock": 40,
+		"baseArmor": 30,
+		"baseSpellBlock": 30,
 		"critDamageMultiplier": 0,
 		"baseMoveSpeed": 1,
 		"attackRange": 180,
@@ -36,9 +36,6 @@
 		"mScriptName": "TFT_TrainingDummy_Spell",
 		"mSpell": {
 			"mAlternateName": "DummyPassive",
-			"mImgIconName": [
-				"ASSETS/Characters/TFTDebug_Dummy/HUD/Icons2D/TFTDebug_Dummy_DoNothing.dds"
-			],
 			"__type": "SpellDataResource"
 		},
 		"__type": "SpellObject"

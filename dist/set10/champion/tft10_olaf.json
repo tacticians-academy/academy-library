@@ -114,13 +114,13 @@
 				{
 					"mName": "BonusAttackSpeed",
 					"mValues": [
-						0.0012000000569969416,
-						0.0012000000569969416,
-						0.0012000000569969416,
-						0.0012000000569969416,
-						0.0012000000569969416,
-						0.0012000000569969416,
-						0.0012000000569969416
+						0.001500000013038516,
+						0.001500000013038516,
+						0.001500000013038516,
+						0.001500000013038516,
+						0.001500000013038516,
+						0.001500000013038516,
+						0.001500000013038516
 					],
 					"__type": "SpellDataValue"
 				},
@@ -153,39 +153,39 @@
 				{
 					"mName": "HeadlinerHealth",
 					"mValues": [
-						75,
-						75,
-						75,
-						75,
-						75,
-						75,
-						75
+						150,
+						150,
+						150,
+						150,
+						150,
+						150,
+						150
 					],
 					"__type": "SpellDataValue"
 				},
 				{
 					"mName": "HeadlinerArmor",
 					"mValues": [
-						10,
-						10,
-						10,
-						10,
-						10,
-						10,
-						10
+						15,
+						15,
+						15,
+						15,
+						15,
+						15,
+						15
 					],
 					"__type": "SpellDataValue"
 				},
 				{
 					"mName": "HeadlinerMagicResist",
 					"mValues": [
-						10,
-						10,
-						10,
-						10,
-						10,
-						10,
-						10
+						15,
+						15,
+						15,
+						15,
+						15,
+						15,
+						15
 					],
 					"__type": "SpellDataValue"
 				}
@@ -236,7 +236,7 @@
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 50,
+		"baseDamage": 55,
 		"baseArmor": 35,
 		"baseSpellBlock": 35,
 		"baseCritChance": 0.25,

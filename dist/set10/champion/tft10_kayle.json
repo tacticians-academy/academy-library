@@ -9,9 +9,9 @@
 					"mName": "BaseAttackDamage",
 					"mValues": [
 						0,
-						30,
-						45,
-						70,
+						35,
+						55,
+						80,
 						0,
 						0,
 						0
@@ -61,9 +61,9 @@
 					"mName": "BaseFinaleDamage",
 					"mValues": [
 						0,
-						190,
-						285,
-						430,
+						240,
+						360,
+						540,
 						0,
 						0,
 						0

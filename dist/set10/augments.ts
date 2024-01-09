@@ -237,8 +237,8 @@ export const activeAugments: AugmentData[] = [
 		groupID: `bestFriends`,
 		desc: `Units isolated in pairs gain @AS*100@% Attack Speed and @Armor@ Armor at the start of combat.`,
 		effects: {
-			'AS': 0.10000000149011612,
-			'Armor': 10,
+			'AS': 0.11999999731779099,
+			'Armor': 12,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Best-Friends-I.tex`,
 	},
@@ -326,7 +326,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `biggerShot`,
 		desc: `Every @BonusAttackThreshold@ attacks, Big Shots also fire a bomb that deals @ADPercent*100@% Attack Damage to enemies within 1 hex of the target. Gain a Kai'Sa.`,
 		effects: {
-			'ADPercent': 0.6499999761581421,
+			'ADPercent': 0.75,
 			'{063ab443}': 3,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Bigger-Shot-II.TFT_Set10.tex`,
@@ -335,7 +335,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 3,
 		name: `Binary Airdrop`,
 		groupID: `binaryAirdrop`,
-		desc: `Combat start: champions holding 2 items gain a random 3rd completed item. Gain @Gold@ gold.`,
+		desc: `Combat start: champions holding 2 items gain a recommended 3rd completed item. Gain @Gold@ gold.`,
 		effects: {
 			'Gold': 2,
 		},
@@ -376,7 +376,7 @@ export const activeAugments: AugmentData[] = [
 		desc: `Your True Damage champions gain @HP@ HP and @attackspeed*100@% Attack Speed for each item they are holding. Gain a Yasuo and a Senna.`,
 		effects: {
 			'AS': 0.07999999821186066,
-			'HP': 100,
+			'HP': 80,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Blinged-Out-II.TFT_Set10.tex`,
 	},
@@ -793,7 +793,7 @@ export const activeAugments: AugmentData[] = [
 		desc: `Gain @Numdummies@ Target Dummies. Combat start: Your Target Dummies launch themselves towards the largest clump of enemies and Stun them for @stun@ seconds. `,
 		effects: {
 			'NumDummies': 2,
-			'Stun': 2,
+			'Stun': 1.25,
 			'{f2863276}': 3,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crash-Test-Dummies-II.TFT_Set10.tex`,
@@ -836,7 +836,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `cuttingCorners`,
 		desc: `Leveling up costs @Experience@ XP less.`,
 		effects: {
-			'Experience': 4,
+			'Experience': 3,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Cutting-Corners-I.tex`,
 	},
@@ -846,7 +846,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `cyberneticBulk`,
 		desc: `Your champions holding an item gain @HP@ HP.`,
 		effects: {
-			'HP': 222,
+			'HP': 200,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Cybernetic-Bulk-I.tex`,
 	},
@@ -856,7 +856,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `cyberneticBulk`,
 		desc: `Your champions holding an item gain @HP@ HP.`,
 		effects: {
-			'HP': 333,
+			'HP': 300,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Cybernetic-Bulk-II.tex`,
 	},
@@ -866,7 +866,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `cyberneticBulk`,
 		desc: `Your champions holding an item gain @HP@ HP.`,
 		effects: {
-			'HP': 555,
+			'HP': 500,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Cybernetic-Bulk-III.tex`,
 	},
@@ -1233,7 +1233,7 @@ export const activeAugments: AugmentData[] = [
 		desc: `Damage from Executioners' attacks and spells Shred and Sunder enemies by @ShredSunder@% for @Duration@ seconds. Gain a Twitch.<br><br><rules>(Shred: reduce Magic Resist, Sunder: reduce Armor)</rules>`,
 		effects: {
 			'Duration': 3,
-			'ShredSunder': 40,
+			'ShredSunder': 30,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Expose-Weakness-II.TFT_Set10.tex`,
 	},
@@ -1241,8 +1241,9 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Extended Play`,
 		groupID: `extendedPlay`,
-		desc: `Gain bonuses for starring Punk champions.<br>2-star: Your next Shop reroll costs @costreduction@ less gold<br>3-star: Gain @numcomponents@ component`,
+		desc: `Gain bonuses for starring Punk champions.<br>2-star: Gain @Gold@ gold<br>3-star: Gain @numcomponents@ component`,
 		effects: {
+			'Gold': 2,
 			'NumComponents': 1,
 			'{b2630e29}': 1,
 		},
@@ -1630,7 +1631,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `helpIsOnTheWay`,
 		desc: `After @NumberOfCombats@ player combats, choose 1 of 4 Support items.`,
 		effects: {
-			'Numberofcombats': 6,
+			'Numberofcombats': 8,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Help-Is-On-The-Way-I.TFT_Set10.tex`,
 	},
@@ -1640,7 +1641,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `heroicGrabBag`,
 		desc: `Gain @LesserDuplicatorAmount@ Lesser Champion Duplicators and @gold@ gold.<br><br><rules>This item allows you to copy a 3-cost or less champion.</rules>`,
 		effects: {
-			'Gold': 2,
+			'Gold': 4,
 			'{56ba63f8}': 2,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Heroic-Grab-Bag-II.TFT_Set10.tex`,
@@ -1791,7 +1792,7 @@ export const activeAugments: AugmentData[] = [
 		desc: `When a unit dies, the nearest ally gains a @ShieldRatio*100@% max HP Shield and @AS*100@% stacking Attack Speed.`,
 		effects: {
 			'AS': 0.10000000149011612,
-			'ShieldRatio': 0.30000001192092896,
+			'ShieldRatio': 0.25,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Inspiring-Epitaph-II.TFT_Set10.tex`,
 	},
@@ -2138,8 +2139,8 @@ export const activeAugments: AugmentData[] = [
 		groupID: `littleBuddies`,
 		desc: `Your 4-cost and 5-cost champions gain @HP@ HP and @AS*100@% Attack Speed  for every 1-cost and 2-cost champion on your board.`,
 		effects: {
-			'AS': 0.10000000149011612,
-			'HP': 100,
+			'AS': 0.09000000357627869,
+			'HP': 75,
 			'{0d14760d}': 4,
 			'{82aeb8a7}': 2,
 		},
@@ -2204,7 +2205,7 @@ export const activeAugments: AugmentData[] = [
 		desc: `Your max interest is capped at @InterestCap@ gold but you gain @Gold@ gold at the start of every player combat.<br><br><rules>Interest is extra gold you gain per 10g saved.</rules>`,
 		effects: {
 			'Gold': 2,
-			'InterestCap': 2,
+			'InterestCap': 3,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Low-Interest-Rates-II.TFT_Set10.tex`,
 	},
@@ -2510,8 +2511,8 @@ export const activeAugments: AugmentData[] = [
 		groupID: `onARoll`,
 		desc: `Whenever you star up a champion, gain up to @TurnLimit@ free Shop rerolls per round. Gain @Gold@ gold.`,
 		effects: {
-			'Gold': 2,
-			'TurnLimit': 2,
+			'Gold': 3,
+			'TurnLimit': 3,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/On-a-Roll-I.tex`,
 	},
@@ -2785,7 +2786,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `rampingRhythm`,
 		desc: `Rapidfire champions start combat with @StartingStacks@ stacks of Attack Speed from their trait, and can now go up to @NewMaxStacks@ stacks. Gain a Jinx and a Senna.`,
 		effects: {
-			'StartingStacks': 3,
+			'StartingStacks': 4,
 			'{fdf21c94}': 30,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Ramping-Rhythm-II.TFT_Set10.tex`,
@@ -2829,7 +2830,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `returnOnInvestment`,
 		desc: `When you reroll your Shop @RollCount@ times, gain a Tactician's Crown.<br><br>(Refreshes this game: @TFTUnitProperty.item:TFT9_ReturnOnInvestmentRolls@)`,
 		effects: {
-			'RollCount': 18,
+			'RollCount': 16,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/GoldReserves2.tex`,
 	},
@@ -2881,7 +2882,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `rollingForDays`,
 		desc: `Gain @Numrolls@ free Shop rerolls that never expire.`,
 		effects: {
-			'Numrolls': 8,
+			'Numrolls': 9,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Rolling-For-Days-I.tex`,
 	},
@@ -3201,7 +3202,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `starsAreBorn`,
 		desc: `The first 1-cost and 2-cost champions you buy are instantly upgraded to 2-star. Gain @Gold@ gold.`,
 		effects: {
-			'Gold': 1,
+			'Gold': 5,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Stars-are-born-II.tex`,
 	},
@@ -3223,9 +3224,9 @@ export const activeAugments: AugmentData[] = [
 		effects: {
 			'NumOfDummies': 1,
 			'NumOfItems': 1,
-			'PlayerCombatRounds': 7,
+			'PlayerCombatRounds': 8,
 		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Stationary-Support-I.TFT_Set9_Stage2.tex`,
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Stationary-Support-I.tex`,
 	},
 	{
 		tier: 2,
@@ -3236,7 +3237,7 @@ export const activeAugments: AugmentData[] = [
 			'NumOfDummies': 1,
 			'NumOfItems': 1,
 		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Stationary-Support-II.TFT_Set9_Stage2.tex`,
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Stationary-Support-II.tex`,
 	},
 	{
 		tier: 3,
@@ -3247,7 +3248,7 @@ export const activeAugments: AugmentData[] = [
 			'NumOfDummies': 1,
 			'NumOfItems': 2,
 		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Stationary-Support-III.TFT_Set9_Stage2.tex`,
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Stationary-Support-III.tex`,
 	},
 	{
 		tier: 1,
@@ -3276,9 +3277,9 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Submit to the Pit`,
 		groupID: `submitToThePit`,
-		desc: `For each adjacent enemy, Moshers gain @Stats@ Armor, @Stats@ Magic Resist, @Stats@% Attack Damage, @Stats@ Ability Power, and @Stats@% Attack Speed. Gain a Jax and a Gnar.`,
+		desc: `Combat Start: For each adjacent ally, Moshers gain @Stats@ Armor, @Stats@ Magic Resist, @Stats@% Attack Damage, @Stats@ Ability Power, and @Stats@% Attack Speed. Gain a Jax and a Gnar.`,
 		effects: {
-			'Stats': 5,
+			'Stats': 3,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Submit-To-The-Pit-II.TFT_Set10.tex`,
 	},
@@ -3302,7 +3303,7 @@ export const activeAugments: AugmentData[] = [
 		effects: {
 			'ArmoryChoiceCount': 4,
 		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Support-Cache-II.TFT_Set9_Stage2.tex`,
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Support-Cache-II.tex`,
 	},
 	{
 		tier: 1,
@@ -3356,7 +3357,7 @@ export const activeAugments: AugmentData[] = [
 			'NumChamps': 2,
 			'NumComponents': 1,
 		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Teaming-Up-I.TFT_Set9_Stage2.tex`,
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Teaming-Up-I.tex`,
 	},
 	{
 		tier: 2,
@@ -3367,7 +3368,7 @@ export const activeAugments: AugmentData[] = [
 			'NumItems': 1,
 			'NumUnits': 2,
 		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Teaming-Up-II.TFT_Set9_Stage2.tex`,
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Teaming-Up-II.tex`,
 	},
 	{
 		tier: 3,
@@ -3379,7 +3380,7 @@ export const activeAugments: AugmentData[] = [
 			'NumItems': 1,
 			'NumUnits': 2,
 		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Teaming-Up-III.TFT_Set9_Stage2.tex`,
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Teaming-Up-III.tex`,
 	},
 	{
 		tier: 2,
@@ -3445,7 +3446,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `threesACrowd`,
 		desc: `Your team gains @HPPerUnit@ HP for each unique @Tier@-cost champion on your board.`,
 		effects: {
-			'HPPerUnit': 85,
+			'HPPerUnit': 75,
 			'Tier': 3,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Three_s-a-Crowd-II.tex`,
@@ -3499,7 +3500,7 @@ export const activeAugments: AugmentData[] = [
 		effects: {
 			'Gold': 1,
 			'Heal': 2,
-			'{045be491}': 8,
+			'{045be491}': 15,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Tiniest-TitanIII.tex`,
 	},
@@ -3583,8 +3584,8 @@ export const activeAugments: AugmentData[] = [
 		groupID: `tooBigToFail`,
 		desc: `On death, Bruisers deal @ExplosionMaxHPPercent@% of their max HP to enemies within @Hex@ hex. After @TimeInCombat@ seconds, expand the range to @ImprovedHex@ hexes. Gain an Olaf and a Gragas.`,
 		effects: {
-			'ExplosionMaxHPPercent': 30,
-			'{867b15cb}': 20,
+			'ExplosionMaxHPPercent': 40,
+			'{867b15cb}': 15,
 			'{e2219cd2}': 2,
 			'{feb49d4a}': 1,
 		},
@@ -3841,7 +3842,7 @@ export const activeAugments: AugmentData[] = [
 		desc: `Your team gains @BaseHP@ HP. Gain another @BonusHPPer5MissingHP@ HP and @OmnivampPercentPer5MissingHP*100@% Omnivamp per 5 missing player HP.<br><rules>(Omnivamp: healing for a percent of damage dealt)</rules>`,
 		effects: {
 			'BaseHP': 20,
-			'{26c36394}': 4,
+			'{26c36394}': 2,
 			'{635778ef}': 0.009999999776482582,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Vampirism-I.TFT_Set10.tex`,
@@ -4778,6 +4779,14 @@ export const choiceAugments: AugmentData[] = [
 	},
 	{
 		tier: 3,
+		name: `Cash Out`,
+		groupID: `cashOut`,
+		desc: ``,
+		effects: {},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/ADMIN_Armorery_Icon.tex`,
+	},
+	{
+		tier: 3,
 		name: `Combat start: A.D.M.I.N.s gain @TFTUnitProperty.item:TFT8_Admin_ADGained@% Attack Damage`,
 		groupID: `combatStartADMINsGain@TFTUnitPropertyitemTFT8_Admin_ADGained@%AttackDamage`,
 		desc: ``,
@@ -5270,6 +5279,28 @@ export const choiceAugments: AugmentData[] = [
 		groupID: `onKillTheKillerHeals@TFTUnitPropertyitemTFT8_Admin_HealAmount@Health`,
 		desc: ``,
 		effects: {},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/ADMIN_Armorery_Icon.tex`,
+	},
+	{
+		tier: 3,
+		name: `Raise the Stakes`,
+		groupID: `raiseTheStakes`,
+		desc: ``,
+		effects: {
+			'{062cd921}': 100,
+			'{e632c102}': 40,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/ADMIN_Armorery_Icon.tex`,
+	},
+	{
+		tier: 3,
+		name: `Raise the Stakes`,
+		groupID: `raiseTheStakes`,
+		desc: ``,
+		effects: {
+			'{062cd921}': 100,
+			'{e632c102}': 40,
+		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/ADMIN_Armorery_Icon.tex`,
 	},
 	{

@@ -188,8 +188,8 @@
 					"mName": "AbilityPower",
 					"mValues": [
 						2,
-						2,
 						3,
+						4,
 						100,
 						100,
 						100,
@@ -268,9 +268,6 @@
 					"__type": "GameCalculation"
 				}
 			},
-			"mImgIconName": [
-				"ASSETS/Maps/TFT/Icons/TFT10/TFT10_Item_DJ_ModeRed.TFT_Set10.dds"
-			],
 			"delayTotalTimePercent": -0.5,
 			"castRange": [
 				25000,
@@ -299,8 +296,8 @@
 					"mName": "PassiveAttackSpeed",
 					"mValues": [
 						0.07999999821186066,
-						0.25,
-						0.3499999940395355,
+						0.20000000298023224,
+						0.30000001192092896,
 						5,
 						5,
 						5,
@@ -312,8 +309,8 @@
 					"mName": "ActiveAttackSpeed",
 					"mValues": [
 						1.5,
-						1.25,
-						1.75,
+						1,
+						1.5,
 						7.769999980926514,
 						5,
 						5,
@@ -338,8 +335,8 @@
 					"mName": "BaseProcDamage",
 					"mValues": [
 						100,
-						90,
-						135,
+						75,
+						115,
 						777,
 						808,
 						808,
@@ -405,9 +402,6 @@
 					"__type": "GameCalculation"
 				}
 			},
-			"mImgIconName": [
-				"ASSETS/Maps/TFT/Icons/TFT10/TFT10_Item_DJ_ModePurple.TFT_Set10.dds"
-			],
 			"delayTotalTimePercent": -0.5,
 			"castRange": [
 				25000,
@@ -459,8 +453,8 @@
 					"mName": "HealRatio",
 					"mValues": [
 						0.03999999910593033,
-						0.03999999910593033,
-						0.07000000029802322,
+						0.05000000074505806,
+						0.07999999821186066,
 						1,
 						1,
 						1,
@@ -539,9 +533,6 @@
 					"__type": "GameCalculation"
 				}
 			},
-			"mImgIconName": [
-				"ASSETS/Maps/TFT/Icons/TFT10/TFT10_Item_DJ_ModeGreen.TFT_Set10.dds"
-			],
 			"delayTotalTimePercent": -0.5,
 			"castRange": [
 				25000,
@@ -654,9 +645,6 @@
 		"mSpell": {
 			"mAffectsTypeFlags": 512,
 			"mAlternateName": "SonaBasicAttack",
-			"mImgIconName": [
-				"ASSETS/Spells/Icons2D/1041_Long_Staff.dds"
-			],
 			"delayCastOffsetPercent": -0.15279999375343323,
 			"castRange": [
 				622.7000122070312,

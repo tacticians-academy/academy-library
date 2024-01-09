@@ -82,13 +82,13 @@
 				{
 					"mName": "HeadlinerAbilityPower",
 					"mValues": [
-						5,
-						5,
-						5,
-						5,
-						5,
-						5,
-						5
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10
 					],
 					"__type": "SpellDataValue"
 				},

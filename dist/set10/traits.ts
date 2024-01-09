@@ -1,4 +1,3 @@
-import { TraitKey } from '../index.js'
 import type { TraitData } from '../index'
 
 export const traits: TraitData[] = [
@@ -11,7 +10,7 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
-					'AD': 4.5,
+					'AD': 5,
 				},
 			},
 			{
@@ -19,7 +18,7 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 4,
 				variables: {
-					'AD': 7.5,
+					'AD': 9,
 				},
 			},
 			{
@@ -27,7 +26,7 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 4,
 				variables: {
-					'AD': 12,
+					'AD': 14,
 				},
 			},
 		],
@@ -52,8 +51,8 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 4,
 				variables: {
-					'PercentAD': 0.15000000596046448,
-					'{4ce8f18b}': 0.6000000238418579,
+					'PercentAD': 0.18000000715255737,
+					'{4ce8f18b}': 0.7200000286102295,
 				},
 			},
 			{
@@ -61,8 +60,8 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 4,
 				variables: {
-					'PercentAD': 0.25,
-					'{4ce8f18b}': 1,
+					'PercentAD': 0.30000001192092896,
+					'{4ce8f18b}': 1.2000000476837158,
 				},
 			},
 		],
@@ -110,7 +109,7 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 4,
 				variables: {
-					'BonusPercentHP': 0.8500000238418579,
+					'BonusPercentHP': 0.8999999761581421,
 					'TeamFlatHP': 100,
 				},
 			},
@@ -136,7 +135,7 @@ export const traits: TraitData[] = [
 				minUnits: 5,
 				style: 4,
 				variables: {
-					'BonusResists': 20,
+					'BonusResists': 15,
 					'Level': 2,
 				},
 			},
@@ -145,7 +144,7 @@ export const traits: TraitData[] = [
 				minUnits: 7,
 				style: 4,
 				variables: {
-					'BonusResists': 60,
+					'BonusResists': 50,
 					'Level': 3,
 				},
 			},
@@ -162,7 +161,7 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
-					'{a5be9a7f}': 0.05000000074505806,
+					'{a5be9a7f}': 0.11999999731779099,
 				},
 			},
 			{
@@ -178,7 +177,7 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 4,
 				variables: {
-					'{a5be9a7f}': 0.6000000238418579,
+					'{a5be9a7f}': 0.5,
 				},
 			},
 		],
@@ -305,14 +304,14 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Set10_EDM`,
-		desc: `Use the EDM selector item to choose an EDM champion and see the frequency for each.<br><br>At the selected champion's frequency, your EDM champions cast the selected Ability with modified effectiveness.<br><br><row>(@MinUnits@) @EDMstats*100@% effectiveness</row><br><row>(@MinUnits@) @EDMstats*100@% effectiveness</row><br><row>(@MinUnits@) @EDMstats*100@% effectiveness, -@EDMtimereduction@ second</row><br><row>(@MinUnits@) @EDMstats*100@% effectiveness, -@EDMtimereduction@ seconds</row>`,
+		desc: `Use the EDM selector item to choose an EDM champion and see the frequency for each.<br><br>At the selected champion's frequency, your EDM champions cast the selected Ability with modified effectiveness.<br><br><row>(@MinUnits@) @EDMstats*100@% effectiveness</row><br><row>(@MinUnits@) @EDMstats*100@% effectiveness</row><br><row>(@MinUnits@) @EDMstats*100@% effectiveness, -@EDMtimereduction@ second</row><br><row>(@MinUnits@) @EDMstats*100@% effectiveness, -@EDMtimereduction@ second</row>`,
 		effects: [
 			{
 				maxUnits: 2,
 				minUnits: 2,
 				style: 1,
 				variables: {
-					'{50d03f4e}': 0.800000011920929,
+					'{50d03f4e}': 0.8999999761581421,
 				},
 			},
 			{
@@ -320,7 +319,7 @@ export const traits: TraitData[] = [
 				minUnits: 3,
 				style: 1,
 				variables: {
-					'{50d03f4e}': 0.8999999761581421,
+					'{50d03f4e}': 1,
 				},
 			},
 			{
@@ -328,7 +327,7 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 3,
 				variables: {
-					'{50d03f4e}': 1,
+					'{50d03f4e}': 1.100000023841858,
 					'{78f8ea27}': 1,
 				},
 			},
@@ -337,8 +336,8 @@ export const traits: TraitData[] = [
 				minUnits: 5,
 				style: 4,
 				variables: {
-					'{50d03f4e}': 1.2000000476837158,
-					'{78f8ea27}': 2,
+					'{50d03f4e}': 1.2999999523162842,
+					'{78f8ea27}': 1,
 				},
 			},
 		],
@@ -354,7 +353,7 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
-					'{d5032a3e}': 10,
+					'{d5032a3e}': 20,
 					'{fbc36e44}': 20,
 				},
 			},
@@ -363,8 +362,8 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 4,
 				variables: {
-					'{d5032a3e}': 20,
-					'{fbc36e44}': 25,
+					'{d5032a3e}': 30,
+					'{fbc36e44}': 30,
 				},
 			},
 			{
@@ -372,9 +371,9 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 4,
 				variables: {
-					'BonusAP': 20,
-					'{d5032a3e}': 25,
-					'{fbc36e44}': 30,
+					'BonusAP': 10,
+					'{d5032a3e}': 40,
+					'{fbc36e44}': 40,
 				},
 			},
 		],
@@ -391,7 +390,7 @@ export const traits: TraitData[] = [
 				style: 1,
 				variables: {
 					'{b22e2df3}': 0.05000000074505806,
-					'{c009a26f}': 0.15000000596046448,
+					'{c009a26f}': 0.25,
 				},
 			},
 			{
@@ -399,8 +398,8 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 3,
 				variables: {
-					'{b22e2df3}': 0.25,
-					'{c009a26f}': 0.3499999940395355,
+					'{b22e2df3}': 0.20000000298023224,
+					'{c009a26f}': 1,
 				},
 			},
 			{
@@ -408,8 +407,8 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 4,
 				variables: {
-					'{b22e2df3}': 0.44999998807907104,
-					'{c009a26f}': 0.550000011920929,
+					'{b22e2df3}': 0.30000001192092896,
+					'{c009a26f}': 2,
 				},
 			},
 		],
@@ -435,7 +434,7 @@ export const traits: TraitData[] = [
 				style: 3,
 				variables: {
 					'PercentHPThreshold': 50,
-					'ShieldPercentAmount': 40,
+					'ShieldPercentAmount': 45,
 				},
 			},
 			{
@@ -444,7 +443,7 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'PercentHPThreshold': 50,
-					'ShieldPercentAmount': 60,
+					'ShieldPercentAmount': 70,
 				},
 			},
 		],
@@ -472,7 +471,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'{7e97c18b}': null,
 					'{97244f72}': null,
-					'{b91d171c}': 2.5,
+					'{b91d171c}': 2.25,
 				},
 			},
 			{
@@ -482,7 +481,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'{7e97c18b}': null,
 					'{97244f72}': null,
-					'{b91d171c}': 6,
+					'{b91d171c}': 5.5,
 				},
 			},
 			{
@@ -509,7 +508,7 @@ export const traits: TraitData[] = [
 				style: 1,
 				variables: {
 					'AS': 0.10000000149011612,
-					'Mana': 3,
+					'Mana': 5,
 				},
 			},
 			{
@@ -518,7 +517,7 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'AS': 0.20000000298023224,
-					'Mana': 5,
+					'Mana': 10,
 				},
 			},
 			{
@@ -527,7 +526,7 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'AS': 0.3499999940395355,
-					'Mana': 7,
+					'Mana': 15,
 				},
 			},
 			{
@@ -536,7 +535,7 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'AS': 0.6000000238418579,
-					'Mana': 10,
+					'Mana': 20,
 				},
 			},
 		],
@@ -580,7 +579,7 @@ export const traits: TraitData[] = [
 				style: 3,
 				variables: {
 					'BonusDamage': 0.014999999664723873,
-					'BonusHP': 0.019999999552965164,
+					'BonusHP': 0.02500000037252903,
 				},
 			},
 			{
@@ -589,7 +588,7 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'BonusDamage': 0.019999999552965164,
-					'BonusHP': 0.029999999329447746,
+					'BonusHP': 0.03999999910593033,
 				},
 			},
 		],
@@ -605,8 +604,8 @@ export const traits: TraitData[] = [
 				minUnits: 3,
 				style: 1,
 				variables: {
-					'BonusAP': 10,
-					'BonusMaxHP': 0.10000000149011612,
+					'BonusAP': 9,
+					'BonusMaxHP': 0.09000000357627869,
 					'ManaPerSecond': null,
 					'{158db106}': 2,
 				},
@@ -627,8 +626,8 @@ export const traits: TraitData[] = [
 				minUnits: 7,
 				style: 4,
 				variables: {
-					'BonusAP': 22,
-					'BonusMaxHP': 0.2199999988079071,
+					'BonusAP': 24,
+					'BonusMaxHP': 0.23999999463558197,
 					'ManaPerSecond': null,
 					'{158db106}': 2,
 				},
@@ -638,8 +637,8 @@ export const traits: TraitData[] = [
 				minUnits: 10,
 				style: 5,
 				variables: {
-					'BonusAP': 50,
-					'BonusMaxHP': 0.5,
+					'BonusAP': 40,
+					'BonusMaxHP': 0.4000000059604645,
 					'ManaPerSecond': 10,
 					'{158db106}': 2,
 				},
@@ -700,7 +699,7 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 3,
 				variables: {
-					'{ad27681e}': 30,
+					'{ad27681e}': 40,
 					'{c771aaaa}': 15,
 				},
 			},
@@ -709,7 +708,7 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 4,
 				variables: {
-					'{ad27681e}': 50,
+					'{ad27681e}': 60,
 					'{c771aaaa}': 20,
 				},
 			},
@@ -754,7 +753,7 @@ export const traits: TraitData[] = [
 				style: 5,
 				variables: {
 					'{0082059a}': 0.5,
-					'{72ce596c}': 1.100000023841858,
+					'{72ce596c}': 0.9900000095367432,
 				},
 			},
 		],
@@ -815,7 +814,7 @@ export const traits: TraitData[] = [
 				style: 3,
 				variables: {
 					'MaxStacks': 10,
-					'{ec3d43d6}': 0.07000000029802322,
+					'{ec3d43d6}': 0.07999999821186066,
 				},
 			},
 			{
@@ -824,7 +823,7 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'MaxStacks': 10,
-					'{ec3d43d6}': 0.11999999731779099,
+					'{ec3d43d6}': 0.14000000059604645,
 				},
 			},
 		],
@@ -858,8 +857,8 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 4,
 				variables: {
-					'BonusArmor': 60,
-					'{a624ed1a}': 120,
+					'BonusArmor': 55,
+					'{a624ed1a}': 110,
 				},
 			},
 			{
@@ -867,8 +866,8 @@ export const traits: TraitData[] = [
 				minUnits: 8,
 				style: 4,
 				variables: {
-					'BonusArmor': 125,
-					'{a624ed1a}': 250,
+					'BonusArmor': 100,
+					'{a624ed1a}': 200,
 				},
 			},
 		],
@@ -894,25 +893,25 @@ export const traits: TraitData[] = [
 				style: 3,
 				variables: {
 					'AP': 35,
-					'BonusAP': 1,
-				},
-			},
-			{
-				maxUnits: 9,
-				minUnits: 7,
-				style: 4,
-				variables: {
-					'AP': 60,
 					'BonusAP': 2,
 				},
 			},
 			{
+				maxUnits: 8,
+				minUnits: 7,
+				style: 4,
+				variables: {
+					'AP': 70,
+					'BonusAP': 3,
+				},
+			},
+			{
 				maxUnits: 25000,
-				minUnits: 10,
-				style: 5,
+				minUnits: 9,
+				style: 4,
 				variables: {
 					'AP': 120,
-					'BonusAP': 10,
+					'BonusAP': 4,
 				},
 			},
 		],
@@ -984,7 +983,7 @@ export const traits: TraitData[] = [
 				minUnits: 9,
 				style: 5,
 				variables: {
-					'{72ce596c}': 1.25,
+					'{72ce596c}': 0.9900000095367432,
 					'{744944d9}': 1,
 					'{d1eaafe0}': 1,
 				},

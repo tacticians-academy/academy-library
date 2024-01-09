@@ -17,7 +17,7 @@
 		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
 		"attackRange": 420,
-		"attackSpeed": 0.699999988079071,
+		"attackSpeed": 0.75,
 		"spellNames": [
 			"TFT10_KatarinaQ",
 			"BaseSpell",

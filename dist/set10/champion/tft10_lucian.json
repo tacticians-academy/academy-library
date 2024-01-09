@@ -124,9 +124,6 @@
 			"flags": 4,
 			"mAffectsTypeFlags": 6154,
 			"mAlternateName": "LucianR",
-			"mImgIconName": [
-				"ASSETS/Characters/Lucian/HUD/Icons2D/Lucian_R.dds"
-			],
 			"mProjectTargetToCastRange": true,
 			"mDoNotNeedToFaceTarget": true,
 			"castRange": [
@@ -243,9 +240,6 @@
 			"flags": 4,
 			"mAffectsTypeFlags": 6154,
 			"mAlternateName": "LucianR",
-			"mImgIconName": [
-				"ASSETS/Characters/Lucian/HUD/Icons2D/Lucian_R.dds"
-			],
 			"mProjectTargetToCastRange": true,
 			"mDoNotNeedToFaceTarget": true,
 			"castRange": [
@@ -339,8 +333,8 @@
 					"mName": "TADRatio",
 					"mValues": [
 						0.25,
-						0.550000011920929,
-						0.550000011920929,
+						0.6000000238418579,
+						0.6000000238418579,
 						10,
 						0.25,
 						0.25,
@@ -517,9 +511,6 @@
 					"__type": "GameCalculation"
 				}
 			},
-			"mImgIconName": [
-				"ASSETS/Characters/Lucian/HUD/Icons2D/Lucian_R.dds"
-			],
 			"mCastTime": 0.009999999776482582,
 			"mCantCancelWhileWindingUp": true,
 			"mCantCancelWhileChanneling": true,

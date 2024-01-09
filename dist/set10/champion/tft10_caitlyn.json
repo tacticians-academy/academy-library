@@ -133,9 +133,9 @@
 					"mName": "ADPercent",
 					"mValues": [
 						2,
-						3.9000000953674316,
-						3.9000000953674316,
-						8,
+						3.5999999046325684,
+						3.5999999046325684,
+						7.5,
 						2,
 						2,
 						2
@@ -146,9 +146,9 @@
 					"mName": "APRatio",
 					"mValues": [
 						0,
-						0.25,
 						0.4000000059604645,
-						1.2000000476837158,
+						0.6000000238418579,
+						2,
 						0,
 						0,
 						0
@@ -219,10 +219,6 @@
 					"__type": "GameCalculation"
 				}
 			},
-			"mImgIconName": [
-				"ASSETS/Characters/TFT3_Caitlyn/HUD/Icons2D/Caitlyn_AceintheHole.dds",
-				""
-			],
 			"mCastTime": 1.100000023841858,
 			"delayCastOffsetPercent": -0.25,
 			"delayTotalTimePercent": -0.5,
@@ -318,9 +314,6 @@
 				"__type": "ObjectTags"
 			},
 			"mAlternateName": "CaitlynAceintheHole",
-			"mImgIconName": [
-				""
-			],
 			"mCastTime": 1.100000023841858,
 			"delayCastOffsetPercent": -0.25,
 			"delayTotalTimePercent": -0.5,

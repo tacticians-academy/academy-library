@@ -1,18 +1,18 @@
 {
 	"Characters/TFT10_Zac/CharacterRecords/Root": {
 		"mCharacterName": "TFT10_Zac",
-		"baseHP": 1000,
+		"baseHP": 1100,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 160,
+			"arBase": 120,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 50,
-		"baseArmor": 60,
-		"baseSpellBlock": 60,
+		"baseArmor": 70,
+		"baseSpellBlock": 70,
 		"baseCritChance": 0.25,
 		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
@@ -121,8 +121,8 @@
 					"mName": "BaseHeal",
 					"mValues": [
 						0,
-						100,
-						140,
+						120,
+						160,
 						800,
 						0.6000000238418579,
 						0.6000000238418579,
@@ -146,26 +146,26 @@
 				{
 					"mName": "HeadlinerHealth",
 					"mValues": [
-						200,
-						200,
-						200,
-						200,
-						200,
-						200,
-						200
+						300,
+						300,
+						300,
+						300,
+						300,
+						300,
+						300
 					],
 					"__type": "SpellDataValue"
 				},
 				{
 					"mName": "HeadlinerAbilityPower",
 					"mValues": [
-						15,
-						15,
-						15,
-						15,
-						15,
-						15,
-						15
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20
 					],
 					"__type": "SpellDataValue"
 				}

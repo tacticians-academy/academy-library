@@ -56,7 +56,7 @@ export const dropRates: Record<string, number[][]> = {
 		[0, 0.75, 0.25, 0, 0],
 		[0, 0.4000000059604645, 0.6000000238418579, 0, 0],
 		[0, 0, 0.699999988079071, 0.30000001192092896, 0],
-		[0, 0, 0, 0.8999999761581421, 0.10000000149011612],
+		[0, 0, 0, 0.9800000190734863, 0.019999999552965164],
 		[0, 0, 0, 0.30000001192092896, 0.699999988079071],
 	],
 	'Headliner_PlusOneLevel': [
@@ -67,7 +67,7 @@ export const dropRates: Record<string, number[][]> = {
 		[0, 0.75, 0.25, 0, 0],
 		[0, 0.4000000059604645, 0.6000000238418579, 0, 0],
 		[0, 0, 0.699999988079071, 0.30000001192092896, 0],
-		[0, 0, 0, 0.8999999761581421, 0.10000000149011612],
+		[0, 0, 0, 0.9800000190734863, 0.019999999552965164],
 		[0, 0, 0, 0.30000001192092896, 0.699999988079071],
 		[0, 0, 0, 0.10000000149011612, 0.8999999761581421],
 	],
@@ -75,17 +75,17 @@ export const dropRates: Record<string, number[][]> = {
 
 export const winStreaks: StreakData[] = [
 	{
-		mMinimumStreakLength: 2,
-		mMaximumStreakLength: 3,
+		mMinimumStreakLength: 3,
+		mMaximumStreakLength: 4,
 		mGoldRewardAmount: 1,
 	},
 	{
-		mMinimumStreakLength: 4,
-		mMaximumStreakLength: 4,
+		mMinimumStreakLength: 5,
+		mMaximumStreakLength: 5,
 		mGoldRewardAmount: 2,
 	},
 	{
-		mMinimumStreakLength: 5,
+		mMinimumStreakLength: 6,
 		mMaximumStreakLength: null,
 		mGoldRewardAmount: 3,
 	},
@@ -93,17 +93,17 @@ export const winStreaks: StreakData[] = [
 
 export const lossStreaks: StreakData[] = [
 	{
-		mMinimumStreakLength: 2,
-		mMaximumStreakLength: 3,
+		mMinimumStreakLength: 3,
+		mMaximumStreakLength: 4,
 		mGoldRewardAmount: 1,
 	},
 	{
-		mMinimumStreakLength: 4,
-		mMaximumStreakLength: 4,
+		mMinimumStreakLength: 5,
+		mMaximumStreakLength: 5,
 		mGoldRewardAmount: 2,
 	},
 	{
-		mMinimumStreakLength: 5,
+		mMinimumStreakLength: 6,
 		mMaximumStreakLength: null,
 		mGoldRewardAmount: 3,
 	},

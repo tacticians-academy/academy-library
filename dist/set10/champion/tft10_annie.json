@@ -52,9 +52,6 @@
 		"mScriptName": "TFT10_AnnieQ_Missile_2",
 		"mSpell": {
 			"mAffectsTypeFlags": 6154,
-			"mImgIconName": [
-				"DianaNew_Q_MoonsEdge.dds"
-			],
 			"delayCastOffsetPercent": -1,
 			"delayTotalTimePercent": -1,
 			"mCantCancelWhileWindingUp": true,
@@ -202,9 +199,9 @@
 					"mName": "MagicDamage",
 					"mValues": [
 						0,
-						195,
-						295,
-						440,
+						220,
+						330,
+						495,
 						0,
 						0,
 						0
@@ -279,13 +276,13 @@
 				{
 					"mName": "BonusAS",
 					"mValues": [
-						50,
-						50,
-						50,
-						50,
-						50,
-						50,
-						50
+						40,
+						40,
+						40,
+						40,
+						40,
+						40,
+						40
 					],
 					"__type": "SpellDataValue"
 				},
@@ -293,9 +290,9 @@
 					"mName": "SecondaryDamage",
 					"mValues": [
 						0,
-						115,
-						170,
-						255,
+						80,
+						120,
+						180,
 						0,
 						0,
 						0
