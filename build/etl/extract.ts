@@ -23,6 +23,10 @@ const UNIT_NORMALIZE_RENAME_KEYS: Record<string, Record<string, string>> = {
 	},
 }
 
+const UNIT_SKIP_APINAMES = [
+	'TFT6_MercenaryChest',
+]
+
 export async function extractLatestPatchFor(setNumber: SetNumber) {
 	await fs.mkdir(getOutputFolderForSet(setNumber), { recursive: true })
 	const championsPath = getPathToSet(setNumber, 'champion')
@@ -34,8 +38,8 @@ export async function extractLatestPatchFor(setNumber: SetNumber) {
 	}
 }
 
-export async function getPatchFor(loadSet: SetNumber, customPatchLine?: string) {
-	const patchLine = customPatchLine ?? SET_DATA[loadSet].patchLine
+export async function getPatchFor(setNumber: SetNumber, customPatchLine?: string) {
+	const patchLine = customPatchLine ?? SET_DATA[setNumber].patchLine
 	const baseURL = `https://raw.communitydragon.org/${patchLine}`
 	const gameURL = `${baseURL}/cdragon/tft/en_us.json`
 	const mapURL = `${baseURL}/game/data/maps/shipping/map22/map22.bin.json`
@@ -45,7 +49,7 @@ export async function getPatchFor(loadSet: SetNumber, customPatchLine?: string) 
 	if (!mapResponse.ok) { throw mapResponse }
 
 	// const etagPath = getPathToPatch(patchLine, `.etag.local`)
-	const etagPath = getPathToSet(loadSet, `.etag.local`)
+	const etagPath = getPathToSet(setNumber, `.etag.local`)
 	let oldEtag: string | undefined
 	try {
 		oldEtag = await fs.readFile(etagPath, 'utf8')
@@ -74,27 +78,28 @@ export async function getPatchFor(loadSet: SetNumber, customPatchLine?: string) 
 	}
 
 	const gameResponseJSON = await gameResponse.json() as GameResponseJSON
-	const parentSetNumber = getLatestSetNumberFrom(gameResponseJSON.sets)
+	const parentSetNumber = Math.floor(setNumber)
 
-	const currentSetNumber = parentSetNumber === Math.floor(loadSet) ? loadSet : parentSetNumber
-	if (SET_DATA[currentSetNumber] == null) {
-		throw 'New Set!! ' + currentSetNumber
+	if (SET_DATA[setNumber] == null) {
+		throw 'New Set!! ' + setNumber
 	}
-	const { champions } = getSetDataFrom(loadSet, parentSetNumber, gameResponseJSON)
+	const { champions } = getSetDataFrom(setNumber, parentSetNumber, gameResponseJSON)
 
-	await fs.mkdir(getPathToSet(currentSetNumber, 'hardcoded'), { recursive: true })
+	await fs.mkdir(getPathToSet(setNumber, 'hardcoded'), { recursive: true })
 
 	// await fs.writeFile(getPathToPatch(patchLine, '.game.raw.json'), JSON.stringify(gameResponseJSON, undefined, '\t'))
-	await fs.writeFile(getPathToSet(currentSetNumber, '.game.raw.json'), JSON.stringify(gameResponseJSON, undefined, '\t'))
-	await fs.writeFile(getPathToSet(currentSetNumber, '.map.raw.json'), JSON.stringify(mapResponseJSON, undefined, '\t'))
-	console.log('Loading set', currentSetNumber, 'patch', patchLine.toUpperCase(), '...', 'Units:', champions.length, '\n')
+	await fs.writeFile(getPathToSet(setNumber, '.game.raw.json'), JSON.stringify(gameResponseJSON, undefined, '\t'))
+	await fs.writeFile(getPathToSet(setNumber, '.map.raw.json'), JSON.stringify(mapResponseJSON, undefined, '\t'))
+	console.log('Loading set', setNumber, 'patch', patchLine.toUpperCase(), '...', 'Units:', champions.length, '\n')
 
-	const setData = await importSetData(currentSetNumber)
+	const setData = await importSetData(setNumber)
 	const TRAIT_DATA_SUBSTITUTIONS = setData?.TRAIT_DATA_SUBSTITUTIONS ?? {}
 
 	// Champions
 
-	const apiNames = champions.map(champion => getAPIName(champion))
+	const apiNames = champions
+		.map(champion => getAPIName(champion))
+		.filter(apiName => !apiName.includes('ArmoryKey') && !UNIT_SKIP_APINAMES.includes(apiName))
 	if (parentSetNumber >= 5) {
 		for (const apiName of BASE_UNIT_API_NAMES) {
 			if (!apiNames.includes(apiName)) {

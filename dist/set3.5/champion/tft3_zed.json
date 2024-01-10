@@ -1,6 +1,5 @@
 {
-	"{2315230c}": {},
-	"{2c6f14d3}": {
+	"Characters/TFT3_Zed/Spells/TFT3_ZedPStatStealMis": {
 		"mScriptName": "TFT3_ZedPStatStealMis",
 		"mSpell": {
 			"flags": 4,
@@ -18,24 +17,34 @@
 			"castConeDistance": 100,
 			"mMissileSpec": {
 				"movementComponent": {
-					"mSpeed": 1000,
 					"mTargetHeightAugment": 100,
 					"mOffsetInitialTargetHeight": 100,
-					"mStartBoneName": "spine"
+					"mStartBoneName": "spine",
+					"mSpeed": 1000,
+					"__type": "FixedSpeedMovement"
 				},
-				"verticalFacing": {},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
 				"behaviors": [
-					{},
-					{}
-				]
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
 			},
 			"mCastType": 1,
 			"castFrame": 1,
 			"missileSpeed": 1000,
-			"mMissileEffectKey": "{f2f13439}"
-		}
+			"mMissileEffectKey": "{f2f13439}",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
-	"{49d68c7d}": {
+	"Characters/TFT3_Zed/Spells/TFT3_ZedBasicAttack": {
 		"mScriptName": "TFT3_ZedBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 4234,
@@ -66,10 +75,12 @@
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Hit",
 			"bHaveHitBone": true,
-			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
-		}
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
-	"{6248e9bd}": {
+	"Characters/TFT3_Zed/Spells/TFT3_ZedCritAttack": {
 		"mScriptName": "TFT3_ZedCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 4234,
@@ -100,10 +111,12 @@
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Crit",
 			"bHaveHitBone": true,
-			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
-		}
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
-	"{8bbee05d}": {
+	"Characters/TFT3_Zed/Spells/TFT3_ZedBasicAttack2": {
 		"mScriptName": "TFT3_ZedBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 4234,
@@ -134,10 +147,12 @@
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Hit",
 			"bHaveHitBone": true,
-			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
-		}
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
-	"{efac2eef}": {
+	"Characters/TFT3_Zed/Spells/TFT3_ZedPAttack": {
 		"mScriptName": "TFT3_ZedPAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 4234,
@@ -169,51 +184,97 @@
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "{9d6c31e0}",
 			"bHaveHitBone": true,
-			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
-		}
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
-	"{f9b18f87}": {
+	"Characters/TFT3_Zed/Spells/TFT3_ZedP": {
 		"mScriptName": "TFT3_ZedP",
 		"mSpell": {
 			"flags": 4,
 			"mAffectsTypeFlags": 13327,
 			"mRequiredUnitTags": {
-				"mTagList": "Champion"
+				"mTagList": "Champion",
+				"__type": "ObjectTags"
 			},
 			"mDataValues": [
 				{
 					"mName": "ADSteal",
 					"mValues": [
 						0.25,
-						0.20000000298023224,
-						0.33000001311302185,
-						0.5,
+						0.25,
+						0.25,
+						0.30000001192092896,
 						0.800000011920929,
 						0.800000011920929,
 						0.800000011920929
 					],
-					"{3f95426c}": false,
-					"mBaseP": 0.10000000149011612,
-					"mFormula": "P +0.15"
+					"__type": "SpellDataValue"
 				},
 				{
 					"mName": "Damage",
 					"mValues": [
 						0,
-						50,
+						60,
 						90,
 						150,
 						0,
 						0,
 						0
 					],
-					"{3f95426c}": false,
-					"mFormula": "P + 0"
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "TooltipDamage",
+					"mValues": [
+						1,
+						1,
+						1,
+						1,
+						1,
+						1,
+						1
+					],
+					"__type": "SpellDataValue"
 				}
 			],
-			"mImgIconName": [
-				"ASSETS/Characters/TFT3_Zed/HUD/Icons2D/TFT3_ZedP.TFT_Set3_Act2.dds"
-			],
+			"mSpellCalculations": {
+				"ModifiedDamage": {
+					"{cbcac618}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{253e9e6e}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubparts": [
+								{
+									"mStat": 2,
+									"mDataValue": "TooltipDamage",
+									"__type": "StatByNamedDataValueCalculationPart"
+								}
+							],
+							"__type": "SumOfSubPartsCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
 			"delayCastOffsetPercent": -0.5,
 			"delayTotalTimePercent": -0.5,
 			"mCantCancelWhileWindingUp": true,
@@ -269,50 +330,28 @@
 				2
 			],
 			"selectionPriority": 2,
-			"mTargetingTypeData": {},
-			"mSpellCalculations": {
-				"TotalDamage": {
-					"mFormulaParts": [
-						{
-							"mSubpart": {
-								"mDataValue": "Damage"
-							},
-							"mRatio": 0.009999999776482582,
-							"{a5749b52}": "scaleAP",
-							"mStyleTag": "noScale"
-						}
-					]
-				}
-			}
-		}
-	},
-	"{56f5f1aa}": {
-		"PortraitIcon": "ASSETS/Characters/TFT3_Zed/HUD/TFT3_Zed_Square.TFT_Set3_Act2.dds",
-		"tier": 2,
-		"mLinkedTraits": [
-			{
-				"TraitData": "{d5353f03}"
+			"mTargetingTypeData": {
+				"__type": "Self"
 			},
-			{
-				"TraitData": "{5ad3f68f}"
-			}
-		],
-		"mMoveInterval": -0.10000000149011612,
-		"mMoveProximity": 180,
-		"mMoveRange": 500,
-		"mMoveHeight": 0,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT3_Zed/CharacterRecords/Root": {
 		"mCharacterName": "TFT3_Zed",
-		"baseHP": 650,
+		"baseHP": 700,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arBase": 0,
-			"arBaseStaticRegen": 0
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 55,
-		"baseArmor": 25,
-		"baseSpellBlock": 20,
+		"baseDamage": 50,
+		"baseArmor": 30,
+		"baseSpellBlock": 30,
 		"baseCritChance": 0.25,
-		"critDamageMultiplier": 1.5,
+		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
 		"attackRange": 180,
 		"attackSpeed": 0.75,
@@ -323,6 +362,23 @@
 			"BaseSpell"
 		],
 		"unitTagsString": "Champion",
-		"flags": 8398088
+		"flags": 8398088,
+		"tier": 2,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{e070c997}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{f3cff87b}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{14a36a9c}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"__type": "TFTCharacterRecord"
 	}
 }

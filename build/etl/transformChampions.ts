@@ -29,7 +29,7 @@ export async function transformChampions(setNumber: SetNumber, parentSetNumber: 
 
 	const playableUnits = champions
 		.filter(unit => {
-			if (!unit.icon || unit.stats.attackSpeed == null) {
+			if (!unit.icon || unit.stats.attackSpeed == null || unit.apiName.includes('ArmoryKey')) {
 				return false
 			}
 			unit.apiName = getAPIName(unit)

@@ -1,5 +1,5 @@
 {
-	"{02730a4c}": {
+	"Characters/TFT3_Ashe/Spells/TFT3_AsheEnchantedCrystalArrow": {
 		"mScriptName": "TFT3_AsheEnchantedCrystalArrow",
 		"mSpell": {
 			"mAffectsTypeFlags": 6154,
@@ -13,32 +13,47 @@
 					"mName": "Damage",
 					"mValues": [
 						250,
-						200,
-						300,
-						600,
+						250,
+						375,
+						625,
 						800,
 						800,
 						800
 					],
-					"{3f95426c}": false,
-					"mFormula": "P + 200"
+					"__type": "SpellDataValue"
 				},
 				{
 					"mName": "StunDurationPerSquare",
 					"mValues": [
 						2,
+						1.5,
+						1.5,
 						2,
-						3,
-						4,
 						2,
 						2,
 						2
 					],
-					"{3f95426c}": false,
-					"mBaseP": 2,
-					"mFormula": "P "
+					"__type": "SpellDataValue"
 				}
 			],
+			"mSpellCalculations": {
+				"ModifiedDamage": {
+					"{cbcac618}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
 			"delayTotalTimePercent": -0.75,
 			"mCantCancelWhileWindingUp": true,
 			"mSpellRevealsChampion": false,
@@ -67,49 +82,46 @@
 			"mMissileSpec": {
 				"mMissileWidth": 100,
 				"movementComponent": {
-					"mSpeed": 1900,
 					"mUseHeightOffsetAtEnd": true,
 					"mTracksTarget": false,
-					"mStartBoneName": "R_hand"
+					"mStartBoneName": "R_hand",
+					"mSpeed": 1900,
+					"__type": "FixedSpeedMovement"
 				},
-				"heightSolver": {},
-				"verticalFacing": {},
+				"heightSolver": {
+					"__type": "BlendedLinearHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VerticalFacingFaceTarget"
+				},
 				"behaviors": [
-					{},
 					{
-						"mMaximumDistance": 2200,
-						"mTargeterDefinition": {}
+						"__type": "CastOnHit"
 					},
-					{}
-				]
+					{
+						"__type": "{e357c116}"
+					}
+				],
+				"__type": "MissileSpecification"
 			},
 			"mCastType": 1,
 			"castFrame": 7.5,
 			"missileSpeed": 1600,
 			"mMissileEffectKey": "{5f4bafd9}",
 			"mLineWidth": 130,
-			"mTargetingTypeData": {},
+			"mTargetingTypeData": {
+				"__type": "Location"
+			},
 			"mSpellCooldownOrSealedQueueThreshold": 0.5,
-			"mSpellCalculations": {
-				"TotalDamage": {
-					"mFormulaParts": [
-						{
-							"mSubpart": {
-								"mDataValue": "Damage"
-							},
-							"mRatio": 0.009999999776482582,
-							"{a5749b52}": "scaleAP",
-							"mStyleTag": "noScale"
-						}
-					]
-				}
-			}
+			"__type": "SpellDataResource"
 		},
 		"mBuff": {
-			"mDescription": "game_buff_tooltip_EnchantedCrystalArrow"
-		}
+			"mDescription": "game_buff_tooltip_EnchantedCrystalArrow",
+			"__type": "BuffData"
+		},
+		"__type": "SpellObject"
 	},
-	"{1672169d}": {
+	"Characters/TFT3_Ashe/Spells/TFT3_AsheCritAttack": {
 		"mScriptName": "TFT3_AsheCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -145,16 +157,24 @@
 			"castConeDistance": 100,
 			"mMissileSpec": {
 				"movementComponent": {
-					"mSpeed": 3500,
 					"mTargetHeightAugment": 100,
 					"mOffsetInitialTargetHeight": 100,
-					"mStartBoneName": "R_hand"
+					"mStartBoneName": "R_hand",
+					"mSpeed": 3500,
+					"__type": "FixedSpeedMovement"
 				},
-				"verticalFacing": {},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
 				"behaviors": [
-					{},
-					{}
-				]
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
 			},
 			"mCastType": 1,
 			"castFrame": 9,
@@ -163,10 +183,12 @@
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Crit",
 			"bHaveHitBone": true,
-			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
-		}
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
-	"{afaf383d}": {
+	"Characters/TFT3_Ashe/Spells/TFT3_AsheBasicAttack2": {
 		"mScriptName": "TFT3_AsheBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -203,16 +225,24 @@
 			"castConeDistance": 100,
 			"mMissileSpec": {
 				"movementComponent": {
-					"mSpeed": 3500,
 					"mTargetHeightAugment": 100,
 					"mOffsetInitialTargetHeight": 100,
-					"mStartBoneName": "R_hand"
+					"mStartBoneName": "R_hand",
+					"mSpeed": 3500,
+					"__type": "FixedSpeedMovement"
 				},
-				"verticalFacing": {},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
 				"behaviors": [
-					{},
-					{}
-				]
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
 			},
 			"mCastType": 1,
 			"castFrame": 9,
@@ -221,10 +251,12 @@
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Hit",
 			"bHaveHitBone": true,
-			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
-		}
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
-	"{d03340dd}": {
+	"Characters/TFT3_Ashe/Spells/TFT3_AsheBasicAttack": {
 		"mScriptName": "TFT3_AsheBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -261,16 +293,24 @@
 			"castConeDistance": 100,
 			"mMissileSpec": {
 				"movementComponent": {
-					"mSpeed": 3500,
 					"mTargetHeightAugment": 100,
 					"mOffsetInitialTargetHeight": 100,
-					"mStartBoneName": "R_hand"
+					"mStartBoneName": "R_hand",
+					"mSpeed": 3500,
+					"__type": "FixedSpeedMovement"
 				},
-				"verticalFacing": {},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
 				"behaviors": [
-					{},
-					{}
-				]
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
 			},
 			"mCastType": 1,
 			"castFrame": 9,
@@ -279,54 +319,46 @@
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Hit",
 			"bHaveHitBone": true,
-			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
-		}
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
-	"{98a0f956}": {
-		"PortraitIcon": "ASSETS/Characters/TFT3_Ashe/HUD/TFT3_Ashe_Square.TFT_Set3.dds",
-		"tier": 3,
-		"mLinkedTraits": [
-			{
-				"TraitData": "{d89e035d}"
-			},
-			{
-				"TraitData": "{b8c79a1a}"
-			}
-		],
-		"mMoveInterval": -0.10000000149011612,
-		"mMoveProximity": 960,
-		"mMoveRange": 500,
-		"mMoveHeight": 0,
-		"mInitialMana": 40,
+	"Characters/TFT3_Ashe/CharacterRecords/Root": {
 		"mCharacterName": "TFT3_Ashe",
 		"baseHP": 650,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBaseStaticRegen": 0
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 60,
-		"baseArmor": 20,
-		"baseSpellBlock": 20,
+		"baseDamage": 65,
+		"baseArmor": 25,
+		"baseSpellBlock": 25,
 		"baseCritChance": 0.25,
-		"critDamageMultiplier": 1.5,
+		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
 		"attackRange": 1130,
-		"attackSpeed": 0.8500000238418579,
+		"attackSpeed": 0.800000011920929,
 		"basicAttack": {
 			"mAttackProbability": 0.5,
-			"mAttackName": "TFT3_AsheBasicAttack"
+			"mAttackName": "TFT3_AsheBasicAttack",
+			"__type": "AttackSlotData"
 		},
 		"extraAttacks": [
 			{
 				"mAttackCastTime": 0.6499999761581421,
 				"mAttackProbability": 0.5,
-				"mAttackName": "TFT3_AsheBasicAttack2"
+				"mAttackName": "TFT3_AsheBasicAttack2",
+				"__type": "AttackSlotData"
 			}
 		],
 		"critAttacks": [
 			{
-				"mAttackName": "TFT3_AsheCritAttack"
+				"mAttackName": "TFT3_AsheCritAttack",
+				"__type": "AttackSlotData"
 			}
 		],
 		"spellNames": [
@@ -335,7 +367,24 @@
 			"BaseSpell",
 			"BaseSpell"
 		],
-		"unitTagsString": "Champion"
-	},
-	"{bf793b30}": {}
+		"unitTagsString": "Champion",
+		"tier": 3,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{00214e11}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{3a89370e}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{34ed6daa}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 960,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mInitialMana": 40,
+		"__type": "TFTCharacterRecord"
+	}
 }

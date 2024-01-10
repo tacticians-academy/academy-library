@@ -1,6 +1,5 @@
 {
-	"{5f034941}": {},
-	"{72eba329}": {
+	"Characters/TFT3_MasterYi/Spells/TFT3_MasterYiQ_Missile": {
 		"mScriptName": "TFT3_MasterYiQ_Missile",
 		"mSpell": {
 			"mAffectsTypeFlags": 6154,
@@ -10,9 +9,6 @@
 				"Trait_ChannelSpell"
 			],
 			"mCoefficient": 1,
-			"mImgIconName": [
-				"ASSETS/Characters/MasterYi/HUD/Icons2D/MasterYi_Q.dds"
-			],
 			"mCastTime": 0.10000000149011612,
 			"delayCastOffsetPercent": -0.5,
 			"delayTotalTimePercent": -0.5,
@@ -49,16 +45,24 @@
 			"castConeDistance": 100,
 			"mMissileSpec": {
 				"movementComponent": {
-					"mTravelTime": 0.20000000298023224,
 					"mTargetHeightAugment": 100,
 					"mOffsetInitialTargetHeight": 100,
-					"mStartBoneName": "root"
+					"mStartBoneName": "root",
+					"mTravelTime": 0.20000000298023224,
+					"__type": "FixedTimeMovement"
 				},
-				"verticalFacing": {},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
 				"behaviors": [
-					{},
-					{}
-				]
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
 			},
 			"mCastType": 1,
 			"castFrame": 7.934999942779541,
@@ -84,10 +88,12 @@
 				2
 			],
 			"selectionPriority": 1,
-			"{03f432a6}": 1
-		}
+			"mDimensionBehavior": 1,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
-	"{782ffb00}": {
+	"Characters/TFT3_MasterYi/Spells/TFT3_MasterYiW": {
 		"mScriptName": "TFT3_MasterYiW",
 		"mSpell": {
 			"mAffectsTypeFlags": 9221,
@@ -95,16 +101,15 @@
 				{
 					"mName": "Duration",
 					"mValues": [
-						5,
-						5,
-						5,
-						5,
-						5,
-						5,
-						5
+						6,
+						6,
+						6,
+						6,
+						6,
+						6,
+						6
 					],
-					"mBaseP": 5,
-					"mFormula": "P"
+					"__type": "SpellDataValue"
 				},
 				{
 					"mName": "HealAmountPercent",
@@ -117,23 +122,57 @@
 						0.20000000298023224,
 						0.20000000298023224
 					],
-					"{3f95426c}": false,
-					"mFormula": "8"
+					"__type": "SpellDataValue"
 				},
 				{
 					"mName": "BonusTrueDamage",
 					"mValues": [
 						0,
-						70,
-						95,
-						145,
+						65,
+						100,
+						160,
 						0,
 						0,
 						0
 					],
-					"{3f95426c}": false
+					"__type": "SpellDataValue"
 				}
 			],
+			"mSpellCalculations": {
+				"ModifiedHeal": {
+					"{cbcac618}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{945d8424}",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"mDisplayAsPercent": true,
+					"__type": "GameCalculation"
+				},
+				"ModifiedDamage": {
+					"{cbcac618}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "BonusTrueDamage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
 			"mCastTime": 0.10000000149011612,
 			"delayCastOffsetPercent": -1,
 			"canCastOrQueueWhileCasting": true,
@@ -159,42 +198,20 @@
 			"castConeDistance": 100,
 			"castFrame": 3.25,
 			"missileSpeed": 828.5,
-			"mTargetingTypeData": {},
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
 			"mSpellCooldownOrSealedQueueThreshold": 0.5,
 			"{00f7e5bc}": true,
-			"mSpellCalculations": {
-				"{09bc1f54}": {
-					"mDisplayAsPercent": true,
-					"mFormulaParts": [
-						{
-							"mSubpart": {
-								"mDataValue": "{945d8424}"
-							},
-							"mRatio": 0.009999999776482582,
-							"{a5749b52}": "scaleAP",
-							"mStyleTag": "noScale"
-						}
-					]
-				},
-				"TotalDamage": {
-					"mFormulaParts": [
-						{
-							"mSubpart": {
-								"mDataValue": "{a1b687b5}"
-							},
-							"mRatio": 0.009999999776482582,
-							"{a5749b52}": "scaleAP",
-							"mStyleTag": "noScale"
-						}
-					]
-				}
-			}
+			"__type": "SpellDataResource"
 		},
 		"mBuff": {
-			"mDescription": "game_buff_tooltip_Meditate"
-		}
+			"mDescription": "game_buff_tooltip_Meditate",
+			"__type": "BuffData"
+		},
+		"__type": "SpellObject"
 	},
-	"{7e300472}": {
+	"Characters/TFT3_MasterYi/Spells/TFT3_MasterYiQ": {
 		"mScriptName": "TFT3_MasterYiQ",
 		"mSpell": {
 			"mAffectsTypeFlags": 4106,
@@ -213,8 +230,7 @@
 						600,
 						600
 					],
-					"{3f95426c}": false,
-					"mFormula": "P + 100"
+					"__type": "SpellDataValue"
 				},
 				{
 					"mName": "Bounces",
@@ -227,7 +243,7 @@
 						4,
 						4
 					],
-					"mBaseP": 4
+					"__type": "SpellDataValue"
 				},
 				{
 					"mName": "BounceRange",
@@ -240,13 +256,27 @@
 						2,
 						2
 					],
-					"mBaseP": 2
+					"__type": "SpellDataValue"
 				}
 			],
+			"mSpellCalculations": {
+				"ModifiedDamage": {
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
 			"mCoefficient": 1.2000000476837158,
-			"mImgIconName": [
-				"ASSETS/Characters/MasterYi/HUD/Icons2D/MasterYi_Q.dds"
-			],
 			"mCastTime": 0.5,
 			"delayCastOffsetPercent": -0.12999999523162842,
 			"delayTotalTimePercent": -0.12999999523162842,
@@ -293,23 +323,11 @@
 			],
 			"selectionPriority": 1,
 			"{00f7e5bc}": true,
-			"mSpellCalculations": {
-				"TotalDamage": {
-					"mFormulaParts": [
-						{
-							"mSubpart": {
-								"mDataValue": "Damage"
-							},
-							"mRatio": 0.009999999776482582,
-							"{a5749b52}": "scaleAP",
-							"mStyleTag": "noScale"
-						}
-					]
-				}
-			}
-		}
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
-	"{87c257ef}": {
+	"Characters/TFT3_MasterYi/Spells/TFT3_MasterYiBasicAttack2": {
 		"mScriptName": "TFT3_MasterYiBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 6826,
@@ -342,10 +360,12 @@
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Hit",
 			"bHaveHitBone": true,
-			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
-		}
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
-	"{8c12c73f}": {
+	"Characters/TFT3_MasterYi/Spells/TFT3_MasterYiCritAttack": {
 		"mScriptName": "TFT3_MasterYiCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 6826,
@@ -377,10 +397,12 @@
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Crit",
 			"bHaveHitBone": true,
-			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
-		}
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
-	"{c1ffaac1}": {
+	"Characters/TFT3_MasterYi/Spells/TFT3_MasterYiQ_MissileBounce": {
 		"mScriptName": "TFT3_MasterYiQ_MissileBounce",
 		"mSpell": {
 			"mAffectsTypeFlags": 6154,
@@ -390,9 +412,6 @@
 				"Trait_ChannelSpell"
 			],
 			"mCoefficient": 1,
-			"mImgIconName": [
-				"ASSETS/Characters/MasterYi/HUD/Icons2D/MasterYi_Q.dds"
-			],
 			"mCastTime": 0.10000000149011612,
 			"delayCastOffsetPercent": -0.5,
 			"delayTotalTimePercent": -0.5,
@@ -429,16 +448,24 @@
 			"castConeDistance": 100,
 			"mMissileSpec": {
 				"movementComponent": {
-					"mTravelTime": 0.20000000298023224,
 					"mTargetHeightAugment": 100,
 					"mOffsetInitialTargetHeight": 100,
-					"mStartBoneName": "root"
+					"mStartBoneName": "root",
+					"mTravelTime": 0.20000000298023224,
+					"__type": "FixedTimeMovement"
 				},
-				"verticalFacing": {},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
 				"behaviors": [
-					{},
-					{}
-				]
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
 			},
 			"mCastType": 1,
 			"castFrame": 7.934999942779541,
@@ -464,18 +491,17 @@
 				2
 			],
 			"selectionPriority": 1,
-			"{03f432a6}": 1
-		}
+			"mDimensionBehavior": 1,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
-	"{d9946173}": {
+	"Characters/TFT3_MasterYi/Spells/TFT3_MasterYiWReflectMissile": {
 		"mScriptName": "TFT3_MasterYiWReflectMissile",
 		"mSpell": {
 			"flags": 4,
 			"mAffectsTypeFlags": 6154,
 			"mSpellTags": [
-				""
-			],
-			"mImgIconName": [
 				""
 			],
 			"delayCastOffsetPercent": -0.5,
@@ -503,29 +529,39 @@
 			"castConeDistance": 100,
 			"mMissileSpec": {
 				"movementComponent": {
-					"mSpeed": 5000,
 					"mTargetHeightAugment": 100,
 					"mOffsetInitialTargetHeight": 100,
-					"mStartBoneName": "L_Buffbone_Glb_Hand_Loc"
+					"mStartBoneName": "L_Buffbone_Glb_Hand_Loc",
+					"mSpeed": 5000,
+					"__type": "FixedSpeedMovement"
 				},
-				"verticalFacing": {},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
 				"behaviors": [
-					{},
-					{}
-				]
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
 			},
 			"mCastType": 1,
 			"castFrame": 8.699999809265137,
 			"missileSpeed": 3000,
-			"mMissileEffectKey": "{98d691c3}",
+			"mMissileEffectKey": "{a6724691}",
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Hit",
 			"bHaveHitBone": true,
 			"mHitBoneName": "C_buffbone_glb_chest_loc",
-			"selectionPriority": 1
-		}
+			"selectionPriority": 1,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
-	"{e2aab987}": {
+	"Characters/TFT3_MasterYi/Spells/TFT3_MasterYiBasicAttack": {
 		"mScriptName": "TFT3_MasterYiBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 6826,
@@ -558,37 +594,27 @@
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Hit",
 			"bHaveHitBone": true,
-			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
-		}
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
-	"{b938c4d1}": {
-		"PortraitIcon": "ASSETS/Characters/TFT3_MasterYi/HUD/TFT3_MasterYi_Square.TFT_Set3.dds",
-		"tier": 3,
-		"mLinkedTraits": [
-			{
-				"TraitData": "{d5353f03}"
-			},
-			{
-				"TraitData": "{fad58c1b}"
-			}
-		],
-		"mMoveInterval": -0.10000000149011612,
-		"mMoveProximity": 180,
-		"mMoveRange": 500,
-		"mMoveHeight": 0,
+	"Characters/TFT3_MasterYi/CharacterRecords/Root": {
 		"mCharacterName": "TFT3_MasterYi",
-		"baseHP": 750,
+		"baseHP": 850,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
 			"arBase": 55,
-			"arBaseStaticRegen": 0
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 55,
-		"baseArmor": 50,
-		"baseSpellBlock": 35,
+		"baseArmor": 45,
+		"baseSpellBlock": 45,
 		"baseCritChance": 0.25,
-		"critDamageMultiplier": 1.5,
+		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
 		"attackRange": 180,
 		"attackSpeed": 0.8500000238418579,
@@ -599,6 +625,23 @@
 			"BaseSpell"
 		],
 		"unitTagsString": "Champion",
-		"flags": 9446664
+		"flags": 9446664,
+		"tier": 3,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{e070c997}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{687503a7}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{34ed6daa}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"__type": "TFTCharacterRecord"
 	}
 }

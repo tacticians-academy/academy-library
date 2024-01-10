@@ -1,5 +1,5 @@
 {
-	"{008e7a1d}": {
+	"Characters/TFT3_Yasuo/Spells/TFT3_YasuoBasicAttack2": {
 		"mScriptName": "TFT3_YasuoBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -31,10 +31,12 @@
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Hit",
 			"bHaveHitBone": true,
-			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
-		}
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
-	"{2923e1fd}": {
+	"Characters/TFT3_Yasuo/Spells/TFT3_YasuoCritAttack": {
 		"mScriptName": "TFT3_YasuoCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -65,10 +67,12 @@
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Crit",
 			"bHaveHitBone": true,
-			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
-		}
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
-	"{995fa3bd}": {
+	"Characters/TFT3_Yasuo/Spells/TFT3_YasuoBasicAttack": {
 		"mScriptName": "TFT3_YasuoBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -99,10 +103,12 @@
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Hit",
 			"bHaveHitBone": true,
-			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
-		}
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
-	"{d473b7ed}": {
+	"Characters/TFT3_Yasuo/Spells/TFT3_YasuoR": {
 		"mScriptName": "TFT3_YasuoR",
 		"mSpell": {
 			"flags": 36,
@@ -124,8 +130,7 @@
 						1,
 						1
 					],
-					"mBaseP": 1,
-					"mFormula": "P"
+					"__type": "SpellDataValue"
 				},
 				{
 					"mName": "Damage",
@@ -138,8 +143,7 @@
 						100,
 						100
 					],
-					"mBaseP": 100,
-					"mFormula": "P"
+					"__type": "SpellDataValue"
 				},
 				{
 					"mName": "NumHits",
@@ -152,10 +156,43 @@
 						8,
 						9
 					],
-					"mBaseP": 3,
-					"mFormula": "P+1"
+					"__type": "SpellDataValue"
 				}
 			],
+			"mSpellCalculations": {
+				"ModifiedAttacks": {
+					"{cbcac618}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "NumHits",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"TotalDamage": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mStat": 2,
+							"mSubpart": {
+								"{88536426}": "ModifiedAttacks",
+								"__type": "{f3cbe7b2}"
+							},
+							"__type": "StatBySubPartCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
 			"delayCastOffsetPercent": -0.5,
 			"delayTotalTimePercent": -0.5,
 			"canCastOrQueueWhileCasting": true,
@@ -204,50 +241,26 @@
 				2
 			],
 			"{00f7e5bc}": true,
-			"mSpellCalculations": {
-				"{ce170957}": {
-					"mFormulaParts": [
-						{
-							"mSubpart": {
-								"mDataValue": "NumHits"
-							},
-							"mRatio": 0.009999999776482582,
-							"{a5749b52}": "scaleAP",
-							"mStyleTag": "noScale"
-						}
-					]
-				}
-			}
-		}
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
-	"{f3c27ff2}": {
-		"PortraitIcon": "ASSETS/Characters/TFT3_Yasuo/HUD/TFT3_Yasuo_Square.TFT_Set3.dds",
-		"tier": 2,
-		"mLinkedTraits": [
-			{
-				"TraitData": "{d5353f03}"
-			},
-			{
-				"TraitData": "{fad58c1b}"
-			}
-		],
-		"mMoveInterval": -0.10000000149011612,
-		"mMoveProximity": 180,
-		"mMoveRange": 500,
-		"mMoveHeight": 0,
+	"Characters/TFT3_Yasuo/CharacterRecords/Root": {
 		"mCharacterName": "TFT3_Yasuo",
-		"baseHP": 700,
+		"baseHP": 750,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
 			"arBase": 80,
-			"arBaseStaticRegen": 0
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 50,
-		"baseArmor": 30,
-		"baseSpellBlock": 20,
+		"baseDamage": 55,
+		"baseArmor": 40,
+		"baseSpellBlock": 40,
 		"baseCritChance": 0.25,
-		"critDamageMultiplier": 1.5,
+		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
 		"attackRange": 180,
 		"attackSpeed": 0.75,
@@ -258,7 +271,23 @@
 			"BaseSpell"
 		],
 		"unitTagsString": "Champion",
-		"flags": 9446664
-	},
-	"{f5f6b464}": {}
+		"flags": 9446664,
+		"tier": 2,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{e070c997}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{687503a7}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{53d104ac}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"__type": "TFTCharacterRecord"
+	}
 }

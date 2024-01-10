@@ -9,7 +9,7 @@ export const SET_DATA: Record<number, {patchLine: string, milestoneID?: number}>
 		patchLine: '10.11',
 	},
 	3.5: {
-		patchLine: '10.18',
+		patchLine: 'pbe',
 	},
 	4: {
 		patchLine: '11.1',

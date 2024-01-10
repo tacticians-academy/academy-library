@@ -25,6 +25,7 @@ const SET_9_5_REWORK_REMOVED_ITEM_APIKEYS = [
 ]
 
 export async function transformItems(setNumber: SetNumber, parentSetNumber: SetNumber, itemsData: ItemData[], allTraitKeys: string[]) {
+	const isModernSet = setNumber === 3.5 || setNumber >= 9.5
 	const { EMBLEM_ITEM_IDS, RETIRED_ITEM_NAMES } = await importSetData(setNumber)
 
 	const currentItemsByType: Record<ItemTypeKey, ItemData[]> = {component: [], completed: [], emblem: [], shadow: [], radiant: [], ornn: [], support: [], shimmerscale: [], consumable: [], hexbuff: [], mod: [], unreleased: []}
@@ -80,7 +81,7 @@ export async function transformItems(setNumber: SetNumber, parentSetNumber: SetN
 			typeKey = 'emblem'
 
 		} else if (item.apiName != null) { // Set >= 5
-			if (setNumber >= 9.5 && SET_9_5_REWORK_REMOVED_ITEM_APIKEYS.includes(item.apiName)) {
+			if (isModernSet && SET_9_5_REWORK_REMOVED_ITEM_APIKEYS.includes(item.apiName)) {
 				return
 			}
 
@@ -197,18 +198,18 @@ export async function transformItems(setNumber: SetNumber, parentSetNumber: SetN
 		outputItemExports.push(`export const ${itemKey}Items: ItemData[] = ${formatJS(itemsData)}`)
 	}
 	const currentItemNames = ['completedItems', 'emblemItems']
-	if (setNumber === 4.5 || setNumber >= 6) {
+	if (isModernSet || setNumber === 4.5 || setNumber >= 6) {
 		currentItemNames.splice(2, 0, 'ornnItems')
 	}
 	if (setNumber === 5) {
 		currentItemNames.splice(1, 0, 'shadowItems')
-	} else if (setNumber >= 5.5) {
+	} else if (isModernSet || setNumber >= 5.5) {
 		currentItemNames.splice(1, 0, 'radiantItems')
 	}
-	if (setNumber >= 7 && setNumber < 9.5) {
+	if (setNumber >= 7 && !isModernSet) {
 		currentItemNames.splice(2, 0, 'shimmerscaleItems')
 	}
-	if (setNumber >= 9.5) {
+	if (isModernSet) {
 		currentItemNames.splice(2, 0, 'supportItems')
 	}
 	outputItemExports.push(`export const currentItems: ItemData[] = componentItems.concat(${currentItemNames.join(', ')})`)

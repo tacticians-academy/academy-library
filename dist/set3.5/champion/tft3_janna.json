@@ -1,5 +1,5 @@
 {
-	"{5b11eaa4}": {
+	"Characters/TFT3_Janna/Spells/TFT3_JannaQMissile": {
 		"mScriptName": "TFT3_JannaQMissile",
 		"mSpell": {
 			"flags": 4,
@@ -32,18 +32,28 @@
 			"mMissileSpec": {
 				"mMissileWidth": 80,
 				"movementComponent": {
-					"mSpeed": 1166.6669921875,
 					"mUseHeightOffsetAtEnd": true,
 					"mTracksTarget": false,
 					"mOffsetInitialTargetHeight": 100,
-					"mStartBoneName": "R_hand"
+					"mStartBoneName": "R_hand",
+					"mSpeed": 1166.6669921875,
+					"__type": "FixedSpeedMovement"
 				},
-				"heightSolver": {},
-				"verticalFacing": {},
+				"heightSolver": {
+					"__type": "BlendedLinearHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VerticalFacingFaceTarget"
+				},
 				"behaviors": [
-					{},
-					{}
-				]
+					{
+						"__type": "CastOnHit"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
 			},
 			"mCastType": 3,
 			"castFrame": 1,
@@ -53,10 +63,14 @@
 			"bHaveHitBone": true,
 			"mHitBoneName": "head",
 			"selectionPriority": 2,
-			"mTargetingTypeData": {}
-		}
+			"mTargetingTypeData": {
+				"__type": "Location"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
-	"{87204b75}": {
+	"Characters/TFT3_Janna/Spells/TFT3_JannaCritAttack": {
 		"mScriptName": "TFT3_JannaCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 7375,
@@ -82,16 +96,24 @@
 			"castConeDistance": 100,
 			"mMissileSpec": {
 				"movementComponent": {
-					"mSpeed": 1600,
 					"mTargetHeightAugment": 100,
 					"mOffsetInitialTargetHeight": 100,
-					"mStartBoneName": "BUFFBONE_CSTM_FROST_STAFF"
+					"mStartBoneName": "BUFFBONE_CSTM_FROST_STAFF",
+					"mSpeed": 1600,
+					"__type": "FixedSpeedMovement"
 				},
-				"verticalFacing": {},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
 				"behaviors": [
-					{},
-					{}
-				]
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
 			},
 			"mCastType": 1,
 			"castFrame": 14,
@@ -99,10 +121,12 @@
 			"mMissileEffectKey": "{1504611f}",
 			"mHitEffectKey": "TFT_Global_BA_Crit",
 			"bHaveHitBone": true,
-			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
-		}
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
-	"{a04b30a5}": {
+	"Characters/TFT3_Janna/Spells/TFT3_JannaBasicAttack": {
 		"mScriptName": "TFT3_JannaBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 7375,
@@ -131,16 +155,24 @@
 			"castConeDistance": 100,
 			"mMissileSpec": {
 				"movementComponent": {
-					"mSpeed": 1600,
 					"mTargetHeightAugment": 100,
 					"mOffsetInitialTargetHeight": 100,
-					"mStartBoneName": "BUFFBONE_CSTM_FROST_STAFF"
+					"mStartBoneName": "BUFFBONE_CSTM_FROST_STAFF",
+					"mSpeed": 1600,
+					"__type": "FixedSpeedMovement"
 				},
-				"verticalFacing": {},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
 				"behaviors": [
-					{},
-					{}
-				]
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
 			},
 			"mCastType": 1,
 			"castFrame": 7,
@@ -149,15 +181,18 @@
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Hit",
 			"bHaveHitBone": true,
-			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
-		}
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
-	"{b0541fdc}": {
+	"Characters/TFT3_Janna/Spells/TFT3_JannaQ": {
 		"mScriptName": "TFT3_JannaQ",
 		"mSpell": {
 			"mAffectsTypeFlags": 7375,
 			"mPlatformSpellInfo": {
-				"mPlatformEnabled": true
+				"mPlatformEnabled": true,
+				"__type": "PlatformSpellInfo"
 			},
 			"mDataValues": [
 				{
@@ -171,7 +206,7 @@
 						0,
 						0
 					],
-					"{3f95426c}": false
+					"__type": "SpellDataValue"
 				},
 				{
 					"mName": "BuffDuration",
@@ -184,7 +219,7 @@
 						0,
 						0
 					],
-					"{3f95426c}": false
+					"__type": "SpellDataValue"
 				},
 				{
 					"mName": "StunDuration",
@@ -192,17 +227,32 @@
 						0,
 						1.5,
 						1.5,
-						8,
+						10,
 						0,
 						0,
 						0
 					],
-					"{3f95426c}": false
+					"__type": "SpellDataValue"
 				}
 			],
-			"mImgIconName": [
-				""
-			],
+			"mSpellCalculations": {
+				"ModifiedPercentAttackSpeed": {
+					"{cbcac618}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "PercentAttackSpeed",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
 			"mCastTime": 1,
 			"mCantCancelWhileWindingUp": true,
 			"castRange": [
@@ -227,25 +277,15 @@
 			"castFrame": 10,
 			"missileSpeed": 0,
 			"mLineWidth": 120,
-			"mTargetingTypeData": {},
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
 			"{00f7e5bc}": true,
-			"mSpellCalculations": {
-				"{98aa80a6}": {
-					"mFormulaParts": [
-						{
-							"mSubpart": {
-								"mDataValue": "{db1859c9}"
-							},
-							"mRatio": 0.009999999776482582,
-							"{a5749b52}": "scaleAP",
-							"mStyleTag": "noScale"
-						}
-					]
-				}
-			}
-		}
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
-	"{ed5d7db5}": {
+	"Characters/TFT3_Janna/Spells/TFT3_JannaBasicAttack2": {
 		"mScriptName": "TFT3_JannaBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 7375,
@@ -272,16 +312,24 @@
 			"castConeDistance": 100,
 			"mMissileSpec": {
 				"movementComponent": {
-					"mSpeed": 1600,
 					"mTargetHeightAugment": 100,
 					"mOffsetInitialTargetHeight": 100,
-					"mStartBoneName": "BUFFBONE_CSTM_FROST_STAFF"
+					"mStartBoneName": "BUFFBONE_CSTM_FROST_STAFF",
+					"mSpeed": 1600,
+					"__type": "FixedSpeedMovement"
 				},
-				"verticalFacing": {},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
 				"behaviors": [
-					{},
-					{}
-				]
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
 			},
 			"mCastType": 1,
 			"castFrame": 9,
@@ -290,54 +338,45 @@
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Hit",
 			"bHaveHitBone": true,
-			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
-		}
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
-	"{d490d831}": {},
-	"{d7bddb41}": {
-		"PortraitIcon": "ASSETS/Characters/TFT3_Janna/HUD/TFT3_Janna_Square.TFT_Set3_Act2.dds",
-		"tier": 5,
-		"mLinkedTraits": [
-			{
-				"TraitData": "{e3e85bde}"
-			},
-			{
-				"TraitData": "{0a294d01}"
-			}
-		],
-		"mMoveInterval": -0.10000000149011612,
-		"mMoveProximity": 180,
-		"mMoveRange": 500,
-		"mMoveHeight": 0,
-		"mInitialMana": 20,
+	"Characters/TFT3_Janna/CharacterRecords/Root": {
 		"mCharacterName": "TFT3_Janna",
 		"baseHP": 750,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBaseStaticRegen": 0
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 60,
 		"baseArmor": 25,
 		"baseSpellBlock": 20,
 		"baseCritChance": 0.25,
-		"critDamageMultiplier": 1.5,
+		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
 		"attackRange": 890,
 		"attackSpeed": 0.800000011920929,
 		"basicAttack": {
 			"mAttackProbability": 0.5,
-			"mAttackName": "TFT3_JannaBasicAttack"
+			"mAttackName": "TFT3_JannaBasicAttack",
+			"__type": "AttackSlotData"
 		},
 		"extraAttacks": [
 			{
 				"mAttackProbability": 0.5,
-				"mAttackName": "TFT3_JannaBasicAttack2"
+				"mAttackName": "TFT3_JannaBasicAttack2",
+				"__type": "AttackSlotData"
 			}
 		],
 		"critAttacks": [
 			{
-				"mAttackName": "TFT3_JannaCritAttack"
+				"mAttackName": "TFT3_JannaCritAttack",
+				"__type": "AttackSlotData"
 			}
 		],
 		"spellNames": [
@@ -364,6 +403,24 @@
 			"BaseSpell",
 			"BaseSpell"
 		],
-		"unitTagsString": "Champion"
+		"unitTagsString": "Champion",
+		"tier": 5,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{5cad0cca}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{8fc40f75}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{32cdc033}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"mInitialMana": 20,
+		"__type": "TFTCharacterRecord"
 	}
 }

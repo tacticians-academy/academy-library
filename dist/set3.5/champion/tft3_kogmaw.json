@@ -1,5 +1,5 @@
 {
-	"{25a7c9db}": {
+	"Characters/TFT3_KogMaw/Spells/TFT3_KogMawBasicAttack2": {
 		"mScriptName": "TFT3_KogMawBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -18,16 +18,24 @@
 			"castConeDistance": 100,
 			"mMissileSpec": {
 				"movementComponent": {
-					"mSpeed": 1800,
 					"mTargetHeightAugment": 100,
 					"mOffsetInitialTargetHeight": 100,
-					"mStartBoneName": "root"
+					"mStartBoneName": "root",
+					"mSpeed": 1800,
+					"__type": "FixedSpeedMovement"
 				},
-				"verticalFacing": {},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
 				"behaviors": [
-					{},
-					{}
-				]
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
 			},
 			"mCastType": 1,
 			"castFrame": 7.5,
@@ -36,10 +44,12 @@
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Hit",
 			"bHaveHitBone": true,
-			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
-		}
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
-	"{72a4503c}": {
+	"Characters/TFT3_KogMaw/Spells/TFT3_KogMawW": {
 		"mScriptName": "TFT3_KogMawW",
 		"mSpell": {
 			"flags": 4,
@@ -60,38 +70,54 @@
 						3,
 						3
 					],
-					"mBaseP": 3,
-					"mFormula": "P"
+					"__type": "SpellDataValue"
 				},
 				{
 					"mName": "PercentAttackSpeed",
 					"mValues": [
-						80,
-						80,
-						80,
-						80,
-						80,
-						80,
-						80
+						60,
+						60,
+						60,
+						60,
+						60,
+						60,
+						60
 					],
-					"mBaseP": 80,
-					"mFormula": "P"
+					"__type": "SpellDataValue"
 				},
 				{
 					"mName": "PercentMaxHPDamage",
 					"mValues": [
 						0,
-						2,
-						4,
-						8,
+						2.5,
+						3,
+						3.5,
 						8,
 						10,
 						12
 					],
-					"{3f95426c}": false,
-					"mFormula": "P + 2"
+					"__type": "SpellDataValue"
 				}
 			],
+			"mSpellCalculations": {
+				"{6f7b130a}": {
+					"{cbcac618}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{a07a6a65}",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"mPrecision": 1,
+					"__type": "GameCalculation"
+				}
+			},
 			"mCastTime": 0.5,
 			"canCastOrQueueWhileCasting": true,
 			"mCantCancelWhileWindingUp": true,
@@ -134,25 +160,15 @@
 				0
 			],
 			"selectionPriority": 1,
-			"mTargetingTypeData": {},
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
 			"mSpellCooldownOrSealedQueueThreshold": 0.5,
-			"mSpellCalculations": {
-				"{6f7b130a}": {
-					"mFormulaParts": [
-						{
-							"mSubpart": {
-								"mDataValue": "{a07a6a65}"
-							},
-							"mRatio": 0.009999999776482582,
-							"{a5749b52}": "scaleAP",
-							"mStyleTag": "noScale"
-						}
-					]
-				}
-			}
-		}
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
-	"{736394a3}": {
+	"Characters/TFT3_KogMaw/Spells/TFT3_KogMawCritAttack": {
 		"mScriptName": "TFT3_KogMawCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -171,16 +187,24 @@
 			"castConeDistance": 100,
 			"mMissileSpec": {
 				"movementComponent": {
-					"mSpeed": 1800,
 					"mTargetHeightAugment": 100,
 					"mOffsetInitialTargetHeight": 100,
-					"mStartBoneName": "root"
+					"mStartBoneName": "root",
+					"mSpeed": 1800,
+					"__type": "FixedSpeedMovement"
 				},
-				"verticalFacing": {},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
 				"behaviors": [
-					{},
-					{}
-				]
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
 			},
 			"mCastType": 1,
 			"castFrame": 8.5,
@@ -189,10 +213,12 @@
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Crit",
 			"bHaveHitBone": true,
-			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
-		}
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
-	"{b6a963ab}": {
+	"Characters/TFT3_KogMaw/Spells/TFT3_KogMawBasicAttack": {
 		"mScriptName": "TFT3_KogMawBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -211,16 +237,24 @@
 			"castConeDistance": 100,
 			"mMissileSpec": {
 				"movementComponent": {
-					"mSpeed": 1800,
 					"mTargetHeightAugment": 100,
 					"mOffsetInitialTargetHeight": 100,
-					"mStartBoneName": "root"
+					"mStartBoneName": "root",
+					"mSpeed": 1800,
+					"__type": "FixedSpeedMovement"
 				},
-				"verticalFacing": {},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
 				"behaviors": [
-					{},
-					{}
-				]
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
 			},
 			"mCastType": 1,
 			"castFrame": 7.5,
@@ -229,10 +263,12 @@
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Hit",
 			"bHaveHitBone": true,
-			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
-		}
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
-	"{e773c838}": {
+	"Characters/TFT3_KogMaw/Spells/TFT3_KogMawWAttack": {
 		"mScriptName": "TFT3_KogMawWAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -252,19 +288,28 @@
 			"castConeDistance": 100,
 			"mMissileSpec": {
 				"movementComponent": {
-					"mSpeed": 1650,
 					"mTargetHeightAugment": 100,
 					"mOffsetInitialTargetHeight": 100,
-					"mStartBoneName": "Buffbone_Cstm_Cannon"
+					"mStartBoneName": "Buffbone_Cstm_Cannon",
+					"mSpeed": 1650,
+					"__type": "FixedSpeedMovement"
 				},
 				"heightSolver": {
-					"mGravity": 7500
+					"mGravity": 7500,
+					"__type": "GravityHeightSolver"
 				},
-				"verticalFacing": {},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
 				"behaviors": [
-					{},
-					{}
-				]
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
 			},
 			"mCastType": 1,
 			"castFrame": 7.5,
@@ -273,52 +318,44 @@
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Hit",
 			"bHaveHitBone": true,
-			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
-		}
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
-	"{63f2012f}": {},
-	"{74f0c4f3}": {
-		"PortraitIcon": "ASSETS/Characters/TFT3_KogMaw/HUD/TFT3_KogMaw_Square.TFT_Set3_Act2.dds",
-		"tier": 2,
-		"mLinkedTraits": [
-			{
-				"TraitData": "{66585784}"
-			},
-			{
-				"TraitData": "{aaee9556}"
-			}
-		],
-		"mMoveInterval": -0.10000000149011612,
-		"mMoveProximity": 180,
-		"mMoveRange": 500,
-		"mMoveHeight": 0,
+	"Characters/TFT3_KogMaw/CharacterRecords/Root": {
 		"mCharacterName": "TFT3_KogMaw",
 		"baseHP": 550,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
 			"arBase": 30,
-			"arBaseStaticRegen": 0
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 50,
 		"baseArmor": 25,
-		"baseSpellBlock": 20,
+		"baseSpellBlock": 25,
 		"baseCritChance": 0.25,
-		"critDamageMultiplier": 1.5,
+		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
-		"attackRange": 660,
-		"attackSpeed": 0.699999988079071,
+		"attackRange": 890,
+		"attackSpeed": 0.75,
 		"basicAttack": {
-			"mAttackName": "TFT3_KogMawBasicAttack"
+			"mAttackName": "TFT3_KogMawBasicAttack",
+			"__type": "AttackSlotData"
 		},
 		"extraAttacks": [
 			{
-				"mAttackName": "TFT3_KogMawBasicAttack2"
+				"mAttackName": "TFT3_KogMawBasicAttack2",
+				"__type": "AttackSlotData"
 			}
 		],
 		"critAttacks": [
 			{
-				"mAttackName": "TFT3_KogMawCritAttack"
+				"mAttackName": "TFT3_KogMawCritAttack",
+				"__type": "AttackSlotData"
 			}
 		],
 		"spellNames": [
@@ -328,6 +365,23 @@
 			"BaseSpell"
 		],
 		"unitTagsString": "Champion",
-		"flags": 9446656
+		"flags": 9446656,
+		"tier": 2,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{36e3b5a0}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{ba23a3ea}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{34ed6daa}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"__type": "TFTCharacterRecord"
 	}
 }

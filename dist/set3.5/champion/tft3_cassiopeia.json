@@ -1,5 +1,5 @@
 {
-	"{4a730725}": {
+	"Characters/TFT3_Cassiopeia/Spells/TFT3_CassiopeiaCritAttack": {
 		"mScriptName": "TFT3_CassiopeiaCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 8143,
@@ -18,15 +18,23 @@
 			"castConeDistance": 100,
 			"mMissileSpec": {
 				"movementComponent": {
-					"mSpeed": 1200,
 					"mTargetHeightAugment": 100,
-					"mOffsetInitialTargetHeight": 100
+					"mOffsetInitialTargetHeight": 100,
+					"mSpeed": 1200,
+					"__type": "FixedSpeedMovement"
 				},
-				"verticalFacing": {},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
 				"behaviors": [
-					{},
-					{}
-				]
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
 			},
 			"mCastType": 1,
 			"castFrame": 9,
@@ -35,10 +43,12 @@
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Crit",
 			"bHaveHitBone": true,
-			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
-		}
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
-	"{5cd76c55}": {
+	"Characters/TFT3_Cassiopeia/Spells/TFT3_CassiopeiaBasicAttack": {
 		"mScriptName": "TFT3_CassiopeiaBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 8143,
@@ -57,15 +67,23 @@
 			"castConeDistance": 100,
 			"mMissileSpec": {
 				"movementComponent": {
-					"mSpeed": 1200,
 					"mTargetHeightAugment": 100,
-					"mOffsetInitialTargetHeight": 100
+					"mOffsetInitialTargetHeight": 100,
+					"mSpeed": 1200,
+					"__type": "FixedSpeedMovement"
 				},
-				"verticalFacing": {},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
 				"behaviors": [
-					{},
-					{}
-				]
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
 			},
 			"mCastType": 1,
 			"castFrame": 9,
@@ -74,10 +92,12 @@
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Hit",
 			"bHaveHitBone": true,
-			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
-		}
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
-	"{8e1fa625}": {
+	"Characters/TFT3_Cassiopeia/Spells/TFT3_CassiopeiaBasicAttack2": {
 		"mScriptName": "TFT3_CassiopeiaBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 8143,
@@ -96,16 +116,24 @@
 			"castConeDistance": 100,
 			"mMissileSpec": {
 				"movementComponent": {
-					"mSpeed": 1200,
 					"mTargetHeightAugment": 100,
 					"mOffsetInitialTargetHeight": 100,
-					"mStartBoneName": "L_Hand"
+					"mStartBoneName": "L_Hand",
+					"mSpeed": 1200,
+					"__type": "FixedSpeedMovement"
 				},
-				"verticalFacing": {},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
 				"behaviors": [
-					{},
-					{}
-				]
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
 			},
 			"mCastType": 1,
 			"castFrame": 9,
@@ -114,10 +142,12 @@
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Hit",
 			"bHaveHitBone": true,
-			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
-		}
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
-	"{b69b7f8c}": {
+	"Characters/TFT3_Cassiopeia/Spells/TFT3_CassiopeiaQ": {
 		"mScriptName": "TFT3_CassiopeiaQ",
 		"mSpell": {
 			"mAffectsTypeFlags": 6154,
@@ -127,15 +157,14 @@
 					"mName": "Damage",
 					"mValues": [
 						0,
-						750,
-						1600,
-						4000,
+						700,
+						1050,
+						2000,
 						0,
 						0,
 						0
 					],
-					"{3f95426c}": false,
-					"mFormula": "P + 0"
+					"__type": "SpellDataValue"
 				},
 				{
 					"mName": "Duration",
@@ -148,7 +177,7 @@
 						14,
 						14
 					],
-					"mFormula": "14"
+					"__type": "SpellDataValue"
 				},
 				{
 					"mName": "ShieldReductionPercent",
@@ -161,9 +190,40 @@
 						50,
 						50
 					],
-					"mFormula": "50"
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "DurationTickPadding",
+					"mValues": [
+						0,
+						1,
+						1,
+						1,
+						1,
+						1,
+						1
+					],
+					"__type": "SpellDataValue"
 				}
 			],
+			"mSpellCalculations": {
+				"ModifiedDamage": {
+					"{cbcac618}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"mStyleTag": "noScale",
+							"{a5749b52}": "scaleAP",
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
 			"mCastTime": 0.5,
 			"mCantCancelWhileWindingUp": true,
 			"useAnimatorFramerate": true,
@@ -188,16 +248,24 @@
 			"castConeDistance": 100,
 			"mMissileSpec": {
 				"movementComponent": {
-					"mSpeed": 1500,
 					"mTargetHeightAugment": 100,
 					"mOffsetInitialTargetHeight": 100,
-					"mStartBoneName": "C_BUFFBONE_GLB_CHEST_LOC"
+					"mStartBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+					"mSpeed": 1500,
+					"__type": "FixedSpeedMovement"
 				},
-				"verticalFacing": {},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
 				"behaviors": [
-					{},
-					{}
-				]
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
 			},
 			"mCastType": 1,
 			"castFrame": 7.5,
@@ -223,67 +291,45 @@
 			],
 			"selectionPriority": 1,
 			"{00f7e5bc}": true,
-			"mSpellCalculations": {
-				"TotalDamage": {
-					"mFormulaParts": [
-						{
-							"mSubpart": {
-								"mDataValue": "Damage"
-							},
-							"mRatio": 0.009999999776482582,
-							"{a5749b52}": "scaleAP",
-							"mStyleTag": "noScale"
-						}
-					]
-				}
-			}
-		}
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
-	"{7e3602e4}": {},
-	"{86f26f72}": {
-		"PortraitIcon": "ASSETS/Characters/TFT3_Cassiopeia/HUD/TFT3_Cassiopeia_Square.TFT_Set3_Act2.dds",
-		"tier": 3,
-		"mLinkedTraits": [
-			{
-				"TraitData": "{66585784}"
-			},
-			{
-				"TraitData": "{d33bb3c0}"
-			}
-		],
-		"mMoveInterval": -0.10000000149011612,
-		"mMoveProximity": 180,
-		"mMoveRange": 500,
-		"mMoveHeight": 0,
+	"Characters/TFT3_Cassiopeia/CharacterRecords/Root": {
 		"mCharacterName": "TFT3_Cassiopeia",
 		"baseHP": 750,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 25,
-			"arBaseStaticRegen": 0
+			"arBase": 30,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 40,
-		"baseArmor": 30,
-		"baseSpellBlock": 20,
+		"baseArmor": 35,
+		"baseSpellBlock": 35,
 		"baseCritChance": 0.25,
-		"critDamageMultiplier": 1.5,
+		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
 		"attackRange": 420,
 		"attackSpeed": 0.75,
 		"basicAttack": {
 			"mAttackProbability": 0.5,
-			"mAttackName": "TFT3_CassiopeiaBasicAttack"
+			"mAttackName": "TFT3_CassiopeiaBasicAttack",
+			"__type": "AttackSlotData"
 		},
 		"extraAttacks": [
 			{
 				"mAttackProbability": 0.5,
-				"mAttackName": "TFT3_CassiopeiaBasicAttack2"
+				"mAttackName": "TFT3_CassiopeiaBasicAttack2",
+				"__type": "AttackSlotData"
 			}
 		],
 		"critAttacks": [
 			{
-				"mAttackName": "TFT3_CassiopeiaCritAttack"
+				"mAttackName": "TFT3_CassiopeiaCritAttack",
+				"__type": "AttackSlotData"
 			}
 		],
 		"spellNames": [
@@ -292,6 +338,23 @@
 			"BaseSpell",
 			"BaseSpell"
 		],
-		"unitTagsString": "Champion"
+		"unitTagsString": "Champion",
+		"tier": 3,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{36e3b5a0}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{114dc294}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{9eb7b8a6}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 500,
+		"mMoveHeight": 0,
+		"__type": "TFTCharacterRecord"
 	}
 }

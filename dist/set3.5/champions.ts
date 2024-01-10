@@ -1,26 +1,26 @@
 import type { ChampionData } from '../index'
 
-export enum ChampionKey { Ahri = `TFT3_Ahri`, Annie = `TFT3_Annie`, Ashe = `TFT3_Ashe`, AurelionSol = `TFT3_AurelionSol`, Bard = `TFT3_Bard`, Blitzcrank = `TFT3_Blitzcrank`, Caitlyn = `TFT3_Caitlyn`, Cassiopeia = `TFT3_Cassiopeia`, Darius = `TFT3_Darius`, Ekko = `TFT3_Ekko`, Ezreal = `TFT3_Ezreal`, Fiora = `TFT3_Fiora`, Fizz = `TFT3_Fizz`, Gangplank = `TFT3_Gangplank`, Gnar = `TFT3_Gnar`, Graves = `TFT3_Graves`, Illaoi = `TFT3_Illaoi`, Irelia = `TFT3_Irelia`, Janna = `TFT3_Janna`, JarvanIV = `TFT3_JarvanIV`, Jayce = `TFT3_Jayce`, Jhin = `TFT3_Jhin`, Jinx = `TFT3_Jinx`, Karma = `TFT3_Karma`, NPCKayn = `TFT3_NPC_Kayn`, NPCKaynElite = `TFT3_NPC_KaynElite`, KogMaw = `TFT3_KogMaw`, Leona = `TFT3_Leona`, Lucian = `TFT3_Lucian`, Lulu = `TFT3_Lulu`, Malphite = `TFT3_Malphite`, MasterYi = `TFT3_MasterYi`, BardMeep = `TFT3_BardMeep`, Mordekaiser = `TFT3_Mordekaiser`, Nautilus = `TFT3_Nautilus`, Neeko = `TFT3_Neeko`, Nocturne = `TFT3_Nocturne`, Poppy = `TFT3_Poppy`, Rakan = `TFT3_Rakan`, Riven = `TFT3_Riven`, Rumble = `TFT3_Rumble`, Shaco = `TFT3_Shaco`, Shen = `TFT3_Shen`, Soraka = `TFT3_Soraka`, SuperMech = `TFT3_SuperMech`, Syndra = `TFT3_Syndra`, Teemo = `TFT3_Teemo`, Thresh = `TFT3_Thresh`, TwistedFate = `TFT3_TwistedFate`, Urgot = `TFT3_Urgot`, Vayne = `TFT3_Vayne`, Vi = `TFT3_Vi`, Viktor = `TFT3_Viktor`, WuKong = `TFT3_WuKong`, Xayah = `TFT3_Xayah`, Xerath = `TFT3_Xerath`, XinZhao = `TFT3_XinZhao`, Yasuo = `TFT3_Yasuo`, Zed = `TFT3_Zed`, Ziggs = `TFT3_Ziggs`, Zoe = `TFT3_Zoe` }
+export enum ChampionKey { Ahri = `TFT3_Ahri`, Annie = `TFT3_Annie`, Ashe = `TFT3_Ashe`, AurelionSol = `TFT3_AurelionSol`, Bard = `TFT3_Bard`, Blitzcrank = `TFT3_Blitzcrank`, Caitlyn = `TFT3_Caitlyn`, Cassiopeia = `TFT3_Cassiopeia`, Darius = `TFT3_Darius`, Ekko = `TFT3_Ekko`, Ezreal = `TFT3_Ezreal`, Fiora = `TFT3_Fiora`, Fizz = `TFT3_Fizz`, Gangplank = `TFT3_Gangplank`, Gnar = `TFT3_Gnar`, Graves = `TFT3_Graves`, Illaoi = `TFT3_Illaoi`, Irelia = `TFT3_Irelia`, Janna = `TFT3_Janna`, JarvanIV = `TFT3_JarvanIV`, Jayce = `TFT3_Jayce`, Jhin = `TFT3_Jhin`, Jinx = `TFT3_Jinx`, Karma = `TFT3_Karma`, NPCKayn = `TFT3_NPC_Kayn`, NPCKaynElite = `TFT3_NPC_KaynElite`, KogMaw = `TFT3_KogMaw`, Leona = `TFT3_Leona`, Lucian = `TFT3_Lucian`, Lulu = `TFT3_Lulu`, Malphite = `TFT3_Malphite`, MasterYi = `TFT3_MasterYi`, BardMeep = `TFT3_BardMeep`, Mordekaiser = `TFT3_Mordekaiser`, Nautilus = `TFT3_Nautilus`, Neeko = `TFT3_Neeko`, Nocturne = `TFT3_Nocturne`, Poppy = `TFT3_Poppy`, Rakan = `TFT3_Rakan`, Riven = `TFT3_Riven`, Rumble = `TFT3_Rumble`, Shaco = `TFT3_Shaco`, Shen = `TFT3_Shen`, SLIMECrab = `TFT9_SLIME_Crab`, Soraka = `TFT3_Soraka`, SuperMech = `TFT3_SuperMech`, Syndra = `TFT3_Syndra`, TrainingDummy = `TFT_TrainingDummy`, Teemo = `TFT3_Teemo`, Thresh = `TFT3_Thresh`, TwistedFate = `TFT3_TwistedFate`, Urgot = `TFT3_Urgot`, Vayne = `TFT3_Vayne`, Vi = `TFT3_Vi`, Viktor = `TFT3_Viktor`, Voidspawn = `TFT_Voidspawn`, WuKong = `TFT3_WuKong`, Xayah = `TFT3_Xayah`, Xerath = `TFT3_Xerath`, XinZhao = `TFT3_XinZhao`, Yasuo = `TFT3_Yasuo`, Zed = `TFT3_Zed`, Ziggs = `TFT3_Ziggs`, Zoe = `TFT3_Zoe` }
 
 export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Ahri`,
 		name: `Ahri`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Ahri.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Ahri.dds`,
 		cost: 2,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{e3e85bde}`, `{eedbee24}`],
+		traits: [`{5cad0cca}`, `{ad8a7fd0}`],
 		stats: {
-			armor: 20,
+			armor: 25,
 			attackSpeed: 0.75,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 45,
 			hp: 600,
 			initialMana: 0,
-			magicResist: 20,
+			magicResist: 25,
 			mana: 60,
 			moveSpeed: 500,
 			range: 3,
@@ -43,7 +43,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'Damage': [150, 175, 250, 425],
+					'Damage': [150, 175, 265, 425],
 					'HexRange': [4, 4, 4, 4],
 				},
 				calculations: {
@@ -51,11 +51,11 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [150, 175, 250, 425],
+										starValues: [150, 175, 265, 425],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -78,7 +78,7 @@ export const champions: ChampionData[] = [
 					speedInitial: 2500,
 					speedMin: 400,
 					speedMax: 2500,
-					acceleration: -3200,
+					acceleration: -2750,
 					startDelay: undefined,
 					tracksTarget: false,
 				},
@@ -128,22 +128,22 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Annie`,
 		name: `Annie`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Annie.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Annie.dds`,
 		cost: 2,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{a21f56fe}`, `{eedbee24}`],
+		traits: [`{7ab45562}`, `{ad8a7fd0}`],
 		stats: {
-			armor: 50,
+			armor: 45,
 			attackSpeed: 0.6499999761581421,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 40,
-			hp: 750,
-			initialMana: 70,
-			magicResist: 35,
-			mana: 150,
+			hp: 700,
+			initialMana: 50,
+			magicResist: 45,
+			mana: 120,
 			moveSpeed: 500,
 			range: 2,
 		},
@@ -165,20 +165,20 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'Damage': [100, 300, 400, 700],
-					'ShieldAmount': [200, 400, 500, 800],
+					'Damage': [100, 200, 300, 475],
+					'ShieldAmount': [200, 350, 450, 550],
 					'ShieldDuration': [4, 4, 4, 4],
 				},
 				calculations: {
-					'{33dad32f}': {
+					'Damage': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
-										variable: `{40ee74ec}`,
-										starValues: undefined,
+										variable: `Damage`,
+										starValues: [100, 200, 300, 475],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -186,15 +186,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'Damage': {
+					'Shield': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
-										variable: `Damage`,
-										starValues: [100, 300, 400, 700],
+										variable: `ShieldAmount`,
+										starValues: [200, 350, 450, 550],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -230,7 +230,7 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `BaseDamage`,
@@ -251,21 +251,21 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Ashe`,
 		name: `Ashe`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Ashe.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Ashe.dds`,
 		cost: 3,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{d89e035d}`, `{b8c79a1a}`],
+		traits: [`{00214e11}`, `{3a89370e}`],
 		stats: {
-			armor: 20,
-			attackSpeed: 0.8500000238418579,
+			armor: 25,
+			attackSpeed: 0.800000011920929,
 			critChance: 0.25,
-			critMultiplier: 1.5,
-			damage: 60,
+			critMultiplier: 1.399999976158142,
+			damage: 65,
 			hp: 650,
 			initialMana: 40,
-			magicResist: 20,
+			magicResist: 25,
 			mana: 100,
 			moveSpeed: 500,
 			range: 6,
@@ -289,19 +289,19 @@ export const champions: ChampionData[] = [
 					_missileSpeed: 1600,
 				},
 				variables: {
-					'Damage': [250, 200, 300, 600],
-					'StunDurationPerSquare': [2, 2, 3, 4],
+					'Damage': [250, 250, 375, 625],
+					'StunDurationPerSquare': [2, 1.5, 1.5, 2],
 				},
 				calculations: {
 					'Damage': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [250, 200, 300, 600],
+										starValues: [250, 250, 375, 625],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -319,17 +319,17 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_AurelionSol`,
 		name: `Aurelion Sol`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_AurelionSol.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_AurelionSol.dds`,
 		cost: 5,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{d5353f03}`, `{e9a6fa37}`],
+		traits: [`{e070c997}`, `{b6f6ec23}`],
 		stats: {
 			armor: 55,
 			attackSpeed: 0.20000000298023224,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 10,
 			hp: 1100,
 			initialMana: 120,
@@ -355,9 +355,9 @@ export const champions: ChampionData[] = [
 				_missileSpeed: 20,
 			},
 			variables: {
-				'Damage': [0, 90, 150, 1000],
-				'InitialFighters': [4, 4, 4, 4],
-				'FightersPerCast': [2, 2, 2, 2],
+				'Damage': [0, 90, 150, 3000],
+				'InitialFighters': [4, 4, 4, 10],
+				'FightersPerCast': [2, 2, 2, 10],
 				'ManaDrain': [0, 10, 15, 50],
 			},
 			calculations: {
@@ -365,11 +365,11 @@ export const champions: ChampionData[] = [
 					asPercent: false,
 					parts: [
 						{
-							operator: undefined,
+							operator: `scale`,
 							subparts: [
 								{
 									variable: `Damage`,
-									starValues: [0, 90, 150, 1000],
+									starValues: [0, 90, 150, 3000],
 									stat: `AP`,
 									ratio: 0.009999999776482582,
 								},
@@ -550,21 +550,21 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Bard`,
 		name: `Bard`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Bard.TFT_Set3_Act2.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Bard.dds`,
 		cost: 3,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{84f2a828}`, `{d33bb3c0}`],
+		traits: [`{baff2324}`, `{114dc294}`],
 		stats: {
-			armor: 30,
+			armor: 25,
 			attackSpeed: 0.699999988079071,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 45,
 			hp: 700,
 			initialMana: 0,
-			magicResist: 20,
+			magicResist: 25,
 			mana: 90,
 			moveSpeed: 500,
 			range: 3,
@@ -592,7 +592,7 @@ export const champions: ChampionData[] = [
 					asPercent: false,
 					parts: [
 						{
-							operator: undefined,
+							operator: `scale`,
 							subparts: [
 								{
 									variable: `{7fd29f41}`,
@@ -634,22 +634,22 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Blitzcrank`,
 		name: `Blitzcrank`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Blitzcrank.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Blitzcrank.dds`,
 		cost: 2,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{58272f02}`, `{29ad8128}`],
+		traits: [`{6e3d922e}`, `{9eb128cc}`],
 		stats: {
-			armor: 60,
-			attackSpeed: 0.5,
+			armor: 45,
+			attackSpeed: 0.550000011920929,
 			critChance: 0.25,
-			critMultiplier: 1.5,
-			damage: 55,
-			hp: 650,
-			initialMana: 125,
-			magicResist: 35,
-			mana: 125,
+			critMultiplier: 1.399999976158142,
+			damage: 65,
+			hp: 750,
+			initialMana: 175,
+			magicResist: 45,
+			mana: 175,
 			moveSpeed: 500,
 			range: 1,
 		},
@@ -672,21 +672,22 @@ export const champions: ChampionData[] = [
 					_missileSpeed: 1800,
 				},
 				variables: {
-					'Damage': [-50, 200, 350, 1337],
-					'StunDuration': [2.5, 2.5, 2.5, 2.5],
+					'Damage': [-50, 200, 300, 475],
+					'StunDuration': [2, 2, 2, 2],
+					'PhysicalDamage': [1, 1, 1, 1],
 				},
 				calculations: {
 					'Damage': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `sum`,
 								subparts: [
 									{
-										variable: `Damage`,
-										starValues: [-50, 200, 350, 1337],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
+										variable: `PhysicalDamage`,
+										starValues: [1, 1, 1, 1],
+										stat: `AD`,
+										ratio: 1,
 									},
 								],
 							},
@@ -721,22 +722,22 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Caitlyn`,
 		name: `Caitlyn`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Caitlyn.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Caitlyn.dds`,
 		cost: 1,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{58272f02}`, `{b8c79a1a}`],
+		traits: [`{6e3d922e}`, `{3a89370e}`],
 		stats: {
 			armor: 20,
-			attackSpeed: 0.75,
+			attackSpeed: 0.699999988079071,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 45,
 			hp: 500,
-			initialMana: 0,
+			initialMana: 20,
 			magicResist: 20,
-			mana: 125,
+			mana: 110,
 			moveSpeed: 500,
 			range: 6,
 		},
@@ -758,18 +759,18 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'Damage': [0, 750, 1500, 2250],
+					'Damage': [0, 750, 1125, 1750],
 				},
 				calculations: {
 					'Damage': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [0, 750, 1500, 2250],
+										starValues: [0, 750, 1125, 1750],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -787,22 +788,22 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Cassiopeia`,
 		name: `Cassiopeia`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Cassiopeia.TFT_Set3_Act2.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Cassiopeia.dds`,
 		cost: 3,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{66585784}`, `{d33bb3c0}`],
+		traits: [`{36e3b5a0}`, `{114dc294}`],
 		stats: {
-			armor: 30,
+			armor: 35,
 			attackSpeed: 0.75,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 40,
 			hp: 750,
 			initialMana: 0,
-			magicResist: 20,
-			mana: 25,
+			magicResist: 35,
+			mana: 30,
 			moveSpeed: 500,
 			range: 2,
 		},
@@ -825,20 +826,21 @@ export const champions: ChampionData[] = [
 					_missileSpeed: 2500,
 				},
 				variables: {
-					'Damage': [0, 750, 1600, 4000],
+					'Damage': [0, 700, 1050, 2000],
 					'Duration': [0, 14, 14, 14],
 					'ShieldReductionPercent': [0, 50, 50, 50],
+					'DurationTickPadding': [0, 1, 1, 1],
 				},
 				calculations: {
 					'Damage': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [0, 750, 1600, 4000],
+										starValues: [0, 700, 1050, 2000],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -856,21 +858,21 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Darius`,
 		name: `Darius`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Darius.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Darius.dds`,
 		cost: 2,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{f9ef3204}`, `{3eed7287}`],
+		traits: [`{95729398}`, `{cb5c7b63}`],
 		stats: {
 			armor: 40,
 			attackSpeed: 0.6499999761581421,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 60,
-			hp: 800,
+			hp: 700,
 			initialMana: 0,
-			magicResist: 30,
+			magicResist: 40,
 			mana: 50,
 			moveSpeed: 500,
 			range: 1,
@@ -893,7 +895,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'Damage': [50, 400, 550, 888],
+					'Damage': [50, 270, 405, 630],
 					'HealthThreshold': [50, 50, 50, 50],
 					'DamageMultiplier': [2, 2, 2, 2],
 				},
@@ -902,11 +904,11 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [50, 400, 550, 888],
+										starValues: [50, 270, 405, 630],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -924,17 +926,17 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Ekko`,
 		name: `Ekko`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Ekko.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Ekko.dds`,
 		cost: 5,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{d9d7cfc9}`, `{5ad3f68f}`],
+		traits: [`{c86875cd}`, `{f3cff87b}`],
 		stats: {
 			armor: 30,
 			attackSpeed: 0.8999999761581421,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 60,
 			hp: 850,
 			initialMana: 80,
@@ -952,24 +954,41 @@ export const champions: ChampionData[] = [
 				castTime: 1,
 				missile: undefined,
 				variables: {
-					'BonusDamage': [200, 100, 150, 2000],
+					'BonusDamage': [200, 120, 175, 2000],
 					'BaseDelayBetweenAttacks': [0.4000000059604645, 0.4000000059604645, 0.30000001192092896, 0.15000000596046448],
 					'NumAttacks': [5, 5, 7, 20],
-					'ASSlow': [0, 0.5, 0.5, 0.5],
-					'SlowDuration': [7, 7, 7, 7],
+					'ASSlow': [0, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
+					'SlowDuration': [7, 1.5, 2, 7],
+					'TooltipDamage': [1, 1, 1, 1],
 				},
 				calculations: {
 					'Damage': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `BonusDamage`,
-										starValues: [200, 100, 150, 2000],
+										starValues: [200, 120, 175, 2000],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'{253e9e6e}': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `sum`,
+								subparts: [
+									{
+										variable: `TooltipDamage`,
+										starValues: [1, 1, 1, 1],
+										stat: `AD`,
+										ratio: 1,
 									},
 								],
 							},
@@ -1042,11 +1061,11 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
-										variable: `{d19caaa4}`,
-										starValues: undefined,
+										variable: `BonusAS`,
+										starValues: [50, 150, 250, 500],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1063,21 +1082,21 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Ezreal`,
 		name: `Ezreal`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Ezreal.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Ezreal.dds`,
 		cost: 3,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{58272f02}`, `{aaee9556}`],
+		traits: [`{6e3d922e}`, `{ba23a3ea}`],
 		stats: {
-			armor: 20,
+			armor: 25,
 			attackSpeed: 0.75,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 55,
-			hp: 600,
+			hp: 650,
 			initialMana: 30,
-			magicResist: 20,
+			magicResist: 25,
 			mana: 80,
 			moveSpeed: 500,
 			range: 3,
@@ -1101,7 +1120,7 @@ export const champions: ChampionData[] = [
 					_missileSpeed: 1200,
 				},
 				variables: {
-					'Damage': [0, 100, 150, 800],
+					'Damage': [0, 225, 330, 575],
 					'HexRadius': [2, 2, 2, 2],
 					'PercentCostIncrease': [3, 33, 33, 33],
 				},
@@ -1110,11 +1129,11 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [0, 100, 150, 800],
+										starValues: [0, 225, 330, 575],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1149,7 +1168,7 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `BaseDamage`,
@@ -1170,21 +1189,21 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Fiora`,
 		name: `Fiora`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Fiora.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Fiora.dds`,
 		cost: 1,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{d9d7cfc9}`, `{fad58c1b}`],
+		traits: [`{c86875cd}`, `{687503a7}`],
 		stats: {
-			armor: 30,
+			armor: 35,
 			attackSpeed: 1,
 			critChance: 0.25,
-			critMultiplier: 1.5,
-			damage: 45,
-			hp: 500,
+			critMultiplier: 1.399999976158142,
+			damage: 40,
+			hp: 600,
 			initialMana: 0,
-			magicResist: 20,
+			magicResist: 35,
 			mana: 85,
 			moveSpeed: 500,
 			range: 1,
@@ -1208,7 +1227,7 @@ export const champions: ChampionData[] = [
 				},
 				variables: {
 					'Damage': [0, 200, 300, 450],
-					'StunDuration': [1.5, 1.5, 1.5, 3],
+					'StunDuration': [1.5, 1.5, 1.5, 2],
 					'BlockDuration': [1.5, 1.5, 1.5, 1.5],
 				},
 				calculations: {
@@ -1216,7 +1235,7 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `Damage`,
@@ -1258,21 +1277,21 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Fizz`,
 		name: `Fizz`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Fizz.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Fizz.dds`,
 		cost: 4,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{a21f56fe}`, `{5ad3f68f}`],
+		traits: [`{7ab45562}`, `{f3cff87b}`],
 		stats: {
 			armor: 25,
 			attackSpeed: 0.8500000238418579,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 60,
-			hp: 700,
+			hp: 800,
 			initialMana: 50,
-			magicResist: 20,
+			magicResist: 25,
 			mana: 120,
 			moveSpeed: 500,
 			range: 1,
@@ -1296,7 +1315,7 @@ export const champions: ChampionData[] = [
 				},
 				variables: {
 					'Delay': [1.5, 1.5, 1.5, 1.5],
-					'Damage': [0, 350, 550, 4000],
+					'Damage': [0, 350, 525, 1100],
 					'StunDuration': [1, 1.5, 1.5, 1.5],
 				},
 				calculations: {
@@ -1304,11 +1323,11 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [0, 350, 550, 4000],
+										starValues: [0, 350, 525, 1100],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1326,17 +1345,17 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Gangplank`,
 		name: `Gangplank`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Gangplank.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Gangplank.dds`,
 		cost: 5,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{f9ef3204}`, `{a7660f57}`, `{0598a3c1}`],
+		traits: [`{95729398}`, `{4f65cc53}`, `{86c572f5}`],
 		stats: {
 			armor: 30,
 			attackSpeed: 1,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 60,
 			hp: 1000,
 			initialMana: 70,
@@ -1354,21 +1373,22 @@ export const champions: ChampionData[] = [
 				castTime: 0.5,
 				missile: undefined,
 				variables: {
-					'Damage': [0, 525, 675, 9001],
+					'Damage': [0, 450, 675, 9001],
 					'ImpactDelayTime': [2, 2, 2, 2],
 					'UpgradeDelayTime': [0, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
 					'DoubleImpactDamagePercent': [0, 50, 50, 50],
+					'NumBombardments': [1, 1, 1, 9],
 				},
 				calculations: {
 					'Damage': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [0, 525, 675, 9001],
+										starValues: [0, 450, 675, 9001],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1386,21 +1406,21 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Gnar`,
 		name: `Gnar`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Gnar.TFT_Set3_Act2.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Gnar.dds`,
 		cost: 4,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{84f2a828}`, `{29ad8128}`],
+		traits: [`{baff2324}`, `{9eb128cc}`],
 		stats: {
 			armor: 45,
 			attackSpeed: 0.800000011920929,
 			critChance: 0.25,
-			critMultiplier: 1.5,
-			damage: 50,
-			hp: 750,
-			initialMana: 0,
-			magicResist: 40,
+			critMultiplier: 1.399999976158142,
+			damage: 65,
+			hp: 900,
+			initialMana: 20,
+			magicResist: 45,
 			mana: 120,
 			moveSpeed: 500,
 			range: 2,
@@ -1424,18 +1444,18 @@ export const champions: ChampionData[] = [
 				},
 				variables: {
 					'Damage': [100, 100, 200, 800],
-					'RCCDuration': [1.5, 1.5, 1.5, 1.5],
+					'RCCDuration': [1, 1, 1, 1],
 					'RKnockbackDistance': [600, 600, 600, 600],
 					'TransformDuration': [60, 60, 60, 60],
 					'TransformHealth': [50, 750, 1250, 5000],
-					'TransformAD': [0, 100, 175, 550],
+					'TransformAD': [0, 0.8999999761581421, 0.949999988079071, 4],
 				},
 				calculations: {
 					'Damage': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `Damage`,
@@ -1457,21 +1477,21 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Graves`,
 		name: `Graves`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Graves.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Graves.dds`,
 		cost: 1,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{f9ef3204}`, `{aaee9556}`],
+		traits: [`{95729398}`, `{ba23a3ea}`],
 		stats: {
-			armor: 40,
+			armor: 35,
 			attackSpeed: 0.550000011920929,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 55,
 			hp: 650,
-			initialMana: 50,
-			magicResist: 30,
+			initialMana: 30,
+			magicResist: 35,
 			mana: 80,
 			moveSpeed: 500,
 			range: 1,
@@ -1494,19 +1514,19 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'Damage': [0, 150, 200, 400],
-					'BlindDuration': [1, 3, 4, 6],
+					'Damage': [0, 160, 240, 360],
+					'BlindDuration': [1, 1.5, 1.5, 1.5],
 				},
 				calculations: {
 					'Damage': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [0, 150, 200, 400],
+										starValues: [0, 160, 240, 360],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1524,21 +1544,21 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Illaoi`,
 		name: `Illaoi`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Illaoi.TFT_Set3_Act2.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Illaoi.dds`,
 		cost: 1,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{66585784}`, `{29ad8128}`],
+		traits: [`{36e3b5a0}`, `{9eb128cc}`],
 		stats: {
 			armor: 40,
 			attackSpeed: 0.699999988079071,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 45,
 			hp: 700,
 			initialMana: 40,
-			magicResist: 30,
+			magicResist: 40,
 			mana: 80,
 			moveSpeed: 500,
 			range: 1,
@@ -1554,14 +1574,14 @@ export const champions: ChampionData[] = [
 				variables: {
 					'Damage': [0, 125, 200, 325],
 					'Duration': [0, 6, 6, 6],
-					'ResistStealPercent': [0, 30, 40, 60],
+					'ResistStealPercent': [0, 45, 45, 55],
 				},
 				calculations: {
 					'Damage': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `Damage`,
@@ -1583,21 +1603,21 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Irelia`,
 		name: `Irelia`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Irelia.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Irelia.dds`,
 		cost: 4,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{d9d7cfc9}`, `{3eed7287}`, `{fad58c1b}`],
+		traits: [`{c86875cd}`, `{cb5c7b63}`, `{687503a7}`],
 		stats: {
-			armor: 50,
+			armor: 45,
 			attackSpeed: 0.8500000238418579,
 			critChance: 0.25,
-			critMultiplier: 1.5,
-			damage: 85,
+			critMultiplier: 1.399999976158142,
+			damage: 80,
 			hp: 900,
 			initialMana: 0,
-			magicResist: 40,
+			magicResist: 45,
 			mana: 30,
 			moveSpeed: 500,
 			range: 1,
@@ -1620,18 +1640,18 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'PercentADDamage': [0, 2.25, 2.5, 5],
+					'PercentADDamage': [0, 2.1500000953674316, 2.1500000953674316, 6],
 				},
 				calculations: {
 					'{4785a5c6}': {
 						asPercent: true,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `PercentADDamage`,
-										starValues: [0, 2.25, 2.5, 5],
+										starValues: [0, 2.1500000953674316, 2.1500000953674316, 6],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1639,11 +1659,11 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{426d7ce1}': {
+					'Damage': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: undefined,
@@ -1684,11 +1704,11 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
-										variable: `{bd471b30}`,
-										starValues: undefined,
+										variable: `DashDamage`,
+										starValues: [0, 50, 100, 200],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1705,17 +1725,17 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Janna`,
 		name: `Janna`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Janna.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Janna.dds`,
 		cost: 5,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{e3e85bde}`, `{0a294d01}`],
+		traits: [`{5cad0cca}`, `{8fc40f75}`],
 		stats: {
 			armor: 25,
 			attackSpeed: 0.800000011920929,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 60,
 			hp: 750,
 			initialMana: 20,
@@ -1745,18 +1765,18 @@ export const champions: ChampionData[] = [
 				variables: {
 					'PercentAttackSpeed': [0, 80, 125, 500],
 					'BuffDuration': [0, 5, 5, 5],
-					'StunDuration': [0, 1.5, 1.5, 8],
+					'StunDuration': [0, 1.5, 1.5, 10],
 				},
 				calculations: {
-					'{98aa80a6}': {
+					'PercentAttackSpeed': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
-										variable: `{db1859c9}`,
-										starValues: undefined,
+										variable: `PercentAttackSpeed`,
+										starValues: [0, 80, 125, 500],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1793,21 +1813,21 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_JarvanIV`,
 		name: `Jarvan IV`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_JarvanIV.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_JarvanIV.dds`,
 		cost: 1,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{fd010015}`, `{6fa6d3c5}`],
+		traits: [`{82156e19}`, `{5afc3539}`],
 		stats: {
 			armor: 40,
 			attackSpeed: 0.6000000238418579,
 			critChance: 0.25,
-			critMultiplier: 1.5,
-			damage: 55,
+			critMultiplier: 1.399999976158142,
+			damage: 60,
 			hp: 700,
 			initialMana: 60,
-			magicResist: 30,
+			magicResist: 40,
 			mana: 100,
 			moveSpeed: 500,
 			range: 1,
@@ -1832,18 +1852,18 @@ export const champions: ChampionData[] = [
 				variables: {
 					'Duration': [6, 6, 6, 6],
 					'HexRadius': [3, 3, 3, 3],
-					'ASPercent': [0.6499999761581421, 0.5, 0.6000000238418579, 0.75],
+					'ASPercent': [0.6499999761581421, 0.550000011920929, 0.6000000238418579, 0.6499999761581421],
 				},
 				calculations: {
-					'ASBoost': {
+					'AS': {
 						asPercent: true,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `ASPercent`,
-										starValues: [0.6499999761581421, 0.5, 0.6000000238418579, 0.75],
+										starValues: [0.6499999761581421, 0.550000011920929, 0.6000000238418579, 0.6499999761581421],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1861,21 +1881,21 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Jayce`,
 		name: `Jayce`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Jayce.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Jayce.dds`,
 		cost: 3,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{f9ef3204}`, `{0436f1e7}`],
+		traits: [`{95729398}`, `{f4748833}`],
 		stats: {
 			armor: 40,
 			attackSpeed: 0.699999988079071,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 60,
 			hp: 800,
 			initialMana: 0,
-			magicResist: 30,
+			magicResist: 40,
 			mana: 80,
 			moveSpeed: 500,
 			range: 1,
@@ -1898,7 +1918,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'Damage': [300, 450, 600, 1200],
+					'Damage': [300, 320, 480, 800],
 					'Radius': [1, 1, 1, 1],
 				},
 				calculations: {
@@ -1906,11 +1926,11 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [300, 450, 600, 1200],
+										starValues: [300, 320, 480, 800],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1928,21 +1948,21 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Jhin`,
 		name: `Jhin`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Jhin.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Jhin.dds`,
 		cost: 4,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{fd010015}`, `{b8c79a1a}`],
+		traits: [`{82156e19}`, `{3a89370e}`],
 		stats: {
-			armor: 20,
+			armor: 25,
 			attackSpeed: 2,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 85,
-			hp: 600,
+			hp: 650,
 			initialMana: 0,
-			magicResist: 20,
+			magicResist: 25,
 			mana: 4,
 			moveSpeed: 500,
 			range: 6,
@@ -1965,19 +1985,19 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'PercentOfAD': [0, 3.440000057220459, 4.440000057220459, 44.439998626708984],
-					'AttackSpeed': [0, 0.8500000238418579, 0.8999999761581421, 1.2000000476837158],
+					'PercentOfAD': [0, 3.240000009536743, 4.039999961853027, 44.439998626708984],
+					'AttackSpeed': [0, 0.8500000238418579, 0.8500000238418579, 1],
 				},
 				calculations: {
-					'{b391db43}': {
+					'Percent': {
 						asPercent: true,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
-										variable: `{11a96dee}`,
-										starValues: undefined,
+										variable: `PercentOfAD`,
+										starValues: [0, 3.240000009536743, 4.039999961853027, 44.439998626708984],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1985,11 +2005,11 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{426d7ce1}': {
+					'Damage': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: undefined,
@@ -2028,7 +2048,7 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `Damage`,
@@ -2065,7 +2085,7 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `Damage`,
@@ -2102,7 +2122,7 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `Damage`,
@@ -2139,7 +2159,7 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `Damage`,
@@ -2177,7 +2197,7 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `Damage`,
@@ -2193,7 +2213,7 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `DamageFinal`,
@@ -2214,24 +2234,24 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Jinx`,
 		name: `Jinx`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Jinx.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Jinx.dds`,
 		cost: 4,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{d5353f03}`, `{aaee9556}`],
+		traits: [`{e070c997}`, `{ba23a3ea}`],
 		stats: {
-			armor: 20,
+			armor: 25,
 			attackSpeed: 0.699999988079071,
 			critChance: 0.25,
-			critMultiplier: 1.5,
-			damage: 75,
+			critMultiplier: 1.399999976158142,
+			damage: 70,
 			hp: 600,
 			initialMana: 0,
-			magicResist: 20,
+			magicResist: 25,
 			mana: 0,
 			moveSpeed: 500,
-			range: 3,
+			range: 4,
 		},
 		basicAttackMissileSpeed: 2750,
 		critAttackMissileSpeed: 2750,
@@ -2254,18 +2274,18 @@ export const champions: ChampionData[] = [
 					'HitWindow': [10, 10, 10, 10],
 					'BuffDuration': [60, 60, 60, 60],
 					'AttackSpeedBonus': [0.4000000059604645, 0.5, 0.75, 1.25],
-					'RocketDamage': [0, 150, 250, 1000],
+					'RocketDamage': [0, 110, 175, 875],
 				},
 				calculations: {
-					'{db1859c9}': {
+					'PercentAttackSpeed': {
 						asPercent: true,
 						parts: [
 							{
-								operator: undefined,
+								operator: `identity`,
 								subparts: [
 									{
-										variable: `{cbb3a34f}`,
-										starValues: undefined,
+										variable: `AttackSpeedBonus`,
+										starValues: [0.4000000059604645, 0.5, 0.75, 1.25],
 										stat: undefined,
 										ratio: undefined,
 									},
@@ -2277,11 +2297,11 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
-										variable: `{37d9a590}`,
-										starValues: undefined,
+										variable: `RocketDamage`,
+										starValues: [0, 110, 175, 875],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2319,21 +2339,21 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Karma`,
 		name: `Karma`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Karma.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Karma.dds`,
 		cost: 3,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{fd010015}`, `{d33bb3c0}`],
+		traits: [`{82156e19}`, `{114dc294}`],
 		stats: {
-			armor: 20,
+			armor: 25,
 			attackSpeed: 0.6499999761581421,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 50,
-			hp: 600,
+			hp: 650,
 			initialMana: 75,
-			magicResist: 20,
+			magicResist: 25,
 			mana: 100,
 			moveSpeed: 500,
 			range: 3,
@@ -2357,19 +2377,19 @@ export const champions: ChampionData[] = [
 				},
 				variables: {
 					'Duration': [4, 4, 4, 4],
-					'ShieldAmount': [100, 300, 450, 900],
-					'BonusAS': [0.20000000298023224, 0.699999988079071, 0.8999999761581421, 1.5],
+					'ShieldAmount': [100, 400, 475, 550],
+					'BonusAS': [0.20000000298023224, 0.699999988079071, 0.800000011920929, 0.8999999761581421],
 				},
 				calculations: {
-					'{33dad32f}': {
+					'Shield': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
-										variable: `{40ee74ec}`,
-										starValues: undefined,
+										variable: `ShieldAmount`,
+										starValues: [100, 400, 475, 550],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2377,15 +2397,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'ASBoost': {
+					'AS': {
 						asPercent: true,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
-										variable: `{d19caaa4}`,
-										starValues: undefined,
+										variable: `BonusAS`,
+										starValues: [0.20000000298023224, 0.699999988079071, 0.800000011920929, 0.8999999761581421],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2424,7 +2444,7 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_NPC_Kayn`,
 		name: `Kayn`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Zoey_Mobile.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Zoey_Mobile.dds`,
 		cost: undefined,
 		starLevel: undefined,
 		teamSize: undefined,
@@ -2466,7 +2486,7 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_NPC_KaynElite`,
 		name: `Kayn`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Zoey_Mobile.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Zoey_Mobile.dds`,
 		cost: undefined,
 		starLevel: undefined,
 		teamSize: undefined,
@@ -2506,24 +2526,24 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_KogMaw`,
 		name: `Kog'Maw`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_KogMaw.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_KogMaw.dds`,
 		cost: 2,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{66585784}`, `{aaee9556}`],
+		traits: [`{36e3b5a0}`, `{ba23a3ea}`],
 		stats: {
 			armor: 25,
-			attackSpeed: 0.699999988079071,
+			attackSpeed: 0.75,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 50,
 			hp: 550,
 			initialMana: 0,
-			magicResist: 20,
+			magicResist: 25,
 			mana: 30,
 			moveSpeed: 500,
-			range: 3,
+			range: 4,
 		},
 		basicAttackMissileSpeed: 1800,
 		critAttackMissileSpeed: 1800,
@@ -2535,15 +2555,15 @@ export const champions: ChampionData[] = [
 				missile: undefined,
 				variables: {
 					'Duration': [3, 3, 3, 3],
-					'PercentAttackSpeed': [80, 80, 80, 80],
-					'PercentMaxHPDamage': [0, 2, 4, 8],
+					'PercentAttackSpeed': [60, 60, 60, 60],
+					'PercentMaxHPDamage': [0, 2.5, 3, 3.5],
 				},
 				calculations: {
 					'{6f7b130a}': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `{a07a6a65}`,
@@ -2585,21 +2605,21 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Leona`,
 		name: `Leona`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Leona.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Leona.dds`,
 		cost: 1,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{d9d7cfc9}`, `{0436f1e7}`],
+		traits: [`{c86875cd}`, `{f4748833}`],
 		stats: {
-			armor: 45,
+			armor: 40,
 			attackSpeed: 0.550000011920929,
 			critChance: 0.25,
-			critMultiplier: 1.5,
-			damage: 50,
-			hp: 600,
+			critMultiplier: 1.399999976158142,
+			damage: 60,
+			hp: 650,
 			initialMana: 50,
-			magicResist: 30,
+			magicResist: 40,
 			mana: 100,
 			moveSpeed: 500,
 			range: 1,
@@ -2622,19 +2642,19 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'FlatDamageReduction': [0, 40, 80, 400],
+					'FlatDamageReduction': [0, 45, 55, 65],
 					'Duration': [4, 4, 4, 4],
 				},
 				calculations: {
-					'{d3bdf870}': {
+					'DamageReduction': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
-										variable: `{cb4cd428}`,
-										starValues: undefined,
+										variable: `FlatDamageReduction`,
+										starValues: [0, 45, 55, 65],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2652,21 +2672,21 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Lucian`,
 		name: `Lucian`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Lucian.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Lucian.dds`,
 		cost: 2,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{d9d7cfc9}`, `{aaee9556}`],
+		traits: [`{c86875cd}`, `{ba23a3ea}`],
 		stats: {
 			armor: 25,
-			attackSpeed: 0.699999988079071,
+			attackSpeed: 0.75,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 50,
-			hp: 500,
+			hp: 550,
 			initialMana: 0,
-			magicResist: 20,
+			magicResist: 25,
 			mana: 30,
 			moveSpeed: 500,
 			range: 4,
@@ -2681,18 +2701,18 @@ export const champions: ChampionData[] = [
 				missile: undefined,
 				variables: {
 					'FirstShotRatio': [1, 1, 1, 1],
-					'SecondShotDamage': [0, 175, 250, 600],
+					'SecondShotDamage': [0, 175, 260, 415],
 				},
 				calculations: {
 					'Damage': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
-										variable: `{30233e78}`,
-										starValues: undefined,
+										variable: `SecondShotDamage`,
+										starValues: [0, 175, 260, 415],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2743,6 +2763,24 @@ export const champions: ChampionData[] = [
 				uninterruptable: true,
 			},
 			{
+				name: `TFT3_LucianE2`,
+				castTime: undefined,
+				missile: {
+					width: undefined,
+					travelTime: undefined,
+					speedInitial: 2800,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
+			},
+			{
 				name: `TFT3_LucianBasicAttack`,
 				castTime: undefined,
 				missile: {
@@ -2765,22 +2803,22 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Lulu`,
 		name: `Lulu`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Lulu.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Lulu.dds`,
 		cost: 5,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{d89e035d}`, `{d33bb3c0}`],
+		traits: [`{00214e11}`, `{114dc294}`],
 		stats: {
 			armor: 25,
 			attackSpeed: 0.800000011920929,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 45,
 			hp: 800,
-			initialMana: 75,
+			initialMana: 50,
 			magicResist: 20,
-			mana: 150,
+			mana: 120,
 			moveSpeed: 500,
 			range: 3,
 		},
@@ -2803,20 +2841,20 @@ export const champions: ChampionData[] = [
 					_missileSpeed: 2250,
 				},
 				variables: {
-					'NumTargets': [0, 2, 4, 12],
-					'Duration': [0, 3, 3, 8],
-					'BonusDamage': [0.02500000037252903, 0.05000000074505806, 0.10000000149011612, 0.25],
+					'NumTargets': [0, 2, 3, 100],
+					'Duration': [0, 2, 2.5, 15],
+					'BonusDamage': [0.02500000037252903, 0.05000000074505806, 0.10000000149011612, 25],
 				},
 				calculations: {
 					'BonusDamage': {
 						asPercent: true,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `BonusDamage`,
-										starValues: [0.02500000037252903, 0.05000000074505806, 0.10000000149011612, 0.25],
+										starValues: [0.02500000037252903, 0.05000000074505806, 0.10000000149011612, 25],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2852,7 +2890,7 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `BuffDuration`,
@@ -2873,21 +2911,21 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Malphite`,
 		name: `Malphite`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Malphite.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Malphite.dds`,
 		cost: 1,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{d5353f03}`, `{29ad8128}`],
+		traits: [`{e070c997}`, `{9eb128cc}`],
 		stats: {
 			armor: 35,
-			attackSpeed: 0.5,
+			attackSpeed: 0.550000011920929,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 70,
 			hp: 700,
 			initialMana: 0,
-			magicResist: 30,
+			magicResist: 35,
 			mana: 0,
 			moveSpeed: 500,
 			range: 1,
@@ -2907,11 +2945,11 @@ export const champions: ChampionData[] = [
 					asPercent: true,
 					parts: [
 						{
-							operator: undefined,
+							operator: `scale`,
 							subparts: [
 								{
-									variable: `{f880a530}`,
-									starValues: undefined,
+									variable: `PercentHealth`,
+									starValues: [0.3499999940395355, 0.4000000059604645, 0.44999998807907104, 0.699999988079071],
 									stat: `AP`,
 									ratio: 0.009999999776482582,
 								},
@@ -2929,21 +2967,21 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_MasterYi`,
 		name: `Master Yi`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_MasterYi.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_MasterYi.dds`,
 		cost: 3,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{d5353f03}`, `{fad58c1b}`],
+		traits: [`{e070c997}`, `{687503a7}`],
 		stats: {
-			armor: 50,
+			armor: 45,
 			attackSpeed: 0.8500000238418579,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 55,
-			hp: 750,
+			hp: 850,
 			initialMana: 0,
-			magicResist: 35,
+			magicResist: 45,
 			mana: 55,
 			moveSpeed: 500,
 			range: 1,
@@ -2966,16 +3004,16 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'Duration': [5, 5, 5, 5],
+					'Duration': [6, 6, 6, 6],
 					'HealAmountPercent': [0, 0.11999999731779099, 0.11999999731779099, 0.11999999731779099],
-					'BonusTrueDamage': [0, 70, 95, 145],
+					'BonusTrueDamage': [0, 65, 100, 160],
 				},
 				calculations: {
-					'{09bc1f54}': {
+					'Heal': {
 						asPercent: true,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `{945d8424}`,
@@ -2991,11 +3029,11 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
-										variable: `{a1b687b5}`,
-										starValues: undefined,
+										variable: `BonusTrueDamage`,
+										starValues: [0, 65, 100, 160],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3050,7 +3088,7 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `Damage`,
@@ -3108,7 +3146,7 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_BardMeep`,
 		name: `Meep`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_BardMeep.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_BardMeep.dds`,
 		cost: undefined,
 		starLevel: undefined,
 		teamSize: undefined,
@@ -3165,21 +3203,21 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Mordekaiser`,
 		name: `Mordekaiser`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Mordekaiser.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Mordekaiser.dds`,
 		cost: 2,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{fd010015}`, `{0436f1e7}`],
+		traits: [`{82156e19}`, `{f4748833}`],
 		stats: {
-			armor: 50,
+			armor: 45,
 			attackSpeed: 0.6000000238418579,
 			critChance: 0.25,
-			critMultiplier: 1.5,
-			damage: 55,
-			hp: 700,
+			critMultiplier: 1.399999976158142,
+			damage: 65,
+			hp: 750,
 			initialMana: 0,
-			magicResist: 40,
+			magicResist: 45,
 			mana: 90,
 			moveSpeed: 500,
 			range: 1,
@@ -3193,20 +3231,20 @@ export const champions: ChampionData[] = [
 				castTime: 0.5,
 				missile: undefined,
 				variables: {
-					'DamagePerSecond': [20, 75, 100, 200],
-					'ShieldAmount': [0, 350, 500, 850],
+					'DamagePerSecond': [20, 60, 90, 145],
+					'ShieldAmount': [0, 400, 500, 600],
 					'Duration': [8, 8, 8, 8],
 				},
 				calculations: {
-					'{33dad32f}': {
+					'Shield': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
-										variable: `{40ee74ec}`,
-										starValues: undefined,
+										variable: `ShieldAmount`,
+										starValues: [0, 400, 500, 600],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3218,11 +3256,11 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `DamagePerSecond`,
-										starValues: [20, 75, 100, 200],
+										starValues: [20, 60, 90, 145],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3252,21 +3290,21 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Nautilus`,
 		name: `Nautilus`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Nautilus.TFT_Set3_Act2.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Nautilus.dds`,
 		cost: 2,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{84f2a828}`, `{0436f1e7}`],
+		traits: [`{baff2324}`, `{f4748833}`],
 		stats: {
-			armor: 50,
+			armor: 45,
 			attackSpeed: 0.6499999761581421,
 			critChance: 0.25,
-			critMultiplier: 1.5,
-			damage: 60,
+			critMultiplier: 1.399999976158142,
+			damage: 70,
 			hp: 750,
 			initialMana: 50,
-			magicResist: 35,
+			magicResist: 45,
 			mana: 120,
 			moveSpeed: 500,
 			range: 1,
@@ -3280,19 +3318,19 @@ export const champions: ChampionData[] = [
 				castTime: 0.5,
 				missile: undefined,
 				variables: {
-					'Damage': [0, 100, 200, 500],
-					'StunDuration': [0, 3, 3, 6],
+					'Damage': [0, 250, 375, 585],
+					'StunDuration': [0, 2, 2, 2.5],
 				},
 				calculations: {
 					'Damage': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [0, 100, 200, 500],
+										starValues: [0, 250, 375, 585],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3310,21 +3348,21 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Neeko`,
 		name: `Neeko`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Neeko.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Neeko.dds`,
 		cost: 3,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{e3e85bde}`, `{6fa6d3c5}`],
+		traits: [`{5cad0cca}`, `{5afc3539}`],
 		stats: {
-			armor: 50,
+			armor: 45,
 			attackSpeed: 0.6499999761581421,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 50,
 			hp: 850,
 			initialMana: 35,
-			magicResist: 40,
+			magicResist: 45,
 			mana: 110,
 			moveSpeed: 500,
 			range: 2,
@@ -3338,8 +3376,8 @@ export const champions: ChampionData[] = [
 				castTime: 0.75,
 				missile: undefined,
 				variables: {
-					'DamageAmount': [0, 150, 250, 450],
-					'StunDuration': [1, 1.5, 2, 2.5],
+					'DamageAmount': [0, 150, 225, 375],
+					'StunDuration': [1, 1.5, 1.75, 2],
 					'HexRadius': [2, 2, 2, 2],
 				},
 				calculations: {
@@ -3347,11 +3385,11 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
-										variable: `{05148a7c}`,
-										starValues: undefined,
+										variable: `DamageAmount`,
+										starValues: [0, 150, 225, 375],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3369,17 +3407,17 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Nocturne`,
 		name: `Nocturne`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Nocturne.TFT_Set3_Act2.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Nocturne.dds`,
 		cost: 1,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{66585784}`, `{5ad3f68f}`],
+		traits: [`{36e3b5a0}`, `{f3cff87b}`],
 		stats: {
 			armor: 20,
 			attackSpeed: 0.75,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 50,
 			hp: 500,
 			initialMana: 40,
@@ -3406,19 +3444,19 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'Damage': [200, 200, 250, 400],
-					'StunDuration': [200, 2, 2.5, 4],
+					'Damage': [200, 175, 265, 400],
+					'StunDuration': [200, 1, 1.25, 1.5],
 				},
 				calculations: {
 					'Damage': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [200, 200, 250, 400],
+										starValues: [200, 175, 265, 400],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3436,22 +3474,22 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Poppy`,
 		name: `Poppy`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Poppy.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Poppy.dds`,
 		cost: 1,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{e3e85bde}`, `{0436f1e7}`],
+		traits: [`{5cad0cca}`, `{f4748833}`],
 		stats: {
-			armor: 45,
+			armor: 40,
 			attackSpeed: 0.550000011920929,
 			critChance: 0.25,
-			critMultiplier: 1.5,
-			damage: 50,
+			critMultiplier: 1.399999976158142,
+			damage: 55,
 			hp: 650,
-			initialMana: 50,
-			magicResist: 35,
-			mana: 90,
+			initialMana: 30,
+			magicResist: 40,
+			mana: 75,
 			moveSpeed: 500,
 			range: 1,
 		},
@@ -3472,19 +3510,19 @@ export const champions: ChampionData[] = [
 				_missileSpeed: 1400,
 			},
 			variables: {
-				'Damage': [50, 100, 150, 225],
-				'ShieldAmount': [100, 200, 300, 450],
+				'Damage': [50, 125, 200, 300],
+				'ShieldAmount': [100, 250, 325, 400],
 			},
 			calculations: {
-				'{33dad32f}': {
+				'Damage': {
 					asPercent: false,
 					parts: [
 						{
-							operator: undefined,
+							operator: `scale`,
 							subparts: [
 								{
-									variable: `{40ee74ec}`,
-									starValues: undefined,
+									variable: `Damage`,
+									starValues: [50, 125, 200, 300],
 									stat: `AP`,
 									ratio: 0.009999999776482582,
 								},
@@ -3492,15 +3530,15 @@ export const champions: ChampionData[] = [
 						},
 					],
 				},
-				'Damage': {
+				'Shield': {
 					asPercent: false,
 					parts: [
 						{
-							operator: undefined,
+							operator: `scale`,
 							subparts: [
 								{
-									variable: `Damage`,
-									starValues: [50, 100, 150, 225],
+									variable: `ShieldAmount`,
+									starValues: [100, 250, 325, 400],
 									stat: `AP`,
 									ratio: 0.009999999776482582,
 								},
@@ -3546,21 +3584,21 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Rakan`,
 		name: `Rakan`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Rakan.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Rakan.dds`,
 		cost: 2,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{d89e035d}`, `{6fa6d3c5}`],
+		traits: [`{00214e11}`, `{5afc3539}`],
 		stats: {
-			armor: 45,
+			armor: 40,
 			attackSpeed: 0.699999988079071,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 45,
 			hp: 650,
 			initialMana: 50,
-			magicResist: 35,
+			magicResist: 40,
 			mana: 100,
 			moveSpeed: 500,
 			range: 2,
@@ -3585,7 +3623,7 @@ export const champions: ChampionData[] = [
 				variables: {
 					'Damage': [75, 175, 275, 400],
 					'Radius': [1, 1, 1, 1],
-					'StunDuration': [1, 1.5, 2, 2.5],
+					'StunDuration': [1, 1.5, 1.5, 2],
 					'KnockupDuration': [1, 1, 1, 1],
 				},
 				calculations: {
@@ -3593,7 +3631,7 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `Damage`,
@@ -3615,22 +3653,22 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Riven`,
 		name: `Riven`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Riven.TFT_Set3_Act2.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Riven.dds`,
 		cost: 4,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{58272f02}`, `{fad58c1b}`],
+		traits: [`{6e3d922e}`, `{687503a7}`],
 		stats: {
-			armor: 35,
+			armor: 45,
 			attackSpeed: 0.8500000238418579,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 70,
-			hp: 850,
+			hp: 950,
 			initialMana: 0,
-			magicResist: 30,
-			mana: 25,
+			magicResist: 45,
+			mana: 30,
 			moveSpeed: 500,
 			range: 1,
 		},
@@ -3655,31 +3693,15 @@ export const champions: ChampionData[] = [
 					'Damage': [50, 100, 150, 600],
 					'SlashHexRadius': [1, 1, 1, 1],
 					'DamageFinal': [0, 300, 500, 1500],
-					'Shield': [0, 200, 350, 1200],
+					'Shield': [0, 175, 250, 1000],
 					'ShieldDuration': [4, 4, 4, 4],
 				},
 				calculations: {
-					'{33dad32f}': {
-						asPercent: false,
-						parts: [
-							{
-								operator: undefined,
-								subparts: [
-									{
-										variable: `Shield`,
-										starValues: [0, 200, 350, 1200],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
 					'Damage': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `Damage`,
@@ -3691,11 +3713,27 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
+					'Shield': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Shield`,
+										starValues: [0, 175, 250, 1000],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
 					'DamageFinal': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `DamageFinal`,
@@ -3731,15 +3769,15 @@ export const champions: ChampionData[] = [
 					'ShieldDuration': [4, 4, 4, 4],
 				},
 				calculations: {
-					'{33dad32f}': {
+					'Damage': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
-										variable: `Shield`,
-										starValues: [0, 200, 300, 400],
+										variable: `Damage`,
+										starValues: [50, 550, 750, 2500],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3747,15 +3785,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'Damage': {
+					'Shield': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
-										variable: `Damage`,
-										starValues: [50, 550, 750, 2500],
+										variable: `Shield`,
+										starValues: [0, 200, 300, 400],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3787,15 +3825,15 @@ export const champions: ChampionData[] = [
 					'ShieldDuration': [4, 4, 4, 4],
 				},
 				calculations: {
-					'{33dad32f}': {
+					'Damage': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
-										variable: `Shield`,
-										starValues: [0, 200, 300, 400],
+										variable: `Damage`,
+										starValues: [50, 550, 750, 2500],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3803,15 +3841,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'Damage': {
+					'Shield': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
-										variable: `Damage`,
-										starValues: [50, 550, 750, 2500],
+										variable: `Shield`,
+										starValues: [0, 200, 300, 400],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3845,15 +3883,15 @@ export const champions: ChampionData[] = [
 					'ShieldDuration': [4, 4, 4, 4],
 				},
 				calculations: {
-					'{33dad32f}': {
+					'Damage': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
-										variable: `Shield`,
-										starValues: [0, 200, 300, 400],
+										variable: `Damage`,
+										starValues: [50, 550, 750, 2500],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3861,15 +3899,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'Damage': {
+					'Shield': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
-										variable: `Damage`,
-										starValues: [50, 550, 750, 2500],
+										variable: `Shield`,
+										starValues: [0, 200, 300, 400],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3943,21 +3981,21 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Rumble`,
 		name: `Rumble`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Rumble.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Rumble.dds`,
 		cost: 3,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{a21f56fe}`, `{0598a3c1}`],
+		traits: [`{7ab45562}`, `{86c572f5}`],
 		stats: {
 			armor: 45,
 			attackSpeed: 0.699999988079071,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 50,
-			hp: 900,
+			hp: 850,
 			initialMana: 0,
-			magicResist: 40,
+			magicResist: 45,
 			mana: 50,
 			moveSpeed: 500,
 			range: 1,
@@ -3971,7 +4009,7 @@ export const champions: ChampionData[] = [
 				castTime: 0.5,
 				missile: undefined,
 				variables: {
-					'TotalDamage': [30, 500, 750, 1650],
+					'TotalDamage': [30, 450, 675, 1125],
 					'Duration': [3, 3, 3, 3],
 					'NumberOfTicks': [12, 12, 12, 12],
 					'TickRate': [0.25, 0.25, 0.25, 0.25],
@@ -3984,11 +4022,11 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `TotalDamage`,
-										starValues: [30, 500, 750, 1650],
+										starValues: [30, 450, 675, 1125],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4006,21 +4044,21 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Shaco`,
 		name: `Shaco`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Shaco.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Shaco.dds`,
 		cost: 3,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{fd010015}`, `{5ad3f68f}`],
+		traits: [`{82156e19}`, `{f3cff87b}`],
 		stats: {
-			armor: 20,
+			armor: 25,
 			attackSpeed: 0.800000011920929,
 			critChance: 0.25,
-			critMultiplier: 1.5,
-			damage: 75,
+			critMultiplier: 1.399999976158142,
+			damage: 65,
 			hp: 650,
 			initialMana: 30,
-			magicResist: 20,
+			magicResist: 25,
 			mana: 70,
 			moveSpeed: 500,
 			range: 1,
@@ -4044,18 +4082,18 @@ export const champions: ChampionData[] = [
 				},
 				variables: {
 					'Duration': [1.5, 1.5, 1.5, 1.5],
-					'PercentOfAD': [2.25, 2.5, 2.75, 3],
+					'PercentOfAD': [2.25, 2.5, 2.5, 2.549999952316284],
 				},
 				calculations: {
-					'{da93a420}': {
+					'Percentage': {
 						asPercent: true,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
-										variable: `{11a96dee}`,
-										starValues: undefined,
+										variable: `PercentOfAD`,
+										starValues: [2.25, 2.5, 2.5, 2.549999952316284],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4067,13 +4105,13 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: undefined,
 										starValues: undefined,
-										stat: `CritDamage`,
-										ratio: 1,
+										stat: undefined,
+										ratio: undefined,
 									},
 								],
 							},
@@ -4099,21 +4137,21 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Shen`,
 		name: `Shen`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Shen.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Shen.dds`,
 		cost: 2,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{58272f02}`, `{fad58c1b}`],
+		traits: [`{6e3d922e}`, `{687503a7}`],
 		stats: {
 			armor: 45,
 			attackSpeed: 0.699999988079071,
 			critChance: 0.25,
-			critMultiplier: 1.5,
-			damage: 60,
+			critMultiplier: 1.399999976158142,
+			damage: 70,
 			hp: 800,
 			initialMana: 100,
-			magicResist: 35,
+			magicResist: 45,
 			mana: 150,
 			moveSpeed: 500,
 			range: 1,
@@ -4131,11 +4169,11 @@ export const champions: ChampionData[] = [
 					'MagicResist': [0, 15, 30, 45],
 				},
 				calculations: {
-					'{b1147ecd}': {
+					'MR': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `MagicResist`,
@@ -4155,23 +4193,51 @@ export const champions: ChampionData[] = [
 		missiles: [],
 	},
 	{
+		apiName: `TFT9_SLIME_Crab`,
+		name: `SLIME_Crab`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT9_SLIME_Crab.dds`,
+		cost: undefined,
+		starLevel: undefined,
+		teamSize: undefined,
+		isSpawn: true,
+		traits: [],
+		stats: {
+			armor: 10,
+			attackSpeed: 0.800000011920929,
+			critChance: 0.25,
+			critMultiplier: 1.399999976158142,
+			damage: 20,
+			hp: undefined,
+			initialMana: 0,
+			magicResist: 10,
+			mana: 100,
+			moveSpeed: 250,
+			range: 1,
+		},
+		basicAttackMissileSpeed: undefined,
+		critAttackMissileSpeed: undefined,
+		passive: undefined,
+		spells: [],
+		missiles: [],
+	},
+	{
 		apiName: `TFT3_Soraka`,
 		name: `Soraka`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Soraka.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Soraka.dds`,
 		cost: 4,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{e3e85bde}`, `{d33bb3c0}`],
+		traits: [`{5cad0cca}`, `{114dc294}`],
 		stats: {
-			armor: 30,
+			armor: 25,
 			attackSpeed: 0.75,
 			critChance: 0.25,
-			critMultiplier: 1.5,
-			damage: 45,
+			critMultiplier: 1.399999976158142,
+			damage: 50,
 			hp: 700,
 			initialMana: 50,
-			magicResist: 20,
+			magicResist: 25,
 			mana: 120,
 			moveSpeed: 500,
 			range: 3,
@@ -4185,19 +4251,19 @@ export const champions: ChampionData[] = [
 				castTime: 0.5,
 				missile: undefined,
 				variables: {
-					'HealAmount': [300, 325, 500, 20000],
+					'HealAmount': [300, 250, 375, 20000],
 					'HealTargets': [15, 15, 15, 15],
 				},
 				calculations: {
-					'{09bc1f54}': {
+					'Heal': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `HealAmount`,
-										starValues: [300, 325, 500, 20000],
+										starValues: [300, 250, 375, 20000],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4215,7 +4281,7 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_SuperMech`,
 		name: `Super-Mech`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_SuperMech.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_SuperMech.dds`,
 		cost: undefined,
 		starLevel: undefined,
 		teamSize: undefined,
@@ -4254,13 +4320,14 @@ export const champions: ChampionData[] = [
 				variables: {
 					'MainDamage': [650, 700, 750, 850],
 					'SplashDamage': [325, 350, 375, 425],
+					'ADPercent': [1, 1, 1, 1],
 				},
 				calculations: {
 					'{a2a2e55a}': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `{dfbfebe9}`,
@@ -4272,17 +4339,33 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{a0c61c84}': {
+					'SplashDamage': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
-										variable: `{d3818ec3}`,
-										starValues: undefined,
+										variable: `SplashDamage`,
+										starValues: [325, 350, 375, 425],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'{253e9e6e}': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `sum`,
+								subparts: [
+									{
+										variable: `ADPercent`,
+										starValues: [1, 1, 1, 1],
+										stat: `AD`,
+										ratio: 1,
 									},
 								],
 							},
@@ -4298,22 +4381,22 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Syndra`,
 		name: `Syndra`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Syndra.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Syndra.dds`,
 		cost: 3,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{e3e85bde}`, `{eedbee24}`],
+		traits: [`{5cad0cca}`, `{ad8a7fd0}`],
 		stats: {
-			armor: 20,
+			armor: 25,
 			attackSpeed: 0.699999988079071,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 45,
-			hp: 600,
-			initialMana: 0,
-			magicResist: 20,
-			mana: 50,
+			hp: 650,
+			initialMana: 30,
+			magicResist: 25,
+			mana: 80,
 			moveSpeed: 500,
 			range: 4,
 		},
@@ -4338,7 +4421,7 @@ export const champions: ChampionData[] = [
 				variables: {
 					'Spheres': [3, 3, 3, 3],
 					'CastTime': [0.75, 0.75, 0.75, 0.75],
-					'Damage': [0, 100, 140, 220],
+					'Damage': [0, 80, 120, 200],
 					'RetargetOnKill': [1, 1, 1, 1],
 					'RetargetOverkillAmount': [500, 500, 500, 500],
 				},
@@ -4347,11 +4430,11 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [0, 100, 140, 220],
+										starValues: [0, 80, 120, 200],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4404,24 +4487,62 @@ export const champions: ChampionData[] = [
 		],
 	},
 	{
+		apiName: `TFT_TrainingDummy`,
+		name: `Target Dummy`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFTDebug_Dummy.dds`,
+		cost: undefined,
+		starLevel: undefined,
+		teamSize: undefined,
+		isSpawn: true,
+		traits: [],
+		stats: {
+			armor: 30,
+			attackSpeed: 0.20000000298023224,
+			critChance: null,
+			critMultiplier: 0,
+			damage: 50,
+			hp: 550,
+			initialMana: 0,
+			magicResist: 30,
+			mana: 0,
+			moveSpeed: 1,
+			range: 1,
+		},
+		basicAttackMissileSpeed: undefined,
+		critAttackMissileSpeed: undefined,
+		passive: undefined,
+		spells: [],
+		missiles: [
+			{
+				name: `TFT_TrainingDummy_Spell`,
+				castTime: undefined,
+				missile: undefined,
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+		],
+	},
+	{
 		apiName: `TFT3_Teemo`,
 		name: `Teemo`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Teemo.TFT_Set3_Act2.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Teemo.dds`,
 		cost: 4,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{84f2a828}`, `{b8c79a1a}`],
+		traits: [`{baff2324}`, `{3a89370e}`],
 		stats: {
-			armor: 20,
-			attackSpeed: 0.949999988079071,
+			armor: 25,
+			attackSpeed: 0.8500000238418579,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 45,
-			hp: 600,
+			hp: 650,
 			initialMana: 0,
-			magicResist: 20,
-			mana: 70,
+			magicResist: 25,
+			mana: 60,
 			moveSpeed: 500,
 			range: 6,
 		},
@@ -4443,7 +4564,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'Damage': [0, 125, 175, 550],
+					'Damage': [0, 125, 200, 550],
 					'SlowDuration': [0, 3, 3, 3],
 					'DetonationDelay': [0, 3, 3, 3],
 				},
@@ -4452,11 +4573,11 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [0, 125, 175, 550],
+										starValues: [0, 125, 200, 550],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4492,17 +4613,17 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Thresh`,
 		name: `Thresh`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Thresh.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Thresh.dds`,
 		cost: 5,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{58272f02}`, `{3eed7287}`],
+		traits: [`{6e3d922e}`, `{cb5c7b63}`],
 		stats: {
 			armor: 55,
 			attackSpeed: 0.949999988079071,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 50,
 			hp: 950,
 			initialMana: 50,
@@ -4531,17 +4652,20 @@ export const champions: ChampionData[] = [
 				variables: {
 					'UnitCount': [1, 1, 1, 9],
 					'ManaBonus': [10, 25, 50, 200],
+					'FourCostSummonOdds': [0, 0, 0, 0.699999988079071],
+					'ThreeCostSummonOdds': [0, 0, 0, 0.30000001192092896],
+					'BaseStarLevelSummon': [0, 0, 0, 3],
 				},
 				calculations: {
-					'{ea71908d}': {
+					'Mana': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
-										variable: `{eb110abd}`,
-										starValues: undefined,
+										variable: `ManaBonus`,
+										starValues: [10, 25, 50, 200],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4559,24 +4683,24 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_TwistedFate`,
 		name: `Twisted Fate`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_TwistedFate.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_TwistedFate.dds`,
 		cost: 1,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{58272f02}`, `{eedbee24}`],
+		traits: [`{6e3d922e}`, `{ad8a7fd0}`],
 		stats: {
 			armor: 20,
 			attackSpeed: 0.699999988079071,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 45,
-			hp: 550,
+			hp: 500,
 			initialMana: 0,
 			magicResist: 20,
 			mana: 75,
 			moveSpeed: 500,
-			range: 3,
+			range: 4,
 		},
 		basicAttackMissileSpeed: 1500,
 		critAttackMissileSpeed: 1500,
@@ -4603,7 +4727,7 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `BaseDamage`,
@@ -4644,22 +4768,22 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Urgot`,
 		name: `Urgot`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Urgot.TFT_Set3_Act2.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Urgot.dds`,
 		cost: 5,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{66585784}`, `{6fa6d3c5}`],
+		traits: [`{36e3b5a0}`, `{5afc3539}`],
 		stats: {
 			armor: 40,
 			attackSpeed: 0.699999988079071,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 80,
 			hp: 950,
 			initialMana: 50,
 			magicResist: 40,
-			mana: 100,
+			mana: 120,
 			moveSpeed: 500,
 			range: 2,
 		},
@@ -4682,15 +4806,17 @@ export const champions: ChampionData[] = [
 					_missileSpeed: 1400,
 				},
 				variables: {
-					'ManaCostReduction': [0, 20, 30, 100],
+					'ManaCostReduction': [0, 20, 30, 120],
 					'ChannelDuration': [0, 3, 2, 1],
+					'FearDuration': [0, 0, 0, 1.100000023841858],
+					'TrueDamage': [2000, 2000, 2000, 10000],
 				},
 				calculations: {
 					'{064f9ea1}': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `{1f714854}`,
@@ -4731,21 +4857,21 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Vayne`,
 		name: `Vayne`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Vayne.TFT_Set3_Act2.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Vayne.dds`,
 		cost: 3,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{d9d7cfc9}`, `{b8c79a1a}`],
+		traits: [`{c86875cd}`, `{3a89370e}`],
 		stats: {
-			armor: 20,
-			attackSpeed: 0.8500000238418579,
+			armor: 25,
+			attackSpeed: 0.800000011920929,
 			critChance: 0.25,
-			critMultiplier: 1.5,
-			damage: 55,
-			hp: 500,
+			critMultiplier: 1.399999976158142,
+			damage: 60,
+			hp: 650,
 			initialMana: 0,
-			magicResist: 20,
+			magicResist: 25,
 			mana: 50,
 			moveSpeed: 500,
 			range: 6,
@@ -4759,21 +4885,37 @@ export const champions: ChampionData[] = [
 				castTime: 0.25,
 				missile: undefined,
 				variables: {
-					'TumbleAttackPercentAD': [150, 175, 200, 275],
-					'Duration': [0, 10, 10, 10],
+					'TumbleAttackPercentAD': [150, 125, 185, 315],
+					'Duration': [0, 8, 8, 8],
 				},
 				calculations: {
-					'{f5eb252e}': {
+					'Duration': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `Duration`,
-										starValues: [0, 10, 10, 10],
+										starValues: [0, 8, 8, 8],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: undefined,
+										starValues: undefined,
+										stat: `AD`,
+										ratio: 1,
 									},
 								],
 							},
@@ -4808,21 +4950,21 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Vi`,
 		name: `Vi`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Vi.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Vi.dds`,
 		cost: 3,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{d9d7cfc9}`, `{29ad8128}`],
+		traits: [`{c86875cd}`, `{9eb128cc}`],
 		stats: {
-			armor: 45,
+			armor: 50,
 			attackSpeed: 0.6499999761581421,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 60,
-			hp: 750,
+			hp: 850,
 			initialMana: 70,
-			magicResist: 40,
+			magicResist: 50,
 			mana: 140,
 			moveSpeed: 500,
 			range: 1,
@@ -4836,22 +4978,22 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {
-					'PrimaryDamage': [100, 350, 550, 1350],
+					'PrimaryDamage': [100, 250, 375, 625],
 					'CCDuration': [1.5, 2, 2.5, 3],
 					'MoveSpeed': [1000, 1000, 1000, 1000],
 					'OthersCCDuration': [0.25, 0.25, 0.25, 0.25],
-					'SecondaryDamage': [0, 150, 200, 600],
+					'SecondaryDamage': [0, 125, 185, 325],
 				},
 				calculations: {
 					'{177d8df5}': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `PrimaryDamage`,
-										starValues: [100, 350, 550, 1350],
+										starValues: [100, 250, 375, 625],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4859,15 +5001,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{42de401d}': {
+					'SecondaryDamage': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `SecondaryDamage`,
-										starValues: [0, 150, 200, 600],
+										starValues: [0, 125, 185, 325],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4885,24 +5027,24 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Viktor`,
 		name: `Viktor`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Viktor.TFT_Set3_Act2.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Viktor.dds`,
 		cost: 4,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{66585784}`, `{eedbee24}`],
+		traits: [`{36e3b5a0}`, `{ad8a7fd0}`],
 		stats: {
-			armor: 20,
+			armor: 25,
 			attackSpeed: 0.75,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 45,
 			hp: 650,
 			initialMana: 0,
-			magicResist: 20,
+			magicResist: 25,
 			mana: 60,
 			moveSpeed: 500,
-			range: 3,
+			range: 4,
 		},
 		basicAttackMissileSpeed: 2300,
 		critAttackMissileSpeed: 2300,
@@ -4922,19 +5064,19 @@ export const champions: ChampionData[] = [
 					tracksTarget: false,
 				},
 				variables: {
-					'PercentHealthDamage': [0, 15, 20, 80],
-					'FlatDamage': [0, 200, 325, 1500],
+					'PercentHealthDamage': [0, 8, 10, 35],
+					'FlatDamage': [0, 220, 330, 1100],
 				},
 				calculations: {
-					'{d8673fb0}': {
+					'PercentHealthDamage': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `PercentHealthDamage`,
-										starValues: [0, 15, 20, 80],
+										starValues: [0, 8, 10, 35],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4942,15 +5084,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{0c668f30}': {
+					'FlatDamage': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `FlatDamage`,
-										starValues: [0, 200, 325, 1500],
+										starValues: [0, 220, 330, 1100],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -5021,23 +5163,61 @@ export const champions: ChampionData[] = [
 		],
 	},
 	{
+		apiName: `TFT_Voidspawn`,
+		name: `Voidspawn`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT_Voidspawn.dds`,
+		cost: undefined,
+		starLevel: undefined,
+		teamSize: undefined,
+		isSpawn: true,
+		traits: [],
+		stats: {
+			armor: 20,
+			attackSpeed: 0.800000011920929,
+			critChance: 0.25,
+			critMultiplier: 1.2999999523162842,
+			damage: 0,
+			hp: undefined,
+			initialMana: 0,
+			magicResist: 20,
+			mana: 0,
+			moveSpeed: 550,
+			range: 1,
+		},
+		basicAttackMissileSpeed: undefined,
+		critAttackMissileSpeed: undefined,
+		passive: undefined,
+		spells: [],
+		missiles: [
+			{
+				name: `TFT_VoidSpawn_Passive`,
+				castTime: undefined,
+				missile: undefined,
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+		],
+	},
+	{
 		apiName: `TFT3_WuKong`,
 		name: `Wukong`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_WuKong.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_WuKong.dds`,
 		cost: 4,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{58272f02}`, `{0436f1e7}`],
+		traits: [`{6e3d922e}`, `{f4748833}`],
 		stats: {
-			armor: 55,
+			armor: 65,
 			attackSpeed: 0.75,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 50,
-			hp: 950,
+			hp: 1000,
 			initialMana: 50,
-			magicResist: 40,
+			magicResist: 65,
 			mana: 150,
 			moveSpeed: 500,
 			range: 1,
@@ -5060,9 +5240,9 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'Damage': [200, 300, 500, 4000],
+					'Damage': [200, 300, 450, 1500],
 					'Duration': [3, 3, 3, 3],
-					'StunDuration': [1.5, 2, 2, 5],
+					'StunDuration': [1.5, 2, 2, 8],
 					'HexRadius': [1, 1, 1, 1],
 				},
 				calculations: {
@@ -5070,11 +5250,11 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [200, 300, 500, 4000],
+										starValues: [200, 300, 450, 1500],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -5092,17 +5272,17 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Xayah`,
 		name: `Xayah`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Xayah.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Xayah.dds`,
 		cost: 1,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{d89e035d}`, `{fad58c1b}`],
+		traits: [`{00214e11}`, `{687503a7}`],
 		stats: {
 			armor: 20,
 			attackSpeed: 0.8999999761581421,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 50,
 			hp: 500,
 			initialMana: 0,
@@ -5121,19 +5301,19 @@ export const champions: ChampionData[] = [
 				missile: undefined,
 				variables: {
 					'Duration': [8, 8, 8, 8],
-					'AttackSpeed': [0.75, 1, 1.25, 1.5],
+					'AttackSpeed': [0.5, 1, 1.149999976158142, 1.2999999523162842],
 					'DamageReduction': [50, 50, 50, 50],
 				},
 				calculations: {
-					'ASBoost': {
+					'AS': {
 						asPercent: true,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `AttackSpeed`,
-										starValues: [0.75, 1, 1.25, 1.5],
+										starValues: [0.5, 1, 1.149999976158142, 1.2999999523162842],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -5170,17 +5350,17 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Xerath`,
 		name: `Xerath`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Xerath.TFT3_Set3_Xerath.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Xerath.dds`,
 		cost: 5,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{fd010015}`, `{eedbee24}`],
+		traits: [`{82156e19}`, `{ad8a7fd0}`],
 		stats: {
 			armor: 20,
 			attackSpeed: 0.8999999761581421,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 60,
 			hp: 700,
 			initialMana: 20,
@@ -5204,15 +5384,15 @@ export const champions: ChampionData[] = [
 					'Duration': [6, 6, 8, 45],
 				},
 				calculations: {
-					'{cdbc7d90}': {
+					'Damage': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
-										variable: `AoEDamage`,
-										starValues: [175, 80, 110, 625],
+										variable: `BaseDamage`,
+										starValues: [350, 320, 440, 2500],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -5220,15 +5400,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'Damage': {
+					'AoEDamage': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
-										variable: `BaseDamage`,
-										starValues: [350, 320, 440, 2500],
+										variable: `AoEDamage`,
+										starValues: [175, 80, 110, 625],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -5266,21 +5446,21 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_XinZhao`,
 		name: `Xin Zhao`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_XinZhao.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_XinZhao.dds`,
 		cost: 2,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{d89e035d}`, `{6fa6d3c5}`],
+		traits: [`{00214e11}`, `{5afc3539}`],
 		stats: {
 			armor: 45,
-			attackSpeed: 0.699999988079071,
+			attackSpeed: 0.75,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 60,
-			hp: 650,
+			hp: 750,
 			initialMana: 0,
-			magicResist: 30,
+			magicResist: 45,
 			mana: 60,
 			moveSpeed: 500,
 			range: 1,
@@ -5304,20 +5484,20 @@ export const champions: ChampionData[] = [
 				},
 				variables: {
 					'StunDuration': [1.5, 1.5, 1.5, 1.5],
-					'BonusDamage': [4, 200, 275, 375],
+					'BonusDamage': [4, 225, 340, 525],
 				},
 				calculations: {
 					'Damage': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
-										variable: `BonusDamage`,
-										starValues: [4, 200, 275, 375],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
+										variable: undefined,
+										starValues: undefined,
+										stat: `AD`,
+										ratio: 3,
 									},
 								],
 							},
@@ -5352,7 +5532,7 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `Damage`,
@@ -5373,21 +5553,21 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Yasuo`,
 		name: `Yasuo`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Yasuo.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Yasuo.dds`,
 		cost: 2,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{d5353f03}`, `{fad58c1b}`],
+		traits: [`{e070c997}`, `{687503a7}`],
 		stats: {
-			armor: 30,
+			armor: 40,
 			attackSpeed: 0.75,
 			critChance: 0.25,
-			critMultiplier: 1.5,
-			damage: 50,
-			hp: 700,
+			critMultiplier: 1.399999976158142,
+			damage: 55,
+			hp: 750,
 			initialMana: 0,
-			magicResist: 20,
+			magicResist: 40,
 			mana: 80,
 			moveSpeed: 500,
 			range: 1,
@@ -5415,17 +5595,33 @@ export const champions: ChampionData[] = [
 					'NumHits': [3, 4, 5, 6],
 				},
 				calculations: {
-					'{ce170957}': {
+					'Attacks': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `NumHits`,
 										starValues: [3, 4, 5, 6],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: undefined,
+										starValues: undefined,
+										stat: `AD`,
+										ratio: 1,
 									},
 								],
 							},
@@ -5441,21 +5637,21 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Zed`,
 		name: `Zed`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Zed.TFT_Set3_Act2.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Zed.dds`,
 		cost: 2,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{d5353f03}`, `{5ad3f68f}`],
+		traits: [`{e070c997}`, `{f3cff87b}`],
 		stats: {
-			armor: 25,
+			armor: 30,
 			attackSpeed: 0.75,
 			critChance: 0.25,
-			critMultiplier: 1.5,
-			damage: 55,
-			hp: 650,
+			critMultiplier: 1.399999976158142,
+			damage: 50,
+			hp: 700,
 			initialMana: 0,
-			magicResist: 20,
+			magicResist: 30,
 			mana: 0,
 			moveSpeed: 500,
 			range: 1,
@@ -5476,21 +5672,38 @@ export const champions: ChampionData[] = [
 				tracksTarget: true,
 			},
 			variables: {
-				'ADSteal': [0.25, 0.20000000298023224, 0.33000001311302185, 0.5],
-				'Damage': [0, 50, 90, 150],
+				'ADSteal': [0.25, 0.25, 0.25, 0.30000001192092896],
+				'Damage': [0, 60, 90, 150],
+				'TooltipDamage': [1, 1, 1, 1],
 			},
 			calculations: {
 				'Damage': {
 					asPercent: false,
 					parts: [
 						{
-							operator: undefined,
+							operator: `scale`,
 							subparts: [
 								{
 									variable: `Damage`,
-									starValues: [0, 50, 90, 150],
+									starValues: [0, 60, 90, 150],
 									stat: `AP`,
 									ratio: 0.009999999776482582,
+								},
+							],
+						},
+					],
+				},
+				'{253e9e6e}': {
+					asPercent: false,
+					parts: [
+						{
+							operator: `sum`,
+							subparts: [
+								{
+									variable: `TooltipDamage`,
+									starValues: [1, 1, 1, 1],
+									stat: `AD`,
+									ratio: 1,
 								},
 							],
 						},
@@ -5543,24 +5756,24 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Ziggs`,
 		name: `Ziggs`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Ziggs.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Ziggs.dds`,
 		cost: 1,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{d5353f03}`, `{0598a3c1}`],
+		traits: [`{e070c997}`, `{86c572f5}`],
 		stats: {
 			armor: 20,
 			attackSpeed: 0.699999988079071,
 			critChance: 0.25,
-			critMultiplier: 1.5,
-			damage: 40,
+			critMultiplier: 1.399999976158142,
+			damage: 45,
 			hp: 500,
 			initialMana: 0,
 			magicResist: 20,
 			mana: 40,
 			moveSpeed: 500,
-			range: 3,
+			range: 4,
 		},
 		basicAttackMissileSpeed: 1500,
 		critAttackMissileSpeed: 1500,
@@ -5581,18 +5794,18 @@ export const champions: ChampionData[] = [
 					_missileSpeed: 1750,
 				},
 				variables: {
-					'Damage': [70, 300, 400, 600],
+					'Damage': [70, 250, 375, 575],
 				},
 				calculations: {
 					'Damage': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [70, 300, 400, 600],
+										starValues: [70, 250, 375, 575],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -5629,7 +5842,7 @@ export const champions: ChampionData[] = [
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `Damage`,
@@ -5650,24 +5863,24 @@ export const champions: ChampionData[] = [
 	{
 		apiName: `TFT3_Zoe`,
 		name: `Zoe`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Zoe.TFT_Set3.dds`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT3_Zoe.dds`,
 		cost: 1,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{e3e85bde}`, `{eedbee24}`],
+		traits: [`{5cad0cca}`, `{ad8a7fd0}`],
 		stats: {
 			armor: 20,
 			attackSpeed: 0.699999988079071,
 			critChance: 0.25,
-			critMultiplier: 1.5,
+			critMultiplier: 1.399999976158142,
 			damage: 40,
 			hp: 500,
 			initialMana: 40,
 			magicResist: 20,
 			mana: 80,
 			moveSpeed: 500,
-			range: 3,
+			range: 4,
 		},
 		basicAttackMissileSpeed: 1900,
 		critAttackMissileSpeed: 2200,
@@ -5688,19 +5901,19 @@ export const champions: ChampionData[] = [
 					_missileSpeed: 3000,
 				},
 				variables: {
-					'Damage': [75, 200, 275, 400],
-					'StunDuration': [1.5, 2, 2.5, 4],
+					'Damage': [75, 175, 260, 400],
+					'StunDuration': [1.5, 2, 2, 2.5],
 				},
 				calculations: {
 					'Damage': {
 						asPercent: false,
 						parts: [
 							{
-								operator: undefined,
+								operator: `scale`,
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [75, 200, 275, 400],
+										starValues: [75, 175, 260, 400],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
