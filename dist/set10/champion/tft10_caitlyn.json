@@ -124,7 +124,9 @@
 			"mAffectsTypeFlags": 4106,
 			"mAffectsStatusFlags": 48,
 			"mRequiredUnitTags": {
-				"mTagList": "Champion",
+				"{a47810c1}": [
+					"Champion"
+				],
 				"__type": "ObjectTags"
 			},
 			"mAlternateName": "CaitlynAceintheHole",
@@ -310,7 +312,9 @@
 			"flags": 4,
 			"mAffectsTypeFlags": 22538,
 			"mRequiredUnitTags": {
-				"mTagList": "Champion",
+				"{a47810c1}": [
+					"Champion"
+				],
 				"__type": "ObjectTags"
 			},
 			"mAlternateName": "CaitlynAceintheHole",

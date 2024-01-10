@@ -85,7 +85,9 @@
 			"flags": 4,
 			"mAffectsTypeFlags": 22538,
 			"mRequiredUnitTags": {
-				"mTagList": "Champion",
+				"{a47810c1}": [
+					"Champion"
+				],
 				"__type": "ObjectTags"
 			},
 			"delayTotalTimePercent": 0.5,
@@ -191,7 +193,9 @@
 			"flags": 4,
 			"mAffectsTypeFlags": 22538,
 			"mRequiredUnitTags": {
-				"mTagList": "Champion",
+				"{a47810c1}": [
+					"Champion"
+				],
 				"__type": "ObjectTags"
 			},
 			"delayTotalTimePercent": 0.5,
@@ -259,7 +263,9 @@
 			"mAffectsTypeFlags": 11349,
 			"mAffectsStatusFlags": 32,
 			"mRequiredUnitTags": {
-				"mTagList": "Champion",
+				"{a47810c1}": [
+					"Champion"
+				],
 				"__type": "ObjectTags"
 			},
 			"mDataValues": [

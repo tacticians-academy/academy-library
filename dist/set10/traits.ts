@@ -195,7 +195,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'Duration': 2,
 					'{80cf3c31}': 0.20000000298023224,
-					'{bca0d684}': 0.15000000596046448,
+					'{bca0d684}': 0.10000000149011612,
 				},
 			},
 			{
@@ -205,7 +205,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'Duration': 2,
 					'{80cf3c31}': 0.6000000238418579,
-					'{bca0d684}': 0.15000000596046448,
+					'{bca0d684}': 0.10000000149011612,
 				},
 			},
 			{
@@ -215,7 +215,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'Duration': 2,
 					'{80cf3c31}': 1,
-					'{bca0d684}': 0.15000000596046448,
+					'{bca0d684}': 0.10000000149011612,
 				},
 			},
 		],
@@ -398,7 +398,7 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 3,
 				variables: {
-					'{b22e2df3}': 0.20000000298023224,
+					'{b22e2df3}': 0.15000000596046448,
 					'{c009a26f}': 1,
 				},
 			},
