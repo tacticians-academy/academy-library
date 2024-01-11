@@ -10,7 +10,7 @@
 	"scripts": {
 		"prepare": "node --loader ts-node/esm build/update-current.ts",
 		"etl:all": "node --loader ts-node/esm build/update-all.ts",
-		"publish": "pnpm i && npm version minor -m '🔖 %s' && read -p 'Press y to publish'; if [[ $REPLY =~ ^[Yy]$ ]]; then git push && git push --tags && npm publish --access public; fi"
+		"deploy": "pnpm i && npm version minor -m '🔖 %s' && read -p 'Press y to publish'; if [[ $REPLY =~ ^[Yy]$ ]]; then git push && git push --tags && npm publish --access public; fi"
 	},
 	"devDependencies": {
 		"@ky-is/eslint-config": "^2.5.1",
