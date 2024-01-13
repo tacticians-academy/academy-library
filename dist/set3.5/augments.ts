@@ -3465,9 +3465,9 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Twin Terror I`,
 		groupID: `twinTerror`,
-		desc: `When you field exactly 2 copies of a champion, they both gain @BonusStats*10@ HP, @BonusStats@% Attack Speed, and @BonusStats@% Critical Strike Chance. Anytime you 3-star, gain a 2-star copy.`,
+		desc: `When you field exactly 2 copies of a champion, they both gain @BonusStats*10@ HP and @BonusStats@% Attack Speed. Anytime you 3-star, gain a 2-star copy.`,
 		effects: {
-			'BonusStats': 25,
+			'BonusStats': 35,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Twin-Terror-II.TFT_Set10.tex`,
 	},
@@ -3475,9 +3475,9 @@ export const activeAugments: AugmentData[] = [
 		tier: 3,
 		name: `Twin Terror II`,
 		groupID: `twinTerror`,
-		desc: `When you field exactly 2 copies of a champion, they both gain @BonusStats*10@ HP, @BonusStats@% Attack Speed, and @BonusStats@% Critical Strike Chance. Anytime you 3-star, gain a 2-star copy.`,
+		desc: `When you field exactly 2 copies of a champion, they both gain @BonusStats*10@ HP and @BonusStats@% Attack Speed. Anytime you 3-star, gain a 2-star copy.`,
 		effects: {
-			'BonusStats': 35,
+			'BonusStats': 45,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Twin-Terror-III.TFT_Set10.tex`,
 	},

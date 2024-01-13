@@ -67,7 +67,9 @@
 			"mAffectsTypeFlags": 1029,
 			"mAffectsStatusFlags": 32,
 			"mRequiredUnitTags": {
-				"mTagList": "Champion",
+				"{a47810c1}": [
+					"{ea595ca6}"
+				],
 				"__type": "ObjectTags"
 			},
 			"mSpellTags": [

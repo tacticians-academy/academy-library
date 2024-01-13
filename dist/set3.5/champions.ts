@@ -1122,7 +1122,7 @@ export const champions: ChampionData[] = [
 				variables: {
 					'Damage': [0, 225, 330, 575],
 					'HexRadius': [2, 2, 2, 2],
-					'PercentCostIncrease': [3, 33, 33, 33],
+					'PercentCostIncrease': [3, 30, 30, 30],
 				},
 				calculations: {
 					'Damage': {
@@ -4101,7 +4101,7 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{4c7bc424}': {
+					'Damage': {
 						asPercent: false,
 						parts: [
 							{
@@ -4112,6 +4112,22 @@ export const champions: ChampionData[] = [
 										starValues: undefined,
 										stat: undefined,
 										ratio: undefined,
+									},
+								],
+							},
+						],
+					},
+					'{7cdd1c97}': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: undefined,
+										starValues: undefined,
+										stat: undefined,
+										ratio: 100,
 									},
 								],
 							},

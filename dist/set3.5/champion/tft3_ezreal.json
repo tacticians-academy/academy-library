@@ -94,12 +94,12 @@
 					"mName": "PercentCostIncrease",
 					"mValues": [
 						3,
-						33,
-						33,
-						33,
-						33,
-						33,
-						33
+						30,
+						30,
+						30,
+						30,
+						30,
+						30
 					],
 					"__type": "SpellDataValue"
 				}

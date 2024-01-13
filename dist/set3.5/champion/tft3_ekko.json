@@ -362,7 +362,9 @@
 		"mSpell": {
 			"mAffectsTypeFlags": 4106,
 			"mRequiredUnitTags": {
-				"mTagList": "Champion",
+				"{a47810c1}": [
+					"{ea595ca6}"
+				],
 				"__type": "ObjectTags"
 			},
 			"mSpellTags": [

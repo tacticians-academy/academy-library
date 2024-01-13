@@ -172,7 +172,9 @@
 		"mSpell": {
 			"mAffectsTypeFlags": 1029,
 			"mRequiredUnitTags": {
-				"mTagList": "Champion",
+				"{a47810c1}": [
+					"{ea595ca6}"
+				],
 				"__type": "ObjectTags"
 			},
 			"mAlternateName": "ZiggsW",

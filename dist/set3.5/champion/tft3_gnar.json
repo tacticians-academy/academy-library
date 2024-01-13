@@ -4,7 +4,9 @@
 		"mSpell": {
 			"mAffectsTypeFlags": 13327,
 			"mRequiredUnitTags": {
-				"mTagList": "Champion",
+				"{a47810c1}": [
+					"{ea595ca6}"
+				],
 				"__type": "ObjectTags"
 			},
 			"mSpellTags": [

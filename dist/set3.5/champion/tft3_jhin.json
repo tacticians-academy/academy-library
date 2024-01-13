@@ -4,7 +4,9 @@
 		"mSpell": {
 			"mAffectsTypeFlags": 6154,
 			"mRequiredUnitTags": {
-				"mTagList": "Champion",
+				"{a47810c1}": [
+					"{ea595ca6}"
+				],
 				"__type": "ObjectTags"
 			},
 			"mAlternateName": "CaitlynAceintheHole",
@@ -125,7 +127,9 @@
 		"mSpell": {
 			"mAffectsTypeFlags": 6154,
 			"mRequiredUnitTags": {
-				"mTagList": "Champion",
+				"{a47810c1}": [
+					"{ea595ca6}"
+				],
 				"__type": "ObjectTags"
 			},
 			"mAlternateName": "CaitlynAceintheHole",
@@ -247,7 +251,9 @@
 		"mSpell": {
 			"mAffectsTypeFlags": 6154,
 			"mRequiredUnitTags": {
-				"mTagList": "Champion",
+				"{a47810c1}": [
+					"{ea595ca6}"
+				],
 				"__type": "ObjectTags"
 			},
 			"mAlternateName": "CaitlynAceintheHole",
@@ -369,7 +375,9 @@
 		"mSpell": {
 			"mAffectsTypeFlags": 6154,
 			"mRequiredUnitTags": {
-				"mTagList": "Champion",
+				"{a47810c1}": [
+					"{ea595ca6}"
+				],
 				"__type": "ObjectTags"
 			},
 			"mAlternateName": "CaitlynAceintheHole",
@@ -796,7 +804,9 @@
 		"mSpell": {
 			"mAffectsTypeFlags": 4106,
 			"mRequiredUnitTags": {
-				"mTagList": "Champion",
+				"{a47810c1}": [
+					"{ea595ca6}"
+				],
 				"__type": "ObjectTags"
 			},
 			"mAlternateName": "CaitlynAceintheHole",

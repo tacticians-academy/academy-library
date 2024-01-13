@@ -131,7 +131,7 @@
 					"mDisplayAsPercent": true,
 					"__type": "GameCalculation"
 				},
-				"{4c7bc424}": {
+				"ModifiedDamage": {
 					"{cbcac618}": 5,
 					"mFormulaParts": [
 						{
@@ -151,6 +151,19 @@
 								"__type": "StatBySubPartCalculationPart"
 							},
 							"__type": "StatBySubPartCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{7cdd1c97}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mStat": 8,
+							"mCoefficient": 100,
+							"__type": "StatByCoefficientCalculationPart"
 						}
 					],
 					"__type": "GameCalculation"
