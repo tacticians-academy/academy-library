@@ -1,5 +1,5 @@
 import type { AugmentData, AugmentTierProbability, SetNumber } from '../../dist/index.js'
-import { importAugments, importAugmentTiers } from '../../dist/imports.js'
+import { importAugments, importSetData } from '../../dist/imports.js'
 
 import { loadHardcodedTXT } from '../helpers/files.js'
 import { getAugmentNameKey } from '../helpers/utils.js'
@@ -56,7 +56,7 @@ export async function validate(setNumber: SetNumber) {
 		const uniqueActiveAugmentNames = Object.keys(uniqueActiveAugments)
 		console.log('Augments Active:', activeAugments.length, '/', 'Unique:', uniqueActiveAugmentNames.length, '/', 'Unreleased:', inactiveAugments.length)
 
-		const { augmentTierProbabilities } = await importAugmentTiers(setNumber)
+		const { augmentTierProbabilities } = await importSetData(setNumber)
 		if (augmentTierProbabilities != null) {
 			recursiveCheckTiers(augmentTierProbabilities)
 		}

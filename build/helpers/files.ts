@@ -24,7 +24,7 @@ export function getPathToSet(setNumber: SetNumber, filename: string) {
 
 export async function loadHardcodedTXT(currentSetNumber: SetNumber, name: string) {
 	try {
-		const text = await fs.readFile(getPathToSet(currentSetNumber, `hardcoded/${name}.txt`), 'utf8')
+		const text = await fs.readFile(getPathToSet(currentSetNumber, `${name}.txt`), 'utf8')
 		return text
 			.split('\n')
 			.filter(line => line)

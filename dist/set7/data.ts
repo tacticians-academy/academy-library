@@ -1,6 +1,6 @@
-import type { AugmentTierProbability } from '../../index'
+import type { AugmentTierProbability } from '../index'
 
-export const augmentTierProbabilities: AugmentTierProbability = [100, [
+export const augmentTierProbabilities: AugmentTierProbability = [100, [ //TODO
 	[65, [
 		[60, [
 			[0], [77], [23],

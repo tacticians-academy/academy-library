@@ -85,8 +85,6 @@ export async function getPatchFor(setNumber: SetNumber, customPatchLine?: string
 	}
 	const { champions } = getSetDataFrom(setNumber, parentSetNumber, gameResponseJSON)
 
-	await fs.mkdir(getPathToSet(setNumber, 'hardcoded'), { recursive: true })
-
 	// await fs.writeFile(getPathToPatch(patchLine, '.game.raw.json'), JSON.stringify(gameResponseJSON, undefined, '\t'))
 	await fs.writeFile(getPathToSet(setNumber, '.game.raw.json'), JSON.stringify(gameResponseJSON, undefined, '\t'))
 	await fs.writeFile(getPathToSet(setNumber, '.map.raw.json'), JSON.stringify(mapResponseJSON, undefined, '\t'))
