@@ -1,6 +1,9 @@
 import { SetNumber } from '../dist/index.js'
 
 export async function importAugments(set: SetNumber) {
+	if (set === 3.5) {
+		return await import('./set3.5/augments.js')
+	}
 	if (set < 6) {
 		return {} as typeof import('./set6/augments.js')
 	}

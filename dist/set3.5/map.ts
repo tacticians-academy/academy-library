@@ -16,22 +16,7 @@ export const shopBadLuckProtection: Record<string, number> | undefined = {
 	'BeginTrackingTier5AtThisLevel': 9,
 }
 
-export const headlinerSystemParameters: Record<string, number> | undefined = {
-	'RecentTraitNoRepeatNum': 4,
-	'ChosenActivationStage': 1,
-	'ChosenActivationRound': 3,
-	'HeadlinerFrequency': 4,
-	'1CostCurationRollThreshold': 4,
-	'2CostCurationRollThreshold': 4,
-	'3CostCurationRollThreshold': 4,
-	'4CostCurationRollThreshold': 4,
-	'5CostCurationRollThreshold': 4,
-	'1CostChampNoRepeatNum': 7,
-	'2CostChampNoRepeatNum': 7,
-	'3CostChampNoRepeatNum': 7,
-	'4CostChampNoRepeatNum': 5,
-	'5CostChampNoRepeatNum': 4,
-}
+export const headlinerSystemParameters: Record<string, number> | undefined = undefined
 
 export const dropRates: Record<string, number[][]> = {
 	'Shop': [
