@@ -93,7 +93,6 @@ export async function getPatchFor(setNumber: SetNumber, customPatchLine?: string
 	console.log('Loading set', setNumber, 'patch', patchLine.toUpperCase(), '...', 'Units:', champions.length, '\n')
 
 	const setData = await importSetData(setNumber)
-	const TRAIT_DATA_SUBSTITUTIONS = setData?.TRAIT_DATA_SUBSTITUTIONS ?? {}
 
 	// Champions
 
@@ -200,8 +199,6 @@ export async function getPatchFor(setNumber: SetNumber, customPatchLine?: string
 			if (entryKey === 'TFTCharacterRecord') {
 				const stats = entry as ChampionJSONStats
 				stats.mLinkedTraits?.forEach(traitEntry => {
-					const rawTrait = traitEntry.TraitData ?? traitEntry['{053a1f33}']!
-					traitEntry.TraitData = TRAIT_DATA_SUBSTITUTIONS[rawTrait] ?? rawTrait
 					delete traitEntry['{053a1f33}']
 				})
 			}

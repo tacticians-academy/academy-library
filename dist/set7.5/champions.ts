@@ -89,7 +89,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{069a2033}`, `Cannoneer`],
+		traits: [`Darkflight`, `Cannoneer`],
 		stats: {
 			armor: 20,
 			attackSpeed: 0.699999988079071,
@@ -1704,7 +1704,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{a0bc9af5}`, `Dragonmancer`],
+		traits: [`Lagoon`, `Dragonmancer`],
 		stats: {
 			armor: 25,
 			attackSpeed: 0.800000011920929,
@@ -2465,7 +2465,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{a0bc9af5}`, `Bruiser`],
+		traits: [`Lagoon`, `Bruiser`],
 		stats: {
 			armor: 40,
 			attackSpeed: 0.6000000238418579,
@@ -2750,7 +2750,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{a0bc9af5}`, `Assassin`],
+		traits: [`Lagoon`, `Assassin`],
 		stats: {
 			armor: 45,
 			attackSpeed: 0.75,
@@ -2976,7 +2976,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: 2,
 		isSpawn: false,
-		traits: [`{eecf0f2b}`, `Dragon`, `Mage`],
+		traits: [`Prodigy`, `Dragon`, `Mage`],
 		stats: {
 			armor: 30,
 			attackSpeed: 0.75,
@@ -3062,7 +3062,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: 2,
 		isSpawn: false,
-		traits: [`{eecf0f2b}`, `Dragon`, `Cannoneer`],
+		traits: [`Prodigy`, `Dragon`, `Cannoneer`],
 		stats: {
 			armor: 30,
 			attackSpeed: 0.75,
@@ -3148,7 +3148,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: 2,
 		isSpawn: false,
-		traits: [`{eecf0f2b}`, `Dragon`, `Evoker`],
+		traits: [`Prodigy`, `Dragon`, `Evoker`],
 		stats: {
 			armor: 30,
 			attackSpeed: 0.75,
@@ -3617,7 +3617,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{069a2033}`, `Cavalier`],
+		traits: [`Darkflight`, `Cavalier`],
 		stats: {
 			armor: 45,
 			attackSpeed: 0.6000000238418579,
@@ -3676,7 +3676,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{069a2033}`, `Assassin`],
+		traits: [`Darkflight`, `Assassin`],
 		stats: {
 			armor: 30,
 			attackSpeed: 0.75,
@@ -4075,7 +4075,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{a0bc9af5}`, `Evoker`, `Mystic`],
+		traits: [`Lagoon`, `Evoker`, `Mystic`],
 		stats: {
 			armor: 30,
 			attackSpeed: 0.699999988079071,
@@ -4538,7 +4538,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: 2,
 		isSpawn: false,
-		traits: [`{a0bc9af5}`, `Mage`, `Dragon`],
+		traits: [`Lagoon`, `Mage`, `Dragon`],
 		stats: {
 			armor: 30,
 			attackSpeed: 0.75,
@@ -4942,7 +4942,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{a0bc9af5}`, `Mage`],
+		traits: [`Lagoon`, `Mage`],
 		stats: {
 			armor: 15,
 			attackSpeed: 0.699999988079071,
@@ -5084,7 +5084,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: 2,
 		isSpawn: false,
-		traits: [`{f5d9d8d5}`, `Dragon`],
+		traits: [`Monolith`, `Dragon`],
 		stats: {
 			armor: 100,
 			attackSpeed: 0.6499999761581421,
@@ -5354,7 +5354,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: 2,
 		isSpawn: false,
-		traits: [`{069a2033}`, `Dragon`],
+		traits: [`Darkflight`, `Dragon`],
 		stats: {
 			armor: 70,
 			attackSpeed: 0.6000000238418579,
@@ -6276,7 +6276,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{a0bc9af5}`, `Guardian`],
+		traits: [`Lagoon`, `Guardian`],
 		stats: {
 			armor: 45,
 			attackSpeed: 0.6000000238418579,
@@ -6370,7 +6370,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{a0bc9af5}`, `Cannoneer`],
+		traits: [`Lagoon`, `Cannoneer`],
 		stats: {
 			armor: 20,
 			attackSpeed: 0.75,
@@ -6897,46 +6897,6 @@ export const otherUnits: ChampionData[] = [
 				missile: undefined,
 				variables: {
 					'EggTurns': [10, 10, 10, 10],
-				},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-		],
-		missiles: [],
-	},
-	{
-		apiName: `TFT5_EmblemArmoryKey`,
-		name: `Tome of Traits`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT5_EmblemArmoryKey.dds`,
-		cost: undefined,
-		starLevel: undefined,
-		teamSize: undefined,
-		isSpawn: true,
-		traits: [],
-		stats: {
-			armor: 10,
-			attackSpeed: 1,
-			critChance: null,
-			critMultiplier: 0,
-			damage: 10,
-			hp: 10,
-			initialMana: 0,
-			magicResist: 10,
-			mana: 100,
-			moveSpeed: 0,
-			range: NaN,
-		},
-		basicAttackMissileSpeed: undefined,
-		critAttackMissileSpeed: undefined,
-		passive: undefined,
-		spells: [
-			{
-				name: `TFT5_EmblemArmoryKey`,
-				castTime: 0.5,
-				missile: undefined,
-				variables: {
-					'RoundsToHatch': [2, 2, 2, 2],
 				},
 				calculations: {},
 				cantCastWhileRooted: undefined,

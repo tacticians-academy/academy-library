@@ -17,6 +17,3 @@ export const COMBINE_POOL_APINAMES = {
 	'TFT9_RyzeTargon': 'TFT9_Ryze',
 	'TFT9_RyzeZaun': 'TFT9_Ryze',
 }
-
-export const TRAIT_DATA_SUBSTITUTIONS: Record<string, string> = {
-}

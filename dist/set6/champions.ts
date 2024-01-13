@@ -5975,45 +5975,4 @@ export const champions: ChampionData[] = [
 	},
 ]
 
-export const otherUnits: ChampionData[] = [
-	{
-		apiName: `TFT5_EmblemArmoryKey`,
-		name: `Tome of Traits`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT5_EmblemArmoryKey.dds`,
-		cost: undefined,
-		starLevel: undefined,
-		teamSize: undefined,
-		isSpawn: false,
-		traits: [],
-		stats: {
-			armor: 10,
-			attackSpeed: 1,
-			critChance: null,
-			critMultiplier: 0,
-			damage: 10,
-			hp: 10,
-			initialMana: 0,
-			magicResist: 10,
-			mana: 100,
-			moveSpeed: 0,
-			range: NaN,
-		},
-		basicAttackMissileSpeed: undefined,
-		critAttackMissileSpeed: undefined,
-		passive: undefined,
-		spells: [
-			{
-				name: `TFT5_EmblemArmoryKey`,
-				castTime: 0.5,
-				missile: undefined,
-				variables: {
-					'RoundsToHatch': [2, 2, 2, 2],
-				},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-		],
-		missiles: [],
-	},
-]
+export const otherUnits: ChampionData[] = []

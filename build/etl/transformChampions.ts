@@ -4,7 +4,6 @@ import fs from 'fs/promises'
 
 import { BonusKey } from '../../dist/index.js'
 import type { ChampionData, ChampionSpellData, SpellCalculations, SpellCalculationPart, SpellCalculationSubpart, SpellVariables, SetNumber } from '../../dist/index.js'
-import { TraitKey } from '../../dist/aggregated.js'
 import { importSetData } from '../../dist/imports.js'
 
 import { getPathToSet } from '../helpers/files.js'
@@ -25,15 +24,15 @@ const INVALID_SYMBOL_STARTING_REPLACEMENTS: Record<string, string> = {
 }
 
 export async function transformChampions(setNumber: SetNumber, parentSetNumber: SetNumber, champions: ChampionData[]) {
-	const { LOCKED_STAR_LEVEL, TRAIT_DATA_SUBSTITUTIONS, IGNORE_UNIT_APINAMES } = await importSetData(setNumber)
+	const { LOCKED_STAR_LEVEL, IGNORE_UNIT_APINAMES } = await importSetData(setNumber)
 
 	const playableUnits = champions
 		.filter(unit => {
-			if (!unit.icon || unit.stats.attackSpeed == null || unit.apiName.includes('ArmoryKey')) {
+			if (!unit.icon || unit.stats.attackSpeed == null) {
 				return false
 			}
 			unit.apiName = getAPIName(unit)
-			return !IGNORE_UNIT_APINAMES?.includes(unit.apiName)
+			return !unit.apiName.includes('ArmoryKey') && !IGNORE_UNIT_APINAMES?.includes(unit.apiName)
 		})
 		.sort(sortByName)
 
@@ -157,17 +156,8 @@ export async function transformChampions(setNumber: SetNumber, parentSetNumber: 
 			}
 		}
 
-		const knownTraits = Object.values(TRAIT_DATA_SUBSTITUTIONS)
 		const isSpawn = characterRecord.isSpawn || unit.stats.hp == null || unit.cost === 8 || unit.cost === 11
-		const traits = characterRecord.mLinkedTraits?.map(traitData => {
-			const traitAPIName = traitData.TraitData!
-			if (traitAPIName.startsWith('{')) {
-				console.error('ERR Unknown trait', apiName, traitAPIName, unit.traits.filter(t => !knownTraits.includes(t)))
-				return traitAPIName
-			}
-			const enumKey = getEnumKeyFrom(traitAPIName)
-			return TraitKey != null ? TraitKey[enumKey as keyof typeof TraitKey] ?? enumKey : enumKey
-		}) ?? []
+		const traits = unit.traits
 		return {
 			apiName,
 			name: unit.name,

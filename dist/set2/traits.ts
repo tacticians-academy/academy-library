@@ -1,4 +1,3 @@
-import { TraitKey } from '../index.js'
 import type { TraitData } from '../index'
 
 export const traits: TraitData[] = [

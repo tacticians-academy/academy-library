@@ -19,6 +19,3 @@ export const COMBINE_POOL_APINAMES = {
 	'TFT9_RyzeBilgewater': 'TFT9_Ryze',
 	'TFT9_RyzeIxtal': 'TFT9_Ryze',
 }
-
-export const TRAIT_DATA_SUBSTITUTIONS: Record<string, string> = {
-}

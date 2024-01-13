@@ -11,7 +11,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{b7aafb21}`],
+		traits: [`Threat`],
 		stats: {
 			armor: 60,
 			attackSpeed: 0.800000011920929,
@@ -156,7 +156,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{f2b1c0b9}`, `{47be087a}`, `{45dfa3cc}`],
+		traits: [`Ox Force`, `Mascot`, `Aegis`],
 		stats: {
 			armor: 50,
 			attackSpeed: 0.550000011920929,
@@ -254,7 +254,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{965ddf7b}`, `{f2b1c0b9}`, `{f95c4af3}`],
+		traits: [`Gadgeteen`, `Ox Force`, `Spellslinger`],
 		stats: {
 			armor: 40,
 			attackSpeed: 0.6000000238418579,
@@ -378,7 +378,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{01f1bb1a}`, `{e5770f78}`],
+		traits: [`LaserCorps`, `Sureshot`],
 		stats: {
 			armor: 15,
 			attackSpeed: 0.699999988079071,
@@ -478,7 +478,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{b7aafb21}`],
+		traits: [`Threat`],
 		stats: {
 			armor: 30,
 			attackSpeed: 0.75,
@@ -567,7 +567,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{b7aafb21}`],
+		traits: [`Threat`],
 		stats: {
 			armor: 50,
 			attackSpeed: 0.8999999761581421,
@@ -692,7 +692,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{2498fc94}`, `{6404759c}`],
+		traits: [`A.D.M.I.N.`, `Brawler`],
 		stats: {
 			armor: 45,
 			attackSpeed: 0.5,
@@ -750,7 +750,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{2498fc94}`, `{77545bea}`],
+		traits: [`A.D.M.I.N.`, `Renegade`],
 		stats: {
 			armor: 45,
 			attackSpeed: 0.75,
@@ -833,7 +833,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{53ed9e20}`, `{019b1fa8}`],
+		traits: [`Mecha:PRIME`, `Ace`],
 		stats: {
 			armor: 15,
 			attackSpeed: 0.75,
@@ -908,7 +908,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{a010ddd2}`, `{07b68d5d}`, `{45dfa3cc}`],
+		traits: [`Star Guardian`, `Prankster`, `Aegis`],
 		stats: {
 			armor: 60,
 			attackSpeed: 0.6000000238418579,
@@ -994,7 +994,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{fa08de4d}`, `{6cd6a3b2}`, `{042e98a3}`],
+		traits: [`Underground`, `Parallel`, `Quickdraw`],
 		stats: {
 			armor: 20,
 			attackSpeed: 0.699999988079071,
@@ -1178,7 +1178,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{6430b7e3}`, `{b7aafb21}`],
+		traits: [`Corrupted`, `Threat`],
 		stats: {
 			armor: 66,
 			attackSpeed: 0.75,
@@ -1242,7 +1242,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{f2b1c0b9}`, `{6fda2eb1}`],
+		traits: [`Ox Force`, `Duelist`],
 		stats: {
 			armor: 50,
 			attackSpeed: 0.800000011920929,
@@ -1318,7 +1318,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{48051565}`, `{6fda2eb1}`],
+		traits: [`Supers`, `Duelist`],
 		stats: {
 			armor: 35,
 			attackSpeed: 0.75,
@@ -1396,7 +1396,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{53ed9e20}`, `{17b5a27a}`],
+		traits: [`Mecha:PRIME`, `Defender`],
 		stats: {
 			armor: 60,
 			attackSpeed: 0.6000000238418579,
@@ -1777,7 +1777,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{965ddf7b}`, `{07b68d5d}`],
+		traits: [`Gadgeteen`, `Prankster`],
 		stats: {
 			armor: 35,
 			attackSpeed: 0.800000011920929,
@@ -1939,7 +1939,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{bec8a9a7}`, `{f95c4af3}`],
+		traits: [`Forecaster`, `Spellslinger`],
 		stats: {
 			armor: 45,
 			attackSpeed: 0.800000011920929,
@@ -2028,7 +2028,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{53ed9e20}`, `{6404759c}`],
+		traits: [`Mecha:PRIME`, `Brawler`],
 		stats: {
 			armor: 45,
 			attackSpeed: 0.800000011920929,
@@ -2131,7 +2131,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{da26e304}`, `{77545bea}`],
+		traits: [`Riftwalker`, `Renegade`],
 		stats: {
 			armor: 44,
 			attackSpeed: 0.800000011920929,
@@ -2300,7 +2300,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{48c38c97}`, `{07b68d5d}`],
+		traits: [`Anima Squad`, `Prankster`],
 		stats: {
 			armor: 20,
 			attackSpeed: 0.699999988079071,
@@ -2367,7 +2367,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{a010ddd2}`, `{042e98a3}`],
+		traits: [`Star Guardian`, `Quickdraw`],
 		stats: {
 			armor: 25,
 			attackSpeed: 0.800000011920929,
@@ -2466,7 +2466,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{fa08de4d}`, `{6fda2eb1}`],
+		traits: [`Underground`, `Duelist`],
 		stats: {
 			armor: 15,
 			attackSpeed: 0.6499999761581421,
@@ -2561,7 +2561,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{2498fc94}`, `{f95c4af3}`, `{e63e9aff}`],
+		traits: [`A.D.M.I.N.`, `Spellslinger`, `Hacker`],
 		stats: {
 			armor: 30,
 			attackSpeed: 0.699999988079071,
@@ -2639,7 +2639,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{48051565}`, `{fe7aec63}`, `{6404759c}`],
+		traits: [`Supers`, `Heart`, `Brawler`],
 		stats: {
 			armor: 50,
 			attackSpeed: 0.6499999761581421,
@@ -2730,7 +2730,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{53ed9e20}`, `{77545bea}`, `{45dfa3cc}`],
+		traits: [`Mecha:PRIME`, `Renegade`, `Aegis`],
 		stats: {
 			armor: 60,
 			attackSpeed: 0.699999988079071,
@@ -2813,7 +2813,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{c0d104e2}`, `{042e98a3}`, `{77545bea}`],
+		traits: [`InfiniTeam`, `Quickdraw`, `Renegade`],
 		stats: {
 			armor: 15,
 			attackSpeed: 0.699999988079071,
@@ -2935,7 +2935,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{965ddf7b}`, `{fe7aec63}`],
+		traits: [`Gadgeteen`, `Heart`],
 		stats: {
 			armor: 15,
 			attackSpeed: 0.699999988079071,
@@ -3037,7 +3037,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{a010ddd2}`, `{f95c4af3}`],
+		traits: [`Star Guardian`, `Spellslinger`],
 		stats: {
 			armor: 15,
 			attackSpeed: 0.699999988079071,
@@ -3105,7 +3105,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{48051565}`, `{47be087a}`],
+		traits: [`Supers`, `Mascot`],
 		stats: {
 			armor: 45,
 			attackSpeed: 0.5,
@@ -3164,7 +3164,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{48c38c97}`, `{019b1fa8}`, `{042e98a3}`],
+		traits: [`Anima Squad`, `Ace`, `Quickdraw`],
 		stats: {
 			armor: 30,
 			attackSpeed: 0.699999988079071,
@@ -3306,7 +3306,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{01f1bb1a}`, `{019b1fa8}`],
+		traits: [`LaserCorps`, `Ace`],
 		stats: {
 			armor: 70,
 			attackSpeed: 0.699999988079071,
@@ -3365,7 +3365,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{b7aafb21}`],
+		traits: [`Threat`],
 		stats: {
 			armor: 30,
 			attackSpeed: 0.75,
@@ -3454,7 +3454,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{48c38c97}`, `{47be087a}`],
+		traits: [`Anima Squad`, `Mascot`],
 		stats: {
 			armor: 45,
 			attackSpeed: 0.6499999761581421,
@@ -3545,7 +3545,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{a010ddd2}`, `{f95c4af3}`],
+		traits: [`Star Guardian`, `Spellslinger`],
 		stats: {
 			armor: 30,
 			attackSpeed: 0.75,
@@ -3753,7 +3753,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{a010ddd2}`, `{6fda2eb1}`],
+		traits: [`Star Guardian`, `Duelist`],
 		stats: {
 			armor: 50,
 			attackSpeed: 0.699999988079071,
@@ -3846,7 +3846,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{965ddf7b}`, `{47be087a}`],
+		traits: [`Gadgeteen`, `Mascot`],
 		stats: {
 			armor: 60,
 			attackSpeed: 0.20000000298023224,
@@ -3909,7 +3909,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{c0d104e2}`, `{fe7aec63}`],
+		traits: [`InfiniTeam`, `Heart`],
 		stats: {
 			armor: 40,
 			attackSpeed: 0.6000000238418579,
@@ -3994,7 +3994,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{965ddf7b}`, `{17b5a27a}`],
+		traits: [`Gadgeteen`, `Defender`],
 		stats: {
 			armor: 45,
 			attackSpeed: 0.550000011920929,
@@ -4105,7 +4105,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{da26e304}`, `{e63e9aff}`],
+		traits: [`Riftwalker`, `Hacker`],
 		stats: {
 			armor: 35,
 			attackSpeed: 0.75,
@@ -4218,7 +4218,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{b7aafb21}`],
+		traits: [`Threat`],
 		stats: {
 			armor: 55,
 			attackSpeed: 0.6499999761581421,
@@ -4302,7 +4302,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{a010ddd2}`, `{17b5a27a}`],
+		traits: [`Star Guardian`, `Defender`],
 		stats: {
 			armor: 50,
 			attackSpeed: 0.5,
@@ -4361,7 +4361,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{01f1bb1a}`, `{6404759c}`],
+		traits: [`LaserCorps`, `Brawler`],
 		stats: {
 			armor: 40,
 			attackSpeed: 0.6499999761581421,
@@ -4436,7 +4436,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{48c38c97}`, `{6404759c}`, `{17b5a27a}`],
+		traits: [`Anima Squad`, `Brawler`, `Defender`],
 		stats: {
 			armor: 45,
 			attackSpeed: 0.6499999761581421,
@@ -4559,7 +4559,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{fa08de4d}`, `{e5770f78}`, `{019b1fa8}`],
+		traits: [`Underground`, `Sureshot`, `Ace`],
 		stats: {
 			armor: 30,
 			attackSpeed: 0.800000011920929,
@@ -4706,7 +4706,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{c0d104e2}`, `{17b5a27a}`, `{e63e9aff}`],
+		traits: [`InfiniTeam`, `Defender`, `Hacker`],
 		stats: {
 			armor: 50,
 			attackSpeed: 0.550000011920929,
@@ -4764,7 +4764,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{c0d104e2}`, `{e5770f78}`],
+		traits: [`InfiniTeam`, `Sureshot`],
 		stats: {
 			armor: 20,
 			attackSpeed: 0.75,
@@ -4892,7 +4892,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{fa08de4d}`, `{f95c4af3}`, `{fe7aec63}`],
+		traits: [`Underground`, `Spellslinger`, `Heart`],
 		stats: {
 			armor: 25,
 			attackSpeed: 0.699999988079071,
@@ -5004,7 +5004,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{48c38c97}`, `{77545bea}`],
+		traits: [`Anima Squad`, `Renegade`],
 		stats: {
 			armor: 45,
 			attackSpeed: 0.550000011920929,
@@ -5087,7 +5087,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{a010ddd2}`, `{fe7aec63}`],
+		traits: [`Star Guardian`, `Heart`],
 		stats: {
 			armor: 40,
 			attackSpeed: 0.8500000238418579,
@@ -5228,7 +5228,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{c0d104e2}`, `{6fda2eb1}`, `{f95c4af3}`],
+		traits: [`InfiniTeam`, `Duelist`, `Spellslinger`],
 		stats: {
 			armor: 30,
 			attackSpeed: 0.800000011920929,
@@ -5488,7 +5488,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{c0d104e2}`, `{6cd6a3b2}`, `{e5770f78}`],
+		traits: [`InfiniTeam`, `Parallel`, `Sureshot`],
 		stats: {
 			armor: 40,
 			attackSpeed: 0.949999988079071,
@@ -5640,7 +5640,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{a010ddd2}`, `{b7aafb21}`],
+		traits: [`Star Guardian`, `Threat`],
 		stats: {
 			armor: 40,
 			attackSpeed: 1,
@@ -5936,7 +5936,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{48c38c97}`, `{6fda2eb1}`],
+		traits: [`Anima Squad`, `Duelist`],
 		stats: {
 			armor: 25,
 			attackSpeed: 0.800000011920929,
@@ -6028,7 +6028,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{da26e304}`, `{47be087a}`],
+		traits: [`Riftwalker`, `Mascot`],
 		stats: {
 			armor: 25,
 			attackSpeed: 0.75,
@@ -6185,7 +6185,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{fa08de4d}`, `{6404759c}`, `{45dfa3cc}`],
+		traits: [`Underground`, `Brawler`, `Aegis`],
 		stats: {
 			armor: 45,
 			attackSpeed: 0.6000000238418579,
@@ -6262,7 +6262,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{f2b1c0b9}`, `{77545bea}`, `{fe7aec63}`],
+		traits: [`Ox Force`, `Renegade`, `Heart`],
 		stats: {
 			armor: 50,
 			attackSpeed: 0.800000011920929,
@@ -6482,7 +6482,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{2498fc94}`, `{01f1bb1a}`, `{6404759c}`],
+		traits: [`A.D.M.I.N.`, `LaserCorps`, `Brawler`],
 		stats: {
 			armor: 50,
 			attackSpeed: 0.949999988079071,
@@ -6560,7 +6560,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{53ed9e20}`, `{17b5a27a}`],
+		traits: [`Mecha:PRIME`, `Defender`],
 		stats: {
 			armor: 40,
 			attackSpeed: 0.6000000238418579,
@@ -6619,7 +6619,7 @@ export const champions: ChampionData[] = [
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`{01f1bb1a}`, `{6fda2eb1}`],
+		traits: [`LaserCorps`, `Duelist`],
 		stats: {
 			armor: 40,
 			attackSpeed: 0.75,
@@ -6819,46 +6819,6 @@ export const otherUnits: ChampionData[] = [
 				missile: undefined,
 				variables: {
 					'EggTurns': [10, 10, 10, 10],
-				},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-		],
-		missiles: [],
-	},
-	{
-		apiName: `TFT5_EmblemArmoryKey`,
-		name: `Tome of Traits`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT5_EmblemArmoryKey.dds`,
-		cost: undefined,
-		starLevel: undefined,
-		teamSize: undefined,
-		isSpawn: true,
-		traits: [],
-		stats: {
-			armor: 10,
-			attackSpeed: 1,
-			critChance: null,
-			critMultiplier: 0,
-			damage: 10,
-			hp: 10,
-			initialMana: 0,
-			magicResist: 10,
-			mana: 100,
-			moveSpeed: 1,
-			range: NaN,
-		},
-		basicAttackMissileSpeed: undefined,
-		critAttackMissileSpeed: undefined,
-		passive: undefined,
-		spells: [
-			{
-				name: `TFT5_EmblemArmoryKey`,
-				castTime: 0.5,
-				missile: undefined,
-				variables: {
-					'RoundsToHatch': [2, 2, 2, 2],
 				},
 				calculations: {},
 				cantCastWhileRooted: undefined,

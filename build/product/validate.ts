@@ -57,7 +57,8 @@ export async function validate(setNumber: SetNumber) {
 		console.log('Augments Active:', activeAugments.length, '/', 'Unique:', uniqueActiveAugmentNames.length, '/', 'Unreleased:', inactiveAugments.length)
 
 		const { augmentTierProbabilities } = await importAugmentTiers(setNumber)
-
-		recursiveCheckTiers(augmentTierProbabilities)
+		if (augmentTierProbabilities != null) {
+			recursiveCheckTiers(augmentTierProbabilities)
+		}
 	}
 }
