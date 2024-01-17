@@ -1,8 +1,720 @@
 import type { ChampionData } from '../index'
 
-export enum ChampionKey { Bard = `TFT10_Bard`, Blitzcrank = `TFT10_Blitzcrank`, Caitlyn = `TFT10_Caitlyn`, Corki = `TFT10_Corki`, DiscoBall = `TFT10_DiscoBall`, Ekko = `TFT10_Ekko`, Evelynn = `TFT10_Evelynn`, Ezreal = `TFT10_Ezreal`, Garen = `TFT10_Garen`, Gnar = `TFT10_Gnar`, Gragas = `TFT10_Gragas`, Illaoi = `TFT10_Illaoi`, Jax = `TFT10_Jax`, Jhin = `TFT10_Jhin`, Jinx = `TFT10_Jinx`, KSante = `TFT10_KSante`, Kaisa = `TFT10_Kaisa`, Karthus = `TFT10_Karthus`, Katarina = `TFT10_Katarina`, Kayle = `TFT10_Kayle`, Kayn = `TFT10_Kayn`, Kennen = `TFT10_Kennen`, Lillia = `TFT10_Lillia`, Lucian = `TFT10_Lucian`, Lulu = `TFT10_Lulu`, LuluPolymorph = `TFT10_LuluPolymorph`, Lux = `TFT10_Lux`, MissFortune = `TFT10_MissFortune`, Mordekaiser = `TFT10_Mordekaiser`, Nami = `TFT10_Nami`, Neeko = `TFT10_Neeko`, Olaf = `TFT10_Olaf`, Pantheon = `TFT10_Pantheon`, Poppy = `TFT10_Poppy`, Qiyana = `TFT10_Qiyana`, Riven = `TFT10_Riven`, Samira = `TFT10_Samira`, Senna = `TFT10_Senna`, Seraphine = `TFT10_Seraphine`, Sett = `TFT10_Sett`, DesperadoProp = `TFT10_DesperadoProp`, PBJProp = `TFT10_PBJProp`, SLIMECrab = `TFT9_SLIME_Crab`, Sona = `TFT10_Sona`, TahmKench = `TFT10_TahmKench`, TrainingDummy = `TFT_TrainingDummy`, Taric = `TFT10_Taric`, IllaoiMinion = `TFT10_IllaoiMinion`, CountryHecarim = `TFT10_CountryHecarim`, Thresh = `TFT10_Thresh`, TwistedFate = `TFT10_TwistedFate`, Twitch = `TFT10_Twitch`, Urgot = `TFT10_Urgot`, Vex = `TFT10_Vex`, Vi = `TFT10_Vi`, Viego = `TFT10_Viego`, Voidspawn = `TFT_Voidspawn`, Yasuo = `TFT10_Yasuo`, Yone = `TFT10_Yone`, Yorick = `TFT10_Yorick`, YorickGhoulMelee = `TFT10_YorickGhoulMelee`, Zac = `TFT10_Zac`, Zed = `TFT10_Zed`, Ziggs = `TFT10_Ziggs` }
+export enum ChampionKey { Ahri = `TFT10_Ahri`, AkaliTrueDamage = `TFT10_Akali_TrueDamage`, Akali = `TFT10_Akali`, Amumu = `TFT10_Amumu`, Annie = `TFT10_Annie`, Aphelios = `TFT10_Aphelios`, Bard = `TFT10_Bard`, Blitzcrank = `TFT10_Blitzcrank`, Caitlyn = `TFT10_Caitlyn`, Corki = `TFT10_Corki`, DiscoBall = `TFT10_DiscoBall`, Ekko = `TFT10_Ekko`, Evelynn = `TFT10_Evelynn`, Ezreal = `TFT10_Ezreal`, Garen = `TFT10_Garen`, Gnar = `TFT10_Gnar`, Gragas = `TFT10_Gragas`, Illaoi = `TFT10_Illaoi`, Jax = `TFT10_Jax`, Jhin = `TFT10_Jhin`, Jinx = `TFT10_Jinx`, KSante = `TFT10_KSante`, Kaisa = `TFT10_Kaisa`, Karthus = `TFT10_Karthus`, Katarina = `TFT10_Katarina`, Kayle = `TFT10_Kayle`, Kayn = `TFT10_Kayn`, Kennen = `TFT10_Kennen`, Lillia = `TFT10_Lillia`, Lucian = `TFT10_Lucian`, Lulu = `TFT10_Lulu`, LuluPolymorph = `TFT10_LuluPolymorph`, Lux = `TFT10_Lux`, MissFortune = `TFT10_MissFortune`, Mordekaiser = `TFT10_Mordekaiser`, Nami = `TFT10_Nami`, Neeko = `TFT10_Neeko`, Olaf = `TFT10_Olaf`, Pantheon = `TFT10_Pantheon`, Poppy = `TFT10_Poppy`, Qiyana = `TFT10_Qiyana`, Riven = `TFT10_Riven`, Samira = `TFT10_Samira`, Senna = `TFT10_Senna`, Seraphine = `TFT10_Seraphine`, Sett = `TFT10_Sett`, DesperadoProp = `TFT10_DesperadoProp`, PBJProp = `TFT10_PBJProp`, SLIMECrab = `TFT9_SLIME_Crab`, Sona = `TFT10_Sona`, TahmKench = `TFT10_TahmKench`, TrainingDummy = `TFT_TrainingDummy`, Taric = `TFT10_Taric`, IllaoiMinion = `TFT10_IllaoiMinion`, CountryHecarim = `TFT10_CountryHecarim`, Thresh = `TFT10_Thresh`, TwistedFate = `TFT10_TwistedFate`, Twitch = `TFT10_Twitch`, Urgot = `TFT10_Urgot`, Vex = `TFT10_Vex`, Vi = `TFT10_Vi`, Viego = `TFT10_Viego`, Voidspawn = `TFT_Voidspawn`, Yasuo = `TFT10_Yasuo`, Yone = `TFT10_Yone`, Yorick = `TFT10_Yorick`, YorickGhoulMelee = `TFT10_YorickGhoulMelee`, Zac = `TFT10_Zac`, Zed = `TFT10_Zed`, Ziggs = `TFT10_Ziggs` }
 
 export const champions: ChampionData[] = [
+	{
+		apiName: `TFT10_Ahri`,
+		name: `Ahri`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT10_Ahri.TFT_Set10.tex`,
+		cost: 4,
+		starLevel: undefined,
+		teamSize: undefined,
+		isSpawn: false,
+		traits: [`K/DA`, `Spellweaver`],
+		stats: {
+			armor: 30,
+			attackSpeed: 0.75,
+			critChance: 0.25,
+			critMultiplier: 1.399999976158142,
+			damage: 40,
+			hp: 700,
+			initialMana: 0,
+			magicResist: 30,
+			mana: 30,
+			moveSpeed: 500,
+			range: 5,
+		},
+		basicAttackMissileSpeed: 1750,
+		critAttackMissileSpeed: 1750,
+		passive: undefined,
+		spells: [
+			{
+				name: `TFT10_AhriSpell`,
+				castTime: undefined,
+				missile: {
+					width: 130,
+					travelTime: undefined,
+					speedInitial: 1500,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {
+					damage: [0, 275, 410, 820],
+					kissDamage: [1.600000023841858, 480, 720, 1440],
+					stunduration: [0.25, 0.25, 0.25, 0.25],
+					'HeadlinerAbilityPower': [15, 15, 15, 15],
+					'ExtraCasts': [0, 0, 0, 1],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Damage`,
+										starValues: undefined,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'{304fb5c7}': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `{f560a3b6}`,
+										starValues: undefined,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+		],
+		missiles: [
+			{
+				name: `TFT10_AhriE`,
+				castTime: undefined,
+				missile: {
+					width: 130,
+					travelTime: undefined,
+					speedInitial: 1500,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {
+					damage: [0, 320, 480, 1600],
+					kissDamage: [1.600000023841858, 480, 720, 2400],
+					stunduration: [0.25, 0.25, 0.25, 0.25],
+					'HeadlinerAbilityPower': [15, 15, 15, 15],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `Damage`,
+										starValues: undefined,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'{304fb5c7}': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `{f560a3b6}`,
+										starValues: undefined,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+			{
+				name: `TFT10_AhriQ`,
+				castTime: undefined,
+				missile: {
+					width: 100,
+					travelTime: undefined,
+					speedInitial: 2000,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+		],
+	},
+	{
+		apiName: `TFT10_Akali_TrueDamage`,
+		name: `Akali`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT10_Akali_TrueDamage.TFT_Set10.tex`,
+		cost: 4,
+		starLevel: undefined,
+		teamSize: undefined,
+		isSpawn: false,
+		traits: [`True Damage`, `Executioner`, `Breakout`],
+		stats: {
+			armor: 65,
+			attackSpeed: 0.8999999761581421,
+			critChance: 0.25,
+			critMultiplier: 1.399999976158142,
+			damage: 70,
+			hp: 1000,
+			initialMana: 0,
+			magicResist: 65,
+			mana: 60,
+			moveSpeed: 500,
+			range: 1,
+		},
+		basicAttackMissileSpeed: 0,
+		critAttackMissileSpeed: 467,
+		passive: undefined,
+		spells: [
+			{
+				name: `TFT10_Akali_TrueDamageSpell`,
+				castTime: undefined,
+				missile: undefined,
+				variables: {
+					'BASE_DAMAGE': [0, 2.75, 2.75, 5.5],
+					'KUNAI_BASE_COUNT': [18, 18, 18, 27],
+					'BLING_HEAL_PERCENT': [20, 20, 20, 20],
+					'BLING_HEAL_PERCENT_EMPOWERED': [40, 40, 40, 40],
+					'HeadlinerHealth': [100, 100, 100, 100],
+					'HeadlinerAttackSpeed': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
+					'MANA_REFUND': [5, 12, 12, 20],
+				},
+				calculations: {
+					'{5d0b9563}': {
+						asPercent: false,
+						parts: [
+							{
+								operator: undefined,
+								subparts: [
+									{
+										variable: `{0ac5f700}`,
+										starValues: undefined,
+										stat: `AD`,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+					'{1c14de50}': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `{0607edf5}`,
+										starValues: undefined,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+		],
+		missiles: [
+			{
+				name: `TFT10_Akali_TrueDamageSpellMis`,
+				castTime: undefined,
+				missile: {
+					width: 60,
+					travelTime: undefined,
+					speedInitial: 3200,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: false,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
+			},
+		],
+	},
+	{
+		apiName: `TFT10_Akali`,
+		name: `Akali`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT10_Akali.TFT_Set10.tex`,
+		cost: 4,
+		starLevel: undefined,
+		teamSize: undefined,
+		isSpawn: false,
+		traits: [`K/DA`, `Executioner`, `Breakout`],
+		stats: {
+			armor: 50,
+			attackSpeed: 0.8500000238418579,
+			critChance: 0.25,
+			critMultiplier: 1.399999976158142,
+			damage: 60,
+			hp: 950,
+			initialMana: 10,
+			magicResist: 50,
+			mana: 50,
+			moveSpeed: 500,
+			range: 1,
+		},
+		basicAttackMissileSpeed: 0,
+		critAttackMissileSpeed: 467,
+		passive: undefined,
+		spells: [
+			{
+				name: `TFT10_AkaliSpell`,
+				castTime: undefined,
+				missile: {
+					width: 40,
+					travelTime: undefined,
+					speedInitial: 4000,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {
+					'Base_Dash_Damage': [0, 80, 120, 400],
+					'Base_Strike_Damage': [0, 1.899999976158142, 1.899999976158142, 3.799999952316284],
+					'HeadlinerHealth': [100, 100, 100, 100],
+					'HeadlinerAttackSpeed': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
+				},
+				calculations: {
+					'{4fd047a2}': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `{951d082b}`,
+										starValues: undefined,
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'{561545b4}': {
+						asPercent: false,
+						parts: [
+							{
+								operator: undefined,
+								subparts: [
+									{
+										variable: `{f03bb321}`,
+										starValues: undefined,
+										stat: `AD`,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+				},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+		],
+		missiles: [
+			{
+				name: `TFT10_AkaliSpellAfterimageMis`,
+				castTime: undefined,
+				missile: {
+					width: 10,
+					travelTime: undefined,
+					speedInitial: 6000,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+			{
+				name: `TFT10_AkaliSpellMis`,
+				castTime: undefined,
+				missile: {
+					width: 10,
+					travelTime: undefined,
+					speedInitial: 3000,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+		],
+	},
+	{
+		apiName: `TFT10_Amumu`,
+		name: `Amumu`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT10_Amumu.TFT_Set10.tex`,
+		cost: 3,
+		starLevel: undefined,
+		teamSize: undefined,
+		isSpawn: false,
+		traits: [`Emo`, `Guardian`],
+		stats: {
+			armor: 55,
+			attackSpeed: 0.6499999761581421,
+			critChance: 0.25,
+			critMultiplier: 1.399999976158142,
+			damage: 45,
+			hp: 900,
+			initialMana: 0,
+			magicResist: 55,
+			mana: 45,
+			moveSpeed: 500,
+			range: 1,
+		},
+		basicAttackMissileSpeed: undefined,
+		critAttackMissileSpeed: undefined,
+		passive: undefined,
+		spells: [
+			{
+				name: `TFT10_AmumuE`,
+				castTime: undefined,
+				missile: undefined,
+				variables: {
+					'ManaGain': [20, 20, 20, 20],
+					'ArmorGain': [4, 4, 4, 4],
+					'StackCap': [25, 25, 25, 25],
+					'MagicDamage': [0, 80, 120, 190],
+					'ARRatio': [1, 1.5, 1.75, 2],
+					'StunDuration': [1.5, 1.5, 1.5, 1.5],
+					'HeadlinerHealth': [150, 150, 150, 150],
+				},
+				calculations: {
+					'MagicDamage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `MagicDamage`,
+										starValues: [0, 80, 120, 190],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `sum`,
+								subparts: [
+									{
+										variable: undefined,
+										starValues: undefined,
+										stat: undefined,
+										ratio: undefined,
+									},
+									{
+										variable: `{72be5e09}`,
+										starValues: undefined,
+										stat: `Armor`,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+				},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+		],
+		missiles: [],
+	},
+	{
+		apiName: `TFT10_Annie`,
+		name: `Annie`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT10_Annie.TFT_Set10.tex`,
+		cost: 1,
+		starLevel: undefined,
+		teamSize: undefined,
+		isSpawn: false,
+		traits: [`Emo`, `Spellweaver`],
+		stats: {
+			armor: 20,
+			attackSpeed: 0.6499999761581421,
+			critChance: 0.25,
+			critMultiplier: 1.399999976158142,
+			damage: 40,
+			hp: 450,
+			initialMana: 0,
+			magicResist: 20,
+			mana: 50,
+			moveSpeed: 500,
+			range: 5,
+		},
+		basicAttackMissileSpeed: 1200,
+		critAttackMissileSpeed: 1200,
+		passive: undefined,
+		spells: [
+			{
+				name: `TFT10_AnnieQ`,
+				castTime: undefined,
+				missile: undefined,
+				variables: {
+					'MagicDamage': [0, 220, 330, 495],
+					'HealthThreshold': [0.3499999940395355, 0.3499999940395355, 0.3499999940395355, 0.3499999940395355],
+					'DamageRatio': [0.05000000074505806, 0.05000000074505806, 0.05000000074505806, 0.05000000074505806],
+					'HeadlinerAbilityPower': [20, 20, 20, 20],
+					'ExtraCasts': [1, 1, 1, 1],
+					'PyromaniaCount': [4, 4, 4, 4],
+					'BonusAS': [40, 40, 40, 40],
+					'SecondaryDamage': [0, 80, 120, 180],
+				},
+				calculations: {
+					'MagicDamage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `MagicDamage`,
+										starValues: [0, 220, 330, 495],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'SecondaryDamage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `SecondaryDamage`,
+										starValues: [0, 80, 120, 180],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+		],
+		missiles: [
+			{
+				name: `TFT10_AnnieQ_Missile`,
+				castTime: undefined,
+				missile: {
+					width: undefined,
+					travelTime: undefined,
+					speedInitial: 1399,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+					_missileSpeed: 1400,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
+			},
+			{
+				name: `TFT10_AnnieQ_Missile_2`,
+				castTime: undefined,
+				missile: {
+					width: undefined,
+					travelTime: undefined,
+					speedInitial: 1400,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
+			},
+		],
+	},
+	{
+		apiName: `TFT10_Aphelios`,
+		name: `Aphelios`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT10_Aphelios.TFT_Set10.tex`,
+		cost: 2,
+		starLevel: undefined,
+		teamSize: undefined,
+		isSpawn: false,
+		traits: [`Heartsteel`, `Rapidfire`],
+		stats: {
+			armor: 20,
+			attackSpeed: 0.75,
+			critChance: 0.25,
+			critMultiplier: 1.399999976158142,
+			damage: 55,
+			hp: 600,
+			initialMana: 40,
+			magicResist: 20,
+			mana: 135,
+			moveSpeed: 500,
+			range: 4,
+		},
+		basicAttackMissileSpeed: 2000,
+		critAttackMissileSpeed: 2000,
+		passive: undefined,
+		spells: [
+			{
+				name: `TFT10_ApheliosR`,
+				castTime: undefined,
+				missile: {
+					width: 60,
+					travelTime: undefined,
+					speedInitial: 1950,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {
+					'StunDuration': [0, 1.5, 1.5, 2],
+					'HeadlinerAttackDamage': [0.25, 0.25, 0.25, 0.25],
+					'ADRatio': [7.25, 7.25, 7.25, 7.25],
+					'Range': [1, 1, 1, 1],
+					'APMultiplier': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
+					'AOEStunDuration': [1, 1, 1, 1],
+				},
+				calculations: {
+					'PhysicalDamage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: undefined,
+								subparts: [
+									{
+										variable: `ADRatio`,
+										starValues: [7.25, 7.25, 7.25, 7.25],
+										stat: `AD`,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+					'AoEDamage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `product`,
+								subparts: [
+									{
+										variable: `ADRatio`,
+										starValues: [7.25, 7.25, 7.25, 7.25],
+										stat: `AD`,
+										ratio: 1,
+									},
+									{
+										variable: `APMultiplier`,
+										starValues: [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'{12d87ff8}': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `APMultiplier`,
+										starValues: [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+		],
+		missiles: [
+			{
+				name: `TFT10_ApheliosR_Mis`,
+				castTime: undefined,
+				missile: {
+					width: 97.25,
+					travelTime: undefined,
+					speedInitial: 2150,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+		],
+	},
 	{
 		apiName: `TFT10_Bard`,
 		name: `Bard`,

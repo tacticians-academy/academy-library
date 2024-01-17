@@ -1085,7 +1085,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 		id: `TFT7_Item_ShimmerscaleGoldmancersStaff`,
 		name: `Goldmancer's Staff`,
 		type: `completed`,
-		description: `Grant 1 Ability Power per gold in your bank (up to 30 gold) and a 40% chance to drop 2 gold on enemy kill. Gold generated this game: @TFTUnitProperty.item:TFT_Item_GoldGenerated@`,
+		description: `Grant 1 Ability Power per gold in your bank (up to 30 gold) and a 40% chance to drop 1 gold on enemy kill. Gold generated this game: @TFTUnitProperty.item:TFT_Item_GoldGenerated@`,
 		icon: `assets/maps/particles/tft/item_icons/ornn_items/goldmancersstaff`,
 		from: [],
 		unique: true,

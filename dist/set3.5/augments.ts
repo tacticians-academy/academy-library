@@ -1369,7 +1369,7 @@ export const activeAugments: AugmentData[] = [
 		desc: `Champions that aren't holding items have a @dropchance*100@% to drop @Gold@ gold on death.`,
 		effects: {
 			'Gold': 1,
-			'{a91a52c8}': 0.30000001192092896,
+			'{a91a52c8}': 0.3499999940395355,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Good-For-Something-I.TFT_Set10.tex`,
 	},
@@ -1920,9 +1920,9 @@ export const activeAugments: AugmentData[] = [
 		groupID: `lastStand`,
 		desc: `The first time you would be eliminated, you escape death and your team permanently gains @HP@ HP, @Resists@ Armor and Magic Resist, and @Omnivamp@% Omnivamp.`,
 		effects: {
-			'HP': 180,
-			'Omnivamp': 18,
-			'Resists': 18,
+			'HP': 160,
+			'Omnivamp': 16,
+			'Resists': 16,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Last-Stand-II.tex`,
 	},
@@ -1932,7 +1932,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `lategameSpecialist`,
 		desc: `When you reach Level @LevelReq@, gain @Gold@ gold.`,
 		effects: {
-			'Gold': 30,
+			'Gold': 33,
 			'LevelReq': 9,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Late-Game-Specialist-I.tex`,
@@ -3477,7 +3477,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `twinTerror`,
 		desc: `When you field exactly 2 copies of a champion, they both gain @BonusStats*10@ HP and @BonusStats@% Attack Speed. Anytime you 3-star, gain a 2-star copy.`,
 		effects: {
-			'BonusStats': 45,
+			'BonusStats': 50,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Twin-Terror-III.TFT_Set10.tex`,
 	},

@@ -326,7 +326,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `biggerShot`,
 		desc: `Every @BonusAttackThreshold@ attacks, Big Shots also fire a bomb that deals @ADPercent*100@% Attack Damage to enemies within 1 hex of the target. Gain a Kai'Sa.`,
 		effects: {
-			'ADPercent': 0.75,
+			'ADPercent': 0.8500000238418579,
 			'{063ab443}': 3,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Bigger-Shot-II.TFT_Set10.tex`,
@@ -1466,7 +1466,7 @@ export const activeAugments: AugmentData[] = [
 		desc: `Champions that aren't holding items have a @dropchance*100@% to drop @Gold@ gold on death.`,
 		effects: {
 			'Gold': 1,
-			'{a91a52c8}': 0.30000001192092896,
+			'{a91a52c8}': 0.3499999940395355,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Good-For-Something-I.TFT_Set10.tex`,
 	},
@@ -1574,7 +1574,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Heartthrobs`,
 		groupID: `heartthrobs`,
-		desc: `Keep @percent*100@% of the Heartsteel hearts you convert into rewards. Your Heartsteel champions gain @HP@ HP. Gain a K'Sante and an Aphelios.`,
+		desc: `Gain @percent*100@% more Heartsteel hearts. Your Heartsteel champions gain @HP@ HP. Gain a K'Sante and an Aphelios.`,
 		effects: {
 			'HP': 200,
 			'{75f9fa5a}': 0.20000000298023224,
@@ -2052,9 +2052,9 @@ export const activeAugments: AugmentData[] = [
 		groupID: `lastStand`,
 		desc: `The first time you would be eliminated, you escape death and your team permanently gains @HP@ HP, @Resists@ Armor and Magic Resist, and @Omnivamp@% Omnivamp.`,
 		effects: {
-			'HP': 180,
-			'Omnivamp': 18,
-			'Resists': 18,
+			'HP': 160,
+			'Omnivamp': 16,
+			'Resists': 16,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Last-Stand-II.tex`,
 	},
@@ -2064,7 +2064,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `lategameSpecialist`,
 		desc: `When you reach Level @LevelReq@, gain @Gold@ gold.`,
 		effects: {
-			'Gold': 30,
+			'Gold': 33,
 			'LevelReq': 9,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Late-Game-Specialist-I.tex`,
@@ -3279,7 +3279,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `submitToThePit`,
 		desc: `Combat Start: For each adjacent ally, Moshers gain @Stats@ Armor, @Stats@ Magic Resist, @Stats@% Attack Damage, @Stats@ Ability Power, and @Stats@% Attack Speed. Gain a Jax and a Gnar.`,
 		effects: {
-			'Stats': 3,
+			'Stats': 4,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Submit-To-The-Pit-II.TFT_Set10.tex`,
 	},
@@ -3584,7 +3584,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `tooBigToFail`,
 		desc: `On death, Bruisers deal @ExplosionMaxHPPercent@% of their max HP to enemies within @Hex@ hex. After @TimeInCombat@ seconds, expand the range to @ImprovedHex@ hexes. Gain an Olaf and a Gragas.`,
 		effects: {
-			'ExplosionMaxHPPercent': 40,
+			'ExplosionMaxHPPercent': 35,
 			'{867b15cb}': 15,
 			'{e2219cd2}': 2,
 			'{feb49d4a}': 1,
@@ -3725,9 +3725,9 @@ export const activeAugments: AugmentData[] = [
 		tier: 2,
 		name: `Twin Terror I`,
 		groupID: `twinTerror`,
-		desc: `When you field exactly 2 copies of a champion, they both gain @BonusStats*10@ HP, @BonusStats@% Attack Speed, and @BonusStats@% Critical Strike Chance. Anytime you 3-star, gain a 2-star copy.`,
+		desc: `When you field exactly 2 copies of a champion, they both gain @BonusStats*10@ HP and @BonusStats@% Attack Speed. Anytime you 3-star, gain a 2-star copy.`,
 		effects: {
-			'BonusStats': 25,
+			'BonusStats': 35,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Twin-Terror-II.TFT_Set10.tex`,
 	},
@@ -3735,9 +3735,9 @@ export const activeAugments: AugmentData[] = [
 		tier: 3,
 		name: `Twin Terror II`,
 		groupID: `twinTerror`,
-		desc: `When you field exactly 2 copies of a champion, they both gain @BonusStats*10@ HP, @BonusStats@% Attack Speed, and @BonusStats@% Critical Strike Chance. Anytime you 3-star, gain a 2-star copy.`,
+		desc: `When you field exactly 2 copies of a champion, they both gain @BonusStats*10@ HP and @BonusStats@% Attack Speed. Anytime you 3-star, gain a 2-star copy.`,
 		effects: {
-			'BonusStats': 35,
+			'BonusStats': 50,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Twin-Terror-III.TFT_Set10.tex`,
 	},

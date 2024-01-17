@@ -67,7 +67,7 @@ export const traits: TraitData[] = [
 				style: 1,
 				variables: {
 					'ExtraAttacks': 1,
-					'ProcChance': 40,
+					'ProcChance': 35,
 				},
 			},
 			{
@@ -76,7 +76,7 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'ExtraAttacks': 2,
-					'ProcChance': 40,
+					'ProcChance': 35,
 				},
 			},
 			{

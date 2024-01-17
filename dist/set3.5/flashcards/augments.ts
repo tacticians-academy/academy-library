@@ -782,14 +782,14 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `last stand`,
 		name: `Last Stand`,
 		tiers: [2],
-		description: `The first time you would be eliminated, you escape death and your team permanently gains 180 HP, 18 Armor and Magic Resist, and 18% Omnivamp.`,
+		description: `The first time you would be eliminated, you escape death and your team permanently gains 160 HP, 16 Armor and Magic Resist, and 16% Omnivamp.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/last-stand-ii`],
 	},
 	{
 		id: `lategame specialist`,
 		name: `Lategame Specialist`,
 		tiers: [1],
-		description: `When you reach Level 9, gain 30 gold.`,
+		description: `When you reach Level 9, gain 33 gold.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/late-game-specialist-i`],
 	},
 	{
@@ -1545,7 +1545,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `twin terror`,
 		name: `Twin Terror`,
 		tiers: [2, 3],
-		description: `When you field exactly 2 copies of a champion, they both gain 350/450 HP and 35/45% Attack Speed. Anytime you 3-star, gain a 2-star copy.`,
+		description: `When you field exactly 2 copies of a champion, they both gain 350/500 HP and 35/50% Attack Speed. Anytime you 3-star, gain a 2-star copy.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/twin-terror-ii.tft_set10`, `assets/maps/tft/icons/augments/hexcore/twin-terror-iii.tft_set10`],
 	},
 	{

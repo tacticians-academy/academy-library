@@ -241,7 +241,7 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 3,
 				variables: {
-					'AS': 0.10000000149011612,
+					'AS': 0.07999999821186066,
 					'Healing': 0.029999999329447746,
 					'{11b35e1c}': 1,
 				},
@@ -251,7 +251,7 @@ export const traits: TraitData[] = [
 				minUnits: 5,
 				style: 4,
 				variables: {
-					'AS': 0.15000000596046448,
+					'AS': 0.11999999731779099,
 					'Healing': 0.029999999329447746,
 					'{11b35e1c}': 2,
 				},
@@ -262,7 +262,7 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'AS': 0.20000000298023224,
-					'Healing': 0.05000000074505806,
+					'Healing': 0.03999999910593033,
 					'{11b35e1c}': 2,
 				},
 			},
@@ -708,7 +708,7 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 4,
 				variables: {
-					'{ad27681e}': 60,
+					'{ad27681e}': 70,
 					'{c771aaaa}': 20,
 				},
 			},
@@ -718,7 +718,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Set10_Pentakill`,
-		desc: `Pentakill champions reduce incoming damage by 15% and deal bonus damage. For each champon kill, a Pentakill champion rocks out and increases their damage bonus by @Kill_Bonus*100@%.<br><br>On the @Kill_Count@th kill, all Pentakill champions rock out and your team gains @Attack_Speed*100@% Attack Speed.<br><br><row>(@MinUnits@) @Bonus_Damage*100@% bonus damage</row><br><row>(@MinUnits@) @Bonus_Damage*100@% bonus damage</row><br><row>(@MinUnits@) @Bonus_Damage*100@% bonus damage</row><br><row>(@MinUnits@) 50% damage reduction and @Bonus_Damage*100@% bonus damage</row>`,
+		desc: `Pentakill champions reduce incoming damage by 15% and deal bonus damage. For each champion kill, a Pentakill champion rocks out and increases their damage bonus by @Kill_Bonus*100@%.<br><br>On the @Kill_Count@th kill, all Pentakill champions rock out and your team gains @Attack_Speed*100@% Attack Speed.<br><br><row>(@MinUnits@) @Bonus_Damage*100@% bonus damage</row><br><row>(@MinUnits@) @Bonus_Damage*100@% bonus damage</row><br><row>(@MinUnits@) @Bonus_Damage*100@% bonus damage</row><br><row>(@MinUnits@) 50% damage reduction and @Bonus_Damage*100@% bonus damage</row>`,
 		effects: [
 			{
 				maxUnits: 4,
@@ -769,8 +769,8 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
-					'{a3869f33}': 170,
-					'{f6501cf8}': 0.17000000178813934,
+					'{a3869f33}': 180,
+					'{f6501cf8}': 0.18000000715255737,
 				},
 			},
 			{
@@ -778,8 +778,8 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 4,
 				variables: {
-					'{a3869f33}': 280,
-					'{f6501cf8}': 0.2800000011920929,
+					'{a3869f33}': 300,
+					'{f6501cf8}': 0.30000001192092896,
 				},
 			},
 			{
@@ -787,8 +787,8 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 4,
 				variables: {
-					'{a3869f33}': 420,
-					'{f6501cf8}': 0.41999998688697815,
+					'{a3869f33}': 450,
+					'{f6501cf8}': 0.44999998807907104,
 				},
 			},
 		],

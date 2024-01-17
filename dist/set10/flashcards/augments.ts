@@ -117,7 +117,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `bigger shot`,
 		name: `Bigger Shot`,
 		tiers: [2],
-		description: `Every {BonusAttackThreshold} attacks, Big Shots also fire a bomb that deals 75% Attack Damage to enemies within 1 hex of the target. Gain a Kai'Sa.`,
+		description: `Every {BonusAttackThreshold} attacks, Big Shots also fire a bomb that deals 85% Attack Damage to enemies within 1 hex of the target. Gain a Kai'Sa.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/bigger-shot-ii.tft_set10`],
 	},
 	{
@@ -642,7 +642,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `heartthrobs`,
 		name: `Heartthrobs`,
 		tiers: [2],
-		description: `Keep {percent}% of the Heartsteel hearts you convert into rewards. Your Heartsteel champions gain 200 HP. Gain a K'Sante and an Aphelios.`,
+		description: `Gain {percent}% more Heartsteel hearts. Your Heartsteel champions gain 200 HP. Gain a K'Sante and an Aphelios.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/heart-collector-ii.tft_set10`],
 	},
 	{
@@ -866,14 +866,14 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `last stand`,
 		name: `Last Stand`,
 		tiers: [2],
-		description: `The first time you would be eliminated, you escape death and your team permanently gains 180 HP, 18 Armor and Magic Resist, and 18% Omnivamp.`,
+		description: `The first time you would be eliminated, you escape death and your team permanently gains 160 HP, 16 Armor and Magic Resist, and 16% Omnivamp.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/last-stand-ii`],
 	},
 	{
 		id: `lategame specialist`,
 		name: `Lategame Specialist`,
 		tiers: [1],
-		description: `When you reach Level 9, gain 30 gold.`,
+		description: `When you reach Level 9, gain 33 gold.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/late-game-specialist-i`],
 	},
 	{
@@ -1503,7 +1503,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `submit to the pit`,
 		name: `Submit to the Pit`,
 		tiers: [2],
-		description: `Combat Start: For each adjacent ally, Moshers gain 3 Armor, 3 Magic Resist, 3% Attack Damage, 3 Ability Power, and 3% Attack Speed. Gain a Jax and a Gnar.`,
+		description: `Combat Start: For each adjacent ally, Moshers gain 4 Armor, 4 Magic Resist, 4% Attack Damage, 4 Ability Power, and 4% Attack Speed. Gain a Jax and a Gnar.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/submit-to-the-pit-ii.tft_set10`],
 	},
 	{
@@ -1657,7 +1657,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `too big to fail`,
 		name: `Too Big to Fail`,
 		tiers: [2],
-		description: `On death, Bruisers deal 40% of their max HP to enemies within {Hex} hex. After {TimeInCombat} seconds, expand the range to {ImprovedHex} hexes. Gain an Olaf and a Gragas.`,
+		description: `On death, Bruisers deal 35% of their max HP to enemies within {Hex} hex. After {TimeInCombat} seconds, expand the range to {ImprovedHex} hexes. Gain an Olaf and a Gragas.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/too-big-to-fail-ii.tft_set10`],
 	},
 	{
@@ -1706,7 +1706,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `twin terror`,
 		name: `Twin Terror`,
 		tiers: [2, 3],
-		description: `When you field exactly 2 copies of a champion, they both gain 250/350 HP, 25/35% Attack Speed, and 25/35% Critical Strike Chance. Anytime you 3-star, gain a 2-star copy.`,
+		description: `When you field exactly 2 copies of a champion, they both gain 350/500 HP and 35/50% Attack Speed. Anytime you 3-star, gain a 2-star copy.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/twin-terror-ii.tft_set10`, `assets/maps/tft/icons/augments/hexcore/twin-terror-iii.tft_set10`],
 	},
 	{

@@ -2021,7 +2021,7 @@ export const ornnItems: ItemData[] = [
 			'APPerGold': 1,
 			'Mana': 15,
 			'OnKillProcChance': 0.4000000059604645,
-			'OnKillProcGold': 2,
+			'OnKillProcGold': 1,
 		},
 		from: null,
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Ornn_Items/GoldmancersStaff.tex`,
