@@ -53,8 +53,8 @@
 					"mValues": [
 						0,
 						110,
-						175,
-						875,
+						165,
+						550,
 						1000,
 						500,
 						600
@@ -306,98 +306,6 @@
 		},
 		"__type": "SpellObject"
 	},
-	"Characters/TFT3_Jinx/Spells/TFT3_JinxQAttack": {
-		"mScriptName": "TFT3_JinxQAttack",
-		"mSpell": {
-			"mAffectsTypeFlags": 6794,
-			"mAlternateName": "JinxQAttack",
-			"mEffectAmount": [
-				{
-					"value": [
-						60,
-						90,
-						120,
-						150,
-						180,
-						210,
-						240
-					],
-					"__type": "SpellEffectAmount"
-				}
-			],
-			"mCoefficient": 0.6000000238418579,
-			"delayCastOffsetPercent": -0.5,
-			"delayTotalTimePercent": -0.5,
-			"canCastWhileDisabled": true,
-			"mUseAutoattackCastTimeData": {
-				"__type": "UseAutoattackCastTimeData"
-			},
-			"castRange": [
-				10000,
-				10000,
-				10000,
-				10000,
-				10000,
-				10000,
-				10000
-			],
-			"castRadius": [
-				710,
-				710,
-				710,
-				710,
-				710,
-				710,
-				710
-			],
-			"castRadiusSecondary": [
-				280,
-				280,
-				280,
-				280,
-				280,
-				280,
-				280
-			],
-			"castConeDistance": 100,
-			"luaOnMissileUpdateDistanceInterval": 75,
-			"mMissileSpec": {
-				"mMissileWidth": 20,
-				"movementComponent": {
-					"mStartBoneName": "Cstm_Buffbone_Rocket_Launcher",
-					"mTargetBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
-					"mSpeed": 1650,
-					"__type": "FixedSpeedMovement"
-				},
-				"heightSolver": {
-					"mGravity": 2500,
-					"__type": "GravityHeightSolver"
-				},
-				"verticalFacing": {
-					"__type": "VerticalFacingFaceTarget"
-				},
-				"behaviors": [
-					{
-						"__type": "CastOnMovementComplete"
-					},
-					{
-						"__type": "DestroyOnMovementComplete"
-					}
-				],
-				"__type": "MissileSpecification"
-			},
-			"mCastType": 1,
-			"castFrame": 7,
-			"missileSpeed": 2000,
-			"mMissileEffectKey": "{9ae7bf55}",
-			"mLineWidth": 20,
-			"mHitEffectOrientType": 2,
-			"mHitBoneName": "R_hand",
-			"selectionPriority": 1,
-			"__type": "SpellDataResource"
-		},
-		"__type": "SpellObject"
-	},
 	"Characters/TFT3_Jinx/CharacterRecords/Root": {
 		"mCharacterName": "TFT3_Jinx",
 		"baseHP": 600,
@@ -435,7 +343,7 @@
 				"__type": "TFTTraitContributionData"
 			}
 		],
-		"{b6b01440}": "{34ed6daa}",
+		"{b6b01440}": "{7009cb66}",
 		"mMoveInterval": -0.10000000149011612,
 		"mMoveProximity": 180,
 		"mMoveRange": 500,

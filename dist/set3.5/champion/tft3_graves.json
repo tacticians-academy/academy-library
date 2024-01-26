@@ -116,58 +116,6 @@
 		},
 		"__type": "SpellObject"
 	},
-	"Characters/TFT3_Graves/Spells/TFT3_GravesP": {
-		"mScriptName": "TFT3_GravesP",
-		"mSpell": {
-			"mDataValues": [
-				{
-					"mName": "BonusDefense",
-					"mValues": [
-						3,
-						5,
-						7,
-						9,
-						11,
-						13,
-						15
-					],
-					"__type": "SpellDataValue"
-				}
-			],
-			"mSpellCalculations": {
-				"ModifiedDefense": {
-					"mFormulaParts": [
-						{
-							"mSubpart": {
-								"mDataValue": "BonusDefense",
-								"__type": "NamedDataValueCalculationPart"
-							},
-							"mRatio": 0.009999999776482582,
-							"mStyleTag": "noScale",
-							"{a5749b52}": "scaleAP",
-							"__type": "SubPartScaledProportionalToStat"
-						}
-					],
-					"__type": "GameCalculation"
-				}
-			},
-			"mAmmoUsed": [
-				0,
-				0,
-				0,
-				0,
-				0,
-				0,
-				0
-			],
-			"__type": "SpellDataResource"
-		},
-		"mBuff": {
-			"mDescription": "game_buff_tooltip_MalphiteShield",
-			"__type": "BuffData"
-		},
-		"__type": "SpellObject"
-	},
 	"Characters/TFT3_Graves/Spells/TFT3_GravesBasicAttack": {
 		"mScriptName": "TFT3_GravesBasicAttack",
 		"mSpell": {

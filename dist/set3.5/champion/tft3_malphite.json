@@ -83,6 +83,22 @@
 					],
 					"mDisplayAsPercent": true,
 					"__type": "GameCalculation"
+				},
+				"{b38c5929}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mStat": 11,
+							"mSubpart": {
+								"{88536426}": "ModifiedPercentHealth",
+								"__type": "{f3cbe7b2}"
+							},
+							"__type": "StatBySubPartCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
 				}
 			},
 			"mAmmoUsed": [

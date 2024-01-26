@@ -218,7 +218,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `Cybernetic`,
-		desc: `Cybernetics holding at least 1 item gain Attack Damage and HP.<br><br><expandRow>(@MinUnits@) +@ADAmp*100@ %i:scaleAD%, +@HPAmp@ %i:scaleHP%</expandRow>`,
+		desc: `Cybernetics holding at least 1 item gain Attack Damage and HP.<br><br><expandRow>(@MinUnits@) +@ADAmp*100@% %i:scaleAD%, +@HPAmp@ %i:scaleHP%</expandRow>`,
 		effects: [
 			{
 				maxUnits: 5,
@@ -244,7 +244,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `DarkStar`,
-		desc: `Whenever an allied champion dies, Dark Stars gain Attack Damage and Ability Power.<br><br><expandRow>(@MinUnits@) +@ADandAP@ %i:scaleAD%, +@ADandAP@ %i:scaleAP%</expandRow>`,
+		desc: `Whenever an allied champion dies, Dark Stars gain Attack Damage and Ability Power.<br><br><expandRow>(@MinUnits@) +@ADandAP@% %i:scaleAD%, +@ADandAP@ %i:scaleAP%</expandRow>`,
 		effects: [
 			{
 				maxUnits: 3,
@@ -583,7 +583,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `StarGuardian`,
-		desc: `Whenever a Star Guardian casts, all other Star Guardians gain Mana.<br><br><expandRow>(@MinUnits@) @ManaRestore@ %i:scaleMana%</expandRow>`,
+		desc: `Whenever a Star Guardian casts, an amount of Mana is divided between all other Star Guardians.<br><br><expandRow>(@MinUnits@) @ManaRestore@ %i:scaleMana%</expandRow>`,
 		effects: [
 			{
 				maxUnits: 5,

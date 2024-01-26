@@ -207,46 +207,7 @@ export const champions: ChampionData[] = [
 				uninterruptable: true,
 			},
 		],
-		missiles: [
-			{
-				name: `TFT3_AnnieQ`,
-				castTime: undefined,
-				missile: {
-					width: undefined,
-					travelTime: undefined,
-					speedInitial: 1400,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {
-					'BaseDamage': [0, 200, 400, 600],
-					'StunDuration': [2, 2, 2, 2],
-				},
-				calculations: {
-					'Damage': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `BaseDamage`,
-										starValues: [0, 200, 400, 600],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-				},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-		],
+		missiles: [],
 	},
 	{
 		apiName: `TFT3_Ashe`,
@@ -1001,24 +962,6 @@ export const champions: ChampionData[] = [
 		],
 		missiles: [
 			{
-				name: `TFT3_EkkoWMis`,
-				castTime: undefined,
-				missile: {
-					width: 120,
-					travelTime: 1,
-					speedInitial: 1500,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: undefined,
-			},
-			{
 				name: `TFT3_EkkoRDash`,
 				castTime: undefined,
 				missile: {
@@ -1034,47 +977,6 @@ export const champions: ChampionData[] = [
 				variables: {},
 				calculations: {},
 				cantCastWhileRooted: true,
-				uninterruptable: true,
-			},
-			{
-				name: `TFT3_EkkoW`,
-				castTime: 0.25,
-				missile: {
-					width: undefined,
-					travelTime: undefined,
-					speedInitial: 0,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {
-					'FieldDelay': [0, 1.75, 1.75, 1.75],
-					'FieldDuration': [1, 2.5, 4, 8],
-					'BonusAS': [50, 150, 250, 500],
-					'BonusMS': [75, 150, 300, 600],
-					'HexRadius': [3, 3, 3, 3],
-				},
-				calculations: {
-					'{1870685d}': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `BonusAS`,
-										starValues: [50, 150, 250, 500],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-				},
-				cantCastWhileRooted: undefined,
 				uninterruptable: true,
 			},
 		],
@@ -1146,45 +1048,7 @@ export const champions: ChampionData[] = [
 				uninterruptable: true,
 			},
 		],
-		missiles: [
-			{
-				name: `TFT3_EzrealQ`,
-				castTime: 0.25,
-				missile: {
-					width: 60,
-					travelTime: undefined,
-					speedInitial: 2000,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: false,
-				},
-				variables: {
-					'BaseDamage': [0, 200, 400, 800],
-				},
-				calculations: {
-					'Damage': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `BaseDamage`,
-										starValues: [0, 200, 400, 800],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-				},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-		],
+		missiles: [],
 	},
 	{
 		apiName: `TFT3_Fiora`,
@@ -1315,7 +1179,7 @@ export const champions: ChampionData[] = [
 				},
 				variables: {
 					'Delay': [1.5, 1.5, 1.5, 1.5],
-					'Damage': [0, 350, 525, 1100],
+					'Damage': [0, 350, 525, 1050],
 					'StunDuration': [1, 1.5, 1.5, 1.5],
 				},
 				calculations: {
@@ -1327,7 +1191,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [0, 350, 525, 1100],
+										starValues: [0, 350, 525, 1050],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1447,8 +1311,8 @@ export const champions: ChampionData[] = [
 					'RCCDuration': [1, 1, 1, 1],
 					'RKnockbackDistance': [600, 600, 600, 600],
 					'TransformDuration': [60, 60, 60, 60],
-					'TransformHealth': [50, 750, 1250, 5000],
-					'TransformAD': [0, 0.8999999761581421, 0.949999988079071, 4],
+					'TransformHealth': [50, 750, 1250, 2000],
+					'TransformAD': [0, 0.8999999761581421, 0.949999988079071, 2],
 				},
 				calculations: {
 					'Damage': {
@@ -1640,7 +1504,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'PercentADDamage': [0, 2.1500000953674316, 2.1500000953674316, 6],
+					'PercentADDamage': [0, 2.1500000953674316, 2.1500000953674316, 4.300000190734863],
 				},
 				calculations: {
 					'{4785a5c6}': {
@@ -1651,7 +1515,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `PercentADDamage`,
-										starValues: [0, 2.1500000953674316, 2.1500000953674316, 6],
+										starValues: [0, 2.1500000953674316, 2.1500000953674316, 4.300000190734863],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1680,47 +1544,7 @@ export const champions: ChampionData[] = [
 				uninterruptable: true,
 			},
 		],
-		missiles: [
-			{
-				name: `TFT3_IreliaR`,
-				castTime: undefined,
-				missile: {
-					width: 160,
-					travelTime: undefined,
-					speedInitial: 2000,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: false,
-				},
-				variables: {
-					'HexRange': [3, 3, 3, 3],
-					'InitialDamage': [100, 200, 300, 500],
-					'DashDamage': [0, 50, 100, 200],
-				},
-				calculations: {
-					'{aa83a1cf}': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `DashDamage`,
-										starValues: [0, 50, 100, 200],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-				},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-		],
+		missiles: [],
 	},
 	{
 		apiName: `TFT3_Janna`,
@@ -1959,7 +1783,7 @@ export const champions: ChampionData[] = [
 			attackSpeed: 2,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
-			damage: 85,
+			damage: 80,
 			hp: 650,
 			initialMana: 0,
 			magicResist: 25,
@@ -2026,210 +1850,7 @@ export const champions: ChampionData[] = [
 				uninterruptable: true,
 			},
 		],
-		missiles: [
-			{
-				name: `TFT3_JhinR_ShotFinal`,
-				castTime: 0.25,
-				missile: {
-					width: undefined,
-					travelTime: undefined,
-					speedInitial: 3200,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {
-					'Damage': [800, 800, 1200, 2000],
-				},
-				calculations: {
-					'Damage': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `Damage`,
-										starValues: [800, 800, 1200, 2000],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-				},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-			{
-				name: `TFT3_JhinR_Shot`,
-				castTime: 0.25,
-				missile: {
-					width: undefined,
-					travelTime: undefined,
-					speedInitial: 3200,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {
-					'Damage': [800, 800, 1200, 2000],
-				},
-				calculations: {
-					'Damage': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `Damage`,
-										starValues: [800, 800, 1200, 2000],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-				},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-			{
-				name: `TFT3_JhinR_Shot2`,
-				castTime: 0.25,
-				missile: {
-					width: undefined,
-					travelTime: undefined,
-					speedInitial: 3200,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {
-					'Damage': [800, 800, 1200, 2000],
-				},
-				calculations: {
-					'Damage': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `Damage`,
-										starValues: [800, 800, 1200, 2000],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-				},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-			{
-				name: `TFT3_JhinR_Shot3`,
-				castTime: 0.25,
-				missile: {
-					width: undefined,
-					travelTime: undefined,
-					speedInitial: 3200,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {
-					'Damage': [800, 800, 1200, 2000],
-				},
-				calculations: {
-					'Damage': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `Damage`,
-										starValues: [800, 800, 1200, 2000],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-				},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-			{
-				name: `TFT3_JhinR`,
-				castTime: 0.25,
-				missile: {
-					width: 40,
-					travelTime: undefined,
-					speedInitial: 3200,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: false,
-				},
-				variables: {
-					'Damage': [400, 400, 600, 1000],
-					'DamageFinal': [1200, 1200, 1800, 3000],
-				},
-				calculations: {
-					'Damage': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `Damage`,
-										starValues: [400, 400, 600, 1000],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-					'DamageFinal': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `DamageFinal`,
-										starValues: [1200, 1200, 1800, 3000],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-				},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-		],
+		missiles: [],
 	},
 	{
 		apiName: `TFT3_Jinx`,
@@ -2274,7 +1895,7 @@ export const champions: ChampionData[] = [
 					'HitWindow': [10, 10, 10, 10],
 					'BuffDuration': [60, 60, 60, 60],
 					'AttackSpeedBonus': [0.4000000059604645, 0.5, 0.75, 1.25],
-					'RocketDamage': [0, 110, 175, 875],
+					'RocketDamage': [0, 110, 165, 550],
 				},
 				calculations: {
 					'PercentAttackSpeed': {
@@ -2301,7 +1922,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `RocketDamage`,
-										starValues: [0, 110, 175, 875],
+										starValues: [0, 110, 165, 550],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2314,27 +1935,7 @@ export const champions: ChampionData[] = [
 				uninterruptable: undefined,
 			},
 		],
-		missiles: [
-			{
-				name: `TFT3_JinxQAttack`,
-				castTime: undefined,
-				missile: {
-					width: 20,
-					travelTime: undefined,
-					speedInitial: 1650,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-					_missileSpeed: 2000,
-				},
-				variables: {},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: undefined,
-			},
-		],
+		missiles: [],
 	},
 	{
 		apiName: `TFT3_Karma`,
@@ -2867,46 +2468,7 @@ export const champions: ChampionData[] = [
 				uninterruptable: true,
 			},
 		],
-		missiles: [
-			{
-				name: `TFT3_LuluR`,
-				castTime: 0.25,
-				missile: {
-					width: undefined,
-					travelTime: undefined,
-					speedInitial: 0,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {
-					'BuffDuration': [2, 8, 15, 60],
-					'CCDuration': [1.25, 1.25, 1.25, 1.25],
-				},
-				calculations: {
-					'{87c5a793}': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `BuffDuration`,
-										starValues: [2, 8, 15, 60],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-				},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-		],
+		missiles: [],
 	},
 	{
 		apiName: `TFT3_Malphite`,
@@ -2952,6 +2514,22 @@ export const champions: ChampionData[] = [
 									starValues: [0.3499999940395355, 0.4000000059604645, 0.44999998807907104, 0.699999988079071],
 									stat: `AP`,
 									ratio: 0.009999999776482582,
+								},
+							],
+						},
+					],
+				},
+				'{b38c5929}': {
+					asPercent: false,
+					parts: [
+						{
+							operator: `scale`,
+							subparts: [
+								{
+									variable: undefined,
+									starValues: undefined,
+									stat: `HP`,
+									ratio: 1,
 								},
 							],
 						},
@@ -3047,81 +2625,6 @@ export const champions: ChampionData[] = [
 			},
 		],
 		missiles: [
-			{
-				name: `TFT3_MasterYiQ_Missile`,
-				castTime: 0.10000000149011612,
-				missile: {
-					width: undefined,
-					travelTime: 0.20000000298023224,
-					speedInitial: 2000,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {},
-				calculations: {},
-				cantCastWhileRooted: true,
-				uninterruptable: true,
-			},
-			{
-				name: `TFT3_MasterYiQ`,
-				castTime: 0.5,
-				missile: {
-					width: undefined,
-					travelTime: undefined,
-					speedInitial: 20,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {
-					'Damage': [200, 200, 300, 600],
-					'Bounces': [4, 4, 4, 4],
-					'BounceRange': [2, 2, 2, 2],
-				},
-				calculations: {
-					'Damage': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `Damage`,
-										starValues: [200, 200, 300, 600],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-				},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-			{
-				name: `TFT3_MasterYiQ_MissileBounce`,
-				castTime: 0.10000000149011612,
-				missile: {
-					width: undefined,
-					travelTime: 0.20000000298023224,
-					speedInitial: 2000,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {},
-				calculations: {},
-				cantCastWhileRooted: true,
-				uninterruptable: true,
-			},
 			{
 				name: `TFT3_MasterYiWReflectMissile`,
 				castTime: undefined,
@@ -3273,19 +2776,7 @@ export const champions: ChampionData[] = [
 				uninterruptable: true,
 			},
 		],
-		missiles: [
-			{
-				name: `TFT3_MordekaiserE`,
-				castTime: 0.5,
-				missile: undefined,
-				variables: {
-					'Damage': [50, 350, 650, 950],
-				},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-		],
+		missiles: [],
 	},
 	{
 		apiName: `TFT3_Nautilus`,
@@ -3690,10 +3181,10 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'Damage': [50, 100, 150, 600],
+					'Damage': [50, 100, 150, 500],
 					'SlashHexRadius': [1, 1, 1, 1],
 					'DamageFinal': [0, 300, 500, 1500],
-					'Shield': [0, 175, 250, 1000],
+					'Shield': [0, 175, 250, 600],
 					'ShieldDuration': [4, 4, 4, 4],
 				},
 				calculations: {
@@ -3705,7 +3196,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [50, 100, 150, 600],
+										starValues: [50, 100, 150, 500],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3721,7 +3212,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Shield`,
-										starValues: [0, 175, 250, 1000],
+										starValues: [0, 175, 250, 600],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4410,9 +3901,9 @@ export const champions: ChampionData[] = [
 			critMultiplier: 1.399999976158142,
 			damage: 45,
 			hp: 650,
-			initialMana: 30,
+			initialMana: 20,
 			magicResist: 25,
-			mana: 80,
+			mana: 70,
 			moveSpeed: 500,
 			range: 4,
 		},
@@ -5524,47 +5015,7 @@ export const champions: ChampionData[] = [
 				uninterruptable: true,
 			},
 		],
-		missiles: [
-			{
-				name: `TFT3_XinZhaoR`,
-				castTime: 0.25,
-				missile: {
-					width: undefined,
-					travelTime: undefined,
-					speedInitial: 828.5,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {
-					'Damage': [100, 100, 200, 300],
-					'StunDuration': [1, 1, 1, 1],
-					'ImmuneDuration': [4, 4, 6, 8],
-				},
-				calculations: {
-					'Damage': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `Damage`,
-										starValues: [100, 100, 200, 300],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-				},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-		],
+		missiles: [],
 	},
 	{
 		apiName: `TFT3_Yasuo`,
@@ -5834,47 +5285,7 @@ export const champions: ChampionData[] = [
 				uninterruptable: true,
 			},
 		],
-		missiles: [
-			{
-				name: `TFT3_ZiggsW`,
-				castTime: undefined,
-				missile: {
-					width: undefined,
-					travelTime: undefined,
-					speedInitial: 1750,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: false,
-				},
-				variables: {
-					'Damage': [50, 150, 250, 400],
-					'HexRange': [1, 1, 1, 1],
-					'StunDuration': [1.5, 1.5, 1.5, 1.5],
-				},
-				calculations: {
-					'Damage': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `Damage`,
-										starValues: [50, 150, 250, 400],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-				},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-		],
+		missiles: [],
 	},
 	{
 		apiName: `TFT3_Zoe`,

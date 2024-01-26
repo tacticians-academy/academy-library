@@ -304,6 +304,7 @@
 		],
 		"unitTagsString": "Champion",
 		"flags": 9446664,
+		"{b6b01440}": "{2ccf900f}",
 		"mMoveInterval": -0.10000000149011612,
 		"mMoveProximity": 180,
 		"mMoveRange": 500,

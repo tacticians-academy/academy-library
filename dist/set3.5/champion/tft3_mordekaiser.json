@@ -1,45 +1,4 @@
 {
-	"Characters/TFT3_Mordekaiser/Spells/TFT3_MordekaiserE": {
-		"mScriptName": "TFT3_MordekaiserE",
-		"mSpell": {
-			"mAffectsTypeFlags": 6154,
-			"mSpellTags": [
-				"Trait_ImmobilizingCCSpell"
-			],
-			"mDataValues": [
-				{
-					"mName": "Damage",
-					"mValues": [
-						50,
-						350,
-						650,
-						950,
-						1250,
-						1550,
-						1850
-					],
-					"__type": "SpellDataValue"
-				}
-			],
-			"mCastTime": 0.5,
-			"delayTotalTimePercent": -1,
-			"mCantCancelWhileWindingUp": true,
-			"mIgnoreRangeCheck": true,
-			"castRange": [
-				25000,
-				25000,
-				25000,
-				25000,
-				25000,
-				25000,
-				25000
-			],
-			"castFrame": 14,
-			"{00f7e5bc}": true,
-			"__type": "SpellDataResource"
-		},
-		"__type": "SpellObject"
-	},
 	"Characters/TFT3_Mordekaiser/Spells/TFT3_MordekaiserW": {
 		"mScriptName": "TFT3_MordekaiserW",
 		"mSpell": {
