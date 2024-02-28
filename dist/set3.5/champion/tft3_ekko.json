@@ -227,7 +227,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{253e9e6e}": {
+				"FinalAttackDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,

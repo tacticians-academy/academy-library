@@ -1,6 +1,6 @@
 import type { ChampionData } from '../index'
 
-export enum ChampionKey { Ahri = `TFT10_Ahri`, AkaliTrueDamage = `TFT10_Akali_TrueDamage`, Akali = `TFT10_Akali`, Amumu = `TFT10_Amumu`, Annie = `TFT10_Annie`, Aphelios = `TFT10_Aphelios`, Bard = `TFT10_Bard`, Blitzcrank = `TFT10_Blitzcrank`, Caitlyn = `TFT10_Caitlyn`, Corki = `TFT10_Corki`, DiscoBall = `TFT10_DiscoBall`, Ekko = `TFT10_Ekko`, Evelynn = `TFT10_Evelynn`, Ezreal = `TFT10_Ezreal`, Garen = `TFT10_Garen`, Gnar = `TFT10_Gnar`, Gragas = `TFT10_Gragas`, Illaoi = `TFT10_Illaoi`, Jax = `TFT10_Jax`, Jhin = `TFT10_Jhin`, Jinx = `TFT10_Jinx`, KSante = `TFT10_KSante`, Kaisa = `TFT10_Kaisa`, Karthus = `TFT10_Karthus`, Katarina = `TFT10_Katarina`, Kayle = `TFT10_Kayle`, Kayn = `TFT10_Kayn`, Kennen = `TFT10_Kennen`, Lillia = `TFT10_Lillia`, Lucian = `TFT10_Lucian`, Lulu = `TFT10_Lulu`, LuluPolymorph = `TFT10_LuluPolymorph`, Lux = `TFT10_Lux`, MissFortune = `TFT10_MissFortune`, Mordekaiser = `TFT10_Mordekaiser`, Nami = `TFT10_Nami`, Neeko = `TFT10_Neeko`, Olaf = `TFT10_Olaf`, Pantheon = `TFT10_Pantheon`, Poppy = `TFT10_Poppy`, Qiyana = `TFT10_Qiyana`, Riven = `TFT10_Riven`, Samira = `TFT10_Samira`, Senna = `TFT10_Senna`, Seraphine = `TFT10_Seraphine`, Sett = `TFT10_Sett`, DesperadoProp = `TFT10_DesperadoProp`, PBJProp = `TFT10_PBJProp`, SLIMECrab = `TFT9_SLIME_Crab`, Sona = `TFT10_Sona`, TahmKench = `TFT10_TahmKench`, TrainingDummy = `TFT_TrainingDummy`, Taric = `TFT10_Taric`, IllaoiMinion = `TFT10_IllaoiMinion`, CountryHecarim = `TFT10_CountryHecarim`, Thresh = `TFT10_Thresh`, TwistedFate = `TFT10_TwistedFate`, Twitch = `TFT10_Twitch`, Urgot = `TFT10_Urgot`, Vex = `TFT10_Vex`, Vi = `TFT10_Vi`, Viego = `TFT10_Viego`, Voidspawn = `TFT_Voidspawn`, Yasuo = `TFT10_Yasuo`, Yone = `TFT10_Yone`, Yorick = `TFT10_Yorick`, YorickGhoulMelee = `TFT10_YorickGhoulMelee`, Zac = `TFT10_Zac`, Zed = `TFT10_Zed`, Ziggs = `TFT10_Ziggs` }
+export enum ChampionKey { Ahri = `TFT10_Ahri`, AkaliTrueDamage = `TFT10_Akali_TrueDamage`, Akali = `TFT10_Akali`, Amumu = `TFT10_Amumu`, Annie = `TFT10_Annie`, Aphelios = `TFT10_Aphelios`, Bard = `TFT10_Bard`, Blitzcrank = `TFT10_Blitzcrank`, Caitlyn = `TFT10_Caitlyn`, Corki = `TFT10_Corki`, DiscoBall = `TFT10_DiscoBall`, Ekko = `TFT10_Ekko`, Evelynn = `TFT10_Evelynn`, Ezreal = `TFT10_Ezreal`, Garen = `TFT10_Garen`, Gnar = `TFT10_Gnar`, Gragas = `TFT10_Gragas`, Illaoi = `TFT10_Illaoi`, Jax = `TFT10_Jax`, Jhin = `TFT10_Jhin`, Jinx = `TFT10_Jinx`, KSante = `TFT10_KSante`, Kaisa = `TFT10_Kaisa`, Karthus = `TFT10_Karthus`, Katarina = `TFT10_Katarina`, Kayle = `TFT10_Kayle`, Kayn = `TFT10_Kayn`, Kennen = `TFT10_Kennen`, Lillia = `TFT10_Lillia`, Lucian = `TFT10_Lucian`, Lulu = `TFT10_Lulu`, LuluPolymorph = `TFT10_LuluPolymorph`, Lux = `TFT10_Lux`, MissFortune = `TFT10_MissFortune`, Mordekaiser = `TFT10_Mordekaiser`, Nami = `TFT10_Nami`, Neeko = `TFT10_Neeko`, Olaf = `TFT10_Olaf`, Pantheon = `TFT10_Pantheon`, Poppy = `TFT10_Poppy`, Qiyana = `TFT10_Qiyana`, Riven = `TFT10_Riven`, Samira = `TFT10_Samira`, Senna = `TFT10_Senna`, Seraphine = `TFT10_Seraphine`, Sett = `TFT10_Sett`, PBJProp = `TFT10_PBJProp`, SLIMECrab = `TFT9_SLIME_Crab`, Sona = `TFT10_Sona`, TahmKench = `TFT10_TahmKench`, TrainingDummy = `TFT_TrainingDummy`, Taric = `TFT10_Taric`, IllaoiMinion = `TFT10_IllaoiMinion`, CountryHecarim = `TFT10_CountryHecarim`, Thresh = `TFT10_Thresh`, TwistedFate = `TFT10_TwistedFate`, Twitch = `TFT10_Twitch`, Urgot = `TFT10_Urgot`, Vex = `TFT10_Vex`, Vi = `TFT10_Vi`, Viego = `TFT10_Viego`, Voidspawn = `TFT_Voidspawn`, Yasuo = `TFT10_Yasuo`, Yone = `TFT10_Yone`, Yorick = `TFT10_Yorick`, YorickGhoulMelee = `TFT10_YorickGhoulMelee`, Zac = `TFT10_Zac`, Zed = `TFT10_Zed`, Ziggs = `TFT10_Ziggs` }
 
 export const champions: ChampionData[] = [
 	{
@@ -4669,34 +4669,6 @@ export const champions: ChampionData[] = [
 				uninterruptable: true,
 			},
 		],
-		missiles: [],
-	},
-	{
-		apiName: `TFT10_DesperadoProp`,
-		name: `SightWard`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT_Template.dds`,
-		cost: undefined,
-		starLevel: undefined,
-		teamSize: undefined,
-		isSpawn: true,
-		traits: [],
-		stats: {
-			armor: 0,
-			attackSpeed: 0.800000011920929,
-			critChance: 0.25,
-			critMultiplier: 1.399999976158142,
-			damage: 10,
-			hp: undefined,
-			initialMana: 0,
-			magicResist: 20,
-			mana: 100,
-			moveSpeed: 500,
-			range: 1,
-		},
-		basicAttackMissileSpeed: undefined,
-		critAttackMissileSpeed: undefined,
-		passive: undefined,
-		spells: [],
 		missiles: [],
 	},
 	{

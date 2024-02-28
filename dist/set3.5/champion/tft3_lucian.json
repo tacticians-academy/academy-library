@@ -10,7 +10,7 @@
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 50,
+		"baseDamage": 55,
 		"baseArmor": 25,
 		"baseSpellBlock": 25,
 		"baseCritChance": 0.25,
@@ -286,9 +286,9 @@
 					"mName": "SecondShotDamage",
 					"mValues": [
 						0,
-						175,
-						260,
-						415,
+						200,
+						300,
+						450,
 						500,
 						625,
 						750

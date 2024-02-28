@@ -146,6 +146,17 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Balanced-Budget-III.tex`,
 	},
 	{
+		tier: 2,
+		name: `Balanced Budget+`,
+		groupID: `balancedBudgetplus`,
+		desc: `At the start of the next @rounds@ rounds, gain @gold@ gold.`,
+		effects: {
+			'Gold': 9,
+			rounds: 4,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Balanced-Budget-II.tex`,
+	},
+	{
 		tier: 1,
 		name: `Band of Thieves I`,
 		groupID: `bandOfThieves`,
@@ -303,8 +314,8 @@ export const activeAugments: AugmentData[] = [
 		desc: `Your team gains @StartingHP@ bonus HP, and permanently gains @HP@ HP every @NumTakedowns@ takedowns.`,
 		effects: {
 			'HP': 10,
+			'NumTakedowns': 2,
 			'StartingHP': 80,
-			'{7d89bfed}': 2,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Big-Gains-II.TFT_Set10.tex`,
 	},
@@ -344,8 +355,8 @@ export const activeAugments: AugmentData[] = [
 		groupID: `blankSlate`,
 		desc: `Immediately sell your team (including bench) for @BonusGoldTOOLTIPONLY*100@% of their value. Your next @FreeRerolls@ Shop rerolls this round are free.`,
 		effects: {
-			'{13a2134b}': 2,
-			'{678004c2}': 8,
+			'BonusGoldTOOLTIPONLY': 2,
+			'FreeRerolls': 8,
 			'{7da8363b}': 1,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Blank-Slate-II.TFT_Set10.tex`,
@@ -771,7 +782,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `crownGuarded`,
 		desc: `Gain a Crownguard. Your Crownguards' start of combat effect is @effectincrease*100@% stronger.`,
 		effects: {
-			'{4a595764}': 0.75,
+			effectincrease: 0.75,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown-Guarded-II.TFT_Set10.tex`,
 	},
@@ -986,7 +997,7 @@ export const activeAugments: AugmentData[] = [
 		desc: `The first time you have @goldrequired@ gold at the end of combat, gain Diamond Hands and @numcomponents@ random component(s).<br><br><rules>This defensive item helps you gain more gold.</rules>`,
 		effects: {
 			'NumComponents': 2,
-			'{c866112e}': 40,
+			goldrequired: 40,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/A-Determined-Investor-III.TFT_Set10.tex`,
 	},
@@ -1091,7 +1102,7 @@ export const activeAugments: AugmentData[] = [
 		desc: `Gain +@TeamSize@ maximum team size, but your units can only hold 1 item and their total HP is reduced by @HPReduction*100@%. Gain @Gold@ gold.`,
 		effects: {
 			'Gold': 4,
-			'HPReduction': 0.20000000298023224,
+			'HPReduction': 0.15000000596046448,
 			'TeamSize': 3,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/100-Duck-Sized-Horses-III.tex`,
@@ -1103,7 +1114,7 @@ export const activeAugments: AugmentData[] = [
 		desc: `Gain +@TeamSize@ maximum team size, but your units can only hold 1 item and their total HP is reduced by @HPReduction*100@%. Gain @Gold@ gold.`,
 		effects: {
 			'Gold': 14,
-			'HPReduction': 0.20000000298023224,
+			'HPReduction': 0.15000000596046448,
 			'TeamSize': 3,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/100-Duck-Sized-Horses-III.tex`,
@@ -1201,9 +1212,9 @@ export const activeAugments: AugmentData[] = [
 		groupID: `finalAscension`,
 		desc: `Your team deals @damageamp@% more damage. After @delay@ seconds, they deal @AscendedAmpTOOLTIPONLY@% more damage.`,
 		effects: {
+			'AscendedAmpTOOLTIPONLY': 45,
 			'DamageAmp': 15,
 			'Delay': 15,
-			'{7acb7cbd}': 45,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Ascension3.tex`,
 	},
@@ -1323,8 +1334,8 @@ export const activeAugments: AugmentData[] = [
 		desc: `Gain @NumItems@ random components, @Gold@ gold, and a Lesser Champion Duplicator. `,
 		effects: {
 			'Gold': 4,
+			'LesserDuplicatorAmount': 1,
 			'NumItems': 3,
-			'{56ba63f8}': 1,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Grab-Bag-III.tex`,
 	},
@@ -1368,8 +1379,8 @@ export const activeAugments: AugmentData[] = [
 		groupID: `goodForSomething`,
 		desc: `Champions that aren't holding items have a @dropchance*100@% to drop @Gold@ gold on death.`,
 		effects: {
+			'DropChance': 0.3499999940395355,
 			'Gold': 1,
-			'{a91a52c8}': 0.3499999940395355,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Good-For-Something-I.TFT_Set10.tex`,
 	},
@@ -1379,8 +1390,8 @@ export const activeAugments: AugmentData[] = [
 		groupID: `goodForSomething`,
 		desc: `Champions that aren't holding items have a @dropchance*100@% to drop @Gold@ gold on death.`,
 		effects: {
+			'DropChance': 0.5,
 			'Gold': 1,
-			'{a91a52c8}': 0.5,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Good-For-Something-II.TFT_Set10.tex`,
 	},
@@ -1479,8 +1490,8 @@ export const activeAugments: AugmentData[] = [
 		groupID: `heavyHitters`,
 		desc: `Your units with at least @MaxHPThreshold@ max HP gain Attack Damage and Ability Power equal to @PercentMaxHPDamage*100@% of their max HP.`,
 		effects: {
+			'MaxHPThreshold': 1500,
 			'PercentMaxHPDamage': 0.009999999776482582,
-			'{af701916}': 1500,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Heavy-Hitters-II.TFT_Set10.tex`,
 	},
@@ -1534,7 +1545,7 @@ export const activeAugments: AugmentData[] = [
 		desc: `Gain @LesserDuplicatorAmount@ Lesser Champion Duplicators and @gold@ gold.<br><br><rules>This item allows you to copy a 3-cost or less champion.</rules>`,
 		effects: {
 			'Gold': 4,
-			'{56ba63f8}': 2,
+			'LesserDuplicatorAmount': 2,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Heroic-Grab-Bag-II.TFT_Set10.tex`,
 	},
@@ -1576,8 +1587,8 @@ export const activeAugments: AugmentData[] = [
 		groupID: `hologram`,
 		desc: `Create a clone of your Headliner with @MinBonusTOOLTIPONLY*100@% -@MaxBonusTOOLTIPONLY*100@% of their base HP (based on stage level). You cannot equip items on the clone.`,
 		effects: {
-			'{1a08838d}': 1.2999999523162842,
-			'{2100fa3b}': 1,
+			'MaxBonusTOOLTIPONLY': 1.2999999523162842,
+			'MinBonusTOOLTIPONLY': 1,
 			'{2fbb7884}': 0.15000000596046448,
 			'{30bb7a17}': 0.30000001192092896,
 		},
@@ -1798,7 +1809,7 @@ export const activeAugments: AugmentData[] = [
 		desc: `Gain a Completed Item Anvil and @RandomComponents@ random component.`,
 		effects: {
 			'NumAnvils': 1,
-			'{befd2036}': 1,
+			'RandomComponents': 1,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Job_s-Done-II.tex`,
 	},
@@ -1808,8 +1819,8 @@ export const activeAugments: AugmentData[] = [
 		groupID: `jobsDone`,
 		desc: `Gain @anvils@ Component Anvil and @RandomComponents@ random component.`,
 		effects: {
+			'RandomComponents': 1,
 			anvils: 1,
-			'{befd2036}': 1,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Job_s-Done-I.tex`,
 	},
@@ -1954,8 +1965,8 @@ export const activeAugments: AugmentData[] = [
 		desc: `Your team gains @StartingAP@ bonus Ability Power, and permanently gains @AP@ Ability Power every @NumTakedowns@ takedowns.`,
 		effects: {
 			'AP': 1,
+			'NumTakedowns': 2,
 			'StartingAP': 10,
-			'{7d89bfed}': 2,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Learning-To-Spell-II.TFT_Set10.tex`,
 	},
@@ -2381,7 +2392,7 @@ export const activeAugments: AugmentData[] = [
 		desc: `Gain @tier1champs@ 1-cost champion, @numchamps@ 2-cost champions, and 1 3-cost champion.`,
 		effects: {
 			'NumChamps': 2,
-			'{02812a48}': 3,
+			tier1champs: 3,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Threes-Company-I.tex`,
 	},
@@ -2622,9 +2633,9 @@ export const activeAugments: AugmentData[] = [
 		groupID: `reachTheSummit`,
 		desc: `When you reach Level @LevelReq@, gain @ExpBonus@ XP and @Gold@ Gold.`,
 		effects: {
+			'ExpBonus': 50,
 			'Gold': 10,
 			'LevelReq': 9,
-			'{0777a7af}': 50,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Reach-The-Summit-I.TFT_Set10.tex`,
 	},
@@ -2758,7 +2769,7 @@ export const activeAugments: AugmentData[] = [
 		desc: `Gain a Training Dummy and @initialgold@ gold. If it is the first to die each player combat, gain @Gold@ gold.`,
 		effects: {
 			'Gold': 1,
-			'{045be491}': 2,
+			'InitialGold': 2,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/The-Scapegoat-II.TFT_Set10.tex`,
 	},
@@ -2812,11 +2823,11 @@ export const activeAugments: AugmentData[] = [
 		groupID: `shockTreatment`,
 		desc: `Gain a Statikk Shiv. Your Statikk Shivs' chain lightning effects deal @tooltipincreaseddamage1*100@-@tooltipincreaseddamage2*100@% more damage (based on stage level).`,
 		effects: {
-			'{1373fd24}': 1.7999999523162842,
-			'{1473feb7}': 2.25,
-			'{167401dd}': 1.399999976158142,
-			'{e61943dc}': 0.4000000059604645,
-			'{e9194895}': 1.25,
+			'DamageAmp1': 1.399999976158142,
+			'DamageAmp2': 1.7999999523162842,
+			'DamageAmp3': 2.25,
+			tooltipincreaseddamage1: 0.4000000059604645,
+			tooltipincreaseddamage2: 1.25,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Shock-Treatment-II.TFT_Set10.tex`,
 	},
@@ -3011,9 +3022,10 @@ export const activeAugments: AugmentData[] = [
 		tier: 3,
 		name: `Starter Kit`,
 		groupID: `starterKit`,
-		desc: `Gain a 4-cost champion and a 2-star 1-cost champion that shares a trait with them. <br><br>At the start of the next @FutureChampionCount@ stages, gain that 4-cost champion again.`,
+		desc: `Gain a 4-cost champion, a 2-star 1-cost champion that shares a trait with them, and @Gold@ gold.<br><br>At the start of the next @FutureChampionCount@ stages, gain that 4-cost champion again.`,
 		effects: {
 			'FutureChampionCount': 2,
+			'Gold': 4,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Starter-Kit-III.tex`,
 	},
@@ -3058,8 +3070,8 @@ export const activeAugments: AugmentData[] = [
 		desc: `Champions that aren't holding items Shred and Sunder enemies for @Duration@ seconds. Physical damage Sunders for @SunderPercentage@%, and magic damage Shreds for @ShredPercentage@%.<br><rules>Shred: reduces Magic Resist, Sunder: reduces Armor</rules>`,
 		effects: {
 			'Duration': 3,
-			'{39090f45}': 30,
-			'{f498f3e4}': 30,
+			'ShredPercentage': 30,
+			'SunderPercentage': 30,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Sticks-And-Stones-I.TFT_Set10.tex`,
 	},
@@ -3102,7 +3114,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `switchingGears`,
 		desc: `Gain @Gold@ gold whenever you break your win or loss streak.`,
 		effects: {
-			'Gold': 2,
+			'Gold': 3,
 			'{379448fe}': 3,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Switching-Gears-I.TFT_Set10.tex`,
@@ -3113,8 +3125,8 @@ export const activeAugments: AugmentData[] = [
 		groupID: `tacticiansTools`,
 		desc: `Gain @NumSpatulas@ Spatulas and @NumItemAnvils@ Component Anvil.`,
 		effects: {
+			'NumItemAnvils': 1,
 			'NumSpatulas': 2,
-			'{be25031b}': 1,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Tactician_s-Tools-III.tex`,
 	},
@@ -3124,8 +3136,8 @@ export const activeAugments: AugmentData[] = [
 		groupID: `talentSearch`,
 		desc: `All of your champions gain their unique Headliner effect. In Addition, your Headliner gains @HLHP@ HP and @HLAttackspeed*100@% Attack Speed.`,
 		effects: {
-			'{46364c93}': 100,
-			'{76821384}': 0.10000000149011612,
+			'HLAttackspeed': 0.10000000149011612,
+			'HLHP': 100,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Talent-Search-III.TFT_Set10.tex`,
 	},
@@ -3253,7 +3265,7 @@ export const activeAugments: AugmentData[] = [
 		effects: {
 			'Gold': 1,
 			'Heal': 2,
-			'{045be491}': 15,
+			'InitialGold': 15,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Tiniest-TitanIII.tex`,
 	},
@@ -3358,7 +3370,7 @@ export const activeAugments: AugmentData[] = [
 		desc: `Gain @Gold@ gold and a Lesser Champion Duplicator.`,
 		effects: {
 			'Gold': 5,
-			'{56ba63f8}': 1,
+			'LesserDuplicatorAmount': 1,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Training-Reward-I.tex`,
 	},
@@ -3369,7 +3381,7 @@ export const activeAugments: AugmentData[] = [
 		desc: `Gain @Gold@ gold and a Lesser Champion Duplicator.`,
 		effects: {
 			'Gold': 12,
-			'{56ba63f8}': 1,
+			'LesserDuplicatorAmount': 1,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Training-Reward-II.tex`,
 	},
@@ -3467,7 +3479,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `twinTerror`,
 		desc: `When you field exactly 2 copies of a champion, they both gain @BonusStats*10@ HP and @BonusStats@% Attack Speed. Anytime you 3-star, gain a 2-star copy.`,
 		effects: {
-			'BonusStats': 35,
+			'BonusStats': 30,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Twin-Terror-II.TFT_Set10.tex`,
 	},
@@ -3477,7 +3489,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `twinTerror`,
 		desc: `When you field exactly 2 copies of a champion, they both gain @BonusStats*10@ HP and @BonusStats@% Attack Speed. Anytime you 3-star, gain a 2-star copy.`,
 		effects: {
-			'BonusStats': 50,
+			'BonusStats': 45,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Twin-Terror-III.TFT_Set10.tex`,
 	},
@@ -3582,8 +3594,8 @@ export const activeAugments: AugmentData[] = [
 		desc: `Your team gains @BaseHP@ HP. Gain another @BonusHPPer5MissingHP@ HP and @OmnivampPercentPer5MissingHP*100@% Omnivamp per 5 missing player HP.<br><rules>(Omnivamp: healing for a percent of damage dealt)</rules>`,
 		effects: {
 			'BaseHP': 20,
-			'{26c36394}': 2,
-			'{635778ef}': 0.009999999776482582,
+			'BonusHPPer5MissingHP': 2,
+			'OmnivampPercentPer5MissingHP': 0.009999999776482582,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Vampirism-I.TFT_Set10.tex`,
 	},
@@ -3594,8 +3606,8 @@ export const activeAugments: AugmentData[] = [
 		desc: `Your team gains @BaseHP@ HP. Gain another @BonusHPPer5MissingHP@ HP and @OmnivampPercentPer5MissingHP*100@% Omnivamp per 5 missing player HP.<br><rules>(Omnivamp: healing for a percent of damage dealt)</rules>`,
 		effects: {
 			'BaseHP': 50,
-			'{26c36394}': 6,
-			'{635778ef}': 0.009999999776482582,
+			'BonusHPPer5MissingHP': 6,
+			'OmnivampPercentPer5MissingHP': 0.009999999776482582,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Vampirism-II.TFT_Set10.tex`,
 	},
@@ -4995,8 +5007,8 @@ export const choiceAugments: AugmentData[] = [
 		groupID: `raiseTheStakes`,
 		desc: ``,
 		effects: {
-			'{062cd921}': 100,
-			'{e632c102}': 40,
+			'BonusHearts': 100,
+			'WinPenalty': 40,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/ADMIN_Armorery_Icon.tex`,
 	},
@@ -5006,8 +5018,8 @@ export const choiceAugments: AugmentData[] = [
 		groupID: `raiseTheStakes`,
 		desc: ``,
 		effects: {
-			'{062cd921}': 100,
-			'{e632c102}': 40,
+			'BonusHearts': 100,
+			'WinPenalty': 40,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/ADMIN_Armorery_Icon.tex`,
 	},

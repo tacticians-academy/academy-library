@@ -10,7 +10,7 @@ export const traits: TraitData[] = [
 				minUnits: 3,
 				style: 4,
 				variables: {
-					'{1f714854}': 30,
+					'ManaCostReduction': 30,
 				},
 			},
 		],
@@ -26,7 +26,7 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
-					'{d56201a3}': 90,
+					'HealOrDamageAmount': 90,
 				},
 			},
 			{
@@ -34,7 +34,7 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 3,
 				variables: {
-					'{d56201a3}': 200,
+					'HealOrDamageAmount': 200,
 				},
 			},
 			{
@@ -42,7 +42,7 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 4,
 				variables: {
-					'{d56201a3}': 400,
+					'HealOrDamageAmount': 400,
 				},
 			},
 			{
@@ -50,7 +50,7 @@ export const traits: TraitData[] = [
 				minUnits: 8,
 				style: 5,
 				variables: {
-					'{d56201a3}': 800,
+					'HealOrDamageAmount': 1000,
 				},
 			},
 		],
@@ -67,7 +67,7 @@ export const traits: TraitData[] = [
 				style: 1,
 				variables: {
 					'ExtraAttacks': 1,
-					'ProcChance': 35,
+					'ProcChance': 30,
 				},
 			},
 			{
@@ -76,7 +76,7 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'ExtraAttacks': 2,
-					'ProcChance': 35,
+					'ProcChance': 30,
 				},
 			},
 			{
@@ -101,7 +101,7 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
-					'{7fd211f1}': 1,
+					'AdditionalAttacks': 1,
 				},
 			},
 			{
@@ -109,7 +109,7 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 4,
 				variables: {
-					'{7fd211f1}': 2,
+					'AdditionalAttacks': 2,
 				},
 			},
 		],
@@ -225,8 +225,8 @@ export const traits: TraitData[] = [
 				minUnits: 3,
 				style: 1,
 				variables: {
-					'{1a46e36f}': 250,
-					'{cfaa2ad6}': 0.20000000298023224,
+					'ADAmp': 0.30000001192092896,
+					'HPAmp': 350,
 				},
 			},
 			{
@@ -234,8 +234,8 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 4,
 				variables: {
-					'{1a46e36f}': 550,
-					'{cfaa2ad6}': 0.44999998807907104,
+					'ADAmp': 0.6000000238418579,
+					'HPAmp': 700,
 				},
 			},
 		],
@@ -251,7 +251,7 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
-					'{1485c2a2}': 6,
+					'ADandAP': 6,
 				},
 			},
 			{
@@ -259,7 +259,7 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 3,
 				variables: {
-					'{1485c2a2}': 15,
+					'ADandAP': 15,
 				},
 			},
 			{
@@ -267,7 +267,7 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 4,
 				variables: {
-					'{1485c2a2}': 25,
+					'ADandAP': 25,
 				},
 			},
 			{
@@ -275,7 +275,7 @@ export const traits: TraitData[] = [
 				minUnits: 8,
 				style: 5,
 				variables: {
-					'{1485c2a2}': 50,
+					'ADandAP': 45,
 				},
 			},
 		],
@@ -345,7 +345,7 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 4,
 				variables: {
-					'{4d7069b1}': 30,
+					'CostIncreasePercent': 30,
 				},
 			},
 		],
@@ -361,8 +361,8 @@ export const traits: TraitData[] = [
 				minUnits: 3,
 				style: 4,
 				variables: {
+					'EjectedPilotHPPercent': 35,
 					'{092d19fb}': 1500,
-					'{265b60fa}': 35,
 					'{5dd40675}': 0.6499999761581421,
 					'{952c9d9c}': 0.6499999761581421,
 					'{d13e2b40}': 0.800000011920929,
@@ -532,7 +532,7 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
-					'AP': 20,
+					'AP': 25,
 				},
 			},
 			{
@@ -540,7 +540,7 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 3,
 				variables: {
-					'AP': 40,
+					'AP': 45,
 				},
 			},
 			{
@@ -548,7 +548,7 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 4,
 				variables: {
-					'AP': 70,
+					'AP': 75,
 				},
 			},
 		],
@@ -564,8 +564,8 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
-					'{0f4980a5}': 50,
-					'{c79d638b}': null,
+					'CoinDropChance': 50,
+					'ItemDropChance': null,
 				},
 			},
 			{
@@ -573,8 +573,8 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 4,
 				variables: {
-					'{0f4980a5}': 50,
-					'{c79d638b}': 33,
+					'CoinDropChance': 50,
+					'ItemDropChance': 33,
 				},
 			},
 		],

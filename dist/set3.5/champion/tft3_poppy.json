@@ -109,9 +109,9 @@
 					"mName": "ShieldAmount",
 					"mValues": [
 						100,
-						250,
-						325,
-						400,
+						300,
+						375,
+						475,
 						500,
 						600,
 						700
@@ -231,7 +231,7 @@
 	},
 	"Characters/TFT3_Poppy/CharacterRecords/Root": {
 		"mCharacterName": "TFT3_Poppy",
-		"baseHP": 650,
+		"baseHP": 700,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,

@@ -9,9 +9,9 @@
 					"mName": "Damage",
 					"mValues": [
 						50,
-						270,
-						405,
-						630,
+						290,
+						435,
+						675,
 						1100,
 						1300,
 						1550
@@ -235,7 +235,7 @@
 	},
 	"Characters/TFT3_Darius/CharacterRecords/Root": {
 		"mCharacterName": "TFT3_Darius",
-		"baseHP": 700,
+		"baseHP": 750,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,

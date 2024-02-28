@@ -227,10 +227,11 @@
 	},
 	"Characters/TFT3_Leona/CharacterRecords/Root": {
 		"mCharacterName": "TFT3_Leona",
-		"baseHP": 650,
+		"baseHP": 700,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
+			"arBase": 80,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
@@ -283,7 +284,7 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 500,
 		"mMoveHeight": 0,
-		"mInitialMana": 50,
+		"mInitialMana": 40,
 		"__type": "TFTCharacterRecord"
 	}
 }

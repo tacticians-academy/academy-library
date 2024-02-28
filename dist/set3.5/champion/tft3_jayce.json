@@ -85,9 +85,9 @@
 					"mName": "Damage",
 					"mValues": [
 						300,
-						320,
-						480,
-						800,
+						350,
+						525,
+						875,
 						1200,
 						1200,
 						1200
@@ -251,8 +251,8 @@
 			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 60,
-		"baseArmor": 40,
-		"baseSpellBlock": 40,
+		"baseArmor": 45,
+		"baseSpellBlock": 45,
 		"baseCritChance": 0.25,
 		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,

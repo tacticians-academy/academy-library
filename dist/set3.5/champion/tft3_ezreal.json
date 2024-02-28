@@ -68,9 +68,9 @@
 					"mName": "Damage",
 					"mValues": [
 						0,
-						225,
-						330,
-						575,
+						200,
+						300,
+						450,
 						800,
 						1000,
 						1200
@@ -94,12 +94,12 @@
 					"mName": "PercentCostIncrease",
 					"mValues": [
 						3,
-						30,
-						30,
-						30,
-						30,
-						30,
-						30
+						20,
+						20,
+						20,
+						20,
+						20,
+						20
 					],
 					"__type": "SpellDataValue"
 				}
