@@ -46,6 +46,18 @@ export interface ItemFlashcard {
 	from: number[]
 	unique: boolean
 }
+export interface ChampionFlashcard {
+	id: string
+	name: string
+	icon: string
+	stats: ChampionStats
+	ability: {
+		name: string
+		description: string
+		variables: SpellVariables
+		icon: string
+	}
+}
 
 export enum BonusKey {
 	Armor = 'Armor',
@@ -125,33 +137,49 @@ export interface SpellCalculation {
 	asPercent?: boolean
 }
 
+export interface ChampionStats {
+	armor: number
+	attackSpeed: number
+	critChance: number | null
+	critMultiplier: number
+	damage: number
+	hp: number | undefined
+	initialMana: number
+	magicResist: number
+	mana: number
+	moveSpeed: number
+	range: number
+}
+
 export interface ChampionData {
 	apiName: string
 	name: string
+	ability?: AbilityDataRaw
 	icon: string
 	cost?: number
 	starLevel?: number
 	isSpawn: boolean
 	traits: string[]
 	teamSize?: number
-	stats: {
-		armor: number
-		attackSpeed: number
-		critChance: number | null
-		critMultiplier: number
-		damage: number
-		hp: number | undefined
-		initialMana: number
-		magicResist: number
-		mana: number
-		moveSpeed: number
-		range: number
-	}
+	stats: ChampionStats
 	basicAttackMissileSpeed?: number
 	critAttackMissileSpeed?: number
 	passive: ChampionSpellData | undefined
 	spells: ChampionSpellData[]
 	missiles: ChampionSpellData[]
+}
+
+export interface AbilityDataRaw {
+	desc: string | null
+	icon: string | null
+	name: string | null
+	variables: {name: string, value: number[]}[]
+}
+export interface AbilityData {
+	desc: string
+	icon: string
+	name: string
+	variables: SpellVariables
 }
 
 export interface StreakData {

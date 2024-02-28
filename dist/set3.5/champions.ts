@@ -1,4 +1,4 @@
-import type { ChampionData } from '../index'
+import type { AbilityData, ChampionData } from '../index'
 
 export enum ChampionKey { Ahri = `TFT3_Ahri`, Annie = `TFT3_Annie`, Ashe = `TFT3_Ashe`, AurelionSol = `TFT3_AurelionSol`, Bard = `TFT3_Bard`, Blitzcrank = `TFT3_Blitzcrank`, Caitlyn = `TFT3_Caitlyn`, Cassiopeia = `TFT3_Cassiopeia`, Darius = `TFT3_Darius`, Ekko = `TFT3_Ekko`, Ezreal = `TFT3_Ezreal`, Fiora = `TFT3_Fiora`, Fizz = `TFT3_Fizz`, Gangplank = `TFT3_Gangplank`, Gnar = `TFT3_Gnar`, Graves = `TFT3_Graves`, Illaoi = `TFT3_Illaoi`, Irelia = `TFT3_Irelia`, Janna = `TFT3_Janna`, JarvanIV = `TFT3_JarvanIV`, Jayce = `TFT3_Jayce`, Jhin = `TFT3_Jhin`, Jinx = `TFT3_Jinx`, Karma = `TFT3_Karma`, NPCKayn = `TFT3_NPC_Kayn`, NPCKaynElite = `TFT3_NPC_KaynElite`, KogMaw = `TFT3_KogMaw`, Leona = `TFT3_Leona`, Lucian = `TFT3_Lucian`, Lulu = `TFT3_Lulu`, Malphite = `TFT3_Malphite`, MasterYi = `TFT3_MasterYi`, BardMeep = `TFT3_BardMeep`, Mordekaiser = `TFT3_Mordekaiser`, Nautilus = `TFT3_Nautilus`, Neeko = `TFT3_Neeko`, Nocturne = `TFT3_Nocturne`, Poppy = `TFT3_Poppy`, Rakan = `TFT3_Rakan`, Riven = `TFT3_Riven`, Rumble = `TFT3_Rumble`, Shaco = `TFT3_Shaco`, Shen = `TFT3_Shen`, SLIMECrab = `TFT9_SLIME_Crab`, Soraka = `TFT3_Soraka`, SuperMech = `TFT3_SuperMech`, Syndra = `TFT3_Syndra`, TrainingDummy = `TFT_TrainingDummy`, Teemo = `TFT3_Teemo`, Thresh = `TFT3_Thresh`, TwistedFate = `TFT3_TwistedFate`, Urgot = `TFT3_Urgot`, Vayne = `TFT3_Vayne`, Vi = `TFT3_Vi`, Viktor = `TFT3_Viktor`, Voidspawn = `TFT_Voidspawn`, WuKong = `TFT3_WuKong`, Xayah = `TFT3_Xayah`, Xerath = `TFT3_Xerath`, XinZhao = `TFT3_XinZhao`, Yasuo = `TFT3_Yasuo`, Zed = `TFT3_Zed`, Ziggs = `TFT3_Ziggs`, Zoe = `TFT3_Zoe` }
 
@@ -5378,3 +5378,624 @@ export const champions: ChampionData[] = [
 ]
 
 export const otherUnits: ChampionData[] = []
+
+export const abilities: Record<string, AbilityData> = {
+	'TFT3_Ahri': {
+		desc: `Fire an orb in a line, dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to all enemies it passes through. It returns dealing <trueDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</trueDamage> true damage to all enemies it passes through.`,
+		icon: `ASSETS/Characters/TFTTutorial_Ahri/HUD/Icons2D/Ahri_OrbofDeceptionFixed.tex`,
+		name: `Orb of Deception`,
+		variables: {
+			'Damage': [150, 175, 265, 425],
+			'HexRange': [4, 4, 4, 4],
+		},
+	},
+	'TFT3_Annie': {
+		desc: `Deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to enemies in a cone and gain a <TFTBonus>@Modifiedshield@&nbsp;(%i:scaleAP%)</TFTBonus> Shield for @shieldDuration@ seconds.`,
+		icon: `ASSETS/Characters/TFT8_Annie/HUD/Icons2D/Annie_EFixed.tex`,
+		name: `Galaxy Shield-Blast`,
+		variables: {
+			'Damage': [100, 200, 300, 475],
+			'ShieldAmount': [200, 350, 450, 550],
+			'ShieldDuration': [4, 4, 4, 4],
+		},
+	},
+	'TFT3_Ashe': {
+		desc: `Fire an arrow at the farthest enemy that explodes on the first target hit, dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to all adjacent enemies and Stun them for <scaleLevel>@StunDurationPerSquare@</scaleLevel> seconds.`,
+		icon: `ASSETS/Characters/TFTTutorial_Ashe/HUD/Icons2D/Ashe_R.tex`,
+		name: `Enchanted Crystal Arrow`,
+		variables: {
+			'Damage': [250, 225, 335, 560],
+			'StunDurationPerSquare': [2, 1, 1, 1.5],
+		},
+	},
+	'TFT3_AurelionSol': {
+		desc: `Launch <scaleLevel>@InitialFighters@</scaleLevel> fighters that fly out to random enemies, dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage and draining <scaleLevel>@ManaDrain@</scaleLevel> Mana, and then return. Subsequent casts launch all returned fighters, plus @FightersPerCast@ additional.`,
+		icon: `ASSETS/Characters/TFT3_AurelionSol/HUD/Icons2D/AurelionSol_W_StarsOut.tex`,
+		name: `Mobilize the Fleet`,
+		variables: {
+			'Damage': [0, 90, 150, 3000],
+			'InitialFighters': [4, 4, 4, 10],
+			'FightersPerCast': [2, 2, 2, 10],
+			'ManaDrain': [0, 10, 15, 50],
+		},
+	},
+	'TFT3_Bard': {
+		desc: `<spellPassive>Passive:</spellPassive> Attacks grant <TFTBonus>@ModifiedManaPerAttack@&nbsp;(%i:scaleAP%)</TFTBonus> additional Mana. Mana is not gained in rounds without enemy champions.<br><br><spellActive>Active:</spellActive> Spawn a meep on the bench. Meeps sell for 1 XP. `,
+		icon: `ASSETS/Characters/TFT3_Bard/HUD/Icons2D/Bard_Meeps.tex`,
+		name: `Traveler's Call`,
+		variables: {
+			'ManaPerAttack': [0, 5, 20, 90],
+		},
+	},
+	'TFT3_Blitzcrank': {
+		desc: `Pull the furthest enemy into melee range, dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage and Stunning them for @StunDuration@ seconds.  Allies will prioritize attacking them. Blitzcrank's next attack Stuns for 1 second.`,
+		icon: `ASSETS/Characters/TFTTutorial_Blitzcrank/HUD/Icons2D/Blitzcrank_RocketGrab.tex`,
+		name: `Rocket Grab`,
+		variables: {
+			'Damage': [-50, 200, 300, 475],
+			'StunDuration': [2, 2, 2, 2],
+			'PhysicalDamage': [1, 1, 1, 1],
+		},
+	},
+	'TFT3_Caitlyn': {
+		desc: `After a delay, fire a bullet towards the furthest enemy that deals <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to the first enemy it hits.`,
+		icon: `ASSETS/Characters/TFT3_Caitlyn/HUD/Icons2D/Caitlyn_AceintheHole.tex`,
+		name: `Ace In The Hole`,
+		variables: {
+			'Damage': [0, 750, 1125, 1750],
+		},
+	},
+	'TFT3_Cassiopeia': {
+		desc: `Launch poison at the nearest unpoisoned enemy, dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage over @Duration@ seconds, and reducing the effectiveness of new Shields by @shieldReductionPercent@%.`,
+		icon: `ASSETS/Characters/TFT3_Cassiopeia/HUD/Icons2D/Cassiopeia_Q.tex`,
+		name: `Noxious Blast`,
+		variables: {
+			'Damage': [0, 700, 1050, 2000],
+			'Duration': [0, 14, 14, 14],
+			'ShieldReductionPercent': [0, 50, 50, 50],
+			'DurationTickPadding': [0, 1, 1, 1],
+		},
+	},
+	'TFT3_Darius': {
+		desc: `Deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage. If this kills the target, immediately cast this again.<br><br>Targets below @HealthThreshold@% Health take double damage.`,
+		icon: `ASSETS/Characters/TFT3_Darius/HUD/Icons2D/Darius_Icon_Sudden_Death.tex`,
+		name: `Dreadnova Guillotine`,
+		variables: {
+			'Damage': [50, 290, 435, 675],
+			'HealthThreshold': [50, 50, 50, 50],
+			'DamageMultiplier': [2, 2, 2, 2],
+		},
+	},
+	'TFT3_Ekko': {
+		desc: `Freeze all units in time before attacking <scaleLevel>@NumAttacks@</scaleLevel> times dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> bonus magic damage. Each strike targets the highest Attack Speed enemy and <TFTKeyword>Chills</TFTKeyword> them for <scaleLevel>@SlowDuration@</scaleLevel> seconds.<br><br><rules><tftbold>Chill</tftbold>: Reduce Attack Speed by 30%</rules>`,
+		icon: `ASSETS/Characters/TFT3_Ekko/HUD/Icons2D/Ekko_RFixed.tex`,
+		name: `Chronobreak`,
+		variables: {
+			'BonusDamage': [200, 120, 175, 2000],
+			'BaseDelayBetweenAttacks': [0.4000000059604645, 0.4000000059604645, 0.30000001192092896, 0.15000000596046448],
+			'NumAttacks': [5, 5, 7, 20],
+			'ASSlow': [0, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
+			'SlowDuration': [7, 1.5, 2, 7],
+			'TooltipDamage': [1, 1, 1, 1],
+		},
+	},
+	'TFT3_Ezreal': {
+		desc: `Fire a pulse at a random enemy, dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to all nearby enemies on impact and @PercentCostIncrease@% <TFTKeyword>Mana Reaving</TFTKeyword> them.<br><br><rules><tftbold>Mana Reave</tftbold>: Increase max Mana until the next cast</rules>`,
+		icon: `ASSETS/Characters/TFT3_Ezreal/HUD/Icons2D/Ezreal_WFixed.tex`,
+		name: `E.M.P.`,
+		variables: {
+			'Damage': [0, 200, 300, 450],
+			'HexRadius': [2, 2, 2, 2],
+			'PercentCostIncrease': [3, 20, 20, 20],
+		},
+	},
+	'TFT3_Fiora': {
+		desc: `For @BlockDuration@ seconds, become immune to damage and enemy ability effects. After, deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to a nearby enemy and Stun them for <scaleLevel>@StunDuration@</scaleLevel> seconds.`,
+		icon: `ASSETS/Characters/TFT3_Fiora/HUD/Icons2D/Fiora_W.tex`,
+		name: `Riposte`,
+		variables: {
+			'Damage': [0, 200, 300, 450],
+			'StunDuration': [1.5, 1.5, 1.5, 2],
+			'BlockDuration': [1.5, 1.5, 1.5, 1.5],
+		},
+	},
+	'TFT3_Fizz': {
+		desc: `Throw a lure at the current target. After a delay a shark emerges dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to all enemies within 2 hexes, Stunning them for @StunDuration@ seconds and knocking them back.`,
+		icon: `ASSETS/Characters/TFT3_Fizz/HUD/Icons2D/Fizz_R.tex`,
+		name: `Chum the Waters`,
+		variables: {
+			'Delay': [1.5, 1.5, 1.5, 1.5],
+			'Damage': [0, 350, 525, 1050],
+			'StunDuration': [1, 1.5, 1.5, 1.5],
+		},
+	},
+	'TFT3_Gangplank': {
+		desc: `Call down <scaleLevel>@NumBombardments@</scaleLevel> orbital strike(s) on the current target. After @ImpactDelayTime@ seconds, deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to all enemies within 3 hexes.`,
+		icon: `ASSETS/Characters/TFT3_Gangplank/HUD/Icons2D/Gangplank_R.tex`,
+		name: `Orbital Strike`,
+		variables: {
+			'Damage': [0, 450, 675, 9001],
+			'ImpactDelayTime': [2, 2, 2, 2],
+			'UpgradeDelayTime': [0, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
+			'DoubleImpactDamagePercent': [0, 50, 50, 50],
+			'NumBombardments': [1, 1, 1, 9],
+		},
+	},
+	'TFT3_Gnar': {
+		desc: `Transform and gain <scaleHealth>@TransformHealth@</scaleHealth> Health and <scaleLevel>@TransformAD*100@%</scaleLevel> Attack Damage. Leap over the current target and knock back and Stun adjacent enemies for @RCCDuration@ seconds, dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage.`,
+		icon: `ASSETS/Characters/TFT3_Gnar/HUD/Icons2D/GnarTransform.tex`,
+		name: `GNAR!`,
+		variables: {
+			'Damage': [100, 100, 200, 800],
+			'RCCDuration': [1, 1, 1, 1],
+			'RKnockbackDistance': [600, 600, 600, 600],
+			'TransformDuration': [60, 60, 60, 60],
+			'TransformHealth': [50, 750, 1250, 2000],
+			'TransformAD': [0, 0.8999999761581421, 0.949999988079071, 2],
+		},
+	},
+	'TFT3_Graves': {
+		desc: `Launch a smoke grenade toward the enemy with the most Attack Speed. It explodes on impact, dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to adjacent enemies and <TFTKeyword>Disarms</TFTKeyword> them for @BlindDuration@ seconds.<br><br><rules><tftbold>Disarm</tftbold>: Cannot move or attack</rules>`,
+		icon: `ASSETS/Characters/TFT6_Graves/HUD/Icons2D/GravesSmokeGrenade.tex`,
+		name: `Smoke Grenade`,
+		variables: {
+			'Damage': [0, 160, 240, 360],
+			'BlindDuration': [1, 1.5, 1.5, 1.5],
+		},
+	},
+	'TFT3_Illaoi': {
+		desc: `Slam a tentacle in a line, dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage and stealing <scaleLevel>@ResistStealPercent@%</scaleLevel> Armor and Magic Resist from each target hit for @Duration@ seconds.`,
+		icon: `ASSETS/Characters/TFT3_Illaoi/HUD/Icons2D/Illaoi_Q.tex`,
+		name: `Tentacle Smash`,
+		variables: {
+			'Damage': [0, 125, 200, 325],
+			'Duration': [0, 6, 6, 6],
+			'ResistStealPercent': [0, 45, 45, 55],
+		},
+	},
+	'TFT3_Irelia': {
+		desc: `Dash to the current target and deal <physicalDamage>@TooltipDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage. If this kills the target, cast again immediately at the enemy with the highest Mana.`,
+		icon: `ASSETS/Characters/TFT6_Irelia/HUD/Icons2D/Irelia_QFixed.tex`,
+		name: `Bladesurge`,
+		variables: {
+			'PercentADDamage': [0, 2.1500000953674316, 2.1500000953674316, 4.300000190734863],
+		},
+	},
+	'TFT3_Janna': {
+		desc: `Summon 5 tornados which fly forward in a large cone. Allies hit gain <TFTBonus>@ModifiedPercentAttackSpeed@% (%i:scaleAP%)</TFTBonus> Attack Speed for @BuffDuration@ seconds. Enemies hit are Stunned for <scaleLevel>@StunDuration@</scaleLevel> seconds.`,
+		icon: `ASSETS/Characters/TFT3_Janna/HUD/Icons2D/Janna_HowlingGale.tex`,
+		name: `Howling Gale`,
+		variables: {
+			'PercentAttackSpeed': [0, 80, 125, 500],
+			'BuffDuration': [0, 5, 5, 5],
+			'StunDuration': [0, 1.5, 1.5, 10],
+		},
+	},
+	'TFT3_JarvanIV': {
+		desc: `Allies within @HexRadius@ hexes gain <TFTBonus>@ModifiedAS@&nbsp;(%i:scaleAP%)</TFTBonus> Attack Speed for @Duration@ seconds.`,
+		icon: `ASSETS/Characters/TFT3_JarvanIV/HUD/Icons2D/JarvanIV_DemacianStandard.tex`,
+		name: `Ageless Standard`,
+		variables: {
+			'Duration': [6, 6, 6, 6],
+			'HexRadius': [3, 3, 3, 3],
+			'ASPercent': [0.6499999761581421, 0.550000011920929, 0.6000000238418579, 0.6499999761581421],
+		},
+	},
+	'TFT3_Jayce': {
+		desc: `Deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to adjacent enemies.`,
+		icon: `ASSETS/Characters/TFT3_Jayce/HUD/Icons2D/Jayce_Q1.tex`,
+		name: `To the Skies!`,
+		variables: {
+			'Damage': [300, 350, 525, 875],
+			'Radius': [1, 1, 1, 1],
+		},
+	},
+	'TFT3_Jhin': {
+		desc: `<spellPassive>Passive:</spellPassive> Attack Speed is always <scaleLevel>@AttackSpeed@</scaleLevel>. Convert 1% bonus Attack Speed into 0.8% Attack Damage. Every fourth shot deals <physicalDamage>@TooltipDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage.`,
+		icon: `ASSETS/Characters/TFT3_Jhin/HUD/Icons2D/Jhin_P.tex`,
+		name: `Whisper`,
+		variables: {
+			'PercentOfAD': [0, 3.240000009536743, 4.039999961853027, 44.439998626708984],
+			'AttackSpeed': [0, 0.8500000238418579, 0.8500000238418579, 1],
+		},
+	},
+	'TFT3_Jinx': {
+		desc: `<spellPassive>Passive:</spellPassive> After the first takedown, gain <scaleLevel>@PercentAttackSpeed@</scaleLevel> bonus Attack Speed. After a second takedown, swap to the rocket launcher, causing attacks to deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> bonus magic damage to all enemies in a small area.`,
+		icon: `ASSETS/Characters/TFT3_Jinx/HUD/Icons2D/Jinx_Passive.tex`,
+		name: `Get Excited!`,
+		variables: {
+			'HitWindow': [10, 10, 10, 10],
+			'BuffDuration': [60, 60, 60, 60],
+			'AttackSpeedBonus': [0.4000000059604645, 0.6000000238418579, 0.8500000238418579, 1.25],
+			'RocketDamage': [0, 110, 165, 550],
+		},
+	},
+	'TFT3_Karma': {
+		desc: `<spellPassive>Passive:</spellPassive> At start of combat, bond to the closest ally. <br><br><spellActive>Active:</spellActive> Grant the bonded ally (or a random one if that ally is dead) <TFTBonus>@Modifiedshield@&nbsp;(%i:scaleAP%)</TFTBonus> Shield for @Duration@ seconds. While the Shield holds, they have <TFTBonus>@ModifiedAS@&nbsp;(%i:scaleAP%)</TFTBonus> bonus Attack Speed.`,
+		icon: `ASSETS/Characters/TFT2_Karma/HUD/Icons2D/Karma_E2Fixed.tex`,
+		name: `Inspire`,
+		variables: {
+			'Duration': [4, 4, 4, 4],
+			'ShieldAmount': [100, 400, 475, 550],
+			'BonusAS': [0.20000000298023224, 0.699999988079071, 0.800000011920929, 0.8999999761581421],
+		},
+	},
+	'TFT3_NPC_KaynElite': {
+		desc: `Kayn temporarily infests the furthest enemy, dealing @TargetDamage@ to the target when he bursts out.`,
+		icon: `ASSETS/Characters/TFT3_NPC_Krug/HUD/Icons2D/Kayn_W_Primary.tex`,
+		name: `Umbral Trespass`,
+		variables: {
+			'TargetDamage': [1500, 1500, 1500, 1500],
+			'AOEDamage': [],
+		},
+	},
+	'TFT3_NPC_Kayn': {
+		desc: `Kayn swings his scythe, dealing @Damage@ to enemies in a line. `,
+		icon: `ASSETS/Characters/TFT3_NPC_Krug/HUD/Icons2D/Kayn_W_Primary.tex`,
+		name: `Blade's Reach`,
+		variables: {
+			'Damage': [200, 200, 200, 200],
+			'BoxWidth': [160, 160, 160, 160],
+			'Range': [700, 700, 700, 700],
+		},
+	},
+	'TFT3_KogMaw': {
+		desc: `Gain infinite Attack Range, @PercentAttackSpeed@% Attack Speed, and deal <magicDamage>@ModifiedPercentMaxHPDamage@% (%i:scaleAP%)</magicDamage> of the target's maximum Health as bonus magic damage per attack for @Duration@ seconds.`,
+		icon: `ASSETS/Characters/TFT3_KogMaw/HUD/Icons2D/KogMaw_BioArcaneBarrage.tex`,
+		name: `Barrage`,
+		variables: {
+			'Duration': [3, 3, 3, 3],
+			'PercentAttackSpeed': [60, 60, 60, 60],
+			'PercentMaxHPDamage': [0, 2.5, 3, 3.5],
+		},
+	},
+	'TFT3_Leona': {
+		desc: `Reduce all incoming damage by <TFTBonus>@ModifiedDamageReduction@&nbsp;(%i:scaleAP%)</TFTBonus> for 4 seconds.`,
+		icon: `ASSETS/Characters/TFT3_Leona/HUD/Icons2D/LeonaSolarBarrierFixed.tex`,
+		name: `Cyber Barrier`,
+		variables: {
+			'FlatDamageReduction': [0, 45, 55, 65],
+			'Duration': [4, 4, 4, 4],
+		},
+	},
+	'TFT3_Lucian': {
+		desc: `Dash away from the current target, then attack them twice, with the second attack dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage.`,
+		icon: `ASSETS/Characters/TFTTutorial_Lucian/HUD/Icons2D/Lucian_E.tex`,
+		name: `Relentless Pursuit`,
+		variables: {
+			'FirstShotRatio': [1, 1, 1, 1],
+			'SecondShotDamage': [0, 200, 300, 450],
+		},
+	},
+	'TFT3_Lulu': {
+		desc: `Polymorph the <scaleLevel>@NumTargets@</scaleLevel> nearest enemies for <scaleLevel>@Duration@</scaleLevel> seconds, Stunning them and causing them to hop aimlessly. Polymorphed enemies take <TFTBonus>@ModifiedBonusDamage@&nbsp;(%i:scaleAP%)</TFTBonus> additional damage from all sources.`,
+		icon: `ASSETS/Characters/TFT7_Lulu/HUD/Icons2D/Lulu_Whimsy.tex`,
+		name: `Mass Polymorph`,
+		variables: {
+			'NumTargets': [0, 2, 3, 100],
+			'Duration': [0, 2, 2.5, 15],
+			'BonusDamage': [0.02500000037252903, 0.05000000074505806, 0.10000000149011612, 25],
+		},
+	},
+	'TFT3_Malphite': {
+		desc: `<spellPassive>Passive:</spellPassive> Start of combat: gain <TFTBonus>@TooltipShield@&nbsp;(%i:scaleAP%%i:scaleHealth%)</TFTBonus> Shield.`,
+		icon: `ASSETS/Characters/TFT7_Malphite/HUD/Icons2D/Malphite_GraniteShield.tex`,
+		name: `Energy Shield`,
+		variables: {
+			'PercentHealth': [0.3499999940395355, 0.4000000059604645, 0.44999998807907104, 0.699999988079071],
+			'SecondsPerRefresh': [0, 9, 9, 9],
+		},
+	},
+	'TFT3_MasterYi': {
+		desc: `For @Duration@ seconds, gain increased Move Speed and attacks deal <trueDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</trueDamage> bonus true damage. While active, heal <scaleHealth>@ModifiedHeal@&nbsp;(%i:scaleAP%)</scaleHealth> Health every second.`,
+		icon: `ASSETS/Characters/TFT2_MasterYi/HUD/Icons2D/MasterYi_W.tex`,
+		name: `Chosen One`,
+		variables: {
+			'Duration': [6, 6, 6, 6],
+			'HealAmountPercent': [0, 0.11999999731779099, 0.11999999731779099, 0.11999999731779099],
+			'BonusTrueDamage': [0, 50, 75, 125],
+		},
+	},
+	'TFT3_BardMeep': {
+		desc: `Meeps can be sold in the shop for experience points. 1 meep = 1 XP`,
+		icon: `ASSETS/Characters/TFT3_BardMeep/HUD/Icons2D/Bard_W.tex`,
+		name: `Sell For Experience`,
+		variables: {
+			'MeepValue': [1, 1, 1, 1],
+		},
+	},
+	'TFT3_Mordekaiser': {
+		desc: `Gain <TFTBonus>@Modifiedshield@&nbsp;(%i:scaleAP%)</TFTBonus> Shield for @Duration@ seconds. While the Shield is up, deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage per second to all adjacent enemies.`,
+		icon: `ASSETS/Characters/TFT3_Mordekaiser/HUD/Icons2D/MordekaiserWFixed.tex`,
+		name: `Indestructible`,
+		variables: {
+			'DamagePerSecond': [20, 60, 90, 145],
+			'ShieldAmount': [0, 400, 500, 600],
+			'Duration': [8, 8, 8, 8],
+		},
+	},
+	'TFT3_Nautilus': {
+		desc: `Deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage and Stun the current target for <scaleLevel>@StunDuration@</scaleLevel> seconds. Enemies within 1 hex receive 50% of this effect.`,
+		icon: `ASSETS/Characters/TFT3_Nautilus/HUD/Icons2D/Nautilus_GrandLineFixed.tex`,
+		name: `Impact Crater`,
+		variables: {
+			'Damage': [0, 250, 375, 585],
+			'StunDuration': [0, 2, 2, 2.5],
+		},
+	},
+	'TFT3_Neeko': {
+		desc: `Deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to all nearby enemies and Stun them for <scaleLevel>@StunDuration@</scaleLevel> seconds.`,
+		icon: `ASSETS/Characters/TFT3_Neeko/HUD/Icons2D/Neeko_RFixed.tex`,
+		name: `Pop Blossom`,
+		variables: {
+			'DamageAmount': [0, 150, 225, 375],
+			'StunDuration': [1, 1.5, 1.75, 2],
+			'HexRadius': [2, 2, 2, 2],
+		},
+	},
+	'TFT3_Nocturne': {
+		desc: `Stun the target for <scaleLevel>@StunDuration@</scaleLevel> seconds and deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage over the duration.`,
+		icon: `ASSETS/Characters/TFT3_Nocturne/HUD/Icons2D/Nocturne_UnspeakableHorror.tex`,
+		name: `Unspeakable Horror`,
+		variables: {
+			'Damage': [200, 175, 265, 400],
+			'StunDuration': [200, 1, 1.25, 1.5],
+		},
+	},
+	'TFT3_Poppy': {
+		desc: `Throw the buckler at the furthest enemy that deals <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage. When it bounces back, gain <TFTBonus>@ModifiedShield@&nbsp;(%i:scaleAP%)</TFTBonus> Shield.`,
+		icon: `ASSETS/Characters/TFT3_Poppy/HUD/Icons2D/Poppy_Passive.tex`,
+		name: `Buckler Toss`,
+		variables: {
+			'Damage': [50, 125, 200, 300],
+			'ShieldAmount': [100, 300, 375, 475],
+		},
+	},
+	'TFT3_Rakan': {
+		desc: `Dash to the furthest enemy within range and Stun all enemies within @Radius@ hex for <scaleLevel>@StunDuration@</scaleLevel> seconds, dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage.`,
+		icon: `ASSETS/Characters/TFT3_Rakan/HUD/Icons2D/Rakan_W.tex`,
+		name: `Grand Entrance`,
+		variables: {
+			'Damage': [75, 175, 275, 400],
+			'Radius': [1, 1, 1, 1],
+			'StunDuration': [1, 1.5, 1.5, 2],
+			'KnockupDuration': [1, 1, 1, 1],
+		},
+	},
+	'TFT3_Riven': {
+		desc: `Dash and gain <TFTBonus>@Modifiedshield@&nbsp;(%i:scaleAP%)</TFTBonus> Shield. Then, deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to adjacent enemies.<br><br>Every third cast, launch a wave of energy that deals <magicDamage>@ModifiedDamageFinal@&nbsp;(%i:scaleAP%)</magicDamage> magic damage.`,
+		icon: `ASSETS/Characters/TFT3_Riven/HUD/Icons2D/RivenWindScar.tex`,
+		name: `Energy Slash`,
+		variables: {
+			'Damage': [50, 100, 150, 500],
+			'SlashHexRadius': [1, 1, 1, 1],
+			'DamageFinal': [0, 300, 500, 1500],
+			'Shield': [0, 175, 250, 600],
+			'ShieldDuration': [4, 4, 4, 4],
+		},
+	},
+	'TFT3_Rumble': {
+		desc: `Deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage in a cone over @Duration@ seconds, and <TFTKeyword>Wound</TFTKeyword> for @GrievousWoundsDuration@ seconds.<br><br><rules><tftbold>Wound</tftbold>: Reduce healing received by 50%</rules>`,
+		icon: `ASSETS/Characters/TFT3_Rumble/HUD/Icons2D/Rumble_FlamespitterFixed.tex`,
+		name: `Flamespitter`,
+		variables: {
+			'TotalDamage': [30, 450, 675, 1125],
+			'Duration': [3, 3, 3, 3],
+			'NumberOfTicks': [12, 12, 12, 12],
+			'TickRate': [0.25, 0.25, 0.25, 0.25],
+			'GrievousWoundsDuration': [5, 5, 5, 5],
+			'ConeHexRange': [2, 2, 2, 2],
+			'GrievousWoundsPercent': [0, 50, 50, 50],
+		},
+	},
+	'TFT3_Shaco': {
+		desc: `Teleport behind the current target and attack the target for <physicalDamage>@ModifiedDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage. This is always a critical hit.`,
+		icon: `ASSETS/Characters/TFT3_Shaco/HUD/Icons2D/Jester_ManiacalCloak2.tex`,
+		name: `Deceive`,
+		variables: {
+			'Duration': [1.5, 1.5, 1.5, 1.5],
+			'PercentOfAD': [2.25, 2.5, 2.5, 2.549999952316284],
+		},
+	},
+	'TFT3_Shen': {
+		desc: `All nearby allies automatically dodge incoming attacks for <scaleLevel>@ZoneDuration@</scaleLevel> seconds. While active, gain <TFTBonus>@ModifiedMR@&nbsp;(%i:scaleAP%)</TFTBonus> Magic Resist.`,
+		icon: `ASSETS/Characters/TFTTutorial_Shen/HUD/Icons2D/Shen_W.tex`,
+		name: `Future's Refuge`,
+		variables: {
+			'ZoneDuration': [2, 2.5, 3, 5],
+			'MagicResist': [0, 15, 30, 45],
+		},
+	},
+	'TFT3_Soraka': {
+		desc: `Heal your team for <scaleHealth>@ModifiedHeal@&nbsp;(%i:scaleAP%)</scaleHealth>.`,
+		icon: `ASSETS/Characters/TFT7_Soraka/HUD/Icons2D/Soraka_RFixed.tex`,
+		name: `Wish`,
+		variables: {
+			'HealAmount': [300, 250, 375, 20000],
+			'HealTargets': [15, 15, 15, 15],
+		},
+	},
+	'TFT3_SuperMech': {
+		desc: `<spellPassive>Passive:</spellPassive> Attacks cleave the area in front of it dealing <physicalDamage>@FinalAttackDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage.<br><br><spellActive>Active:</spellActive> Call down a devastating blast at the target's location, dealing <magicDamage>@ModifiedMainDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to target and <magicDamage>@ModifiedSplashDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to all other nearby enemies.<br><br>This spell's damage increases with the Star Level of the Super-Mech's Pilots.`,
+		icon: `ASSETS/Characters/TFT3_SuperMech/HUD/Icons2D/TFT3_SuperMech_R.tex`,
+		name: `Mecha Justice`,
+		variables: {
+			'MainDamage': [650, 700, 750, 850],
+			'SplashDamage': [325, 350, 375, 425],
+			'ADPercent': [1, 1, 1, 1],
+		},
+	},
+	'TFT3_Syndra': {
+		desc: `Pull in all orbs on the battlefield and create @Spheres@ new ones, then fire them all at the enemy with the highest percent Health, dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage per orb.<br><br><tftitemrules>Lowest total Health breaks targeting ties.</tftitemrules>`,
+		icon: `ASSETS/Characters/TFT3_Syndra/HUD/Icons2D/SyndraRFixed.tex`,
+		name: `Unleashed Power`,
+		variables: {
+			'Spheres': [3, 3, 3, 3],
+			'CastTime': [0.75, 0.75, 0.75, 0.75],
+			'Damage': [0, 80, 120, 200],
+			'RetargetOnKill': [1, 1, 1, 1],
+			'RetargetOverkillAmount': [500, 500, 500, 500],
+		},
+	},
+	'TFT_TrainingDummy': {
+		desc: `The Training Dummy cannot move or attack. It is also dressed like a devilishly handsome Yordle.`,
+		icon: `ASSETS/Characters/TFT_TrainingDummy/HUD/Icons2D/TFTDebug_Dummy_DoNothing.tex`,
+		name: `On Duty!`,
+		variables: {},
+	},
+	'TFT3_Teemo': {
+		desc: `Toss 3 traps around the nearest enemy. When an enemy nears a trap (or after @DetonationDelay@ seconds) it explodes, dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> damage to nearby enemies and slowing their movement speed for @SlowDuration@ seconds.`,
+		icon: `ASSETS/Characters/TFT3_Teemo/HUD/Icons2D/Teemo_R.tex`,
+		name: `Satellite Traps`,
+		variables: {
+			'Damage': [0, 125, 200, 550],
+			'SlowDuration': [0, 3, 3, 3],
+			'DetonationDelay': [0, 3, 3, 3],
+		},
+	},
+	'TFT3_Thresh': {
+		desc: `Toss a lantern towards <scaleLevel>@UnitCount@</scaleLevel> random unit(s) on your bench, pulling onto the battlefield with <TFTBonus>@ModifiedMana@&nbsp;(%i:scaleAP%)</TFTBonus> bonus Mana. Traits are unaffected.`,
+		icon: `ASSETS/Characters/TFT3_Thresh/HUD/Icons2D/Thresh_W.tex`,
+		name: `Temporal Passage`,
+		variables: {
+			'UnitCount': [1, 1, 1, 9],
+			'ManaBonus': [10, 25, 50, 200],
+			'FourCostSummonOdds': [0, 0, 0, 0.699999988079071],
+			'ThreeCostSummonOdds': [0, 0, 0, 0.30000001192092896],
+			'BaseStarLevelSummon': [0, 0, 0, 3],
+		},
+	},
+	'TFT3_TwistedFate': {
+		desc: `Throw three cards in a cone that deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to each enemy they pass through.`,
+		icon: `ASSETS/Characters/TFT3_TwistedFate/HUD/Icons2D/Cardmaster_PowerCard.tex`,
+		name: `Wild Cards`,
+		variables: {
+			'BaseDamage': [0, 200, 300, 450],
+		},
+	},
+	'TFT3_Urgot': {
+		desc: `Fire a drill toward the farthest enemy and reel in the first enemy hit over <scaleLevel>@ChannelDuration@</scaleLevel> seconds. Once reeled in, repeatedly deal <trueDamage>@TrueDamage@</trueDamage> true damage very quickly until they die. After his first successful cast, the Mana cost of this ability is reduced by <TFTBonus>@ModifiedManaCostReduction@&nbsp;(%i:scaleAP%)</TFTBonus>.`,
+		icon: `ASSETS/Characters/TFT3_Urgot/HUD/Icons2D/TFT3_Urgot_Spell.tex`,
+		name: `Fear Beyond Death`,
+		variables: {
+			'ManaCostReduction': [0, 20, 30, 120],
+			'ChannelDuration': [0, 3, 2, 1],
+			'FearDuration': [0, 0, 0, 1.100000023841858],
+			'TrueDamage': [2000, 2000, 2000, 10000],
+		},
+	},
+	'TFT3_Vayne': {
+		desc: `Focus for <TFTBonus>@ModifiedDuration@&nbsp;(%i:scaleAP%)</TFTBonus> seconds, tumbling away from the current target immediately and every third attack thereafter. After tumbling, become untargetable, shed negative effects, and the next attack deals <physicalDamage>@TooltipDamage@&nbsp;(%i:scaleAD%)</physicalDamage> physical damage.`,
+		icon: `ASSETS/Characters/TFT3_Vayne/HUD/Icons2D/Vayne_Inquisition.tex`,
+		name: `Final Hour`,
+		variables: {
+			'TumbleAttackPercentAD': [150, 125, 185, 315],
+			'Duration': [0, 8, 8, 8],
+		},
+	},
+	'TFT3_Vi': {
+		desc: `Charge the farthest enemy, knocking aside and dealing <magicDamage>@ModifiedSecondaryDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to all enemies along the way. When the target is reached, deal <magicDamage>@ModifiedPrimaryDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage and Stun them for <scaleLevel>@CCDuration@</scaleLevel> seconds.`,
+		icon: `ASSETS/Characters/TFT3_Vi/HUD/Icons2D/ViR.tex`,
+		name: `Assault and Battery`,
+		variables: {
+			'PrimaryDamage': [100, 250, 375, 625],
+			'CCDuration': [1.5, 2, 2.5, 3],
+			'MoveSpeed': [1000, 1000, 1000, 1000],
+			'OthersCCDuration': [0.25, 0.25, 0.25, 0.25],
+			'SecondaryDamage': [0, 125, 185, 325],
+		},
+	},
+	'TFT3_Viktor': {
+		desc: `Burn a path between the two enemies most distant from one another, first dealing <magicDamage>@ModifiedPercentHealthDamage@% (%i:scaleAP%)</magicDamage> maximum Health in magic damage, then 1 second later dealing <magicDamage>@ModifiedFlatDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage in an explosion along the same path.`,
+		icon: `ASSETS/Characters/TFT3_Viktor/HUD/Icons2D/Viktor_E2.tex`,
+		name: `Death Ray`,
+		variables: {
+			'PercentHealthDamage': [0, 8, 10, 35],
+			'FlatDamage': [0, 220, 330, 1100],
+		},
+	},
+	'TFT_Voidspawn': {
+		desc: `The Voidspawn gains bonus Health and Attack Damage based on the current Stage. `,
+		icon: `ASSETS/Characters/TFT_VoidSpawn/HUD/Icons2D/Voidspawn_SquareFixed.tex`,
+		name: `Voidborn`,
+		variables: {},
+	},
+	'TFT3_WuKong': {
+		desc: `Deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to nearby enemies over @Duration@ seconds. The first time each enemy is hit, Stun them for <scaleLevel>@StunDuration@</scaleLevel> seconds.`,
+		icon: `ASSETS/Characters/TFT3_WuKong/HUD/Icons2D/MonkeyKingCycloneFixed.tex`,
+		name: `Cyclone`,
+		variables: {
+			'Damage': [200, 300, 450, 1500],
+			'Duration': [3, 3, 3, 3],
+			'StunDuration': [1.5, 2, 2, 8],
+			'HexRadius': [1, 1, 1, 1],
+		},
+	},
+	'TFT3_Xayah': {
+		desc: `Gain <TFTBonus>@ModifiedAS@&nbsp;(%i:scaleAP%)</TFTBonus> Attack Speed for @Duration@ seconds.`,
+		icon: `ASSETS/Characters/TFT7_Xayah/HUD/Icons2D/XayahW.tex`,
+		name: `Deadly Plumage`,
+		variables: {
+			'Duration': [8, 8, 8, 8],
+			'AttackSpeed': [0.5, 1, 1.149999976158142, 1.2999999523162842],
+			'DamageReduction': [50, 50, 50, 50],
+		},
+	},
+	'TFT3_Xerath': {
+		desc: `Summon meteors to strike random enemies in place of normal attacks for <scaleLevel>@Duration@</scaleLevel> seconds. Meteors deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage upon impact and if they kill their target, all adjacent enemies take <magicDamage>@ModifiedAoEDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage and are Stunned for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/TFT3_Xerath/HUD/Icons2D/TFT3_Xerath_Ult.tex`,
+		name: `Abyssal Bombardment`,
+		variables: {
+			'BaseDamage': [350, 320, 440, 2500],
+			'AoEDamage': [175, 80, 110, 625],
+			'StunDuration': [1.5, 1.5, 1.5, 1.5],
+			'Duration': [6, 6, 8, 45],
+		},
+	},
+	'TFT3_XinZhao': {
+		desc: `Attack the current target three times, dealing <physicalDamage>@TooltipDamage@&nbsp;(%i:scaleAD%)</physicalDamage> total physical damage. The third strike Stuns them for @StunDuration@ seconds and deals <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> bonus magic damage.`,
+		icon: `ASSETS/Characters/TFT3_XinZhao/HUD/Icons2D/XinZhaoQ.tex`,
+		name: `Three Talon Strike`,
+		variables: {
+			'StunDuration': [1, 1, 1, 1],
+			'BonusDamage': [4, 225, 340, 525],
+		},
+	},
+	'TFT3_Yasuo': {
+		desc: `Teleport to the furthest enemy in range. Stun them for @StunDuration@ seconds and attack them <TFTBonus>@ModifiedAttacks@&nbsp;(%i:scaleAP%)</TFTBonus> times.`,
+		icon: `ASSETS/Characters/TFT2_Yasuo/HUD/Icons2D/Yasuo_R.tex`,
+		name: `Last Breath`,
+		variables: {
+			'StunDuration': [1, 1, 1, 1],
+			'Damage': [100, 100, 100, 100],
+			'NumHits': [3, 4, 5, 6],
+		},
+	},
+	'TFT3_Zed': {
+		desc: `<spellPassive>Passive:</spellPassive> Every third attack, deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> bonus magic damage and steal <scaleLevel>@ADSteal*100@%</scaleLevel> of the current target's Attack Damage.`,
+		icon: `ASSETS/Characters/TFT3_Zed/HUD/Icons2D/TFT3_ZedP.tex`,
+		name: `Contempt For The Weak`,
+		variables: {
+			'ADSteal': [0.25, 0.25, 0.25, 0.30000001192092896],
+			'Damage': [0, 60, 90, 150],
+			'TooltipDamage': [1, 1, 1, 1],
+		},
+	},
+	'TFT3_Ziggs': {
+		desc: `Deal <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage to the current target.`,
+		icon: `ASSETS/Characters/TFT5_Ziggs/HUD/Icons2D/ZiggsQ.tex`,
+		name: `Bomb!`,
+		variables: {
+			'Damage': [70, 250, 375, 575],
+		},
+	},
+	'TFT3_Zoe': {
+		desc: `Kick a bubble at the enemy with the highest Health, dealing <magicDamage>@ModifiedDamage@&nbsp;(%i:scaleAP%)</magicDamage> magic damage and Stunning for <scaleLevel>@StunDuration@</scaleLevel> seconds.<br><br><tftitemrules>Highest total Health breaks targeting ties.</tftitemrules>`,
+		icon: `ASSETS/Characters/TFT3_NPC_Cyte/HUD/Icons2D/Zoe_EFixed.tex`,
+		name: `Sleepy Trouble Bubble`,
+		variables: {
+			'Damage': [75, 175, 260, 400],
+			'StunDuration': [1.5, 2, 2, 2.5],
+		},
+	},
+}

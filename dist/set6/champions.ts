@@ -1,4 +1,4 @@
-import type { ChampionData } from '../index'
+import type { AbilityData, ChampionData } from '../index'
 
 export enum ChampionKey { Akali = `TFT6_Akali`, Blitzcrank = `TFT6_Blitzcrank`, Braum = `TFT6_Braum`, Caitlyn = `TFT6_Caitlyn`, Camille = `TFT6_Camille`, ChoGath = `TFT6_ChoGath`, Darius = `TFT6_Darius`, DrMundo = `TFT6_DrMundo`, Ekko = `TFT6_Ekko`, Ezreal = `TFT6_Ezreal`, Fiora = `TFT6_Fiora`, Galio = `TFT6_Galio`, Gangplank = `TFT6_Gangplank`, Garen = `TFT6_Garen`, Graves = `TFT6_Graves`, Heimerdinger = `TFT6_Heimerdinger`, Illaoi = `TFT6_Illaoi`, Janna = `TFT6_Janna`, Jayce = `TFT6_Jayce`, Jhin = `TFT6_Jhin`, Jinx = `TFT6_Jinx`, Kaisa = `TFT6_Kaisa`, Kassadin = `TFT6_Kassadin`, Katarina = `TFT6_Katarina`, KogMaw = `TFT6_KogMaw`, Leona = `TFT6_Leona`, Lissandra = `TFT6_Lissandra`, Lulu = `TFT6_Lulu`, Lux = `TFT6_Lux`, Malzahar = `TFT6_Malzahar`, Tibbers = `TFT6_Tibbers`, HexTechDragon = `TFT6_HexTechDragon`, MalzaharVoidling = `TFT6_MalzaharVoidling`, MissFortune = `TFT6_MissFortune`, Orianna = `TFT6_Orianna`, Poppy = `TFT6_Poppy`, Quinn = `TFT6_Quinn`, Samira = `TFT6_Samira`, Seraphine = `TFT6_Seraphine`, Shaco = `TFT6_Shaco`, Singed = `TFT6_Singed`, Sion = `TFT6_Sion`, Swain = `TFT6_Swain`, TahmKench = `TFT6_TahmKench`, Talon = `TFT6_Talon`, TrainingDummy = `TFT_TrainingDummy`, Taric = `TFT6_Taric`, Tristana = `TFT6_Tristana`, Trundle = `TFT6_Trundle`, TwistedFate = `TFT6_TwistedFate`, Twitch = `TFT6_Twitch`, Urgot = `TFT6_Urgot`, Veigar = `TFT6_Veigar`, Vex = `TFT6_Vex`, Vi = `TFT6_Vi`, Viktor = `TFT6_Viktor`, VoidSpawn = `TFT_VoidSpawn`, Warwick = `TFT6_Warwick`, Yone = `TFT6_Yone`, Yuumi = `TFT6_Yuumi`, Zac = `TFT6_Zac`, Ziggs = `TFT6_Ziggs`, Zilean = `TFT6_Zilean`, Zyra = `TFT6_Zyra` }
 
@@ -5976,3 +5976,657 @@ export const champions: ChampionData[] = [
 ]
 
 export const otherUnits: ChampionData[] = []
+
+export const abilities: Record<string, AbilityData> = {
+	'TFT6_Akali': {
+		desc: `Akali dashes in a line through the most enemies, dealing @ModifiedInitialDamage@ magic damage and marking them for @MarkDuration@ seconds. When a marked target drops below @ExecuteThreshold*100@% Health, Akali dashes again and executes them, dealing @ModifiedDashDamage@ magic damage to enemies she passes through.`,
+		icon: `ASSETS/Characters/Akali/HUD/Icons2D/Akali_R.dds`,
+		name: `Perfect Execution`,
+		variables: {
+			'InitialDamage': [250, 275, 375, 2000],
+			'DashDamage': [250, 275, 375, 2000],
+			'ExecuteThreshold': [0, 0.15000000596046448, 0.20000000298023224, 0.8999999761581421],
+			'MarkDuration': [7, 7, 7, 7],
+		},
+	},
+	'TFT6_Braum': {
+		desc: `Braum slams his vault door into the ground, creating a fissure towards his target. Enemies within 2 hexes of Braum, and those struck by the fissure, are stunned for @StunDuration@ seconds and take @ModifiedDamage@ magic damage.`,
+		icon: `ASSETS/Characters/Braum/HUD/Icons2D/Braum_R.dds`,
+		name: `Vault Breaker`,
+		variables: {
+			'Damage': [100, 100, 200, 600],
+			'StunDuration': [2.5, 2, 3, 6],
+		},
+	},
+	'TFT6_Caitlyn': {
+		desc: `Caitlyn takes aim at the farthest enemy, firing a deadly bullet towards them that deals @ModifiedDamage@ magic damage to the first enemy it hits.`,
+		icon: `ASSETS/Characters/Caitlyn/HUD/Icons2D/Caitlyn_AceintheHole.dds`,
+		name: `Ace in the Hole`,
+		variables: {
+			'Damage': [0, 800, 1400, 2000],
+		},
+	},
+	'TFT6_Blitzcrank': {
+		desc: `Blitzcrank pulls the farthest enemy, dealing @ModifiedDamage@ magic damage and stunning them for @StunDuration@ seconds. His next attack knocks them up for 1 second. Allies within range will prefer attacking Blitzcrank's target.`,
+		icon: `ASSETS/Characters/Blitzcrank/HUD/Icons2D/Blitzcrank_RocketGrab.dds`,
+		name: `Rocket Grab`,
+		variables: {
+			'Damage': [200, 150, 300, 900],
+			'StunDuration': [1.5, 1.5, 1.5, 1.5],
+		},
+	},
+	'TFT6_Camille': {
+		desc: `Camille gains a shield blocking @ModifiedShield@ damage over @ShieldDuration@ seconds, then sweeps her leg, dealing @ModifiedDamage@ magic damage to enemies in a cone. While this shield holds, Camille's attacks restore @ModifiedHealing@ Health.`,
+		icon: `ASSETS/Characters/Camille/HUD/Icons2D/Camille_W.dds`,
+		name: `Defensive Sweep`,
+		variables: {
+			'ShieldDuration': [4, 4, 4, 4],
+			'Damage': [25, 150, 200, 300],
+			'Shield': [100, 225, 300, 435],
+			'HealingPerAttack': [10, 30, 50, 80],
+		},
+	},
+	'TFT6_Darius': {
+		desc: `Darius swings his axe in a circle, dealing @ModifiedDamage@ magic damage, then heals himself @ModifiedHeal@ Health for each enemy hit.`,
+		icon: `ASSETS/Characters/Darius/HUD/Icons2D/Darius_Icon_Decimate.dds`,
+		name: `Decimate`,
+		variables: {
+			'Damage': [125, 200, 275, 350],
+			'Heal': [100, 120, 140, 160],
+			'HexRange': [1, 1, 1, 1],
+		},
+	},
+	'TFT6_ChoGath': {
+		desc: `Cho'Gath devours the lowest Health enemy within range, dealing @ModifiedDamage@ magic damage. If this kills the target, Cho'Gath gains a stack of Feast (increased to two in Hyper Roll), up to @MaxFeastStacks@. Each stack of Feast permanently grants @BonusHealthOnKill*100@% bonus Health and size. `,
+		icon: `ASSETS/Characters/Chogath/HUD/Icons2D/GreenTerror_Feast.dds`,
+		name: `Feast`,
+		variables: {
+			'Damage': [200, 900, 975, 1050],
+			'BonusHealthOnKill': [0.019999999552965164, 0.019999999552965164, 0.019999999552965164, 0.019999999552965164],
+			'MaxFeastStacks': [0, 20, 40, 999],
+		},
+	},
+	'TFT6_Ekko': {
+		desc: `Ekko invokes an afterimage that bats a device towards the largest group of units. Upon landing, it deals @ModifiedDamage@ magic damage to enemies within and applies @ASSlow*100@% reduced Attack Speed for @SlowDuration@ seconds. Allies inside gain @ModifiedASBuff@ Attack Speed for @BuffDuration@ seconds.`,
+		icon: `ASSETS/Characters/Ekko/HUD/Icons2D/Ekko_W.dds`,
+		name: `Parallel Convergence`,
+		variables: {
+			'FieldDelay': [2.200000047683716, 2.200000047683716, 2.200000047683716, 2.200000047683716],
+			'FieldDuration': [2, 2, 2, 2],
+			'HexRadius': [2, 2, 2, 2],
+			'BonusAS': [0.10000000149011612, 0.3499999940395355, 0.4000000059604645, 0.5],
+			'ASSlow': [0, 0.3499999940395355, 0.3499999940395355, 0.5],
+			'Damage': [75, 175, 225, 375],
+			'SlowDuration': [4, 4, 4, 4],
+			'BuffDuration': [4, 4, 4, 4],
+		},
+	},
+	'TFT6_DrMundo': {
+		desc: `Dr. Mundo injects himself with “medicine”, restoring @PercentHealthInstantHeal*100@% of his maximum Health and becoming energized for @Duration@ seconds. While energized, he restores an additional @PercentHealthHealing*100@% of his maximum Health over the duration and deals @ModifiedDamage@ magic damage to a random nearby enemy each second. When the "medicine" expires, Dr. Mundo expels a burst of electricity that deals @ModifiedPercentHealthDamage@ of his current Health as magic damage to all enemies within 2 hexes.`,
+		icon: `ASSETS/Characters/DrMundo/HUD/Icons2D/DrMundo_R.Dr_Mundo_VGU.dds`,
+		name: `Zap Dose`,
+		variables: {
+			'Duration': [5, 5, 5, 5],
+			'PercentHealthHealing': [0.30000001192092896, 0.25, 0.3499999940395355, 1],
+			'Damage': [10, 80, 125, 300],
+			'PercentHealthDamage': [0.05000000074505806, 0.15000000596046448, 0.20000000298023224, 0.5],
+			'HealingTickRate': [1, 1, 1, 1],
+			'DamageTickRate': [1, 1, 1, 1],
+			'PercentHealthInstantHeal': [0.3499999940395355, 0.3499999940395355, 0.3499999940395355, 0.3499999940395355],
+		},
+	},
+	'TFT6_Ezreal': {
+		desc: `Ezreal fires a missile at his target, dealing @PercentAD*100@% of his Attack Damage plus @BonusDamage@ bonus physical damage (total: <scaleAD>@TotalDamage@ %i:scaleAD%</scaleAD>). If the missile hits, he grants himself @ModifiedAS@ bonus stacking Attack Speed, up to <scaleAP>@MaxAS@ %i:scaleAP%</scaleAP> at @MaxStacks@ stacks.`,
+		icon: `ASSETS/Characters/Ezreal/HUD/Icons2D/Ezreal_Q.dds`,
+		name: `Mystic Shot`,
+		variables: {
+			'BonusDamage': [0, 25, 50, 100],
+			'ASBoost': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
+			'MaxStacks': [5, 5, 5, 5],
+			'PercentAD': [1.5, 1.5, 1.5, 1.5],
+		},
+	},
+	'TFT6_Fiora': {
+		desc: `Fiora becomes untargetable and strikes 4 times at her target's vitals. Each strike deals @PercentAD*100@% of her Attack Damage as physical damage (total:<scaleAD> @TotalDamage@</scaleAD>), @ModifiedBonusDamage@ bonus true damage, and heals her for @PercentHealing*100@% of the total damage dealt.<br><br>If the target dies, Fiora will change targets to the nearest enemy.`,
+		icon: `ASSETS/Characters/Fiora/HUD/Icons2D/Fiora_R.dds`,
+		name: `Blade Waltz`,
+		variables: {
+			'PercentAD': [1.7000000476837158, 1.7000000476837158, 1.7000000476837158, 1.7000000476837158],
+			'BonusTrueDamage': [75, 60, 100, 300],
+			'PercentHealing': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
+		},
+	},
+	'TFT6_Gangplank': {
+		desc: `Gangplank attacks his target with his gun, dealing @ADPercent*100@% of his Attack Damage plus @ModifiedDamage@ bonus physical damage (total: <scaleAD>@TotalDamage@ %i:scaleAD%</scaleAD>). If this attack kills a champion, Gangplank plunders 1 gold. `,
+		icon: `ASSETS/Characters/Gangplank/HUD/Icons2D/Gangplank_Q.dds`,
+		name: `Parrrley`,
+		variables: {
+			'Damage': [0, 110, 150, 200],
+			'ADPercent': [1.7000000476837158, 1.7000000476837158, 1.7000000476837158, 1.7000000476837158],
+		},
+	},
+	'TFT6_Galio': {
+		desc: `Galio becomes invulnerable and leaps into the sky before crashing down on the largest group of enemies. Enemies within a large radius take @ModifiedDamage@ magic damage and are knocked into the sky. The lower the enemy's maximum Health is compared to Galio's, the further they are knocked up.<br><br>Passive: Galio's Critical Strikes slam the ground, dealing @ModifiedBonusDamage@ bonus magic damage to enemies around his target.`,
+		icon: `ASSETS/Characters/Galio/HUD/Icons2D/Galio_R.dds`,
+		name: `Colossal Entrance`,
+		variables: {
+			'Damage': [200, 200, 300, 9001],
+			'HexRadius': [3, 3, 3, 5],
+			'StunDuration': [1.5, 1.5, 1.75, 9.5],
+			'CritBonusDamage': [0, 70, 100, 1999],
+		},
+	},
+	'TFT6_Garen': {
+		desc: `Garen shrugs off all crowd control effects, empowering his next strike to deal @PercentAD*100@% of his Attack Damage, plus an additional @ModifiedPercentHealth@ of his missing Health in bonus physical damage. (base: @BaseDamage@) This Ability can be cast while stunned.`,
+		icon: `ASSETS/Characters/Garen/HUD/Icons2D/Garen_Q.dds`,
+		name: `Decisive Strike`,
+		variables: {
+			'PercentHealth': [0.15000000596046448, 0.15000000596046448, 0.15000000596046448, 0.15000000596046448],
+			'PercentAD': [2, 2, 2, 2],
+		},
+	},
+	'TFT6_Illaoi': {
+		desc: `Illaoi slams her target, linking her soul to it for @Duration@ seconds and dealing @ModifiedDamage@ magic damage. While linked, Illaoi is healed for @PercentHealing*100@% of the damage taken by her target.`,
+		icon: `ASSETS/Characters/Illaoi/HUD/Icons2D/Illaoi_W.dds`,
+		name: `Harsh Lesson`,
+		variables: {
+			'MagicDamage': [0, 200, 325, 550],
+			'PercentHealing': [0, 0.25, 0.30000001192092896, 0.4000000059604645],
+			'Duration': [5, 5, 5, 5],
+		},
+	},
+	'TFT6_Graves': {
+		desc: `Graves launches a smoke grenade toward his current target. The grenade explodes on impact dealing @ModifiedDamage@ magic damage to nearby enemies, and disarms enemies who remain within the smoke cloud for @DisarmDuration@ seconds.`,
+		icon: `ASSETS/Characters/Graves/HUD/Icons2D/GravesSmokeGrenade.dds`,
+		name: `Smoke Grenade`,
+		variables: {
+			'Damage': [0, 150, 250, 400],
+			'DisarmDuration': [1.5, 2, 2.5, 3],
+		},
+	},
+	'TFT6_Heimerdinger': {
+		desc: `Heimerdinger fires a wave of 5 rockets that converge on his target, each dealing @ModifiedDamage@ magic damage to the first target they hit. Every 3rd cast, Heimerdinger summons @MaxWaves@ waves instead.`,
+		icon: `ASSETS/Characters/Heimerdinger/HUD/Icons2D/Heimerdinger_W1.dds`,
+		name: `Rocket Swarm`,
+		variables: {
+			'BaseDamage': [0, 70, 100, 150],
+			'MaxWaves': [3, 3, 3, 3],
+		},
+	},
+	'TFT6_Kassadin': {
+		desc: `Kassadin fires an orb of void energy at his target, dealing @ModifiedDamage@ magic damage and granting Kassadin a shield that reduces incoming damage by @DamageReduction*100@% for @Duration@ seconds. Enemies hit by the orb suffer a @ManaReave*100@% increased Mana cost for their next Ability cast.`,
+		icon: `ASSETS/Characters/Kassadin/HUD/Icons2D/Kassadin_Q.dds`,
+		name: `Null Sphere`,
+		variables: {
+			'ManaReave': [0, 0.5, 0.5, 0.5],
+			'DamageReduction': [0.25, 0.25, 0.25, 0.25],
+			'Damage': [150, 250, 325, 400],
+			'Duration': [5, 5, 5, 5],
+		},
+	},
+	'TFT6_Jhin': {
+		desc: `Jhin transforms his weapon into a powerful sniper rifle for his next 4 shots. Each shot deals @PercentAttackDamage*100@% of his Attack Damage as physical damage, reduced by @DamageFalloff*100@% for each target it pierces through. (total: @TotalDamage@) The 4th shot is guaranteed to critically strike, and deals @ModifiedBonusDamage@ more damage based on his target's missing Health.<br><br>Passive: Jhin always attacks @AttackSpeed@ times per second. He converts each 1% of bonus Attack Speed into @ADFromAttackSpeed@ Attack Damage.`,
+		icon: `ASSETS/Characters/Jhin/HUD/Icons2D/Jhin_R.dds`,
+		name: `Curtain Call`,
+		variables: {
+			'BonusDamage': [1, 1, 1, 1],
+			'PercentAttackDamage': [1.2000000476837158, 1.5, 2, 3],
+			'DamageFalloff': [0.33000001311302185, 0.33000001311302185, 0.33000001311302185, 0.33000001311302185],
+			'AttackSpeed': [0.8500000238418579, 0.8999999761581421, 0.8999999761581421, 1.399999976158142],
+			'ADFromAttackSpeed': [0.800000011920929, 0.800000011920929, 0.800000011920929, 0.800000011920929],
+		},
+	},
+	'TFT6_Jayce': {
+		desc: `Melee form: Jayce slams his hammer down onto nearby enemies, dealing damage and reducing their Armor and Magic Resist.<br>Ranged form: Jayce deploys an acceleration gate, granting bonus Attack Speed to allies in the same row, then fires an orb of electricity at the largest enemy group.`,
+		icon: `ASSETS/Characters/Jayce/HUD/Icons2D/Jayce_R1.dds`,
+		name: `Mercury Cannon/Mercury Hammer`,
+		variables: {},
+	},
+	'TFT6_Jinx': {
+		desc: `Jinx rides her rocket into the sky, then comes crashing down near the center-most enemy, dealing @ModifiedDamage@ magic damage to enemies around the epicenter, and @FalloffPercent*100@% to all other enemies in a large area. The epicenter burns every unit except Jinx for @HexDuration@ seconds, dealing @PercentBurn@% of the target's maximum Health as true damage, and reducing healing by 50% for the duration.<br><br>She then swaps to her rocket launcher for the rest of combat, causing her attacks to explode for @RocketLauncherPercentAD*100%@% of her Attack Damage in a small area around her target. (total: <scaleAD>@TooltipDamage@ %i:scaleAD%</scaleAD>)`,
+		icon: `ASSETS/Characters/Jinx/HUD/Icons2D/Jinx_R.dds`,
+		name: `Super Mega Death Rocket`,
+		variables: {
+			'Damage': [500, 450, 700, 8888],
+			'InnerRadius': [1, 1, 1, 2],
+			'OuterRadius': [3, 3, 3, 5],
+			'PercentBurn': [1, 2, 3, 4],
+			'FalloffPercent': [0.5, 0.5, 0.5, 0.5],
+			'RocketLauncherPercentAD': [0.75, 2, 2.0999999046325684, 8.880000114440918],
+			'HexDuration': [5, 5, 5, 5],
+		},
+	},
+	'TFT6_Janna': {
+		desc: `Janna summons a Monsoon, knocking back nearby enemies and stunning them for @StunDuration@ second(s). The Monsoon heals your team for @ModifiedHeal@ Health over @Duration@ seconds.`,
+		icon: `ASSETS/Characters/Janna/HUD/Icons2D/Janna_ReapTheWhirlwind.dds`,
+		name: `Monsoon`,
+		variables: {
+			'HealAmount': [300, 275, 350, 1000],
+			'Duration': [3, 3, 3, 3],
+			'KnockbackRadius': [3, 3, 3, 3],
+			'StunDuration': [1.5, 0.5, 0.5, 4],
+			'TicksPerSecond': [0.5, 0.5, 0.5, 0.5],
+		},
+	},
+	'TFT6_Katarina': {
+		desc: `Katarina blinks behind the enemy with the lowest Health within 3 hexes and slashes all adjacent enemies, dealing @ModifiedDamage@ magic damage. Katarina gains @ManaRefund@ Mana for each enemy killed by Shunpo.`,
+		icon: `ASSETS/Characters/Katarina/HUD/Icons2D/Katarina_E.dds`,
+		name: `Shunpo`,
+		variables: {
+			'Damage': [0, 160, 200, 250],
+			'ManaRefund': [20, 20, 20, 20],
+		},
+	},
+	'TFT6_Kaisa': {
+		desc: `Kai'sa dashes away from all enemies, then fires a volley of @NumMissiles@ missiles spread evenly among all enemies that deal @ModifiedDamage@ magic damage each.<br><br>For each time Kai'Sa has attacked this combat, she'll fire an additional missile.`,
+		icon: `ASSETS/Characters/Kaisa/HUD/Icons2D/Kaisa_Q2.dds`,
+		name: `Icathian Monsoon`,
+		variables: {
+			'NumMissiles': [4, 12, 18, 100],
+			'FakeCastTime': [1, 1, 1, 1],
+			'Damage': [50, 70, 90, 180],
+		},
+	},
+	'TFT6_KogMaw': {
+		desc: `For @Duration@ seconds, Kog'Maw gains infinite Attack Range, @PercentAttackSpeed*100@% Attack Speed, and his attacks deal @ModifiedPercentMaxHPDamage@ of the target's maximum Health as bonus magic damage.`,
+		icon: `ASSETS/Characters/KogMaw/HUD/Icons2D/KogMaw_BioArcaneBarrage.dds`,
+		name: `Barrage`,
+		variables: {
+			'Duration': [3, 3, 3, 3],
+			'PercentAttackSpeed': [0.75, 0.75, 0.75, 0.75],
+			'PercentMaxHPDamage': [0.07999999821186066, 0.07999999821186066, 0.07999999821186066, 0.07999999821186066],
+		},
+	},
+	'TFT6_Lulu': {
+		desc: `Lulu enlarges @NumAllies@ low Health allies, granting them @ModifiedBonusHealth@ bonus Health and knocking up enemies near them. If the ally is already enlarged, they are healed instead.`,
+		icon: `ASSETS/Characters/Lulu/HUD/Icons2D/Lulu_GiantGrowth.dds`,
+		name: `Wild Growth`,
+		variables: {
+			'BonusHealth': [300, 325, 350, 375],
+			'BuffDuration': [60, 60, 60, 60],
+			'CCDuration': [1, 1, 1, 1],
+			'NumAllies': [1, 1, 2, 3],
+		},
+	},
+	'TFT6_Tibbers': {
+		desc: `The Bear surges with power, gaining @PercentAD*100@% bonus Attack Damage and granting @AllyADAPBuff@ Attack Damage and Ability Power to your team for @TotalBuffDuration@ seconds.`,
+		icon: `ASSETS/Characters/Annie/HUD/Icons2D/Annie_R2.dds`,
+		name: `Power Surge`,
+		variables: {
+			'BuffDuration': [4, 4, 4, 4],
+			'PercentAD': [1, 1, 1, 1],
+			'AllyADAPBuff': [20, 20, 20, 20],
+			'AllyPercentAD': [0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645],
+			'AllyPercentASBase': [1, 1, 1, 1],
+		},
+	},
+	'TFT6_Leona': {
+		desc: `Leona calls down a beacon of light upon herself, granting herself a @ModifiedShielding@ Health shield for @Duration@ seconds. Leona and allies within 2 hexes gain @BonusStats@ Armor and Magic Resistance for the same duration.`,
+		icon: `ASSETS/Characters/Leona/HUD/Icons2D/LeonaSolarFlare.dds`,
+		name: `Solar Eclipse`,
+		variables: {
+			'Shielding': [0, 400, 650, 1000],
+			'Duration': [4, 5, 5, 8],
+			'BonusStats': [25, 30, 50, 80],
+		},
+	},
+	'TFT6_Lissandra': {
+		desc: `Lissandra encases her target in an iron maiden, stunning them for @StunDuration@ seconds and dealing @ModifiedDamage@ magic damage to enemies within a large area. Damage from the iron maiden reduces enemies' Attack Damage by @WeakenedPercent*100@% for @WeakenedDuration@ seconds.<br><br>If Lissandra is below @HealthThreshold*100@% Health, she encases herself instead, dealing damage to surrounding enemies and becoming untargetable and invulnerable for @UntargetableDuration@ seconds.`,
+		icon: `ASSETS/Characters/Lissandra/HUD/Icons2D/Lissandra_R.dds`,
+		name: `Iron Maiden`,
+		variables: {
+			'StunDuration': [1.5, 1.5, 1.5, 1.5],
+			'Damage': [0, 250, 325, 550],
+			'HealthThreshold': [0.5, 0.5, 0.5, 0.5],
+			'UntargetableDuration': [2, 2, 2, 2],
+			'WeakenedPercent': [0.30000001192092896, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
+			'WeakenedDuration': [4, 4, 4, 4],
+		},
+	},
+	'TFT6_HexTechDragon': {
+		desc: `The Dragon lands and lets out a bellowing roar, causing all enemies within @FearHexRange@ hexes to flee for @FearDuration@ seconds. Your team is energized and gains @CritIncrease*100@% Critical Chance and @CritDamageIncrease*100@% Critical Damage for @EnergizedDuration@ seconds.<br><br>Passive: The Dragon is immune to crowd control effects. Every 3rd attack is charged with lightning, dealing @ModifiedLightningDamage@ bonus magic damage to @NumEnemies@ enemies.`,
+		icon: `ASSETS/Characters/TFT6_HextechDragon/HUD/Icons2D/DragonSpell.TFT_Set6.dds`,
+		name: `Electrifying Roar`,
+		variables: {
+			'BonusLightningDamage': [500, 500, 500, 500],
+			'NumEnemies': [3, 3, 3, 3],
+			'FearDuration': [3, 3, 3, 3],
+			'EnergizedDuration': [8, 8, 8, 8],
+			'CritIncrease': [0.75, 0.75, 0.75, 0.75],
+			'CritDamageIncrease': [0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645],
+			'FearHexRange': [5, 5, 5, 5],
+		},
+	},
+	'TFT6_MissFortune': {
+		desc: `Miss Fortune rains 4 waves of bullets down around her target, dealing @ModifiedMagicDamage@ total magic damage to enemies in the area and reducing their incoming healing by @HealingReduction@% for @HealingReductionDuration@ seconds.`,
+		icon: `ASSETS/Characters/MissFortune/HUD/Icons2D/MissFortune_E.dds`,
+		name: `Make it Rain`,
+		variables: {
+			'MagicDamage': [0, 275, 375, 600],
+			'HealingReduction': [0, 50, 50, 50],
+			'HealingReductionDuration': [0, 6, 6, 6],
+		},
+	},
+	'TFT6_Malzahar': {
+		desc: `Malzahar infects the mind of the closest unafflicted target, dealing @ModifiedDamage@ magic damage over @Duration@ seconds and reducing the Magic Resist of enemies by @MRShred*100@%.<br><br>If an afflicted target dies, Malefic Visions spreads to the nearest @SpreadTargets@ unafflicted targets with the remaining duration.`,
+		icon: `ASSETS/Characters/Malzahar/HUD/Icons2D/Malzahar_E.dds`,
+		name: `Malefic Visions`,
+		variables: {
+			'Damage': [0, 650, 900, 1100],
+			'Duration': [0, 8, 8, 8],
+			'MRShred': [0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645],
+			'SpreadTargets': [0, 1, 1, 2],
+			'TickRate': [0.5, 0.5, 0.5, 0.5],
+		},
+	},
+	'TFT6_Poppy': {
+		desc: `Poppy throws her buckler at the farthest enemy, dealing @PercentArmorDamage*100@% of her Armor as magic damage. (total: @TotalDamage@) The buckler then bounces back, granting Poppy a shield that blocks @ModifiedShield@ damage.`,
+		icon: `ASSETS/Characters/Poppy/HUD/Icons2D/Poppy_Passive.dds`,
+		name: `Buckler Toss`,
+		variables: {
+			'PercentArmorDamage': [2, 1.7999999523162842, 2.0999999046325684, 2.4000000953674316],
+			'ShieldAmount': [100, 225, 275, 325],
+		},
+	},
+	'TFT6_Lux': {
+		desc: `After gathering energy, Lux fires a beam towards the farthest enemy target, dealing @ModifiedDamage@ magic damage. If she kills a unit with her beam, she gains @ManaRefund@ mana. `,
+		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds`,
+		name: `Final Spark`,
+		variables: {
+			'Damage': [200, 225, 375, 900],
+			'ManaRefund': [20, 20, 20, 20],
+		},
+	},
+	'TFT6_MalzaharVoidling': {
+		desc: `The Scarab creates a barrier on itself and the ally targeted by the most enemies, then taunts all enemies who have the Scarab within its attack range, forcing them to attack the Scarab. The barriers last for @DamageReducedDuration@ seconds, reduce incoming damage by @DamageReducedPercent*100@% and enemies attacking the barrier take @ModifiedDamageAmount@ magic damage. Enemies may only take damage from a barrier once per second.`,
+		icon: `ASSETS/Characters/TFT6_MalzaharVoidling/HUD/Icons2D/TFT6_MalzaharVoidling_EyeOfTheStorm.TFT_Set6.dds`,
+		name: `Reflective Barrier`,
+		variables: {
+			'DamageReducedPercent': [0.25, 0.25, 0.25, 0.25],
+			'DamageReducedDuration': [4, 4, 4, 4],
+			'DamageAmount': [50, 50, 50, 50],
+		},
+	},
+	'TFT6_Orianna': {
+		desc: `Orianna sends her ball towards the largest group of champions, then commands it to release a shockwave. Allies within 2 hexes gain @ModifiedShieldAmount@ shield for @Duration@ seconds, while enemies within the area are briefly knocked up and dealt @ModifiedDamage@ magic damage. Enemies adjacent to the ball are drawn in and stunned for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/Orianna/HUD/Icons2D/OriannaCommandDetonate.dds`,
+		name: `Command: Shockwave`,
+		variables: {
+			'ShieldAmount': [0, 100, 150, 400],
+			'Duration': [0, 4, 4, 4],
+			'Damage': [0, 350, 550, 1200],
+			'StunDuration': [2, 1, 1, 4],
+		},
+	},
+	'TFT6_Quinn': {
+		desc: `Quinn sends Valor out at the target with the highest Attack Speed, dealing @ModifiedDamage@ magic damage to the target and nearby enemies, disarming them for @DisarmDuration@ seconds.`,
+		icon: `ASSETS/Characters/Quinn/HUD/Icons2D/Quinn_Q.dds`,
+		name: `Disarming Assault`,
+		variables: {
+			'BonusDamage': [0, 200, 300, 700],
+			'DisarmDuration': [3, 2, 2.5, 3],
+			'ADReduction': [],
+			'ADReductionDuration': [],
+		},
+	},
+	'TFT6_Samira': {
+		desc: `If a target is adjacent to Samira, she slashes with her blade in a cone towards them dealing @ADPercent*100@% of her Attack Damage as physical damage to all enemies within and reducing their Armor by @ModifiedArmorShred@. (total: @TooltipDamage@) This Armor reduction can stack.<br><br>Otherwise, she fires an empowered shot at her target with the same effects and gains @ManaRefund@ Mana.`,
+		icon: `ASSETS/Characters/Samira/HUD/Icons2D/SamiraQ.Samira.dds`,
+		name: `Flair`,
+		variables: {
+			'ADPercent': [1.5, 1.75, 1.7999999523162842, 1.899999976158142],
+			'ManaRefund': [20, 20, 20, 20],
+			'ArmorShred': [0, 10, 15, 20],
+		},
+	},
+	'TFT6_Singed': {
+		desc: `Singed flings a nearby enemy towards the largest cluster of enemies, stunning his target for @StunDuration@ seconds when they land. All adjacent enemies take @ModifiedDamage@ magic damage and are briefly stunned.`,
+		icon: `ASSETS/Characters/Singed/HUD/Icons2D/Singed_E.dds`,
+		name: `Fling`,
+		variables: {
+			'AoEStunDuration': [0.75, 0.75, 0.75, 0.75],
+			'Damage': [50, 125, 175, 250],
+			'StunDuration': [2, 1.5, 2, 3],
+		},
+	},
+	'TFT6_Sion': {
+		desc: `Sion winds up for a moment, then smashes his axe down. All enemies within a large area are knocked up, stunned for @KnockUpDuration@ seconds, and dealt @ModifiedDamage@ magic damage.`,
+		icon: `ASSETS/Characters/Sion/HUD/Icons2D/Sion_R2.dds`,
+		name: `Decimating Smash`,
+		variables: {
+			'Damage': [0, 125, 200, 500],
+			'ChargeUpTime': [1.25, 1.25, 1.25, 1.25],
+			'KnockUpDuration': [1.5, 2.5, 3, 6],
+		},
+	},
+	'TFT6_TahmKench': {
+		desc: `Tahm Kench devours his target, storing them in his belly and dealing @ModifiedDamage@ magic damage over @BellyDuration@ seconds. During this time, they are invulnerable to other sources of damage and Tahm Kench takes @DamageReduction*100@% less damage.<br><br>If they die while inside, Tahm Kench either spits out a random component they were holding, or the cost of the unit in gold. Otherwise, he spits them towards the farthest enemy, briefly stunning targets on impact.<br><br>If a target is immune to crowd control, Tahm Kench will instead deal @ReducedModifiedDamage@ magic damage.`,
+		icon: `ASSETS/Characters/TahmKench/HUD/Icons2D/TahmKenchRWrapper.dds`,
+		name: `Devour`,
+		variables: {
+			'Damage': [600, 900, 1350, 30000],
+			'StunDuration': [1, 1, 1, 1],
+			'BellyDuration': [0, 3, 3, 3],
+			'DamageReduction': [0.30000001192092896, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
+			'TickRate': [0.5, 0.5, 0.5, 0.5],
+			'ReducedDamageToCC': [0, 300, 450, 10500],
+		},
+	},
+	'TFT6_Swain': {
+		desc: `Swain unleashes piercing bolts of eldritch power in a cone towards his target, dealing @ModifiedDamage@ magic damage to enemies within and healing Swain for @ModifiedHealing@ for each enemy hit.`,
+		icon: `ASSETS/Characters/Swain/HUD/Icons2D/Swain_Q.dds`,
+		name: `Death's Hand`,
+		variables: {
+			'BaseDamage': [0, 250, 375, 525],
+			'Range': [660, 660, 660, 660],
+			'Healing': [80, 225, 250, 350],
+		},
+	},
+	'TFT6_Shaco': {
+		desc: `Shaco dips into the shadows, briefly becoming untargetable. His next attack instead deals @PercentOfAD*100@% of his Attack Damage plus @ModifiedDamage@ bonus physical damage, and is guaranteed to critically strike targets below @PercentHealthCrit*100@% Health. (total: <scaleAD>@TotalDamage@ %i:scaleAD%</scaleAD>)`,
+		icon: `ASSETS/Characters/Shaco/HUD/Icons2D/Jester_ManiacalCloak2.dds`,
+		name: `Deceive`,
+		variables: {
+			'PercentOfAD': [1.850000023841858, 1.850000023841858, 1.850000023841858, 1.850000023841858],
+			'Duration': [2, 2, 2, 2],
+			'PercentHealthCrit': [0.5, 0.5, 0.5, 0.5],
+			'BaseDamage': [0, 90, 110, 130],
+		},
+	},
+	'TFT6_Talon': {
+		desc: `Passive: Talon's first attack on an enemy causes them to bleed for @ModifiedDamage@ magic damage over @BleedDuration@ seconds. Every 3rd attack on a target applies an additional bleed.`,
+		icon: `ASSETS/Characters/Talon/HUD/Icons2D/TalonP.dds`,
+		name: `Blade's End`,
+		variables: {
+			'Damage': [0, 450, 625, 950],
+			'BleedDuration': [7, 7, 7, 7],
+		},
+	},
+	'TFT6_Seraphine': {
+		desc: `Seraphine projects her song towards the largest group of enemy units dealing @ModifiedDamage@ magic damage to enemies. Allies it passes through are healed for @ModifiedHeal@ Health and gain @ASBonus*100@% Attack Speed for @ASBonusDuration@ seconds.`,
+		icon: `ASSETS/Characters/Seraphine/HUD/Icons2D/Seraphine_R.EllipsisMage.dds`,
+		name: `Encore`,
+		variables: {
+			'Damage': [1, 275, 450, 1200],
+			'Heal': [0, 250, 350, 1000],
+			'ASBonus': [0.30000001192092896, 0.30000001192092896, 0.5, 1],
+			'ASBonusDuration': [4, 4, 4, 4],
+		},
+	},
+	'TFT6_Taric': {
+		desc: `Taric heals himself and the lowest Health ally for @ModifiedHealAmount@. Any overhealing is converted to a shield that lasts @Duration@ seconds.`,
+		icon: `ASSETS/Characters/Taric/HUD/Icons2D/Taric_Q.dds`,
+		name: `Starlight Bastion`,
+		variables: {
+			'Duration': [4, 4, 4, 4],
+			'HealAmount': [0, 325, 425, 600],
+		},
+	},
+	'TFT6_Twitch': {
+		desc: `Twitch fires a powerful bolt towards his target that pierces through enemies, deals @PercentAttackDamage*100@% of his Attack Damage plus @ModifiedDamage@ bonus physical damage (total: <scaleAD>@TotalDamage@ %i:scaleAD%</scaleAD>) and reduces healing by @GWStrength*100@% for @GWDuration@ seconds.`,
+		icon: `ASSETS/Characters/Twitch/HUD/Icons2D/Twitch_R.dds`,
+		name: `Piercing Bolt`,
+		variables: {
+			'PercentAttackDamage': [0, 1.25, 1.350000023841858, 1.5],
+			'GWStrength': [0.5, 0.5, 0.5, 0.5],
+			'GWDuration': [5, 5, 5, 5],
+			'BaseDamage': [0.5, 25, 50, 75],
+		},
+	},
+	'TFT6_TwistedFate': {
+		desc: `Twisted Fate throws 3 cards in a cone that deal @ModifiedDamage@ magic damage to each enemy they pass through.`,
+		icon: `ASSETS/Characters/TwistedFate/HUD/Icons2D/Cardmaster_PowerCard.dds`,
+		name: `Wild Cards`,
+		variables: {
+			'BaseDamage': [0, 155, 205, 275],
+		},
+	},
+	'TFT6_Tristana': {
+		desc: `Tristana fires a massive cannonball towards her target, dealing @PercentAD*100@% of her Attack Damage plus @ModifiedDamage@ physical damage to the first enemy it hits (total: <scaleAD>@TotalDamage@ %i:scaleAD%</scaleAD>). If the target is within 2 hexes of Tristana, they're knocked back @HexKnockback@ hexes and briefly stunned.`,
+		icon: `ASSETS/Characters/Tristana/HUD/Icons2D/Tristana_R.dds`,
+		name: `Buster Shot`,
+		variables: {
+			'PercentAD': [0, 2, 2.0999999046325684, 2.25],
+			'BonusDamage': [0, 125, 150, 175],
+			'HexKnockback': [0.5, 1, 2, 3],
+			'StunDuration': [1, 1, 1, 1],
+			'KnockbackRadius': [2, 2, 2, 2],
+		},
+	},
+	'TFT_TrainingDummy': {
+		desc: `The Training Dummy cannot move or attack. It is also dressed like a devilishly handsome Yordle.`,
+		icon: `ASSETS/Characters/TFTDebug_Dummy/HUD/Icons2D/TFTDebug_Dummy_DoNothing.TFT_1022.dds`,
+		name: `On Duty!`,
+		variables: {},
+	},
+	'TFT6_Vex': {
+		desc: `Vex shields herself against @ModifiedShield@ damage over @ShieldDuration@ seconds. When the shield expires, it deals @ModifiedDamage@ magic damage to all enemies within 2 hexes, and an additional @ModifiedBonusDamage@ magic damage if it wasn't destroyed.<br><br>If it was destroyed, Personal Space becomes @ShieldAmp*100@% stronger this combat. This effect can stack.`,
+		icon: `ASSETS/Characters/Vex/HUD/Icons2D/Icons_Vex_W01.S_Yordle.dds`,
+		name: `Personal Space`,
+		variables: {
+			'ShieldAmount': [400, 525, 675, 850],
+			'ShieldDuration': [4, 4, 4, 4],
+			'ShieldAmp': [0.15000000596046448, 0.15000000596046448, 0.15000000596046448, 0.15000000596046448],
+			'ShieldDamage': [125, 100, 135, 175],
+			'BonusDamage': [125, 100, 135, 175],
+		},
+	},
+	'TFT6_Viktor': {
+		desc: `Passive: Viktor's attacks melt his target's defenses, reducing their Armor by @ArmorReduction*100@% for @ShredDuration@ seconds.<br><br>Viktor summons multiple singularities that fire death rays, which cut across the battlefield in a line. To enemies caught in its path, death rays deal @ModifiedDamage@ magic damage, destroy @ShieldDestructionPercent*100@% of any remaining shields.`,
+		icon: `ASSETS/Characters/Viktor/HUD/Icons2D/Viktor_E2.dds`,
+		name: `Chaos Rays`,
+		variables: {
+			'DamageAmount': [50, 360, 420, 1500],
+			'NumLasers': [3, 3, 4, 12],
+			'ShredDuration': [6, 6, 6, 6],
+			'ArmorReduction': [0.5, 0.699999988079071, 0.699999988079071, 0.699999988079071],
+			'ShieldDestructionPercent': [0, 0.25, 0.33000001311302185, 1],
+		},
+	},
+	'TFT6_Yuumi': {
+		desc: `Yuumi and Book detach and then launch @NumOfWaves@ waves toward the farthest enemy, each dealing @ModifiedDamage@ magic damage and stunning enemies for @StunDuration@ seconds. She then attaches to the lowest Health ally.`,
+		icon: `ASSETS/Characters/Yuumi/HUD/Icons2D/YuumiR.dds`,
+		name: `Final Chapter`,
+		variables: {
+			'Damage': [0, 45, 80, 247],
+			'NumOfWaves': [0, 3, 5, 33],
+			'StunDuration': [0, 0.75, 0.75, 0.75],
+			'TimeBetweenWaves': [0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.10000000149011612],
+		},
+	},
+	'TFT6_Urgot': {
+		desc: `For the next @ModifiedDuration@ seconds, Urgot attacks the closest enemy at a fixed rate of @AttacksPerSecond@ attacks per second. Each attack deals <scaleAD>@DamagePerShot@</scaleAD> %i:scaleAD% %i:scaleAS% physical damage. (This Ability's damage scales with Attack Damage and Attack Speed.)`,
+		icon: `ASSETS/Characters/Urgot/HUD/Icons2D/Urgot_W.dds`,
+		name: `Purge`,
+		variables: {
+			'Duration': [5, 5, 5, 10],
+			'AttacksPerSecond': [5, 5, 7, 12],
+			'ADRatio': [0.30000001192092896, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
+			'ASRatio': [0.30000001192092896, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
+			'NumShotsPerLaunchAttack': [3, 3, 3, 3],
+		},
+	},
+	'TFT6_Warwick': {
+		desc: `Passive: Warwick's Attacks deal an additional @ModifiedPercentHealth@ of his target's current Health as bonus magic damage, and heal him for @ModifiedHealAmount@ health.`,
+		icon: `ASSETS/Characters/Warwick/HUD/Icons2D/WarwickP.dds`,
+		name: `Eternal Hunger`,
+		variables: {
+			'PercentHealth': [0.05000000074505806, 0.07000000029802322, 0.09000000357627869, 0.11999999731779099],
+			'HealAmount': [0, 35, 50, 75],
+		},
+	},
+	'TFT6_Vi': {
+		desc: `Vi empowers her next attack to blast through her target, dealing @ModifiedDamage@ magic damage to all enemies in a cone and reducing their Armor by @ArmorReduction*100@% for @Duration@ seconds.`,
+		icon: `ASSETS/Characters/TFT6_Vi/HUD/Icons2D/TFT6_ViE.TFT_Set6.dds`,
+		name: `Denting Blow`,
+		variables: {
+			'Damage': [50, 250, 375, 600],
+			'Duration': [8, 8, 8, 8],
+			'ArmorReduction': [0.25, 0.4000000059604645, 0.5, 0.699999988079071],
+		},
+	},
+	'TFT6_Zac': {
+		desc: `Zac stretches his arms up to 3 hexes to pull the 2 most distant enemies towards him, dealing @ModifiedDamage@ magic damage.`,
+		icon: `ASSETS/Characters/Zac/HUD/Icons2D/ZacQ.dds`,
+		name: `Yoink!`,
+		variables: {
+			'Damage': [50, 400, 525, 999],
+			'HexPull': [2, 2, 2, 2],
+		},
+	},
+	'TFT_VoidSpawn': {
+		desc: `The Voidspawn gains bonus Health and Attack Damage based on the current Stage. `,
+		icon: `ASSETS/Characters/TFT_VoidSpawn/HUD/Voidspawn_square.dds`,
+		name: `Voidborn`,
+		variables: {},
+	},
+	'TFT6_Ziggs': {
+		desc: `Ziggs hurls a bomb at his target. After a moderate delay, the bomb lands dealing @ModifiedDamage@ magic damage to the enemy in the epicenter, and half to adjacent enemies.`,
+		icon: `ASSETS/Characters/Ziggs/HUD/Icons2D/ZiggsR.dds`,
+		name: `Mini Inferno Bomb`,
+		variables: {
+			'Damage': [0, 300, 400, 550],
+		},
+	},
+	'TFT6_Zyra': {
+		desc: `Zyra summons vines in the row with the most enemies, dealing @ModifiedDamage@ magic damage and stunning them for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/Zyra/HUD/Icons2D/ZyraQ.dds`,
+		name: `Grasping Spines`,
+		variables: {
+			'Damage': [0, 325, 450, 675],
+			'StunDuration': [1, 1.5, 2, 2.5],
+		},
+	},
+	'TFT6_Yone': {
+		desc: `Yone summons his spirit to attack an enemy up to @HexRange@ hexes away for @Duration@ seconds. The spirit is an untargetable, invulnerable copy of Yone and heals him for @ModifiedLifesteal@ of the damage it deals.<br><br>If Yone dies, his spirit dies with him.`,
+		icon: `ASSETS/Characters/Yone/HUD/Icons2D/YoneE.Yone.dds`,
+		name: `Soul Unbound`,
+		variables: {
+			'Duration': [4, 4, 5, 15],
+			'Lifesteal': [0.4000000059604645, 0.4000000059604645, 0.5, 1],
+			'HexRange': [3, 3, 3, 3],
+		},
+	},
+	'TFT6_Zilean': {
+		desc: `Zilean places a bomb on the closest enemy, stunning them for @StunDuration@ seconds. When the stun ends or the target dies, the bomb explodes, dealing @ModifiedDamage@ magic damage to adjacent enemies and reducing their Attack Speed by @Slow*100@% for @SlowDuration@ seconds. `,
+		icon: `ASSETS/Characters/Zilean/HUD/Icons2D/Zilean_Q.dds`,
+		name: `Time Bomb`,
+		variables: {
+			'Damage': [0, 250, 350, 700],
+			'Slow': [0, 0.25, 0.3499999940395355, 0.5],
+			'StunDuration': [0, 1.5, 2, 2.5],
+			'SlowDuration': [4, 4, 4, 4],
+		},
+	},
+	'TFT6_Trundle': {
+		desc: `Trundle bites his target, dealing @PercentAttackDamage*100@% of his Attack Damage, and reducing the target's Attack Speed by @ASSlow*100@% for @SlowDuration@ seconds. Each bite also steals @ModifiedADSteal@ Attack Damage for the rest of combat. (total: @TotalDamage@)`,
+		icon: `ASSETS/Characters/Trundle/HUD/Icons2D/Trundle_Q.dds`,
+		name: `Chomp`,
+		variables: {
+			'PercentAttackDamage': [1.399999976158142, 1.399999976158142, 1.399999976158142, 1.399999976158142],
+			'ASSlow': [0.25, 0.25, 0.25, 0.25],
+			'SlowDuration': [3, 3, 3, 3],
+			'ADSteal': [0, 20, 25, 40],
+		},
+	},
+}

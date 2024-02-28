@@ -3,7 +3,7 @@ const MAX_STAR_LEVEL = 3
 import fs from 'fs/promises'
 
 import { BonusKey } from '../../dist/index.js'
-import type { ChampionData, ChampionSpellData, SpellCalculations, SpellCalculationPart, SpellCalculationSubpart, SpellVariables, SetNumber } from '../../dist/index.js'
+import type { ChampionData, ChampionSpellData, SpellCalculations, SpellCalculationPart, SpellCalculationSubpart, SpellVariables, SetNumber, AbilityData } from '../../dist/index.js'
 import { importSetData } from '../../dist/imports.js'
 
 import { getPathToSet } from '../helpers/files.js'
@@ -35,6 +35,8 @@ export async function transformChampions(setNumber: SetNumber, parentSetNumber: 
 			return !unit.apiName.includes('ArmoryKey') && !IGNORE_UNIT_APINAMES?.includes(unit.apiName)
 		})
 		.sort(sortByName)
+
+	const abilities: [key: string, ability: AbilityData, name: string][] = []
 
 	const formattedUnits = await Promise.all(playableUnits.map(async (unit): Promise<ChampionData> => {
 		const apiName = unit.apiName
@@ -158,6 +160,16 @@ export async function transformChampions(setNumber: SetNumber, parentSetNumber: 
 
 		const isSpawn = characterRecord.isSpawn || unit.stats.hp == null || unit.cost === 8 || unit.cost === 11
 		const traits = unit.traits
+		if (unit.ability?.desc != null) {
+			const variables: SpellVariables = {}
+			unit.ability.variables.forEach(({ name, value }) => {
+				variables[name] = value == null ? [] : value.slice(0, 4)
+			})
+			const outputAbility = unit.ability as unknown as AbilityData
+			outputAbility.variables = variables
+			abilities.push([apiName, outputAbility, unit.name])
+		}
+
 		return {
 			apiName,
 			name: unit.name,
@@ -185,12 +197,14 @@ export async function transformChampions(setNumber: SetNumber, parentSetNumber: 
 			outputChampions.push(unit)
 		}
 	})
+	abilities.sort((a, b) => a[2].localeCompare(b[2]))
 
 	return [
-		`import type { ChampionData } from '../index'`,
+		`import type { AbilityData, ChampionData } from '../index'`,
 		`export enum ChampionKey { ${outputChampions.map(c => `${getEnumKeyFrom(c.apiName)} = \`${c.apiName}\``).join(', ')} }`,
 		`export const champions: ChampionData[] = ${formatJS(outputChampions)}`,
 		`export const otherUnits: ChampionData[] = ${formatJS(outputOtherUnits)}`,
+		`export const abilities: Record<string, AbilityData> = ${formatJS(Object.fromEntries(abilities))}`,
 	]
 }
 
@@ -275,7 +289,8 @@ function transformSpellData(spellName: string, spellData: ChampionJSONSpell, jso
 	const calculations: SpellCalculations = {}
 	const sourceCalculations = spellData.mSpellCalculations
 	if (sourceCalculations) {
-		const prefixes = ['Tooltip', 'Modified', 'Total']
+		const totalPrefix = 'Total'
+		const prefixes = ['Tooltip', 'Modified', totalPrefix]
 		for (const calculationKey in sourceCalculations) {
 			const prefix = prefixes.find(prefix => calculationKey.startsWith(prefix))
 			if (prefix == null) {
@@ -288,7 +303,6 @@ function transformSpellData(spellName: string, spellData: ChampionJSONSpell, jso
 					// console.error('ERR', 'Missing variable for calculation', spellName, variableName, Object.keys(variables))
 				}
 			}
-			const totalPrefix = 'Total'
 			if (prefix !== totalPrefix && sourceCalculations[`${totalPrefix}${variableName}`] != null) {
 				// console.log(sourceCalculation, sourceCalculations[`Total${variableName}`])
 				continue

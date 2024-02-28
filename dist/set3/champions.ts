@@ -1,4 +1,4 @@
-import type { ChampionData } from '../index'
+import type { AbilityData, ChampionData } from '../index'
 
 export enum ChampionKey { Ahri = `TFT3_Ahri`, Annie = `TFT3_Annie`, Ashe = `TFT3_Ashe`, AurelionSol = `TFT3_AurelionSol`, Blitzcrank = `TFT3_Blitzcrank`, Caitlyn = `TFT3_Caitlyn`, ChoGath = `TFT3_ChoGath`, Darius = `TFT3_Darius`, Ekko = `TFT3_Ekko`, Ezreal = `TFT3_Ezreal`, Fiora = `TFT3_Fiora`, Fizz = `TFT3_Fizz`, Gangplank = `TFT3_Gangplank`, Graves = `TFT3_Graves`, Irelia = `TFT3_Irelia`, JarvanIV = `TFT3_JarvanIV`, Jayce = `TFT3_Jayce`, Jhin = `TFT3_Jhin`, Jinx = `TFT3_Jinx`, KaiSa = `TFT3_KaiSa`, Karma = `TFT3_Karma`, Kassadin = `TFT3_Kassadin`, Kayle = `TFT3_Kayle`, NPCKayn = `TFT3_NPC_Kayn`, NPCKaynElite = `TFT3_NPC_KaynElite`, KhaZix = `TFT3_KhaZix`, Leona = `TFT3_Leona`, Lucian = `TFT3_Lucian`, Lulu = `TFT3_Lulu`, Lux = `TFT3_Lux`, Malphite = `TFT3_Malphite`, MasterYi = `TFT3_MasterYi`, MissFortune = `TFT3_MissFortune`, Mordekaiser = `TFT3_Mordekaiser`, Neeko = `TFT3_Neeko`, Poppy = `TFT3_Poppy`, Rakan = `TFT3_Rakan`, Rumble = `TFT3_Rumble`, Shaco = `TFT3_Shaco`, Shen = `TFT3_Shen`, Sona = `TFT3_Sona`, Soraka = `TFT3_Soraka`, SuperMech = `TFT3_SuperMech`, Syndra = `TFT3_Syndra`, Thresh = `TFT3_Thresh`, TwistedFate = `TFT3_TwistedFate`, VelKoz = `TFT3_VelKoz`, Vi = `TFT3_Vi`, WuKong = `TFT3_WuKong`, Xayah = `TFT3_Xayah`, Xerath = `TFT3_Xerath`, XinZhao = `TFT3_XinZhao`, Yasuo = `TFT3_Yasuo`, Ziggs = `TFT3_Ziggs`, Zoe = `TFT3_Zoe` }
 
@@ -5692,3 +5692,543 @@ export const champions: ChampionData[] = [
 ]
 
 export const otherUnits: ChampionData[] = []
+
+export const abilities: Record<string, AbilityData> = {
+	'TFT3_Annie': {
+		desc: `Annie blasts a cone of fire dealing @ModifiedDamage@ magic damage to enemies in front of her, then creates a shield with @ModifiedShield@ health for herself for @ShieldDuration@ seconds.`,
+		icon: `ASSETS/Characters/Annie/HUD/Icons2D/Annie_E.dds`,
+		name: `Galaxy Shield-Blast`,
+		variables: {
+			'Damage': [100, 150, 200, 300],
+			'ShieldAmount': [200, 270, 360, 540],
+			'ShieldDuration': [4, 4, 4, 4],
+		},
+	},
+	'TFT3_Blitzcrank': {
+		desc: `Blitzcrank pulls the farthest enemy, dealing @ModifiedDamage@ magic damage and stunning them for @StunDuration@ seconds.<br><br>His next attack after pulling knocks up for 1 second.<br><br>Allies within range will prefer to attack Blitzcrank's target.`,
+		icon: `ASSETS/Characters/Blitzcrank/HUD/Icons2D/Blitzcrank_RocketGrab.dds`,
+		name: `Rocket Grab`,
+		variables: {
+			'Damage': [-50, 250, 400, 900],
+			'StunDuration': [2.5, 2.5, 2.5, 2.5],
+		},
+	},
+	'TFT3_Ahri': {
+		desc: `Ahri fires an orb in a line, dealing @ModifiedDamage@ magic damage to all enemies it passes through on the way out, and @ModifiedDamage@ true damage on the way back.`,
+		icon: `ASSETS/Characters/Ahri/HUD/Icons2D/Ahri_OrbofDeception.dds`,
+		name: `Orb of Deception`,
+		variables: {
+			'Damage': [150, 175, 250, 375],
+			'HexRange': [4, 4, 4, 4],
+		},
+	},
+	'TFT3_AurelionSol': {
+		desc: `Aurelion Sol launches fighters which fly out to random enemies, deal @ModifiedDamage@ magic damage, and then return. Aurelion Sol launches all ready fighters, plus @FightersPerCast@ more, when he casts.<br><br>Fighters prefer to target nearby enemies.<br><br>`,
+		icon: `ASSETS/Characters/AurelionSol/HUD/Icons2D/AurelionSol_W_StarsOut.dds`,
+		name: `Mobilize the Fleet`,
+		variables: {
+			'Damage': [0, 100, 150, 750],
+			'InitialFighters': [],
+			'FightersPerCast': [3, 3, 3, 3],
+		},
+	},
+	'TFT3_ChoGath': {
+		desc: `Cho'Gath ruptures a large area, dealing @ModifiedDamage@ magic damage and knocking up all enemies within for @KnockDuration@ seconds.`,
+		icon: `ASSETS/Characters/Chogath/HUD/Icons2D/GreenTerror_SpikeSlam.dds`,
+		name: `Rupture`,
+		variables: {
+			'Damage': [0, 150, 250, 2000],
+			'KnockDuration': [2, 2, 2, 4],
+			'RuptureDelay': [1.5, 1.5, 1.5, 1.5],
+		},
+	},
+	'TFT3_Caitlyn': {
+		desc: `Caitlyn takes aim at the farthest enemy, firing a deadly bullet towards them that deals @ModifiedDamage@ magic damage to the first enemy it hits.`,
+		icon: `ASSETS/Characters/TFT3_Caitlyn/HUD/Icons2D/Caitlyn_AceintheHole.dds`,
+		name: `Ace In The Hole`,
+		variables: {
+			'Damage': [0, 750, 1500, 3000],
+		},
+	},
+	'TFT3_Darius': {
+		desc: `Darius dunks an enemy, dealing @ModifiedDamage@ magic damage. If this kills the target, Darius immediately casts again.<br><br>Targets below @HealthThreshold@% health take double damage.`,
+		icon: `ASSETS/Characters/TFT3_Darius/HUD/Icons2D/Darius_Icon_Sudden_Death.TFT_Set3.dds`,
+		name: `Dreadnova Guillotine`,
+		variables: {
+			'Damage': [50, 400, 500, 750],
+			'HealthThreshold': [50, 50, 50, 50],
+			'DamageMultiplier': [2, 2, 2, 2],
+		},
+	},
+	'TFT3_Ezreal': {
+		desc: `Ezreal fires an electromagnetic pulse at a random enemy that explodes on impact, dealing @ModifiedDamage@ damage to all nearby enemies and increasing the cost of their next spellcast by @PercentCostIncrease@%.`,
+		icon: `ASSETS/Characters/Ezreal/HUD/Icons2D/Ezreal_W.dds`,
+		name: `E.M.P.`,
+		variables: {
+			'Damage': [0, 200, 300, 600],
+			'HexRadius': [2, 2, 2, 2],
+			'PercentCostIncrease': [3, 40, 40, 40],
+		},
+	},
+	'TFT3_Ekko': {
+		desc: `Ekko shatters the timeline, freezing all units in time before attacking each enemy with @ModifiedDamage@ bonus magic damage and applying on-hit effects.<br><br>Ekko cannot die while he has stopped time.`,
+		icon: `ASSETS/Characters/Ekko/HUD/Icons2D/Ekko_R.dds`,
+		name: `Chronobreak`,
+		variables: {
+			'BonusDamage': [200, 225, 400, 2000],
+			'BaseDelayBetweenAttacks': [0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645],
+		},
+	},
+	'TFT3_Fiora': {
+		desc: `Fiora enters a defensive stance for @BlockDuration@ seconds, becoming immune to damage and enemy spell effects. As she exits this stance, she ripostes, dealing @ModifiedDamage@ magic damage to a nearby enemy and stunning them for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/Fiora/HUD/Icons2D/Fiora_W.dds`,
+		name: `Riposte`,
+		variables: {
+			'Damage': [0, 200, 300, 450],
+			'StunDuration': [1.5, 1.5, 1.5, 3],
+			'BlockDuration': [1.5, 1.5, 1.5, 1.5],
+		},
+	},
+	'TFT3_Ashe': {
+		desc: `Ashe fires an arrow at the farthest enemy that explodes on the first target hit, dealing @ModifiedDamage@ magic damage to all nearby enemies and stunning them for @StunDurationPerSquare@ seconds.`,
+		icon: `ASSETS/Characters/Ashe/HUD/Icons2D/Ashe_R.dds`,
+		name: `Enchanted Crystal Arrow`,
+		variables: {
+			'Damage': [250, 250, 350, 700],
+			'StunDurationPerSquare': [2, 2, 2, 2],
+		},
+	},
+	'TFT3_Gangplank': {
+		desc: `Gangplank calls down an orbital strike around his target, dealing @ModifiedDamage@ damage to all enemies in a large area after @ImpactDelayTime@ seconds.`,
+		icon: `ASSETS/Characters/Gangplank/HUD/Icons2D/Gangplank_R.dds`,
+		name: `Orbital Strike`,
+		variables: {
+			'Damage': [0, 450, 600, 9001],
+			'ImpactDelayTime': [2, 2, 2, 2],
+			'UpgradeDelayTime': [0, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
+			'DoubleImpactDamagePercent': [0, 50, 50, 50],
+		},
+	},
+	'TFT3_Irelia': {
+		desc: `Irelia dashes to her target, Basic Attacking them for @ModifiedPercentAD@ of her Attack Damage. If this kills the target, she Bladesurges again immediately at the enemy with the highest mana. (Total Damage: @TooltipDamage@)`,
+		icon: `ASSETS/Characters/Irelia/HUD/Icons2D/Irelia_Q.dds`,
+		name: `Bladesurge`,
+		variables: {
+			'PercentADDamage': [0, 1.75, 2.5, 5],
+		},
+	},
+	'TFT3_JarvanIV': {
+		desc: `Jarvan calls down his standard to a nearby location, granting all nearby allies @ModifiedAS@ Attack Speed for @Duration@ seconds.`,
+		icon: `ASSETS/Characters/JarvanIV/HUD/Icons2D/JarvanIV_DemacianStandard.dds`,
+		name: `Ageless Standard`,
+		variables: {
+			'Duration': [6, 6, 6, 6],
+			'HexRadius': [3, 3, 3, 3],
+			'ASPercent': [0.25, 0.5, 0.75, 1],
+		},
+	},
+	'TFT3_Jayce': {
+		desc: `Jayce slams his hammer, dealing @ModifiedDamage@ magic damage to nearby enemies.`,
+		icon: `ASSETS/Characters/TFT3_Jayce/HUD/Icons2D/Jayce_Q1.dds`,
+		name: `To the Skies!`,
+		variables: {
+			'Damage': [300, 450, 600, 1200],
+			'Radius': [1, 1, 1, 1],
+		},
+	},
+	'TFT3_Graves': {
+		desc: `Graves launches a smoke grenade toward the enemy with the most Attack Speed. The grenade explodes on impact dealing @ModifiedDamage@ magic damage to nearby enemies and causing their attacks to miss for @BlindDuration@ seconds.`,
+		icon: `ASSETS/Characters/Graves/HUD/Icons2D/GravesSmokeGrenade.dds`,
+		name: `Smoke Grenade`,
+		variables: {
+			'Damage': [0, 150, 200, 400],
+			'BlindDuration': [2, 3, 4, 5],
+		},
+	},
+	'TFT3_Fizz': {
+		desc: `Fizz throws a lure that attracts a shark. It deals @ModifiedDamage@ magic damage to enemies caught, knocking them back and stunning them for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/Fizz/HUD/Icons2D/Fizz_R.dds`,
+		name: `Chum the Waters`,
+		variables: {
+			'Delay': [1.5, 1.5, 1.5, 1.5],
+			'Damage': [0, 350, 500, 2000],
+			'StunDuration': [1, 1.5, 1.5, 1.5],
+		},
+	},
+	'TFT3_Jhin': {
+		desc: `Passive: Jhin converts each 1% of bonus Attack Speed he has into 0.8 Attack Damage.<br><br>Passive: Every fourth shot, Jhin deals @ModifiedPercent@ damage. (Total: @TooltipDamage@)`,
+		icon: `ASSETS/Characters/Jhin/HUD/Icons2D/Jhin_P.dds`,
+		name: `Whisper`,
+		variables: {
+			'PercentOfAD': [0, 2.440000057220459, 3.440000057220459, 44.439998626708984],
+		},
+	},
+	'TFT3_Jinx': {
+		desc: `Passive: Jinx gets excited as she helps take down enemy units!<br><br>After her first takedown, Jinx gains @PercentAttackSpeed@ bonus Attack Speed.<br><br>After her second takedown, Jinx swaps to her rocket launcher, causing her Basic Attacks to deal @ModifiedDamage@ bonus magic damage to all enemies in a small area around her target.`,
+		icon: `ASSETS/Characters/Jinx/HUD/Icons2D/Jinx_Passive.dds`,
+		name: `Get Excited!`,
+		variables: {
+			'HitWindow': [10, 10, 10, 10],
+			'BuffDuration': [60, 60, 60, 60],
+			'AttackSpeedBonus': [0.4000000059604645, 0.6000000238418579, 0.75, 1],
+			'RocketDamage': [0, 125, 200, 750],
+		},
+	},
+	'TFT3_KaiSa': {
+		desc: `Kai'Sa launches @NumMissiles@ missiles towards each nearby enemy that deal @ModifiedDamage@ magic damage.`,
+		icon: `ASSETS/Characters/Kaisa/HUD/Icons2D/Kaisa_Q.dds`,
+		name: `Missile Rain`,
+		variables: {
+			'HexRange': [2, 2, 2, 2],
+			'NumMissiles': [4, 4, 6, 9],
+			'FakeCastTime': [1, 1, 1, 1],
+			'Damage': [50, 50, 50, 50],
+			'Radius': [420, 420, 420, 420],
+		},
+	},
+	'TFT3_Karma': {
+		desc: `At start of combat, Karma bonds to her closest ally.<br><br>Karma grants the bonded ally (or a random one if that ally is dead) a @ModifiedShield@-health shield for @Duration@ seconds. While the shield holds, the ally receives @ModifiedAS@ bonus Attack Speed.`,
+		icon: `ASSETS/Characters/Karma/HUD/Icons2D/Karma_E2.dds`,
+		name: `Inspire`,
+		variables: {
+			'Duration': [4, 4, 4, 4],
+			'ShieldAmount': [100, 250, 400, 800],
+			'BonusAS': [0.20000000298023224, 0.5, 0.75, 1.25],
+		},
+	},
+	'TFT3_Kassadin': {
+		desc: `Kassadin releases a wave of energy in front of him, dealing @ModifiedDamage@ magic damage and disarming all targets hit for @Duration@ seconds.`,
+		icon: `ASSETS/Characters/Kassadin/HUD/Icons2D/Kassadin_E.dds`,
+		name: `Force Pulse`,
+		variables: {
+			'Damage': [100, 250, 400, 800],
+			'Duration': [3, 2.5, 3, 3.5],
+		},
+	},
+	'TFT3_KhaZix': {
+		desc: `Kha'Zix slashes the nearest enemy, dealing @ModifiedDamage@ magic damage. If the enemy has no adjacent allies, this damage is increased to @ModifiedIsolationDamage@.`,
+		icon: `ASSETS/Characters/KhaZix/HUD/Icons2D/Khazix_Q.dds`,
+		name: `Taste their Fear`,
+		variables: {
+			'Damage': [50, 200, 275, 500],
+			'IsolationDamage': [200, 600, 825, 1500],
+		},
+	},
+	'TFT3_NPC_KaynElite': {
+		desc: `Kayn temporarily infests the furthest enemy, dealing @TargetDamage@ to the target when he bursts out.`,
+		icon: `ASSETS/Characters/Kayn/HUD/Icons2D/Kayn_W_Primary.dds`,
+		name: `Umbral Trespass`,
+		variables: {
+			'TargetDamage': [1500, 1500, 1500, 1500],
+			'AOEDamage': [],
+		},
+	},
+	'TFT3_Kayle': {
+		desc: `Kayle Ascends, causing her attacks to launch waves that deal @ModifiedDamage@ bonus magic damage.`,
+		icon: `ASSETS/Characters/Kayle/HUD/Icons2D/Kayle_P.dds`,
+		name: `Ascend`,
+		variables: {
+			'WaveDamage': [0, 125, 200, 600],
+		},
+	},
+	'TFT3_Lulu': {
+		desc: `Lulu polymorphs the @NumTargets@ nearest enemies for @Duration@ seconds, causing them to hop aimlessly, unable to attack or cast. Polymorphed enemies take @ModifiedBonusDamage@ additional damage from all sources.`,
+		icon: `ASSETS/Characters/Lulu/HUD/Icons2D/Lulu_Whimsy.dds`,
+		name: `Mass Polymorph`,
+		variables: {
+			'NumTargets': [0, 2, 4, 12],
+			'Duration': [0, 3, 3, 8],
+			'BonusDamage': [0.02500000037252903, 0.05000000074505806, 0.10000000149011612, 0.25],
+		},
+	},
+	'TFT3_Leona': {
+		desc: `Leona creates a barrier, reducing all incoming damage by @ModifiedDamageReduction@ for 4 seconds.<br><br>`,
+		icon: `ASSETS/Characters/Leona/HUD/Icons2D/LeonaSolarBarrier.dds`,
+		name: `Cyber Barrier`,
+		variables: {
+			'FlatDamageReduction': [0, 40, 80, 200],
+			'Duration': [4, 4, 4, 4],
+		},
+	},
+	'TFT3_Lucian': {
+		desc: `Lucian dashes away from his current target, then Basic Attacks them and fires a second shot which deals @ModifiedDamage@ magic damage.`,
+		icon: `ASSETS/Characters/Lucian/HUD/Icons2D/Lucian_E.dds`,
+		name: `Relentless Pursuit`,
+		variables: {
+			'FirstShotRatio': [1, 1, 1, 1],
+			'SecondShotDamage': [0, 150, 200, 325],
+		},
+	},
+	'TFT3_Lux': {
+		desc: `Lux fires a sphere of darkness towards the farthest enemy. Enemies in its path take @ModifiedDamage@ magic damage and are stunned for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxLightStrikeKugel.dds`,
+		name: `Lurid Binding`,
+		variables: {
+			'Damage': [300, 200, 300, 600],
+			'StunDuration': [1, 1.5, 2, 2.5],
+		},
+	},
+	'TFT3_NPC_Kayn': {
+		desc: `Kayn swings his scythe, dealing @Damage@ to enemies in a line. `,
+		icon: `ASSETS/Characters/Kayn/HUD/Icons2D/Kayn_W_Primary.dds`,
+		name: `Blade's Reach`,
+		variables: {
+			'Damage': [200, 200, 200, 200],
+			'BoxWidth': [160, 160, 160, 160],
+			'Range': [700, 700, 700, 700],
+		},
+	},
+	'TFT3_Mordekaiser': {
+		desc: `Mordekaiser gains a shield for that absorbs @ModifiedShield@ damage over @Duration@ seconds. While the shield persists, Mordekaiser deals @ModifiedDamage@ magic damage per second to all nearby enemies.`,
+		icon: `ASSETS/Characters/Mordekaiser/HUD/Icons2D/MordekaiserW.dds`,
+		name: `Indestructible`,
+		variables: {
+			'DamagePerSecond': [20, 50, 75, 125],
+			'ShieldAmount': [0, 350, 500, 800],
+			'Duration': [8, 8, 8, 8],
+		},
+	},
+	'TFT3_Malphite': {
+		desc: `Passive: Malphite starts combat with a shield equal to @ModifiedPercentHealth@ of his maximum health.`,
+		icon: `ASSETS/Characters/Malphite/HUD/Icons2D/Malphite_GraniteShield.dds`,
+		name: `Energy Shield`,
+		variables: {
+			'PercentHealth': [0.3499999940395355, 0.4000000059604645, 0.44999998807907104, 0.6000000238418579],
+			'SecondsPerRefresh': [0, 9, 9, 9],
+		},
+	},
+	'TFT3_Neeko': {
+		desc: `Neeko leaps into the air and slams into the ground, dealing @ModifiedDamage@ magic damage to all nearby enemies and stunning them for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/Neeko/HUD/Icons2D/Neeko_R.dds`,
+		name: `Pop Blossom`,
+		variables: {
+			'DamageAmount': [0, 200, 275, 550],
+			'StunDuration': [1, 1.5, 2, 2.5],
+			'HexRadius': [2, 2, 2, 2],
+		},
+	},
+	'TFT3_Rakan': {
+		desc: `Rakan dashes to the furthest enemy within range and leaps into the air, knocking them up for @StunDuration@ seconds and dealing @ModifiedDamage@ magic damage.`,
+		icon: `ASSETS/Characters/Rakan/HUD/Icons2D/Rakan_W.dds`,
+		name: `Grand Entrance`,
+		variables: {
+			'Damage': [75, 175, 275, 400],
+			'Radius': [1, 1, 1, 1],
+			'StunDuration': [0, 1.5, 2, 2.5],
+			'KnockupDuration': [1, 1, 1, 1],
+		},
+	},
+	'TFT3_Poppy': {
+		desc: `Poppy throws her buckler at the furthest enemy, dealing @ModifiedDamage@ magic damage. The buckler then bounces back, granting Poppy a shield that blocks @ModifiedShield@ damage.`,
+		icon: `ASSETS/Characters/Poppy/HUD/Icons2D/Poppy_Passive.dds`,
+		name: `Buckler Toss`,
+		variables: {
+			'Damage': [50, 100, 150, 200],
+			'ShieldAmount': [100, 200, 300, 400],
+		},
+	},
+	'TFT3_Rumble': {
+		desc: `Rumble torches his enemies, dealing @ModifiedDamage@ magic damage over @Duration@ seconds, and reducing healing on them by @GrievousWoundsPercent@% for @GrievousWoundsDuration@ seconds.`,
+		icon: `ASSETS/Characters/Rumble/HUD/Icons2D/Rumble_Flamespitter.dds`,
+		name: `Flamespitter`,
+		variables: {
+			'TotalDamage': [30, 350, 500, 1000],
+			'Duration': [3, 3, 3, 3],
+			'NumberOfTicks': [12, 12, 12, 12],
+			'TickRate': [0.25, 0.25, 0.25, 0.25],
+			'GrievousWoundsDuration': [5, 5, 5, 5],
+			'ConeHexRange': [2, 2, 2, 2],
+			'GrievousWoundsPercent': [0, 50, 50, 50],
+		},
+	},
+	'TFT3_Shaco': {
+		desc: `Shaco teleports and backstabs his target for @TooltipPercentage@ of his Basic Attack damage. This is also always a critical hit. (Total: @TooltipADBonus@)`,
+		icon: `ASSETS/Characters/Shaco/HUD/Icons2D/Jester_ManiacalCloak2.dds`,
+		name: `Deceive`,
+		variables: {
+			'Duration': [1.5, 1.5, 1.5, 1.5],
+			'PercentOfAD': [1.75, 2, 2.25, 2.5],
+		},
+	},
+	'TFT3_MasterYi': {
+		desc: `For @Duration@ seconds Master Yi gains massively increased movement speed, heals for @ModifiedHeal@ of his maximum health each second, and deals @ModifiedDamage@ bonus true damage with his Basic Attacks.`,
+		icon: `ASSETS/Characters/MasterYi/HUD/Icons2D/MasterYi_W.dds`,
+		name: `Chosen One`,
+		variables: {
+			'Duration': [5, 5, 5, 5],
+			'HealAmountPercent': [0, 0.11999999731779099, 0.11999999731779099, 0.11999999731779099],
+			'BonusTrueDamage': [0, 75, 100, 200],
+		},
+	},
+	'TFT3_MissFortune': {
+		desc: `Miss Fortune channels and fires waves of bullets in a cone for @ChannelDuration@ seconds, dealing @ModifiedPercentHealth@ of enemies' maximum health in magic damage over the duration.`,
+		icon: `ASSETS/Characters/MissFortune/HUD/Icons2D/MissFortune_R.dds`,
+		name: `Bullet Time`,
+		variables: {
+			'Waves': [12, 12, 12, 12],
+			'TotalDamage': [500, 500, 900, 9001],
+			'ChannelDuration': [2.25, 2.25, 2.25, 2.25],
+			'HexRange': [6, 6, 6, 6],
+			'ShieldAmount': [100, 400, 700, 1000],
+			'PercentMaxHealth': [0.20000000298023224, 0.6000000238418579, 0.800000011920929, 9.989999771118164],
+			'UpgradeMoreWaves': [0, 5, 5, 5],
+		},
+	},
+	'TFT3_Shen': {
+		desc: `Shen creates a zone around himself for @ZoneDuration@ seconds, in which all nearby allies automatically dodge incoming Basic Attacks. While it's active, Shen gains @ModifiedMR@ Magic Resist.`,
+		icon: `ASSETS/Characters/Shen/HUD/Icons2D/Shen_W.dds`,
+		name: `Future's Refuge`,
+		variables: {
+			'ZoneDuration': [2, 2.5, 3, 5],
+			'MagicResist': [0, 15, 30, 45],
+		},
+	},
+	'TFT3_Soraka': {
+		desc: `Soraka heals all of her allies for @ModifiedHeal@.`,
+		icon: `ASSETS/Characters/Soraka/HUD/Icons2D/Soraka_R.dds`,
+		name: `Wish`,
+		variables: {
+			'HealAmount': [300, 375, 550, 20000],
+			'HealTargets': [15, 15, 15, 15],
+		},
+	},
+	'TFT3_Sona': {
+		desc: `Sona heals @NumberOfTargets@ injured allies for @ModifiedHealing@ and cleanses them of stuns.`,
+		icon: `ASSETS/Characters/Sona/HUD/Icons2D/Sona_W.dds`,
+		name: `Aria of Perseverance`,
+		variables: {
+			'HealAmount': [150, 150, 200, 300],
+			'NumberOfTargets': [2, 2, 3, 4],
+		},
+	},
+	'TFT3_SuperMech': {
+		desc: `Passive: The Super-Mech's attacks cleave the area in front of it.<br><br>The Super-Mech calls down a devastating blast at its target's location, dealing @ModifiedMainDamage@ magic damage to its target and @ModifiedSplashDamage@ magic damage to all other nearby enemies.<br><br>This spell's damage increases with the Star Level of the Super-Mech's Pilots.`,
+		icon: `ASSETS/Characters/TFT3_SuperMech/HUD/Icons2D/TFT3_SuperMech_R.TFT_Set3.dds`,
+		name: `Mecha Justice`,
+		variables: {
+			'MainDamage': [400, 500, 600, 700],
+			'SplashDamage': [200, 250, 300, 350],
+		},
+	},
+	'TFT3_Syndra': {
+		desc: `Syndra pulls in all orbs on the battlefield and creates @Spheres@ new ones, then fires them all at the enemy with the highest current Health percentage, dealing @ModifiedDamage@ magic damage per orb.<br><br><tftitemrules>Lowest total health breaks targeting ties.</tftitemrules>`,
+		icon: `ASSETS/Characters/Syndra/HUD/Icons2D/SyndraR.dds`,
+		name: `Unleashed Power`,
+		variables: {
+			'Spheres': [3, 3, 3, 3],
+			'CastTime': [0.75, 0.75, 0.75, 0.75],
+			'Damage': [0, 100, 150, 250],
+		},
+	},
+	'TFT3_Thresh': {
+		desc: `Thresh tosses his lantern towards @UnitCount@ random unit(s) on your bench, pulling them into combat and granting them @ModifiedMana@ bonus Mana. Traits are unaffected.`,
+		icon: `ASSETS/Characters/Thresh/HUD/Icons2D/Thresh_W.dds`,
+		name: `Temporal Passage`,
+		variables: {
+			'UnitCount': [1, 1, 1, 9],
+			'ManaBonus': [10, 25, 50, 200],
+		},
+	},
+	'TFT3_TwistedFate': {
+		desc: `Twisted Fate throws three cards in a cone that deal @ModifiedDamage@ magic damage to each enemy they pass through.`,
+		icon: `ASSETS/Characters/TwistedFate/HUD/Icons2D/Cardmaster_PowerCard.dds`,
+		name: `Wild Cards`,
+		variables: {
+			'BaseDamage': [0, 200, 300, 450],
+		},
+	},
+	'TFT3_VelKoz': {
+		desc: `Vel'Koz channels a ray of energy that sweeps across the battlefield over @ChannelDuration@ seconds, dealing @ModifiedDamage@ magic damage per second to enemies hit.`,
+		icon: `ASSETS/Characters/Velkoz/HUD/Icons2D/Velkoz_R.dds`,
+		name: `Lifeform Disintegration Ray`,
+		variables: {
+			'BaseDamagePerSec': [0, 450, 600, 2000],
+			'PercentHealthDamagePerSec': [],
+			'SweepAngle': [60, 60, 60, 60],
+			'TickInterval': [0.25, 0.25, 0.25, 0.25],
+			'ChannelDuration': [2, 2, 2, 2],
+			'BeamDistance': [1400, 1400, 1400, 1400],
+			'BeamWidth': [200, 200, 200, 200],
+		},
+	},
+	'TFT3_Vi': {
+		desc: `Vi charges at the farthest enemy, knocking aside all enemies in her path and dealing them @ModifiedSecondaryDamage@ magic damage. When she reaches her target, she knocks them up for @CCDuration@ seconds and deals @ModifiedPrimaryDamage@ magic damage.`,
+		icon: `ASSETS/Characters/Vi/HUD/Icons2D/ViR.dds`,
+		name: `Assault and Battery`,
+		variables: {
+			'PrimaryDamage': [100, 400, 600, 1200],
+			'CCDuration': [1.5, 2, 2.5, 3],
+			'MoveSpeed': [1000, 1000, 1000, 1000],
+			'OthersCCDuration': [0.25, 0.25, 0.25, 0.25],
+			'SecondaryDamage': [0, 150, 200, 500],
+		},
+	},
+	'TFT3_Xayah': {
+		desc: `Xayah creates a storm of feather-blades, gaining @ModifiedAS@ Attack Speed for @Duration@ seconds.`,
+		icon: `ASSETS/Characters/Xayah/HUD/Icons2D/XayahW.dds`,
+		name: `Deadly Plumage`,
+		variables: {
+			'Duration': [8, 8, 8, 8],
+			'AttackSpeed': [0.75, 1, 1.25, 1.5],
+			'DamageReduction': [50, 50, 50, 50],
+		},
+	},
+	'TFT3_WuKong': {
+		desc: `Wukong spins, dealing @ModifiedDamage@ magic damage to nearby enemies over @Duration@ seconds. The first time Wukong hits each enemy, he knocks them into the air and stuns them for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/MonkeyKing/HUD/Icons2D/MonkeyKingCyclone.dds`,
+		name: `Cyclone`,
+		variables: {
+			'Damage': [200, 300, 500, 4000],
+			'Duration': [3, 3, 3, 3],
+			'StunDuration': [1.5, 2, 2, 5],
+			'HexRadius': [1, 1, 1, 1],
+		},
+	},
+	'TFT3_XinZhao': {
+		desc: `Xin Zhao quickly strikes his target three times, dealing Basic Attack damage and applying on-hit effects. The third strike knocks his target up for @StunDuration@ seconds and deals @ModifiedDamage@ bonus magic damage.`,
+		icon: `ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoQ.dds`,
+		name: `Three Talon Strike`,
+		variables: {
+			'StunDuration': [1.5, 1.5, 1.5, 1.5],
+			'BonusDamage': [4, 200, 275, 375],
+		},
+	},
+	'TFT3_Zoe': {
+		desc: `Zoe kicks a bubble at the enemy with the the highest current Health percentage, stunning them for @StunDuration@ seconds and dealing @ModifiedDamage@ magic damage.<br><br><tftitemrules>Highest total health breaks targeting ties.</tftitemrules>`,
+		icon: `ASSETS/Characters/Zoe/HUD/Icons2D/Zoe_E.dds`,
+		name: `Sleepy Trouble Bubble`,
+		variables: {
+			'Damage': [75, 200, 275, 400],
+			'StunDuration': [1.5, 2, 2.5, 4],
+		},
+	},
+	'TFT3_Xerath': {
+		desc: `Xerath transforms, summoning meteors to strike random foes in place of his normal attacks for @Duration@ seconds. Meteors deal @ModifiedDamage@ magic damage upon impact and if they kill their target, all adjacent enemies take @ModifiedAoEDamage@ magic damage and are stunned for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/TFT3_Xerath/HUD/Icons2D/TFT3_Xerath_Ult.TFT3_Set3_Xerath.dds`,
+		name: `Abyssal Bombardment`,
+		variables: {
+			'BaseDamage': [350, 300, 400, 2500],
+			'AoEDamage': [175, 75, 100, 625],
+			'StunDuration': [1.5, 1.5, 1.5, 1.5],
+			'Duration': [6, 6, 8, 45],
+		},
+	},
+	'TFT3_Ziggs': {
+		desc: `Ziggs throws a bomb at an enemy, dealing @ModifiedDamage@ magic damage.`,
+		icon: `ASSETS/Characters/Ziggs/HUD/Icons2D/ZiggsQ.dds`,
+		name: `Bomb!`,
+		variables: {
+			'Damage': [70, 300, 400, 700],
+		},
+	},
+	'TFT3_Yasuo': {
+		desc: `Yasuo blinks to the farthest enemy in range, knocks them up for @StunDuration@ seconds, and Attacks them @ModifiedAttacks@ times (applies on-hit effects).`,
+		icon: `ASSETS/Characters/Yasuo/HUD/Icons2D/Yasuo_R.dds`,
+		name: `Last Breath`,
+		variables: {
+			'StunDuration': [1, 1, 1, 1],
+			'Damage': [100, 100, 100, 100],
+			'NumHits': [3, 4, 5, 6],
+		},
+	},
+}

@@ -1,4 +1,4 @@
-import type { ChampionData } from '../index'
+import type { AbilityData, ChampionData } from '../index'
 
 export enum ChampionKey { Aatrox = `TFT5_Aatrox`, Akshan = `TFT5_Akshan`, Aphelios = `TFT5_Aphelios`, Ashe = `TFT5_Ashe`, HeimerTurret = `TFT5_HeimerTurret`, Brand = `TFT5_Brand`, IvernMinion = `TFT5_IvernMinion`, Diana = `TFT5_Diana`, Draven = `TFT5_Draven`, Fiddlesticks = `TFT5_Fiddlesticks`, Galio = `TFT5_Galio`, Garen = `TFT5_Garen`, Gragas = `TFT5_Gragas`, Gwen = `TFT5_Gwen`, Hecarim = `TFT5_Hecarim`, Heimerdinger = `TFT5_Heimerdinger`, Irelia = `TFT5_Irelia`, Ivern = `TFT5_Ivern`, Jax = `TFT5_Jax`, Kalista = `TFT5_Kalista`, Karma = `TFT5_Karma`, Kayle = `TFT5_Kayle`, Kennen = `TFT5_Kennen`, Khazix = `TFT5_Khazix`, Kled = `TFT5_Kled`, LeeSin = `TFT5_LeeSin`, Leona = `TFT5_Leona`, Lucian = `TFT5_Lucian`, Lulu = `TFT5_Lulu`, Lux = `TFT5_Lux`, MissFortune = `TFT5_MissFortune`, Nautilus = `TFT5_Nautilus`, Nidalee = `TFT5_Nidalee`, Nocturne = `TFT5_Nocturne`, Nunu = `TFT5_Nunu`, Olaf = `TFT5_Olaf`, Poppy = `TFT5_Poppy`, Pyke = `TFT5_Pyke`, Rakan = `TFT5_Rakan`, Rell = `TFT5_Rell`, Riven = `TFT5_Riven`, Sejuani = `TFT5_Sejuani`, Senna = `TFT5_Senna`, Sett = `TFT5_Sett`, Soraka = `TFT5_Soraka`, Syndra = `TFT5_Syndra`, TrainingDummy = `TFT_TrainingDummy`, Teemo = `TFT5_Teemo`, Monstrosity = `TFT5_Monstrosity`, Thresh = `TFT5_Thresh`, Tristana = `TFT5_Tristana`, Udyr = `TFT5_Udyr`, Varus = `TFT5_Varus`, Vayne = `TFT5_Vayne`, Velkoz = `TFT5_Velkoz`, Viego = `TFT5_Viego`, Vladimir = `TFT5_Vladimir`, VoidSpawn = `TFT_VoidSpawn`, Volibear = `TFT5_Volibear`, Yasuo = `TFT5_Yasuo`, Ziggs = `TFT5_Ziggs`, Zyra = `TFT5_Zyra` }
 
@@ -5472,3 +5472,630 @@ export const otherUnits: ChampionData[] = [
 		missiles: [],
 	},
 ]
+
+export const abilities: Record<string, AbilityData> = {
+	'TFT5_Akshan': {
+		desc: `Passive: Akshan's attacks reduce the target's Armor by 50% for @TotalShredDuration@ seconds.<br><br>Active: Akshan launches his grappling hook and swings untargetably toward the farthest enemy, gaining @AttackSpeedPercent@% Attack Speed for @BuffDuration@ seconds. Akshan will continue to attack the nearest enemy at double his Attack Speed while swinging.`,
+		icon: `ASSETS/Characters/TFT5_Akshan/HUD/Icons2D/TFT5_Akshan_EyeOfTheStorm.TFT_Set5_Stage2.dds`,
+		name: `Heroic Swing`,
+		variables: {
+			'AttackSpeedPercent': [0, 60, 70, 400],
+			'BuffDuration': [0, 4, 4, 4],
+			'ShredDuration': [0, 4, 4, 4],
+		},
+	},
+	'TFT5_Aatrox': {
+		desc: `Aatrox strikes his target, dealing @PercentAttackDamage@% of his Attack Damage (total: @TotalDamage@), and heals himself for @ModifiedHeal@.`,
+		icon: `ASSETS/Characters/Aatrox/HUD/Icons2D/Aatrox_Passive.dds`,
+		name: `Deathbringer Strike`,
+		variables: {
+			'PercentAttackDamage': [0, 260, 280, 360],
+			'Heal': [0, 200, 300, 400],
+		},
+	},
+	'TFT5_Aphelios': {
+		desc: `Aphelios launches @NumOfAttacks@ attacks simultaneously, one at his target and the rest at the enemies nearest to them, dealing @PercentAttackDamage*100@% of his Attack Damage plus @ModifiedBaseDamage@ physical damage to each. (Total: <scaleAD> @TotalDamage@ %i:scaleAD%</scaleAD>)<br><br><br>`,
+		icon: `ASSETS/Characters/TFT5_Aphelios/HUD/Icons2D/TFT5_ApheliosR.TFT_Set5.dds`,
+		name: `Dark Vigil`,
+		variables: {
+			'PercentAttackDamage': [0, 3.5, 3.75, 4.5],
+			'NumOfAttacks': [0, 5, 5, 10],
+			'BaseDamage': [0, 150, 200, 500],
+		},
+	},
+	'TFT5_HeimerTurret': {
+		desc: `Baby Dragons are immune to crowd control effects.`,
+		icon: `ASSETS/Characters/Heimerdinger/HUD/Icons2D/Heimerdinger_TechmaturgicalRepairBots.dds`,
+		name: `Turret Plating`,
+		variables: {
+			'Immunity': [0, 100, 100, 100],
+		},
+	},
+	'TFT5_Brand': {
+		desc: `Brand launches a ball of fire at the nearest non-seared enemy, searing them for @ModifiedDamage@ magic damage over @Duration@ seconds. Seared enemies have @MRShred@% reduced Magic Resist.`,
+		icon: `ASSETS/Characters/Brand/HUD/Icons2D/BrandQ.dds`,
+		name: `Sear`,
+		variables: {
+			'Damage': [0, 650, 950, 1750],
+			'Duration': [0, 12, 12, 12],
+			'MRShred': [40, 40, 50, 70],
+		},
+	},
+	'TFT5_Ashe': {
+		desc: `Ashe fires an arrow at the farthest enemy, dealing @ModifiedDamage@ magic damage to the first enemy hit and stunning them for @StunDuration@ seconds. If the arrow travels at least @HexThreshold@ hexes, the stun duration is doubled. Enemies within 1 hex receive @ReducedEffectiveness*100@% of these effects. `,
+		icon: `ASSETS/Characters/Ashe/HUD/Icons2D/Ashe_R.dds`,
+		name: `Enchanted Arrow`,
+		variables: {
+			'Damage': [250, 300, 450, 650],
+			'StunDuration': [0, 1.5, 2, 2.5],
+			'HexThreshold': [5, 5, 5, 5],
+			'ReducedEffectiveness': [0.5, 0.5, 0.5, 0.5],
+		},
+	},
+	'TFT5_Diana': {
+		desc: `Diana calls forth moonlight, drawing in all nearby enemies, dealing @ModifiedDamage@ magic damage and stunning them for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/Diana/HUD/Icons2D/Diana_R_MoonFall.dds`,
+		name: `Moonfall`,
+		variables: {
+			'Damage': [0, 300, 450, 3000],
+			'StunDuration': [1.5, 2, 2.5, 4],
+		},
+	},
+	'TFT5_IvernMinion': {
+		desc: `Daisy smashes the ground around her target, dealing @ModifiedDamage@ magic damage and stunning all nearby enemies for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/IvernMinion/HUD/Daisy_Sq.dds`,
+		name: `Shockwave`,
+		variables: {
+			'StunDuration': [0.5, 0.5, 0.5, 6],
+			'Damage': [250, 250, 350, 1200],
+		},
+	},
+	'TFT5_Draven': {
+		desc: `Passive: Draven ignores @ArmorPenPercent@% his target's Armor.<br><br>Draven starts spinning an axe, empowering his next attack to deal @ADMult*100@% of his Attack Damage plus @ModifiedDamage@ bonus physical damage. (Total:<scaleAD> @TotalDamage@ %i:scaleAD%</scaleAD>) It will return to his original location after striking the target. If Draven catches it, he will empower the axe again.<br><br>Draven can spin up to 2 axes at a time.`,
+		icon: `ASSETS/Characters/Draven/HUD/Icons2D/Draven_SpinningAxe.dds`,
+		name: `Spinning Axes`,
+		variables: {
+			'BuffDuration': [5.75, 5.75, 5.75, 5.75],
+			'ADMult': [1, 1.399999976158142, 1.5, 4],
+			'Damage': [0, 125, 200, 700],
+			'ArmorPenPercent': [50, 50, 50, 50],
+		},
+	},
+	'TFT5_DraconicEgg': {
+		desc: `After a few rounds this egg will hatch into Draconic champions or other loot!<br><br>In Hyper Roll, eggs hatch a lot faster!`,
+		icon: `ASSETS/Characters/TFT5_DraconicEgg/HUD/TFT5_DraconicEgg_Square.TFT_Set5.dds`,
+		name: `Hatching`,
+		variables: {
+			'RoundsToHatch': [2, 2, 2, 2],
+		},
+	},
+	'TFT5_Fiddlesticks': {
+		desc: `After a brief channel, Fiddlesticks teleports behind his target and summons a murder of crows for @Duration@ seconds, dealing @ModifiedMagicDamage@ magic damage per second to all enemies within. Enemies that die within the flock extend its duration by @ExtendedDuration@ second and heal Fiddlesticks for @PercentHeal*100@% of their maximum Health. `,
+		icon: `ASSETS/Characters/Fiddlesticks/HUD/Icons2D/FiddlesticksR.FiddleSticksRework.dds`,
+		name: `Crowstorm`,
+		variables: {
+			'Duration': [0, 5, 5, 5],
+			'MagicDamage': [0, 150, 200, 750],
+			'PercentHeal': [0.25, 0.25, 0.25, 0.25],
+			'ExtendedDuration': [1, 1, 1, 1],
+		},
+	},
+	'TFT5_Galio': {
+		desc: `Galio charges the area around him for @Duration@ seconds, taunting all enemies within while gaining @PercentDamageReduction*100@% damage reduction. Upon releasing the charge, Galio deals @ModifiedMagicDamage@ magic damage to all enemies within @HexRange@ hexes and heals for @ModifiedPercentHealed@ of the damage blocked.`,
+		icon: `ASSETS/Characters/Galio/HUD/Icons2D/Galio_W.dds`,
+		name: `Shield of Durand`,
+		variables: {
+			'MagicDamage': [0, 200, 300, 1500],
+			'Duration': [2.5, 2.5, 2.5, 2.5],
+			'PercentDamageReduction': [0, 0.550000011920929, 0.6000000238418579, 0.949999988079071],
+			'HexRange': [3, 3, 3, 3],
+			'PercentHealed': [0.6000000238418579, 0.6000000238418579, 0.6000000238418579, 0.6000000238418579],
+		},
+	},
+	'TFT5_Gragas': {
+		desc: `Gragas drinks from his cask, granting him @DamageReduction@% damage reduction for @Duration@ seconds, and causing his next attack to deal @ModifiedDamage@ bonus magic damage.`,
+		icon: `ASSETS/Characters/Gragas/HUD/Icons2D/GragasDrunkenRage.dds`,
+		name: `Drunken Rage`,
+		variables: {
+			'MagicDamage': [0, 175, 250, 475],
+			'Duration': [4, 4, 4, 4],
+			'DamageReduction': [0, 35, 45, 60],
+		},
+	},
+	'TFT5_Garen': {
+		desc: `Garen calls down a sword that strikes a large area around his target, dealing @ModifiedPercentMaxHealth@ of each target's max Health in magic damage and reducing their Magic Resist by @MRShredTooltip@% for @MRShredDuration@ seconds. <br><br>Garen gains a shield equal to @ModifiedShieldPercent@ of his maximum Health for @ShieldDuration@ seconds.`,
+		icon: `ASSETS/Characters/TFT5_Garen/HUD/Icons2D/TFT5_Garen_EyeOfTheStorm.TFT_Set5.dds`,
+		name: `God-Lion's Justice`,
+		variables: {
+			'PercentMaxHealth': [0, 0.25, 0.3499999940395355, 2],
+			'ShieldPercent': [0.5, 0.4000000059604645, 0.550000011920929, 2],
+			'ShieldDuration': [5, 5, 5, 5],
+			'MRShredTooltip': [50, 50, 50, 50],
+			'MRShredDuration': [8, 8, 8, 8],
+		},
+	},
+	'TFT5_Karma': {
+		desc: `Karma fires a burst of energy towards a random enemy's location that detonates upon impact, dealing @ModifiedDamage@ magic damage to adjacent enemies, and reducing Karma's maximum Mana by @MaxManaReduction@ (down to a minimum of 10).<br><br>Karma empowers every third cast, causing it to launch 3 bursts of energy toward different targets instead of 1.`,
+		icon: `ASSETS/Characters/Karma/HUD/Icons2D/Karma_Q2.dds`,
+		name: `Soulflare`,
+		variables: {
+			'MagicDamage': [0, 230, 300, 850],
+			'MaxManaReduction': [0, 15, 15, 40],
+		},
+	},
+	'TFT5_Jax': {
+		desc: `Jax slams his target for @PercentAttackDamage@% of his Attack Damage (total: @TotalDamage@) and gains @ModifiedAS@ stacking Attack Speed for the remainder of combat. Jax leaps to the nearest enemy if no target is in his Attack Range.`,
+		icon: `ASSETS/Characters/Jax/HUD/Icons2D/Armsmaster_RelentlessAssault.dds`,
+		name: `Empowered Strike`,
+		variables: {
+			'PercentAttackDamage': [0, 220, 240, 500],
+			'PercentAttackSpeed': [0, 0.20000000298023224, 0.30000001192092896, 1],
+		},
+	},
+	'TFT5_Gwen': {
+		desc: `Gwen dashes around her target and performs @Snips@ rapid scissor snips in a cone in front of her, each dealing @ModifiedMagicDamage@ plus @PercentMaxHealth*100@% of the target's maximum Health as magic damage. Snips steal @Defenses@ Armor and Magic resist from their target. Gwen will perform double the snips in every other cast.`,
+		icon: `ASSETS/Characters/Gwen/HUD/Icons2D/Gwen_E.Gwen.dds`,
+		name: `Skip 'N Slash`,
+		variables: {
+			'Snips': [3, 3, 3, 3],
+			'MagicDamage': [0, 125, 200, 2222],
+			'PercentMaxHealth': [0, 0.03999999910593033, 0.07000000029802322, 0.5],
+			'HealthThresholdPercent': [0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645],
+			'Defenses': [1, 2, 2, 11],
+		},
+	},
+	'TFT5_Hecarim': {
+		desc: `Hecarim creates an aura around himself for @Duration@ seconds. Each enemy within the aura takes @ModifiedDamage@ magic damage and heals Hecarim for @ModifiedHealing@ over the duration.`,
+		icon: `ASSETS/Characters/Hecarim/HUD/Icons2D/Hecarim_SpiritofDread.dds`,
+		name: `Spirit of Dread`,
+		variables: {
+			'Damage': [40, 200, 400, 600],
+			'Healing': [40, 200, 225, 250],
+			'Duration': [3, 3, 3, 3],
+			'Radius': [1, 1, 1, 1],
+			'TickRate': [1, 1, 1, 1],
+		},
+	},
+	'TFT5_Kalista': {
+		desc: `Kalista hurls a spear towards the farthest enemy, dealing @ModifiedPercentAttackDamage@ of her Attack Damage plus @BaseDamage@ bonus physical damage to the first enemy it hits (total: @TotalDamage@). If it kills an enemy, the spear continues and will deal any excess damage to the next enemy it hits.`,
+		icon: `ASSETS/Characters/Kalista/HUD/Icons2D/Kalista_Q.dds`,
+		name: `Pierce`,
+		variables: {
+			'PercentAttackDamage': [0, 1.7999999523162842, 2, 2.200000047683716],
+			'BaseDamage': [400, 350, 600, 900],
+		},
+	},
+	'TFT5_Kayle': {
+		desc: `Passive: Kayle ascends every @AscensionDelay@ seconds. Each bonus stacks with the one before, until she is fully ascended.<br>1st: Attacks deal @PercentAttackDamage@% of Kayle's Attack Damage as bonus true damage. (<trueDamage>total: @TotalAttackDamage@</trueDamage>)<br>2nd: Attacks explode around the target dealing her Attack Damage and bonus true damage to adjacent enemies.<br>3rd: Every @NumAttacksImmunity@th attack grants Kayle immunity to damage for @ImmunityDuration@ second.<br>4th: Attacks cause swords to rain down around the target, dealing @TotalAoEDamage@ magic damage.`,
+		icon: `ASSETS/Characters/Kayle/HUD/Icons2D/Kayle_P.dds`,
+		name: `Divine Ascent`,
+		variables: {
+			'PercentAttackDamage': [0, 50, 60, 1000],
+			'NumAttacksImmunity': [0, 12, 12, 12],
+			'ImmunityDuration': [0, 1, 1, 1],
+			'AoEDamage': [0, 90, 150, 4000],
+			'AscensionDelay': [0, 5, 5, 1],
+		},
+	},
+	'TFT5_Ivern': {
+		desc: `Ivern summons his sentinel friend Daisy to fight with him. Daisy receives @DaisyBonusAPConversion@% of Ivern's Ability Power and immediately casts Shockwave upon arrival.<br><br>If Daisy is already in battle, Ivern increases her Ability Power by @ModifiedAbilityPowerBonus@ and commands her to cast Shockwave again.`,
+		icon: `ASSETS/Characters/Ivern/HUD/Icons2D/IvernR.dds`,
+		name: `Daisy!`,
+		variables: {
+			'AbilityPowerBonus': [0, 100, 150, 300],
+			'DaisyBonusAPConversion': [100, 100, 100, 100],
+			'DaisyHealth': [0, 1600, 2600, 10000],
+			'TooltipDaisyStun': [0.5, 0.5, 0.5, 6],
+			'TooltipDaisyDamage': [250, 250, 350, 1200],
+		},
+	},
+	'TFT5_Kennen': {
+		desc: `Kennen engulfs himself in flame, dashing behind his target, then to the farthest enemy. Enemies he passes through are zapped dealing @ModifiedDamage@ magic damage and stunning them for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/Kennen/HUD/Icons2D/Kennen_E.dds`,
+		name: `Flame Rush`,
+		variables: {
+			'Damage': [0, 150, 225, 350],
+			'StunDuration': [0, 1.5, 2, 2.5],
+		},
+	},
+	'TFT5_Irelia': {
+		desc: `Irelia surrounds herself with blades for @StanceDuration@ seconds and gains @DamageReduction*100@% damage reduction, increasing by @DamageReductionIncrease*100@% each time she attacks, up to @DamageReductionMax*100@%. When the effect ends she strikes her target for @ModifiedDamage@ magic damage.`,
+		icon: `ASSETS/Characters/Irelia/HUD/Icons2D/Irelia_W.dds`,
+		name: `Defiant Dance`,
+		variables: {
+			'StanceDuration': [4, 4, 4, 4],
+			'MagicDamage': [0, 250, 400, 650],
+			'DamageReduction': [0, 0.30000001192092896, 0.4000000059604645, 0.5],
+			'DamageReductionIncrease': [0, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
+			'DamageReductionMax': [0, 0.800000011920929, 0.800000011920929, 0.800000011920929],
+		},
+	},
+	'TFT5_LeeSin': {
+		desc: `Lee Sin slams the ground, dealing @ModifiedDamage@ magic damage to nearby enemies and slowing their Attack Speed by @AttackSpeedSlow@% for @AttackSpeedSlowDuration@ seconds.`,
+		icon: `ASSETS/Characters/LeeSin/HUD/Icons2D/BlindMonkEOne.dds`,
+		name: `Cripple`,
+		variables: {
+			'Damage': [0, 200, 350, 600],
+			'AttackSpeedSlowDuration': [4, 4, 4, 4],
+			'AttackSpeedSlow': [50, 50, 50, 50],
+		},
+	},
+	'TFT5_Khazix': {
+		desc: `Kha'Zix slashes the nearest enemy, dealing @ModifiedDamage@ magic damage. If the enemy has no adjacent allies, this damage is increased to @ModifiedIsolationDamage@.`,
+		icon: `ASSETS/Characters/KhaZix/HUD/Icons2D/Khazix_Q.dds`,
+		name: `Taste their Fear`,
+		variables: {
+			'Damage': [50, 250, 350, 450],
+			'IsolationDamage': [200, 750, 1050, 1350],
+		},
+	},
+	'TFT5_Leona': {
+		desc: `Leona creates a barrier around herself, reducing all incoming damage by @ModifiedDamageReduction@ for 4 seconds.`,
+		icon: `ASSETS/Characters/Leona/HUD/Icons2D/LeonaSolarBarrier.dds`,
+		name: `Solar Barrier`,
+		variables: {
+			'FlatDamageReduction': [0, 30, 40, 120],
+			'Duration': [4, 4, 4, 4],
+		},
+	},
+	'TFT5_Lulu': {
+		desc: `Lulu enchants the @NumTargets@ units nearest to her. Enchanted allies gain @ModifiedAttackSpeedPercent@ bonus Attack Speed for @AllyBuffDuration@ seconds. Enchanted enemies are stunned and transformed into a docile feline for @PolymorphDuration@ seconds, taking @DamageAmp@% increased damage. If there are less than 3 units nearby, Lulu will enchant herself.`,
+		icon: `ASSETS/Characters/Lulu/HUD/Icons2D/Lulu_Whimsy.dds`,
+		name: `Whimsy`,
+		variables: {
+			'NumTargets': [2, 3, 4, 5],
+			'AttackSpeedPercent': [8, 0.699999988079071, 0.800000011920929, 1.2000000476837158],
+			'AllyBuffDuration': [0, 5, 5, 5],
+			'PolymorphDuration': [0, 1.5, 1.5, 1.5],
+			'DamageAmp': [20, 20, 20, 20],
+		},
+	},
+	'TFT5_Lucian': {
+		desc: `Lucian faces the farthest enemy and fires @NumShots@ shots in that direction for @Duration@ seconds, dashing on occasion to keep hitting enemies. Each shot hits for @TADRatio*100@% of his Attack Damage and deals @ModifiedDamage@ magic damage. Lucian also fires extra shots based on his Attack Speed. (Current bonus: @ShotsFromAS@)`,
+		icon: `ASSETS/Characters/Lucian/HUD/Icons2D/Lucian_R.dds`,
+		name: `The Culling`,
+		variables: {
+			'Duration': [4, 4, 4, 4],
+			'BaseDamage': [30, 40, 70, 400],
+			'TADRatio': [0.5, 0.5, 0.5, 0.5],
+			'AttacksPerSecondCoefficient': [1, 1, 1, 1],
+			'NumShots': [16, 16, 16, 16],
+		},
+	},
+	'TFT5_MissFortune': {
+		desc: `Miss Fortune rains 4 waves of bullets down around her target, dealing @ModifiedMagicDamage@ total magic damage to enemies in the area and reducing their incoming healing by @HealingReduction@% for @HealingReductionDuration@ seconds.`,
+		icon: `ASSETS/Characters/MissFortune/HUD/Icons2D/MissFortune_E.dds`,
+		name: `Make It Rain`,
+		variables: {
+			'MagicDamage': [0, 250, 375, 550],
+			'HealingReduction': [0, 50, 50, 50],
+			'HealingReductionDuration': [0, 6, 6, 6],
+		},
+	},
+	'TFT5_Kled': {
+		desc: `Passive: Kled deals @PercentOfAttackDamage@% of his Attack Damage (total: @TotalDamage@) every 4th attack. <br><br>Kled enters combat on Skaarl, granting himself a shield for @ModifiedShieldPercent@ of his maximum Health. When the shield is broken Kled dismounts, becoming untargetable briefly, gaining @AttackSpeedPercent@% Attack Speed. `,
+		icon: `ASSETS/Characters/Kled/HUD/Icons2D/Kled_P.dds`,
+		name: `Violent Tendencies`,
+		variables: {
+			'ShieldPercent': [0, 0.800000011920929, 0.800000011920929, 0.800000011920929],
+			'AttackSpeedPercent': [0, 70, 80, 110],
+			'PercentOfAttackDamage': [0, 150, 150, 150],
+		},
+	},
+	'TFT5_Lux': {
+		desc: `Lux launches her wand toward her farthest ally, then calls the wand back to her hand. The wand shields each ally in its path by @ModifiedShieldAmount@ for @ShieldDuration@ seconds. Lux also empowers her next attack to deal an additional @ModifiedHitDamage@ magic damage.`,
+		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxPrismaWrap.dds`,
+		name: `Prismatic Illumination`,
+		variables: {
+			'ShieldAmount': [200, 120, 180, 360],
+			'ShieldDuration': [3, 3, 3, 3],
+			'HitDamage': [40, 400, 600, 1000],
+		},
+	},
+	'TFT5_Nunu': {
+		desc: `Willump bites his target, dealing @ModifiedDamage@ magic damage. If Willump's target has less Health than he does before the bite, it deals an additional @DamageAmp*100@% damage and becomes true damage.`,
+		icon: `ASSETS/Characters/Nunu/HUD/Icons2D/NunuQ.dds`,
+		name: `Consume`,
+		variables: {
+			'Damage': [200, 450, 700, 1600],
+			'DamageAmp': [0.5, 0.5, 0.5, 0.5],
+		},
+	},
+	'TFT5_Olaf': {
+		desc: `Passive: Olaf gains @AttackSpeed*100@% Attack Speed for each @PercentHealth@% of missing Health, and his attacks heal him for @ModifiedHeal@.`,
+		icon: `ASSETS/Characters/Olaf/HUD/Icons2D/Olaf_Passive.dds`,
+		name: `Berserker Rage`,
+		variables: {
+			'AttackSpeed': [0, 0.019999999552965164, 0.029999999329447746, 0.03999999910593033],
+			'Heal': [0, 20, 30, 70],
+			'PercentHealth': [1, 1, 1, 1],
+		},
+	},
+	'TFT5_Nautilus': {
+		desc: `Nautilus causes the ground beneath his target to erupt, knocking them up, stunning them for @StunDuration@ seconds, and dealing @ModifiedDamage@ magic damage. Enemies adjacent to the target receive 50% of this effect.`,
+		icon: `ASSETS/Characters/Nautilus/HUD/Icons2D/Nautilus_GrandLine.dds`,
+		name: `Anchor Slam`,
+		variables: {
+			'Damage': [0, 200, 300, 750],
+			'StunDuration': [0, 3, 4, 6],
+		},
+	},
+	'TFT5_Heimerdinger': {
+		desc: `Heimerdinger empowers his Baby Dragon's next attack. The Baby Dragon's overcharged attack launches 3 fireballs across the battlefield, dealing @ModifiedTurretMagicDamage@ magic damage and burning enemies for @BurnPercent@% of their maximum Health as true damage over @BurnDuration@ seconds, reducing healing by 50% for the duration.<br><br>If Heimerdinger does not have a Baby Dragon, this Ability will create one instead.`,
+		icon: `ASSETS/Characters/Heimerdinger/HUD/Icons2D/Heimerdinger_R.dds`,
+		name: `Upgrade!!!`,
+		variables: {
+			'TurretMagicDamage': [0, 425, 600, 3333],
+			'BurnDuration': [0, 6, 6, 6],
+			'BurnPercent': [18, 18, 18, 18],
+		},
+	},
+	'TFT5_Nidalee': {
+		desc: `Nidalee transforms into a cougar and leaps behind the lowest Health enemy. <br><br>While in cougar form, Nidalee gains @DodgeChance@% Dodge Chance, @AttackSpeedPercent@% Attack Speed, and her attacks become melee attacks that deal @ModifiedDamage@ bonus magic damage every 4th attack.`,
+		icon: `ASSETS/Characters/Nidalee/HUD/Icons2D/Nidalee_R2.dds`,
+		name: `Aspect of the Cougar`,
+		variables: {
+			'DodgeChance': [0, 40, 40, 40],
+			'Damage': [0, 200, 300, 600],
+			'AttackSpeedPercent': [30, 30, 50, 75],
+		},
+	},
+	'TFT5_Rakan': {
+		desc: `Rakan launches a feather toward his target, dealing @ModifiedDamage@ magic damage to the first enemy hit. Rakan then heals all nearby allies for @HealPercent*100@% of their missing health, with an increased radius if the feather killed an enemy.`,
+		icon: `ASSETS/Characters/Rakan/HUD/Icons2D/Rakan_E2.dds`,
+		name: `Gleaming Quill`,
+		variables: {
+			'Damage': [0, 350, 500, 800],
+			'HealPercent': [0, 0.3499999940395355, 0.5, 0.699999988079071],
+		},
+	},
+	'TFT5_Riven': {
+		desc: `Riven empowers her blade, stunning nearby enemies for @StunDuration@ seconds and dealing them @ModifiedMagicDamage@ magic damage. For the next @EmpowerDuration@ seconds, she gains @BonusAttackDamagePercent*100@% bonus Attack Damage.`,
+		icon: `ASSETS/Characters/Riven/HUD/Icons2D/RivenBladeoftheExile.dds`,
+		name: `Blade of the Dawn`,
+		variables: {
+			'StunDuration': [0, 1.5, 1.5, 1.5],
+			'MagicDamage': [0, 100, 200, 300],
+			'EmpowerDuration': [8, 8, 8, 8],
+			'BonusAttackDamagePercent': [0, 0.8999999761581421, 1, 1.149999976158142],
+		},
+	},
+	'TFT5_Rell': {
+		desc: `Rell leaps into the air and creates a tether between herself and her farthest ally. When she lands, the tether breaks, stunning all nearby enemies in its path for @StunDuration@ seconds. This effect also grants a @ModifiedShieldAmount@ Health shield for @ShieldDuration@ seconds to nearby allies in the same area.`,
+		icon: `ASSETS/Characters/TFT5_Rell/HUD/Icons2D/RellE.TFT_Set5.dds`,
+		name: `Attract and Repel`,
+		variables: {
+			'ShieldAmount': [100, 300, 450, 3000],
+			'ShieldDuration': [4, 4, 4, 4],
+			'StunDuration': [2.5, 1.5, 2, 8],
+		},
+	},
+	'TFT5_Senna': {
+		desc: `Senna launches black mist toward the farthest enemy. The first enemy hit along the path is stunned for @StunDuration@ seconds, and all nearby enemies are dealt @ModifiedDamage@ magic damage.`,
+		icon: `ASSETS/Characters/Senna/HUD/Icons2D/Senna_W.dds`,
+		name: `Last Embrace`,
+		variables: {
+			'Damage': [0, 200, 300, 450],
+			'StunDuration': [0, 1.5, 2, 3],
+		},
+	},
+	'TFT5_Sejuani': {
+		desc: `Sejuani signals Bristle to charge, dealing @ModifiedDamage@ magic damage and stunning her target for @StunDuration@ seconds. She then gains Frost Armor, granting her @DefensiveStats@ Armor and Magic Resist for @Duration@ seconds. `,
+		icon: `ASSETS/Characters/Sejuani/HUD/Icons2D/Sejuani_passive.dds`,
+		name: `Fury of the North`,
+		variables: {
+			'DefensiveStats': [0, 60, 100, 200],
+			'Duration': [4, 4, 4, 4],
+			'StunDuration': [0, 2, 3, 4],
+			'MagicDamage': [0, 300, 450, 750],
+		},
+	},
+	'TFT5_Sett': {
+		desc: `After a brief wind up Sett punches forward in a cone, shredding @ModifiedArmorShred@ flat Armor for @ArmorShredDuration@ seconds (stacks) and dealing @PhysicalDamagePercent@% of his Attack Damage as physical damage to all enemies in the area. (total: <scaleAD>@TotalDamage@ %i:scaleAD%</scaleAD>)`,
+		icon: `ASSETS/Characters/TFT5_Sett/HUD/Icons2D/TFT5_Sett_W.TFT_Set5.dds`,
+		name: `Haymaker`,
+		variables: {
+			'PhysicalDamagePercent': [0, 170, 185, 200],
+			'FlatArmorShred': [0, 20, 25, 40],
+			'ArmorShredDuration': [10, 10, 10, 10],
+		},
+	},
+	'TFT5_Soraka': {
+		desc: `Soraka calms the area around the enemy with the highest current percent Mana, dealing @ModifiedDamage@ magic damage to all enemies hit and increasing the cost of their next Ability by @ManaIncrease@%.`,
+		icon: `ASSETS/Characters/Soraka/HUD/Icons2D/Soraka_E.dds`,
+		name: `Equinox`,
+		variables: {
+			'Damage': [0, 200, 275, 400],
+			'ManaIncrease': [0, 35, 35, 35],
+		},
+	},
+	'TFT5_Syndra': {
+		desc: `Syndra grabs the nearest enemy and flings them towards the farthest enemy, dealing @ModifiedDamage@ magic damage to all nearby enemies upon impact and stunning the thrown target for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/Syndra/HUD/Icons2D/SyndraW2.dds`,
+		name: `Force of Will`,
+		variables: {
+			'Damage': [0, 250, 350, 650],
+			'StunDuration': [0, 2, 2.5, 4],
+		},
+	},
+	'TFT5_Pyke': {
+		desc: `Pyke leaves a phantom at his location, then dashes behind the farthest enemy. After @StunDelay@ second, his phantom returns to Pyke, dealing @ModifiedDamage@ magic damage to all enemies it passes through and stunning them for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/Pyke/HUD/Icons2D/PykeE.dds`,
+		name: `Phantom Undertow`,
+		variables: {
+			'Damage': [25, 150, 225, 325],
+			'StunDuration': [1, 1.5, 2, 3],
+			'StunDelay': [1, 1, 1, 1],
+		},
+	},
+	'TFT5_Poppy': {
+		desc: `Poppy throws her buckler at the farthest enemy, dealing @ModifiedDamage@ magic damage. The buckler then bounces back, granting Poppy a shield that blocks @ModifiedShield@ damage.`,
+		icon: `ASSETS/Characters/Poppy/HUD/Icons2D/Poppy_Passive.dds`,
+		name: `Buckler Toss`,
+		variables: {
+			'Damage': [50, 150, 250, 450],
+			'ShieldAmount': [100, 250, 375, 525],
+		},
+	},
+	'TFT5_Teemo': {
+		desc: `Teemo scatters @MushroomCount@ Infernal Souls around a random enemy. When an enemy nears an Infernal Soul (or after @DetonationDelay@ seconds), it explodes dealing @ModifiedDamage@ magic damage to nearby enemies and reducing their Attack Speed by @AttackSpeedSlowTooltip@% for @DebuffDuration@ seconds.`,
+		icon: `ASSETS/Characters/TFT5_Teemo/HUD/Icons2D/TFT5_Teemo_spell.TFT_Set5.dds`,
+		name: `Teemo's Cruelty`,
+		variables: {
+			'Damage': [0, 120, 160, 666],
+			'DetonationDelay': [0, 3, 3, 3],
+			'DebuffDuration': [3, 3, 3, 3],
+			'AttackSpeedSlowTooltip': [50, 50, 50, 50],
+			'TickRate': [0.5, 0.5, 0.5, 0.5],
+			'MushroomCount': [3, 5, 6, 42],
+			'MaxMushroomDeployRadius': [225, 225, 225, 225],
+			'MushroomAreaTriggerRadius': [200, 200, 200, 200],
+			'MushroomAOERadius': [360, 360, 360, 360],
+		},
+	},
+	'TFT5_Nocturne': {
+		desc: `Passive: Every third attack, Nocturne slashes all adjacent enemies for @PercentAttackDamage*100@% of his Attack Damage plus @TooltipBonusDamage@ bonus physical damage (total: @ModifiedTotalDamage@), and heals himself for @HealPercent@% of the damage dealt. If only one target is hit, Nocturne also increases his Attack Speed by @AttackSpeed@% for @Duration@ seconds.`,
+		icon: `ASSETS/Characters/Nocturne/HUD/Icons2D/Nocturne_UmbraBlades.dds`,
+		name: `Umbra Blades`,
+		variables: {
+			'HealPercent': [100, 100, 100, 100],
+			'PercentAttackDamage': [0, 0.699999988079071, 0.699999988079071, 0.699999988079071],
+			'AttackSpeed': [0, 35, 35, 35],
+			'Duration': [0, 3, 3, 3],
+			'BonusDamage': [80, 100, 100, 100],
+		},
+	},
+	'TFT_TrainingDummy': {
+		desc: `The Training Dummy cannot move or attack. It is also dressed like a devilishly handsome Yordle.`,
+		icon: `ASSETS/Characters/TFTDebug_Dummy/HUD/Icons2D/TFTDebug_Dummy_DoNothing.TFT_1022.dds`,
+		name: `On Duty!`,
+		variables: {},
+	},
+	'TFT5_Udyr': {
+		desc: `Udyr swaps between Turtle and Tiger stance with each cast, gaining the following benefits: <br>Turtle: Gain a @ModifiedShieldAmount@ Health shield for @ShieldDuration@ seconds.<br>Tiger: Strike 3 times quickly with his next attack for @PercentAD@% of his Attack Damage (total: @ModifiedPercentAD@).`,
+		icon: `ASSETS/Characters/Udyr/HUD/Icons2D/Udyr_MonkeysAgility.dds`,
+		name: `Feral Instinct`,
+		variables: {
+			'ShieldAmount': [0, 250, 350, 600],
+			'ShieldDuration': [0, 4, 4, 4],
+			'PercentAD': [0, 120, 130, 180],
+		},
+	},
+	'TFT5_Varus': {
+		desc: `Varus fires a hail of arrows around his target, dealing @PercentOfAD@% of his Attack Damage as physical damage (total: @TooltipDamage@). Varus and allies within the area are blessed, causing them to deal @ModifiedDamage@ bonus magic damage with their attacks on-hit for @Duration@ seconds.`,
+		icon: `ASSETS/Characters/Varus/HUD/Icons2D/VarusE.dds`,
+		name: `Holy Arrows`,
+		variables: {
+			'MagicDamage': [0, 40, 60, 90],
+			'Duration': [0, 6, 6, 6],
+			'PercentOfAD': [0, 150, 155, 165],
+		},
+	},
+	'TFT5_Velkoz': {
+		desc: `Vel'Koz channels a ray of energy for 3 seconds toward the enemy nearest the center of the battlefield, dealing @ModifiedDamage@ total magic damage over the duration. The beam widens as Vel'Koz channels, and he will pivot if there are no enemies in the area.`,
+		icon: `ASSETS/Characters/Velkoz/HUD/Icons2D/Velkoz_R.dds`,
+		name: `Lifeform Disintegration Ray`,
+		variables: {
+			'BaseDamagePerSec': [0, 850, 1100, 4000],
+		},
+	},
+	'TFT5_Vayne': {
+		desc: `Passive: Vayne's third attack on a target deals @ModifiedDamage@ bonus true damage on-hit.`,
+		icon: `ASSETS/Characters/Vayne/HUD/Icons2D/Vayne_SilveredBolts.dds`,
+		name: `Silver Bolts`,
+		variables: {
+			'BonusDamage': [60, 70, 85, 100],
+		},
+	},
+	'TFT5_Thresh': {
+		desc: `Thresh hooks his farthest enemy with his chain scythe, dealing @ModifiedDamage@ magic damage and pulling them toward himself for @PullDuration@ seconds.`,
+		icon: `ASSETS/Characters/Thresh/HUD/Icons2D/Thresh_Q.dds`,
+		name: `Death Sentence`,
+		variables: {
+			'Damage': [0, 175, 350, 800],
+			'PullDuration': [0, 2, 3, 4],
+		},
+	},
+	'TFT5_Viego': {
+		desc: `Viego corrupts the soul of his target for @Duration@ seconds, stunning them and dealing @ModifiedDamage@ magic damage, increasing @IncreasePercent@% each second. Viego will be interrupted if he is stunned, and Viego's allies prefer not to target his victim during soul corruption.<br><br>If his victim dies, they are resurrected at full Health to fight for him, but they lose @DecayPercentDamagePerSecond@% of their maximum Health per second. Resurrected enemies receive the Trait bonuses of Viego's team instead of their own.`,
+		icon: `ASSETS/Characters/Viego/HUD/Icons2D/Viego_Passive.RuinedKing.dds`,
+		name: `Sovereign's Domination`,
+		variables: {
+			'Damage': [0, 150, 400, 2000],
+			'IncreasePercent': [0, 50, 50, 50],
+			'DecayPercentDamagePerSecond': [0, 10, 5, 0],
+			'Duration': [0, 5, 5, 5],
+		},
+	},
+	'TFT5_Vladimir': {
+		desc: `Vladimir deals @ModifiedDamage@ magic damage to the target and heals for @ModifiedHeal@ Health.`,
+		icon: `ASSETS/Characters/Vladimir/HUD/Icons2D/VladimirQ.dds`,
+		name: `Transfusion`,
+		variables: {
+			'Damage': [75, 300, 420, 540],
+			'Heal': [0, 200, 280, 360],
+		},
+	},
+	'TFT5_Monstrosity': {
+		desc: `The Monstrosity becomes unstoppable for @Duration@ seconds, granting @ModifiedAttackSpeed@ Attack Speed and causing Basic Attacks to heal for @HealPercent*100@% of the damage dealt. `,
+		icon: `ASSETS/Characters/Sion/HUD/Icons2D/Sion_Passive2.dds`,
+		name: `Enrage`,
+		variables: {
+			'Duration': [4, 4, 4, 4],
+			'HealPercent': [0.6000000238418579, 0.6000000238418579, 0.6000000238418579, 0.6000000238418579],
+			'AttackSpeed': [1, 1, 1, 1],
+		},
+	},
+	'TFT_VoidSpawn': {
+		desc: `The Voidspawn gains bonus Health and Attack Damage based on the current Stage. <br><br><tftitemrules>[Does not apply to Unstable Voidspawns]</tftitemrules>`,
+		icon: `ASSETS/Characters/TFT_VoidSpawn/HUD/Voidspawn_square.dds`,
+		name: `Voidborn`,
+		variables: {},
+	},
+	'TFT5_Tristana': {
+		desc: `Tristana leaps away from enemies and gains @ModifiedAttackSpeedPercent@ Attack Speed for @Duration@ seconds..`,
+		icon: `ASSETS/Characters/Tristana/HUD/Icons2D/Tristana_W.dds`,
+		name: `Rocket Jump`,
+		variables: {
+			'AttackSpeedPercent': [0, 1.2000000476837158, 1.2999999523162842, 1.399999976158142],
+			'Duration': [4, 4, 4, 4],
+		},
+	},
+	'TFT5_Volibear': {
+		desc: `Volibear leaps toward his target, then slams the ground in a large area around him. This effect knocks up and stuns enemies for @StunDuration@ seconds, dealing @ModifiedDamage@ magic damage. This damage is doubled against shielded targets.`,
+		icon: `ASSETS/Characters/Volibear/HUD/Icons2D/Volibear_Icon_Q.dds`,
+		name: `Doombringer`,
+		variables: {
+			'Damage': [0, 125, 250, 5000],
+			'StunDuration': [0, 2, 3.5, 10],
+		},
+	},
+	'TFT5_Yasuo': {
+		desc: `Yasuo strikes his target, dealing @ModifiedDamage@ magic damage. He then empowers his blade, gaining @ModifiedTrueDamageBonus@ stacking bonus true damage on-hit for the rest of combat.`,
+		icon: `ASSETS/Characters/Yasuo/HUD/Icons2D/Yasuo_R.dds`,
+		name: `Burning Blade`,
+		variables: {
+			'MagicDamage': [0, 250, 350, 550],
+			'Duration': [60, 60, 60, 60],
+			'TrueDamageBonus': [0, 20, 25, 40],
+		},
+	},
+	'TFT5_Zyra': {
+		desc: `Zyra sends a surge of vines toward her farthest enemy, dealing @ModifiedDamage@ magic damage and stunning all enemies they hit for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/Zyra/HUD/Icons2D/ZyraE.dds`,
+		name: `Grasping Roots`,
+		variables: {
+			'Damage': [0, 200, 300, 525],
+			'StunDuration': [0, 1.5, 2, 2.5],
+		},
+	},
+	'TFT5_Ziggs': {
+		desc: `Ziggs throws an arcane bomb at his target, dealing @ModifiedDamage@ magic damage.`,
+		icon: `ASSETS/Characters/Ziggs/HUD/Icons2D/ZiggsQ.dds`,
+		name: `Arcane Bomb`,
+		variables: {
+			'Damage': [70, 250, 375, 550],
+			'StunDuration': [0, 0.5, 0.5, 0.5],
+		},
+	},
+}

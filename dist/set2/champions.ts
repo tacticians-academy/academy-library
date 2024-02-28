@@ -1,4 +1,4 @@
-import type { ChampionData } from '../index'
+import type { AbilityData, ChampionData } from '../index'
 
 export enum ChampionKey { Aatrox = `TFT2_Aatrox`, Amumu = `TFT2_Amumu`, Annie = `TFT2_Annie`, Ashe = `TFT2_Ashe`, Azir = `TFT2_Azir`, Brand = `TFT2_Brand`, Braum = `TFT2_Braum`, Diana = `TFT2_Diana`, DrMundo = `TFT2_DrMundo`, Ezreal = `TFT2_Ezreal`, Ivern = `TFT2_Ivern`, Janna = `TFT2_Janna`, Jax = `TFT2_Jax`, Karma = `TFT2_Karma`, Khazix = `TFT2_Khazix`, Kindred = `TFT2_Kindred`, KogMaw = `TFT2_KogMaw`, LeBlanc = `TFT2_LeBlanc`, Leona = `TFT2_Leona`, Lucian = `TFT2_Lucian`, LuxCrystal = `TFT2_LuxCrystal`, LuxElectric = `TFT2_LuxElectric`, LuxGlacial = `TFT2_LuxGlacial`, LuxInferno = `TFT2_LuxInferno`, LuxLight = `TFT2_LuxLight`, LuxMetal = `TFT2_LuxMetal`, LuxOcean = `TFT2_LuxOcean`, LuxShadow = `TFT2_LuxShadow`, LuxWind = `TFT2_LuxWind`, LuxWoodland = `TFT2_LuxWoodland`, Malphite = `TFT2_Malphite`, Malzahar = `TFT2_Malzahar`, Maokai = `TFT2_Maokai`, MasterYi = `TFT2_MasterYi`, Nami = `TFT2_Nami`, Nasus = `TFT2_Nasus`, Nautilus = `TFT2_Nautilus`, Neeko = `TFT2_Neeko`, Nocturne = `TFT2_Nocturne`, Olaf = `TFT2_Olaf`, Ornn = `TFT2_Ornn`, Qiyana = `TFT2_Qiyana`, QiyanaOcean = `TFT2_QiyanaOcean`, QiyanaInferno = `TFT2_QiyanaInferno`, QiyanaWoodland = `TFT2_QiyanaWoodland`, QiyanaWind = `TFT2_QiyanaWind`, RekSai = `TFT2_RekSai`, Renekton = `TFT2_Renekton`, Senna = `TFT2_Senna`, Singed = `TFT2_Singed`, Sion = `TFT2_Sion`, Sivir = `TFT2_Sivir`, Skarner = `TFT2_Skarner`, Soraka = `TFT2_Soraka`, Syndra = `TFT2_Syndra`, Taliyah = `TFT2_Taliyah`, Taric = `TFT2_Taric`, Thresh = `TFT2_Thresh`, Twitch = `TFT2_Twitch`, Varus = `TFT2_Varus`, Vayne = `TFT2_Vayne`, Veigar = `TFT2_Veigar`, Vladimir = `TFT2_Vladimir`, Volibear = `TFT2_Volibear`, Warwick = `TFT2_Warwick`, Yasuo = `TFT2_Yasuo`, Yorick = `TFT2_Yorick`, Zed = `TFT2_Zed`, Zyra = `TFT2_Zyra` }
 
@@ -5766,3 +5766,681 @@ export const champions: ChampionData[] = [
 ]
 
 export const otherUnits: ChampionData[] = []
+
+export const abilities: Record<string, AbilityData> = {
+	'TFT2_Aatrox': {
+		desc: `Aatrox cleaves the area in front of him, dealing @ModifiedDamage@ magic damage to all enemies therein.`,
+		icon: `ASSETS/Characters/TFT2_Aatrox/HUD/Icons2D/TFT2_Aatrox_Q3.TFT_Set2.dds`,
+		name: `The Arclight Blade`,
+		variables: {
+			'Damage': [0, 300, 600, 1200],
+		},
+	},
+	'TFT2_Ashe': {
+		desc: `Ashe gains @AttackSpeed*100@% Attack Speed for @Duration@ seconds, and her Basic Attacks fire a flurry of arrows for @ModifiedADDamage@ physical damage.`,
+		icon: `ASSETS/Characters/Ashe/HUD/Icons2D/Ashe_Q.dds`,
+		name: `Ranger's Focus`,
+		variables: {
+			'Duration': [5, 5, 5, 5],
+			'AttackSpeed': [0.25, 0.5, 0.75, 1],
+			'PercentADPerArrow': [0.25, 0.30000001192092896, 0.3499999940395355, 0.75],
+			'NumArrows': [5, 5, 5, 5],
+		},
+	},
+	'TFT2_Annie': {
+		desc: `Annie summons Tibbers near her target, dealing @ModifiedDamage@ magic damage to all adjacent enemies. Tibbers fights for the rest of the round or until killed, dealing @ModifiedTibbers@ magic damage with each Basic Attack.<br><br>Annie can't gain mana while Tibbers is active.`,
+		icon: `ASSETS/Characters/Annie/HUD/Icons2D/Annie_R1.dds`,
+		name: `Tibbers!`,
+		variables: {
+			'StunDamage': [0, 100, 200, 300],
+			'HexRange': [1, 1, 1, 1],
+			'TibbersDamage': [-50, 125, 350, 1500],
+			'TibbersHP': [1600, 1600, 2200, 3000],
+		},
+	},
+	'TFT2_Amumu': {
+		desc: `Amumu explodes in an infernal tantrum, dealing @RModifiedDamage@ magic damage to all enemies within @RRange@ Hexes and stunning them for @RDuration@ seconds.`,
+		icon: `ASSETS/Characters/Amumu/HUD/Icons2D/Amumu_R.dds`,
+		name: `Curse of the Sad Mummy`,
+		variables: {
+			'RDamage': [0, 100, 200, 1337],
+			'RDuration': [1, 1.5, 2, 10],
+			'RRange': [3, 3, 3, 3],
+		},
+	},
+	'TFT2_Brand': {
+		desc: `Brand launches a bouncing fireball at an enemy. This fireball will bounce to nearby enemies up to @MaxBounces@ times, dealing @ModifiedDamage@ magic damage each time it hits.`,
+		icon: `ASSETS/Characters/Brand/HUD/Icons2D/BrandR.dds`,
+		name: `Pyroclasm`,
+		variables: {
+			'Damage': [175, 225, 300, 600],
+			'MaxBounces': [4, 5, 7, 20],
+		},
+	},
+	'TFT2_Azir': {
+		desc: `Azir summons a Sand Soldier near a random enemy. Sand Soldiers attack nearby enemies whenever Azir attacks, dealing @ModifiedDamage@ magic damage in a line, and last @SoldierDuration@ seconds.`,
+		icon: `ASSETS/Characters/Azir/HUD/Icons2D/Azir_W.dds`,
+		name: `Arise!`,
+		variables: {
+			'SoldierDuration': [6, 6, 6, 6],
+			'SoldierDamage': [25, 150, 275, 450],
+		},
+	},
+	'TFT2_Diana': {
+		desc: `Diana creates @Orbs@ flame orbs which rotate around her and explode for @ModifiedDamage@ magic damage when they collide with an enemy. She also shields herself for @ShieldDuration@ seconds, absorbing the next @ModifiedShield@ damage she would take.`,
+		icon: `ASSETS/Characters/Diana/HUD/Icons2D/Diana_W_LunarShower.dds`,
+		name: `Flame Cascade`,
+		variables: {
+			'Orbs': [2, 3, 4, 6],
+			'OrbDamage': [60, 80, 100, 120],
+			'ShieldValue': [50, 150, 250, 350],
+			'ShieldDuration': [4, 4, 4, 4],
+		},
+	},
+	'TFT2_Braum': {
+		desc: `Braum puts up his shield for @ShieldDuration@ seconds, absorbing and stopping all incoming missiles and reducing his damage taken from that direction by @ShieldDR@%.`,
+		icon: `ASSETS/Characters/Braum/HUD/Icons2D/Braum_E.dds`,
+		name: `Unbreakable`,
+		variables: {
+			'ShieldDR': [75, 80, 85, 90],
+			'ShieldDuration': [4, 4, 4, 4],
+		},
+	},
+	'TFT2_DrMundo': {
+		desc: `Dr. Mundo creates a toxic cloud around him for @Duration@ seconds. The cloud deals @ModifiedDamage@ + @HealthPercent@% of Dr. Mundo's maximum health as magic damage to nearby enemies each second, and heals him for @HealRatio*100@% of that value.`,
+		icon: `ASSETS/Characters/DrMundo/HUD/Icons2D/DrMundo_R.dds`,
+		name: `Adrenaline Rush`,
+		variables: {
+			'HealthPercent': [1.25, 1.25, 1.25, 1.25],
+			'Duration': [8, 8, 8, 8],
+			'BaseDamage': [0, 50, 100, 200],
+			'HealRatio': [0.75, 1, 1.25, 1.5],
+		},
+	},
+	'TFT2_Ivern': {
+		desc: `Ivern shields the lowest-health ally for @Duration@ seconds, absorbing the next @ModifiedShield@ damage.`,
+		icon: `ASSETS/Characters/Ivern/HUD/Icons2D/IvernE.dds`,
+		name: `Triggerseed`,
+		variables: {
+			'ShieldAmount': [100, 200, 300, 400],
+			'Duration': [5, 5, 5, 5],
+		},
+	},
+	'TFT2_Janna': {
+		desc: `Janna summons a Monsoon around her, healing allies for @ModifiedHeal@% of their max health over @Duration@ seconds. Nearby enemies are knocked back and stunned for @StunDuration@ second.`,
+		icon: `ASSETS/Characters/Janna/HUD/Icons2D/Janna_ReapTheWhirlwind.dds`,
+		name: `Monsoon`,
+		variables: {
+			'HealAmountPercent': [10, 25, 35, 200],
+			'Duration': [3, 3, 3, 3],
+			'Radius': [3, 3, 3, 3],
+			'StunDuration': [1.5, 1.5, 1.5, 1.5],
+			'TicksPerSecond': [0.5, 0.5, 0.5, 0.5],
+		},
+	},
+	'TFT2_Jax': {
+		desc: `Jax dodges all incoming attacks for @Duration@ seconds, then strikes all nearby enemies, dealing @ModifiedDamage@ magic damage and stunning them for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/Jax/HUD/Icons2D/Armsmaster_CoupDeGrace.dds`,
+		name: `Counter Strike`,
+		variables: {
+			'Duration': [2, 2, 2, 2],
+			'StunDuration': [1.5, 1.5, 1.5, 1.5],
+			'Damage': [50, 150, 300, 550],
+			'AttackRadius': [1, 1, 1, 1],
+		},
+	},
+	'TFT2_Khazix': {
+		desc: `Kha'Zix stealths and attacks the lowest health enemy, critically striking for @ModifiedDamage@ physical damage and gaining @ManaRefund@ mana.`,
+		icon: `ASSETS/Characters/KhaZix/HUD/Icons2D/Khazix_R_red.dds`,
+		name: `Arid Assault`,
+		variables: {
+			'Duration': [2.75, 2, 1.25, 0.5],
+			'MSBuff': [500, 1000, 1500, 2000],
+			'Damage': [0, 100, 200, 500],
+			'ManaRefund': [0, 5, 10, 15],
+		},
+	},
+	'TFT2_Ezreal': {
+		desc: `Ezreal fires a shard of ice at the lowest-health enemy, dealing @ModifiedDamage@ magic damage and applying on-hit effects.`,
+		icon: `ASSETS/Characters/Ezreal/HUD/Icons2D/Ezreal_Q.dds`,
+		name: `Ice Shot`,
+		variables: {
+			'BaseDamage': [0, 250, 450, 900],
+		},
+	},
+	'TFT2_LeBlanc': {
+		desc: `LeBlanc launches an ethereal chain at a random enemy, dealing @ModifiedDamage@ magic damage and, after a short delay, stunning them for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/Leblanc/HUD/Icons2D/LeBlancE.dds`,
+		name: `Ethereal Chain`,
+		variables: {
+			'NumTargets': [1, 1, 1, 1],
+			'DelayTime': [0.5, 0.5, 0.5, 0.5],
+			'Damage': [-50, 225, 475, 800],
+			'StunDuration': [0, 1.5, 1.5, 1.5],
+		},
+	},
+	'TFT2_Leona': {
+		desc: `Leona reduces all damage by @FlatDamageReduction@ for @Duration@ seconds.`,
+		icon: `ASSETS/Characters/Leona/HUD/Icons2D/LeonaSolarBarrier.dds`,
+		name: `Lunar Barrier`,
+		variables: {
+			'FlatDamageReduction': [0, 40, 80, 120],
+			'Duration': [4, 4, 4, 4],
+		},
+	},
+	'TFT2_Kindred': {
+		desc: `Wolf mauls Kindred's target, dealing @ModifiedDamage@ magic damage and reducing their healing by 80% for @GrievousWoundsDuration@ seconds. Meanwhile, Lamb leaps away from Kindred's target.`,
+		icon: `ASSETS/Characters/Kindred/HUD/Icons2D/Kindred_E.dds`,
+		name: `Dance of Dread`,
+		variables: {
+			'Damage': [-25, 150, 325, 650],
+			'HexRange': [2, 2, 2, 2],
+			'GrievousWoundsDuration': [5, 5, 5, 5],
+		},
+	},
+	'TFT2_Karma': {
+		desc: `At start of combat, Karma tethers to her closest ally.<br><br>Karma shields the tethered ally (or a random one if the tether is dead) for @Duration@ seconds, absorbing the next @ModifiedShield@ damage. While the shield holds, the ally receives @ModifiedAS@% bonus Attack Speed.`,
+		icon: `ASSETS/Characters/Karma/HUD/Icons2D/Karma_E2.dds`,
+		name: `Inspire`,
+		variables: {
+			'Duration': [5, 5, 5, 5],
+			'ShieldAmount': [100, 250, 400, 800],
+			'StatsValue': [20, 35, 50, 100],
+		},
+	},
+	'TFT2_KogMaw': {
+		desc: `Kog'Maw launches an acidic blob at a random enemy, dealing @ModifiedDamage@ magic damage.`,
+		icon: `ASSETS/Characters/KogMaw/HUD/Icons2D/KogMaw_LivingArtillery.dds`,
+		name: `Living Artillery`,
+		variables: {
+			'Damage': [0, 150, 300, 500],
+			'DelayTime': [0.3499999940395355, 0.3499999940395355, 0.3499999940395355, 0.3499999940395355],
+		},
+	},
+	'TFT2_LuxElectric': {
+		desc: `Lux fires an elemental blast dealing @ModifiedDamage@ magic damage to all enemies in a line.<br><br>If Final Spark kills a unit, Lux is refunded @ManaRefund@ mana.`,
+		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds`,
+		name: `Final Spark`,
+		variables: {
+			'Damage': [200, 550, 900, 99999],
+			'ManaRefund': [50, 50, 50, 50],
+		},
+	},
+	'TFT2_LuxGlacial': {
+		desc: `Lux fires an elemental blast dealing @ModifiedDamage@ magic damage to all enemies in a line.<br><br>If Final Spark kills a unit, Lux is refunded @ManaRefund@ mana.`,
+		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds`,
+		name: `Final Spark`,
+		variables: {
+			'Damage': [200, 550, 900, 99999],
+			'ManaRefund': [50, 50, 50, 50],
+		},
+	},
+	'TFT2_LuxCrystal': {
+		desc: `Lux fires an elemental blast dealing @ModifiedDamage@ magic damage to all enemies in a line.<br><br>If Final Spark kills a unit, Lux is refunded @ManaRefund@ mana.`,
+		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds`,
+		name: `Final Spark`,
+		variables: {
+			'Damage': [200, 550, 900, 99999],
+			'ManaRefund': [50, 50, 50, 50],
+		},
+	},
+	'TFT2_LuxLight': {
+		desc: `Lux fires an elemental blast dealing @ModifiedDamage@ magic damage to all enemies in a line.<br><br>If Final Spark kills a unit, Lux is refunded @ManaRefund@ mana.`,
+		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds`,
+		name: `Final Spark`,
+		variables: {
+			'Damage': [200, 550, 900, 99999],
+			'ManaRefund': [50, 50, 50, 50],
+		},
+	},
+	'TFT2_LuxOcean': {
+		desc: `Lux fires an elemental blast dealing @ModifiedDamage@ magic damage to all enemies in a line.<br><br>If Final Spark kills a unit, Lux is refunded @ManaRefund@ mana.`,
+		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds`,
+		name: `Final Spark`,
+		variables: {
+			'Damage': [200, 550, 900, 99999],
+			'ManaRefund': [50, 50, 50, 50],
+		},
+	},
+	'TFT2_LuxMetal': {
+		desc: `Lux fires an elemental blast dealing @ModifiedDamage@ magic damage to all enemies in a line.<br><br>If Final Spark kills a unit, Lux is refunded @ManaRefund@ mana.`,
+		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds`,
+		name: `Final Spark`,
+		variables: {
+			'Damage': [200, 550, 900, 99999],
+			'ManaRefund': [50, 50, 50, 50],
+		},
+	},
+	'TFT2_LuxShadow': {
+		desc: `Lux fires an elemental blast dealing @ModifiedDamage@ magic damage to all enemies in a line.<br><br>If Final Spark kills a unit, Lux is refunded @ManaRefund@ mana.`,
+		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds`,
+		name: `Final Spark`,
+		variables: {
+			'Damage': [200, 550, 900, 99999],
+			'ManaRefund': [50, 50, 50, 50],
+		},
+	},
+	'TFT2_LuxInferno': {
+		desc: `Lux fires an elemental blast dealing @ModifiedDamage@ magic damage to all enemies in a line.<br><br>If Final Spark kills a unit, Lux is refunded @ManaRefund@ mana.`,
+		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds`,
+		name: `Final Spark`,
+		variables: {
+			'Damage': [200, 550, 900, 99999],
+			'ManaRefund': [50, 50, 50, 50],
+		},
+	},
+	'TFT2_LuxWoodland': {
+		desc: `Lux fires an elemental blast dealing @ModifiedDamage@ magic damage to all enemies in a line.<br><br>If Final Spark kills a unit, Lux is refunded @ManaRefund@ mana.`,
+		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds`,
+		name: `Final Spark`,
+		variables: {
+			'Damage': [200, 550, 900, 99999],
+			'ManaRefund': [50, 50, 50, 50],
+		},
+	},
+	'TFT2_LuxWind': {
+		desc: `Lux fires an elemental blast dealing @ModifiedDamage@ magic damage to all enemies in a line.<br><br>If Final Spark kills a unit, Lux is refunded @ManaRefund@ mana.`,
+		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds`,
+		name: `Final Spark`,
+		variables: {
+			'Damage': [200, 550, 900, 99999],
+			'ManaRefund': [50, 50, 50, 50],
+		},
+	},
+	'TFT2_Malzahar': {
+		desc: `Malzahar summons @NumVoidlings@ Shadow Spawn, who hit for @ModifiedDamage@ magic damage each attack.<br><br>Shadow Spawn benefit from active Shadow trait bonuses.`,
+		icon: `ASSETS/Characters/Malzahar/HUD/Icons2D/Malzahar_W.dds`,
+		name: `Shadow Swarm`,
+		variables: {
+			'NumVoidlings': [1, 2, 3, 4],
+			'VoidlingDamage': [10, 40, 70, 100],
+			'VoidlingHP': [250, 250, 300, 400],
+		},
+	},
+	'TFT2_Maokai': {
+		desc: `Passive: After being damaged by an enemy spell, Maokai's next attack heals him for @ModifiedHeal@.`,
+		icon: `ASSETS/Characters/Maokai/HUD/Icons2D/Maokai_Passive.dds`,
+		name: `Sap Magic`,
+		variables: {
+			'HealAmount': [50, 100, 150, 200],
+			'BuffDuration': [6, 6, 6, 6],
+		},
+	},
+	'TFT2_Nami': {
+		desc: `Nami summons a massive tidal wave which deals @ModifiedDamage@ magic damage to all enemies hit, knocking up and stunning them for @StunDuration@ seconds. Allies hit are empowered, and their Basic Attacks deal an additional @ModifiedBoost@ magic damage for the next @AllyBuffDuration@ seconds.`,
+		icon: `ASSETS/Characters/Nami/HUD/Icons2D/NamiR.dds`,
+		name: `Tidal Wave`,
+		variables: {
+			'Damage': [0, 100, 200, 300],
+			'StunDuration': [1, 1.5, 2, 2.5],
+			'AllyDamageBonus': [0, 25, 50, 300],
+			'AllyBuffDuration': [8, 8, 8, 8],
+		},
+	},
+	'TFT2_MasterYi': {
+		desc: `Master Yi meditates, becoming untargetable for @MeditateDuration@ seconds and healing @ModifiedHeal@ of his max health over the duration.<br><br>After Master Yi finishes meditating, he gains @AttackSpeed*100@% Attack Speed and deals @ModifiedDamage@ bonus magic damage on hit for @BuffDuration@ seconds.`,
+		icon: `ASSETS/Characters/MasterYi/HUD/Icons2D/MasterYi_W.dds`,
+		name: `Meditate`,
+		variables: {
+			'MeditateDuration': [1, 1, 1, 1],
+			'BuffDuration': [6, 6, 6, 6],
+			'HealAmount': [0.30000001192092896, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
+			'Damage': [40, 40, 80, 500],
+			'AttackSpeed': [1, 1, 1, 1],
+		},
+	},
+	'TFT2_Nasus': {
+		desc: `Nasus surrounds himself in light for @Duration@ seconds, gaining @ModifiedBonusHealth@ maximum health and dealing @ModifiedDamage@ magic damage to adjacent enemies every second.`,
+		icon: `ASSETS/Characters/Nasus/HUD/Icons2D/Nasus_R.dds`,
+		name: `Fury of the Dawn`,
+		variables: {
+			'BonusHealth': [100, 250, 400, 550],
+			'Damage': [30, 50, 70, 90],
+			'Duration': [7, 7, 7, 7],
+		},
+	},
+	'TFT2_Malphite': {
+		desc: `Malphite charges to a random enemy, dealing @ModifiedDamage@ magic damage to nearby enemies, knocking them into the air,  and stunning them for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/Malphite/HUD/Icons2D/Malphite_UnstoppableForce.dds`,
+		name: `Unstoppable Force`,
+		variables: {
+			'Damage': [0, 150, 300, 1000],
+			'Radius': [2, 2, 2, 2],
+			'StunDuration': [1.5, 2, 2.5, 5],
+			'KnockupDuration': [1, 1, 1, 1],
+		},
+	},
+	'TFT2_Qiyana': {
+		desc: `Qiyana blasts a short line in front of her, stunning enemies for @CCDuration@ seconds and dealing @ModifiedDamage@ magic damage.`,
+		icon: `ASSETS/Characters/Qiyana/HUD/Icons2D/Qiyana_Q1.dds`,
+		name: `Elemental Blade`,
+		variables: {
+			'BaseDamage': [100, 300, 500, 900],
+			'CCDuration': [1.5, 2.5, 3.5, 4.5],
+		},
+	},
+	'TFT2_Nautilus': {
+		desc: `Nautilus sends out a depth charge that seeks out his farthest enemy, knocking them up and stunning them for @StunDuration@ seconds. It also deals @ModifiedDamage@ magic damage to all enemies it passes through.`,
+		icon: `ASSETS/Characters/Nautilus/HUD/Icons2D/Nautilus_GrandLine.dds`,
+		name: `Depth Charge`,
+		variables: {
+			'StunDuration': [1, 3, 4, 6],
+			'Damage': [0, 100, 200, 400],
+		},
+	},
+	'TFT2_Neeko': {
+		desc: `Neeko throws a seed at a random target that explodes for @ModifiedDamage@ magic damage three times. Each explosion affects a bigger area than the last.`,
+		icon: `ASSETS/Characters/Neeko/HUD/Icons2D/Neeko_Q.dds`,
+		name: `Blooming Burst`,
+		variables: {
+			'Damage': [0, 100, 200, 350],
+			'Radius1': [],
+			'Radius2': [1, 1, 1, 1],
+			'Radius3': [2, 2, 2, 2],
+		},
+	},
+	'TFT2_Nocturne': {
+		desc: `Passive - Every three hits Nocturne's attack deals damage and applys on-hit effects to all adjacent units. It also heals @ModifiedHeal@ of the damage dealt.`,
+		icon: `ASSETS/Characters/Nocturne/HUD/Icons2D/Nocturne_UmbraBlades_Grey.dds`,
+		name: `Steel Blades`,
+		variables: {
+			'HealPercent': [0.4000000059604645, 0.5, 0.6000000238418579, 0.699999988079071],
+		},
+	},
+	'TFT2_Ornn': {
+		desc: `Ornn breathes lightning in a cone, dealing @ModifiedDamage@ magic damage to enemies therein, and increasing their chance to be critically struck by @CritAmpPercent@% for the next @Duration@ seconds.`,
+		icon: `ASSETS/Characters/Ornn/HUD/Icons2D/OrnnW.dds`,
+		name: `Lightning Breath`,
+		variables: {
+			'Damage': [0, 125, 250, 450],
+			'CritAmpPercent': [25, 25, 25, 25],
+			'Duration': [10, 10, 10, 10],
+		},
+	},
+	'TFT2_Olaf': {
+		desc: `Olaf gains @AttackSpeed*100@% Attack Speed, up to @LifeSteal*100@% Lifesteal based on missing health, and immunity to crowd control for the rest of the round.`,
+		icon: `ASSETS/Characters/Olaf/HUD/Icons2D/Olaf_R.dds`,
+		name: `Ragnarok`,
+		variables: {
+			'AttackSpeed': [0.5, 1.25, 1.5, 4.5],
+			'LifeSteal': [0.5, 0.5, 0.5, 0.5],
+			'HealthThreshold': [0.5, 0.5, 0.5, 0.5],
+			'Duration': [5, 5, 5, 5],
+		},
+	},
+	'TFT2_QiyanaOcean': {
+		desc: `Qiyana blasts a short line in front of her, stunning enemies for @CCDuration@ seconds and dealing @ModifiedDamage@ magic damage.`,
+		icon: `ASSETS/Characters/Qiyana/HUD/Icons2D/Qiyana_Q2_Blue.dds`,
+		name: `Elemental Blade`,
+		variables: {
+			'BaseDamage': [100, 300, 500, 900],
+			'CCDuration': [1.5, 2.5, 3.5, 4.5],
+		},
+	},
+	'TFT2_QiyanaInferno': {
+		desc: `Qiyana blasts a short line in front of her, stunning enemies for @CCDuration@ seconds and dealing @ModifiedDamage@ magic damage.`,
+		icon: `ASSETS/Characters/Qiyana/HUD/Icons2D/Qiyana_Q2_Red.dds`,
+		name: `Elemental Blade`,
+		variables: {
+			'BaseDamage': [100, 300, 500, 900],
+			'CCDuration': [1.5, 2.5, 3.5, 4.5],
+		},
+	},
+	'TFT2_Lucian': {
+		desc: `Lucian fires @NumShots@ shots in a direction over @Duration@ seconds, each hitting for @TADRatio*100@% of his AD, applying on-hits, and dealing @ModifiedDamage@ magic damage.<br><br>Lucian fires extra shots based on his Attack Speed. (Bonus Shots: @ShotsFromAS@)<br><br>Lucian will dash during The Culling to keep hitting enemies.`,
+		icon: `ASSETS/Characters/Lucian/HUD/Icons2D/Lucian_R.dds`,
+		name: `The Culling`,
+		variables: {
+			'Duration': [4, 4, 4, 4],
+			'BaseDamage': [30, 40, 50, 100],
+			'TADRatio': [0.5, 0.5, 0.5, 0.5],
+			'AttacksPerSecondCoefficient': [1, 1, 1, 1],
+			'NumShots': [12, 12, 12, 12],
+		},
+	},
+	'TFT2_Renekton': {
+		desc: `Renekton swings his blade, dealing @ModifiedDamage@ magic damage to nearby enemies and healing himself for @ModifiedHeal@ per enemy hit.`,
+		icon: `ASSETS/Characters/Renekton/HUD/Icons2D/Renekton_Q.dds`,
+		name: `Cull the Meek`,
+		variables: {
+			'BaseDamage': [25, 150, 275, 475],
+			'HealAmount': [75, 150, 225, 300],
+			'HexRadius': [1, 1, 1, 1],
+		},
+	},
+	'TFT2_Senna': {
+		desc: `Senna fires a beam through her furthest ally, dealing @ModifiedDamage@ magic damage to enemies, and buffing allies' on-hits for @AllyBuffDuration@ seconds to deal @ModifiedAllyDamage@ magic damage from Senna.`,
+		icon: `ASSETS/Characters/Senna/HUD/Icons2D/Senna_Q.Senna.dds`,
+		name: `Piercing Darkness`,
+		variables: {
+			'Damage': [0, 50, 100, 150],
+			'AllyBuffDuration': [5, 5, 5, 5],
+			'AllyDamageBonus': [0, 20, 45, 70],
+		},
+	},
+	'TFT2_QiyanaWoodland': {
+		desc: `Qiyana blasts a short line in front of her, stunning enemies for @CCDuration@ seconds and dealing @ModifiedDamage@ magic damage.`,
+		icon: `ASSETS/Characters/Qiyana/HUD/Icons2D/Qiyana_Q2_Green.dds`,
+		name: `Elemental Blade`,
+		variables: {
+			'BaseDamage': [100, 300, 500, 900],
+			'CCDuration': [1.5, 2.5, 3.5, 4.5],
+		},
+	},
+	'TFT2_QiyanaWind': {
+		desc: `Qiyana blasts a short line in front of her, stunning enemies for @CCDuration@ seconds and dealing @ModifiedDamage@ magic damage.`,
+		icon: `ASSETS/Characters/Qiyana/HUD/Icons2D/Qiyana_Q1.dds`,
+		name: `Elemental Blade`,
+		variables: {
+			'BaseDamage': [100, 300, 500, 900],
+			'CCDuration': [1.5, 2.5, 3.5, 4.5],
+		},
+	},
+	'TFT2_RekSai': {
+		desc: `Rek'Sai bites an enemy, dealing @ModifiedDamage@ true damage.`,
+		icon: `ASSETS/Characters/RekSai/HUD/Icons2D/RekSai_E1.dds`,
+		name: `Furious Bite`,
+		variables: {
+			'Damage': [-50, 250, 550, 1000],
+			'ArmorReduction': [100, 100, 100, 100],
+			'Duration': [5, 5, 5, 5],
+		},
+	},
+	'TFT2_Sion': {
+		desc: `Sion winds up for a moment, then smashes his axe down in a direction, knocking up and dealing @ModifiedDamage@ magic damage to all enemies hit.`,
+		icon: `ASSETS/Characters/Sion/HUD/Icons2D/Sion_Q.dds`,
+		name: `Decimating Smash`,
+		variables: {
+			'Damage': [0, 200, 350, 700],
+			'HexRange': [2, 2, 2, 2],
+			'ChargeUpTime': [0.75, 0.75, 0.75, 0.75],
+		},
+	},
+	'TFT2_Sivir': {
+		desc: `For the next @Duration@ seconds, Sivir's attacks bounce up to @NumBounces@ times, dealing @DamageCalc@ physical damage to enemies hit and applying on-hit effects.`,
+		icon: `ASSETS/Characters/Sivir/HUD/Icons2D/Sivir_W.dds`,
+		name: `Ricochet`,
+		variables: {
+			'PercentDamage': [0.75, 1, 1.25, 1.5],
+			'NumBounces': [3, 5, 7, 9],
+			'BounceRange': [2, 2, 2, 2],
+			'Duration': [5, 5, 5, 5],
+		},
+	},
+	'TFT2_Singed': {
+		desc: `Passive: Singed leaves a toxic cloud wherever he moves, poisoning enemies who stand in it for @ModifiedDamage@ magic damage over @PoisonDuration@ seconds.`,
+		icon: `ASSETS/Characters/Singed/HUD/Icons2D/Singed_Q.dds`,
+		name: `Poison Trail`,
+		variables: {
+			'PoisonDuration': [6, 6, 6, 6],
+			'CloudDuration': [3.25, 3.25, 3.25, 3.25],
+			'TotalDamage': [0, 225, 300, 2000],
+			'TickRate': [0.5, 0.5, 0.5, 0.5],
+			'MSModifier': [0.75, 0.75, 0.75, 0.75],
+		},
+	},
+	'TFT2_Skarner': {
+		desc: `Skarner gains a shield against @ModifiedShield@ damage for @Duration@ seconds. While the shield persists, Skarner gains @AttackSpeed*100@% attack speed.`,
+		icon: `ASSETS/Characters/Skarner/HUD/Icons2D/Skarner_W.dds`,
+		name: `Crystalline Exoskeleton`,
+		variables: {
+			'ShieldAmount': [-150, 150, 450, 750],
+			'Duration': [8, 8, 8, 8],
+			'AttackSpeed': [0.25, 0.5, 0.75, 1],
+		},
+	},
+	'TFT2_Syndra': {
+		desc: `Syndra conjures a sphere of water which explodes near a random enemy, dealing @ModifiedDamage@ magic damage to all enemies hit.`,
+		icon: `ASSETS/Characters/Syndra/HUD/Icons2D/SyndraQ.dds`,
+		name: `Hydro Sphere`,
+		variables: {
+			'Damage': [0, 225, 375, 650],
+			'HexRadius': [2, 2, 2, 2],
+		},
+	},
+	'TFT2_Taliyah': {
+		desc: `Taliyah causes the ground to erupt under a random enemy, dealing @ModifiedDamage@ magic damage to them, and stunning them for @StunDuration@ seconds. This also knocks ranged enemies closer, or pushes melee enemies away.`,
+		icon: `ASSETS/Characters/Taliyah/HUD/Icons2D/Taliyah_W.dds`,
+		name: `Seismic Shove`,
+		variables: {
+			'Damage': [-50, 150, 350, 550],
+			'ThrowDistance': [2, 2, 2, 2],
+			'StunDuration': [0, 2, 2, 2],
+		},
+	},
+	'TFT2_Taric': {
+		desc: `After a @InitialDelay@ second delay, Taric pulses cosmic energy onto allied champions within @HexRange@ hexes, making them invulnerable for @InvulnDuration@ seconds.`,
+		icon: `ASSETS/Characters/Taric/HUD/Icons2D/Taric_R.dds`,
+		name: `Cosmic Radiance`,
+		variables: {
+			'InitialDelay': [1.5, 1.5, 1.5, 1.5],
+			'InvulnDuration': [3, 2.5, 2.5, 8],
+			'HexRange': [1, 2, 3, 4],
+		},
+	},
+	'TFT2_Thresh': {
+		desc: `Thresh throws his lantern to the lowest-health ally, shielding them and nearby allies against @ModifiedShield@ damage for @Duration@ seconds.`,
+		icon: `ASSETS/Characters/Thresh/HUD/Icons2D/Thresh_W.dds`,
+		name: `Deep Sea Lantern`,
+		variables: {
+			'ShieldAmount': [100, 250, 400, 600],
+			'Radius': [1, 1, 1, 1],
+			'Duration': [5, 5, 5, 5],
+		},
+	},
+	'TFT2_Twitch': {
+		desc: `Twitch gains infinite range and has @BonusADDamage@ Attack Damage for @Duration@ seconds. During this time his attacks travel their full range and hit every enemy they pass through. This also applies on-hit effects.`,
+		icon: `ASSETS/Characters/Twitch/HUD/Icons2D/Twitch_R.dds`,
+		name: `Spray and Pray`,
+		variables: {
+			'Duration': [8, 8, 8, 8],
+			'ADAmp': [1, 1.2999999523162842, 1.600000023841858, 3],
+		},
+	},
+	'TFT2_Vayne': {
+		desc: `Passive: Whenever Vayne Basic Attacks the same target 3 times, she deals @ModifiedDamage@ of her target's maximum health as true damage.`,
+		icon: `ASSETS/Characters/Vayne/HUD/Icons2D/Vayne_SilveredBolts.dds`,
+		name: `Silver Bolts`,
+		variables: {
+			'PercentDamage': [0.07000000029802322, 0.10000000149011612, 0.12999999523162842, 0.1599999964237213],
+		},
+	},
+	'TFT2_Soraka': {
+		desc: `Soraka calms the area around a random enemy for @ZoneDuration@ seconds, dealing @ModifiedDamage@ magic damage to all enemies standing in it and preventing them from gaining mana.`,
+		icon: `ASSETS/Characters/Soraka/HUD/Icons2D/Soraka_E.dds`,
+		name: `Equinox`,
+		variables: {
+			'Damage': [0, 150, 300, 450],
+			'ZoneDuration': [1, 3, 5, 7],
+			'Radius': [1, 1, 1, 1],
+		},
+	},
+	'TFT2_Varus': {
+		desc: `Varus channels for 1.5 seconds, then fires a piercing arrow, dealing @ModifiedDamage@ magic damage to all enemies in its path.`,
+		icon: `ASSETS/Characters/Varus/HUD/Icons2D/VarusQ.dds`,
+		name: `Piercing Arrow`,
+		variables: {
+			'Damage': [0, 225, 450, 800],
+			'HexRange': [8, 8, 8, 8],
+		},
+	},
+	'TFT2_Veigar': {
+		desc: `Veigar blasts an enemy, dealing @ModifiedDamage@ magic damage. If Veigar is a higher star level than his target they are instantly killed instead.`,
+		icon: `ASSETS/Characters/Veigar/HUD/Icons2D/VeigarPrimordialBurst.dds`,
+		name: `Primordial Burst`,
+		variables: {
+			'Damage': [0, 325, 650, 975],
+		},
+	},
+	'TFT2_Yorick': {
+		desc: `Yorick blesses his @NumAlliesToTarget@ lowest-health allies (except Minions of Light). When they die they are resurrected as a Minion of Light with @GhoulHealth@ health and @ModifiedAD@ attack damage.<br><br>Minions of Light benefit from active Light trait bonuses.`,
+		icon: `ASSETS/Characters/Yorick/HUD/Icons2D/Yorick_R.dds`,
+		name: `Shepherd of Souls`,
+		variables: {
+			'GhoulHealth': [150, 500, 700, 2000],
+			'GhoulAD': [25, 100, 175, 250],
+			'NumAlliesToTarget': [1, 2, 3, 12],
+		},
+	},
+	'TFT2_Vladimir': {
+		desc: `Vladimir deals @ModifiedDamage@ magic damage to the target and heals for the same amount.`,
+		icon: `ASSETS/Characters/Vladimir/HUD/Icons2D/VladimirQ.dds`,
+		name: `Drain`,
+		variables: {
+			'Damage': [75, 200, 325, 500],
+			'HealthThreshold': [],
+			'HealingAmp': [],
+		},
+	},
+	'TFT2_Zed': {
+		desc: `Zed creates a clone of himself behind his current target. <br><br>This clone inherits its creator's items, stats, and current health, and can cast Living Lightning. Its mana cost is @ManaCostIncrease@ higher.`,
+		icon: `ASSETS/Characters/Zed/HUD/Icons2D/shadowninja_w.dds`,
+		name: `Living Lightning`,
+		variables: {
+			'Clones': [1, 1, 1, 1],
+			'ManaCostIncrease': [75, 50, 25, -125],
+		},
+	},
+	'TFT2_Warwick': {
+		desc: `Warwick pounces on the weakest enemy, stunning them for @Duration@ seconds and striking them @Hits@ times, dealing @ModifiedDamage@ magic damage. Each strike triggers on-hit effects and heals Warwick for 100% of the damage dealt.`,
+		icon: `ASSETS/Characters/Warwick/HUD/Icons2D/WarwickR.dds`,
+		name: `Infinite Duress`,
+		variables: {
+			'Duration': [1.5, 1.5, 1.5, 1.5],
+			'BaseDamage': [-100, 200, 500, 800],
+			'DashHexSpeed': [6, 6, 6, 6],
+			'Hits': [3, 3, 3, 3],
+		},
+	},
+	'TFT2_Zyra': {
+		desc: `Zyra summons @NumPlants@ Flame Spitters at random locations on the edge of the arena. They attack the nearest enemy for @PlantDuration@ seconds, dealing @ModifiedDamage@ magic damage per attack a total of @PlantAmmo@ times.`,
+		icon: `ASSETS/Characters/Zyra/HUD/Icons2D/ZyraQ.dds`,
+		name: `Rampant Growth`,
+		variables: {
+			'NumPlants': [1, 2, 3, 5],
+			'PlantAD': [45, 55, 65, 75],
+			'PlantAmmo': [4, 4, 4, 4],
+			'PlantDuration': [4, 4, 4, 4],
+		},
+	},
+	'TFT2_Yasuo': {
+		desc: `Yasuo blinks to the enemy with the most items and knocks them up, holding them airborne for @StunDuration@ seconds and hitting them @NumHits@ times, dealing Basic Attack damage and applying on-hit effects.`,
+		icon: `ASSETS/Characters/Yasuo/HUD/Icons2D/Yasuo_R.dds`,
+		name: `Last Breath`,
+		variables: {
+			'StunDuration': [1, 1, 1, 1],
+			'Damage': [100, 100, 100, 100],
+			'NumHits': [3, 4, 5, 6],
+		},
+	},
+	'TFT2_Volibear': {
+		desc: `Volibear bites his target, dealing @ModifiedDamage@ magic damage. If the target is below @ExecuteThreshold*100@% health, Frenzied Bite kills the target and fully restores Volibear's mana.`,
+		icon: `ASSETS/Characters/Volibear/HUD/Icons2D/VolibearW.dds`,
+		name: `Frenzied Bite`,
+		variables: {
+			'Damage': [-50, 200, 450, 850],
+			'ExecuteThreshold': [0.3499999940395355, 0.3499999940395355, 0.3499999940395355, 0.3499999940395355],
+			'ExecuteDamage': [19999, 19999, 19999, 19999],
+		},
+	},
+}

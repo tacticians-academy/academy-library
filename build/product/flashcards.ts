@@ -1,8 +1,8 @@
 import fs from 'fs/promises'
 import path from 'path'
 
-import { substituteVariables, getIconPath } from '../../dist/index.js'
-import type { AugmentFlashcard, ItemFlashcard, AugmentTier, EffectVariables, SetNumber, AugmentData, ChampionData } from '../../dist/index.js'
+import { substituteVariables, getIconPath, substituteSpellVariables, getNormalizedKeyValues } from '../../dist/index.js'
+import type { AugmentFlashcard, ItemFlashcard, AugmentTier, EffectVariables, SetNumber, AugmentData, ChampionFlashcard } from '../../dist/index.js'
 import { importAugments, importChampions, importItems } from '../../dist/imports.js'
 
 import { getPathToSet } from '../helpers/files.js'
@@ -23,16 +23,9 @@ export async function createFlashcardsFor(setNumber: SetNumber) {
 
 	const outputItems = await generateItemFlashcards(setNumber)
 	await fs.writeFile(path.resolve(flashcardsPath, 'items.ts'), `import type { ItemFlashcard } from '../../index'\n\nexport const itemFlashcards: ItemFlashcard[] = ` + formatJS(outputItems))
-}
 
-// Helpers
-
-function getNormalizedEffects(variables: EffectVariables) {
-	const normalizedEffects: EffectVariables = {}
-	for (const key in variables) {
-		normalizedEffects[key.toUpperCase()] = variables[key]
-	}
-	return normalizedEffects
+	const outputChampions = await generateChampionFlashcards(setNumber)
+	await fs.writeFile(path.resolve(flashcardsPath, 'champions.ts'), `import type { ChampionFlashcard } from '../../index'\n\nexport const championFlashcards: ChampionFlashcard[] = ` + formatJS(outputChampions))
 }
 
 // Generate
@@ -64,7 +57,7 @@ async function generateAugmentFlashcards(activeAugments: AugmentData[]) {
 		if (!entry.descriptions.includes(augment.desc)) {
 			entry.descriptions[tierIndex] = augment.desc
 		}
-		entry.effectsArray[tierIndex] = getNormalizedEffects(augment.effects)
+		entry.effectsArray[tierIndex] = getNormalizedKeyValues(augment.effects)
 		entry.icons[tierIndex] = getIconPath(augment, true)
 	})
 
@@ -96,6 +89,29 @@ async function generateAugmentFlashcards(activeAugments: AugmentData[]) {
 		})
 }
 
+async function generateChampionFlashcards(setNumber: SetNumber) {
+	const { abilities, champions } = await importChampions(setNumber)
+	const results: ChampionFlashcard[] = []
+	champions.forEach(champion => {
+		const ability = abilities[champion.apiName]
+		if (ability == null) return
+		const spell = champion.spells[0]
+		results.push({
+			id: champion.apiName,
+			name: champion.name,
+			stats: champion.stats,
+			icon: getIconPath(champion).replace(REGEX_ASSET_PREFIX, '').replace('.png', ''),
+			ability: {
+				name: ability.name,
+				variables: ability.variables,
+				description: spell != null ? substituteSpellVariables(ability.desc, champion, spell, getNormalizedKeyValues(ability.variables)) : ability.desc,
+				icon: getIconPath(ability).replace(REGEX_ASSET_PREFIX, '').replace('.png', ''),
+			},
+		})
+	})
+	return results
+}
+
 async function generateItemFlashcards(setNumber: SetNumber) {
 	const { currentItems, emblemItems, componentItems } = await importItems(setNumber)
 
@@ -105,7 +121,7 @@ async function generateItemFlashcards(setNumber: SetNumber) {
 			: emblemItems.some(component => item === component) === true
 				? 'emblem'
 				: 'completed'
-		const description = substituteVariables(item.desc ?? '', [getNormalizedEffects(item.effects)])
+		const description = substituteVariables(item.desc ?? '', [getNormalizedKeyValues(item.effects)])
 			.replaceAll(/%i.+?%/g, '')
 			.replaceAll(/<.+?>/g, ' ')
 			.trim()

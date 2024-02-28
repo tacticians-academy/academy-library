@@ -1,4 +1,4 @@
-import type { ChampionData } from '../index'
+import type { AbilityData, ChampionData } from '../index'
 
 export enum ChampionKey { Aatrox = `TFT4_Aatrox`, Ahri = `TFT4_Ahri`, Akali = `TFT4_Akali`, Annie = `TFT4_Annie`, Aphelios = `TFT4_Aphelios`, Ashe = `TFT4_Ashe`, Azir = `TFT4_Azir`, Cassiopeia = `TFT4_Cassiopeia`, Diana = `TFT4_Diana`, Elise = `TFT4_Elise`, Evelynn = `TFT4_Evelynn`, Ezreal = `TFT4_Ezreal`, Fiora = `TFT4_Fiora`, Galio = `TFT4_Galio`, Garen = `TFT4_Garen`, Hecarim = `TFT4_Hecarim`, Irelia = `TFT4_Irelia`, Janna = `TFT4_Janna`, JarvanIV = `TFT4_JarvanIV`, Jax = `TFT4_Jax`, Jhin = `TFT4_Jhin`, Jinx = `TFT4_Jinx`, Kalista = `TFT4_Kalista`, Katarina = `TFT4_Katarina`, Kayn = `TFT4_Kayn`, Kennen = `TFT4_Kennen`, Kindred = `TFT4_Kindred`, LeeSin = `TFT4_LeeSin`, Lillia = `TFT4_Lillia`, Lissandra = `TFT4_Lissandra`, Lulu = `TFT4_Lulu`, Lux = `TFT4_Lux`, Maokai = `TFT4_Maokai`, Morgana = `TFT4_Morgana`, Nami = `TFT4_Nami`, NPCNexus = `TFT4_NPC_Nexus`, Nidalee = `TFT4_Nidalee`, Nunu = `TFT4_Nunu`, Pyke = `TFT4_Pyke`, Riven = `TFT4_Riven`, AzirSoldier = `TFT4_AzirSoldier`, Sejuani = `TFT4_Sejuani`, Sett = `TFT4_Sett`, Shen = `TFT4_Shen`, Sylas = `TFT4_Sylas`, TahmKench = `TFT4_TahmKench`, Talon = `TFT4_Talon`, Teemo = `TFT4_Teemo`, Thresh = `TFT4_Thresh`, TwistedFate = `TFT4_TwistedFate`, Vayne = `TFT4_Vayne`, Veigar = `TFT4_Veigar`, Vi = `TFT4_Vi`, Warwick = `TFT4_Warwick`, Wukong = `TFT4_Wukong`, XinZhao = `TFT4_XinZhao`, Yasuo = `TFT4_Yasuo`, Yone = `TFT4_Yone`, Yuumi = `TFT4_Yuumi`, Zed = `TFT4_Zed`, Zilean = `TFT4_Zilean` }
 
@@ -5456,3 +5456,613 @@ export const champions: ChampionData[] = [
 ]
 
 export const otherUnits: ChampionData[] = []
+
+export const abilities: Record<string, AbilityData> = {
+	'TFT4_Akali': {
+		desc: `Akali throws kunai at her target, dealing @ModifiedDamage@ magic damage.`,
+		icon: `ASSETS/Characters/Akali/HUD/Icons2D/Akali_Q.dds`,
+		name: `Five Point Strike`,
+		variables: {
+			'Damage': [20, 175, 250, 400],
+			'ConeDeg': [30, 30, 30, 30],
+			'HexRange': [1, 1, 1, 1],
+		},
+	},
+	'TFT4_Annie': {
+		desc: `Annie blasts a cone of fire, dealing @ModifiedDamage@ magic damage to enemies in front of her, then creates a Shield with @ModifiedShield@ health on herself for @ShieldDuration@ seconds.`,
+		icon: `ASSETS/Characters/Annie/HUD/Icons2D/Annie_E.dds`,
+		name: `Burst Shield`,
+		variables: {
+			'Damage': [100, 250, 350, 450],
+			'ShieldAmount': [200, 500, 700, 900],
+			'ShieldDuration': [8, 8, 8, 8],
+		},
+	},
+	'TFT4_Aatrox': {
+		desc: `Aatrox pulls @NumberOfTargets@ of the farthest enemies toward himself, then slams the ground in front of himself, dealing @ModifiedDamage@ magic damage to all enemies hit.`,
+		icon: `ASSETS/Characters/Aatrox/HUD/Icons2D/Aatrox_W.dds`,
+		name: `Infernal Chains`,
+		variables: {
+			'Damage': [0, 250, 450, 1250],
+			'NumberOfTargets': [0.5, 2, 2, 5],
+		},
+	},
+	'TFT4_Ahri': {
+		desc: `Ahri channels energy into her spirit orb for @CastTime@ seconds, then lobs it toward a random enemy, dealing @ModifiedDamage@ magic damage to all enemies in a large area.<br><br>If Ahri is interrupted, she releases her orb early reducing the size of the impact area.`,
+		icon: `ASSETS/Characters/Ahri/HUD/Icons2D/Ahri_SoulEater2.dds`,
+		name: `Spirit Bomb`,
+		variables: {
+			'Damage': [0, 500, 700, 3000],
+			'CastTime': [1.5, 1.5, 1.5, 1.5],
+			'MinDamagePercent': [0.5, 0.5, 0.5, 0.5],
+		},
+	},
+	'TFT4_Ashe': {
+		desc: `Ashe gains @ModifiedAS@ Attack Speed for @Duration@ seconds, and her attacks fire a flurry of arrows for @ModifiedADDamage@ physical damage.`,
+		icon: `ASSETS/Characters/Ashe/HUD/Icons2D/Ashe_Q_active.dds`,
+		name: `Hunter's Focus`,
+		variables: {
+			'Duration': [5, 5, 5, 5],
+			'AttackSpeed': [0.25, 0.44999998807907104, 0.6499999761581421, 3],
+			'PercentADPerArrow': [0.44999998807907104, 0.44999998807907104, 0.44999998807907104, 0.44999998807907104],
+			'NumArrows': [5, 5, 5, 5],
+		},
+	},
+	'TFT4_Azir': {
+		desc: `Azir calls forth a wall of charging soldiers from behind him, dealing @ModifiedDamage@ magic damage to and slowing all enemies hit for @SlowDuration@ seconds. Enemies close to Azir are knocked back, while enemies further away are knocked up for @KnockupDuration@ seconds. `,
+		icon: `ASSETS/Characters/Azir/HUD/Icons2D/Azir_R.dds`,
+		name: `Emperor's Divide`,
+		variables: {
+			'WallDuration': [3, 3, 3, 3],
+			'WallDamage': [250, 200, 350, 8888],
+			'WallLength': [2100, 2100, 2100, 2100],
+			'WallWidth': [450, 450, 450, 450],
+			'KnockupDuration': [2, 2, 2, 2],
+			'SlowDuration': [4, 4, 4, 4],
+		},
+	},
+	'TFT4_Aphelios': {
+		desc: `Aphelios summons a turret for @ModifiedDuration@ seconds. An extension of his will, the turret deals damage as Aphelios, applies Aphelios' on-hit effects, and dies when Aphelios dies.`,
+		icon: `ASSETS/Characters/Aphelios/HUD/Icons2D/Q_Crescendum.dds`,
+		name: `Sentry Turret`,
+		variables: {
+			'Duration': [0, 7, 8, 9],
+		},
+	},
+	'TFT4_Cassiopeia': {
+		desc: `Cassiopeia projects a cone of magic energy at her target, dealing @ModifiedDamage@ magic damage to all enemies hit, stunning them for @StunDuration@ seconds, and causing them to take @ModifiedDamageAmp@ increased damage while stunned.`,
+		icon: `ASSETS/Characters/Cassiopeia/HUD/Icons2D/Cassiopeia_R.dds`,
+		name: `Petrifying Gaze`,
+		variables: {
+			'Damage': [75, 275, 400, 2000],
+			'StunDuration': [1.75, 2.5, 3, 5],
+			'DamageAmp': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
+			'ConeLength': [800, 800, 800, 800],
+			'ConeWidth': [35, 35, 35, 35],
+		},
+	},
+	'TFT4_Diana': {
+		desc: `Diana shields herself against @ModifiedShield@ damage over @ShieldDuration@ seconds and summons @Orbs@ orbs to orbit around her. These orbs explode for @ModifiedDamage@ magic damage when they hit an enemy, refreshing her Shield when the final one explodes.`,
+		icon: `ASSETS/Characters/Diana/HUD/Icons2D/Diana_W_LunarShower.dds`,
+		name: `Pale Cascade`,
+		variables: {
+			'Orbs': [2, 4, 5, 6],
+			'OrbDamage': [60, 70, 80, 90],
+			'ShieldValue': [50, 200, 300, 400],
+			'ShieldDuration': [4, 4, 4, 4],
+		},
+	},
+	'TFT4_Evelynn': {
+		desc: `Evelynn deals @ModifiedDamage@ magic damage to up to 3 nearby enemies, then teleports away.<br><br>This damage is increased to @ModifiedCritDamage@ against targets below @ExecuteThreshholdPercent@ Health.`,
+		icon: `ASSETS/Characters/Evelynn/HUD/Icons2D/Evelynn_R.dds`,
+		name: `Last Caress`,
+		variables: {
+			'CritMultiplier': [2.5, 2.5, 2.5, 2.5],
+			'CritThreshold': [0.5, 0.5, 0.5, 0.5],
+			'Damage': [100, 350, 600, 1500],
+			'BlinkBackDistance': [3, 3, 3, 3],
+		},
+	},
+	'TFT4_Fiora': {
+		desc: `Fiora enters a defensive stance for @BlockDuration@ seconds, becoming immune to damage and enemy spell effects. Afterwards, she strikes, dealing @ModifiedDamage@ magic damage to a nearby enemy and stunning them for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/Fiora/HUD/Icons2D/Fiora_R_Heal.dds`,
+		name: `Riposte`,
+		variables: {
+			'Damage': [0, 250, 400, 600],
+			'StunDuration': [1.5, 1.5, 2, 3],
+			'BlockDuration': [1.5, 1.5, 1.5, 1.5],
+		},
+	},
+	'TFT4_Elise': {
+		desc: `Elise transforms into a spider, gaining @ModifiedPercentHealth@ maximum Health and causing her attacks to restore @ModifiedLifesteal@ Health.`,
+		icon: `ASSETS/Characters/Elise/HUD/Icons2D/EliseR.DDS`,
+		name: `Spider Form`,
+		variables: {
+			'Lifesteal': [0, 40, 80, 160],
+			'PercentHealth': [0.30000001192092896, 0.3499999940395355, 0.4000000059604645, 0.45000001788139343],
+			'SpiderFormDuration': [60, 60, 60, 60],
+		},
+	},
+	'TFT4_Ezreal': {
+		desc: `Ezreal fires a barrage toward the enemy with the highest Attack Speed, healing allies it passes through for @ModifiedHeal@ and granting them 50% Attack Speed, and damaging enemies it passes through for @ModifiedDamage@ magic damage and slowing their Attack Speed by 50% for @Duration@ seconds.`,
+		icon: `ASSETS/Characters/Ezreal/HUD/Icons2D/Ezreal_R.dds`,
+		name: `Flux Barrage`,
+		variables: {
+			'BaseDamage': [0, 250, 450, 9999],
+			'AttackSpeedDuration': [5, 5, 5, 5],
+			'BaseHeal': [0, 250, 450, 9999],
+			'Duration': [5, 5, 5, 5],
+		},
+	},
+	'TFT4_Garen': {
+		desc: `Garen spins his sword for @SpinDuration@ seconds, dealing @ModifiedDamage@ magic damage to nearby enemies and reducing incoming magic damage by @MagicDamageReduction*100@% over the duration.`,
+		icon: `ASSETS/Characters/Garen/HUD/Icons2D/Garen_E1.dds`,
+		name: `Judgement`,
+		variables: {
+			'SpinDuration': [4, 4, 4, 4],
+			'ETotalTicks': [9, 9, 9, 9],
+			'DamagePerTick': [15, 50, 75, 125],
+			'MagicDamageReduction': [0.800000011920929, 0.800000011920929, 0.800000011920929, 0.800000011920929],
+		},
+	},
+	'TFT4_Hecarim': {
+		desc: `Hecarim creates an aura around him for @Duration@ seconds. Each enemy within takes @ModifiedDamage@ magic damage, and heals Hecarim for @ModifiedHealing@, over the duration.`,
+		icon: `ASSETS/Characters/Hecarim/HUD/Icons2D/Hecarim_SpiritofDread.dds`,
+		name: `Spirit Of Life`,
+		variables: {
+			'Damage': [40, 250, 400, 600],
+			'Healing': [40, 250, 400, 600],
+			'Duration': [3, 3, 3, 3],
+			'Radius': [1, 1, 1, 1],
+			'TickRate': [1, 1, 1, 1],
+		},
+	},
+	'TFT4_Galio': {
+		desc: `Galio reduces all incoming damage by @BaseDR*100@% for @Duration@ seconds, taunting all nearby enemies for the duration. At the end of the taunt, he sends out a pulse of infernal fire, dealing @EndDamage@ magic damage to enemies around him.<br><br>`,
+		icon: `ASSETS/Characters/TFT4_Galio/HUD/Icons2D/Galio_W.dds`,
+		name: `Provocation Aura`,
+		variables: {
+			'Duration': [3, 3, 3, 3],
+			'TauntHexRadius': [2, 2, 2, 2],
+			'BaseDR': [0.5, 0.5, 0.5, 0.5],
+			'CritMagicAOEPercent': [0.5, 0.5, 0.5, 0.5],
+			'Damage': [0, 0, 150, 300],
+			'EndDamage': [0, 0, 300, 600],
+		},
+	},
+	'TFT4_Janna': {
+		desc: `Janna shields her @NumAllies@ lowest-Health allies for @ModifiedShieldAmount@ for @Duration@ seconds. Shielded allies also gain @ShieldAD@ Attack Damage for that duration.`,
+		icon: `ASSETS/Characters/Janna/HUD/Icons2D/Janna_Zephyr.dds`,
+		name: `Eye of the Storm`,
+		variables: {
+			'NumAllies': [1, 2, 3, 4],
+			'ShieldAmount': [0, 250, 300, 400],
+			'Duration': [0, 4, 4, 4],
+			'ShieldAD': [0, 20, 30, 60],
+		},
+	},
+	'TFT4_JarvanIV': {
+		desc: `Jarvan IV throws his standard near the farthest enemy and pulls himself toward it with his lance, dealing @DamageCalc@ magic damage to enemies he passes through, knocking them up and stunning them for @StunDuration@ second.`,
+		icon: `ASSETS/Characters/JarvanIV/HUD/Icons2D/JarvanIV_DragonStrike.dds`,
+		name: `Dragon Strike`,
+		variables: {
+			'Damage': [50, 175, 250, 750],
+			'StunDuration': [0, 1, 1, 1],
+		},
+	},
+	'TFT4_Jinx': {
+		desc: `Jinx fires a rocket at her target that explodes on impact, damaging all nearby enemies for @ModifiedDamage@ magic damage and stunning them for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/Jinx/HUD/Icons2D/Jinx_Q1.dds`,
+		name: `Fishbones`,
+		variables: {
+			'RocketDamage': [0, 150, 250, 450],
+			'StunDuration': [0, 1.5, 2, 2.5],
+		},
+	},
+	'TFT4_Irelia': {
+		desc: `Irelia launches a storm of blades in front of her, dealing @ModifiedDamage@ magic damage and disarming enemies for @DisarmDuration@ seconds.`,
+		icon: `ASSETS/Characters/Irelia/HUD/Icons2D/Irelia_R.dds`,
+		name: `Bladestorm`,
+		variables: {
+			'Damage': [100, 200, 300, 550],
+			'DisarmDuration': [2, 2.5, 3, 3.5],
+		},
+	},
+	'TFT4_Kennen': {
+		desc: `Kennen summons a storm around himself for @Duration@ seconds, calling down lightning bolts on all enemies in the area every @TickRate@ second and dealing @ModifiedDamage@ magic damage over the duration. Each enemy struck by 3 lightning bolts is stunned for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/Kennen/HUD/Icons2D/Kennen_R.dds`,
+		name: `Slicing Maelstrom`,
+		variables: {
+			'TickRate': [0.5, 0.5, 0.5, 0.5],
+			'Duration': [3, 3, 3, 3],
+			'Damage': [0, 300, 450, 1200],
+			'StunDuration': [1.5, 1.5, 1.5, 1.5],
+		},
+	},
+	'TFT4_Kalista': {
+		desc: `Passive: Kalista's spears remain in her target, each one capable of dealing @ModifiedDamage@ of the target's maximum Health in magic damage when removed. She removes the spears when doing so would kill the target.`,
+		icon: `ASSETS/Characters/Kalista/HUD/Icons2D/Kalista_E.dds`,
+		name: `Rend`,
+		variables: {
+			'PercentHealthDamage': [0.019999999552965164, 0.03999999910593033, 0.05999999865889549, 0.09000000357627869],
+		},
+	},
+	'TFT4_Lillia': {
+		desc: `Lillia casts a magical lullaby, causing @NumTargets@ waking enemies with the highest current Health to fall asleep for @Duration@ seconds. Enemies will awaken if they take @BreakDamage@ damage while sleeping, causing an additional @ModifiedDamage@ magic damage.`,
+		icon: `ASSETS/Characters/Lillia/HUD/Icons2D/Lillia_Icon_R.Lillia.dds`,
+		name: `Lilting Lullaby`,
+		variables: {
+			'NumTargets': [0, 2, 3, 10],
+			'Duration': [2.5, 3, 4, 8],
+			'BreakDamage': [0, 500, 500, 500],
+			'Damage': [0, 500, 750, 5000],
+		},
+	},
+	'TFT4_LeeSin': {
+		desc: `Lee Sin punches his target, dealing @ModifiedDamage@ magic damage, knocking them back to the edge of the battlefield, and stunning them for @PrimaryStunDuration@ seconds. Any enemies the target collides with during the knockback receive half the damage and are stunned for @SecondaryStunDuration@ second.<br><br>If the target cannot be pushed back any further, they are knocked out of the battlefield instead, removing them from combat.<br><br>If the target is still alive after being punched, Lee Sin will dash to them.`,
+		icon: `ASSETS/Characters/LeeSin/HUD/Icons2D/BlindMonkR.dds`,
+		name: `God Fist`,
+		variables: {
+			'Damage': [0, 250, 450, 1000],
+			'PrimaryStunDuration': [0, 2, 3, 10],
+			'SecondaryStunDuration': [0, 1, 1, 10],
+		},
+	},
+	'TFT4_Katarina': {
+		desc: `Katarina channels for @Duration@ seconds, throwing knives at @NumberOfTargets@ nearby enemies, dealing @ModifiedDamage@ magic damage over the duration and reducing healing by 50% to her targets for @GrievousWoundsDuration@ seconds.`,
+		icon: `ASSETS/Characters/Katarina/HUD/Icons2D/Katarina_R.dds`,
+		name: `Death Lotus`,
+		variables: {
+			'DamagePerTick': [20, 40, 60, 120],
+			'TicksPerSecond': [6, 6, 6, 6],
+			'Duration': [2.5, 2.5, 2.5, 2.5],
+			'GrievousWoundsDuration': [5, 5, 5, 5],
+			'NumberOfTargets': [2, 4, 6, 8],
+			'TotalDamage': [375, 750, 900, 1600],
+		},
+	},
+	'TFT4_Kayn': {
+		desc: `Kayn dashes toward his target then slashes all adjacent enemies, dealing @ModifiedDamage@ magic damage and increasing the mana cost of their next spell by 33%. If the slash hits exactly one target, Kayn immediately casts again.<br><br>As Rhaast: Reaping Slash heals Kayn for @PercentRestored*100@% of the damage it deals.<br><br>As Shadow Assassin: Reaping Slash deals an extra @ShadowDamagePercent@% damage for the first @ShadowDuration@ seconds of combat.`,
+		icon: `ASSETS/Characters/Kayn/HUD/Icons2D/Kayn_Q_Primary.dds`,
+		name: `Reaping Slash`,
+		variables: {
+			'Damage': [300, 375, 575, 6666],
+			'PercentRestored': [0.5, 0.5, 0.5, 0.5],
+			'ShadowDamagePercent': [50, 50, 50, 50],
+			'ShadowDuration': [10, 10, 10, 10],
+		},
+	},
+	'TFT4_Lulu': {
+		desc: `Lulu makes a low-Health ally giant, knocking up nearby enemies for @CCDuration@ second. Hugeified allies gain @ModifiedBonusHealth@ bonus Health for the rest of combat.`,
+		icon: `ASSETS/Characters/Lulu/HUD/Icons2D/Lulu_GiantGrowth.dds`,
+		name: `Wild Growth`,
+		variables: {
+			'BonusHealth': [200, 400, 600, 950],
+			'BuffDuration': [60, 60, 60, 60],
+			'CCDuration': [1, 1, 1, 1],
+			'DamageAmp': [0.10000000149011612, 0.25, 0.30000001192092896, 0.4000000059604645],
+		},
+	},
+	'TFT4_Jax': {
+		desc: `Jax dodges all incoming attacks for @Duration@ seconds, then strikes all nearby enemies, dealing @ModifiedDamage@ magic damage and stunning them for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/Jax/HUD/Icons2D/Armsmaster_CoupDeGrace.dds`,
+		name: `Counter Strike`,
+		variables: {
+			'Duration': [2, 2, 2, 2],
+			'Damage': [50, 150, 250, 450],
+			'AttackRadius': [1, 1, 1, 1],
+			'StunDuration': [1.5, 1.5, 1.5, 1.5],
+		},
+	},
+	'TFT4_Morgana': {
+		desc: `Morgana hallows the ground beneath a random target, dealing @ModifiedDamage@ magic damage to enemies over @Duration@ seconds and shredding 40% of their Magic Resistance while they remain inside. Morgana heals herself for @HealPercent@% of the damage dealt.`,
+		icon: `ASSETS/Characters/Morgana/HUD/Icons2D/FallenAngel_Purgatory.dds`,
+		name: `Hallowed Ground`,
+		variables: {
+			'Damage': [0, 250, 400, 2000],
+			'Duration': [0, 5, 5, 5],
+			'HealPercent': [0, 20, 25, 30],
+		},
+	},
+	'TFT4_Lissandra': {
+		desc: `Lissandra hurls a dagger toward the enemy with the highest Attack Damage, dealing @ModifiedDamage@ magic damage to the first target it hits. After hitting its initial target or at its final destination, the dagger explodes dealing @ModifiedSecondaryDamage@ magic damage to nearby targets.`,
+		icon: `ASSETS/Characters/Lissandra/HUD/Icons2D/Lissandra_Q.dds`,
+		name: `1000 Daggers`,
+		variables: {
+			'Damage': [0, 350, 450, 550],
+			'SecondaryDamage': [0, 175, 225, 275],
+		},
+	},
+	'TFT4_Jhin': {
+		desc: `Passive: Jhin always attacks @AttackSpeed@ times per second. He converts each 1% of bonus Attack Speed into @ADFromAttackSpeed@ Attack Damage.<br><br>Passive: Every fourth shot, Jhin deals @ModifiedPercent@ of his Attack Damage. (Total: @TooltipDamage@)`,
+		icon: `ASSETS/Characters/Jhin/HUD/Icons2D/Jhin_P.dds`,
+		name: `Whisper`,
+		variables: {
+			'PercentOfAD': [0, 4.440000057220459, 5, 12.34000015258789],
+			'AttackSpeed': [0, 0.8500000238418579, 0.8999999761581421, 1.2000000476837158],
+			'ADFromAttackSpeed': [0, 0.800000011920929, 0.800000011920929, 0.800000011920929],
+		},
+	},
+	'TFT4_Nami': {
+		desc: `Nami traps the closest enemy in her bubble, dealing @ModifiedDamage@ magic damage and stunning them for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/Nami/HUD/Icons2D/NamiQ.dds`,
+		name: `Aqua Prison`,
+		variables: {
+			'Damage': [50, 225, 300, 450],
+			'StunDuration': [1.5, 2.5, 3, 4],
+		},
+	},
+	'TFT4_Maokai': {
+		desc: `Maokai smashes the ground, sending forward a shockwave that deals @ModifiedDamage@ magic damage to enemies hit and slows their Attack Speed by 50% for @ASSlowDuration@ seconds.`,
+		icon: `ASSETS/Characters/Maokai/HUD/Icons2D/Maokai_Q.dds`,
+		name: `Bramble Smash`,
+		variables: {
+			'Damage': [50, 225, 350, 550],
+			'ASSlowDuration': [3, 3, 3, 3],
+		},
+	},
+	'TFT4_Lux': {
+		desc: `Lux fires a sphere of light towards her farthest enemy. Enemies in the sphere's path take @ModifiedDamage@ magic damage and are stunned for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxCrashingBlitz2.dds`,
+		name: `Light Binding`,
+		variables: {
+			'Damage': [300, 300, 400, 700],
+			'StunDuration': [1, 1.5, 2, 3],
+		},
+	},
+	'TFT4_Nunu': {
+		desc: `Willump bites his target, dealing @ModifiedDamage@ magic damage. If Willump's target has less Health than he does before the bite, it deals an additional @DamageAmp*100@% damage and becomes true damage.`,
+		icon: `ASSETS/Characters/Nunu/HUD/Icons2D/NunuQ.dds`,
+		name: `Consume`,
+		variables: {
+			'Damage': [200, 450, 650, 1800],
+			'DamageAmp': [0.5, 0.5, 0.5, 0.5],
+		},
+	},
+	'TFT4_Riven': {
+		desc: `Riven dashes and shields herself for @ModifiedShield@, then slashes forward dealing @ModifiedDamage@ magic damage to nearby enemies. <br><br>Every third cast, Riven leaps into the air and launches forward a large wave of energy that deals @ModifiedDamageFinal@ magic damage.`,
+		icon: `ASSETS/Characters/Riven/HUD/Icons2D/Riven_Buffer.dds`,
+		name: `Sweeping Strikes`,
+		variables: {
+			'Damage': [50, 175, 250, 750],
+			'SlashHexRadius': [1, 1, 1, 1],
+			'DamageFinal': [0, 300, 450, 1350],
+			'Shield': [0, 175, 250, 750],
+			'ShieldDuration': [4, 4, 4, 4],
+		},
+	},
+	'TFT4_Kindred': {
+		desc: `Wolf mauls Kindred's target, dealing @ModifiedDamage@ magic damage and reducing their healing by 50% for @GrievousWoundsDuration@ seconds. Meanwhile, Lamb leaps away from Kindred's target.`,
+		icon: `ASSETS/Characters/Kindred/HUD/Icons2D/Kindred_E.dds`,
+		name: `Dance of Dread`,
+		variables: {
+			'Damage': [100, 450, 650, 1000],
+			'HexRange': [2, 2, 2, 2],
+			'GrievousWoundsDuration': [5, 5, 5, 5],
+		},
+	},
+	'TFT4_Nidalee': {
+		desc: `Nidalee throws her javelin at her farthest enemy, dealing @ModifiedDamage@ magic damage plus @PercentPerHex*100@% more for each hex traveled.`,
+		icon: `ASSETS/Characters/Nidalee/HUD/Icons2D/Nidalee_Q1.dds`,
+		name: `Javelin Toss`,
+		variables: {
+			'BaseDamage': [50, 225, 350, 600],
+			'PercentPerHex': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
+		},
+	},
+	'TFT4_Sejuani': {
+		desc: `Sejuani throws a giant firecracker at the closest enemy that explodes after a @ExplosionDelay@-second delay. Enemies in the explosion are dealt @ModifiedDamage@ magic damage and are stunned for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/Sejuani/HUD/Icons2D/Sejuani_R.dds`,
+		name: `Firecracker`,
+		variables: {
+			'ExplosionDelay': [0, 2, 2, 2],
+			'Damage': [25, 100, 200, 800],
+			'StunDuration': [0.5, 2.5, 3, 6],
+			'HexRadius': [3, 3, 3, 3],
+		},
+	},
+	'TFT4_Sylas': {
+		desc: `Sylas lashes his chains out in a @HexDistance@-hex line, dealing @ModifiedDamage@ magic damage to enemies hit and increasing the mana cost of their next spell by 33%.`,
+		icon: `ASSETS/Characters/Sylas/HUD/Icons2D/SylasQ.dds`,
+		name: `Chain Lash`,
+		variables: {
+			'BaseDamage': [0, 250, 400, 700],
+			'HexDistance': [3, 3, 3, 3],
+			'Duration': [1, 2, 3, 4],
+		},
+	},
+	'TFT4_Sett': {
+		desc: `Sett grabs his target and slams them forward, dealing @ModifiedPercentMaxHealthDamagePrimary@ of their maximum Health in magic damage to them, and @ModifiedPercentMaxHealthDamageSecondary@ of the slammed enemy's maximum Health to all other enemies in a large area.`,
+		icon: `ASSETS/Characters/Sett/HUD/Icons2D/Sett_R.Sett.dds`,
+		name: `Showstopper`,
+		variables: {
+			'PercentMaxHealthDamagePrimary': [0, 0.4000000059604645, 0.6000000238418579, 4],
+			'PercentMaxHealthDamageSecondary': [0, 0.20000000298023224, 0.30000001192092896, 2],
+		},
+	},
+	'TFT4_Talon': {
+		desc: `Talon stabs his target, striking them for @PercentOfAD*100@% of his Attack Damage plus @TooltipBonusDamage@ bonus physical damage (total: <scaleAD>@ModifiedDamage@ %i:scaleAD%</scaleAD>). If this kills them, Talon becomes unstoppable and untargetable while he leaps to the lowest Armor enemy.`,
+		icon: `ASSETS/Characters/Talon/HUD/Icons2D/TalonQ.dds`,
+		name: `Truestrike`,
+		variables: {
+			'PercentOfAD': [0, 2.4000000953674316, 2.5, 2.75],
+			'Damage': [0, 85, 135, 400],
+		},
+	},
+	'TFT4_TahmKench': {
+		desc: `Tahm Kench takes @ModifiedDR@ reduced damage from all sources.`,
+		icon: `ASSETS/Characters/TahmKench/HUD/Icons2D/TahmKench_E.dds`,
+		name: `Thick Skin`,
+		variables: {
+			'DamageReduction': [15, 15, 25, 75],
+		},
+	},
+	'TFT4_Teemo': {
+		desc: `Teemo fires a dart at the enemy with the highest Attack Speed. The dart explodes into a cloud of spores on contact, poisoning nearby enemies. Poisoned enemies take @ModifiedDamage@ magic damage over @Duration@ seconds and are blinded for the duration.`,
+		icon: `ASSETS/Characters/Teemo/HUD/Icons2D/Teemo_E.dds`,
+		name: `Sporecloud Dart`,
+		variables: {
+			'Duration': [2, 2.5, 3, 4.5],
+			'TickRate': [0.5, 0.5, 0.5, 0.5],
+			'TotalDamage': [50, 300, 450, 900],
+		},
+	},
+	'TFT4_TwistedFate': {
+		desc: `Twisted Fate throws three cards in a cone that deal @ModifiedDamage@ magic damage to each enemy they pass through.`,
+		icon: `ASSETS/Characters/TwistedFate/HUD/Icons2D/Cardmaster_PowerCard.dds`,
+		name: `Wild Cards`,
+		variables: {
+			'BaseDamage': [0, 250, 350, 475],
+		},
+	},
+	'TFT4_AzirSoldier': {
+		desc: `Azir's Sand Guards accompany their Emperor on the battlefield. They don't attack, but they get in the enemy's way.`,
+		icon: `ASSETS/Characters/Azir/HUD/Icons2D/Azir_W.dds`,
+		name: `Stand Firm`,
+		variables: {},
+	},
+	'TFT4_Thresh': {
+		desc: `Thresh throws his lantern to the lowest-Health ally, shielding them and nearby allies against @ModifiedShield@ damage for @Duration@ seconds.`,
+		icon: `ASSETS/Characters/Thresh/HUD/Icons2D/Thresh_W.dds`,
+		name: `Spectral Lantern`,
+		variables: {
+			'ShieldAmount': [100, 250, 450, 750],
+			'Radius': [1, 1, 1, 1],
+			'Duration': [4, 4, 4, 4],
+		},
+	},
+	'TFT4_Wukong': {
+		desc: `Wukong slams his target with his staff, dealing @ModifiedPercentAD@ of his Attack Damage as physical damage and stunning them for @Duration@ seconds. (Total Damage: @TooltipDamage@)`,
+		icon: `ASSETS/Characters/MonkeyKing/HUD/Icons2D/MonkeyKingCrushingBlow.dds`,
+		name: `Crushing Blow`,
+		variables: {
+			'PercentAD': [1.5, 2.5, 2.6500000953674316, 2.799999952316284],
+			'Duration': [1.5, 1.5, 2, 3],
+		},
+	},
+	'TFT4_Veigar': {
+		desc: `Veigar blasts the enemy with the lowest Health, dealing @ModifiedDamage@ magic damage.<br><br>If this kills his target, Veigar permanently gains @APToAdd@ Spell Power.`,
+		icon: `ASSETS/Characters/Veigar/HUD/Icons2D/VeigarDarkMatter.dds`,
+		name: `Dark Blossom`,
+		variables: {
+			'Damage': [0, 450, 600, 900],
+			'APToAdd': [1, 1, 1, 2],
+		},
+	},
+	'TFT4_Vayne': {
+		desc: `Passive: Vayne's third attack on a target deals @ModifiedDamage@ bonus true damage.`,
+		icon: `ASSETS/Characters/Vayne/HUD/Icons2D/Vayne_SilveredBolts.dds`,
+		name: `Silver Bolts`,
+		variables: {
+			'BonusDamage': [60, 50, 90, 140],
+		},
+	},
+	'TFT4_XinZhao': {
+		desc: `Xin Zhao sweeps around himself, dealing @ModifiedDamage@ of his Attack Damage (total: @TooltipDamage@) to nearby enemies and gaining @ArmorAndMR@ Armor and Magic Resist for the rest of combat.`,
+		icon: `ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoR.dds`,
+		name: `Crescent Guard`,
+		variables: {
+			'Damage': [75, 150, 225, 500],
+			'Duration': [6, 6, 6, 6],
+			'HexRadius': [1, 1, 1, 1],
+			'PercentOfAttackDamage': [0, 3.299999952316284, 3.4000000953674316, 3.5],
+			'DamageAmp': [2, 2, 2, 2],
+			'DamageReduction': [0.8500000238418579, 0.8500000238418579, 0.8500000238418579, 0.8500000238418579],
+			'ArmorAndMR': [0, 50, 60, 75],
+		},
+	},
+	'TFT4_Warwick': {
+		desc: `Warwick gains @ModifiedAS@ Attack Speed, @LifestealPercent@% Lifesteal, and moves faster for the rest of combat. <br><br>While in this state, if Warwick scores a takedown he howls, granting himself and all allies who share a Trait with him an additional @AllyAS*100@% Attack Speed for @AllyASDuration@ seconds.`,
+		icon: `ASSETS/Characters/Warwick/HUD/Icons2D/WarwickP.dds`,
+		name: `Primal Hunger`,
+		variables: {
+			'AttackSpeedPercent': [5, 1.350000023841858, 1.5, 5],
+			'LifestealPercent': [0, 40, 40, 200],
+			'FearDuration': [200, 0.75, 0.75, 3],
+			'AllyAS': [0, 0.6000000238418579, 0.75, 2],
+			'AllyASDuration': [3, 3, 3, 3],
+		},
+	},
+	'TFT4_Pyke': {
+		desc: `Pyke leaves a phantom at his location, then dashes behind the farthest enemy. After @StunDelay@ second, his phantom returns to Pyke, dealing @ModifiedDamage@ magic damage to all enemies it passes through and stunning them for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/Pyke/HUD/Icons2D/PykeE.dds`,
+		name: `Phantom Undertow`,
+		variables: {
+			'Damage': [100, 125, 200, 375],
+			'StunDuration': [1, 2, 2.5, 4],
+			'StunDelay': [1, 1, 1, 1],
+		},
+	},
+	'TFT4_Shen': {
+		desc: `Shen dashes past his target, shielding himself against @ModifiedShield@ damage and taunting all adjacent enemies for @Duration@ seconds.`,
+		icon: `ASSETS/Characters/Shen/HUD/Icons2D/Shen_R.dds`,
+		name: `Shadow Dash`,
+		variables: {
+			'ShieldAmount': [250, 500, 800, 4000],
+			'Duration': [4, 4, 4, 8],
+		},
+	},
+	'TFT4_Vi': {
+		desc: `Vi's attack blasts through her target, dealing @ModifiedDamage@ magic damage to all enemies in a cone and reducing their Armor by @ArmorReduction*100@% for @Duration@ seconds.`,
+		icon: `ASSETS/Characters/Vi/HUD/Icons2D/ViE2.dds`,
+		name: `Denting Blow`,
+		variables: {
+			'Damage': [50, 250, 400, 800],
+			'Duration': [8, 8, 8, 8],
+			'ArmorReduction': [0.25, 0.4000000059604645, 0.6000000238418579, 0.800000011920929],
+		},
+	},
+	'TFT4_Yone': {
+		desc: `Yone strikes along a path in front of him, dealing @ModifiedDamage@ magic damage split between all enemies hit. Enemies hit are marked for death, reducing their Armor and Magic Resist by @ShredPercent@%.<br><br>Yone's spell is then replaced with Unforgotten until there are no remaining enemies marked for death.<br><br>Unforgotten (20 mana): Yone dashes to the lowest-Health enemy that is marked for death, dealing @ModifiedUnforgottenDamage@ plus their missing health as magic damage.`,
+		icon: `ASSETS/Characters/Yone/HUD/Icons2D/YoneR.Yone.dds`,
+		name: `Seal Fate`,
+		variables: {
+			'Damage': [1000, 600, 1200, 9999],
+			'KnockUpDuration': [1, 1, 1, 1],
+			'MaxDistance': [880, 880, 880, 880],
+			'ShredPercent': [0, 60, 60, 60],
+			'UnforgottenDamage': [0, 200, 400, 1000],
+		},
+	},
+	'TFT4_Zed': {
+		desc: `Passive: Every third attack, Zed deals @ModifiedDamage@ bonus magic damage and steals @ADSteal*100@% of the target's current Attack Damage.`,
+		icon: `ASSETS/Characters/Zed/HUD/Icons2D/shadowninja_Q.dds`,
+		name: `Contempt For The Weak`,
+		variables: {
+			'ADSteal': [0.25, 0.25, 0.30000001192092896, 0.3499999940395355],
+			'Damage': [0, 40, 50, 75],
+		},
+	},
+	'TFT4_Yuumi': {
+		desc: `Yuumi dashes to the lowest-Health ally, healing them for @ModifiedHealing@ of their missing Health and granting them @ModifiedAS@ Attack Speed for @Duration@ seconds. She then repeats this on the farthest ally.`,
+		icon: `ASSETS/Characters/Yuumi/HUD/Icons2D/YuumiE.dds`,
+		name: `Zoomies`,
+		variables: {
+			'Healing': [0.15000000596046448, 0.30000001192092896, 0.44999998807907104, 0.75],
+			'AttackSpeed': [0.20000000298023224, 0.30000001192092896, 0.4000000059604645, 0.6000000238418579],
+			'Duration': [5, 5, 5, 5],
+			'DashSpeed': [1600, 1600, 1600, 1600],
+		},
+	},
+	'TFT4_Yasuo': {
+		desc: `Yasuo strikes forward two hexes, attacking for @ModifiedDamage@ of his Attack Damage (total: @TooltipDamage@). If he can't hit two targets from where he's standing, he'll first dash to a place where he can.`,
+		icon: `ASSETS/Characters/Yasuo/HUD/Icons2D/Yasuo_Q3.dds`,
+		name: `Striking Steel`,
+		variables: {
+			'HexRange': [2, 2, 2, 2],
+			'Width': [75, 75, 75, 75],
+			'ADPercent': [0, 1.7999999523162842, 2, 2.25],
+		},
+	},
+	'TFT4_Zilean': {
+		desc: `Zilean places a protective Time Rune on the @NumTargets@ allies with the lowest Health other than himself. When they would die, they instead resurrect after @ReviveDelay@ seconds, returning to combat with @HealthAmountCalc@ Health and shedding all negative effects. After resurrecting, they have @ModifiedAS@ bonus Attack Speed for the rest of combat.`,
+		icon: `ASSETS/Characters/Zilean/HUD/Icons2D/Zilean_E.dds`,
+		name: `Rewind Fate`,
+		variables: {
+			'NumTargets': [0, 2, 3, 10],
+			'HealthAmount': [400, 350, 500, 3000],
+			'ReviveDelay': [6, 3.5, 3, 1],
+			'AttackSpeed': [0.75, 0.5, 0.75, 5],
+		},
+	},
+}
