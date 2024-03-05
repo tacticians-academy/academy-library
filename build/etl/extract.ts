@@ -5,7 +5,6 @@ import fs from 'fs/promises'
 import path from 'path'
 
 import { SET_DATA } from '../../dist/index.js'
-import { importSetData } from '../../dist/imports.js'
 
 import { getOutputFolderForSet, getPathToSet, getPathToPatch } from '../helpers/files.js'
 import { BASE_UNIT_API_NAMES, mDataValueSubstitutions, mSpellCalculationsSubstitutions } from '../helpers/normalize.js'
@@ -83,14 +82,17 @@ export async function getPatchFor(setNumber: SetNumber, customPatchLine?: string
 	if (SET_DATA[setNumber] == null) {
 		throw 'New Set!! ' + setNumber
 	}
-	const { champions } = getSetDataFrom(setNumber, parentSetNumber, gameResponseJSON)
+	const setData = getSetDataFrom(setNumber, parentSetNumber, gameResponseJSON)
+	if (setData == null) {
+		await fs.rm(etagPath)
+		throw `Set ${setNumber} not found`
+	}
+	const { champions } = setData
 
 	// await fs.writeFile(getPathToPatch(patchLine, '.game.raw.json'), JSON.stringify(gameResponseJSON, undefined, '\t'))
 	await fs.writeFile(getPathToSet(setNumber, '.game.raw.json'), JSON.stringify(gameResponseJSON, undefined, '\t'))
 	await fs.writeFile(getPathToSet(setNumber, '.map.raw.json'), JSON.stringify(mapResponseJSON, undefined, '\t'))
 	console.log('Loading set', setNumber, 'patch', patchLine.toUpperCase(), '...', 'Units:', champions.length, '\n')
-
-	const setData = await importSetData(setNumber)
 
 	// Champions
 
