@@ -5701,6 +5701,14 @@ export const champions: ChampionData[] = [
 export const otherUnits: ChampionData[] = []
 
 export const abilities: Record<string, AbilityData> = {
+	'TFT_Aatrox': {
+		desc: `Aatrox cleaves the area in front of him, dealing @ModifiedDamage@ magic damage to all enemies within.`,
+		icon: `ASSETS/Characters/Aatrox/HUD/Icons2D/Aatrox_Q3.dds`,
+		name: `The Darkin Blade`,
+		variables: {
+			'Damage': [0, 300, 600, 900],
+		},
+	},
 	'TFT_Ahri': {
 		desc: `Ahri fires an orb in a line, dealing @ModifiedDamage@ magic damage to all enemies it passes through.<br><br>It then returns to her, dealing @ModifiedDamage@ true damage to all enemies it passes through.`,
 		icon: `ASSETS/Characters/Ahri/HUD/Icons2D/Ahri_OrbofDeception.dds`,
@@ -5720,12 +5728,14 @@ export const abilities: Record<string, AbilityData> = {
 			'HexRange': [1, 1, 1, 1],
 		},
 	},
-	'TFT_Aatrox': {
-		desc: `Aatrox cleaves the area in front of him, dealing @ModifiedDamage@ magic damage to all enemies within.`,
-		icon: `ASSETS/Characters/Aatrox/HUD/Icons2D/Aatrox_Q3.dds`,
-		name: `The Darkin Blade`,
+	'TFT_Anivia': {
+		desc: `Anivia creates a large hailstorm that lasts for @StormDuration@ seconds, dealing @ModifiedDamage@ magic damage over the duration and slowing the attack speed of all enemies inside of it by @AttackSpeedSlow@%.`,
+		icon: `ASSETS/Characters/Anivia/HUD/Icons2D/Anivia_R.dds`,
+		name: `Glacial Storm`,
 		variables: {
-			'Damage': [0, 300, 600, 900],
+			'TotalDamage': [500, 800, 1100, 1400],
+			'AttackSpeedSlow': [30, 50, 70, 90],
+			'StormDuration': [6, 6, 6, 6],
 		},
 	},
 	'TFT_Ashe': {
@@ -5746,16 +5756,6 @@ export const abilities: Record<string, AbilityData> = {
 			'HexRange': [8, 8, 8, 8],
 		},
 	},
-	'TFT_Anivia': {
-		desc: `Anivia creates a large hailstorm that lasts for @StormDuration@ seconds, dealing @ModifiedDamage@ magic damage over the duration and slowing the attack speed of all enemies inside of it by @AttackSpeedSlow@%.`,
-		icon: `ASSETS/Characters/Anivia/HUD/Icons2D/Anivia_R.dds`,
-		name: `Glacial Storm`,
-		variables: {
-			'TotalDamage': [500, 800, 1100, 1400],
-			'AttackSpeedSlow': [30, 50, 70, 90],
-			'StormDuration': [6, 6, 6, 6],
-		},
-	},
 	'TFT_Blitzcrank': {
 		desc: `Blitzcrank pulls the furthest enemy to him, dealing @ModifiedDamage@ magic damage and stunning them for @StunDuration@ seconds.<br><br>His next attack after pulling knocks up for 1 second.<br><br>Allies within range will prioritize attacking Blitzcrank's target.`,
 		icon: `ASSETS/Characters/Blitzcrank/HUD/Icons2D/Blitzcrank_RocketGrab.dds`,
@@ -5763,15 +5763,6 @@ export const abilities: Record<string, AbilityData> = {
 		variables: {
 			'Damage': [-50, 250, 550, 850],
 			'StunDuration': [2.5, 2.5, 2.5, 2.5],
-		},
-	},
-	'TFT_Braum': {
-		desc: `Braum puts up his shield for @ShieldDuration@ seconds, absorbing and stopping all incoming missiles and reducing his damage taken from that direction by @ShieldDR@%.`,
-		icon: `ASSETS/Characters/Braum/HUD/Icons2D/Braum_E.dds`,
-		name: `Unbreakable`,
-		variables: {
-			'ShieldDR': [60, 70, 80, 90],
-			'ShieldDuration': [4, 4, 4, 4],
 		},
 	},
 	'TFT_Brand': {
@@ -5783,14 +5774,22 @@ export const abilities: Record<string, AbilityData> = {
 			'MaxBounces': [4, 4, 6, 20],
 		},
 	},
-	'TFT_Darius': {
-		desc: `Darius swings his axe in a circle, dealing @ModifiedDamage@ magic damage and healing himself for @ModifiedHeal@ health for each enemy hit.`,
-		icon: `ASSETS/Characters/Darius/HUD/Icons2D/Darius_Icon_Decimate.dds`,
-		name: `Decimate`,
+	'TFT_Braum': {
+		desc: `Braum puts up his shield for @ShieldDuration@ seconds, absorbing and stopping all incoming missiles and reducing his damage taken from that direction by @ShieldDR@%.`,
+		icon: `ASSETS/Characters/Braum/HUD/Icons2D/Braum_E.dds`,
+		name: `Unbreakable`,
 		variables: {
-			'Damage': [100, 150, 200, 250],
-			'Heal': [50, 100, 150, 200],
-			'HexRange': [1, 1, 1, 1],
+			'ShieldDR': [60, 70, 80, 90],
+			'ShieldDuration': [4, 4, 4, 4],
+		},
+	},
+	'TFT_Camille': {
+		desc: `Camille singles out and leaps on an enemy, dealing @ModifiedDamage@ magic damage and rooting them for @Duration@ seconds.<br><br>Allies within range will prioritize attacking Camille's target.`,
+		icon: `ASSETS/Characters/TFT_Camille/HUD/Icons2D/TFT_Camille_R.TFT_Hextech.dds`,
+		name: `The Hextech Ultimatum`,
+		variables: {
+			'Duration': [3, 4, 5, 6],
+			'Damage': [75, 200, 325, 450],
 		},
 	},
 	'TFT_ChoGath': {
@@ -5803,6 +5802,16 @@ export const abilities: Record<string, AbilityData> = {
 			'RuptureDelay': [1.5, 1.5, 1.5, 1.5],
 		},
 	},
+	'TFT_Darius': {
+		desc: `Darius swings his axe in a circle, dealing @ModifiedDamage@ magic damage and healing himself for @ModifiedHeal@ health for each enemy hit.`,
+		icon: `ASSETS/Characters/Darius/HUD/Icons2D/Darius_Icon_Decimate.dds`,
+		name: `Decimate`,
+		variables: {
+			'Damage': [100, 150, 200, 250],
+			'Heal': [50, 100, 150, 200],
+			'HexRange': [1, 1, 1, 1],
+		},
+	},
 	'TFT_Draven': {
 		desc: `Draven starts spinning an axe, granting him 150% %i:scaleAD% bonus physical damage on-hit on his next attack.<br><br>It will return to his location after striking the target and if Draven catches it, it will refresh the buff.<br><br>Draven can spin up to two axes at a time.`,
 		icon: `ASSETS/Characters/Draven/HUD/Icons2D/Draven_SpinningAxe.dds`,
@@ -5811,15 +5820,6 @@ export const abilities: Record<string, AbilityData> = {
 			'BuffDuration': [5.75, 5.75, 5.75, 5.75],
 			'ADMult': [1, 1.5, 2, 2.5],
 			'ASBuff': [1, 1, 1, 1],
-		},
-	},
-	'TFT_Camille': {
-		desc: `Camille singles out and leaps on an enemy, dealing @ModifiedDamage@ magic damage and rooting them for @Duration@ seconds.<br><br>Allies within range will prioritize attacking Camille's target.`,
-		icon: `ASSETS/Characters/TFT_Camille/HUD/Icons2D/TFT_Camille_R.TFT_Hextech.dds`,
-		name: `The Hextech Ultimatum`,
-		variables: {
-			'Duration': [3, 4, 5, 6],
-			'Damage': [75, 200, 325, 450],
 		},
 	},
 	'TFT_Elise': {
@@ -5853,19 +5853,6 @@ export const abilities: Record<string, AbilityData> = {
 			'BlockDuration': [1.5, 1.5, 1.5, 1.5],
 		},
 	},
-	'TFT_Gnar': {
-		desc: `Gnar leaps towards an enemy and transforms into Mega Gnar, throwing nearby enemies, dealing @ModifiedDamage@ magic damage and stunning them for @RCCDuration@ seconds.<br><br>While in Mega Gnar form, Gnar gains @TransformHealth@ Health and @TransformAD@ Attack Damage.`,
-		icon: `ASSETS/Characters/Gnar/HUD/Icons2D/GnarTransform.dds`,
-		name: `GNAR!`,
-		variables: {
-			'Damage': [100, 200, 300, 400],
-			'RCCDuration': [2, 2, 2, 2],
-			'RKnockbackDistance': [500, 500, 500, 500],
-			'TransformDuration': [60, 60, 60, 60],
-			'TransformHealth': [50, 250, 450, 650],
-			'TransformAD': [0, 50, 100, 150],
-		},
-	},
 	'TFT_Gangplank': {
 		desc: `Passive: Gangplank periodically places barrels near enemies.<br><br>Active: Gangplank shoots his barrels, causing them all to explode, dealing @ModifiedDamage@ magic damage to nearby enemies and applying on-hit effects.`,
 		icon: `ASSETS/Characters/Gangplank/HUD/Icons2D/Gangplank_E.dds`,
@@ -5882,6 +5869,19 @@ export const abilities: Record<string, AbilityData> = {
 			'SpinDuration': [4, 4, 4, 4],
 			'ETotalTicks': [9, 9, 9, 9],
 			'DamagePerTick': [15, 40, 65, 90],
+		},
+	},
+	'TFT_Gnar': {
+		desc: `Gnar leaps towards an enemy and transforms into Mega Gnar, throwing nearby enemies, dealing @ModifiedDamage@ magic damage and stunning them for @RCCDuration@ seconds.<br><br>While in Mega Gnar form, Gnar gains @TransformHealth@ Health and @TransformAD@ Attack Damage.`,
+		icon: `ASSETS/Characters/Gnar/HUD/Icons2D/GnarTransform.dds`,
+		name: `GNAR!`,
+		variables: {
+			'Damage': [100, 200, 300, 400],
+			'RCCDuration': [2, 2, 2, 2],
+			'RKnockbackDistance': [500, 500, 500, 500],
+			'TransformDuration': [60, 60, 60, 60],
+			'TransformHealth': [50, 250, 450, 650],
+			'TransformAD': [0, 50, 100, 150],
 		},
 	},
 	'TFT_Graves': {
@@ -6021,6 +6021,15 @@ export const abilities: Record<string, AbilityData> = {
 			'SelfUltHealthPercent': [0.5, 0.5, 0.5, 0.5],
 		},
 	},
+	'TFT_Lucian': {
+		desc: `Lucian dashes away from his current target, then Basic Attacks them and fires a second shot which deals @ModifiedDamage@ magic damage.`,
+		icon: `ASSETS/Characters/Lucian/HUD/Icons2D/Lucian_E.dds`,
+		name: `Relentless Pursuit`,
+		variables: {
+			'FirstShotRatio': [1, 1, 1, 1],
+			'SecondShotDamage': [0, 125, 250, 375],
+		},
+	},
 	'TFT_Lulu': {
 		desc: `Lulu makes @Targets@ allies giant, granting them @ModifiedBonusHealth@ bonus health and knocking up adjacent enemies near them for @CCDuration@ seconds.`,
 		icon: `ASSETS/Characters/Lulu/HUD/Icons2D/Lulu_GiantGrowth.dds`,
@@ -6032,15 +6041,6 @@ export const abilities: Record<string, AbilityData> = {
 			'CCDuration': [1.25, 1.25, 1.25, 1.25],
 		},
 	},
-	'TFT_Lucian': {
-		desc: `Lucian dashes away from his current target, then Basic Attacks them and fires a second shot which deals @ModifiedDamage@ magic damage.`,
-		icon: `ASSETS/Characters/Lucian/HUD/Icons2D/Lucian_E.dds`,
-		name: `Relentless Pursuit`,
-		variables: {
-			'FirstShotRatio': [1, 1, 1, 1],
-			'SecondShotDamage': [0, 125, 250, 375],
-		},
-	},
 	'TFT_MissFortune': {
 		desc: `Miss Fortune channels and fires waves of bullets in a cone for @ChannelDuration@ seconds, dealing @ModifiedDamage@ magic damage to all enemies within over the duration.`,
 		icon: `ASSETS/Characters/MissFortune/HUD/Icons2D/MissFortune_R.dds`,
@@ -6050,6 +6050,17 @@ export const abilities: Record<string, AbilityData> = {
 			'TotalDamage': [600, 1300, 2000, 2700],
 			'ChannelDuration': [3, 3, 3, 3],
 			'HexRange': [6, 6, 6, 6],
+		},
+	},
+	'TFT_Mordekaiser': {
+		desc: `Mordekaiser slams his mace on the two spaces in front of him, dealing @ModifiedDamage@ magic damage to enemies within.`,
+		icon: `ASSETS/Characters/Mordekaiser/HUD/Icons2D/MordekaiserQ.MordeVGU.dds`,
+		name: `Obliterate`,
+		variables: {
+			'Damage': [0, 250, 500, 750],
+			'MaceStartDistance': [400, 400, 400, 400],
+			'MaceLength': [625, 625, 625, 625],
+			'RectangleWidth': [160, 160, 160, 160],
 		},
 	},
 	'TFT_Morgana': {
@@ -6074,17 +6085,6 @@ export const abilities: Record<string, AbilityData> = {
 			'ADInCougar': [-30, 20, 70, 120],
 			'TransformDuration': [60, 60, 60, 60],
 			'AnimTime': [0.5, 0.5, 0.5, 0.5],
-		},
-	},
-	'TFT_Mordekaiser': {
-		desc: `Mordekaiser slams his mace on the two spaces in front of him, dealing @ModifiedDamage@ magic damage to enemies within.`,
-		icon: `ASSETS/Characters/Mordekaiser/HUD/Icons2D/MordekaiserQ.MordeVGU.dds`,
-		name: `Obliterate`,
-		variables: {
-			'Damage': [0, 250, 500, 750],
-			'MaceStartDistance': [400, 400, 400, 400],
-			'MaceLength': [625, 625, 625, 625],
-			'RectangleWidth': [160, 160, 160, 160],
 		},
 	},
 	'TFT_Pantheon': {
@@ -6154,6 +6154,14 @@ export const abilities: Record<string, AbilityData> = {
 			'StunDuration': [0.5, 2, 3.5, 5],
 		},
 	},
+	'TFT_Shen': {
+		desc: `Shen creates a zone around himself for @ZoneDuration@ seconds, granting all nearby allies 100% chance to dodge incoming basic attacks.`,
+		icon: `ASSETS/Characters/Shen/HUD/Icons2D/Shen_W.dds`,
+		name: `Spirit's Refuge`,
+		variables: {
+			'ZoneDuration': [2, 3, 4, 5],
+		},
+	},
 	'TFT_Shyvana': {
 		desc: `Shyvana dashes away from her current target and transforms into dragon form.<br><br>While in dragon form, Shyvana's Basic Attack becomes ranged, she gains @ADWhileDragon@ Attack Damage, and her Basic Attacks burn her enemies for @BurnDuration@ seconds, dealing @ModifiedDamage@ magic damage.`,
 		icon: `ASSETS/Characters/Shyvana/HUD/Icons2D/ShyvanaDragonsDescent.dds`,
@@ -6164,34 +6172,6 @@ export const abilities: Record<string, AbilityData> = {
 			'BurnDuration': [3, 3, 3, 3],
 			'BurnDamage': [100, 200, 300, 400],
 			'ExtraAARange': [480, 480, 480, 480],
-		},
-	},
-	'TFT_Tristana': {
-		desc: `Tristana places a bomb on her current target which will detonate after she Basic Attacks them 3 times or @ExplosiveChargeDuration@ seconds pass without Tristana attacking them.<br><br>When the bomb detonates, it deals @ModifiedDamage@ magic damage to all nearby enemies, plus @PercentDamageIncrease@ for each Basic Attack, up to a maximum of @ModifiedMaxDamage@.`,
-		icon: `ASSETS/Characters/Tristana/HUD/Icons2D/Tristana_E.dds`,
-		name: `Explosive Charge`,
-		variables: {
-			'ExplosiveChargeDuration': [4, 4, 4, 4],
-			'ChargeBaseDamage': [30, 70, 110, 150],
-			'PercentDamageIncreasePerStack': [0.5, 0.5, 0.5, 0.5],
-			'MaxChargeDamage': [75, 175, 275, 375],
-		},
-	},
-	'TFT_Shen': {
-		desc: `Shen creates a zone around himself for @ZoneDuration@ seconds, granting all nearby allies 100% chance to dodge incoming basic attacks.`,
-		icon: `ASSETS/Characters/Shen/HUD/Icons2D/Shen_W.dds`,
-		name: `Spirit's Refuge`,
-		variables: {
-			'ZoneDuration': [2, 3, 4, 5],
-		},
-	},
-	'TFT_Varus': {
-		desc: `Varus channels for 1.5 seconds, then fires a piercing arrow, dealing @ModifiedDamage@ magic damage to all enemies in its path.`,
-		icon: `ASSETS/Characters/Varus/HUD/Icons2D/VarusQ.dds`,
-		name: `Piercing Arrow`,
-		variables: {
-			'Damage': [50, 300, 550, 800],
-			'HexRange': [8, 8, 8, 8],
 		},
 	},
 	'TFT_Swain': {
@@ -6208,25 +6188,15 @@ export const abilities: Record<string, AbilityData> = {
 			'TotalHeal': [0, 360, 720, 1080],
 		},
 	},
-	'TFT_Veigar': {
-		desc: `Veigar blasts an enemy with magical energy, dealing @ModifiedDamage@ magic damage. If Veigar is a higher star level than his target, this damage is increased to @ModifiedLowerStarDamage@.`,
-		icon: `ASSETS/Characters/Veigar/HUD/Icons2D/VeigarPrimordialBurst.dds`,
-		name: `Primordial Burst`,
+	'TFT_Tristana': {
+		desc: `Tristana places a bomb on her current target which will detonate after she Basic Attacks them 3 times or @ExplosiveChargeDuration@ seconds pass without Tristana attacking them.<br><br>When the bomb detonates, it deals @ModifiedDamage@ magic damage to all nearby enemies, plus @PercentDamageIncrease@ for each Basic Attack, up to a maximum of @ModifiedMaxDamage@.`,
+		icon: `ASSETS/Characters/Tristana/HUD/Icons2D/Tristana_E.dds`,
+		name: `Explosive Charge`,
 		variables: {
-			'Damage': [50, 350, 650, 950],
-			'LowerStarDamage': [19999, 19999, 19999, 19999],
-		},
-	},
-	'TFT_Volibear': {
-		desc: `Volibear empowers his attacks for the next 20 seconds, causing them to chain to up to 3 nearby enemies. These chains deal 80% %i:scaleAD% physical damage and apply on-hit effects.`,
-		icon: `ASSETS/Characters/Volibear/HUD/Icons2D/VolibearR.dds`,
-		name: `Thunder Claws`,
-		variables: {
-			'BuffDuration': [20, 20, 20, 20],
-			'MaxBounces': [1, 2, 3, 4],
-			'ChainADMult': [0.699999988079071, 0.800000011920929, 0.8999999761581421, 1],
-			'SizeIncrease': [0.07999999821186066, 0.07999999821186066, 0.07999999821186066, 0.07999999821186066],
-			'HexRange': [1, 1, 1, 1],
+			'ExplosiveChargeDuration': [4, 4, 4, 4],
+			'ChargeBaseDamage': [30, 70, 110, 150],
+			'PercentDamageIncreasePerStack': [0.5, 0.5, 0.5, 0.5],
+			'MaxChargeDamage': [75, 175, 275, 375],
 		},
 	},
 	'TFT_TwistedFate': {
@@ -6241,6 +6211,32 @@ export const abilities: Record<string, AbilityData> = {
 			'GoldCardDamage': [50, 150, 250, 350],
 		},
 	},
+	'TFT_Varus': {
+		desc: `Varus channels for 1.5 seconds, then fires a piercing arrow, dealing @ModifiedDamage@ magic damage to all enemies in its path.`,
+		icon: `ASSETS/Characters/Varus/HUD/Icons2D/VarusQ.dds`,
+		name: `Piercing Arrow`,
+		variables: {
+			'Damage': [50, 300, 550, 800],
+			'HexRange': [8, 8, 8, 8],
+		},
+	},
+	'TFT_Vayne': {
+		desc: `Passive: Whenever Vayne Basic Attacks the same target 3 times, she deals @ModifiedDamage@ of her target's Maximum Health as true damage.`,
+		icon: `ASSETS/Characters/Vayne/HUD/Icons2D/Vayne_SilveredBolts.dds`,
+		name: `Silver Bolts`,
+		variables: {
+			'PercentDamage': [0.03999999910593033, 0.07999999821186066, 0.11999999731779099, 0.1599999964237213],
+		},
+	},
+	'TFT_Veigar': {
+		desc: `Veigar blasts an enemy with magical energy, dealing @ModifiedDamage@ magic damage. If Veigar is a higher star level than his target, this damage is increased to @ModifiedLowerStarDamage@.`,
+		icon: `ASSETS/Characters/Veigar/HUD/Icons2D/VeigarPrimordialBurst.dds`,
+		name: `Primordial Burst`,
+		variables: {
+			'Damage': [50, 350, 650, 950],
+			'LowerStarDamage': [19999, 19999, 19999, 19999],
+		},
+	},
 	'TFT_Vi': {
 		desc: `Vi charges at the farthest enemy, knocking aside and dealing @ModifiedDamage@ magic damage to all enemies along the way. When she reaches her target, she deals @ModifiedDamage@ magic damage and knocks them up for @CCDuration@ seconds.`,
 		icon: `ASSETS/Characters/TFT_Vi/HUD/Icons2D/TFT_ViR.TFT_Hextech.dds`,
@@ -6250,6 +6246,29 @@ export const abilities: Record<string, AbilityData> = {
 			'CCDuration': [1.5, 2, 2.5, 3],
 			'MoveSpeed': [1000, 1000, 1000, 1000],
 			'OthersCCDuration': [0.25, 0.25, 0.25, 0.25],
+		},
+	},
+	'TFT_Volibear': {
+		desc: `Volibear empowers his attacks for the next 20 seconds, causing them to chain to up to 3 nearby enemies. These chains deal 80% %i:scaleAD% physical damage and apply on-hit effects.`,
+		icon: `ASSETS/Characters/Volibear/HUD/Icons2D/VolibearR.dds`,
+		name: `Thunder Claws`,
+		variables: {
+			'BuffDuration': [20, 20, 20, 20],
+			'MaxBounces': [1, 2, 3, 4],
+			'ChainADMult': [0.699999988079071, 0.800000011920929, 0.8999999761581421, 1],
+			'SizeIncrease': [0.07999999821186066, 0.07999999821186066, 0.07999999821186066, 0.07999999821186066],
+			'HexRange': [1, 1, 1, 1],
+		},
+	},
+	'TFT_Warwick': {
+		desc: `Warwick pounces on the weakest enemy, stunning them for @Duration@ seconds and striking them @Hits@ times, dealing @ModifiedDamage@ magic damage. Each strike triggers on-hit effects and heals Warwick for 100% of the damage dealt.`,
+		icon: `ASSETS/Characters/Warwick/HUD/Icons2D/WarwickR.dds`,
+		name: `Infinite Duress`,
+		variables: {
+			'Duration': [1.5, 1.5, 1.5, 1.5],
+			'BaseDamage': [75, 150, 225, 300],
+			'DashHexSpeed': [6, 6, 6, 6],
+			'Hits': [3, 3, 3, 3],
 		},
 	},
 	'TFT_Yasuo': {
@@ -6263,25 +6282,6 @@ export const abilities: Record<string, AbilityData> = {
 			'QCountForEmpower': [2, 2, 2, 2],
 			'QWidth': [75, 75, 75, 75],
 			'QKnockupDuration': [1.5, 1.5, 1.5, 1.5],
-		},
-	},
-	'TFT_Vayne': {
-		desc: `Passive: Whenever Vayne Basic Attacks the same target 3 times, she deals @ModifiedDamage@ of her target's Maximum Health as true damage.`,
-		icon: `ASSETS/Characters/Vayne/HUD/Icons2D/Vayne_SilveredBolts.dds`,
-		name: `Silver Bolts`,
-		variables: {
-			'PercentDamage': [0.03999999910593033, 0.07999999821186066, 0.11999999731779099, 0.1599999964237213],
-		},
-	},
-	'TFT_Warwick': {
-		desc: `Warwick pounces on the weakest enemy, stunning them for @Duration@ seconds and striking them @Hits@ times, dealing @ModifiedDamage@ magic damage. Each strike triggers on-hit effects and heals Warwick for 100% of the damage dealt.`,
-		icon: `ASSETS/Characters/Warwick/HUD/Icons2D/WarwickR.dds`,
-		name: `Infinite Duress`,
-		variables: {
-			'Duration': [1.5, 1.5, 1.5, 1.5],
-			'BaseDamage': [75, 150, 225, 300],
-			'DashHexSpeed': [6, 6, 6, 6],
-			'Hits': [3, 3, 3, 3],
 		},
 	},
 	'TFT_Zed': {

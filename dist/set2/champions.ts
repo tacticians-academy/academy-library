@@ -5776,15 +5776,14 @@ export const abilities: Record<string, AbilityData> = {
 			'Damage': [0, 300, 600, 1200],
 		},
 	},
-	'TFT2_Ashe': {
-		desc: `Ashe gains @AttackSpeed*100@% Attack Speed for @Duration@ seconds, and her Basic Attacks fire a flurry of arrows for @ModifiedADDamage@ physical damage.`,
-		icon: `ASSETS/Characters/Ashe/HUD/Icons2D/Ashe_Q.dds`,
-		name: `Ranger's Focus`,
+	'TFT2_Amumu': {
+		desc: `Amumu explodes in an infernal tantrum, dealing @RModifiedDamage@ magic damage to all enemies within @RRange@ Hexes and stunning them for @RDuration@ seconds.`,
+		icon: `ASSETS/Characters/Amumu/HUD/Icons2D/Amumu_R.dds`,
+		name: `Curse of the Sad Mummy`,
 		variables: {
-			'Duration': [5, 5, 5, 5],
-			'AttackSpeed': [0.25, 0.5, 0.75, 1],
-			'PercentADPerArrow': [0.25, 0.30000001192092896, 0.3499999940395355, 0.75],
-			'NumArrows': [5, 5, 5, 5],
+			'RDamage': [0, 100, 200, 1337],
+			'RDuration': [1, 1.5, 2, 10],
+			'RRange': [3, 3, 3, 3],
 		},
 	},
 	'TFT2_Annie': {
@@ -5798,14 +5797,24 @@ export const abilities: Record<string, AbilityData> = {
 			'TibbersHP': [1600, 1600, 2200, 3000],
 		},
 	},
-	'TFT2_Amumu': {
-		desc: `Amumu explodes in an infernal tantrum, dealing @RModifiedDamage@ magic damage to all enemies within @RRange@ Hexes and stunning them for @RDuration@ seconds.`,
-		icon: `ASSETS/Characters/Amumu/HUD/Icons2D/Amumu_R.dds`,
-		name: `Curse of the Sad Mummy`,
+	'TFT2_Ashe': {
+		desc: `Ashe gains @AttackSpeed*100@% Attack Speed for @Duration@ seconds, and her Basic Attacks fire a flurry of arrows for @ModifiedADDamage@ physical damage.`,
+		icon: `ASSETS/Characters/Ashe/HUD/Icons2D/Ashe_Q.dds`,
+		name: `Ranger's Focus`,
 		variables: {
-			'RDamage': [0, 100, 200, 1337],
-			'RDuration': [1, 1.5, 2, 10],
-			'RRange': [3, 3, 3, 3],
+			'Duration': [5, 5, 5, 5],
+			'AttackSpeed': [0.25, 0.5, 0.75, 1],
+			'PercentADPerArrow': [0.25, 0.30000001192092896, 0.3499999940395355, 0.75],
+			'NumArrows': [5, 5, 5, 5],
+		},
+	},
+	'TFT2_Azir': {
+		desc: `Azir summons a Sand Soldier near a random enemy. Sand Soldiers attack nearby enemies whenever Azir attacks, dealing @ModifiedDamage@ magic damage in a line, and last @SoldierDuration@ seconds.`,
+		icon: `ASSETS/Characters/Azir/HUD/Icons2D/Azir_W.dds`,
+		name: `Arise!`,
+		variables: {
+			'SoldierDuration': [6, 6, 6, 6],
+			'SoldierDamage': [25, 150, 275, 450],
 		},
 	},
 	'TFT2_Brand': {
@@ -5817,13 +5826,13 @@ export const abilities: Record<string, AbilityData> = {
 			'MaxBounces': [4, 5, 7, 20],
 		},
 	},
-	'TFT2_Azir': {
-		desc: `Azir summons a Sand Soldier near a random enemy. Sand Soldiers attack nearby enemies whenever Azir attacks, dealing @ModifiedDamage@ magic damage in a line, and last @SoldierDuration@ seconds.`,
-		icon: `ASSETS/Characters/Azir/HUD/Icons2D/Azir_W.dds`,
-		name: `Arise!`,
+	'TFT2_Braum': {
+		desc: `Braum puts up his shield for @ShieldDuration@ seconds, absorbing and stopping all incoming missiles and reducing his damage taken from that direction by @ShieldDR@%.`,
+		icon: `ASSETS/Characters/Braum/HUD/Icons2D/Braum_E.dds`,
+		name: `Unbreakable`,
 		variables: {
-			'SoldierDuration': [6, 6, 6, 6],
-			'SoldierDamage': [25, 150, 275, 450],
+			'ShieldDR': [75, 80, 85, 90],
+			'ShieldDuration': [4, 4, 4, 4],
 		},
 	},
 	'TFT2_Diana': {
@@ -5837,15 +5846,6 @@ export const abilities: Record<string, AbilityData> = {
 			'ShieldDuration': [4, 4, 4, 4],
 		},
 	},
-	'TFT2_Braum': {
-		desc: `Braum puts up his shield for @ShieldDuration@ seconds, absorbing and stopping all incoming missiles and reducing his damage taken from that direction by @ShieldDR@%.`,
-		icon: `ASSETS/Characters/Braum/HUD/Icons2D/Braum_E.dds`,
-		name: `Unbreakable`,
-		variables: {
-			'ShieldDR': [75, 80, 85, 90],
-			'ShieldDuration': [4, 4, 4, 4],
-		},
-	},
 	'TFT2_DrMundo': {
 		desc: `Dr. Mundo creates a toxic cloud around him for @Duration@ seconds. The cloud deals @ModifiedDamage@ + @HealthPercent@% of Dr. Mundo's maximum health as magic damage to nearby enemies each second, and heals him for @HealRatio*100@% of that value.`,
 		icon: `ASSETS/Characters/DrMundo/HUD/Icons2D/DrMundo_R.dds`,
@@ -5855,6 +5855,14 @@ export const abilities: Record<string, AbilityData> = {
 			'Duration': [8, 8, 8, 8],
 			'BaseDamage': [0, 50, 100, 200],
 			'HealRatio': [0.75, 1, 1.25, 1.5],
+		},
+	},
+	'TFT2_Ezreal': {
+		desc: `Ezreal fires a shard of ice at the lowest-health enemy, dealing @ModifiedDamage@ magic damage and applying on-hit effects.`,
+		icon: `ASSETS/Characters/Ezreal/HUD/Icons2D/Ezreal_Q.dds`,
+		name: `Ice Shot`,
+		variables: {
+			'BaseDamage': [0, 250, 450, 900],
 		},
 	},
 	'TFT2_Ivern': {
@@ -5889,6 +5897,16 @@ export const abilities: Record<string, AbilityData> = {
 			'AttackRadius': [1, 1, 1, 1],
 		},
 	},
+	'TFT2_Karma': {
+		desc: `At start of combat, Karma tethers to her closest ally.<br><br>Karma shields the tethered ally (or a random one if the tether is dead) for @Duration@ seconds, absorbing the next @ModifiedShield@ damage. While the shield holds, the ally receives @ModifiedAS@% bonus Attack Speed.`,
+		icon: `ASSETS/Characters/Karma/HUD/Icons2D/Karma_E2.dds`,
+		name: `Inspire`,
+		variables: {
+			'Duration': [5, 5, 5, 5],
+			'ShieldAmount': [100, 250, 400, 800],
+			'StatsValue': [20, 35, 50, 100],
+		},
+	},
 	'TFT2_Khazix': {
 		desc: `Kha'Zix stealths and attacks the lowest health enemy, critically striking for @ModifiedDamage@ physical damage and gaining @ManaRefund@ mana.`,
 		icon: `ASSETS/Characters/KhaZix/HUD/Icons2D/Khazix_R_red.dds`,
@@ -5900,12 +5918,23 @@ export const abilities: Record<string, AbilityData> = {
 			'ManaRefund': [0, 5, 10, 15],
 		},
 	},
-	'TFT2_Ezreal': {
-		desc: `Ezreal fires a shard of ice at the lowest-health enemy, dealing @ModifiedDamage@ magic damage and applying on-hit effects.`,
-		icon: `ASSETS/Characters/Ezreal/HUD/Icons2D/Ezreal_Q.dds`,
-		name: `Ice Shot`,
+	'TFT2_Kindred': {
+		desc: `Wolf mauls Kindred's target, dealing @ModifiedDamage@ magic damage and reducing their healing by 80% for @GrievousWoundsDuration@ seconds. Meanwhile, Lamb leaps away from Kindred's target.`,
+		icon: `ASSETS/Characters/Kindred/HUD/Icons2D/Kindred_E.dds`,
+		name: `Dance of Dread`,
 		variables: {
-			'BaseDamage': [0, 250, 450, 900],
+			'Damage': [-25, 150, 325, 650],
+			'HexRange': [2, 2, 2, 2],
+			'GrievousWoundsDuration': [5, 5, 5, 5],
+		},
+	},
+	'TFT2_KogMaw': {
+		desc: `Kog'Maw launches an acidic blob at a random enemy, dealing @ModifiedDamage@ magic damage.`,
+		icon: `ASSETS/Characters/KogMaw/HUD/Icons2D/KogMaw_LivingArtillery.dds`,
+		name: `Living Artillery`,
+		variables: {
+			'Damage': [0, 150, 300, 500],
+			'DelayTime': [0.3499999940395355, 0.3499999940395355, 0.3499999940395355, 0.3499999940395355],
 		},
 	},
 	'TFT2_LeBlanc': {
@@ -5928,45 +5957,19 @@ export const abilities: Record<string, AbilityData> = {
 			'Duration': [4, 4, 4, 4],
 		},
 	},
-	'TFT2_Kindred': {
-		desc: `Wolf mauls Kindred's target, dealing @ModifiedDamage@ magic damage and reducing their healing by 80% for @GrievousWoundsDuration@ seconds. Meanwhile, Lamb leaps away from Kindred's target.`,
-		icon: `ASSETS/Characters/Kindred/HUD/Icons2D/Kindred_E.dds`,
-		name: `Dance of Dread`,
+	'TFT2_Lucian': {
+		desc: `Lucian fires @NumShots@ shots in a direction over @Duration@ seconds, each hitting for @TADRatio*100@% of his AD, applying on-hits, and dealing @ModifiedDamage@ magic damage.<br><br>Lucian fires extra shots based on his Attack Speed. (Bonus Shots: @ShotsFromAS@)<br><br>Lucian will dash during The Culling to keep hitting enemies.`,
+		icon: `ASSETS/Characters/Lucian/HUD/Icons2D/Lucian_R.dds`,
+		name: `The Culling`,
 		variables: {
-			'Damage': [-25, 150, 325, 650],
-			'HexRange': [2, 2, 2, 2],
-			'GrievousWoundsDuration': [5, 5, 5, 5],
-		},
-	},
-	'TFT2_Karma': {
-		desc: `At start of combat, Karma tethers to her closest ally.<br><br>Karma shields the tethered ally (or a random one if the tether is dead) for @Duration@ seconds, absorbing the next @ModifiedShield@ damage. While the shield holds, the ally receives @ModifiedAS@% bonus Attack Speed.`,
-		icon: `ASSETS/Characters/Karma/HUD/Icons2D/Karma_E2.dds`,
-		name: `Inspire`,
-		variables: {
-			'Duration': [5, 5, 5, 5],
-			'ShieldAmount': [100, 250, 400, 800],
-			'StatsValue': [20, 35, 50, 100],
-		},
-	},
-	'TFT2_KogMaw': {
-		desc: `Kog'Maw launches an acidic blob at a random enemy, dealing @ModifiedDamage@ magic damage.`,
-		icon: `ASSETS/Characters/KogMaw/HUD/Icons2D/KogMaw_LivingArtillery.dds`,
-		name: `Living Artillery`,
-		variables: {
-			'Damage': [0, 150, 300, 500],
-			'DelayTime': [0.3499999940395355, 0.3499999940395355, 0.3499999940395355, 0.3499999940395355],
+			'Duration': [4, 4, 4, 4],
+			'BaseDamage': [30, 40, 50, 100],
+			'TADRatio': [0.5, 0.5, 0.5, 0.5],
+			'AttacksPerSecondCoefficient': [1, 1, 1, 1],
+			'NumShots': [12, 12, 12, 12],
 		},
 	},
 	'TFT2_LuxElectric': {
-		desc: `Lux fires an elemental blast dealing @ModifiedDamage@ magic damage to all enemies in a line.<br><br>If Final Spark kills a unit, Lux is refunded @ManaRefund@ mana.`,
-		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds`,
-		name: `Final Spark`,
-		variables: {
-			'Damage': [200, 550, 900, 99999],
-			'ManaRefund': [50, 50, 50, 50],
-		},
-	},
-	'TFT2_LuxGlacial': {
 		desc: `Lux fires an elemental blast dealing @ModifiedDamage@ magic damage to all enemies in a line.<br><br>If Final Spark kills a unit, Lux is refunded @ManaRefund@ mana.`,
 		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds`,
 		name: `Final Spark`,
@@ -5984,34 +5987,7 @@ export const abilities: Record<string, AbilityData> = {
 			'ManaRefund': [50, 50, 50, 50],
 		},
 	},
-	'TFT2_LuxLight': {
-		desc: `Lux fires an elemental blast dealing @ModifiedDamage@ magic damage to all enemies in a line.<br><br>If Final Spark kills a unit, Lux is refunded @ManaRefund@ mana.`,
-		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds`,
-		name: `Final Spark`,
-		variables: {
-			'Damage': [200, 550, 900, 99999],
-			'ManaRefund': [50, 50, 50, 50],
-		},
-	},
-	'TFT2_LuxOcean': {
-		desc: `Lux fires an elemental blast dealing @ModifiedDamage@ magic damage to all enemies in a line.<br><br>If Final Spark kills a unit, Lux is refunded @ManaRefund@ mana.`,
-		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds`,
-		name: `Final Spark`,
-		variables: {
-			'Damage': [200, 550, 900, 99999],
-			'ManaRefund': [50, 50, 50, 50],
-		},
-	},
 	'TFT2_LuxMetal': {
-		desc: `Lux fires an elemental blast dealing @ModifiedDamage@ magic damage to all enemies in a line.<br><br>If Final Spark kills a unit, Lux is refunded @ManaRefund@ mana.`,
-		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds`,
-		name: `Final Spark`,
-		variables: {
-			'Damage': [200, 550, 900, 99999],
-			'ManaRefund': [50, 50, 50, 50],
-		},
-	},
-	'TFT2_LuxShadow': {
 		desc: `Lux fires an elemental blast dealing @ModifiedDamage@ magic damage to all enemies in a line.<br><br>If Final Spark kills a unit, Lux is refunded @ManaRefund@ mana.`,
 		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds`,
 		name: `Final Spark`,
@@ -6029,7 +6005,34 @@ export const abilities: Record<string, AbilityData> = {
 			'ManaRefund': [50, 50, 50, 50],
 		},
 	},
+	'TFT2_LuxGlacial': {
+		desc: `Lux fires an elemental blast dealing @ModifiedDamage@ magic damage to all enemies in a line.<br><br>If Final Spark kills a unit, Lux is refunded @ManaRefund@ mana.`,
+		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds`,
+		name: `Final Spark`,
+		variables: {
+			'Damage': [200, 550, 900, 99999],
+			'ManaRefund': [50, 50, 50, 50],
+		},
+	},
+	'TFT2_LuxOcean': {
+		desc: `Lux fires an elemental blast dealing @ModifiedDamage@ magic damage to all enemies in a line.<br><br>If Final Spark kills a unit, Lux is refunded @ManaRefund@ mana.`,
+		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds`,
+		name: `Final Spark`,
+		variables: {
+			'Damage': [200, 550, 900, 99999],
+			'ManaRefund': [50, 50, 50, 50],
+		},
+	},
 	'TFT2_LuxWoodland': {
+		desc: `Lux fires an elemental blast dealing @ModifiedDamage@ magic damage to all enemies in a line.<br><br>If Final Spark kills a unit, Lux is refunded @ManaRefund@ mana.`,
+		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds`,
+		name: `Final Spark`,
+		variables: {
+			'Damage': [200, 550, 900, 99999],
+			'ManaRefund': [50, 50, 50, 50],
+		},
+	},
+	'TFT2_LuxShadow': {
 		desc: `Lux fires an elemental blast dealing @ModifiedDamage@ magic damage to all enemies in a line.<br><br>If Final Spark kills a unit, Lux is refunded @ManaRefund@ mana.`,
 		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds`,
 		name: `Final Spark`,
@@ -6045,6 +6048,26 @@ export const abilities: Record<string, AbilityData> = {
 		variables: {
 			'Damage': [200, 550, 900, 99999],
 			'ManaRefund': [50, 50, 50, 50],
+		},
+	},
+	'TFT2_LuxLight': {
+		desc: `Lux fires an elemental blast dealing @ModifiedDamage@ magic damage to all enemies in a line.<br><br>If Final Spark kills a unit, Lux is refunded @ManaRefund@ mana.`,
+		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds`,
+		name: `Final Spark`,
+		variables: {
+			'Damage': [200, 550, 900, 99999],
+			'ManaRefund': [50, 50, 50, 50],
+		},
+	},
+	'TFT2_Malphite': {
+		desc: `Malphite charges to a random enemy, dealing @ModifiedDamage@ magic damage to nearby enemies, knocking them into the air,  and stunning them for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/Malphite/HUD/Icons2D/Malphite_UnstoppableForce.dds`,
+		name: `Unstoppable Force`,
+		variables: {
+			'Damage': [0, 150, 300, 1000],
+			'Radius': [2, 2, 2, 2],
+			'StunDuration': [1.5, 2, 2.5, 5],
+			'KnockupDuration': [1, 1, 1, 1],
 		},
 	},
 	'TFT2_Malzahar': {
@@ -6066,17 +6089,6 @@ export const abilities: Record<string, AbilityData> = {
 			'BuffDuration': [6, 6, 6, 6],
 		},
 	},
-	'TFT2_Nami': {
-		desc: `Nami summons a massive tidal wave which deals @ModifiedDamage@ magic damage to all enemies hit, knocking up and stunning them for @StunDuration@ seconds. Allies hit are empowered, and their Basic Attacks deal an additional @ModifiedBoost@ magic damage for the next @AllyBuffDuration@ seconds.`,
-		icon: `ASSETS/Characters/Nami/HUD/Icons2D/NamiR.dds`,
-		name: `Tidal Wave`,
-		variables: {
-			'Damage': [0, 100, 200, 300],
-			'StunDuration': [1, 1.5, 2, 2.5],
-			'AllyDamageBonus': [0, 25, 50, 300],
-			'AllyBuffDuration': [8, 8, 8, 8],
-		},
-	},
 	'TFT2_MasterYi': {
 		desc: `Master Yi meditates, becoming untargetable for @MeditateDuration@ seconds and healing @ModifiedHeal@ of his max health over the duration.<br><br>After Master Yi finishes meditating, he gains @AttackSpeed*100@% Attack Speed and deals @ModifiedDamage@ bonus magic damage on hit for @BuffDuration@ seconds.`,
 		icon: `ASSETS/Characters/MasterYi/HUD/Icons2D/MasterYi_W.dds`,
@@ -6089,6 +6101,17 @@ export const abilities: Record<string, AbilityData> = {
 			'AttackSpeed': [1, 1, 1, 1],
 		},
 	},
+	'TFT2_Nami': {
+		desc: `Nami summons a massive tidal wave which deals @ModifiedDamage@ magic damage to all enemies hit, knocking up and stunning them for @StunDuration@ seconds. Allies hit are empowered, and their Basic Attacks deal an additional @ModifiedBoost@ magic damage for the next @AllyBuffDuration@ seconds.`,
+		icon: `ASSETS/Characters/Nami/HUD/Icons2D/NamiR.dds`,
+		name: `Tidal Wave`,
+		variables: {
+			'Damage': [0, 100, 200, 300],
+			'StunDuration': [1, 1.5, 2, 2.5],
+			'AllyDamageBonus': [0, 25, 50, 300],
+			'AllyBuffDuration': [8, 8, 8, 8],
+		},
+	},
 	'TFT2_Nasus': {
 		desc: `Nasus surrounds himself in light for @Duration@ seconds, gaining @ModifiedBonusHealth@ maximum health and dealing @ModifiedDamage@ magic damage to adjacent enemies every second.`,
 		icon: `ASSETS/Characters/Nasus/HUD/Icons2D/Nasus_R.dds`,
@@ -6097,26 +6120,6 @@ export const abilities: Record<string, AbilityData> = {
 			'BonusHealth': [100, 250, 400, 550],
 			'Damage': [30, 50, 70, 90],
 			'Duration': [7, 7, 7, 7],
-		},
-	},
-	'TFT2_Malphite': {
-		desc: `Malphite charges to a random enemy, dealing @ModifiedDamage@ magic damage to nearby enemies, knocking them into the air,  and stunning them for @StunDuration@ seconds.`,
-		icon: `ASSETS/Characters/Malphite/HUD/Icons2D/Malphite_UnstoppableForce.dds`,
-		name: `Unstoppable Force`,
-		variables: {
-			'Damage': [0, 150, 300, 1000],
-			'Radius': [2, 2, 2, 2],
-			'StunDuration': [1.5, 2, 2.5, 5],
-			'KnockupDuration': [1, 1, 1, 1],
-		},
-	},
-	'TFT2_Qiyana': {
-		desc: `Qiyana blasts a short line in front of her, stunning enemies for @CCDuration@ seconds and dealing @ModifiedDamage@ magic damage.`,
-		icon: `ASSETS/Characters/Qiyana/HUD/Icons2D/Qiyana_Q1.dds`,
-		name: `Elemental Blade`,
-		variables: {
-			'BaseDamage': [100, 300, 500, 900],
-			'CCDuration': [1.5, 2.5, 3.5, 4.5],
 		},
 	},
 	'TFT2_Nautilus': {
@@ -6147,16 +6150,6 @@ export const abilities: Record<string, AbilityData> = {
 			'HealPercent': [0.4000000059604645, 0.5, 0.6000000238418579, 0.699999988079071],
 		},
 	},
-	'TFT2_Ornn': {
-		desc: `Ornn breathes lightning in a cone, dealing @ModifiedDamage@ magic damage to enemies therein, and increasing their chance to be critically struck by @CritAmpPercent@% for the next @Duration@ seconds.`,
-		icon: `ASSETS/Characters/Ornn/HUD/Icons2D/OrnnW.dds`,
-		name: `Lightning Breath`,
-		variables: {
-			'Damage': [0, 125, 250, 450],
-			'CritAmpPercent': [25, 25, 25, 25],
-			'Duration': [10, 10, 10, 10],
-		},
-	},
 	'TFT2_Olaf': {
 		desc: `Olaf gains @AttackSpeed*100@% Attack Speed, up to @LifeSteal*100@% Lifesteal based on missing health, and immunity to crowd control for the rest of the round.`,
 		icon: `ASSETS/Characters/Olaf/HUD/Icons2D/Olaf_R.dds`,
@@ -6168,9 +6161,19 @@ export const abilities: Record<string, AbilityData> = {
 			'Duration': [5, 5, 5, 5],
 		},
 	},
-	'TFT2_QiyanaOcean': {
+	'TFT2_Ornn': {
+		desc: `Ornn breathes lightning in a cone, dealing @ModifiedDamage@ magic damage to enemies therein, and increasing their chance to be critically struck by @CritAmpPercent@% for the next @Duration@ seconds.`,
+		icon: `ASSETS/Characters/Ornn/HUD/Icons2D/OrnnW.dds`,
+		name: `Lightning Breath`,
+		variables: {
+			'Damage': [0, 125, 250, 450],
+			'CritAmpPercent': [25, 25, 25, 25],
+			'Duration': [10, 10, 10, 10],
+		},
+	},
+	'TFT2_Qiyana': {
 		desc: `Qiyana blasts a short line in front of her, stunning enemies for @CCDuration@ seconds and dealing @ModifiedDamage@ magic damage.`,
-		icon: `ASSETS/Characters/Qiyana/HUD/Icons2D/Qiyana_Q2_Blue.dds`,
+		icon: `ASSETS/Characters/Qiyana/HUD/Icons2D/Qiyana_Q1.dds`,
 		name: `Elemental Blade`,
 		variables: {
 			'BaseDamage': [100, 300, 500, 900],
@@ -6186,36 +6189,13 @@ export const abilities: Record<string, AbilityData> = {
 			'CCDuration': [1.5, 2.5, 3.5, 4.5],
 		},
 	},
-	'TFT2_Lucian': {
-		desc: `Lucian fires @NumShots@ shots in a direction over @Duration@ seconds, each hitting for @TADRatio*100@% of his AD, applying on-hits, and dealing @ModifiedDamage@ magic damage.<br><br>Lucian fires extra shots based on his Attack Speed. (Bonus Shots: @ShotsFromAS@)<br><br>Lucian will dash during The Culling to keep hitting enemies.`,
-		icon: `ASSETS/Characters/Lucian/HUD/Icons2D/Lucian_R.dds`,
-		name: `The Culling`,
+	'TFT2_QiyanaOcean': {
+		desc: `Qiyana blasts a short line in front of her, stunning enemies for @CCDuration@ seconds and dealing @ModifiedDamage@ magic damage.`,
+		icon: `ASSETS/Characters/Qiyana/HUD/Icons2D/Qiyana_Q2_Blue.dds`,
+		name: `Elemental Blade`,
 		variables: {
-			'Duration': [4, 4, 4, 4],
-			'BaseDamage': [30, 40, 50, 100],
-			'TADRatio': [0.5, 0.5, 0.5, 0.5],
-			'AttacksPerSecondCoefficient': [1, 1, 1, 1],
-			'NumShots': [12, 12, 12, 12],
-		},
-	},
-	'TFT2_Renekton': {
-		desc: `Renekton swings his blade, dealing @ModifiedDamage@ magic damage to nearby enemies and healing himself for @ModifiedHeal@ per enemy hit.`,
-		icon: `ASSETS/Characters/Renekton/HUD/Icons2D/Renekton_Q.dds`,
-		name: `Cull the Meek`,
-		variables: {
-			'BaseDamage': [25, 150, 275, 475],
-			'HealAmount': [75, 150, 225, 300],
-			'HexRadius': [1, 1, 1, 1],
-		},
-	},
-	'TFT2_Senna': {
-		desc: `Senna fires a beam through her furthest ally, dealing @ModifiedDamage@ magic damage to enemies, and buffing allies' on-hits for @AllyBuffDuration@ seconds to deal @ModifiedAllyDamage@ magic damage from Senna.`,
-		icon: `ASSETS/Characters/Senna/HUD/Icons2D/Senna_Q.Senna.dds`,
-		name: `Piercing Darkness`,
-		variables: {
-			'Damage': [0, 50, 100, 150],
-			'AllyBuffDuration': [5, 5, 5, 5],
-			'AllyDamageBonus': [0, 20, 45, 70],
+			'BaseDamage': [100, 300, 500, 900],
+			'CCDuration': [1.5, 2.5, 3.5, 4.5],
 		},
 	},
 	'TFT2_QiyanaWoodland': {
@@ -6246,6 +6226,38 @@ export const abilities: Record<string, AbilityData> = {
 			'Duration': [5, 5, 5, 5],
 		},
 	},
+	'TFT2_Renekton': {
+		desc: `Renekton swings his blade, dealing @ModifiedDamage@ magic damage to nearby enemies and healing himself for @ModifiedHeal@ per enemy hit.`,
+		icon: `ASSETS/Characters/Renekton/HUD/Icons2D/Renekton_Q.dds`,
+		name: `Cull the Meek`,
+		variables: {
+			'BaseDamage': [25, 150, 275, 475],
+			'HealAmount': [75, 150, 225, 300],
+			'HexRadius': [1, 1, 1, 1],
+		},
+	},
+	'TFT2_Senna': {
+		desc: `Senna fires a beam through her furthest ally, dealing @ModifiedDamage@ magic damage to enemies, and buffing allies' on-hits for @AllyBuffDuration@ seconds to deal @ModifiedAllyDamage@ magic damage from Senna.`,
+		icon: `ASSETS/Characters/Senna/HUD/Icons2D/Senna_Q.Senna.dds`,
+		name: `Piercing Darkness`,
+		variables: {
+			'Damage': [0, 50, 100, 150],
+			'AllyBuffDuration': [5, 5, 5, 5],
+			'AllyDamageBonus': [0, 20, 45, 70],
+		},
+	},
+	'TFT2_Singed': {
+		desc: `Passive: Singed leaves a toxic cloud wherever he moves, poisoning enemies who stand in it for @ModifiedDamage@ magic damage over @PoisonDuration@ seconds.`,
+		icon: `ASSETS/Characters/Singed/HUD/Icons2D/Singed_Q.dds`,
+		name: `Poison Trail`,
+		variables: {
+			'PoisonDuration': [6, 6, 6, 6],
+			'CloudDuration': [3.25, 3.25, 3.25, 3.25],
+			'TotalDamage': [0, 225, 300, 2000],
+			'TickRate': [0.5, 0.5, 0.5, 0.5],
+			'MSModifier': [0.75, 0.75, 0.75, 0.75],
+		},
+	},
 	'TFT2_Sion': {
 		desc: `Sion winds up for a moment, then smashes his axe down in a direction, knocking up and dealing @ModifiedDamage@ magic damage to all enemies hit.`,
 		icon: `ASSETS/Characters/Sion/HUD/Icons2D/Sion_Q.dds`,
@@ -6267,18 +6279,6 @@ export const abilities: Record<string, AbilityData> = {
 			'Duration': [5, 5, 5, 5],
 		},
 	},
-	'TFT2_Singed': {
-		desc: `Passive: Singed leaves a toxic cloud wherever he moves, poisoning enemies who stand in it for @ModifiedDamage@ magic damage over @PoisonDuration@ seconds.`,
-		icon: `ASSETS/Characters/Singed/HUD/Icons2D/Singed_Q.dds`,
-		name: `Poison Trail`,
-		variables: {
-			'PoisonDuration': [6, 6, 6, 6],
-			'CloudDuration': [3.25, 3.25, 3.25, 3.25],
-			'TotalDamage': [0, 225, 300, 2000],
-			'TickRate': [0.5, 0.5, 0.5, 0.5],
-			'MSModifier': [0.75, 0.75, 0.75, 0.75],
-		},
-	},
 	'TFT2_Skarner': {
 		desc: `Skarner gains a shield against @ModifiedShield@ damage for @Duration@ seconds. While the shield persists, Skarner gains @AttackSpeed*100@% attack speed.`,
 		icon: `ASSETS/Characters/Skarner/HUD/Icons2D/Skarner_W.dds`,
@@ -6287,6 +6287,16 @@ export const abilities: Record<string, AbilityData> = {
 			'ShieldAmount': [-150, 150, 450, 750],
 			'Duration': [8, 8, 8, 8],
 			'AttackSpeed': [0.25, 0.5, 0.75, 1],
+		},
+	},
+	'TFT2_Soraka': {
+		desc: `Soraka calms the area around a random enemy for @ZoneDuration@ seconds, dealing @ModifiedDamage@ magic damage to all enemies standing in it and preventing them from gaining mana.`,
+		icon: `ASSETS/Characters/Soraka/HUD/Icons2D/Soraka_E.dds`,
+		name: `Equinox`,
+		variables: {
+			'Damage': [0, 150, 300, 450],
+			'ZoneDuration': [1, 3, 5, 7],
+			'Radius': [1, 1, 1, 1],
 		},
 	},
 	'TFT2_Syndra': {
@@ -6337,24 +6347,6 @@ export const abilities: Record<string, AbilityData> = {
 			'ADAmp': [1, 1.2999999523162842, 1.600000023841858, 3],
 		},
 	},
-	'TFT2_Vayne': {
-		desc: `Passive: Whenever Vayne Basic Attacks the same target 3 times, she deals @ModifiedDamage@ of her target's maximum health as true damage.`,
-		icon: `ASSETS/Characters/Vayne/HUD/Icons2D/Vayne_SilveredBolts.dds`,
-		name: `Silver Bolts`,
-		variables: {
-			'PercentDamage': [0.07000000029802322, 0.10000000149011612, 0.12999999523162842, 0.1599999964237213],
-		},
-	},
-	'TFT2_Soraka': {
-		desc: `Soraka calms the area around a random enemy for @ZoneDuration@ seconds, dealing @ModifiedDamage@ magic damage to all enemies standing in it and preventing them from gaining mana.`,
-		icon: `ASSETS/Characters/Soraka/HUD/Icons2D/Soraka_E.dds`,
-		name: `Equinox`,
-		variables: {
-			'Damage': [0, 150, 300, 450],
-			'ZoneDuration': [1, 3, 5, 7],
-			'Radius': [1, 1, 1, 1],
-		},
-	},
 	'TFT2_Varus': {
 		desc: `Varus channels for 1.5 seconds, then fires a piercing arrow, dealing @ModifiedDamage@ magic damage to all enemies in its path.`,
 		icon: `ASSETS/Characters/Varus/HUD/Icons2D/VarusQ.dds`,
@@ -6364,22 +6356,20 @@ export const abilities: Record<string, AbilityData> = {
 			'HexRange': [8, 8, 8, 8],
 		},
 	},
+	'TFT2_Vayne': {
+		desc: `Passive: Whenever Vayne Basic Attacks the same target 3 times, she deals @ModifiedDamage@ of her target's maximum health as true damage.`,
+		icon: `ASSETS/Characters/Vayne/HUD/Icons2D/Vayne_SilveredBolts.dds`,
+		name: `Silver Bolts`,
+		variables: {
+			'PercentDamage': [0.07000000029802322, 0.10000000149011612, 0.12999999523162842, 0.1599999964237213],
+		},
+	},
 	'TFT2_Veigar': {
 		desc: `Veigar blasts an enemy, dealing @ModifiedDamage@ magic damage. If Veigar is a higher star level than his target they are instantly killed instead.`,
 		icon: `ASSETS/Characters/Veigar/HUD/Icons2D/VeigarPrimordialBurst.dds`,
 		name: `Primordial Burst`,
 		variables: {
 			'Damage': [0, 325, 650, 975],
-		},
-	},
-	'TFT2_Yorick': {
-		desc: `Yorick blesses his @NumAlliesToTarget@ lowest-health allies (except Minions of Light). When they die they are resurrected as a Minion of Light with @GhoulHealth@ health and @ModifiedAD@ attack damage.<br><br>Minions of Light benefit from active Light trait bonuses.`,
-		icon: `ASSETS/Characters/Yorick/HUD/Icons2D/Yorick_R.dds`,
-		name: `Shepherd of Souls`,
-		variables: {
-			'GhoulHealth': [150, 500, 700, 2000],
-			'GhoulAD': [25, 100, 175, 250],
-			'NumAlliesToTarget': [1, 2, 3, 12],
 		},
 	},
 	'TFT2_Vladimir': {
@@ -6392,13 +6382,14 @@ export const abilities: Record<string, AbilityData> = {
 			'HealingAmp': [],
 		},
 	},
-	'TFT2_Zed': {
-		desc: `Zed creates a clone of himself behind his current target. <br><br>This clone inherits its creator's items, stats, and current health, and can cast Living Lightning. Its mana cost is @ManaCostIncrease@ higher.`,
-		icon: `ASSETS/Characters/Zed/HUD/Icons2D/shadowninja_w.dds`,
-		name: `Living Lightning`,
+	'TFT2_Volibear': {
+		desc: `Volibear bites his target, dealing @ModifiedDamage@ magic damage. If the target is below @ExecuteThreshold*100@% health, Frenzied Bite kills the target and fully restores Volibear's mana.`,
+		icon: `ASSETS/Characters/Volibear/HUD/Icons2D/VolibearW.dds`,
+		name: `Frenzied Bite`,
 		variables: {
-			'Clones': [1, 1, 1, 1],
-			'ManaCostIncrease': [75, 50, 25, -125],
+			'Damage': [-50, 200, 450, 850],
+			'ExecuteThreshold': [0.3499999940395355, 0.3499999940395355, 0.3499999940395355, 0.3499999940395355],
+			'ExecuteDamage': [19999, 19999, 19999, 19999],
 		},
 	},
 	'TFT2_Warwick': {
@@ -6412,17 +6403,6 @@ export const abilities: Record<string, AbilityData> = {
 			'Hits': [3, 3, 3, 3],
 		},
 	},
-	'TFT2_Zyra': {
-		desc: `Zyra summons @NumPlants@ Flame Spitters at random locations on the edge of the arena. They attack the nearest enemy for @PlantDuration@ seconds, dealing @ModifiedDamage@ magic damage per attack a total of @PlantAmmo@ times.`,
-		icon: `ASSETS/Characters/Zyra/HUD/Icons2D/ZyraQ.dds`,
-		name: `Rampant Growth`,
-		variables: {
-			'NumPlants': [1, 2, 3, 5],
-			'PlantAD': [45, 55, 65, 75],
-			'PlantAmmo': [4, 4, 4, 4],
-			'PlantDuration': [4, 4, 4, 4],
-		},
-	},
 	'TFT2_Yasuo': {
 		desc: `Yasuo blinks to the enemy with the most items and knocks them up, holding them airborne for @StunDuration@ seconds and hitting them @NumHits@ times, dealing Basic Attack damage and applying on-hit effects.`,
 		icon: `ASSETS/Characters/Yasuo/HUD/Icons2D/Yasuo_R.dds`,
@@ -6433,14 +6413,34 @@ export const abilities: Record<string, AbilityData> = {
 			'NumHits': [3, 4, 5, 6],
 		},
 	},
-	'TFT2_Volibear': {
-		desc: `Volibear bites his target, dealing @ModifiedDamage@ magic damage. If the target is below @ExecuteThreshold*100@% health, Frenzied Bite kills the target and fully restores Volibear's mana.`,
-		icon: `ASSETS/Characters/Volibear/HUD/Icons2D/VolibearW.dds`,
-		name: `Frenzied Bite`,
+	'TFT2_Yorick': {
+		desc: `Yorick blesses his @NumAlliesToTarget@ lowest-health allies (except Minions of Light). When they die they are resurrected as a Minion of Light with @GhoulHealth@ health and @ModifiedAD@ attack damage.<br><br>Minions of Light benefit from active Light trait bonuses.`,
+		icon: `ASSETS/Characters/Yorick/HUD/Icons2D/Yorick_R.dds`,
+		name: `Shepherd of Souls`,
 		variables: {
-			'Damage': [-50, 200, 450, 850],
-			'ExecuteThreshold': [0.3499999940395355, 0.3499999940395355, 0.3499999940395355, 0.3499999940395355],
-			'ExecuteDamage': [19999, 19999, 19999, 19999],
+			'GhoulHealth': [150, 500, 700, 2000],
+			'GhoulAD': [25, 100, 175, 250],
+			'NumAlliesToTarget': [1, 2, 3, 12],
+		},
+	},
+	'TFT2_Zed': {
+		desc: `Zed creates a clone of himself behind his current target. <br><br>This clone inherits its creator's items, stats, and current health, and can cast Living Lightning. Its mana cost is @ManaCostIncrease@ higher.`,
+		icon: `ASSETS/Characters/Zed/HUD/Icons2D/shadowninja_w.dds`,
+		name: `Living Lightning`,
+		variables: {
+			'Clones': [1, 1, 1, 1],
+			'ManaCostIncrease': [75, 50, 25, -125],
+		},
+	},
+	'TFT2_Zyra': {
+		desc: `Zyra summons @NumPlants@ Flame Spitters at random locations on the edge of the arena. They attack the nearest enemy for @PlantDuration@ seconds, dealing @ModifiedDamage@ magic damage per attack a total of @PlantAmmo@ times.`,
+		icon: `ASSETS/Characters/Zyra/HUD/Icons2D/ZyraQ.dds`,
+		name: `Rampant Growth`,
+		variables: {
+			'NumPlants': [1, 2, 3, 5],
+			'PlantAD': [45, 55, 65, 75],
+			'PlantAmmo': [4, 4, 4, 4],
+			'PlantDuration': [4, 4, 4, 4],
 		},
 	},
 }

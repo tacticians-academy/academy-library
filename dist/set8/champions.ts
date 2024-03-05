@@ -6306,16 +6306,6 @@ export const abilities: Record<string, AbilityData> = {
 			'AugmentHealth': [0.30000001192092896, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
 		},
 	},
-	'TFT8_Ashe': {
-		desc: `Ashe gains <scaleAD>@TotalDamage@</scaleAD> Attack Damage (@ADPercent*100@% Attack Damage %i:scaleAD% + @ModifiedADGain@) for the next @Duration@ seconds.`,
-		icon: `ASSETS/Characters/Ashe/HUD/Icons2D/Ashe_Q.dds`,
-		name: `Ranger's Focus`,
-		variables: {
-			'Duration': [5, 5, 5, 5],
-			'ADPercent': [0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645],
-			'ADGain': [0, 12, 18, 25],
-		},
-	},
 	'TFT8_Annie': {
 		desc: `Annie blasts a cone of fire, dealing @ModifiedDamage@ magic damage to enemies in front of her, then creates a @ModifiedShield@ Health shield on herself for @ShieldDuration@ seconds.`,
 		icon: `ASSETS/Characters/Annie/HUD/Icons2D/Annie_Q.dds`,
@@ -6333,6 +6323,24 @@ export const abilities: Record<string, AbilityData> = {
 		variables: {
 			'DataValue': [0, 1, 2, 10],
 			'OtherValue': [0, 100, 200, 1000],
+		},
+	},
+	'TFT6_ArchiveOfAugments': {
+		desc: `Drag this Archive to the Shop to open an Armory full of Augments! You will have 30 seconds to choose. Depending on when the Archive is sold, the shop will have a higher tier of Augments available.<br><br>Stage 1-2: Tier 1 (Silver)<br><br>Stage 3: Tier 2 (Gold)<br><br>Stage 4+: Tier 3 (Prismatic)<br>`,
+		icon: `ASSETS/Characters/TFT6_ArchiveOfAugments/HUD/TFT6_ArchiveOfAugments_Square.dds`,
+		name: `Archive Of Augments`,
+		variables: {
+			'RoundsToHatch': [2, 2, 2, 2],
+		},
+	},
+	'TFT8_Ashe': {
+		desc: `Ashe gains <scaleAD>@TotalDamage@</scaleAD> Attack Damage (@ADPercent*100@% Attack Damage %i:scaleAD% + @ModifiedADGain@) for the next @Duration@ seconds.`,
+		icon: `ASSETS/Characters/Ashe/HUD/Icons2D/Ashe_Q.dds`,
+		name: `Ranger's Focus`,
+		variables: {
+			'Duration': [5, 5, 5, 5],
+			'ADPercent': [0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645],
+			'ADGain': [0, 12, 18, 25],
 		},
 	},
 	'TFT8_AurelionSol': {
@@ -6393,6 +6401,16 @@ export const abilities: Record<string, AbilityData> = {
 			'BonusDamage': [40, 70, 105, 165],
 		},
 	},
+	'TFT8_Draven': {
+		desc: `Draven hurls 2 axes at his target's direction, which then come back to him. Enemies caught in their path take <scaleAD>@TotalDamage@</scaleAD> physical damage (@ADpercent*100@% Attack Damage %i:scaleAD% + @ModifiedDamage@), reduced by @FallOffPercent*100@% for each enemy they have already hit.`,
+		icon: `ASSETS/Characters/Draven/HUD/Icons2D/Draven_WhirlingDeath.dds`,
+		name: `Whirling Death`,
+		variables: {
+			'Damage': [0, 60, 95, 145],
+			'ADPercent': [1.2999999523162842, 1.2999999523162842, 1.2999999523162842, 1.2999999523162842],
+			'FallOffPercent': [0.25, 0.25, 0.25, 0.25],
+		},
+	},
 	'TFT8_Ekko': {
 		desc: `Ekko dives in, granting himself a @ModifiedShieldAmount@ shield for @Duration@ seconds and taunts nearby enemies. When the shield breaks, he emits a time field, dealing @ModifiedDamage@ to nearby enemies and slowing their attack speed by @ASReduction*100@% for @SlowDuration@ seconds.`,
 		icon: `ASSETS/Characters/Ekko/HUD/Icons2D/Ekko_E.dds`,
@@ -6431,14 +6449,35 @@ export const abilities: Record<string, AbilityData> = {
 			'Movespeed': [600, 600, 600, 600],
 		},
 	},
-	'TFT8_Draven': {
-		desc: `Draven hurls 2 axes at his target's direction, which then come back to him. Enemies caught in their path take <scaleAD>@TotalDamage@</scaleAD> physical damage (@ADpercent*100@% Attack Damage %i:scaleAD% + @ModifiedDamage@), reduced by @FallOffPercent*100@% for each enemy they have already hit.`,
-		icon: `ASSETS/Characters/Draven/HUD/Icons2D/Draven_WhirlingDeath.dds`,
-		name: `Whirling Death`,
+	'TFT8_Fiora': {
+		desc: `Fiora lunges at her enemy, dealing <scaleAD>@ModifiedDamage@</scaleAD> physical damage (@PercentAttackDamage@% Attack Damage %i:scaleAD%) to all enemies hit. For the next @BuffDuration@ seconds, she takes @DamageReductionPercent@% less damage and her attacks restore @ModifiedHeal@ Health. `,
+		icon: `ASSETS/Characters/Fiora/HUD/Icons2D/Fiora_W.dds`,
+		name: `En Garde!`,
 		variables: {
-			'Damage': [0, 60, 95, 145],
-			'ADPercent': [1.2999999523162842, 1.2999999523162842, 1.2999999523162842, 1.2999999523162842],
-			'FallOffPercent': [0.25, 0.25, 0.25, 0.25],
+			'Heal': [2, 30, 40, 55],
+			'PercentAttackDamage': [150, 250, 250, 260],
+			'BuffDuration': [8, 8, 8, 8],
+			'DamageReductionPercent': [20, 20, 20, 20],
+		},
+	},
+	'TFT8_Galio': {
+		desc: `Galio dashes towards the nearest enemy, dealing @ModifiedDamage@ magic damage. He then grants himself and the closest ally a @ModifiedShieldAmount@ Health shield for @Duration@ seconds. `,
+		icon: `ASSETS/Characters/Galio/HUD/Icons2D/Galio_E.dds`,
+		name: `Outta My Way!`,
+		variables: {
+			'Damage': [0, 150, 225, 335],
+			'Duration': [4, 4, 4, 4],
+			'ShieldAmount': [0.699999988079071, 225, 250, 275],
+		},
+	},
+	'TFT8_Gangplank': {
+		desc: `Gangplank fires a flaming bullet at his target, which deals @ModifiedDamage@ magic damage and @HealingReductionPct@% <TFTKeyword>Wounds</TFTKeyword> the enemy for @Duration@ seconds.<br><br><tftitemrules><tftbold>Wound</tftbold>: reduces healing received</tftitemrules>`,
+		icon: `ASSETS/Characters/Gangplank/HUD/Icons2D/Gangplank_Q.dds`,
+		name: `Trial by Fire`,
+		variables: {
+			'Damage': [0, 210, 315, 475],
+			'Duration': [8, 8, 8, 8],
+			'HealingReductionPct': [33, 33, 33, 33],
 		},
 	},
 	'TFT8_Boss_Urgot': {
@@ -6451,25 +6490,14 @@ export const abilities: Record<string, AbilityData> = {
 			'ArmorShred': [2, 2, 2, 2],
 		},
 	},
-	'TFT8_Fiora': {
-		desc: `Fiora lunges at her enemy, dealing <scaleAD>@ModifiedDamage@</scaleAD> physical damage (@PercentAttackDamage@% Attack Damage %i:scaleAD%) to all enemies hit. For the next @BuffDuration@ seconds, she takes @DamageReductionPercent@% less damage and her attacks restore @ModifiedHeal@ Health. `,
-		icon: `ASSETS/Characters/Fiora/HUD/Icons2D/Fiora_W.dds`,
-		name: `En Garde!`,
+	'TFT8_Hecarim': {
+		desc: `Combat start: H4kerr!m picks up the unit in the rider hex and then charges directly forward into the enemy backline.`,
+		icon: `ASSETS/Characters/Hecarim/HUD/Icons2D/Hecarim_OnslaughtofShadows.dds`,
+		name: `Infiltration`,
 		variables: {
-			'Heal': [2, 30, 40, 55],
-			'PercentAttackDamage': [150, 250, 250, 260],
-			'BuffDuration': [8, 8, 8, 8],
-			'DamageReductionPercent': [20, 20, 20, 20],
-		},
-	},
-	'TFT8_Gangplank': {
-		desc: `Gangplank fires a flaming bullet at his target, which deals @ModifiedDamage@ magic damage and @HealingReductionPct@% <TFTKeyword>Wounds</TFTKeyword> the enemy for @Duration@ seconds.<br><br><tftitemrules><tftbold>Wound</tftbold>: reduces healing received</tftitemrules>`,
-		icon: `ASSETS/Characters/Gangplank/HUD/Icons2D/Gangplank_Q.dds`,
-		name: `Trial by Fire`,
-		variables: {
-			'Damage': [0, 210, 315, 475],
-			'Duration': [8, 8, 8, 8],
-			'HealingReductionPct': [33, 33, 33, 33],
+			'DefenseGain': [10, 20, 30, 60],
+			'Damage': [0, 150, 200, 300],
+			'Duration': [4, 4, 4, 4],
 		},
 	},
 	'TFT8_Janna': {
@@ -6484,14 +6512,14 @@ export const abilities: Record<string, AbilityData> = {
 			'SmallKnockup': [0, 0.5, 0.5, 0.5],
 		},
 	},
-	'TFT8_Hecarim': {
-		desc: `Combat start: H4kerr!m picks up the unit in the rider hex and then charges directly forward into the enemy backline.`,
-		icon: `ASSETS/Characters/Hecarim/HUD/Icons2D/Hecarim_OnslaughtofShadows.dds`,
-		name: `Infiltration`,
+	'TFT8_Jax': {
+		desc: `Passive: Jax leaps to his target and deals @ModifiedBaseDamage@ bonus magic damage every 3rd attack. The bonus damage increases by @ModifiedStackDamage@ every 3rd attack, and stacks up to @TotalStacks@ times.<br><br>Current Damage on hit: @TFTUnitProperty.:TFT8_Jax_TotalDamage@`,
+		icon: `ASSETS/Characters/Jax/HUD/Icons2D/Armsmaster_RelentlessAssault.dds`,
+		name: `Adaptive Strike`,
 		variables: {
-			'DefenseGain': [10, 20, 30, 60],
-			'Damage': [0, 150, 200, 300],
-			'Duration': [4, 4, 4, 4],
+			'BaseDamage': [0, 80, 125, 210],
+			'StackDamage': [50, 20, 30, 50],
+			'TotalStacks': [7, 7, 7, 7],
 		},
 	},
 	'TFT8_Jinx': {
@@ -6503,32 +6531,15 @@ export const abilities: Record<string, AbilityData> = {
 			'StunDuration': [0, 1.5, 1.5, 1.5],
 		},
 	},
-	'TFT6_ArchiveOfAugments': {
-		desc: `Drag this Archive to the Shop to open an Armory full of Augments! You will have 30 seconds to choose. Depending on when the Archive is sold, the shop will have a higher tier of Augments available.<br><br>Stage 1-2: Tier 1 (Silver)<br><br>Stage 3: Tier 2 (Gold)<br><br>Stage 4+: Tier 3 (Prismatic)<br>`,
-		icon: `ASSETS/Characters/TFT6_ArchiveOfAugments/HUD/TFT6_ArchiveOfAugments_Square.dds`,
-		name: `Archive Of Augments`,
+	'TFT8_Kaisa': {
+		desc: `Passive: Kai'Sa's attacks apply Plasma. Her next attack against a target with 2 stacks of Plasma deals @ModifiedDamage@ magic damage and removes the Plasma.<br><br>Active: Kai'Sa gains @AttackSpeed*100@% Attack Speed for @Duration@ seconds. This bonus stacks!<br>`,
+		icon: `ASSETS/Characters/Kaisa/HUD/Icons2D/Kaisa_E2.dds`,
+		name: `Starcharged`,
 		variables: {
-			'RoundsToHatch': [2, 2, 2, 2],
-		},
-	},
-	'TFT8_Leblanc': {
-		desc: `LeBlanc fires @SigilAmt@ sigils at her target, each dealing @ModifiedDamage@ magic damage. If the target dies, she completes casting the remaining sigils at the nearest enemy but adds @SigilOnKill@ more sigil.`,
-		icon: `ASSETS/Characters/TFT8_Leblanc/HUD/Icons2D/TFT8_LeblancRQ.TFT_Set8.dds`,
-		name: `Sigil of Malice`,
-		variables: {
-			'Damage': [0, 75, 110, 135],
-			'SigilAmt': [0, 6, 6, 8],
-			'SigilOnKill': [1, 1, 1, 1],
-		},
-	},
-	'TFT8_Jax': {
-		desc: `Passive: Jax leaps to his target and deals @ModifiedBaseDamage@ bonus magic damage every 3rd attack. The bonus damage increases by @ModifiedStackDamage@ every 3rd attack, and stacks up to @TotalStacks@ times.<br><br>Current Damage on hit: @TFTUnitProperty.:TFT8_Jax_TotalDamage@`,
-		icon: `ASSETS/Characters/Jax/HUD/Icons2D/Armsmaster_RelentlessAssault.dds`,
-		name: `Adaptive Strike`,
-		variables: {
-			'BaseDamage': [0, 80, 125, 210],
-			'StackDamage': [50, 20, 30, 50],
-			'TotalStacks': [7, 7, 7, 7],
+			'AttackSpeed': [0.44999998807907104, 0.44999998807907104, 0.44999998807907104, 0.44999998807907104],
+			'Damage': [0.15000000596046448, 150, 225, 370],
+			'Duration': [10, 10, 10, 10],
+			'MonsterCap': [250, 250, 250, 250],
 		},
 	},
 	'TFT8_Kayle': {
@@ -6539,6 +6550,16 @@ export const abilities: Record<string, AbilityData> = {
 			'PercentAttackDamage': [1.5499999523162842, 1.5499999523162842, 1.5499999523162842, 1.5499999523162842],
 			'Damage': [0, 25, 35, 50],
 			'AttackCount': [3, 3, 3, 3],
+		},
+	},
+	'TFT8_Leblanc': {
+		desc: `LeBlanc fires @SigilAmt@ sigils at her target, each dealing @ModifiedDamage@ magic damage. If the target dies, she completes casting the remaining sigils at the nearest enemy but adds @SigilOnKill@ more sigil.`,
+		icon: `ASSETS/Characters/TFT8_Leblanc/HUD/Icons2D/TFT8_LeblancRQ.TFT_Set8.dds`,
+		name: `Sigil of Malice`,
+		variables: {
+			'Damage': [0, 75, 110, 135],
+			'SigilAmt': [0, 6, 6, 8],
+			'SigilOnKill': [1, 1, 1, 1],
 		},
 	},
 	'TFT8_LeeSin': {
@@ -6560,15 +6581,13 @@ export const abilities: Record<string, AbilityData> = {
 			'Damage': [0, 320, 480, 2000],
 		},
 	},
-	'TFT8_Kaisa': {
-		desc: `Passive: Kai'Sa's attacks apply Plasma. Her next attack against a target with 2 stacks of Plasma deals @ModifiedDamage@ magic damage and removes the Plasma.<br><br>Active: Kai'Sa gains @AttackSpeed*100@% Attack Speed for @Duration@ seconds. This bonus stacks!<br>`,
-		icon: `ASSETS/Characters/Kaisa/HUD/Icons2D/Kaisa_E2.dds`,
-		name: `Starcharged`,
+	'TFT8_Lulu': {
+		desc: `Lulu fires a magic bolt at her target, dealing @ModifiedDamage@ magic damage to the first enemy hit and @SecondaryModifiedDamage@ to other enemies behind.`,
+		icon: `ASSETS/Characters/Lulu/HUD/Icons2D/Lulu_CommandPix.dds`,
+		name: `Glitterlance`,
 		variables: {
-			'AttackSpeed': [0.44999998807907104, 0.44999998807907104, 0.44999998807907104, 0.44999998807907104],
-			'Damage': [0.15000000596046448, 150, 225, 370],
-			'Duration': [10, 10, 10, 10],
-			'MonsterCap': [250, 250, 250, 250],
+			'Damage': [0, 270, 405, 605],
+			'SecondaryDamage': [0, 135, 205, 305],
 		},
 	},
 	'TFT8_Lux': {
@@ -6591,13 +6610,25 @@ export const abilities: Record<string, AbilityData> = {
 			'Duration': [4, 4, 4, 4],
 		},
 	},
-	'TFT8_Lulu': {
-		desc: `Lulu fires a magic bolt at her target, dealing @ModifiedDamage@ magic damage to the first enemy hit and @SecondaryModifiedDamage@ to other enemies behind.`,
-		icon: `ASSETS/Characters/Lulu/HUD/Icons2D/Lulu_CommandPix.dds`,
-		name: `Glitterlance`,
+	'TFT8_MissFortune': {
+		desc: `Miss Fortune fires @WaveCount@ waves of bullets in her target's direction within channels for @ChannelDuration@ seconds. Enemies take @ModifiedDamage@ magic damage from the first bullet that hits them, and @ModifiedReducedDamage@ magic damage from any other bullets that hit.`,
+		icon: `ASSETS/Characters/MissFortune/HUD/Icons2D/MissFortune_R.dds`,
+		name: `Bullet Time`,
 		variables: {
-			'Damage': [0, 270, 405, 605],
-			'SecondaryDamage': [0, 135, 205, 305],
+			'WaveCount': [8, 8, 8, 8],
+			'Damage': [0, 40, 60, 180],
+			'ChannelDuration': [2, 2, 2, 2],
+			'ReducedDamage': [0, 20, 30, 100],
+		},
+	},
+	'TFT8_Mordekaiser': {
+		desc: `Mordekaiser transports the arena into his realm for @RealmDuration@ seconds.  He @MRShred*100@% <TFTKeyword>Shreds</TFTKeyword> ALL enemies, then slams a building onto the arena that deals @ModifiedDamage@ magic damage to enemies hit.<br><br><tftitemrules><tftbold>Shred</tftbold>: reduce Magic Resist</tftitemrules>`,
+		icon: `ASSETS/Characters/Mordekaiser/HUD/Icons2D/MordekaiserR.dds`,
+		name: `Skylines`,
+		variables: {
+			'Damage': [0, 420, 630, 5555],
+			'RealmDuration': [3, 4, 4, 6],
+			'MRShred': [0.5, 0.5, 0.5, 0.699999988079071],
 		},
 	},
 	'TFT8_Boss_Zac': {
@@ -6624,16 +6655,6 @@ export const abilities: Record<string, AbilityData> = {
 			'ASSlowPercent': [0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645],
 		},
 	},
-	'TFT8_Mordekaiser': {
-		desc: `Mordekaiser transports the arena into his realm for @RealmDuration@ seconds.  He @MRShred*100@% <TFTKeyword>Shreds</TFTKeyword> ALL enemies, then slams a building onto the arena that deals @ModifiedDamage@ magic damage to enemies hit.<br><br><tftitemrules><tftbold>Shred</tftbold>: reduce Magic Resist</tftitemrules>`,
-		icon: `ASSETS/Characters/Mordekaiser/HUD/Icons2D/MordekaiserR.dds`,
-		name: `Skylines`,
-		variables: {
-			'Damage': [0, 420, 630, 5555],
-			'RealmDuration': [3, 4, 4, 6],
-			'MRShred': [0.5, 0.5, 0.5, 0.699999988079071],
-		},
-	},
 	'TFT8_Nilah': {
 		desc: `Nilah whirls her whip-blade, dealing @WhirlDamage@ magic damage to nearby enemies while healing herself and allies for @ModifiedHealAmount@ Health over @HealingSeconds@ second. She finishes with a burst that deals @BurstDamage@ magic damage.`,
 		icon: `ASSETS/Characters/Nilah/HUD/Icons2D/NilahR.Nilah.dds`,
@@ -6644,16 +6665,6 @@ export const abilities: Record<string, AbilityData> = {
 			'EndDamage': [75, 90, 135, 225],
 			'CastTime': [0, 1, 1, 1],
 			'HealingSeconds': [0, 1, 1, 1],
-		},
-	},
-	'TFT8_Poppy': {
-		desc: `Poppy throws her buckler at the farthest enemy, dealing @PercentArmorDamage*100@% of her Armor as magic damage. (total: @TotalDamage@) The buckler then bounces back, granting Poppy a shield that blocks @ModifiedShield@ damage.`,
-		icon: `ASSETS/Characters/Poppy/HUD/Icons2D/Poppy_Passive.dds`,
-		name: `Buckler Toss`,
-		variables: {
-			'PercentArmorDamage': [2, 1.600000023841858, 2.4000000953674316, 3.200000047683716],
-			'ShieldAmount': [100, 300, 350, 425],
-			'ShieldDuration': [3, 3, 3, 3],
 		},
 	},
 	'TFT8_Nunu': {
@@ -6668,6 +6679,29 @@ export const abilities: Record<string, AbilityData> = {
 			'SnowballRadiusIncrease': [35, 35, 35, 35],
 			'ManaPerSecond': [15, 30, 30, 90],
 			'MSPerAS': [150, 150, 150, 150],
+		},
+	},
+	'TFT8_Poppy': {
+		desc: `Poppy throws her buckler at the farthest enemy, dealing @PercentArmorDamage*100@% of her Armor as magic damage. (total: @TotalDamage@) The buckler then bounces back, granting Poppy a shield that blocks @ModifiedShield@ damage.`,
+		icon: `ASSETS/Characters/Poppy/HUD/Icons2D/Poppy_Passive.dds`,
+		name: `Buckler Toss`,
+		variables: {
+			'PercentArmorDamage': [2, 1.600000023841858, 2.4000000953674316, 3.200000047683716],
+			'ShieldAmount': [100, 300, 350, 425],
+			'ShieldDuration': [3, 3, 3, 3],
+		},
+	},
+	'TFT8_Rammus': {
+		desc: `Passive: +@PassiveArmor@ Armor<br> <br>Active: Rammus powers himself up and leaps to the largest group of nearby enemies, dealing <scaleArmor>@TotalDamage@</scaleArmor> magic damage (@PercentArmor*100@% Armor %i:scaleArmor% + @ModifiedBonusDamage@), knocking them up for @StunDuration@ seconds, and reducing their Attack Damage %i:scaleAD% by @ADreduction@% for @ADReductionDuration@ seconds.`,
+		icon: `ASSETS/Characters/Rammus/HUD/Icons2D/Armordillo_RecklessCharge.dds`,
+		name: `Sand Slam`,
+		variables: {
+			'ADReduction': [0, 40, 40, 40],
+			'PercentArmor': [0, 1.5, 1.75, 2.049999952316284],
+			'StunDuration': [1.25, 1.25, 1.25, 1.25],
+			'ADReductionDuration': [4, 4, 4, 4],
+			'PassiveArmor': [50, 60, 90, 150],
+			'BonusDamage': [25, 30, 50, 80],
 		},
 	},
 	'TFT8_Rell': {
@@ -6690,19 +6724,6 @@ export const abilities: Record<string, AbilityData> = {
 			'MaximumHealthPercent': [0.05999999865889549, 0.05999999865889549, 0.05999999865889549, 0.05999999865889549],
 		},
 	},
-	'TFT8_Rammus': {
-		desc: `Passive: +@PassiveArmor@ Armor<br> <br>Active: Rammus powers himself up and leaps to the largest group of nearby enemies, dealing <scaleArmor>@TotalDamage@</scaleArmor> magic damage (@PercentArmor*100@% Armor %i:scaleArmor% + @ModifiedBonusDamage@), knocking them up for @StunDuration@ seconds, and reducing their Attack Damage %i:scaleAD% by @ADreduction@% for @ADReductionDuration@ seconds.`,
-		icon: `ASSETS/Characters/Rammus/HUD/Icons2D/Armordillo_RecklessCharge.dds`,
-		name: `Sand Slam`,
-		variables: {
-			'ADReduction': [0, 40, 40, 40],
-			'PercentArmor': [0, 1.5, 1.75, 2.049999952316284],
-			'StunDuration': [1.25, 1.25, 1.25, 1.25],
-			'ADReductionDuration': [4, 4, 4, 4],
-			'PassiveArmor': [50, 60, 90, 150],
-			'BonusDamage': [25, 30, 50, 80],
-		},
-	},
 	'TFT8_Riven': {
 		desc: `Riven gains a @ModifiedShield@ Health shield for @ShieldDuration@ seconds and empowers her next @NumberOfAttacks@ attacks with @ModifiedDamage@ bonus magic damage. If Riven has more Health than her target, she deals @PercentDamageIncrease@% more bonus magic damage.`,
 		icon: `ASSETS/Characters/Riven/HUD/Icons2D/RivenBladeoftheExile.dds`,
@@ -6715,14 +6736,16 @@ export const abilities: Record<string, AbilityData> = {
 			'PercentDamageIncrease': [100, 100, 100, 100],
 		},
 	},
-	'TFT8_Galio': {
-		desc: `Galio dashes towards the nearest enemy, dealing @ModifiedDamage@ magic damage. He then grants himself and the closest ally a @ModifiedShieldAmount@ Health shield for @Duration@ seconds. `,
-		icon: `ASSETS/Characters/Galio/HUD/Icons2D/Galio_E.dds`,
-		name: `Outta My Way!`,
+	'TFT8_Samira': {
+		desc: `Samira rapidly fires bullets that deal a total of <scaleAD>@TotalDamage@</scaleAD> physical damage (@DamagePercent*100@% Attack Damage %i:scaleAD% + @ModifiedBonusDamage@). Bullets ricochet to nearby enemies for @ReducedDamagePercent*100@% less damage.`,
+		icon: `ASSETS/Characters/Samira/HUD/Icons2D/SamiraP.dds`,
+		name: `Flair`,
 		variables: {
-			'Damage': [0, 150, 225, 335],
-			'Duration': [4, 4, 4, 4],
-			'ShieldAmount': [0.699999988079071, 225, 250, 275],
+			'DamagePercent': [1.2000000476837158, 4.800000190734863, 4.900000095367432, 12.5],
+			'Damage': [0, 80, 100, 666],
+			'Duration': [1.5, 1.5, 1.5, 1.5],
+			'ReducedDamagePercent': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
+			'SimulateLaunchAttackNum': [4, 4, 4, 4],
 		},
 	},
 	'TFT8_Sejuani': {
@@ -6745,17 +6768,6 @@ export const abilities: Record<string, AbilityData> = {
 			'Damage': [0, 45, 65, 125],
 		},
 	},
-	'TFT8_MissFortune': {
-		desc: `Miss Fortune fires @WaveCount@ waves of bullets in her target's direction within channels for @ChannelDuration@ seconds. Enemies take @ModifiedDamage@ magic damage from the first bullet that hits them, and @ModifiedReducedDamage@ magic damage from any other bullets that hit.`,
-		icon: `ASSETS/Characters/MissFortune/HUD/Icons2D/MissFortune_R.dds`,
-		name: `Bullet Time`,
-		variables: {
-			'WaveCount': [8, 8, 8, 8],
-			'Damage': [0, 40, 60, 180],
-			'ChannelDuration': [2, 2, 2, 2],
-			'ReducedDamage': [0, 20, 30, 100],
-		},
-	},
 	'TFT8_Sett': {
 		desc: `Sett gains a @ModifiedShieldAmount@ Health shield and becomes immune to crowd control for @Duration@ seconds. He charges up while the shield is active; when the shield breaks or expires, he deals <scaleAD>@MinADDamage@</scaleAD> physical damage in a cone to all enemies caught within the blast. The blast damage increases, up to <scaleAD>@MaxADDamage@</scaleAD>, depending on how long Sett was charged up.`,
 		icon: `ASSETS/Characters/Sett/HUD/Icons2D/Sett_W.dds`,
@@ -6767,18 +6779,6 @@ export const abilities: Record<string, AbilityData> = {
 			'MaxADPercent': [2, 2.799999952316284, 3, 6],
 		},
 	},
-	'TFT8_Samira': {
-		desc: `Samira rapidly fires bullets that deal a total of <scaleAD>@TotalDamage@</scaleAD> physical damage (@DamagePercent*100@% Attack Damage %i:scaleAD% + @ModifiedBonusDamage@). Bullets ricochet to nearby enemies for @ReducedDamagePercent*100@% less damage.`,
-		icon: `ASSETS/Characters/Samira/HUD/Icons2D/SamiraP.dds`,
-		name: `Flair`,
-		variables: {
-			'DamagePercent': [1.2000000476837158, 4.800000190734863, 4.900000095367432, 12.5],
-			'Damage': [0, 80, 100, 666],
-			'Duration': [1.5, 1.5, 1.5, 1.5],
-			'ReducedDamagePercent': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
-			'SimulateLaunchAttackNum': [4, 4, 4, 4],
-		},
-	},
 	'TFT8_Sivir': {
 		desc: `Sivir throws her pizza at her target, dealing <scaleAD>@ModifiedDamage@</scaleAD> physical damage (@ADPercent*100@% Attack Damage %i:scaleAD%). It then splits into slices and gets delivered to the @Allies@ nearest allies, healing them for @ModifiedHeal@ Health.`,
 		icon: `ASSETS/Characters/Sivir/HUD/Icons2D/Sivir_Q.dds`,
@@ -6787,46 +6787,6 @@ export const abilities: Record<string, AbilityData> = {
 			'Allies': [3, 3, 3, 3],
 			'ADPercent': [4, 4, 4, 4.099999904632568],
 			'Heal': [0, 80, 100, 125],
-		},
-	},
-	'TFT8_Syndra': {
-		desc: `Syndra grants a @ModifiedShieldAmount@ Health shield to a random champion on your bench, then flings them into the arena inside an orb at her closest enemy. The orb deals @ModifiedDamage@ magic damage to enemies hit. <br><br><tftitemrules>Traits of champions flung onto the board do not become active, except for Corrupted.</tftitemrules>`,
-		icon: `ASSETS/Characters/Syndra/HUD/Icons2D/SyndraW2.dds`,
-		name: `Force of Will`,
-		variables: {
-			'ShieldAmount': [0, 200, 600, 4000],
-			'StunDuration': [0.5, 1, 1.5, 8],
-			'Damage': [0, 250, 375, 2500],
-		},
-	},
-	'TFT8_Sylas': {
-		desc: `Sylas whirls his chains around him, dealing <scaleHealth>@ModifiedPercentHealthDamage@</scaleHealth> (@PercentHealth*100@% Maximum Health %i:scaleHealth%) magic damage to nearby enemies and healing himself for @ModifiedHealAmount@ Health.`,
-		icon: `ASSETS/Characters/Sylas/HUD/Icons2D/SylasQ.dds`,
-		name: `Battle Blast`,
-		variables: {
-			'PercentHealth': [0, 0.10000000149011612, 0.11999999731779099, 0.15000000596046448],
-			'HealAmount': [0.5, 150, 170, 190],
-		},
-	},
-	'TFT8_Talon': {
-		desc: `Talon jumps to the furthest unit from the center of the board and stabs them for @ModifiedDamage@ magic damage. If this kills them, Talon heals for @HealAmount@ Health.`,
-		icon: `ASSETS/Characters/TFT8_Talon/HUD/Icons2D/TFT8_TalonQ.TFT_Set8.dds`,
-		name: `OX-ian Diplomacy`,
-		variables: {
-			'Damage': [0, 170, 250, 370],
-			'HealAmount': [0, 150, 200, 250],
-		},
-	},
-	'TFT8_Soraka': {
-		desc: `Soraka launches a star at her target, which deals @ModifiedDamage@ magic damage and heals Soraka for @PercentMaxHP*100@% of her maximum Health. Every @EmpoweredCast@ casts, she launches @EmpoweredStars@ stars at each of the nearest enemies.`,
-		icon: `ASSETS/Characters/TFT8_Soraka/HUD/Icons2D/TFT8_Soraka_Q.TFT_Set8.dds`,
-		name: `Starcall`,
-		variables: {
-			'Stars': [1, 1, 1, 1],
-			'EmpoweredStars': [0, 3, 3, 5],
-			'Damage': [0, 235, 350, 750],
-			'PercentMaxHP': [0.07999999821186066, 0.07999999821186066, 0.07999999821186066, 0.07999999821186066],
-			'EmpoweredCast': [3, 3, 3, 3],
 		},
 	},
 	'TFT8_Sona': {
@@ -6841,6 +6801,37 @@ export const abilities: Record<string, AbilityData> = {
 			'NumSignals': [2, 2, 2, 2],
 		},
 	},
+	'TFT8_Soraka': {
+		desc: `Soraka launches a star at her target, which deals @ModifiedDamage@ magic damage and heals Soraka for @PercentMaxHP*100@% of her maximum Health. Every @EmpoweredCast@ casts, she launches @EmpoweredStars@ stars at each of the nearest enemies.`,
+		icon: `ASSETS/Characters/TFT8_Soraka/HUD/Icons2D/TFT8_Soraka_Q.TFT_Set8.dds`,
+		name: `Starcall`,
+		variables: {
+			'Stars': [1, 1, 1, 1],
+			'EmpoweredStars': [0, 3, 3, 5],
+			'Damage': [0, 235, 350, 750],
+			'PercentMaxHP': [0.07999999821186066, 0.07999999821186066, 0.07999999821186066, 0.07999999821186066],
+			'EmpoweredCast': [3, 3, 3, 3],
+		},
+	},
+	'TFT8_Sylas': {
+		desc: `Sylas whirls his chains around him, dealing <scaleHealth>@ModifiedPercentHealthDamage@</scaleHealth> (@PercentHealth*100@% Maximum Health %i:scaleHealth%) magic damage to nearby enemies and healing himself for @ModifiedHealAmount@ Health.`,
+		icon: `ASSETS/Characters/Sylas/HUD/Icons2D/SylasQ.dds`,
+		name: `Battle Blast`,
+		variables: {
+			'PercentHealth': [0, 0.10000000149011612, 0.11999999731779099, 0.15000000596046448],
+			'HealAmount': [0.5, 150, 170, 190],
+		},
+	},
+	'TFT8_Syndra': {
+		desc: `Syndra grants a @ModifiedShieldAmount@ Health shield to a random champion on your bench, then flings them into the arena inside an orb at her closest enemy. The orb deals @ModifiedDamage@ magic damage to enemies hit. <br><br><tftitemrules>Traits of champions flung onto the board do not become active, except for Corrupted.</tftitemrules>`,
+		icon: `ASSETS/Characters/Syndra/HUD/Icons2D/SyndraW2.dds`,
+		name: `Force of Will`,
+		variables: {
+			'ShieldAmount': [0, 200, 600, 4000],
+			'StunDuration': [0.5, 1, 1.5, 8],
+			'Damage': [0, 250, 375, 2500],
+		},
+	},
 	'TFT8_Taliyah': {
 		desc: `Taliyah summons a torrent of spiraling rocks in a line of enemy units, dealing @ModifiedDamage@ magic damage to all enemies it hits. After a brief delay, the wall explodes, dealing @ModifiedExplosionDamage@ additional magic damage to nearby enemies.`,
 		icon: `ASSETS/Characters/Taliyah/HUD/Icons2D/Taliyah_R.dds`,
@@ -6849,6 +6840,15 @@ export const abilities: Record<string, AbilityData> = {
 			'Damage': [0, 75, 115, 275],
 			'ExplosionDamage': [200, 225, 335, 999],
 			'WallExplosionDelay': [1, 1, 1, 1],
+		},
+	},
+	'TFT8_Talon': {
+		desc: `Talon jumps to the furthest unit from the center of the board and stabs them for @ModifiedDamage@ magic damage. If this kills them, Talon heals for @HealAmount@ Health.`,
+		icon: `ASSETS/Characters/TFT8_Talon/HUD/Icons2D/TFT8_TalonQ.TFT_Set8.dds`,
+		name: `OX-ian Diplomacy`,
+		variables: {
+			'Damage': [0, 170, 250, 370],
+			'HealAmount': [0, 150, 200, 250],
 		},
 	},
 	'TFT8_PranksterDummy': {
@@ -6863,13 +6863,12 @@ export const abilities: Record<string, AbilityData> = {
 		name: `On Duty!`,
 		variables: {},
 	},
-	'TFT8_Vayne': {
-		desc: `Vayne fires a heavy bolt at her target, dealing <scaleAD>@TotalDamage@</scaleAD> true damage (@ADPercent*100@% Attack Damage %i:scaleAD% + @ModifiedDamage@).`,
-		icon: `ASSETS/Characters/Vayne/HUD/Icons2D/Vayne_Condemn.dds`,
-		name: `Silver Bolt`,
+	'TFT6_TheGoldenEgg': {
+		desc: `This egg will soon hatch into tons of loot! Victorious player combats accelerate the hatch timer by an additional turn.`,
+		icon: `ASSETS/Characters/TFT6_TheGoldenEgg/HUD/TFT6_TheGoldenEgg_Square.dds`,
+		name: `Hatching`,
 		variables: {
-			'Damage': [0, 18, 25, 45],
-			'ADPercent': [1.7000000476837158, 1.2999999523162842, 1.2999999523162842, 1.399999976158142],
+			'EggTurns': [10, 10, 10, 10],
 		},
 	},
 	'TFT8_Urgot': {
@@ -6890,12 +6889,13 @@ export const abilities: Record<string, AbilityData> = {
 			'NumShotsPerLaunchAttack': [5, 5, 5, 5],
 		},
 	},
-	'TFT6_TheGoldenEgg': {
-		desc: `This egg will soon hatch into tons of loot! Victorious player combats accelerate the hatch timer by an additional turn.`,
-		icon: `ASSETS/Characters/TFT6_TheGoldenEgg/HUD/TFT6_TheGoldenEgg_Square.dds`,
-		name: `Hatching`,
+	'TFT8_Vayne': {
+		desc: `Vayne fires a heavy bolt at her target, dealing <scaleAD>@TotalDamage@</scaleAD> true damage (@ADPercent*100@% Attack Damage %i:scaleAD% + @ModifiedDamage@).`,
+		icon: `ASSETS/Characters/Vayne/HUD/Icons2D/Vayne_Condemn.dds`,
+		name: `Silver Bolt`,
 		variables: {
-			'EggTurns': [10, 10, 10, 10],
+			'Damage': [0, 18, 25, 45],
+			'ADPercent': [1.7000000476837158, 1.2999999523162842, 1.2999999523162842, 1.399999976158142],
 		},
 	},
 	'TFT8_Velkoz': {
@@ -6908,6 +6908,18 @@ export const abilities: Record<string, AbilityData> = {
 			'VelkozICD': [4, 4, 4, 4],
 		},
 	},
+	'TFT8_Vi': {
+		desc: `Vi grants herself a @ModifiedShieldAmount@ Health shield for @ShieldDuration@ seconds. Then she deals <scaleAD>@TotalDamage@</scaleAD> physical damage to nearby enemies (@ADPercent*100@% Attack Damage %i:scaleAD%) and @ArmorShredPercent*100@% <TFTKeyword>Sunders</TFTKeyword> them for @ArmorShredDuration@ seconds. <br><br><tftitemrules><tftbold>Sunder</tftbold>: reduce Armor</tftitemrules><br>`,
+		icon: `ASSETS/Characters/Vi/HUD/Icons2D/ViW.dds`,
+		name: `Blast Shield`,
+		variables: {
+			'ShieldAmount': [0, 270, 330, 400],
+			'ShieldDuration': [4, 4, 4, 4],
+			'ArmorShredPercent': [0.5, 0.5, 0.5, 0.5],
+			'ArmorShredDuration': [4, 4, 4, 4],
+			'ADPercent': [2.5, 2.5, 2.5, 2.5],
+		},
+	},
 	'TFT8_Viego': {
 		desc: `Viego becomes unstoppable, leaping to the largest cluster of nearby enemies and slamming his sword down on the enemy with the lowest Health, dealing @ModifiedDamage@ magic damage to the primary target and @ModifiedAOEDamage@ magic damage to enemies nearby. If Viego kills an enemy, he casts again but deals @DamageFalloffPercent*100@% less damage.`,
 		icon: `ASSETS/Characters/Viego/HUD/Icons2D/Viego_R.dds`,
@@ -6917,6 +6929,12 @@ export const abilities: Record<string, AbilityData> = {
 			'DamageFalloffPercent': [0.30000001192092896, 0.20000000298023224, 0.20000000298023224, 0.10000000149011612],
 			'AOEDamage': [0, 125, 185, 400],
 		},
+	},
+	'TFT_VoidSpawn': {
+		desc: `The Voidspawn gains bonus Health and Attack Damage based on the current Stage. `,
+		icon: `ASSETS/Characters/TFT_VoidSpawn/HUD/Voidspawn_square.dds`,
+		name: `Voidborn`,
+		variables: {},
 	},
 	'TFT8_Boss_AurelionSol': {
 		desc: `Passive: Aurelion Sol's attacks @PercentBurn@% <TFTKeyword>Burn</TFTKeyword> his target and a random ally.<br><br>Active: Aurelion Sol calls down @NumMeteors@ meteors on random enemies. Meteors deal @ModifiedDamage@ magic damage, then @PercentBurn@% <TFTKeyword>Burn</TFTKeyword> and  @HealingReduction@% <TFTKeyword>Wound</TFTKeyword> enemies for @Duration@ seconds. <br><br><tftitemrules><tftbold>Burn</tftbold>: deals some of the target's maximum Health as true damage<br><tftbold>Wound</tftbold>: reduces healing received</tftitemrules>`,
@@ -6940,32 +6958,6 @@ export const abilities: Record<string, AbilityData> = {
 			'Duration': [3, 3, 3, 3],
 		},
 	},
-	'TFT_VoidSpawn': {
-		desc: `The Voidspawn gains bonus Health and Attack Damage based on the current Stage. `,
-		icon: `ASSETS/Characters/TFT_VoidSpawn/HUD/Voidspawn_square.dds`,
-		name: `Voidborn`,
-		variables: {},
-	},
-	'TFT8_Yuumi': {
-		desc: `Yuumi fires a curved missile at the furthest target in her attack range, dealing @ModifiedDamage@ magic damage to the first unit hit.`,
-		icon: `ASSETS/Characters/Yuumi/HUD/Icons2D/YuumiQ2.dds`,
-		name: `Prowling Projectile`,
-		variables: {
-			'Damage': [0, 230, 345, 535],
-		},
-	},
-	'TFT8_Vi': {
-		desc: `Vi grants herself a @ModifiedShieldAmount@ Health shield for @ShieldDuration@ seconds. Then she deals <scaleAD>@TotalDamage@</scaleAD> physical damage to nearby enemies (@ADPercent*100@% Attack Damage %i:scaleAD%) and @ArmorShredPercent*100@% <TFTKeyword>Sunders</TFTKeyword> them for @ArmorShredDuration@ seconds. <br><br><tftitemrules><tftbold>Sunder</tftbold>: reduce Armor</tftitemrules><br>`,
-		icon: `ASSETS/Characters/Vi/HUD/Icons2D/ViW.dds`,
-		name: `Blast Shield`,
-		variables: {
-			'ShieldAmount': [0, 270, 330, 400],
-			'ShieldDuration': [4, 4, 4, 4],
-			'ArmorShredPercent': [0.5, 0.5, 0.5, 0.5],
-			'ArmorShredDuration': [4, 4, 4, 4],
-			'ADPercent': [2.5, 2.5, 2.5, 2.5],
-		},
-	},
 	'TFT8_Yasuo': {
 		desc: `Yasuo fires a whirlwind at his target dealing @ModifiedDamage@ magic damage and knocking up units hit for @KnockupDuration@ seconds. If the current position isn't ideal, he will dash up to 1 hex in order to find more units in a line.`,
 		icon: `ASSETS/Characters/TFT8_Yasuo/HUD/Icons2D/TFT8_Yasuo_Q3.TFT_Set8.dds`,
@@ -6973,6 +6965,14 @@ export const abilities: Record<string, AbilityData> = {
 		variables: {
 			'Damage': [0, 210, 315, 485],
 			'KnockupDuration': [0, 1.5, 1.5, 1.5],
+		},
+	},
+	'TFT8_Yuumi': {
+		desc: `Yuumi fires a curved missile at the furthest target in her attack range, dealing @ModifiedDamage@ magic damage to the first unit hit.`,
+		icon: `ASSETS/Characters/Yuumi/HUD/Icons2D/YuumiQ2.dds`,
+		name: `Prowling Projectile`,
+		variables: {
+			'Damage': [0, 230, 345, 535],
 		},
 	},
 	'TFT8_Zac': {

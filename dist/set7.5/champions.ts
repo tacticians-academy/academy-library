@@ -6908,18 +6908,6 @@ export const otherUnits: ChampionData[] = [
 ]
 
 export const abilities: Record<string, AbilityData> = {
-	'TFT7_AurelionSol': {
-		desc: `Aurelion Sol summons an unstable black hole underneath a random enemy. After 2 seconds it implodes, dealing @ModifiedSpellDamage@ magic damage to all enemies in the area and increasing their damage taken by @DebuffPercent*100@% for @DebuffDuration@ seconds.<br><br>Black holes generated after @AscendTimer@ seconds of combat are larger and deal @AscendDamageIncrease*100@% more damage.`,
-		icon: `ASSETS/Characters/AurelionSol/HUD/Icons2D/AurelionSol_Q_Explode.dds`,
-		name: `Black Hole`,
-		variables: {
-			'SpellDamage': [0, 370, 600, 4000],
-			'DebuffPercent': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
-			'DebuffDuration': [10, 10, 10, 10],
-			'AscendTimer': [18, 18, 18, 18],
-			'AscendDamageIncrease': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
-		},
-	},
 	'TFT7_AoShin': {
 		desc: `Ao Shin fires a barrage of @NumStrikes@ lightning strikes at random enemies. Each strike deals @ModifiedDamage@ magic damage and reduces @ManaDrain@ current Mana from his target.`,
 		icon: `ASSETS/Characters/TFT7_AoShin/HUD/Icons2D/TFT7_AoShin_Spell.TFT_Set7.dds`,
@@ -6928,15 +6916,6 @@ export const abilities: Record<string, AbilityData> = {
 			'Damage': [0, 185, 275, 2000],
 			'NumStrikes': [0, 20, 20, 100],
 			'ManaDrain': [0, 10, 10, 10],
-		},
-	},
-	'TFT7_Braum': {
-		desc: `Braum raises his shield towards the largest group of enemies for @ShieldDuration@ seconds, reducing his damage taken from that direction by @ModifiedShieldDR@. `,
-		icon: `ASSETS/Characters/Braum/HUD/Icons2D/Braum_E.dds`,
-		name: `Unbreakable`,
-		variables: {
-			'ShieldDR': [0.699999988079071, 0.699999988079071, 0.75, 0.8500000238418579],
-			'ShieldDuration': [4, 4, 4, 4],
 		},
 	},
 	'TFT7_Aphelios': {
@@ -6952,15 +6931,35 @@ export const abilities: Record<string, AbilityData> = {
 			'ShotgunDamageFalloff': [1, 1, 1, 1],
 		},
 	},
-	'TFT7_Diana': {
-		desc: `Diana shields herself against @ModifiedShield@ damage over @ShieldDuration@ seconds and summons @Orbs@ orbs to orbit around her. These orbs explode for @ModifiedDamage@ magic damage when they hit an enemy, refreshing her Shield when the final one explodes.`,
-		icon: `ASSETS/Characters/Diana/HUD/Icons2D/Diana_W_LunarShower.dds`,
-		name: `Pale Cascade`,
+	'TFT7_AurelionSol': {
+		desc: `Aurelion Sol summons an unstable black hole underneath a random enemy. After 2 seconds it implodes, dealing @ModifiedSpellDamage@ magic damage to all enemies in the area and increasing their damage taken by @DebuffPercent*100@% for @DebuffDuration@ seconds.<br><br>Black holes generated after @AscendTimer@ seconds of combat are larger and deal @AscendDamageIncrease*100@% more damage.`,
+		icon: `ASSETS/Characters/AurelionSol/HUD/Icons2D/AurelionSol_Q_Explode.dds`,
+		name: `Black Hole`,
 		variables: {
-			'Orbs': [2, 5, 6, 7],
-			'OrbDamage': [70, 90, 105, 120],
-			'ShieldValue': [50, 300, 350, 400],
-			'ShieldDuration': [6, 6, 6, 6],
+			'SpellDamage': [0, 370, 600, 4000],
+			'DebuffPercent': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
+			'DebuffDuration': [10, 10, 10, 10],
+			'AscendTimer': [18, 18, 18, 18],
+			'AscendDamageIncrease': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
+		},
+	},
+	'TFT7_Bard': {
+		desc: `Bard sends magical energy toward the largest group of enemies, stunning them for @StasisDuration@ seconds and causing them to take @ModifiedDamageAmpRatio@ increased damage while stunned. If he hits at least 1 enemy, Bard dances in celebration.`,
+		icon: `ASSETS/Characters/Bard/HUD/Icons2D/Bard_R.dds`,
+		name: `Tempered Fate`,
+		variables: {
+			'StasisDuration': [2, 1.25, 2, 15],
+			'DamageAmpRatio': [0, 0.15000000596046448, 0.20000000298023224, 99.98999786376953],
+			'GuildBonus': [2, 2, 2, 2],
+		},
+	},
+	'TFT7_Braum': {
+		desc: `Braum raises his shield towards the largest group of enemies for @ShieldDuration@ seconds, reducing his damage taken from that direction by @ModifiedShieldDR@. `,
+		icon: `ASSETS/Characters/Braum/HUD/Icons2D/Braum_E.dds`,
+		name: `Unbreakable`,
+		variables: {
+			'ShieldDR': [0.699999988079071, 0.699999988079071, 0.75, 0.8500000238418579],
+			'ShieldDuration': [4, 4, 4, 4],
 		},
 	},
 	'TFT7_DragonBlue': {
@@ -6971,6 +6970,17 @@ export const abilities: Record<string, AbilityData> = {
 			'PassiveDamage': [0, 25, 40, 150],
 			'MRReduction': [0, 5, 5, 5],
 			'BlastDamage': [0, 250, 335, 1350],
+		},
+	},
+	'TFT7_Diana': {
+		desc: `Diana shields herself against @ModifiedShield@ damage over @ShieldDuration@ seconds and summons @Orbs@ orbs to orbit around her. These orbs explode for @ModifiedDamage@ magic damage when they hit an enemy, refreshing her Shield when the final one explodes.`,
+		icon: `ASSETS/Characters/Diana/HUD/Icons2D/Diana_W_LunarShower.dds`,
+		name: `Pale Cascade`,
+		variables: {
+			'Orbs': [2, 5, 6, 7],
+			'OrbDamage': [70, 90, 105, 120],
+			'ShieldValue': [50, 300, 350, 400],
+			'ShieldDuration': [6, 6, 6, 6],
 		},
 	},
 	'TFT7_Ezreal': {
@@ -7021,14 +7031,34 @@ export const abilities: Record<string, AbilityData> = {
 			'StunDuration': [0, 0.5, 0.5, 0.5],
 		},
 	},
-	'TFT7_Bard': {
-		desc: `Bard sends magical energy toward the largest group of enemies, stunning them for @StasisDuration@ seconds and causing them to take @ModifiedDamageAmpRatio@ increased damage while stunned. If he hits at least 1 enemy, Bard dances in celebration.`,
-		icon: `ASSETS/Characters/Bard/HUD/Icons2D/Bard_R.dds`,
-		name: `Tempered Fate`,
+	'TFT7_DragonGold': {
+		desc: `Idas hardens her scales for @DefenseDuration@ seconds, reducing incoming damage by @DamageReduction@. She then roars, healing herself for @ModifiedHeal@ Health and shielding other allies for @ModifiedShieldValue@ for @RoarDuration@ seconds. The shield grants @ASBonusBase*100@% Attack Speed while it holds. `,
+		icon: `ASSETS/Characters/JarvanIV/HUD/Icons2D/JarvanIV_GoldenAegis.dds`,
+		name: `Golden Scales`,
 		variables: {
-			'StasisDuration': [2, 1.25, 2, 15],
-			'DamageAmpRatio': [0, 0.15000000596046448, 0.20000000298023224, 99.98999786376953],
-			'GuildBonus': [2, 2, 2, 2],
+			'DefenseDuration': [2, 2, 2, 2],
+			'DamageReduction': [0, 30, 50, 300],
+			'Heal': [0, 450, 600, 3000],
+			'ASBonusBase': [0.30000001192092896, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
+			'RoarDuration': [5, 5, 5, 5],
+			'ShieldValue': [0, 150, 250, 1200],
+		},
+	},
+	'TFT7_JadeStatue': {
+		desc: `When its Health is depleted, the Jade Statue will explode.`,
+		icon: `ASSETS/Characters/TFT7_JadeStatue/HUD/Icons2D/TFT7_JadeStatue_EyeOfTheStorm.TFT_Set7.dds`,
+		name: `Shatter`,
+		variables: {},
+	},
+	'TFT7_Jax': {
+		desc: `Jax dodges all incoming attacks for @Duration@ seconds, then strikes all nearby enemies, dealing @ModifiedDamage@ magic damage and stunning them for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/Jax/HUD/Icons2D/Armsmaster_CoupDeGrace.dds`,
+		name: `Counter Strike`,
+		variables: {
+			'Duration': [2, 2, 2, 2],
+			'Damage': [50, 225, 350, 750],
+			'AttackRadius': [1, 1, 1, 1],
+			'StunDuration': [0.75, 1, 1.25, 1.5],
 		},
 	},
 	'TFT7_Jayce': {
@@ -7043,25 +7073,6 @@ export const abilities: Record<string, AbilityData> = {
 			'BaseSecondMagicDamage': [150, 225, 275, 1200],
 			'BaseSmiteDamage': [450, 400, 550, 2000],
 			'Resists': [40, 40, 40, 40],
-		},
-	},
-	'TFT7_Karma': {
-		desc: `Karma fires a burst of energy towards her target, dealing @ModifiedDamage@ magic damage in a small area around the first enemy hit.`,
-		icon: `ASSETS/Characters/Karma/HUD/Icons2D/Karma_Q1.dds`,
-		name: `Inner Flame`,
-		variables: {
-			'MagicDamage': [0, 200, 265, 380],
-		},
-	},
-	'TFT7_Jax': {
-		desc: `Jax dodges all incoming attacks for @Duration@ seconds, then strikes all nearby enemies, dealing @ModifiedDamage@ magic damage and stunning them for @StunDuration@ seconds.`,
-		icon: `ASSETS/Characters/Jax/HUD/Icons2D/Armsmaster_CoupDeGrace.dds`,
-		name: `Counter Strike`,
-		variables: {
-			'Duration': [2, 2, 2, 2],
-			'Damage': [50, 225, 350, 750],
-			'AttackRadius': [1, 1, 1, 1],
-			'StunDuration': [0.75, 1, 1.25, 1.5],
 		},
 	},
 	'TFT7_Kaisa': {
@@ -7079,20 +7090,25 @@ export const abilities: Record<string, AbilityData> = {
 			'SpellRange': [4, 4, 4, 4],
 		},
 	},
-	'TFT7_JadeStatue': {
-		desc: `When its Health is depleted, the Jade Statue will explode.`,
-		icon: `ASSETS/Characters/TFT7_JadeStatue/HUD/Icons2D/TFT7_JadeStatue_EyeOfTheStorm.TFT_Set7.dds`,
-		name: `Shatter`,
-		variables: {},
-	},
-	'TFT7_Lillia': {
-		desc: `Lillia strikes a small area around her target's current location, dealing @ModifiedMagicDamage@ magic damage spread amongst all enemies hit and @ModifiedCenterBonusMagicDamage@ bonus magic damage to the enemy at the center of the blast. `,
-		icon: `ASSETS/Characters/Lillia/HUD/Icons2D/Lillia_Icon_W.dds`,
-		name: `Watch Out!`,
+	'TFT7_Karma': {
+		desc: `Karma fires a burst of energy towards her target, dealing @ModifiedDamage@ magic damage in a small area around the first enemy hit.`,
+		icon: `ASSETS/Characters/Karma/HUD/Icons2D/Karma_Q1.dds`,
+		name: `Inner Flame`,
 		variables: {
-			'MagicDamage': [0, 215, 275, 370],
-			'CenterBonusMagicDamage': [0, 190, 240, 340],
-			'StunDuration': [1, 1, 1, 1],
+			'MagicDamage': [0, 200, 265, 380],
+		},
+	},
+	'TFT7_LeeSin': {
+		desc: `Lee Sin kicks his target, stunning them for @StunDuration@ seconds and knocking them back. The target and all enemies they hit take @ModifiedMagicDamage@ magic damage and have their Magic Resist reduced by @TooltipMRShred@% for @ShredDuration@ seconds.`,
+		icon: `ASSETS/Characters/LeeSin/HUD/Icons2D/BlindMonkR.dds`,
+		name: `Dragon's Rage`,
+		variables: {
+			'StunDuration': [0, 1.25, 1.25, 1.25],
+			'MagicDamage': [0, 215, 285, 385],
+			'DragonmancerASPercent': [0, 50, 50, 50],
+			'DragonmancerASDuration': [0, 5, 5, 5],
+			'ShredDuration': [5, 5, 5, 5],
+			'TooltipMRShred': [40, 40, 40, 40],
 		},
 	},
 	'TFT7_Leona': {
@@ -7104,17 +7120,14 @@ export const abilities: Record<string, AbilityData> = {
 			'Duration': [4, 4, 4, 4],
 		},
 	},
-	'TFT7_DragonGold': {
-		desc: `Idas hardens her scales for @DefenseDuration@ seconds, reducing incoming damage by @DamageReduction@. She then roars, healing herself for @ModifiedHeal@ Health and shielding other allies for @ModifiedShieldValue@ for @RoarDuration@ seconds. The shield grants @ASBonusBase*100@% Attack Speed while it holds. `,
-		icon: `ASSETS/Characters/JarvanIV/HUD/Icons2D/JarvanIV_GoldenAegis.dds`,
-		name: `Golden Scales`,
+	'TFT7_Lillia': {
+		desc: `Lillia strikes a small area around her target's current location, dealing @ModifiedMagicDamage@ magic damage spread amongst all enemies hit and @ModifiedCenterBonusMagicDamage@ bonus magic damage to the enemy at the center of the blast. `,
+		icon: `ASSETS/Characters/Lillia/HUD/Icons2D/Lillia_Icon_W.dds`,
+		name: `Watch Out!`,
 		variables: {
-			'DefenseDuration': [2, 2, 2, 2],
-			'DamageReduction': [0, 30, 50, 300],
-			'Heal': [0, 450, 600, 3000],
-			'ASBonusBase': [0.30000001192092896, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
-			'RoarDuration': [5, 5, 5, 5],
-			'ShieldValue': [0, 150, 250, 1200],
+			'MagicDamage': [0, 215, 275, 370],
+			'CenterBonusMagicDamage': [0, 190, 240, 340],
+			'StunDuration': [1, 1, 1, 1],
 		},
 	},
 	'TFT7b_Lulu': {
@@ -7138,26 +7151,14 @@ export const abilities: Record<string, AbilityData> = {
 			'LesserDamage': [0, 175, 210, 240],
 		},
 	},
-	'TFT7_LeeSin': {
-		desc: `Lee Sin kicks his target, stunning them for @StunDuration@ seconds and knocking them back. The target and all enemies they hit take @ModifiedMagicDamage@ magic damage and have their Magic Resist reduced by @TooltipMRShred@% for @ShredDuration@ seconds.`,
-		icon: `ASSETS/Characters/LeeSin/HUD/Icons2D/BlindMonkR.dds`,
-		name: `Dragon's Rage`,
+	'TFT7_Malphite': {
+		desc: `Malphite shields himself for <magicDamage>@TotalShield@</magicDamage> %i:scaleHealth% (@ModifiedBase@ + @ShieldPercentHealth*100@% maximum health) for @ShieldDuration@ seconds.`,
+		icon: `ASSETS/Characters/Malphite/HUD/Icons2D/Malphite_GraniteShield.dds`,
+		name: `Coral Shield`,
 		variables: {
-			'StunDuration': [0, 1.25, 1.25, 1.25],
-			'MagicDamage': [0, 215, 285, 385],
-			'DragonmancerASPercent': [0, 50, 50, 50],
-			'DragonmancerASDuration': [0, 5, 5, 5],
-			'ShredDuration': [5, 5, 5, 5],
-			'TooltipMRShred': [40, 40, 40, 40],
-		},
-	},
-	'TFT7_Nomsy': {
-		desc: `Nomsy bellows, lobbing a massive fireball towards a random enemy that explodes on impact, dealing @ModifiedDamage@ magic damage to enemies within 1 hex, and bouncing additional fireballs outward that deal @PercentDamage*100@% of the damage.`,
-		icon: `ASSETS/Characters/Brand/HUD/Icons2D/BrandPyroclasm.dds`,
-		name: `Fireballs!`,
-		variables: {
-			'MagicDamage': [0, 190, 270, 420],
-			'PercentDamage': [0, 0.30000001192092896, 0.3499999940395355, 0.4000000059604645],
+			'ShieldPercentHealth': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
+			'ShieldDuration': [5, 5, 5, 5],
+			'ShieldBase': [150, 200, 250, 325],
 		},
 	},
 	'TFT7_Nasus': {
@@ -7168,16 +7169,6 @@ export const abilities: Record<string, AbilityData> = {
 			'BonusHealth': [100, 225, 350, 650],
 			'Damage': [30, 70, 100, 205],
 			'Duration': [6, 6, 6, 6],
-		},
-	},
-	'TFT7_Malphite': {
-		desc: `Malphite shields himself for <magicDamage>@TotalShield@</magicDamage> %i:scaleHealth% (@ModifiedBase@ + @ShieldPercentHealth*100@% maximum health) for @ShieldDuration@ seconds.`,
-		icon: `ASSETS/Characters/Malphite/HUD/Icons2D/Malphite_GraniteShield.dds`,
-		name: `Coral Shield`,
-		variables: {
-			'ShieldPercentHealth': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
-			'ShieldDuration': [5, 5, 5, 5],
-			'ShieldBase': [150, 200, 250, 325],
 		},
 	},
 	'TFT7_Nidalee': {
@@ -7191,7 +7182,36 @@ export const abilities: Record<string, AbilityData> = {
 			'BufferTime': [0.5, 0.5, 0.5, 0.5],
 		},
 	},
+	'TFT7_Nilah': {
+		desc: `Nilah cracks her whip-blade at her target, dashing through them and dealing <scaleAD>@TotalDamage@</scaleAD> physical damage (@ADPercent*100@% Attack Damage %i:scaleAD% + @ModifiedDamage@). If this does damage to a shield, she gains a shield equal to @PercentShield*100@% of the damage she deals to it for @ShieldStealDuration@ seconds. She instantly recasts if the target is killed or remains shielded.`,
+		icon: `ASSETS/Characters/TFT7_Nilah/HUD/Icons2D/TFT7_NilahE.TFT_Set7_Stage2.dds`,
+		name: `Slipstream`,
+		variables: {
+			'PercentShield': [0.6000000238418579, 0.800000011920929, 1, 3],
+			'Damage': [0, 130, 200, 700],
+			'ShieldStealDuration': [4, 4, 4, 4],
+			'ADPercent': [0, 2, 2.25, 5],
+		},
+	},
+	'TFT7_Nomsy': {
+		desc: `Nomsy bellows, lobbing a massive fireball towards a random enemy that explodes on impact, dealing @ModifiedDamage@ magic damage to enemies within 1 hex, and bouncing additional fireballs outward that deal @PercentDamage*100@% of the damage.`,
+		icon: `ASSETS/Characters/Brand/HUD/Icons2D/BrandPyroclasm.dds`,
+		name: `Fireballs!`,
+		variables: {
+			'MagicDamage': [0, 190, 270, 420],
+			'PercentDamage': [0, 0.30000001192092896, 0.3499999940395355, 0.4000000059604645],
+		},
+	},
 	'TFT7_NomsyMage': {
+		desc: `Nomsy bellows, lobbing a massive fireball towards a random enemy that explodes on impact, dealing @ModifiedDamage@ magic damage to enemies within 1 hex, and bouncing additional fireballs outward that deal @PercentDamage*100@% of the damage.`,
+		icon: `ASSETS/Characters/Brand/HUD/Icons2D/BrandPyroclasm.dds`,
+		name: `Fireballs!`,
+		variables: {
+			'MagicDamage': [0, 190, 270, 420],
+			'PercentDamage': [0, 0.30000001192092896, 0.3499999940395355, 0.4000000059604645],
+		},
+	},
+	'TFT7_NomsyEvoker': {
 		desc: `Nomsy bellows, lobbing a massive fireball towards a random enemy that explodes on impact, dealing @ModifiedDamage@ magic damage to enemies within 1 hex, and bouncing additional fireballs outward that deal @PercentDamage*100@% of the damage.`,
 		icon: `ASSETS/Characters/Brand/HUD/Icons2D/BrandPyroclasm.dds`,
 		name: `Fireballs!`,
@@ -7209,6 +7229,15 @@ export const abilities: Record<string, AbilityData> = {
 			'PercentDamage': [0, 0.30000001192092896, 0.3499999940395355, 0.4000000059604645],
 		},
 	},
+	'TFT7_Nunu': {
+		desc: `Nunu encourages Willump to bite his target, dealing @ModifiedDamage@ magic damage. If Willump's target has less Health than he does before the bite, it deals an additional @DamageAmp*100@% damage.`,
+		icon: `ASSETS/Characters/Nunu/HUD/Icons2D/NunuQ.dds`,
+		name: `Consume`,
+		variables: {
+			'Damage': [200, 375, 525, 925],
+			'DamageAmp': [0.5, 0.5, 0.5, 0.5],
+		},
+	},
 	'TFT7_Olaf': {
 		desc: `Passive: Olaf seeks glorious death, permanently gaining %i:scaleAD% @StackingAD@ Attack Damage (@StackingAD*2@ in Hyper Roll) whenever he dies (Current Bonus: %i:scaleAD% @TFTUnitProperty.:TFT7_OlafPassiveBonusAD@ Attack Damage).<br><br>Active: Olaf strikes his target, dealing <scaleAD>@TotalDamage@</scaleAD> physical damage (@AttackDamageRatio*100@% Attack Damage %i:scaleAD%) and gaining @ModifiedAttackSpeedRatio@ Attack Speed for @BuffDuration@ seconds. If he's below @HealthPercentThreshold@% Health, the Attack Speed is doubled.`,
 		icon: `ASSETS/Characters/Olaf/HUD/Icons2D/Olaf_E.dds`,
@@ -7219,45 +7248,6 @@ export const abilities: Record<string, AbilityData> = {
 			'BuffDuration': [0, 6, 6, 6],
 			'HealthPercentThreshold': [0, 50, 50, 50],
 			'StackingAD': [4, 4, 4, 4],
-		},
-	},
-	'TFT7_NomsyEvoker': {
-		desc: `Nomsy bellows, lobbing a massive fireball towards a random enemy that explodes on impact, dealing @ModifiedDamage@ magic damage to enemies within 1 hex, and bouncing additional fireballs outward that deal @PercentDamage*100@% of the damage.`,
-		icon: `ASSETS/Characters/Brand/HUD/Icons2D/BrandPyroclasm.dds`,
-		name: `Fireballs!`,
-		variables: {
-			'MagicDamage': [0, 190, 270, 420],
-			'PercentDamage': [0, 0.30000001192092896, 0.3499999940395355, 0.4000000059604645],
-		},
-	},
-	'TFT7_Qiyana': {
-		desc: `Qiyana dashes to the best position to strike enemies with her blade, dealing @ModifiedDamage@ magic damage in a short line and disarming enemies hit for @CCDuration@ seconds.`,
-		icon: `ASSETS/Characters/Qiyana/HUD/Icons2D/Qiyana_Q1.dds`,
-		name: `Elemental Blade`,
-		variables: {
-			'BaseDamage': [50, 225, 300, 450],
-			'CCDuration': [1.25, 1.5, 1.75, 2],
-		},
-	},
-	'TFT7_Rell': {
-		desc: `Rell forms a tether between herself and her lowest percent health ally, dealing @ModifiedDamage@ magic damage to all enemies between herself and her bound ally. She also grants herself and her bound ally @Resists@% of Rell's current Armor and Magic Resist for @Duration@ seconds.`,
-		icon: `ASSETS/Characters/TFT7_Rell/HUD/Icons2D/TFT7_RellE.TFT_Set7_Stage2.dds`,
-		name: `Iron Bond`,
-		variables: {
-			'Resists': [30, 35, 40, 50],
-			'Damage': [100, 160, 240, 440],
-			'Duration': [4, 4, 4, 4],
-		},
-	},
-	'TFT7_Nilah': {
-		desc: `Nilah cracks her whip-blade at her target, dashing through them and dealing <scaleAD>@TotalDamage@</scaleAD> physical damage (@ADPercent*100@% Attack Damage %i:scaleAD% + @ModifiedDamage@). If this does damage to a shield, she gains a shield equal to @PercentShield*100@% of the damage she deals to it for @ShieldStealDuration@ seconds. She instantly recasts if the target is killed or remains shielded.`,
-		icon: `ASSETS/Characters/TFT7_Nilah/HUD/Icons2D/TFT7_NilahE.TFT_Set7_Stage2.dds`,
-		name: `Slipstream`,
-		variables: {
-			'PercentShield': [0.6000000238418579, 0.800000011920929, 1, 3],
-			'Damage': [0, 130, 200, 700],
-			'ShieldStealDuration': [4, 4, 4, 4],
-			'ADPercent': [0, 2, 2.25, 5],
 		},
 	},
 	'TFT7_Pantheon': {
@@ -7274,6 +7264,15 @@ export const abilities: Record<string, AbilityData> = {
 			'BaseDamage': [0, 70, 110, 700],
 		},
 	},
+	'TFT7_Qiyana': {
+		desc: `Qiyana dashes to the best position to strike enemies with her blade, dealing @ModifiedDamage@ magic damage in a short line and disarming enemies hit for @CCDuration@ seconds.`,
+		icon: `ASSETS/Characters/Qiyana/HUD/Icons2D/Qiyana_Q1.dds`,
+		name: `Elemental Blade`,
+		variables: {
+			'BaseDamage': [50, 225, 300, 450],
+			'CCDuration': [1.25, 1.5, 1.75, 2],
+		},
+	},
 	'TFT7_Rakan': {
 		desc: `Rakan dashes to the furthest enemy within his attack range, disarming all units he passes through for @DisarmDuration@ seconds, and taunting his target.<br><br>Then for @ShieldDuration@ seconds, Rakan creates a shield with @ModifiedShield@ health on himself and his attacks grant him an additional @ModifiedBonusShield@ health shield.`,
 		icon: `ASSETS/Characters/TFT7_Rakan/HUD/Icons2D/TFT7_Rakan_R.TFT_Set7_Stage2.dds`,
@@ -7286,17 +7285,14 @@ export const abilities: Record<string, AbilityData> = {
 			'BaseBonusShield': [50, 50, 70, 100],
 		},
 	},
-	'TFT7_Seraphine': {
-		desc: `Seraphine sings a serenade of the seas, granting a @ModifiedShield@ shield and @ModifiedOnHit@ magic damage on attacks to all allies within @Hex@ hexes for @Duration@ seconds.`,
-		icon: `ASSETS/Characters/TFT7_Seraphine/HUD/Icons2D/TFT7_Seraphine_W1.TFT_Set7_Stage2.dds`,
-		name: `Serenade of the Seas`,
+	'TFT7_Rell': {
+		desc: `Rell forms a tether between herself and her lowest percent health ally, dealing @ModifiedDamage@ magic damage to all enemies between herself and her bound ally. She also grants herself and her bound ally @Resists@% of Rell's current Armor and Magic Resist for @Duration@ seconds.`,
+		icon: `ASSETS/Characters/TFT7_Rell/HUD/Icons2D/TFT7_RellE.TFT_Set7_Stage2.dds`,
+		name: `Iron Bond`,
 		variables: {
-			'Shield': [300, 160, 220, 300],
+			'Resists': [30, 35, 40, 50],
+			'Damage': [100, 160, 240, 440],
 			'Duration': [4, 4, 4, 4],
-			'Hex': [2, 2, 2, 2],
-			'AttackSpeed': [0.20000000298023224, 0.20000000298023224, 0.30000001192092896, 0.5],
-			'ManaGain': [2, 5, 7, 10],
-			'OnHit': [0, 20, 35, 65],
 		},
 	},
 	'TFT7_Rengar': {
@@ -7309,15 +7305,6 @@ export const abilities: Record<string, AbilityData> = {
 			'ASGain': [2, 2, 2, 2],
 			'CritChanceGain': [],
 			'NumEmpoweredAttacks': [2, 2, 2, 2],
-		},
-	},
-	'TFT7_Senna': {
-		desc: `Senna launches black mist toward the farthest enemy, striking the first enemy hit and dealing <scaleAD>@TotalDamage@</scaleAD> physical damage (@PercentAttackDamage@% Attack Damage %i:scaleAD%) on a small area and an additional @ModifiedBonusDamage@ magic damage to the target hit.`,
-		icon: `ASSETS/Characters/Senna/HUD/Icons2D/Senna_W.dds`,
-		name: `Last Embrace`,
-		variables: {
-			'BonusMagicDamage': [0, 300, 450, 650],
-			'PercentAttackDamage': [0, 200, 240, 300],
 		},
 	},
 	'TFT7_LagoonRelic': {
@@ -7334,6 +7321,38 @@ export const abilities: Record<string, AbilityData> = {
 			'FractionMaxHealth': [0.05999999865889549, 0.05999999865889549, 0.05999999865889549, 0.05999999865889549],
 			'StunDuration': [0, 1.5, 1.75, 2],
 			'GuildBonus': [100, 100, 100, 100],
+		},
+	},
+	'TFT7_Senna': {
+		desc: `Senna launches black mist toward the farthest enemy, striking the first enemy hit and dealing <scaleAD>@TotalDamage@</scaleAD> physical damage (@PercentAttackDamage@% Attack Damage %i:scaleAD%) on a small area and an additional @ModifiedBonusDamage@ magic damage to the target hit.`,
+		icon: `ASSETS/Characters/Senna/HUD/Icons2D/Senna_W.dds`,
+		name: `Last Embrace`,
+		variables: {
+			'BonusMagicDamage': [0, 300, 450, 650],
+			'PercentAttackDamage': [0, 200, 240, 300],
+		},
+	},
+	'TFT7_Seraphine': {
+		desc: `Seraphine sings a serenade of the seas, granting a @ModifiedShield@ shield and @ModifiedOnHit@ magic damage on attacks to all allies within @Hex@ hexes for @Duration@ seconds.`,
+		icon: `ASSETS/Characters/TFT7_Seraphine/HUD/Icons2D/TFT7_Seraphine_W1.TFT_Set7_Stage2.dds`,
+		name: `Serenade of the Seas`,
+		variables: {
+			'Shield': [300, 160, 220, 300],
+			'Duration': [4, 4, 4, 4],
+			'Hex': [2, 2, 2, 2],
+			'AttackSpeed': [0.20000000298023224, 0.20000000298023224, 0.30000001192092896, 0.5],
+			'ManaGain': [2, 5, 7, 10],
+			'OnHit': [0, 20, 35, 65],
+		},
+	},
+	'TFT7_Sett': {
+		desc: `For the next @Duration@ seconds, Sett gains @ModifiedResistAmount@ Armor and Magic Resist, and every other punch deals <scaleAD>@TotalBonusDamage@</scaleAD> bonus physical damage (@ADRatio*100@% Attack Damage %i:scaleAD%).`,
+		icon: `ASSETS/Characters/Sett/HUD/Icons2D/Sett_Q.dds`,
+		name: `Knuckle Down`,
+		variables: {
+			'BaseResistAmount': [15, 50, 60, 80],
+			'ADRatio': [0, 1.5, 1.5499999523162842, 1.7000000476837158],
+			'Duration': [4, 4, 4, 4],
 		},
 	},
 	'TFT7_DragonGreen': {
@@ -7359,14 +7378,14 @@ export const abilities: Record<string, AbilityData> = {
 			'FlameBreathDamage': [1500, 700, 1200, 20000],
 		},
 	},
-	'TFT7_Sett': {
-		desc: `For the next @Duration@ seconds, Sett gains @ModifiedResistAmount@ Armor and Magic Resist, and every other punch deals <scaleAD>@TotalBonusDamage@</scaleAD> bonus physical damage (@ADRatio*100@% Attack Damage %i:scaleAD%).`,
-		icon: `ASSETS/Characters/Sett/HUD/Icons2D/Sett_Q.dds`,
-		name: `Knuckle Down`,
+	'TFT7_Skarner': {
+		desc: `Skarner shields himself for @ModifiedShield@ for @Duration@ seconds, and gains @AttackSpeed*100@% Attack Speed while it holds.`,
+		icon: `ASSETS/Characters/Skarner/HUD/Icons2D/Skarner_W.dds`,
+		name: `Crystalline Exoskeleton`,
 		variables: {
-			'BaseResistAmount': [15, 50, 60, 80],
-			'ADRatio': [0, 1.5, 1.5499999523162842, 1.7000000476837158],
-			'Duration': [4, 4, 4, 4],
+			'ShieldAmount': [225, 300, 375, 450],
+			'Duration': [8, 8, 8, 8],
+			'AttackSpeed': [1.399999976158142, 1.600000023841858, 1.7999999523162842, 2],
 		},
 	},
 	'TFT7_AquaticDragon': {
@@ -7380,14 +7399,27 @@ export const abilities: Record<string, AbilityData> = {
 			'BaseExplodeDamage': [150, 285, 400, 1400],
 		},
 	},
-	'TFT7_Skarner': {
-		desc: `Skarner shields himself for @ModifiedShield@ for @Duration@ seconds, and gains @AttackSpeed*100@% Attack Speed while it holds.`,
-		icon: `ASSETS/Characters/Skarner/HUD/Icons2D/Skarner_W.dds`,
-		name: `Crystalline Exoskeleton`,
+	'TFT7_Soraka': {
+		desc: `Passive: While any ally is below @HealthThreshold@% Health, Soraka gains an additional @ManaPerAttack@ mana per attack. <br><br>Active: Soraka calls down a shower of @stars@ stars over the next @Duration@ seconds. Allies are healed for @ModifiedHealing@ each time a star hits them.`,
+		icon: `ASSETS/Characters/Soraka/HUD/Icons2D/Soraka_R.dds`,
+		name: `Starfall`,
 		variables: {
-			'ShieldAmount': [225, 300, 375, 450],
-			'Duration': [8, 8, 8, 8],
-			'AttackSpeed': [1.399999976158142, 1.600000023841858, 1.7999999523162842, 2],
+			'Healing': [0, 105, 165, 1000],
+			'Stars': [14, 14, 14, 14],
+			'Duration': [2, 2, 2, 2],
+			'ManaPerAttack': [15, 15, 15, 15],
+			'HealthThreshold': [50, 50, 50, 50],
+		},
+	},
+	'TFT7_DragonPurple': {
+		desc: `Sy'fen charges toward the farthest enemy within @ChargeDistance@ hexes, dealing <scaleAD>@TotalDamage@</scaleAD> physical damage (@ADRatio*100@% of Attack Damage %i:scaleAD%) and knocking up enemies he passes through.<br><br>After charging, Sy'fen bites an enemy, dealing <scaleAD>@TotalBiteDamage@</scaleAD> physical damage (@BiteADRatio*100@% Attack Damage %i:scaleAD%) and ignoring @ModifiedArmorPenPercent@% of the target's Armor. This bite cannot be dodged.`,
+		icon: `ASSETS/Characters/TFT7_DragonPurple/HUD/Icons2D/TFT7_DragonPurple_Ability.TFT_Set7.dds`,
+		name: `Rampage`,
+		variables: {
+			'ADRatio': [0, 1.5, 1.7000000476837158, 4.5],
+			'BiteADRatio': [0, 4.5, 5.5, 25],
+			'ArmorPenPercent': [0, 33, 33, 33],
+			'ChargeDistance': [2.5, 2.5, 2.5, 2.5],
 		},
 	},
 	'TFT7_Sylas': {
@@ -7398,17 +7430,6 @@ export const abilities: Record<string, AbilityData> = {
 			'Damage': [0, 140, 200, 320],
 			'Shield': [0, 365, 415, 525],
 			'ShieldDuration': [0, 6, 6, 6],
-		},
-	},
-	'TFT7_DragonEarth': {
-		desc: `Terra stomps three times causing an earthquake around them, dealing <scaleAD>@TotalDamage@</scaleAD> physical damage (@ArmorAndMRPercent@% of their combined %i:scaleArmor% Armor and %i:scaleMR% Magic Resist plus @AttackDamagePercent@% of their Attack Damage.) At the end of the earthquake Terra's scales are hardened for @ResistDuration@ seconds, granting @ModifiedResistBuff@ Armor and Magic Resist.`,
-		icon: `ASSETS/Characters/Taliyah/HUD/Icons2D/Taliyah_E.dds`,
-		name: `Earthquake`,
-		variables: {
-			'ArmorAndMRPercent': [0, 150, 200, 2500],
-			'AttackDamagePercent': [0, 200, 200, 200],
-			'ResistBuff': [0, 130, 165, 4000],
-			'ResistDuration': [0, 8, 8, 8],
 		},
 	},
 	'TFT7_Taliyah': {
@@ -7425,27 +7446,15 @@ export const abilities: Record<string, AbilityData> = {
 		name: `On Duty!`,
 		variables: {},
 	},
-	'TFT7_DragonPurple': {
-		desc: `Sy'fen charges toward the farthest enemy within @ChargeDistance@ hexes, dealing <scaleAD>@TotalDamage@</scaleAD> physical damage (@ADRatio*100@% of Attack Damage %i:scaleAD%) and knocking up enemies he passes through.<br><br>After charging, Sy'fen bites an enemy, dealing <scaleAD>@TotalBiteDamage@</scaleAD> physical damage (@BiteADRatio*100@% Attack Damage %i:scaleAD%) and ignoring @ModifiedArmorPenPercent@% of the target's Armor. This bite cannot be dodged.`,
-		icon: `ASSETS/Characters/TFT7_DragonPurple/HUD/Icons2D/TFT7_DragonPurple_Ability.TFT_Set7.dds`,
-		name: `Rampage`,
+	'TFT7_DragonEarth': {
+		desc: `Terra stomps three times causing an earthquake around them, dealing <scaleAD>@TotalDamage@</scaleAD> physical damage (@ArmorAndMRPercent@% of their combined %i:scaleArmor% Armor and %i:scaleMR% Magic Resist plus @AttackDamagePercent@% of their Attack Damage.) At the end of the earthquake Terra's scales are hardened for @ResistDuration@ seconds, granting @ModifiedResistBuff@ Armor and Magic Resist.`,
+		icon: `ASSETS/Characters/Taliyah/HUD/Icons2D/Taliyah_E.dds`,
+		name: `Earthquake`,
 		variables: {
-			'ADRatio': [0, 1.5, 1.7000000476837158, 4.5],
-			'BiteADRatio': [0, 4.5, 5.5, 25],
-			'ArmorPenPercent': [0, 33, 33, 33],
-			'ChargeDistance': [2.5, 2.5, 2.5, 2.5],
-		},
-	},
-	'TFT7_Soraka': {
-		desc: `Passive: While any ally is below @HealthThreshold@% Health, Soraka gains an additional @ManaPerAttack@ mana per attack. <br><br>Active: Soraka calls down a shower of @stars@ stars over the next @Duration@ seconds. Allies are healed for @ModifiedHealing@ each time a star hits them.`,
-		icon: `ASSETS/Characters/Soraka/HUD/Icons2D/Soraka_R.dds`,
-		name: `Starfall`,
-		variables: {
-			'Healing': [0, 105, 165, 1000],
-			'Stars': [14, 14, 14, 14],
-			'Duration': [2, 2, 2, 2],
-			'ManaPerAttack': [15, 15, 15, 15],
-			'HealthThreshold': [50, 50, 50, 50],
+			'ArmorAndMRPercent': [0, 150, 200, 2500],
+			'AttackDamagePercent': [0, 200, 200, 200],
+			'ResistBuff': [0, 130, 165, 4000],
+			'ResistDuration': [0, 8, 8, 8],
 		},
 	},
 	'TFT6_TheGoldenEgg': {
@@ -7454,6 +7463,19 @@ export const abilities: Record<string, AbilityData> = {
 		name: `Hatching`,
 		variables: {
 			'EggTurns': [10, 10, 10, 10],
+		},
+	},
+	'TFT7b_Tristana': {
+		desc: `Tristana fires up to @NumOfCharges@ explosive charges, prioritizing the closest targets without a charge. Charges detonate after @Duration@ seconds, dealing <scaleAD>@TotalDamage@</scaleAD> physical damage (@PercentAD*100@% Attack Damage %i:scaleAD%) to nearby enemies and an additional @ModifiedDamage@ magic damage to the target.`,
+		icon: `ASSETS/Characters/Tristana/HUD/Icons2D/Tristana_E.dds`,
+		name: `Explosive Charge`,
+		variables: {
+			'Damage': [0, 130, 160, 200],
+			'NumOfCharges': [1, 1, 1, 1],
+			'HexRadius': [1, 1, 1, 1],
+			'Duration': [1, 1, 1, 1],
+			'PercentAD': [1.2000000476837158, 1.399999976158142, 1.7000000476837158, 2.0999999046325684],
+			'NomsyAttackDamage': [0, 50, 75, 120],
 		},
 	},
 	'TFT7_Twitch': {
@@ -7478,19 +7500,6 @@ export const abilities: Record<string, AbilityData> = {
 			'HealPercent': [0, 12, 12, 12],
 		},
 	},
-	'TFT7b_Tristana': {
-		desc: `Tristana fires up to @NumOfCharges@ explosive charges, prioritizing the closest targets without a charge. Charges detonate after @Duration@ seconds, dealing <scaleAD>@TotalDamage@</scaleAD> physical damage (@PercentAD*100@% Attack Damage %i:scaleAD%) to nearby enemies and an additional @ModifiedDamage@ magic damage to the target.`,
-		icon: `ASSETS/Characters/Tristana/HUD/Icons2D/Tristana_E.dds`,
-		name: `Explosive Charge`,
-		variables: {
-			'Damage': [0, 130, 160, 200],
-			'NumOfCharges': [1, 1, 1, 1],
-			'HexRadius': [1, 1, 1, 1],
-			'Duration': [1, 1, 1, 1],
-			'PercentAD': [1.2000000476837158, 1.399999976158142, 1.7000000476837158, 2.0999999046325684],
-			'NomsyAttackDamage': [0, 50, 75, 120],
-		},
-	},
 	'TFT7_Varus': {
 		desc: `Varus sends out a cosmic tendril towards his target that strikes the first enemy hit, dealing <scaleAD>@TooltipDamage@</scaleAD> physical damage (@ADPercent@% Attack Damage %i:scaleAD%) and stunning them for @StunDuration@ seconds. Tendrils then spread to @SpreadCount@ nearby enemies, dealing @ModifiedMagicDamage@ magic damage and stunning them for the same duration.`,
 		icon: `ASSETS/Characters/Varus/HUD/Icons2D/VarusR.dds`,
@@ -7502,15 +7511,6 @@ export const abilities: Record<string, AbilityData> = {
 			'MagicDamage': [0, 150, 250, 400],
 		},
 	},
-	'TFT7_Nunu': {
-		desc: `Nunu encourages Willump to bite his target, dealing @ModifiedDamage@ magic damage. If Willump's target has less Health than he does before the bite, it deals an additional @DamageAmp*100@% damage.`,
-		icon: `ASSETS/Characters/Nunu/HUD/Icons2D/NunuQ.dds`,
-		name: `Consume`,
-		variables: {
-			'Damage': [200, 375, 525, 925],
-			'DamageAmp': [0.5, 0.5, 0.5, 0.5],
-		},
-	},
 	'TFT7_Vladimir': {
 		desc: `Vladimir deals @ModifiedDamage@ magic damage to the target and heals for @ModifiedHeal@ Health.`,
 		icon: `ASSETS/Characters/Vladimir/HUD/Icons2D/VladimirQ.dds`,
@@ -7519,6 +7519,12 @@ export const abilities: Record<string, AbilityData> = {
 			'Damage': [75, 275, 325, 375],
 			'Heal': [0, 275, 325, 375],
 		},
+	},
+	'TFT_Voidspawn': {
+		desc: `The Voidspawn gains bonus Health and Attack Damage based on the current Stage. `,
+		icon: `ASSETS/Characters/TFT_VoidSpawn/HUD/Voidspawn_square.dds`,
+		name: `Voidborn`,
+		variables: {},
 	},
 	'TFT7b_Volibear': {
 		desc: `Volibear rages, gaining @ModifiedBonusHealth@ bonus Health. For the rest of combat, every @NumAttacks@rd attack deals @ModifiedDamagePerTarget@ magic bonus magic damage to the target, and @ModifiedDamagePerTarget@ magic damage to up to @NumTargets@ additional enemies.`,
@@ -7594,12 +7600,6 @@ export const abilities: Record<string, AbilityData> = {
 			'RangeCheck': [3, 3, 3, 3],
 		},
 	},
-	'TFT_Voidspawn': {
-		desc: `The Voidspawn gains bonus Health and Attack Damage based on the current Stage. `,
-		icon: `ASSETS/Characters/TFT_VoidSpawn/HUD/Voidspawn_square.dds`,
-		name: `Voidborn`,
-		variables: {},
-	},
 	'TFT7_DragonGuild': {
 		desc: `Zippy shields himself for @ModifiedShieldAmount@ for @ShieldDuration@ seconds and somersaults toward the highest percent health enemy, dealing <scaleAD>@TotalDamage@</scaleAD> physical damage (@AttackDamageRatio*100@% Attack Damage %i:scaleAD%) and knocking them back slightly.`,
 		icon: `ASSETS/Characters/Kled/HUD/Icons2D/Kled_P_Cooldown.dds`,
@@ -7610,13 +7610,12 @@ export const abilities: Record<string, AbilityData> = {
 			'ShieldDuration': [0, 2, 2, 2],
 		},
 	},
-	'TFT7_Zyra': {
-		desc: `Zyra summons vines in the row with the most enemies, dealing @ModifiedDamage@ magic damage and stunning them for @StunDuration@ seconds.`,
-		icon: `ASSETS/Characters/Zyra/HUD/Icons2D/ZyraQ.dds`,
-		name: `Grasping Spines`,
+	'TFT7_Zoe': {
+		desc: `Zoe nabs a spell from another dimension and casts it as if it were her own.`,
+		icon: `ASSETS/Characters/Zoe/HUD/Icons2D/Zoe_W.dds`,
+		name: `Spell Thief`,
 		variables: {
-			'Damage': [0, 225, 325, 550],
-			'StunDuration': [0.75, 1, 1.25, 1.5],
+			'BaseDamage': [],
 		},
 	},
 	'TFT7_IvernMinion': {
@@ -7627,12 +7626,13 @@ export const abilities: Record<string, AbilityData> = {
 			'Damage': [250, 500, 1000, 10000],
 		},
 	},
-	'TFT7_Zoe': {
-		desc: `Zoe nabs a spell from another dimension and casts it as if it were her own.`,
-		icon: `ASSETS/Characters/Zoe/HUD/Icons2D/Zoe_W.dds`,
-		name: `Spell Thief`,
+	'TFT7_Zyra': {
+		desc: `Zyra summons vines in the row with the most enemies, dealing @ModifiedDamage@ magic damage and stunning them for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/Zyra/HUD/Icons2D/ZyraQ.dds`,
+		name: `Grasping Spines`,
 		variables: {
-			'BaseDamage': [],
+			'Damage': [0, 225, 325, 550],
+			'StunDuration': [0.75, 1, 1.25, 1.5],
 		},
 	},
 }

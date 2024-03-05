@@ -5694,6 +5694,15 @@ export const champions: ChampionData[] = [
 export const otherUnits: ChampionData[] = []
 
 export const abilities: Record<string, AbilityData> = {
+	'TFT3_Ahri': {
+		desc: `Ahri fires an orb in a line, dealing @ModifiedDamage@ magic damage to all enemies it passes through on the way out, and @ModifiedDamage@ true damage on the way back.`,
+		icon: `ASSETS/Characters/Ahri/HUD/Icons2D/Ahri_OrbofDeception.dds`,
+		name: `Orb of Deception`,
+		variables: {
+			'Damage': [150, 175, 250, 375],
+			'HexRange': [4, 4, 4, 4],
+		},
+	},
 	'TFT3_Annie': {
 		desc: `Annie blasts a cone of fire dealing @ModifiedDamage@ magic damage to enemies in front of her, then creates a shield with @ModifiedShield@ health for herself for @ShieldDuration@ seconds.`,
 		icon: `ASSETS/Characters/Annie/HUD/Icons2D/Annie_E.dds`,
@@ -5704,22 +5713,13 @@ export const abilities: Record<string, AbilityData> = {
 			'ShieldDuration': [4, 4, 4, 4],
 		},
 	},
-	'TFT3_Blitzcrank': {
-		desc: `Blitzcrank pulls the farthest enemy, dealing @ModifiedDamage@ magic damage and stunning them for @StunDuration@ seconds.<br><br>His next attack after pulling knocks up for 1 second.<br><br>Allies within range will prefer to attack Blitzcrank's target.`,
-		icon: `ASSETS/Characters/Blitzcrank/HUD/Icons2D/Blitzcrank_RocketGrab.dds`,
-		name: `Rocket Grab`,
+	'TFT3_Ashe': {
+		desc: `Ashe fires an arrow at the farthest enemy that explodes on the first target hit, dealing @ModifiedDamage@ magic damage to all nearby enemies and stunning them for @StunDurationPerSquare@ seconds.`,
+		icon: `ASSETS/Characters/Ashe/HUD/Icons2D/Ashe_R.dds`,
+		name: `Enchanted Crystal Arrow`,
 		variables: {
-			'Damage': [-50, 250, 400, 900],
-			'StunDuration': [2.5, 2.5, 2.5, 2.5],
-		},
-	},
-	'TFT3_Ahri': {
-		desc: `Ahri fires an orb in a line, dealing @ModifiedDamage@ magic damage to all enemies it passes through on the way out, and @ModifiedDamage@ true damage on the way back.`,
-		icon: `ASSETS/Characters/Ahri/HUD/Icons2D/Ahri_OrbofDeception.dds`,
-		name: `Orb of Deception`,
-		variables: {
-			'Damage': [150, 175, 250, 375],
-			'HexRange': [4, 4, 4, 4],
+			'Damage': [250, 250, 350, 700],
+			'StunDurationPerSquare': [2, 2, 2, 2],
 		},
 	},
 	'TFT3_AurelionSol': {
@@ -5732,14 +5732,13 @@ export const abilities: Record<string, AbilityData> = {
 			'FightersPerCast': [3, 3, 3, 3],
 		},
 	},
-	'TFT3_ChoGath': {
-		desc: `Cho'Gath ruptures a large area, dealing @ModifiedDamage@ magic damage and knocking up all enemies within for @KnockDuration@ seconds.`,
-		icon: `ASSETS/Characters/Chogath/HUD/Icons2D/GreenTerror_SpikeSlam.dds`,
-		name: `Rupture`,
+	'TFT3_Blitzcrank': {
+		desc: `Blitzcrank pulls the farthest enemy, dealing @ModifiedDamage@ magic damage and stunning them for @StunDuration@ seconds.<br><br>His next attack after pulling knocks up for 1 second.<br><br>Allies within range will prefer to attack Blitzcrank's target.`,
+		icon: `ASSETS/Characters/Blitzcrank/HUD/Icons2D/Blitzcrank_RocketGrab.dds`,
+		name: `Rocket Grab`,
 		variables: {
-			'Damage': [0, 150, 250, 2000],
-			'KnockDuration': [2, 2, 2, 4],
-			'RuptureDelay': [1.5, 1.5, 1.5, 1.5],
+			'Damage': [-50, 250, 400, 900],
+			'StunDuration': [2.5, 2.5, 2.5, 2.5],
 		},
 	},
 	'TFT3_Caitlyn': {
@@ -5748,6 +5747,16 @@ export const abilities: Record<string, AbilityData> = {
 		name: `Ace In The Hole`,
 		variables: {
 			'Damage': [0, 750, 1500, 3000],
+		},
+	},
+	'TFT3_ChoGath': {
+		desc: `Cho'Gath ruptures a large area, dealing @ModifiedDamage@ magic damage and knocking up all enemies within for @KnockDuration@ seconds.`,
+		icon: `ASSETS/Characters/Chogath/HUD/Icons2D/GreenTerror_SpikeSlam.dds`,
+		name: `Rupture`,
+		variables: {
+			'Damage': [0, 150, 250, 2000],
+			'KnockDuration': [2, 2, 2, 4],
+			'RuptureDelay': [1.5, 1.5, 1.5, 1.5],
 		},
 	},
 	'TFT3_Darius': {
@@ -5760,6 +5769,15 @@ export const abilities: Record<string, AbilityData> = {
 			'DamageMultiplier': [2, 2, 2, 2],
 		},
 	},
+	'TFT3_Ekko': {
+		desc: `Ekko shatters the timeline, freezing all units in time before attacking each enemy with @ModifiedDamage@ bonus magic damage and applying on-hit effects.<br><br>Ekko cannot die while he has stopped time.`,
+		icon: `ASSETS/Characters/Ekko/HUD/Icons2D/Ekko_R.dds`,
+		name: `Chronobreak`,
+		variables: {
+			'BonusDamage': [200, 225, 400, 2000],
+			'BaseDelayBetweenAttacks': [0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645],
+		},
+	},
 	'TFT3_Ezreal': {
 		desc: `Ezreal fires an electromagnetic pulse at a random enemy that explodes on impact, dealing @ModifiedDamage@ damage to all nearby enemies and increasing the cost of their next spellcast by @PercentCostIncrease@%.`,
 		icon: `ASSETS/Characters/Ezreal/HUD/Icons2D/Ezreal_W.dds`,
@@ -5768,15 +5786,6 @@ export const abilities: Record<string, AbilityData> = {
 			'Damage': [0, 200, 300, 600],
 			'HexRadius': [2, 2, 2, 2],
 			'PercentCostIncrease': [3, 40, 40, 40],
-		},
-	},
-	'TFT3_Ekko': {
-		desc: `Ekko shatters the timeline, freezing all units in time before attacking each enemy with @ModifiedDamage@ bonus magic damage and applying on-hit effects.<br><br>Ekko cannot die while he has stopped time.`,
-		icon: `ASSETS/Characters/Ekko/HUD/Icons2D/Ekko_R.dds`,
-		name: `Chronobreak`,
-		variables: {
-			'BonusDamage': [200, 225, 400, 2000],
-			'BaseDelayBetweenAttacks': [0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645],
 		},
 	},
 	'TFT3_Fiora': {
@@ -5789,13 +5798,14 @@ export const abilities: Record<string, AbilityData> = {
 			'BlockDuration': [1.5, 1.5, 1.5, 1.5],
 		},
 	},
-	'TFT3_Ashe': {
-		desc: `Ashe fires an arrow at the farthest enemy that explodes on the first target hit, dealing @ModifiedDamage@ magic damage to all nearby enemies and stunning them for @StunDurationPerSquare@ seconds.`,
-		icon: `ASSETS/Characters/Ashe/HUD/Icons2D/Ashe_R.dds`,
-		name: `Enchanted Crystal Arrow`,
+	'TFT3_Fizz': {
+		desc: `Fizz throws a lure that attracts a shark. It deals @ModifiedDamage@ magic damage to enemies caught, knocking them back and stunning them for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/Fizz/HUD/Icons2D/Fizz_R.dds`,
+		name: `Chum the Waters`,
 		variables: {
-			'Damage': [250, 250, 350, 700],
-			'StunDurationPerSquare': [2, 2, 2, 2],
+			'Delay': [1.5, 1.5, 1.5, 1.5],
+			'Damage': [0, 350, 500, 2000],
+			'StunDuration': [1, 1.5, 1.5, 1.5],
 		},
 	},
 	'TFT3_Gangplank': {
@@ -5807,6 +5817,15 @@ export const abilities: Record<string, AbilityData> = {
 			'ImpactDelayTime': [2, 2, 2, 2],
 			'UpgradeDelayTime': [0, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
 			'DoubleImpactDamagePercent': [0, 50, 50, 50],
+		},
+	},
+	'TFT3_Graves': {
+		desc: `Graves launches a smoke grenade toward the enemy with the most Attack Speed. The grenade explodes on impact dealing @ModifiedDamage@ magic damage to nearby enemies and causing their attacks to miss for @BlindDuration@ seconds.`,
+		icon: `ASSETS/Characters/Graves/HUD/Icons2D/GravesSmokeGrenade.dds`,
+		name: `Smoke Grenade`,
+		variables: {
+			'Damage': [0, 150, 200, 400],
+			'BlindDuration': [2, 3, 4, 5],
 		},
 	},
 	'TFT3_Irelia': {
@@ -5834,25 +5853,6 @@ export const abilities: Record<string, AbilityData> = {
 		variables: {
 			'Damage': [300, 450, 600, 1200],
 			'Radius': [1, 1, 1, 1],
-		},
-	},
-	'TFT3_Graves': {
-		desc: `Graves launches a smoke grenade toward the enemy with the most Attack Speed. The grenade explodes on impact dealing @ModifiedDamage@ magic damage to nearby enemies and causing their attacks to miss for @BlindDuration@ seconds.`,
-		icon: `ASSETS/Characters/Graves/HUD/Icons2D/GravesSmokeGrenade.dds`,
-		name: `Smoke Grenade`,
-		variables: {
-			'Damage': [0, 150, 200, 400],
-			'BlindDuration': [2, 3, 4, 5],
-		},
-	},
-	'TFT3_Fizz': {
-		desc: `Fizz throws a lure that attracts a shark. It deals @ModifiedDamage@ magic damage to enemies caught, knocking them back and stunning them for @StunDuration@ seconds.`,
-		icon: `ASSETS/Characters/Fizz/HUD/Icons2D/Fizz_R.dds`,
-		name: `Chum the Waters`,
-		variables: {
-			'Delay': [1.5, 1.5, 1.5, 1.5],
-			'Damage': [0, 350, 500, 2000],
-			'StunDuration': [1, 1.5, 1.5, 1.5],
 		},
 	},
 	'TFT3_Jhin': {
@@ -5905,13 +5905,12 @@ export const abilities: Record<string, AbilityData> = {
 			'Duration': [3, 2.5, 3, 3.5],
 		},
 	},
-	'TFT3_KhaZix': {
-		desc: `Kha'Zix slashes the nearest enemy, dealing @ModifiedDamage@ magic damage. If the enemy has no adjacent allies, this damage is increased to @ModifiedIsolationDamage@.`,
-		icon: `ASSETS/Characters/KhaZix/HUD/Icons2D/Khazix_Q.dds`,
-		name: `Taste their Fear`,
+	'TFT3_Kayle': {
+		desc: `Kayle Ascends, causing her attacks to launch waves that deal @ModifiedDamage@ bonus magic damage.`,
+		icon: `ASSETS/Characters/Kayle/HUD/Icons2D/Kayle_P.dds`,
+		name: `Ascend`,
 		variables: {
-			'Damage': [50, 200, 275, 500],
-			'IsolationDamage': [200, 600, 825, 1500],
+			'WaveDamage': [0, 125, 200, 600],
 		},
 	},
 	'TFT3_NPC_KaynElite': {
@@ -5923,22 +5922,23 @@ export const abilities: Record<string, AbilityData> = {
 			'AOEDamage': [],
 		},
 	},
-	'TFT3_Kayle': {
-		desc: `Kayle Ascends, causing her attacks to launch waves that deal @ModifiedDamage@ bonus magic damage.`,
-		icon: `ASSETS/Characters/Kayle/HUD/Icons2D/Kayle_P.dds`,
-		name: `Ascend`,
+	'TFT3_NPC_Kayn': {
+		desc: `Kayn swings his scythe, dealing @Damage@ to enemies in a line. `,
+		icon: `ASSETS/Characters/Kayn/HUD/Icons2D/Kayn_W_Primary.dds`,
+		name: `Blade's Reach`,
 		variables: {
-			'WaveDamage': [0, 125, 200, 600],
+			'Damage': [200, 200, 200, 200],
+			'BoxWidth': [160, 160, 160, 160],
+			'Range': [700, 700, 700, 700],
 		},
 	},
-	'TFT3_Lulu': {
-		desc: `Lulu polymorphs the @NumTargets@ nearest enemies for @Duration@ seconds, causing them to hop aimlessly, unable to attack or cast. Polymorphed enemies take @ModifiedBonusDamage@ additional damage from all sources.`,
-		icon: `ASSETS/Characters/Lulu/HUD/Icons2D/Lulu_Whimsy.dds`,
-		name: `Mass Polymorph`,
+	'TFT3_KhaZix': {
+		desc: `Kha'Zix slashes the nearest enemy, dealing @ModifiedDamage@ magic damage. If the enemy has no adjacent allies, this damage is increased to @ModifiedIsolationDamage@.`,
+		icon: `ASSETS/Characters/KhaZix/HUD/Icons2D/Khazix_Q.dds`,
+		name: `Taste their Fear`,
 		variables: {
-			'NumTargets': [0, 2, 4, 12],
-			'Duration': [0, 3, 3, 8],
-			'BonusDamage': [0.02500000037252903, 0.05000000074505806, 0.10000000149011612, 0.25],
+			'Damage': [50, 200, 275, 500],
+			'IsolationDamage': [200, 600, 825, 1500],
 		},
 	},
 	'TFT3_Leona': {
@@ -5959,6 +5959,16 @@ export const abilities: Record<string, AbilityData> = {
 			'SecondShotDamage': [0, 150, 200, 325],
 		},
 	},
+	'TFT3_Lulu': {
+		desc: `Lulu polymorphs the @NumTargets@ nearest enemies for @Duration@ seconds, causing them to hop aimlessly, unable to attack or cast. Polymorphed enemies take @ModifiedBonusDamage@ additional damage from all sources.`,
+		icon: `ASSETS/Characters/Lulu/HUD/Icons2D/Lulu_Whimsy.dds`,
+		name: `Mass Polymorph`,
+		variables: {
+			'NumTargets': [0, 2, 4, 12],
+			'Duration': [0, 3, 3, 8],
+			'BonusDamage': [0.02500000037252903, 0.05000000074505806, 0.10000000149011612, 0.25],
+		},
+	},
 	'TFT3_Lux': {
 		desc: `Lux fires a sphere of darkness towards the farthest enemy. Enemies in its path take @ModifiedDamage@ magic damage and are stunned for @StunDuration@ seconds.`,
 		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxLightStrikeKugel.dds`,
@@ -5968,26 +5978,6 @@ export const abilities: Record<string, AbilityData> = {
 			'StunDuration': [1, 1.5, 2, 2.5],
 		},
 	},
-	'TFT3_NPC_Kayn': {
-		desc: `Kayn swings his scythe, dealing @Damage@ to enemies in a line. `,
-		icon: `ASSETS/Characters/Kayn/HUD/Icons2D/Kayn_W_Primary.dds`,
-		name: `Blade's Reach`,
-		variables: {
-			'Damage': [200, 200, 200, 200],
-			'BoxWidth': [160, 160, 160, 160],
-			'Range': [700, 700, 700, 700],
-		},
-	},
-	'TFT3_Mordekaiser': {
-		desc: `Mordekaiser gains a shield for that absorbs @ModifiedShield@ damage over @Duration@ seconds. While the shield persists, Mordekaiser deals @ModifiedDamage@ magic damage per second to all nearby enemies.`,
-		icon: `ASSETS/Characters/Mordekaiser/HUD/Icons2D/MordekaiserW.dds`,
-		name: `Indestructible`,
-		variables: {
-			'DamagePerSecond': [20, 50, 75, 125],
-			'ShieldAmount': [0, 350, 500, 800],
-			'Duration': [8, 8, 8, 8],
-		},
-	},
 	'TFT3_Malphite': {
 		desc: `Passive: Malphite starts combat with a shield equal to @ModifiedPercentHealth@ of his maximum health.`,
 		icon: `ASSETS/Characters/Malphite/HUD/Icons2D/Malphite_GraniteShield.dds`,
@@ -5995,59 +5985,6 @@ export const abilities: Record<string, AbilityData> = {
 		variables: {
 			'PercentHealth': [0.3499999940395355, 0.4000000059604645, 0.44999998807907104, 0.6000000238418579],
 			'SecondsPerRefresh': [0, 9, 9, 9],
-		},
-	},
-	'TFT3_Neeko': {
-		desc: `Neeko leaps into the air and slams into the ground, dealing @ModifiedDamage@ magic damage to all nearby enemies and stunning them for @StunDuration@ seconds.`,
-		icon: `ASSETS/Characters/Neeko/HUD/Icons2D/Neeko_R.dds`,
-		name: `Pop Blossom`,
-		variables: {
-			'DamageAmount': [0, 200, 275, 550],
-			'StunDuration': [1, 1.5, 2, 2.5],
-			'HexRadius': [2, 2, 2, 2],
-		},
-	},
-	'TFT3_Rakan': {
-		desc: `Rakan dashes to the furthest enemy within range and leaps into the air, knocking them up for @StunDuration@ seconds and dealing @ModifiedDamage@ magic damage.`,
-		icon: `ASSETS/Characters/Rakan/HUD/Icons2D/Rakan_W.dds`,
-		name: `Grand Entrance`,
-		variables: {
-			'Damage': [75, 175, 275, 400],
-			'Radius': [1, 1, 1, 1],
-			'StunDuration': [0, 1.5, 2, 2.5],
-			'KnockupDuration': [1, 1, 1, 1],
-		},
-	},
-	'TFT3_Poppy': {
-		desc: `Poppy throws her buckler at the furthest enemy, dealing @ModifiedDamage@ magic damage. The buckler then bounces back, granting Poppy a shield that blocks @ModifiedShield@ damage.`,
-		icon: `ASSETS/Characters/Poppy/HUD/Icons2D/Poppy_Passive.dds`,
-		name: `Buckler Toss`,
-		variables: {
-			'Damage': [50, 100, 150, 200],
-			'ShieldAmount': [100, 200, 300, 400],
-		},
-	},
-	'TFT3_Rumble': {
-		desc: `Rumble torches his enemies, dealing @ModifiedDamage@ magic damage over @Duration@ seconds, and reducing healing on them by @GrievousWoundsPercent@% for @GrievousWoundsDuration@ seconds.`,
-		icon: `ASSETS/Characters/Rumble/HUD/Icons2D/Rumble_Flamespitter.dds`,
-		name: `Flamespitter`,
-		variables: {
-			'TotalDamage': [30, 350, 500, 1000],
-			'Duration': [3, 3, 3, 3],
-			'NumberOfTicks': [12, 12, 12, 12],
-			'TickRate': [0.25, 0.25, 0.25, 0.25],
-			'GrievousWoundsDuration': [5, 5, 5, 5],
-			'ConeHexRange': [2, 2, 2, 2],
-			'GrievousWoundsPercent': [0, 50, 50, 50],
-		},
-	},
-	'TFT3_Shaco': {
-		desc: `Shaco teleports and backstabs his target for @TooltipPercentage@ of his Basic Attack damage. This is also always a critical hit. (Total: @TooltipADBonus@)`,
-		icon: `ASSETS/Characters/Shaco/HUD/Icons2D/Jester_ManiacalCloak2.dds`,
-		name: `Deceive`,
-		variables: {
-			'Duration': [1.5, 1.5, 1.5, 1.5],
-			'PercentOfAD': [1.75, 2, 2.25, 2.5],
 		},
 	},
 	'TFT3_MasterYi': {
@@ -6074,6 +6011,69 @@ export const abilities: Record<string, AbilityData> = {
 			'UpgradeMoreWaves': [0, 5, 5, 5],
 		},
 	},
+	'TFT3_Mordekaiser': {
+		desc: `Mordekaiser gains a shield for that absorbs @ModifiedShield@ damage over @Duration@ seconds. While the shield persists, Mordekaiser deals @ModifiedDamage@ magic damage per second to all nearby enemies.`,
+		icon: `ASSETS/Characters/Mordekaiser/HUD/Icons2D/MordekaiserW.dds`,
+		name: `Indestructible`,
+		variables: {
+			'DamagePerSecond': [20, 50, 75, 125],
+			'ShieldAmount': [0, 350, 500, 800],
+			'Duration': [8, 8, 8, 8],
+		},
+	},
+	'TFT3_Neeko': {
+		desc: `Neeko leaps into the air and slams into the ground, dealing @ModifiedDamage@ magic damage to all nearby enemies and stunning them for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/Neeko/HUD/Icons2D/Neeko_R.dds`,
+		name: `Pop Blossom`,
+		variables: {
+			'DamageAmount': [0, 200, 275, 550],
+			'StunDuration': [1, 1.5, 2, 2.5],
+			'HexRadius': [2, 2, 2, 2],
+		},
+	},
+	'TFT3_Poppy': {
+		desc: `Poppy throws her buckler at the furthest enemy, dealing @ModifiedDamage@ magic damage. The buckler then bounces back, granting Poppy a shield that blocks @ModifiedShield@ damage.`,
+		icon: `ASSETS/Characters/Poppy/HUD/Icons2D/Poppy_Passive.dds`,
+		name: `Buckler Toss`,
+		variables: {
+			'Damage': [50, 100, 150, 200],
+			'ShieldAmount': [100, 200, 300, 400],
+		},
+	},
+	'TFT3_Rakan': {
+		desc: `Rakan dashes to the furthest enemy within range and leaps into the air, knocking them up for @StunDuration@ seconds and dealing @ModifiedDamage@ magic damage.`,
+		icon: `ASSETS/Characters/Rakan/HUD/Icons2D/Rakan_W.dds`,
+		name: `Grand Entrance`,
+		variables: {
+			'Damage': [75, 175, 275, 400],
+			'Radius': [1, 1, 1, 1],
+			'StunDuration': [0, 1.5, 2, 2.5],
+			'KnockupDuration': [1, 1, 1, 1],
+		},
+	},
+	'TFT3_Rumble': {
+		desc: `Rumble torches his enemies, dealing @ModifiedDamage@ magic damage over @Duration@ seconds, and reducing healing on them by @GrievousWoundsPercent@% for @GrievousWoundsDuration@ seconds.`,
+		icon: `ASSETS/Characters/Rumble/HUD/Icons2D/Rumble_Flamespitter.dds`,
+		name: `Flamespitter`,
+		variables: {
+			'TotalDamage': [30, 350, 500, 1000],
+			'Duration': [3, 3, 3, 3],
+			'NumberOfTicks': [12, 12, 12, 12],
+			'TickRate': [0.25, 0.25, 0.25, 0.25],
+			'GrievousWoundsDuration': [5, 5, 5, 5],
+			'ConeHexRange': [2, 2, 2, 2],
+			'GrievousWoundsPercent': [0, 50, 50, 50],
+		},
+	},
+	'TFT3_Shaco': {
+		desc: `Shaco teleports and backstabs his target for @TooltipPercentage@ of his Basic Attack damage. This is also always a critical hit. (Total: @TooltipADBonus@)`,
+		icon: `ASSETS/Characters/Shaco/HUD/Icons2D/Jester_ManiacalCloak2.dds`,
+		name: `Deceive`,
+		variables: {
+			'Duration': [1.5, 1.5, 1.5, 1.5],
+			'PercentOfAD': [1.75, 2, 2.25, 2.5],
+		},
+	},
 	'TFT3_Shen': {
 		desc: `Shen creates a zone around himself for @ZoneDuration@ seconds, in which all nearby allies automatically dodge incoming Basic Attacks. While it's active, Shen gains @ModifiedMR@ Magic Resist.`,
 		icon: `ASSETS/Characters/Shen/HUD/Icons2D/Shen_W.dds`,
@@ -6083,15 +6083,6 @@ export const abilities: Record<string, AbilityData> = {
 			'MagicResist': [0, 15, 30, 45],
 		},
 	},
-	'TFT3_Soraka': {
-		desc: `Soraka heals all of her allies for @ModifiedHeal@.`,
-		icon: `ASSETS/Characters/Soraka/HUD/Icons2D/Soraka_R.dds`,
-		name: `Wish`,
-		variables: {
-			'HealAmount': [300, 375, 550, 20000],
-			'HealTargets': [15, 15, 15, 15],
-		},
-	},
 	'TFT3_Sona': {
 		desc: `Sona heals @NumberOfTargets@ injured allies for @ModifiedHealing@ and cleanses them of stuns.`,
 		icon: `ASSETS/Characters/Sona/HUD/Icons2D/Sona_W.dds`,
@@ -6099,6 +6090,15 @@ export const abilities: Record<string, AbilityData> = {
 		variables: {
 			'HealAmount': [150, 150, 200, 300],
 			'NumberOfTargets': [2, 2, 3, 4],
+		},
+	},
+	'TFT3_Soraka': {
+		desc: `Soraka heals all of her allies for @ModifiedHeal@.`,
+		icon: `ASSETS/Characters/Soraka/HUD/Icons2D/Soraka_R.dds`,
+		name: `Wish`,
+		variables: {
+			'HealAmount': [300, 375, 550, 20000],
+			'HealTargets': [15, 15, 15, 15],
 		},
 	},
 	'TFT3_SuperMech': {
@@ -6163,16 +6163,6 @@ export const abilities: Record<string, AbilityData> = {
 			'SecondaryDamage': [0, 150, 200, 500],
 		},
 	},
-	'TFT3_Xayah': {
-		desc: `Xayah creates a storm of feather-blades, gaining @ModifiedAS@ Attack Speed for @Duration@ seconds.`,
-		icon: `ASSETS/Characters/Xayah/HUD/Icons2D/XayahW.dds`,
-		name: `Deadly Plumage`,
-		variables: {
-			'Duration': [8, 8, 8, 8],
-			'AttackSpeed': [0.75, 1, 1.25, 1.5],
-			'DamageReduction': [50, 50, 50, 50],
-		},
-	},
 	'TFT3_WuKong': {
 		desc: `Wukong spins, dealing @ModifiedDamage@ magic damage to nearby enemies over @Duration@ seconds. The first time Wukong hits each enemy, he knocks them into the air and stuns them for @StunDuration@ seconds.`,
 		icon: `ASSETS/Characters/MonkeyKing/HUD/Icons2D/MonkeyKingCyclone.dds`,
@@ -6184,22 +6174,14 @@ export const abilities: Record<string, AbilityData> = {
 			'HexRadius': [1, 1, 1, 1],
 		},
 	},
-	'TFT3_XinZhao': {
-		desc: `Xin Zhao quickly strikes his target three times, dealing Basic Attack damage and applying on-hit effects. The third strike knocks his target up for @StunDuration@ seconds and deals @ModifiedDamage@ bonus magic damage.`,
-		icon: `ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoQ.dds`,
-		name: `Three Talon Strike`,
+	'TFT3_Xayah': {
+		desc: `Xayah creates a storm of feather-blades, gaining @ModifiedAS@ Attack Speed for @Duration@ seconds.`,
+		icon: `ASSETS/Characters/Xayah/HUD/Icons2D/XayahW.dds`,
+		name: `Deadly Plumage`,
 		variables: {
-			'StunDuration': [1.5, 1.5, 1.5, 1.5],
-			'BonusDamage': [4, 200, 275, 375],
-		},
-	},
-	'TFT3_Zoe': {
-		desc: `Zoe kicks a bubble at the enemy with the the highest current Health percentage, stunning them for @StunDuration@ seconds and dealing @ModifiedDamage@ magic damage.<br><br><tftitemrules>Highest total health breaks targeting ties.</tftitemrules>`,
-		icon: `ASSETS/Characters/Zoe/HUD/Icons2D/Zoe_E.dds`,
-		name: `Sleepy Trouble Bubble`,
-		variables: {
-			'Damage': [75, 200, 275, 400],
-			'StunDuration': [1.5, 2, 2.5, 4],
+			'Duration': [8, 8, 8, 8],
+			'AttackSpeed': [0.75, 1, 1.25, 1.5],
+			'DamageReduction': [50, 50, 50, 50],
 		},
 	},
 	'TFT3_Xerath': {
@@ -6213,12 +6195,13 @@ export const abilities: Record<string, AbilityData> = {
 			'Duration': [6, 6, 8, 45],
 		},
 	},
-	'TFT3_Ziggs': {
-		desc: `Ziggs throws a bomb at an enemy, dealing @ModifiedDamage@ magic damage.`,
-		icon: `ASSETS/Characters/Ziggs/HUD/Icons2D/ZiggsQ.dds`,
-		name: `Bomb!`,
+	'TFT3_XinZhao': {
+		desc: `Xin Zhao quickly strikes his target three times, dealing Basic Attack damage and applying on-hit effects. The third strike knocks his target up for @StunDuration@ seconds and deals @ModifiedDamage@ bonus magic damage.`,
+		icon: `ASSETS/Characters/XinZhao/HUD/Icons2D/XinZhaoQ.dds`,
+		name: `Three Talon Strike`,
 		variables: {
-			'Damage': [70, 300, 400, 700],
+			'StunDuration': [1.5, 1.5, 1.5, 1.5],
+			'BonusDamage': [4, 200, 275, 375],
 		},
 	},
 	'TFT3_Yasuo': {
@@ -6229,6 +6212,23 @@ export const abilities: Record<string, AbilityData> = {
 			'StunDuration': [1, 1, 1, 1],
 			'Damage': [100, 100, 100, 100],
 			'NumHits': [3, 4, 5, 6],
+		},
+	},
+	'TFT3_Ziggs': {
+		desc: `Ziggs throws a bomb at an enemy, dealing @ModifiedDamage@ magic damage.`,
+		icon: `ASSETS/Characters/Ziggs/HUD/Icons2D/ZiggsQ.dds`,
+		name: `Bomb!`,
+		variables: {
+			'Damage': [70, 300, 400, 700],
+		},
+	},
+	'TFT3_Zoe': {
+		desc: `Zoe kicks a bubble at the enemy with the the highest current Health percentage, stunning them for @StunDuration@ seconds and dealing @ModifiedDamage@ magic damage.<br><br><tftitemrules>Highest total health breaks targeting ties.</tftitemrules>`,
+		icon: `ASSETS/Characters/Zoe/HUD/Icons2D/Zoe_E.dds`,
+		name: `Sleepy Trouble Bubble`,
+		variables: {
+			'Damage': [75, 200, 275, 400],
+			'StunDuration': [1.5, 2, 2.5, 4],
 		},
 	},
 }

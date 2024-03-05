@@ -5708,6 +5708,15 @@ export const champions: ChampionData[] = [
 export const otherUnits: ChampionData[] = []
 
 export const abilities: Record<string, AbilityData> = {
+	'TFT4_Aatrox': {
+		desc: `Aatrox pulls @NumberOfTargets@ of the farthest enemies toward himself, then slams the ground in front of himself, dealing @ModifiedDamage@ magic damage to all enemies hit.`,
+		icon: `ASSETS/Characters/Aatrox/HUD/Icons2D/Aatrox_W.dds`,
+		name: `Infernal Chains`,
+		variables: {
+			'Damage': [0, 400, 600, 2500],
+			'NumberOfTargets': [0.5, 2, 2, 5],
+		},
+	},
 	'TFT4_Akali': {
 		desc: `Akali throws kunai at her target, dealing @ModifiedDamage@ magic damage.`,
 		icon: `ASSETS/Characters/Akali/HUD/Icons2D/Akali_Q.dds`,
@@ -5718,13 +5727,14 @@ export const abilities: Record<string, AbilityData> = {
 			'HexRange': [1, 1, 1, 1],
 		},
 	},
-	'TFT4_Aatrox': {
-		desc: `Aatrox pulls @NumberOfTargets@ of the farthest enemies toward himself, then slams the ground in front of himself, dealing @ModifiedDamage@ magic damage to all enemies hit.`,
-		icon: `ASSETS/Characters/Aatrox/HUD/Icons2D/Aatrox_W.dds`,
-		name: `Infernal Chains`,
+	'TFT4_Annie': {
+		desc: `Annie blasts a cone of fire, dealing @ModifiedDamage@ magic damage to enemies in front of her, then creates a Shield with @ModifiedShield@ health on herself for @ShieldDuration@ seconds.`,
+		icon: `ASSETS/Characters/Annie/HUD/Icons2D/Annie_E.dds`,
+		name: `Burst Shield`,
 		variables: {
-			'Damage': [0, 400, 600, 2500],
-			'NumberOfTargets': [0.5, 2, 2, 5],
+			'Damage': [100, 250, 350, 450],
+			'ShieldAmount': [200, 500, 700, 900],
+			'ShieldDuration': [8, 8, 8, 8],
 		},
 	},
 	'TFT4_AurelionSol': {
@@ -5750,14 +5760,23 @@ export const abilities: Record<string, AbilityData> = {
 			'SlowDuration': [3, 3, 3, 3],
 		},
 	},
-	'TFT4_Annie': {
-		desc: `Annie blasts a cone of fire, dealing @ModifiedDamage@ magic damage to enemies in front of her, then creates a Shield with @ModifiedShield@ health on herself for @ShieldDuration@ seconds.`,
-		icon: `ASSETS/Characters/Annie/HUD/Icons2D/Annie_E.dds`,
-		name: `Burst Shield`,
+	'TFT4_Brand': {
+		desc: `After a brief delay, Brand causes the ground under the enemy with the highest current Health to erupt in flames, dealing @ModifiedDamage@ magic damage to enemies within. If an enemy is caught in the epicenter, they are stunned for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/Brand/HUD/Icons2D/BrandW.dds`,
+		name: `Dragonfire Pillar`,
 		variables: {
-			'Damage': [100, 250, 350, 450],
-			'ShieldAmount': [200, 500, 700, 900],
-			'ShieldDuration': [8, 8, 8, 8],
+			'Damage': [0, 200, 300, 500],
+			'Radius': [1, 1, 1, 1],
+			'StunDuration': [1, 1.5, 2, 3],
+		},
+	},
+	'TFT4_Braum': {
+		desc: `Braum puts up his shield for @ShieldDuration@ seconds, reducing his damage taken from that direction by @ModifiedShieldDR@. `,
+		icon: `ASSETS/Characters/Braum/HUD/Icons2D/Braum_E.dds`,
+		name: `Unbreakable`,
+		variables: {
+			'ShieldDR': [0.699999988079071, 0.75, 0.800000011920929, 0.8999999761581421],
+			'ShieldDuration': [4, 4, 4, 4],
 		},
 	},
 	'TFT4_ChoGath': {
@@ -5768,6 +5787,16 @@ export const abilities: Record<string, AbilityData> = {
 			'Damage': [0, 200, 400, 2000],
 			'KnockDuration': [1.5, 2, 2.5, 8],
 			'RuptureDelay': [1.5, 1.5, 1.5, 1.5],
+		},
+	},
+	'TFT4_Darius': {
+		desc: `Darius dunks an enemy, dealing @ModifiedDamage@ magic damage. While dunking, Darius is unstoppable. If this kills the target, Darius immediately casts again dealing @DamageFalloff*100@% reduced damage.`,
+		icon: `ASSETS/Characters/Darius/HUD/Icons2D/Darius_Icon_Sudden_Death.dds`,
+		name: `Fortune's Guillotine`,
+		variables: {
+			'Damage': [50, 550, 850, 1400],
+			'HealthThreshold': [0.5, 0.5, 0.5, 0.5],
+			'DamageFalloff': [0, 0.25, 0.20000000298023224, 0.15000000596046448],
 		},
 	},
 	'TFT4b_Diana': {
@@ -5792,24 +5821,14 @@ export const abilities: Record<string, AbilityData> = {
 			'PercentManaIncrease': [0.33000001311302185, 0.3499999940395355, 0.3499999940395355, 0.5],
 		},
 	},
-	'TFT4_Brand': {
-		desc: `After a brief delay, Brand causes the ground under the enemy with the highest current Health to erupt in flames, dealing @ModifiedDamage@ magic damage to enemies within. If an enemy is caught in the epicenter, they are stunned for @StunDuration@ seconds.`,
-		icon: `ASSETS/Characters/Brand/HUD/Icons2D/BrandW.dds`,
-		name: `Dragonfire Pillar`,
+	'TFT4_Fiora': {
+		desc: `Fiora enters a defensive stance for @BlockDuration@ seconds, becoming immune to damage and enemy spell effects. Afterwards, she strikes, dealing @ModifiedDamage@ magic damage to a nearby enemy and stunning them for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/Fiora/HUD/Icons2D/Fiora_R_Heal.dds`,
+		name: `Riposte`,
 		variables: {
-			'Damage': [0, 200, 300, 500],
-			'Radius': [1, 1, 1, 1],
-			'StunDuration': [1, 1.5, 2, 3],
-		},
-	},
-	'TFT4_Darius': {
-		desc: `Darius dunks an enemy, dealing @ModifiedDamage@ magic damage. While dunking, Darius is unstoppable. If this kills the target, Darius immediately casts again dealing @DamageFalloff*100@% reduced damage.`,
-		icon: `ASSETS/Characters/Darius/HUD/Icons2D/Darius_Icon_Sudden_Death.dds`,
-		name: `Fortune's Guillotine`,
-		variables: {
-			'Damage': [50, 550, 850, 1400],
-			'HealthThreshold': [0.5, 0.5, 0.5, 0.5],
-			'DamageFalloff': [0, 0.25, 0.20000000298023224, 0.15000000596046448],
+			'Damage': [0, 250, 400, 600],
+			'StunDuration': [1.5, 2, 2.5, 4],
+			'BlockDuration': [1.5, 1.5, 1.5, 1.5],
 		},
 	},
 	'TFT4_Galio': {
@@ -5825,13 +5844,15 @@ export const abilities: Record<string, AbilityData> = {
 			'EndDamage': [0, 0, 250, 500],
 		},
 	},
-	'TFT4_Braum': {
-		desc: `Braum puts up his shield for @ShieldDuration@ seconds, reducing his damage taken from that direction by @ModifiedShieldDR@. `,
-		icon: `ASSETS/Characters/Braum/HUD/Icons2D/Braum_E.dds`,
-		name: `Unbreakable`,
+	'TFT4_Garen': {
+		desc: `Garen spins his sword for @SpinDuration@ seconds, dealing @ModifiedDamage@ magic damage to nearby enemies and reducing incoming magic damage by @MagicDamageReduction*100@% over the duration.`,
+		icon: `ASSETS/Characters/Garen/HUD/Icons2D/Garen_E1.dds`,
+		name: `Judgement`,
 		variables: {
-			'ShieldDR': [0.699999988079071, 0.75, 0.800000011920929, 0.8999999761581421],
-			'ShieldDuration': [4, 4, 4, 4],
+			'SpinDuration': [4, 4, 4, 4],
+			'ETotalTicks': [9, 9, 9, 9],
+			'DamagePerTick': [15, 50, 75, 138.8887939453125],
+			'MagicDamageReduction': [0.800000011920929, 0.800000011920929, 0.800000011920929, 0.800000011920929],
 		},
 	},
 	'TFT4_Irelia': {
@@ -5843,14 +5864,24 @@ export const abilities: Record<string, AbilityData> = {
 			'DisarmDuration': [2, 2.5, 3, 5],
 		},
 	},
-	'TFT4_Fiora': {
-		desc: `Fiora enters a defensive stance for @BlockDuration@ seconds, becoming immune to damage and enemy spell effects. Afterwards, she strikes, dealing @ModifiedDamage@ magic damage to a nearby enemy and stunning them for @StunDuration@ seconds.`,
-		icon: `ASSETS/Characters/Fiora/HUD/Icons2D/Fiora_R_Heal.dds`,
-		name: `Riposte`,
+	'TFT4_Janna': {
+		desc: `Janna shields her @NumAllies@ lowest-Health allies for @ModifiedShieldAmount@ for @Duration@ seconds. Shielded allies also gain @ShieldAD@ Attack Damage for that duration.`,
+		icon: `ASSETS/Characters/Janna/HUD/Icons2D/Janna_Zephyr.dds`,
+		name: `Eye of the Storm`,
 		variables: {
-			'Damage': [0, 250, 400, 600],
-			'StunDuration': [1.5, 2, 2.5, 4],
-			'BlockDuration': [1.5, 1.5, 1.5, 1.5],
+			'NumAllies': [1, 2, 3, 4],
+			'ShieldAmount': [0, 250, 275, 350],
+			'Duration': [0, 4, 4, 4],
+			'ShieldAD': [0, 20, 30, 60],
+		},
+	},
+	'TFT4_JarvanIV': {
+		desc: `Jarvan IV throws his standard near the farthest enemy and pulls himself toward it with his lance, dealing @DamageCalc@ magic damage to enemies he passes through, knocking them up and stunning them for @StunDuration@ second.`,
+		icon: `ASSETS/Characters/JarvanIV/HUD/Icons2D/JarvanIV_DragonStrike.dds`,
+		name: `Dragon Strike`,
+		variables: {
+			'Damage': [50, 175, 250, 750],
+			'StunDuration': [0, 1, 1, 1],
 		},
 	},
 	'TFT4_Jax': {
@@ -5862,6 +5893,14 @@ export const abilities: Record<string, AbilityData> = {
 			'Damage': [50, 150, 250, 450],
 			'AttackRadius': [1, 1, 1, 1],
 			'StunDuration': [1.5, 1.5, 1.5, 1.5],
+		},
+	},
+	'TFT4_Kalista': {
+		desc: `Passive: Kalista's spears remain in her target, each one capable of dealing @ModifiedDamage@ of the target's maximum Health in magic damage when removed. She removes the spears when doing so would kill the target.`,
+		icon: `ASSETS/Characters/Kalista/HUD/Icons2D/Kalista_E.dds`,
+		name: `Rend`,
+		variables: {
+			'PercentHealthDamage': [0.019999999552965164, 0.03999999910593033, 0.05999999865889549, 0.09000000357627869],
 		},
 	},
 	'TFT4_Katarina': {
@@ -5876,21 +5915,12 @@ export const abilities: Record<string, AbilityData> = {
 			'TotalDamage': [375, 650, 1000, 1500],
 		},
 	},
-	'TFT4_JarvanIV': {
-		desc: `Jarvan IV throws his standard near the farthest enemy and pulls himself toward it with his lance, dealing @DamageCalc@ magic damage to enemies he passes through, knocking them up and stunning them for @StunDuration@ second.`,
-		icon: `ASSETS/Characters/JarvanIV/HUD/Icons2D/JarvanIV_DragonStrike.dds`,
-		name: `Dragon Strike`,
+	'TFT4_Kayle': {
+		desc: `Kayle ascends, causing her attacks to launch waves that deal @ModifiedDamage@ bonus magic damage.`,
+		icon: `ASSETS/Characters/Kayle/HUD/Icons2D/Kayle_P.dds`,
+		name: `Divine Ascension`,
 		variables: {
-			'Damage': [50, 175, 250, 750],
-			'StunDuration': [0, 1, 1, 1],
-		},
-	},
-	'TFT4_Kalista': {
-		desc: `Passive: Kalista's spears remain in her target, each one capable of dealing @ModifiedDamage@ of the target's maximum Health in magic damage when removed. She removes the spears when doing so would kill the target.`,
-		icon: `ASSETS/Characters/Kalista/HUD/Icons2D/Kalista_E.dds`,
-		name: `Rend`,
-		variables: {
-			'PercentHealthDamage': [0.019999999552965164, 0.03999999910593033, 0.05999999865889549, 0.09000000357627869],
+			'WaveDamage': [0, 110, 150, 350],
 		},
 	},
 	'TFT4_Kennen': {
@@ -5914,17 +5944,6 @@ export const abilities: Record<string, AbilityData> = {
 			'GrievousWoundsDuration': [5, 5, 5, 5],
 		},
 	},
-	'TFT4_Janna': {
-		desc: `Janna shields her @NumAllies@ lowest-Health allies for @ModifiedShieldAmount@ for @Duration@ seconds. Shielded allies also gain @ShieldAD@ Attack Damage for that duration.`,
-		icon: `ASSETS/Characters/Janna/HUD/Icons2D/Janna_Zephyr.dds`,
-		name: `Eye of the Storm`,
-		variables: {
-			'NumAllies': [1, 2, 3, 4],
-			'ShieldAmount': [0, 250, 275, 350],
-			'Duration': [0, 4, 4, 4],
-			'ShieldAD': [0, 20, 30, 60],
-		},
-	},
 	'TFT4_LeeSin': {
 		desc: `Lee Sin punches his target, dealing @ModifiedDamage@ magic damage, knocking them back to the edge of the battlefield, and stunning them for @PrimaryStunDuration@ seconds. Any enemies the target collides with during the knockback receive half the damage and are stunned for @SecondaryStunDuration@ second.<br><br>If the target cannot be pushed back any further, they are knocked out of the battlefield instead, removing them from combat.<br><br>If the target is still alive after being punched, Lee Sin will dash to them.`,
 		icon: `ASSETS/Characters/LeeSin/HUD/Icons2D/BlindMonkR.dds`,
@@ -5933,15 +5952,6 @@ export const abilities: Record<string, AbilityData> = {
 			'Damage': [0, 200, 375, 1000],
 			'PrimaryStunDuration': [0, 2, 3, 10],
 			'SecondaryStunDuration': [0, 1, 1, 10],
-		},
-	},
-	'TFT4_Maokai': {
-		desc: `Maokai smashes the ground, sending forward a shockwave that deals @ModifiedDamage@ magic damage to enemies hit and slows their Attack Speed by 50% for @ASSlowDuration@ seconds.`,
-		icon: `ASSETS/Characters/Maokai/HUD/Icons2D/Maokai_Q.dds`,
-		name: `Bramble Smash`,
-		variables: {
-			'Damage': [50, 225, 350, 550],
-			'ASSlowDuration': [3, 3, 3, 3],
 		},
 	},
 	'TFT4_Lulu': {
@@ -5955,6 +5965,15 @@ export const abilities: Record<string, AbilityData> = {
 			'DamageAmp': [0.10000000149011612, 0.25, 0.30000001192092896, 0.4000000059604645],
 		},
 	},
+	'TFT4_Maokai': {
+		desc: `Maokai smashes the ground, sending forward a shockwave that deals @ModifiedDamage@ magic damage to enemies hit and slows their Attack Speed by 50% for @ASSlowDuration@ seconds.`,
+		icon: `ASSETS/Characters/Maokai/HUD/Icons2D/Maokai_Q.dds`,
+		name: `Bramble Smash`,
+		variables: {
+			'Damage': [50, 225, 350, 550],
+			'ASSlowDuration': [3, 3, 3, 3],
+		},
+	},
 	'TFT4b_Morgana': {
 		desc: `Morgana hallows the ground beneath a random target, dealing @ModifiedDamage@ magic damage to enemies over @Duration@ seconds and reducing their Attack Damage by @ADReductionPercent@%.`,
 		icon: `ASSETS/Characters/Morgana/HUD/Icons2D/FallenAngel_Purgatory.dds`,
@@ -5963,6 +5982,16 @@ export const abilities: Record<string, AbilityData> = {
 			'Damage': [0, 250, 400, 1600],
 			'Duration': [0, 5, 5, 5],
 			'ADReductionPercent': [0, 40, 40, 80],
+		},
+	},
+	'TFT4_Nasus': {
+		desc: `Nasus deals @ModifiedDamage@ magic damage over @Duration@ seconds to the enemy with the highest percent Health, slowing their Attack Speed and Movement Speed by 50% for the duration.`,
+		icon: `ASSETS/Characters/Nasus/HUD/Icons2D/Nasus_W.dds`,
+		name: `Wither`,
+		variables: {
+			'Damage': [0, 350, 550, 850],
+			'Duration': [5, 5, 5, 5],
+			'SlowPercent': [0.5, 0.5, 0.5, 0.5],
 		},
 	},
 	'TFT4_Nautilus': {
@@ -5974,27 +6003,6 @@ export const abilities: Record<string, AbilityData> = {
 			'StunDuration': [0, 3, 4, 5],
 			'FabledDuration': [5, 5, 5, 5],
 			'FabledReduction': [0.5, 0.5, 0.5, 0.5],
-		},
-	},
-	'TFT4_Garen': {
-		desc: `Garen spins his sword for @SpinDuration@ seconds, dealing @ModifiedDamage@ magic damage to nearby enemies and reducing incoming magic damage by @MagicDamageReduction*100@% over the duration.`,
-		icon: `ASSETS/Characters/Garen/HUD/Icons2D/Garen_E1.dds`,
-		name: `Judgement`,
-		variables: {
-			'SpinDuration': [4, 4, 4, 4],
-			'ETotalTicks': [9, 9, 9, 9],
-			'DamagePerTick': [15, 50, 75, 138.8887939453125],
-			'MagicDamageReduction': [0.800000011920929, 0.800000011920929, 0.800000011920929, 0.800000011920929],
-		},
-	},
-	'TFT4_Nasus': {
-		desc: `Nasus deals @ModifiedDamage@ magic damage over @Duration@ seconds to the enemy with the highest percent Health, slowing their Attack Speed and Movement Speed by 50% for the duration.`,
-		icon: `ASSETS/Characters/Nasus/HUD/Icons2D/Nasus_W.dds`,
-		name: `Wither`,
-		variables: {
-			'Damage': [0, 350, 550, 850],
-			'Duration': [5, 5, 5, 5],
-			'SlowPercent': [0.5, 0.5, 0.5, 0.5],
 		},
 	},
 	'TFT4_Neeko': {
@@ -6009,12 +6017,22 @@ export const abilities: Record<string, AbilityData> = {
 			'MythBonusMultiplier': [1.5, 1.5, 1.5, 1.5],
 		},
 	},
-	'TFT4_Kayle': {
-		desc: `Kayle ascends, causing her attacks to launch waves that deal @ModifiedDamage@ bonus magic damage.`,
-		icon: `ASSETS/Characters/Kayle/HUD/Icons2D/Kayle_P.dds`,
-		name: `Divine Ascension`,
+	'TFT4_Nidalee': {
+		desc: `Nidalee throws her javelin at her farthest enemy, dealing @ModifiedDamage@ magic damage plus @PercentPerHex*100@% more for each hex traveled.`,
+		icon: `ASSETS/Characters/Nidalee/HUD/Icons2D/Nidalee_Q1.dds`,
+		name: `Javelin Toss`,
 		variables: {
-			'WaveDamage': [0, 110, 150, 350],
+			'BaseDamage': [50, 100, 175, 350],
+			'PercentPerHex': [0.800000011920929, 0.800000011920929, 0.800000011920929, 0.800000011920929],
+		},
+	},
+	'TFT4_Nunu': {
+		desc: `Willump bites his target, dealing @ModifiedDamage@ magic damage. If Willump's target has less Health than he does before the bite, it deals an additional @DamageAmp*100@% damage and becomes true damage.`,
+		icon: `ASSETS/Characters/Nunu/HUD/Icons2D/NunuQ.dds`,
+		name: `Consume`,
+		variables: {
+			'Damage': [200, 450, 700, 1500],
+			'DamageAmp': [0.5, 0.5, 0.5, 0.5],
 		},
 	},
 	'TFT4_Olaf': {
@@ -6039,6 +6057,16 @@ export const abilities: Record<string, AbilityData> = {
 			'SlowDuration': [3, 3, 3, 3],
 		},
 	},
+	'TFT4_Pyke': {
+		desc: `Pyke leaves a phantom at his location, then dashes behind the farthest enemy. After @StunDelay@ second, his phantom returns to Pyke, dealing @ModifiedDamage@ magic damage to all enemies it passes through and stunning them for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/Pyke/HUD/Icons2D/PykeE.dds`,
+		name: `Phantom Undertow`,
+		variables: {
+			'Damage': [25, 100, 175, 275],
+			'StunDuration': [1, 2, 2.5, 4],
+			'StunDelay': [1, 1, 1, 1],
+		},
+	},
 	'TFT4_Rakan': {
 		desc: `Rakan dashes to the furthest enemy within range, disarming all units he passes through for @DisarmDuration@ seconds, and taunting his target.<br><br>Rakan then creates a shield with @ModifiedShield@ health on himself for @ShieldDuration@ seconds.`,
 		icon: `ASSETS/Characters/Rakan/HUD/Icons2D/Rakan_R.dds`,
@@ -6049,35 +6077,6 @@ export const abilities: Record<string, AbilityData> = {
 			'ShieldAmount': [0, 200, 400, 800],
 			'DisarmDuration': [2, 2.5, 3, 4],
 			'ShieldDuration': [4, 4, 4, 4],
-		},
-	},
-	'TFT4_Sejuani': {
-		desc: `Sejuani throws a giant firecracker at the closest enemy that explodes after a @ExplosionDelay@-second delay. Enemies in the explosion are dealt @ModifiedDamage@ magic damage and are stunned for @StunDuration@ seconds.`,
-		icon: `ASSETS/Characters/Sejuani/HUD/Icons2D/Sejuani_R.dds`,
-		name: `Firecracker`,
-		variables: {
-			'ExplosionDelay': [0, 2, 2, 2],
-			'Damage': [25, 100, 200, 1600],
-			'StunDuration': [0.5, 2, 2.5, 8],
-			'HexRadius': [3, 3, 3, 3],
-		},
-	},
-	'TFT4_Nidalee': {
-		desc: `Nidalee throws her javelin at her farthest enemy, dealing @ModifiedDamage@ magic damage plus @PercentPerHex*100@% more for each hex traveled.`,
-		icon: `ASSETS/Characters/Nidalee/HUD/Icons2D/Nidalee_Q1.dds`,
-		name: `Javelin Toss`,
-		variables: {
-			'BaseDamage': [50, 100, 175, 350],
-			'PercentPerHex': [0.800000011920929, 0.800000011920929, 0.800000011920929, 0.800000011920929],
-		},
-	},
-	'TFT4_Sett': {
-		desc: `Sett grabs his target and slams them forward, dealing @ModifiedPercentMaxHealthDamagePrimary@ of their maximum Health in magic damage to them, and @ModifiedPercentMaxHealthDamageSecondary@ of the slammed enemy's maximum Health to all other enemies in a large area.`,
-		icon: `ASSETS/Characters/Sett/HUD/Icons2D/Sett_R.Sett.dds`,
-		name: `Showstopper`,
-		variables: {
-			'PercentMaxHealthDamagePrimary': [0, 0.4000000059604645, 0.6000000238418579, 8],
-			'PercentMaxHealthDamageSecondary': [0, 0.20000000298023224, 0.30000001192092896, 4],
 		},
 	},
 	'TFT4_Samira': {
@@ -6098,14 +6097,34 @@ export const abilities: Record<string, AbilityData> = {
 		name: `Stand Firm`,
 		variables: {},
 	},
-	'TFT4_Pyke': {
-		desc: `Pyke leaves a phantom at his location, then dashes behind the farthest enemy. After @StunDelay@ second, his phantom returns to Pyke, dealing @ModifiedDamage@ magic damage to all enemies it passes through and stunning them for @StunDuration@ seconds.`,
-		icon: `ASSETS/Characters/Pyke/HUD/Icons2D/PykeE.dds`,
-		name: `Phantom Undertow`,
+	'TFT4_Sejuani': {
+		desc: `Sejuani throws a giant firecracker at the closest enemy that explodes after a @ExplosionDelay@-second delay. Enemies in the explosion are dealt @ModifiedDamage@ magic damage and are stunned for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/Sejuani/HUD/Icons2D/Sejuani_R.dds`,
+		name: `Firecracker`,
 		variables: {
-			'Damage': [25, 100, 175, 275],
-			'StunDuration': [1, 2, 2.5, 4],
-			'StunDelay': [1, 1, 1, 1],
+			'ExplosionDelay': [0, 2, 2, 2],
+			'Damage': [25, 100, 200, 1600],
+			'StunDuration': [0.5, 2, 2.5, 8],
+			'HexRadius': [3, 3, 3, 3],
+		},
+	},
+	'TFT4_Sett': {
+		desc: `Sett grabs his target and slams them forward, dealing @ModifiedPercentMaxHealthDamagePrimary@ of their maximum Health in magic damage to them, and @ModifiedPercentMaxHealthDamageSecondary@ of the slammed enemy's maximum Health to all other enemies in a large area.`,
+		icon: `ASSETS/Characters/Sett/HUD/Icons2D/Sett_R.Sett.dds`,
+		name: `Showstopper`,
+		variables: {
+			'PercentMaxHealthDamagePrimary': [0, 0.4000000059604645, 0.6000000238418579, 8],
+			'PercentMaxHealthDamageSecondary': [0, 0.20000000298023224, 0.30000001192092896, 4],
+		},
+	},
+	'TFT4_Shen': {
+		desc: `Shen dashes past his target, shielding himself against @ModifiedShield@ damage and taunting all adjacent enemies for @Duration@ seconds.`,
+		icon: `ASSETS/Characters/Shen/HUD/Icons2D/Shen_R.dds`,
+		name: `Shadow Dash`,
+		variables: {
+			'ShieldAmount': [250, 500, 800, 4000],
+			'Duration': [4, 4, 4, 8],
+			'ManaLockDuration': [4, 4, 4, 4],
 		},
 	},
 	'TFT4_Shyvana': {
@@ -6121,16 +6140,6 @@ export const abilities: Record<string, AbilityData> = {
 			'BonusHealthPercent': [0.800000011920929, 0.4000000059604645, 0.44999998807907104, 0.5],
 		},
 	},
-	'TFT4_Shen': {
-		desc: `Shen dashes past his target, shielding himself against @ModifiedShield@ damage and taunting all adjacent enemies for @Duration@ seconds.`,
-		icon: `ASSETS/Characters/Shen/HUD/Icons2D/Shen_R.dds`,
-		name: `Shadow Dash`,
-		variables: {
-			'ShieldAmount': [250, 500, 800, 4000],
-			'Duration': [4, 4, 4, 8],
-			'ManaLockDuration': [4, 4, 4, 4],
-		},
-	},
 	'TFT4_Sivir': {
 		desc: `Sivir rallies her allies within 2 hexes, granting them @ModifiedAS@ Attack Speed for @Duration@ seconds.<br><br>Sivir gains @AttackDamage@ bonus Attack Damage for the duration.`,
 		icon: `ASSETS/Characters/Sivir/HUD/Icons2D/Sivir_R.dds`,
@@ -6140,6 +6149,21 @@ export const abilities: Record<string, AbilityData> = {
 			'AttackSpeed': [0.5, 0.4000000059604645, 0.5, 0.699999988079071],
 			'AttackDamage': [20, 100, 200, 350],
 			'HexRange': [2, 2, 2, 2],
+		},
+	},
+	'TFT4_Swain': {
+		desc: `Swain transforms into his dragon form for @TransformDuration@ seconds, gaining @HealthPercentIncrease*100@% maximum Health and dealing @ModifiedDamage@ magic damage each second to enemies within @HexRange@ hexes.<br><br>While in dragon form, Swain breathes fire in a cone in front of him every @BreathFrequencySeconds@ seconds, dealing @ModifiedConeDamage@ magic damage, burning enemies for @BurnPercent@% of the their maximum Health as true damage over @BurnDuration@ seconds, and reducing healing by 50% for the duration.<br>`,
+		icon: `ASSETS/Characters/Swain/HUD/Icons2D/Swain_R.dds`,
+		name: `Draconic Ascension`,
+		variables: {
+			'TransformDuration': [6, 6, 6, 6],
+			'DamagePerTick': [0, 75, 150, 1000],
+			'HealthPercentIncrease': [0, 0.6000000238418579, 0.6499999761581421, 1],
+			'ConeDamage': [0, 175, 350, 5000],
+			'BurnDuration': [10, 10, 10, 10],
+			'BreathFrequencySeconds': [2, 2, 2, 2],
+			'HexRange': [0, 2.5, 2.5, 5],
+			'BurnPercent': [25, 25, 25, 25],
 		},
 	},
 	'TFT4_TahmKench': {
@@ -6176,19 +6200,14 @@ export const abilities: Record<string, AbilityData> = {
 			'BlindDuration': [0, 2.5, 3, 4.5],
 		},
 	},
-	'TFT4_Swain': {
-		desc: `Swain transforms into his dragon form for @TransformDuration@ seconds, gaining @HealthPercentIncrease*100@% maximum Health and dealing @ModifiedDamage@ magic damage each second to enemies within @HexRange@ hexes.<br><br>While in dragon form, Swain breathes fire in a cone in front of him every @BreathFrequencySeconds@ seconds, dealing @ModifiedConeDamage@ magic damage, burning enemies for @BurnPercent@% of the their maximum Health as true damage over @BurnDuration@ seconds, and reducing healing by 50% for the duration.<br>`,
-		icon: `ASSETS/Characters/Swain/HUD/Icons2D/Swain_R.dds`,
-		name: `Draconic Ascension`,
+	'TFT4_Tristana': {
+		desc: `Tristana's Dragon gets fired up, increasing her Attack Speed by @BonusAS*100@% and dealing @ModifiedBonusDamage@ bonus Magic damage on hit for @Duration@ seconds.`,
+		icon: `ASSETS/Characters/Tristana/HUD/Icons2D/Tristana_Q.dds`,
+		name: `Rapid Fire`,
 		variables: {
-			'TransformDuration': [6, 6, 6, 6],
-			'DamagePerTick': [0, 75, 150, 1000],
-			'HealthPercentIncrease': [0, 0.6000000238418579, 0.6499999761581421, 1],
-			'ConeDamage': [0, 175, 350, 5000],
-			'BurnDuration': [10, 10, 10, 10],
-			'BreathFrequencySeconds': [2, 2, 2, 2],
-			'HexRange': [0, 2.5, 2.5, 5],
-			'BurnPercent': [25, 25, 25, 25],
+			'Duration': [3, 3, 3, 3],
+			'BonusAS': [1.2000000476837158, 0.6000000238418579, 0.6499999761581421, 0.699999988079071],
+			'BonusDamage': [0, 40, 60, 80],
 		},
 	},
 	'TFT4_Tryndamere': {
@@ -6200,16 +6219,6 @@ export const abilities: Record<string, AbilityData> = {
 			'BonusAAPercent': [0, 0.75, 1, 2],
 		},
 	},
-	'TFT4_Tristana': {
-		desc: `Tristana's Dragon gets fired up, increasing her Attack Speed by @BonusAS*100@% and dealing @ModifiedBonusDamage@ bonus Magic damage on hit for @Duration@ seconds.`,
-		icon: `ASSETS/Characters/Tristana/HUD/Icons2D/Tristana_Q.dds`,
-		name: `Rapid Fire`,
-		variables: {
-			'Duration': [3, 3, 3, 3],
-			'BonusAS': [1.2000000476837158, 0.6000000238418579, 0.6499999761581421, 0.699999988079071],
-			'BonusDamage': [0, 40, 60, 80],
-		},
-	},
 	'TFT4_TwistedFate': {
 		desc: `Twisted Fate throws three cards in a cone that deal @ModifiedDamage@ magic damage to each enemy they pass through.`,
 		icon: `ASSETS/Characters/TwistedFate/HUD/Icons2D/Cardmaster_PowerCard.dds`,
@@ -6218,14 +6227,13 @@ export const abilities: Record<string, AbilityData> = {
 			'BaseDamage': [0, 250, 350, 475],
 		},
 	},
-	'TFT4_Vladimir': {
-		desc: `Vladimir deals @ModifiedDamage@ magic damage to his target. All nearby allies are healed for @AllyHealPercent*100@% of damage dealt. `,
-		icon: `ASSETS/Characters/Vladimir/HUD/Icons2D/VladimirQ.dds`,
-		name: `Transfusion`,
+	'TFT4_Veigar': {
+		desc: `Veigar blasts the enemy with the lowest Health, dealing @ModifiedDamage@ magic damage.<br><br>If this kills his target, Veigar permanently gains @APToAdd@ Spell Power.`,
+		icon: `ASSETS/Characters/Veigar/HUD/Icons2D/VeigarDarkMatter.dds`,
+		name: `Dark Blossom`,
 		variables: {
-			'Damage': [75, 400, 600, 1000],
-			'AllyHealPercent': [0.5, 0.5, 0.5, 0.5],
-			'HealRange': [420, 420, 420, 420],
+			'Damage': [0, 500, 650, 1000],
+			'APToAdd': [1, 1, 1, 2],
 		},
 	},
 	'TFT4_Vi': {
@@ -6238,13 +6246,23 @@ export const abilities: Record<string, AbilityData> = {
 			'ArmorReduction': [0.25, 0.4000000059604645, 0.5, 0.699999988079071],
 		},
 	},
-	'TFT4_Veigar': {
-		desc: `Veigar blasts the enemy with the lowest Health, dealing @ModifiedDamage@ magic damage.<br><br>If this kills his target, Veigar permanently gains @APToAdd@ Spell Power.`,
-		icon: `ASSETS/Characters/Veigar/HUD/Icons2D/VeigarDarkMatter.dds`,
-		name: `Dark Blossom`,
+	'TFT4_Vladimir': {
+		desc: `Vladimir deals @ModifiedDamage@ magic damage to his target. All nearby allies are healed for @AllyHealPercent*100@% of damage dealt. `,
+		icon: `ASSETS/Characters/Vladimir/HUD/Icons2D/VladimirQ.dds`,
+		name: `Transfusion`,
 		variables: {
-			'Damage': [0, 500, 650, 1000],
-			'APToAdd': [1, 1, 1, 2],
+			'Damage': [75, 400, 600, 1000],
+			'AllyHealPercent': [0.5, 0.5, 0.5, 0.5],
+			'HealRange': [420, 420, 420, 420],
+		},
+	},
+	'TFT4_Wukong': {
+		desc: `Wukong slams his target with his staff, dealing @ModifiedPercentAD@ of his Attack Damage as physical damage and stunning them for @Duration@ seconds. (Total Damage: @TooltipDamage@)`,
+		icon: `ASSETS/Characters/MonkeyKing/HUD/Icons2D/MonkeyKingCrushingBlow.dds`,
+		name: `Crushing Blow`,
+		variables: {
+			'PercentAD': [1.5, 2.4000000953674316, 2.5, 2.5999999046325684],
+			'Duration': [1.5, 1.5, 2, 3],
 		},
 	},
 	'TFT4_Xayah': {
@@ -6260,13 +6278,14 @@ export const abilities: Record<string, AbilityData> = {
 			'FeatherReturnDelay': [1.5, 1.5, 1.5, 1.5],
 		},
 	},
-	'TFT4_Wukong': {
-		desc: `Wukong slams his target with his staff, dealing @ModifiedPercentAD@ of his Attack Damage as physical damage and stunning them for @Duration@ seconds. (Total Damage: @TooltipDamage@)`,
-		icon: `ASSETS/Characters/MonkeyKing/HUD/Icons2D/MonkeyKingCrushingBlow.dds`,
-		name: `Crushing Blow`,
+	'TFT4_Yasuo': {
+		desc: `Yasuo strikes forward two hexes, attacking for @ModifiedDamage@ of his Attack Damage (total: @TooltipDamage@). If he can't hit two targets from where he's standing, he'll first dash to a place where he can.`,
+		icon: `ASSETS/Characters/Yasuo/HUD/Icons2D/Yasuo_Q3.dds`,
+		name: `Striking Steel`,
 		variables: {
-			'PercentAD': [1.5, 2.4000000953674316, 2.5, 2.5999999046325684],
-			'Duration': [1.5, 1.5, 2, 3],
+			'HexRange': [2, 2, 2, 2],
+			'Width': [75, 75, 75, 75],
+			'ADPercent': [0, 1.899999976158142, 2, 2.0999999046325684],
 		},
 	},
 	'TFT4_Yone': {
@@ -6296,16 +6315,6 @@ export const abilities: Record<string, AbilityData> = {
 			'DashSpeed': [1600, 1600, 1600, 1600],
 		},
 	},
-	'TFT4_Yasuo': {
-		desc: `Yasuo strikes forward two hexes, attacking for @ModifiedDamage@ of his Attack Damage (total: @TooltipDamage@). If he can't hit two targets from where he's standing, he'll first dash to a place where he can.`,
-		icon: `ASSETS/Characters/Yasuo/HUD/Icons2D/Yasuo_Q3.dds`,
-		name: `Striking Steel`,
-		variables: {
-			'HexRange': [2, 2, 2, 2],
-			'Width': [75, 75, 75, 75],
-			'ADPercent': [0, 1.899999976158142, 2, 2.0999999046325684],
-		},
-	},
 	'TFT4b_Zed': {
 		desc: `Innate: When combat starts, Zed teleports to the enemy backline.<br><br>Passive: Every third attack, Zed deals @ModifiedDamage@ bonus magic damage and steals @ADSteal*100@% of the target's current Attack Damage.`,
 		icon: `ASSETS/Characters/Zed/HUD/Icons2D/shadowninja_Q.dds`,
@@ -6324,15 +6333,6 @@ export const abilities: Record<string, AbilityData> = {
 			'HealthAmount': [400, 350, 500, 3000],
 			'ReviveDelay': [6, 3, 2, 0.5],
 			'AttackSpeed': [0.75, 0.5, 0.75, 5],
-		},
-	},
-	'TFT4_Nunu': {
-		desc: `Willump bites his target, dealing @ModifiedDamage@ magic damage. If Willump's target has less Health than he does before the bite, it deals an additional @DamageAmp*100@% damage and becomes true damage.`,
-		icon: `ASSETS/Characters/Nunu/HUD/Icons2D/NunuQ.dds`,
-		name: `Consume`,
-		variables: {
-			'Damage': [200, 450, 700, 1500],
-			'DamageAmp': [0.5, 0.5, 0.5, 0.5],
 		},
 	},
 }

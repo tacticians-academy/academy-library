@@ -9167,16 +9167,17 @@ export const abilities: Record<string, AbilityData> = {
 			'DarkinReviveTime': [4, 4, 4, 4],
 		},
 	},
-	'TFT9_Ashe': {
-		desc: `Fire @Shots@ arrows in a cone, each dealing <physicalDamage>@ArrowDamage@ (%i:scaleAD%)</physicalDamage> physical damage to the first enemy hit and <TFTKeyword>Chilling</TFTKeyword> them for <TFTBonus>@ModifiedDuration@ (%i:scaleAP%)</TFTBonus> seconds.<br><br><rules><tftbold>Chill:</tftbold> Reduce Attack Speed by @Chill@%</rules>`,
-		icon: `ASSETS/Characters/TFT9_Ashe/HUD/Icons2D/TFT9_Ashe_W.TFT_Set9.dds`,
-		name: `Volley`,
+	'TFT9_Ahri': {
+		desc: `Steal essence from enemies around the current target, dealing <magicDamage>@ModifiedEssenceDamage@ (%i:scaleAP%)</magicDamage> magic damage and @TooltipReave@% <TFTKeyword>Mana Reaving</TFTKeyword> them. <br><br>Every <scaleLevel>@ActualBoomTooltip@</scaleLevel> casts, unleash a wave that deals <magicDamage>@ModifiedMagicDamage@ (%i:scaleAP%)</magicDamage> magic damage to all enemies hit. This deals <magicDamage>@EssenceStolenMultiplier*100@%</magicDamage> more damage to enemies whose essence has been stolen.<br><br>Ionia Bonus: <TFTBonus>+@TooltipIoniaBonus@</TFTBonus> Mana per second<br><br><rules><tftbold>Mana Reave</tftbold>: Increase max Mana until the next cast</rules>`,
+		icon: `ASSETS/Characters/TFT9_Ahri/HUD/Icons2D/Icons_TFT9_Ahri_R.TFT_Set9.dds`,
+		name: `Essence Thief`,
 		variables: {
-			'ADPercent': [0, 1.600000023841858, 1.649999976158142, 1.75],
-			'BonusDamage': [10, 10, 10, 10],
-			'Shots': [0, 8, 8, 8],
-			'Duration': [2, 2, 2, 2],
-			'Chill': [30, 30, 30, 30],
+			'MagicDamage': [0, 260, 390, 1999],
+			'EssenceDamage': [0, 105, 150, 1000],
+			'NumCastsToBoom': [2, 2, 2, 0],
+			'EssenceStolenMultiplier': [0.33000001311302185, 0.33000001311302185, 0.33000001311302185, 0.33000001311302185],
+			'TooltipIoniaBonus': [3, 3, 3, 3],
+			'TooltipReave': [20, 20, 20, 20],
 		},
 	},
 	'TFT9_HeimerdingerTurret': {
@@ -9203,6 +9204,18 @@ export const abilities: Record<string, AbilityData> = {
 			'MaxChakrams': [10, 10, 12, 20],
 		},
 	},
+	'TFT9_Ashe': {
+		desc: `Fire @Shots@ arrows in a cone, each dealing <physicalDamage>@ArrowDamage@ (%i:scaleAD%)</physicalDamage> physical damage to the first enemy hit and <TFTKeyword>Chilling</TFTKeyword> them for <TFTBonus>@ModifiedDuration@ (%i:scaleAP%)</TFTBonus> seconds.<br><br><rules><tftbold>Chill:</tftbold> Reduce Attack Speed by @Chill@%</rules>`,
+		icon: `ASSETS/Characters/TFT9_Ashe/HUD/Icons2D/TFT9_Ashe_W.TFT_Set9.dds`,
+		name: `Volley`,
+		variables: {
+			'ADPercent': [0, 1.600000023841858, 1.649999976158142, 1.75],
+			'BonusDamage': [10, 10, 10, 10],
+			'Shots': [0, 8, 8, 8],
+			'Duration': [2, 2, 2, 2],
+			'Chill': [30, 30, 30, 30],
+		},
+	},
 	'TFT9_Azir': {
 		desc: `<spellPassive>Passive:</spellPassive> Every third attack, a Sand Soldier deals <magicDamage>@ModifiedMagicDamage@ (%i:scaleAP%)</magicDamage> magic damage to their target.<br><br><spellActive>Active:</spellActive> Summon a Sand Soldier to attack your target. If Azir already has @MaxSummons@ Soldiers, they all immediately deal <magicDamage>@MaxSoldierStrike@ (%i:scaleAP%)</magicDamage> magic damage instead.`,
 		icon: `ASSETS/Characters/TFT9_Azir/HUD/Icons2D/TFT9_Azir_W.TFT_Set9.dds`,
@@ -9212,17 +9225,6 @@ export const abilities: Record<string, AbilityData> = {
 			'Duration': [90, 90, 90, 90],
 			'MaxSummons': [3, 3, 3, 3],
 			'BonusRatio': [0.699999988079071, 0.699999988079071, 0.699999988079071, 0.699999988079071],
-		},
-	},
-	'TFT9_Cassiopeia': {
-		desc: `Deal <magicDamage>@ModifiedBaseDamage@ (%i:scaleAP%)</magicDamage> magic damage to the current target and <TFTKeyword>Wound</TFTKeyword> them for @WoundDuration@ seconds. If they are already <TFTKeyword>Wounded</TFTKeyword>, deal <magicDamage>@BonusDamage@ (%i:scaleAP%)</magicDamage> bonus magic damage.<br><br><rules><tftbold>Wound:</tftbold> Reduce healing received by 33%</rules>`,
-		icon: `ASSETS/Characters/Cassiopeia/HUD/Icons2D/Cassiopeia_E.dds`,
-		name: `Twin Fang`,
-		variables: {
-			'BaseDamage': [0, 160, 240, 360],
-			'DamageAmp': [0.30000001192092896, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
-			'WoundDuration': [5, 5, 5, 5],
-			'TooltipWound': [50, 50, 50, 50],
 		},
 	},
 	'TFT9_BaronNashor': {
@@ -9236,30 +9238,6 @@ export const abilities: Record<string, AbilityData> = {
 			'CastCadence': [2, 2, 2, 2],
 		},
 	},
-	'TFT9_Ahri': {
-		desc: `Steal essence from enemies around the current target, dealing <magicDamage>@ModifiedEssenceDamage@ (%i:scaleAP%)</magicDamage> magic damage and @TooltipReave@% <TFTKeyword>Mana Reaving</TFTKeyword> them. <br><br>Every <scaleLevel>@ActualBoomTooltip@</scaleLevel> casts, unleash a wave that deals <magicDamage>@ModifiedMagicDamage@ (%i:scaleAP%)</magicDamage> magic damage to all enemies hit. This deals <magicDamage>@EssenceStolenMultiplier*100@%</magicDamage> more damage to enemies whose essence has been stolen.<br><br>Ionia Bonus: <TFTBonus>+@TooltipIoniaBonus@</TFTBonus> Mana per second<br><br><rules><tftbold>Mana Reave</tftbold>: Increase max Mana until the next cast</rules>`,
-		icon: `ASSETS/Characters/TFT9_Ahri/HUD/Icons2D/Icons_TFT9_Ahri_R.TFT_Set9.dds`,
-		name: `Essence Thief`,
-		variables: {
-			'MagicDamage': [0, 260, 390, 1999],
-			'EssenceDamage': [0, 105, 150, 1000],
-			'NumCastsToBoom': [2, 2, 2, 0],
-			'EssenceStolenMultiplier': [0.33000001311302185, 0.33000001311302185, 0.33000001311302185, 0.33000001311302185],
-			'TooltipIoniaBonus': [3, 3, 3, 3],
-			'TooltipReave': [20, 20, 20, 20],
-		},
-	},
-	'TFT9_Ekko': {
-		desc: `Heal <scaleHealth>@HealPercent*100@%</scaleHealth> of damage taken in the last @RewindTime@ seconds and deal <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage to the current target.`,
-		icon: `ASSETS/Characters/TFT9_Ekko/HUD/Icons2D/TFT9_Ekko_E.TFT_Set9.dds`,
-		name: `Phase Dive`,
-		variables: {
-			'Damage': [0, 255, 380, 570],
-			'HealPercent': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
-			'RewindTime': [4, 4, 4, 4],
-			'RollDuration': [0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645],
-		},
-	},
 	'TFT9_BelVeth': {
 		desc: `Lash out at the lowest Health enemy in range <TFTBonus>@ModifiedNumStrikes@ (%i:scaleAS%)</TFTBonus> times. Each lash deals <physicalDamage>@TotalDamage@ (%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage and <trueDamage>@PercentHealthTrueDamage*100@%</trueDamage> of the target's max Health as true damage.`,
 		icon: `ASSETS/Characters/TFT9_BelVeth/HUD/Icons2D/TFT9_BelVethE.TFT_Set9.dds`,
@@ -9271,6 +9249,17 @@ export const abilities: Record<string, AbilityData> = {
 			'PercentHealthTrueDamage': [0.019999999552965164, 0.019999999552965164, 0.019999999552965164, 0.019999999552965164],
 			'BonusFlatDamage': [15, 18, 30, 100],
 			'StrikesPer100BonusAS': [5, 5, 5, 5],
+		},
+	},
+	'TFT9_Cassiopeia': {
+		desc: `Deal <magicDamage>@ModifiedBaseDamage@ (%i:scaleAP%)</magicDamage> magic damage to the current target and <TFTKeyword>Wound</TFTKeyword> them for @WoundDuration@ seconds. If they are already <TFTKeyword>Wounded</TFTKeyword>, deal <magicDamage>@BonusDamage@ (%i:scaleAP%)</magicDamage> bonus magic damage.<br><br><rules><tftbold>Wound:</tftbold> Reduce healing received by 33%</rules>`,
+		icon: `ASSETS/Characters/Cassiopeia/HUD/Icons2D/Cassiopeia_E.dds`,
+		name: `Twin Fang`,
+		variables: {
+			'BaseDamage': [0, 160, 240, 360],
+			'DamageAmp': [0.30000001192092896, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
+			'WoundDuration': [5, 5, 5, 5],
+			'TooltipWound': [50, 50, 50, 50],
 		},
 	},
 	'TFT9_ChoGath': {
@@ -9294,16 +9283,15 @@ export const abilities: Record<string, AbilityData> = {
 			'PercentDamageFalloff': [0, 0.8999999761581421, 0.949999988079071, 1],
 		},
 	},
-	'TFT9_Galio': {
-		desc: `Reduce damage taken by @DamageResist*100@% and heal for <scaleHealth>@ModifiedHeal@ (%i:scaleAP%)</scaleHealth> over @Duration@ seconds. After, deal <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage to adjacent enemies.`,
-		icon: `ASSETS/Characters/TFT9_Galio/HUD/Icons2D/TFT9_Galio_W.TFT_Set9.dds`,
-		name: `Shield of Durand`,
+	'TFT9_Ekko': {
+		desc: `Heal <scaleHealth>@HealPercent*100@%</scaleHealth> of damage taken in the last @RewindTime@ seconds and deal <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage to the current target.`,
+		icon: `ASSETS/Characters/TFT9_Ekko/HUD/Icons2D/TFT9_Ekko_E.TFT_Set9.dds`,
+		name: `Phase Dive`,
 		variables: {
-			'DamageResist': [0.20000000298023224, 0.25, 0.25, 0.3499999940395355],
-			'Duration': [2.5, 2.5, 2.5, 2.5],
-			'Heal': [0, 300, 350, 400],
-			'Damage': [0, 200, 300, 450],
-			'HexRadius': [1, 1, 1, 1],
+			'Damage': [0, 255, 380, 570],
+			'HealPercent': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
+			'RewindTime': [4, 4, 4, 4],
+			'RollDuration': [0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645],
 		},
 	},
 	'TFT9_Fiora': {
@@ -9316,6 +9304,18 @@ export const abilities: Record<string, AbilityData> = {
 			'PercentHealing': [0.15000000596046448, 0.15000000596046448, 0.15000000596046448, 0.15000000596046448],
 			'NumStrikes': [4, 4, 4, 4],
 			'DamageReduction': [0.30000001192092896, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
+		},
+	},
+	'TFT9_Galio': {
+		desc: `Reduce damage taken by @DamageResist*100@% and heal for <scaleHealth>@ModifiedHeal@ (%i:scaleAP%)</scaleHealth> over @Duration@ seconds. After, deal <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage to adjacent enemies.`,
+		icon: `ASSETS/Characters/TFT9_Galio/HUD/Icons2D/TFT9_Galio_W.TFT_Set9.dds`,
+		name: `Shield of Durand`,
+		variables: {
+			'DamageResist': [0.20000000298023224, 0.25, 0.25, 0.3499999940395355],
+			'Duration': [2.5, 2.5, 2.5, 2.5],
+			'Heal': [0, 300, 350, 400],
+			'Damage': [0, 200, 300, 450],
+			'HexRadius': [1, 1, 1, 1],
 		},
 	},
 	'TFT9_Gangplank': {
@@ -9342,6 +9342,15 @@ export const abilities: Record<string, AbilityData> = {
 			'AbilityScaleDamage': [0, 30, 45, 60],
 			'CCDuration': [1, 3, 3.5, 4],
 			'TooltipChillPercent': [30, 30, 30, 30],
+		},
+	},
+	'TFT9_Heimerdinger': {
+		desc: `Hurl a grenade towards the largest group of enemies, dealing <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage to enemies in a large area and <TFTKeyword>Stunning</TFTKeyword> them for <scaleLevel>@StunDuration@</scaleLevel> seconds.`,
+		icon: `ASSETS/Characters/TFT9_Heimerdinger/HUD/Icons2D/TFT9_Heimerdinger_E1.TFT_Set9.dds`,
+		name: `CH-3X Lightning Grenade`,
+		variables: {
+			'Damage': [0, 150, 225, 3141],
+			'StunDuration': [3, 1.5, 2, 15],
 		},
 	},
 	'TFT9_Illaoi': {
@@ -9377,28 +9386,6 @@ export const abilities: Record<string, AbilityData> = {
 			'HexRadius': [2, 2, 2, 2],
 		},
 	},
-	'TFT9_Jhin': {
-		desc: `Take aim at the current target and deal <physicalDamage>@TotalDamage@ (%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage to enemies in a line; each hit reduces this damage by @FalloffPercent*100@%.<br><br>Ionia Bonus: <TFTBonus>+@TooltipIoniaBonus@%</TFTBonus> Attack Damage`,
-		icon: `ASSETS/Characters/Jhin/HUD/Icons2D/Jhin_R.dds`,
-		name: `Curtain Call`,
-		variables: {
-			'PercentAttackDamage': [7.440000057220459, 7.440000057220459, 7.440000057220459, 7.440000057220459],
-			'MissingHealthPercentBonus': [0, 0.23999999463558197, 0.3400000035762787, 0.4399999976158142],
-			'TooltipIoniaBonus': [25, 25, 25, 25],
-			'AimDuration': [1.600000023841858, 1.600000023841858, 1.600000023841858, 1.600000023841858],
-			'FalloffPercent': [0.5600000023841858, 0.5600000023841858, 0.5600000023841858, 0.5600000023841858],
-			'Damage': [0, 60, 90, 135],
-		},
-	},
-	'TFT9_Heimerdinger': {
-		desc: `Hurl a grenade towards the largest group of enemies, dealing <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage to enemies in a large area and <TFTKeyword>Stunning</TFTKeyword> them for <scaleLevel>@StunDuration@</scaleLevel> seconds.`,
-		icon: `ASSETS/Characters/TFT9_Heimerdinger/HUD/Icons2D/TFT9_Heimerdinger_E1.TFT_Set9.dds`,
-		name: `CH-3X Lightning Grenade`,
-		variables: {
-			'Damage': [0, 150, 225, 3141],
-			'StunDuration': [3, 1.5, 2, 15],
-		},
-	},
 	'TFT9_Jayce': {
 		desc: `Grant <TFTBonus>@ModifiedEnhancedAttackSpeed@ (%i:scaleAP%)</TFTBonus> Attack Speed to Jayce and <TFTBonus>@ModifiedPercentAttackSpeed@ (%i:scaleAP%)</TFTBonus> to the allies on his left and right for @Duration@ seconds. Fire a blast at the current target that explodes on the first enemy hit. It deals <physicalDamage>@TotalDamage@ (%i:scaleAD%)</physicalDamage> physical damage to enemies near the blast.`,
 		icon: `ASSETS/Characters/TFT9_Jayce/HUD/Icons2D/TFT9_Jayce_ShotBlast.TFT_Set9.dds`,
@@ -9410,6 +9397,19 @@ export const abilities: Record<string, AbilityData> = {
 			'HexRange': [1, 1, 1, 1],
 			'TooltipPercentAttackDamage': [0, 275, 275, 295],
 			'SelfAttackSpeed': [0.30000001192092896, 0.30000001192092896, 0.4000000059604645, 0.5],
+		},
+	},
+	'TFT9_Jhin': {
+		desc: `Take aim at the current target and deal <physicalDamage>@TotalDamage@ (%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage to enemies in a line; each hit reduces this damage by @FalloffPercent*100@%.<br><br>Ionia Bonus: <TFTBonus>+@TooltipIoniaBonus@%</TFTBonus> Attack Damage`,
+		icon: `ASSETS/Characters/Jhin/HUD/Icons2D/Jhin_R.dds`,
+		name: `Curtain Call`,
+		variables: {
+			'PercentAttackDamage': [7.440000057220459, 7.440000057220459, 7.440000057220459, 7.440000057220459],
+			'MissingHealthPercentBonus': [0, 0.23999999463558197, 0.3400000035762787, 0.4399999976158142],
+			'TooltipIoniaBonus': [25, 25, 25, 25],
+			'AimDuration': [1.600000023841858, 1.600000023841858, 1.600000023841858, 1.600000023841858],
+			'FalloffPercent': [0.5600000023841858, 0.5600000023841858, 0.5600000023841858, 0.5600000023841858],
+			'Damage': [0, 60, 90, 135],
 		},
 	},
 	'TFT9_Jinx': {
@@ -9424,27 +9424,6 @@ export const abilities: Record<string, AbilityData> = {
 			'RocketsPerSimulatedLaunchAttack': [2, 2, 2, 2],
 		},
 	},
-	'TFT9_Katarina': {
-		desc: `Throw three daggers that land next to enemies within <TFTBonus>@SpellRange@ (%i:scaleRange%)</TFTBonus> hexes. Then, teleport to each and deal <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage to adjacent enemies and <TFTKeyword>Wound</TFTKeyword> them for @WoundDuration@ seconds.<br><br><rules><tftbold>Wound:</tftbold> Reduce healing received by @WoundPercent*100@%</rules>`,
-		icon: `ASSETS/Characters/TFT9_Katarina/HUD/Icons2D/TFT9_Katarina_W.TFT_Set9.dds`,
-		name: `Voracity`,
-		variables: {
-			'Damage': [0, 145, 220, 350],
-			'WoundPercent': [0.33000001311302185, 0.33000001311302185, 0.33000001311302185, 0.33000001311302185],
-			'WoundDuration': [6, 6, 6, 6],
-			'BonusSpellRange': [1, 1, 1, 1],
-		},
-	},
-	'TFT9_Karma': {
-		desc: `Fire a burst of energy that explodes upon impact, dealing <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage to adjacent enemies. Every third cast launches @EmpoweredBursts@ bursts.<br><br>Ionia Bonus: <TFTBonus>+@TooltipIoniaBonus@</TFTBonus> Ability Power`,
-		icon: `ASSETS/Characters/TFT9_Karma/HUD/Icons2D/TFT9_Karma_Q1.TFT_Set9.dds`,
-		name: `Inner Flame`,
-		variables: {
-			'MagicDamage': [0, 200, 300, 470],
-			'TooltipIoniaBonus': [25, 25, 25, 25],
-			'EmpoweredBursts': [3, 3, 3, 3],
-		},
-	},
 	'TFT9_KSante': {
 		desc: `Heal for <scaleHealth>@HealAmount@ (%i:scaleHealth%)</scaleHealth>, then knock up the current target before smashing them to the edge of the battlefield. Deal <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage and <TFTKeyword>Stun</TFTKeyword> them for <scaleLevel>@StunDuration@</scaleLevel> seconds. Deal <magicDamage>@CollisionDamage@ (%i:scaleAP%)</magicDamage> magic damage to enemies the target collides with and <TFTKeyword>Stun</TFTKeyword> them for <scaleLevel>@SecondaryStunDuration@</scaleLevel> seconds.<br><br>If the target can't be pushed back any further, knock them off the battlefield. Otherwise, chase after them.`,
 		icon: `ASSETS/Characters/TFT9_KSante/HUD/Icons2D/Icons_TFT9_KSante_R2.TFT_Set9.dds`,
@@ -9455,6 +9434,26 @@ export const abilities: Record<string, AbilityData> = {
 			'SecondaryStunDuration': [0, 1, 1.25, 5],
 			'CollisionPercent': [0.5, 0.5, 0.5, 0.5],
 			'PercentHealthHeal': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
+		},
+	},
+	'TFT9_KaiSa': {
+		desc: `Dash away from all enemies, then fire <scaleLevel>@NumMissiles@</scaleLevel> missiles split across the @NumTargets@ nearest enemies. Each missile deals <magicDamage>@TotalDamage@ (%i:scaleAP%)</magicDamage> magic damage.`,
+		icon: `ASSETS/Characters/TFT9_KaiSa/HUD/Icons2D/TFT9_KaiSa_W.TFT_Set9.dds`,
+		name: `Icathian Rain`,
+		variables: {
+			'NumMissiles': [12, 15, 15, 25],
+			'BaseDamage': [0, 80, 120, 240],
+			'NumTargets': [4, 4, 4, 4],
+		},
+	},
+	'TFT9_Karma': {
+		desc: `Fire a burst of energy that explodes upon impact, dealing <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage to adjacent enemies. Every third cast launches @EmpoweredBursts@ bursts.<br><br>Ionia Bonus: <TFTBonus>+@TooltipIoniaBonus@</TFTBonus> Ability Power`,
+		icon: `ASSETS/Characters/TFT9_Karma/HUD/Icons2D/TFT9_Karma_Q1.TFT_Set9.dds`,
+		name: `Inner Flame`,
+		variables: {
+			'MagicDamage': [0, 200, 300, 470],
+			'TooltipIoniaBonus': [25, 25, 25, 25],
+			'EmpoweredBursts': [3, 3, 3, 3],
 		},
 	},
 	'TFT9_Kassadin': {
@@ -9468,14 +9467,15 @@ export const abilities: Record<string, AbilityData> = {
 			'ShieldDuration': [4, 4, 4, 4],
 		},
 	},
-	'TFT9_KaiSa': {
-		desc: `Dash away from all enemies, then fire <scaleLevel>@NumMissiles@</scaleLevel> missiles split across the @NumTargets@ nearest enemies. Each missile deals <magicDamage>@TotalDamage@ (%i:scaleAP%)</magicDamage> magic damage.`,
-		icon: `ASSETS/Characters/TFT9_KaiSa/HUD/Icons2D/TFT9_KaiSa_W.TFT_Set9.dds`,
-		name: `Icathian Rain`,
+	'TFT9_Katarina': {
+		desc: `Throw three daggers that land next to enemies within <TFTBonus>@SpellRange@ (%i:scaleRange%)</TFTBonus> hexes. Then, teleport to each and deal <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage to adjacent enemies and <TFTKeyword>Wound</TFTKeyword> them for @WoundDuration@ seconds.<br><br><rules><tftbold>Wound:</tftbold> Reduce healing received by @WoundPercent*100@%</rules>`,
+		icon: `ASSETS/Characters/TFT9_Katarina/HUD/Icons2D/TFT9_Katarina_W.TFT_Set9.dds`,
+		name: `Voracity`,
 		variables: {
-			'NumMissiles': [12, 15, 15, 25],
-			'BaseDamage': [0, 80, 120, 240],
-			'NumTargets': [4, 4, 4, 4],
+			'Damage': [0, 145, 220, 350],
+			'WoundPercent': [0.33000001311302185, 0.33000001311302185, 0.33000001311302185, 0.33000001311302185],
+			'WoundDuration': [6, 6, 6, 6],
+			'BonusSpellRange': [1, 1, 1, 1],
 		},
 	},
 	'TFT9_Kayle': {
@@ -9511,6 +9511,28 @@ export const abilities: Record<string, AbilityData> = {
 			'SplashDamage': [0, 90, 140, 200],
 		},
 	},
+	'TFT9_MissFortune': {
+		desc: `Call down an X-shaped rain of bullets, destroying @ShieldReavePercent*100@% of your target's shields and dealing <magicDamage>@ModifiedMagicDamage@ (%i:scaleAP%)</magicDamage> magic damage. For @ShieldReaveDuration@ seconds, enemies hit have incoming shields reduced by @ShieldReavePercent*100@%.`,
+		icon: `ASSETS/Characters/MissFortune/HUD/Icons2D/MissFortune_E.dds`,
+		name: `X Marks the Spot`,
+		variables: {
+			'MagicDamage': [0, 240, 360, 580],
+			'ShieldReavePercent': [0, 0.3499999940395355, 0.3499999940395355, 0.3499999940395355],
+			'ShieldReaveDuration': [0, 5, 5, 5],
+		},
+	},
+	'TFT9_Mordekaiser': {
+		desc: `<spellPassive>Passive:</spellPassive> Attacks deal <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> bonus magic damage, increased to <magicDamage>@ModifiedRealmDamage@ (%i:scaleAP%)</magicDamage> while God of Death is active.<br><br><spellActive>Active:</spellActive> Gain <TFTBonus>@ModifiedShield@ (%i:scaleHealth%)</TFTBonus> Shield and 1 range for <TFTBonus>@Duration@</TFTBonus> seconds. Killing enemies in this state steals <TFTBonus>@PercentStatSteal*100@%</TFTBonus> of their Health, Attack Damage, Ability Power, Armor, and Magic Resistance until combat ends.`,
+		icon: `ASSETS/Characters/Mordekaiser/HUD/Icons2D/MordekaiserR.dds`,
+		name: `God of Death`,
+		variables: {
+			'BonusDamage': [100, 100, 150, 375],
+			'RealmBonusDamage': [100, 250, 375, 900],
+			'Duration': [5, 5, 5, 5],
+			'PercentHealthShield': [0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645],
+			'PercentStatSteal': [0.10000000149011612, 0.05999999865889549, 0.05999999865889549, 0.15000000596046448],
+		},
+	},
 	'TFT9_Naafiri': {
 		desc: `<spellPassive>Passive:</spellPassive> Gain <TFTBonus>@ModifiedOmnivamp@ (%i:scaleAP%)</TFTBonus> <TFTKeyword>Omnivamp</TFTKeyword>. <br><br><spellActive>Active:</spellActive> Deal <physicalDamage>@TotalDamage@ (%i:scaleAD%)</physicalDamage> physical damage. <br><br>Darkin Dagger: After casting, summon packmates that attack the first enemy hit for a total of <physicalDamage>@TotalPackmateDamage@ (%i:scaleAD%)</physicalDamage>.<br><br><rules><tftbold>Omnivamp:</tftbold> Heal for percentage of damage dealt</rules>`,
 		icon: `ASSETS/Characters/Naafiri/HUD/Icons2D/Icons_Naafiri_E.Naafiri.dds`,
@@ -9536,16 +9558,14 @@ export const abilities: Record<string, AbilityData> = {
 			'NumEnemies': [3, 4, 5, 7],
 		},
 	},
-	'TFT9_Mordekaiser': {
-		desc: `<spellPassive>Passive:</spellPassive> Attacks deal <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> bonus magic damage, increased to <magicDamage>@ModifiedRealmDamage@ (%i:scaleAP%)</magicDamage> while God of Death is active.<br><br><spellActive>Active:</spellActive> Gain <TFTBonus>@ModifiedShield@ (%i:scaleHealth%)</TFTBonus> Shield and 1 range for <TFTBonus>@Duration@</TFTBonus> seconds. Killing enemies in this state steals <TFTBonus>@PercentStatSteal*100@%</TFTBonus> of their Health, Attack Damage, Ability Power, Armor, and Magic Resistance until combat ends.`,
-		icon: `ASSETS/Characters/Mordekaiser/HUD/Icons2D/MordekaiserR.dds`,
-		name: `God of Death`,
+	'TFT9_Nautilus': {
+		desc: `<spellPassive>Passive:</spellPassive> Gain <TFTBonus>@StatAmp*100@%</TFTBonus> bonus Armor and Magic Resistance from all sources.<br><br><spellActive>Active:</spellActive> Deal <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage to enemies within two hexes. Knock them up and pull them together, <TFTKeyword>Stunning</TFTKeyword> them for <scaleLevel>@StunDuration@</scaleLevel> seconds.`,
+		icon: `ASSETS/Characters/Nautilus/HUD/Icons2D/Nautilus_RippleEffect.dds`,
+		name: `Riptide`,
 		variables: {
-			'BonusDamage': [100, 100, 150, 375],
-			'RealmBonusDamage': [100, 250, 375, 900],
-			'Duration': [5, 5, 5, 5],
-			'PercentHealthShield': [0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645],
-			'PercentStatSteal': [0.10000000149011612, 0.05999999865889549, 0.05999999865889549, 0.15000000596046448],
+			'StatAmp': [0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645],
+			'Damage': [0, 150, 225, 360],
+			'StunDuration': [1, 1.5, 1.5, 2],
 		},
 	},
 	'TFT9_Neeko': {
@@ -9556,16 +9576,6 @@ export const abilities: Record<string, AbilityData> = {
 			'Shield': [0, 250, 325, 425],
 			'ShieldDuration': [3, 3, 3, 3],
 			'Damage': [50, 300, 450, 700],
-		},
-	},
-	'TFT9_Nautilus': {
-		desc: `<spellPassive>Passive:</spellPassive> Gain <TFTBonus>@StatAmp*100@%</TFTBonus> bonus Armor and Magic Resistance from all sources.<br><br><spellActive>Active:</spellActive> Deal <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage to enemies within two hexes. Knock them up and pull them together, <TFTKeyword>Stunning</TFTKeyword> them for <scaleLevel>@StunDuration@</scaleLevel> seconds.`,
-		icon: `ASSETS/Characters/Nautilus/HUD/Icons2D/Nautilus_RippleEffect.dds`,
-		name: `Riptide`,
-		variables: {
-			'StatAmp': [0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645],
-			'Damage': [0, 150, 225, 360],
-			'StunDuration': [1, 1.5, 1.5, 2],
 		},
 	},
 	'TFT9_Nilah': {
@@ -9582,16 +9592,6 @@ export const abilities: Record<string, AbilityData> = {
 			'EmpoweredLineDamage': [1.5, 1.7000000476837158, 1.75, 3.75],
 		},
 	},
-	'TFT9_Quinn': {
-		desc: `Launch Valor through the row or column with the most enemies, marking them to take <TFTBonus>@ModifiedAmpDamage@ (%i:scaleAP%)</TFTBonus> increased damage for @Duration@ seconds. Then rain down arrows, dealing <physicalDamage>@ModifiedDamage@ (%i:scaleAD%)</physicalDamage> physical damage split between all marked enemies.`,
-		icon: `ASSETS/Characters/TFT9_Quinn/HUD/Icons2D/TFT9_Quinn_R2.TFT_Set9.dds`,
-		name: `Skystrike`,
-		variables: {
-			'AmpDamage': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
-			'PercentAD': [6, 5.5, 5.550000190734863, 5.650000095367432],
-			'Duration': [4, 4, 4, 4],
-		},
-	},
 	'TFT9_Orianna': {
 		desc: `Grant the lowest Health ally <TFTBonus>@ModifiedShielding@ (%i:scaleAP%)</TFTBonus> Shield for @ShieldDuration@ seconds and empowers Orianna's next attack to deal <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> bonus magic damage.`,
 		icon: `ASSETS/Characters/TFT9_Orianna/HUD/Icons2D/TFT9_OriannaCommandAttack.TFT_Set9.dds`,
@@ -9600,47 +9600,6 @@ export const abilities: Record<string, AbilityData> = {
 			'ShieldHealth': [200, 200, 225, 275],
 			'ShieldDuration': [4, 4, 4, 4],
 			'MagicDamage': [50, 290, 435, 650],
-		},
-	},
-	'TFT9_MissFortune': {
-		desc: `Call down an X-shaped rain of bullets, destroying @ShieldReavePercent*100@% of your target's shields and dealing <magicDamage>@ModifiedMagicDamage@ (%i:scaleAP%)</magicDamage> magic damage. For @ShieldReaveDuration@ seconds, enemies hit have incoming shields reduced by @ShieldReavePercent*100@%.`,
-		icon: `ASSETS/Characters/MissFortune/HUD/Icons2D/MissFortune_E.dds`,
-		name: `X Marks the Spot`,
-		variables: {
-			'MagicDamage': [0, 240, 360, 580],
-			'ShieldReavePercent': [0, 0.3499999940395355, 0.3499999940395355, 0.3499999940395355],
-			'ShieldReaveDuration': [0, 5, 5, 5],
-		},
-	},
-	'TFT9_Qiyana': {
-		desc: `Dash to strike enemies in a line and deal <physicalDamage>@ModifiedDamage@ (%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage, <TFTKeyword>Stunning</TFTKeyword> and knocking up the first target hit for @PrimaryStunDuration@ seconds and all other targets for @SecondaryStunDuration@ seconds.`,
-		icon: `ASSETS/Characters/Qiyana/HUD/Icons2D/Qiyana_R.dds`,
-		name: `Supreme Display of Talent`,
-		variables: {
-			'BaseDamage': [0, 2.549999952316284, 2.549999952316284, 2.700000047683716],
-			'AbilityScaleDamage': [0, 40, 60, 90],
-			'PrimaryStunDuration': [1.5, 1.5, 1.5, 1.5],
-			'SecondaryStunDuration': [0.5, 0.5, 0.5, 0.5],
-		},
-	},
-	'TFT9_RiftHerald': {
-		desc: `Charge toward the furthest enemy and crash into the first enemy hit. Deal <magicDamage>@ModifiedMagicDamage@ (%i:scaleAP%)</magicDamage> magic damage to enemies adjacent to the impact and Stun them for @StunDuration@ seconds.`,
-		icon: `ASSETS/Characters/TFT9_RiftHerald/HUD/TFT9_RiftHerald_Square.TFT_Set9.dds`,
-		name: `Void Charge`,
-		variables: {
-			'MagicDamage': [240, 240, 240, 240],
-			'StunDuration': [2, 2, 2, 2],
-		},
-	},
-	'TFT9_RekSai': {
-		desc: `Deal <physicalDamage>@TotalDamage@ (%i:scaleAD%)</physicalDamage> physical damage to the current target and mark them. If they are below @HealthThreshold*100@% max Health, deal true damage instead. If the target is marked, deal <trueDamage>@MarkDamage@ (%i:scaleAD%)</trueDamage> bonus true damage.<br><br>If this kills the target, rip through them 1 hex and heal for <scaleHealth>@HealAmount@ (%i:scaleAP%%i:scaleHealth%)</scaleHealth>.`,
-		icon: `ASSETS/Characters/RekSai/HUD/Icons2D/RekSai_E1.dds`,
-		name: `Furious Bite`,
-		variables: {
-			'PercentOfAD': [2.6500000953674316, 2.5, 2.5, 2.549999952316284],
-			'PercentMaxHealthHeal': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
-			'HealthThreshold': [0.6600000262260437, 0.6600000262260437, 0.6600000262260437, 0.6600000262260437],
-			'PercentOfADMark': [1.350000023841858, 2.4000000953674316, 2.4000000953674316, 2.5],
 		},
 	},
 	'TFT9_Poppy': {
@@ -9657,6 +9616,38 @@ export const abilities: Record<string, AbilityData> = {
 			'PercentHealthDamage': [33, 33, 33, 33],
 		},
 	},
+	'TFT9_Qiyana': {
+		desc: `Dash to strike enemies in a line and deal <physicalDamage>@ModifiedDamage@ (%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage, <TFTKeyword>Stunning</TFTKeyword> and knocking up the first target hit for @PrimaryStunDuration@ seconds and all other targets for @SecondaryStunDuration@ seconds.`,
+		icon: `ASSETS/Characters/Qiyana/HUD/Icons2D/Qiyana_R.dds`,
+		name: `Supreme Display of Talent`,
+		variables: {
+			'BaseDamage': [0, 2.549999952316284, 2.549999952316284, 2.700000047683716],
+			'AbilityScaleDamage': [0, 40, 60, 90],
+			'PrimaryStunDuration': [1.5, 1.5, 1.5, 1.5],
+			'SecondaryStunDuration': [0.5, 0.5, 0.5, 0.5],
+		},
+	},
+	'TFT9_Quinn': {
+		desc: `Launch Valor through the row or column with the most enemies, marking them to take <TFTBonus>@ModifiedAmpDamage@ (%i:scaleAP%)</TFTBonus> increased damage for @Duration@ seconds. Then rain down arrows, dealing <physicalDamage>@ModifiedDamage@ (%i:scaleAD%)</physicalDamage> physical damage split between all marked enemies.`,
+		icon: `ASSETS/Characters/TFT9_Quinn/HUD/Icons2D/TFT9_Quinn_R2.TFT_Set9.dds`,
+		name: `Skystrike`,
+		variables: {
+			'AmpDamage': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
+			'PercentAD': [6, 5.5, 5.550000190734863, 5.650000095367432],
+			'Duration': [4, 4, 4, 4],
+		},
+	},
+	'TFT9_RekSai': {
+		desc: `Deal <physicalDamage>@TotalDamage@ (%i:scaleAD%)</physicalDamage> physical damage to the current target and mark them. If they are below @HealthThreshold*100@% max Health, deal true damage instead. If the target is marked, deal <trueDamage>@MarkDamage@ (%i:scaleAD%)</trueDamage> bonus true damage.<br><br>If this kills the target, rip through them 1 hex and heal for <scaleHealth>@HealAmount@ (%i:scaleAP%%i:scaleHealth%)</scaleHealth>.`,
+		icon: `ASSETS/Characters/RekSai/HUD/Icons2D/RekSai_E1.dds`,
+		name: `Furious Bite`,
+		variables: {
+			'PercentOfAD': [2.6500000953674316, 2.5, 2.5, 2.549999952316284],
+			'PercentMaxHealthHeal': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
+			'HealthThreshold': [0.6600000262260437, 0.6600000262260437, 0.6600000262260437, 0.6600000262260437],
+			'PercentOfADMark': [1.350000023841858, 2.4000000953674316, 2.4000000953674316, 2.5],
+		},
+	},
 	'TFT9_Renekton': {
 		desc: `Deal <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage to adjacent enemies. Heal <scaleHealth>@ModifiedInitialHeal@ (%i:scaleAP%)</scaleHealth> for the first enemy hit and another <scaleHealth>@ModifiedKickerHeal@ (%i:scaleAP%)</scaleHealth> for each additional one.`,
 		icon: `ASSETS/Characters/Renekton/HUD/Icons2D/Renekton_Q.dds`,
@@ -9666,6 +9657,15 @@ export const abilities: Record<string, AbilityData> = {
 			'InitialHeal': [170, 220, 270, 320],
 			'KickerHeal': [30, 30, 30, 30],
 			'HexRadius': [1, 1, 1, 1],
+		},
+	},
+	'TFT9_RiftHerald': {
+		desc: `Charge toward the furthest enemy and crash into the first enemy hit. Deal <magicDamage>@ModifiedMagicDamage@ (%i:scaleAP%)</magicDamage> magic damage to enemies adjacent to the impact and Stun them for @StunDuration@ seconds.`,
+		icon: `ASSETS/Characters/TFT9_RiftHerald/HUD/TFT9_RiftHerald_Square.TFT_Set9.dds`,
+		name: `Void Charge`,
+		variables: {
+			'MagicDamage': [240, 240, 240, 240],
+			'StunDuration': [2, 2, 2, 2],
 		},
 	},
 	'TFT9_Ryze': {
@@ -9683,17 +9683,6 @@ export const abilities: Record<string, AbilityData> = {
 			'Heal': [0, 250, 375, 9999],
 			'Damage': [125, 300, 450, 2000],
 			'PortalDuration': [2, 2, 2, 5],
-		},
-	},
-	'TFT9_RyzeBandleCity': {
-		desc: `Create a portal to Bandle City under the most expensive unit on your bench. They are summoned to the battlefield with @ModifiedBonusMana@ (%i:scaleAP%) bonus Mana and are...slightly smaller?<br><br>If there are no units left on your bench, Ryze summons a random high tier unit instead.`,
-		icon: `ASSETS/Characters/TFT9_Ryze/HUD/Icons2D/TFT9_Ryze_R.TFT_Set9.dds`,
-		name: `Realm Warp: Bandle City`,
-		variables: {
-			'BonusMana': [0, 25, 70, 200],
-			'FiveCostSummonOdds': [0, 0.30000001192092896, 0.699999988079071, 1],
-			'FourCostSummonOdds': [0, 0.4000000059604645, 0.30000001192092896, 0],
-			'BaseStarLevelSummon': [0, 1, 1, 3],
 		},
 	},
 	'TFT9_RyzeFreljord': {
@@ -9719,6 +9708,17 @@ export const abilities: Record<string, AbilityData> = {
 			'Damage': [150, 175, 275, 1500],
 		},
 	},
+	'TFT9_RyzeNoxus': {
+		desc: `Create a portal to Noxus that spews out a torrent of weapons and armor, granting <scaleLevel>@NumItems@</scaleLevel> completed items to random allies with open slots, and throwing <scaleLevel>@NumAxes@</scaleLevel> axes towards random enemies that deal <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage each.<br><br>If an ally would recieve an item while all slots are full, they instead gain a stacking @DamageAmp*100@% damage increase for the rest of combat.`,
+		icon: `ASSETS/Characters/TFT9_Ryze/HUD/Icons2D/TFT9_Ryze_R.TFT_Set9.dds`,
+		name: `Realm Warp: Noxus`,
+		variables: {
+			'NumItems': [2, 3, 4, 10],
+			'NumAxes': [3, 5, 5, 15],
+			'MagicDamage': [200, 150, 225, 2000],
+			'DamageAmp': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
+		},
+	},
 	'TFT9_RyzePiltover': {
 		desc: `Create a portal to Piltover that launches an enforcer grenade towards the largest clump of enemies, dealing <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage to enemies within two hexes and creating a containment area for <scaleLevel>@AreaDuration@</scaleLevel> seconds. Enemies are unable to leave the area, and <scaleLevel>@PercentSharedDamage*100@%</scaleLevel> of the damage dealt to them is also dealt to all other enemies within.`,
 		icon: `ASSETS/Characters/TFT9_Ryze/HUD/Icons2D/TFT9_Ryze_R.TFT_Set9.dds`,
@@ -9738,33 +9738,6 @@ export const abilities: Record<string, AbilityData> = {
 			'NumAllies': [1, 1, 1, 10],
 		},
 	},
-	'TFT9_RyzeNoxus': {
-		desc: `Create a portal to Noxus that spews out a torrent of weapons and armor, granting <scaleLevel>@NumItems@</scaleLevel> completed items to random allies with open slots, and throwing <scaleLevel>@NumAxes@</scaleLevel> axes towards random enemies that deal <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage each.<br><br>If an ally would recieve an item while all slots are full, they instead gain a stacking @DamageAmp*100@% damage increase for the rest of combat.`,
-		icon: `ASSETS/Characters/TFT9_Ryze/HUD/Icons2D/TFT9_Ryze_R.TFT_Set9.dds`,
-		name: `Realm Warp: Noxus`,
-		variables: {
-			'NumItems': [2, 3, 4, 10],
-			'NumAxes': [3, 5, 5, 15],
-			'MagicDamage': [200, 150, 225, 2000],
-			'DamageAmp': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
-		},
-	},
-	'TFT9_RyzeBilgewater': {
-		desc: `Create a portal to Bilgewater, summoning a giant treasure chest to fall on the largest cluster of enemies that deals <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage. The size of this chest is increased by <TFTBonus>@PercentScalar*100@%</TFTBonus> for every <TFTBonus>@PerGoldScalar@</TFTBonus> gold you have.<br><br>Each enemy hit has a chance to knock gold or other treasures out of the chest, and that chance doubles if the chest kills the enemy.`,
-		icon: `ASSETS/Characters/TFT9_Ryze/HUD/Icons2D/TFT9_Ryze_R.TFT_Set9.dds`,
-		name: `Realm Warp: Bilgewater`,
-		variables: {
-			'Damage': [0, 350, 525, 7777],
-			'PercentScalar': [0.019999999552965164, 0.019999999552965164, 0.019999999552965164, 0.019999999552965164],
-			'PerGoldScalar': [2, 2, 2, 2],
-			'BaseLootPercent': [0.05000000074505806, 0.05000000074505806, 0.10000000149011612, 1],
-			'KillLootPercent': [0.10000000149011612, 0.10000000149011612, 0.20000000298023224, 1],
-			'BaseGoldPercent': [0.10000000149011612, 0.10000000149011612, 0.20000000298023224, 1],
-			'KillGoldPercent': [0.20000000298023224, 0.20000000298023224, 0.4000000059604645, 1],
-			'MinGold': [1, 1, 1, 1],
-			'MaxGold': [4, 4, 4, 4],
-		},
-	},
 	'TFT9_RyzeShurima': {
 		desc: `Create a portal to Shurima, summoning a roaming sand tornado that deals <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage to enemies hit and knocks them up, <TFTKeyword>Stunning</TFTKeyword> them for <scaleLevel>@KnockupDuration@</scaleLevel> second(s).<br><br>The tornado has a chance to unearth buried treasures and gold as it travels.`,
 		icon: `ASSETS/Characters/TFT9_Ryze/HUD/Icons2D/TFT9_Ryze_R.TFT_Set9.dds`,
@@ -9779,16 +9752,28 @@ export const abilities: Record<string, AbilityData> = {
 			'MaxGold': [4, 4, 4, 4],
 		},
 	},
-	'TFT9_Sejuani': {
-		desc: `<spellPassive>Passive:</spellPassive> Whenever an ally attacks a <TFTKeyword>Chilled</TFTKeyword> enemy, they deal <trueDamage>@HealthDamage@ (%i:scaleHealth%)</trueDamage> bonus true damage.<br><br><spellActive>Active:</spellActive> Gain <TFTBonus>@ModifiedShield@ (%i:scaleAP%)</TFTBonus> Shield for @ShieldDuration@ seconds. Deal <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage to nearby enemies and <TFTKeyword>Chill</TFTKeyword> them for @ShieldDuration@ seconds.<br><br><tftitemrules><tftbold>Chill:</tftbold> Reduce Attack Speed by 30%</tftitemrules>`,
-		icon: `ASSETS/Characters/TFT9_Sejuani/HUD/Icons2D/TFT9_Sejuani_passive.TFT_Set9.dds`,
-		name: `Fury of the North`,
+	'TFT9_RyzeTargon': {
+		desc: `Create a portal to the skies above Mount Targon that beckons the current target. After a few seconds, they descend from the heavens as a meteor towards the largest group of enemies, dealing <magicDamage>@ModifiedPercentMaxHealth@ (%i:scaleAP%)</magicDamage> of the initial target's maximum Health as magic damage. Enemies in the epicenter are briefly knocked up.<br><br>If the target is the only enemy remaining, they never descend.`,
+		icon: `ASSETS/Characters/TFT9_Ryze/HUD/Icons2D/TFT9_Ryze_R.TFT_Set9.dds`,
+		name: `Realm Warp: Targon`,
 		variables: {
-			'Shield': [0, 600, 700, 2000],
-			'Damage': [0, 160, 240, 1200],
-			'ShieldDuration': [4, 4, 4, 4],
-			'PercentHealth': [0.009999999776482582, 0.009999999776482582, 0.009999999776482582, 0.10000000149011612],
-			'ChillDuration': [4, 4, 4, 4],
+			'PercentMaxHealth': [0.20000000298023224, 0.18000000715255737, 0.30000001192092896, 1],
+			'DamageHexRadius': [2, 2, 2, 4],
+			'KnockUpRadius': [1, 1, 1, 2],
+			'StunDuration': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
+			'ThreeStarStarfallDamage': [0, 0, 0, 999],
+		},
+	},
+	'TFT9_RyzeIxtal': {
+		desc: `Create a portal to Ixtal, coating the ground around the current target in a thicket of vines. After a brief delay, deal <magicDamage>@TotalDamage@ (%i:scaleArmor% %i:scaleMR%)</magicDamage> magic damage to enemies within and <TFTKeyword>Stun</TFTKeyword> enemies at the epicenter for <TFTBonus>@StunDuration@</TFTBonus> seconds with a knockup.<br><br>Allies within are wrapped in Barkskin, granting <scaleLevel>@ModifiedArmor@ (%i:scaleArmor%)</scaleLevel> Armor and <scaleLevel>@ModifiedMR@ (%i:scaleMR%)</scaleLevel> Magic Resistance for <TFTBonus>@ModifiedBarkskinDuration@ (%i:scaleAP%)</TFTBonus> seconds.`,
+		icon: `ASSETS/Characters/TFT9_Ryze/HUD/Icons2D/TFT9_Ryze_R.TFT_Set9.dds`,
+		name: `Realm Warp: Ixtal`,
+		variables: {
+			'ArmorScalar': [1.5, 2, 3, 15],
+			'MRScalar': [1.5, 2, 3, 15],
+			'StunDuration': [2, 2, 2.5, 10],
+			'BarkskinDuration': [4, 4, 4, 4],
+			'BarskinDefenceScalar': [1, 1, 1, 1],
 		},
 	},
 	'TFT9_RyzeZaun': {
@@ -9808,6 +9793,65 @@ export const abilities: Record<string, AbilityData> = {
 			'TooltipShredPercent': [30, 30, 30, 30],
 		},
 	},
+	'TFT9_RyzeBilgewater': {
+		desc: `Create a portal to Bilgewater, summoning a giant treasure chest to fall on the largest cluster of enemies that deals <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage. The size of this chest is increased by <TFTBonus>@PercentScalar*100@%</TFTBonus> for every <TFTBonus>@PerGoldScalar@</TFTBonus> gold you have.<br><br>Each enemy hit has a chance to knock gold or other treasures out of the chest, and that chance doubles if the chest kills the enemy.`,
+		icon: `ASSETS/Characters/TFT9_Ryze/HUD/Icons2D/TFT9_Ryze_R.TFT_Set9.dds`,
+		name: `Realm Warp: Bilgewater`,
+		variables: {
+			'Damage': [0, 350, 525, 7777],
+			'PercentScalar': [0.019999999552965164, 0.019999999552965164, 0.019999999552965164, 0.019999999552965164],
+			'PerGoldScalar': [2, 2, 2, 2],
+			'BaseLootPercent': [0.05000000074505806, 0.05000000074505806, 0.10000000149011612, 1],
+			'KillLootPercent': [0.10000000149011612, 0.10000000149011612, 0.20000000298023224, 1],
+			'BaseGoldPercent': [0.10000000149011612, 0.10000000149011612, 0.20000000298023224, 1],
+			'KillGoldPercent': [0.20000000298023224, 0.20000000298023224, 0.4000000059604645, 1],
+			'MinGold': [1, 1, 1, 1],
+			'MaxGold': [4, 4, 4, 4],
+		},
+	},
+	'TFT9_RyzeBandleCity': {
+		desc: `Create a portal to Bandle City under the most expensive unit on your bench. They are summoned to the battlefield with @ModifiedBonusMana@ (%i:scaleAP%) bonus Mana and are...slightly smaller?<br><br>If there are no units left on your bench, Ryze summons a random high tier unit instead.`,
+		icon: `ASSETS/Characters/TFT9_Ryze/HUD/Icons2D/TFT9_Ryze_R.TFT_Set9.dds`,
+		name: `Realm Warp: Bandle City`,
+		variables: {
+			'BonusMana': [0, 25, 70, 200],
+			'FiveCostSummonOdds': [0, 0.30000001192092896, 0.699999988079071, 1],
+			'FourCostSummonOdds': [0, 0.4000000059604645, 0.30000001192092896, 0],
+			'BaseStarLevelSummon': [0, 1, 1, 3],
+		},
+	},
+	'TFT9_Samira': {
+		desc: `Shoot at the current target and deal <physicalDamage>@TotalDamage@ (%i:scaleAD%)</physicalDamage> to the first enemy hit. Reduce their Armor by <TFTBonus>@ModifiedArmorShred@ (%i:scaleAP%)</TFTBonus> for the rest of combat.`,
+		icon: `ASSETS/Characters/Samira/HUD/Icons2D/SamiraQ.dds`,
+		name: `Flair`,
+		variables: {
+			'ADPercent': [2.0999999046325684, 1.899999976158142, 1.899999976158142, 2],
+			'ArmorShred': [0, 10, 15, 20],
+		},
+	},
+	'TFT9_Sejuani': {
+		desc: `<spellPassive>Passive:</spellPassive> Whenever an ally attacks a <TFTKeyword>Chilled</TFTKeyword> enemy, they deal <trueDamage>@HealthDamage@ (%i:scaleHealth%)</trueDamage> bonus true damage.<br><br><spellActive>Active:</spellActive> Gain <TFTBonus>@ModifiedShield@ (%i:scaleAP%)</TFTBonus> Shield for @ShieldDuration@ seconds. Deal <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage to nearby enemies and <TFTKeyword>Chill</TFTKeyword> them for @ShieldDuration@ seconds.<br><br><tftitemrules><tftbold>Chill:</tftbold> Reduce Attack Speed by 30%</tftitemrules>`,
+		icon: `ASSETS/Characters/TFT9_Sejuani/HUD/Icons2D/TFT9_Sejuani_passive.TFT_Set9.dds`,
+		name: `Fury of the North`,
+		variables: {
+			'Shield': [0, 600, 700, 2000],
+			'Damage': [0, 160, 240, 1200],
+			'ShieldDuration': [4, 4, 4, 4],
+			'PercentHealth': [0.009999999776482582, 0.009999999776482582, 0.009999999776482582, 0.10000000149011612],
+			'ChillDuration': [4, 4, 4, 4],
+		},
+	},
+	'TFT9_Sett': {
+		desc: `Grab an enemy from either side and slam them together, knocking them up. Deals <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage and <TFTKeyword>Stuns</TFTKeyword> them for <scaleLevel>@StunDuration@</scaleLevel> seconds. <br><br>If only one enemy is grabbed, the damage and <TFTKeyword>Stun</TFTKeyword> duration are increased by @SoloBonus*100@%.<br><br>Ionia Bonus: <scaleHealth>+@TooltipIoniaBonus@</scaleHealth> max Health`,
+		icon: `ASSETS/Characters/Sett/HUD/Icons2D/Sett_Q.dds`,
+		name: `Facebreaker`,
+		variables: {
+			'Damage': [0, 180, 270, 420],
+			'StunDuration': [1, 1.25, 1.5, 2],
+			'SoloBonus': [0.5, 0.5, 0.5, 0.5],
+			'TooltipIoniaBonus': [180, 180, 180, 180],
+		},
+	},
 	'TFT9_Shen': {
 		desc: `Gain <TFTBonus>@ModifiedSelfShieldAmount@ (%i:scaleAP%)</TFTBonus> Shield and grant <TFTBonus>@ModifiedAllyShieldAmount@ (%i:scaleAP%)</TFTBonus> Shield to the 2 lowest-Health allies for @ShieldDuration@ seconds. After shielding his allies, Shen's Shield refreshes with a burst, dealing <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage to adjacent enemies.<br><br>Ionia Bonus: <TFTBonus>+@TooltipIoniaBonus@%</TFTBonus> Damage Reduction`,
 		icon: `ASSETS/Characters/Shen/HUD/Icons2D/Shen_Passive.dds`,
@@ -9822,27 +9866,14 @@ export const abilities: Record<string, AbilityData> = {
 			'TooltipIoniaBonus': [8, 8, 8, 8],
 		},
 	},
-	'TFT9_Sett': {
-		desc: `Grab an enemy from either side and slam them together, knocking them up. Deals <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage and <TFTKeyword>Stuns</TFTKeyword> them for <scaleLevel>@StunDuration@</scaleLevel> seconds. <br><br>If only one enemy is grabbed, the damage and <TFTKeyword>Stun</TFTKeyword> duration are increased by @SoloBonus*100@%.<br><br>Ionia Bonus: <scaleHealth>+@TooltipIoniaBonus@</scaleHealth> max Health`,
-		icon: `ASSETS/Characters/Sett/HUD/Icons2D/Sett_Q.dds`,
-		name: `Facebreaker`,
+	'TFT9_Silco': {
+		desc: `Throw a vial the closest surrounded enemy, covering nearby hexes in chemicals for <scaleLevel>@ShimmerDuration@</scaleLevel> seconds. Deal <magicDamage>@ModifiedShimmerDamagePerSec@ (%i:scaleAP%)</magicDamage> magic damage per second to chemical-affected enemies, and heal affected allies for <scaleHealth>@ModifiedHealPerSec@ (%i:scaleAP%)</scaleHealth> per second. When possible, target unaffected groups.`,
+		icon: `ASSETS/Characters/TFT9_Silco/HUD/Icons2D/TFT6_Silco_EyeOfTheStorm.TFT_Set9_Stage2.dds`,
+		name: `Undercity Tactics`,
 		variables: {
-			'Damage': [0, 180, 270, 420],
-			'StunDuration': [1, 1.25, 1.5, 2],
-			'SoloBonus': [0.5, 0.5, 0.5, 0.5],
-			'TooltipIoniaBonus': [180, 180, 180, 180],
-		},
-	},
-	'TFT9_RyzeIxtal': {
-		desc: `Create a portal to Ixtal, coating the ground around the current target in a thicket of vines. After a brief delay, deal <magicDamage>@TotalDamage@ (%i:scaleArmor% %i:scaleMR%)</magicDamage> magic damage to enemies within and <TFTKeyword>Stun</TFTKeyword> enemies at the epicenter for <TFTBonus>@StunDuration@</TFTBonus> seconds with a knockup.<br><br>Allies within are wrapped in Barkskin, granting <scaleLevel>@ModifiedArmor@ (%i:scaleArmor%)</scaleLevel> Armor and <scaleLevel>@ModifiedMR@ (%i:scaleMR%)</scaleLevel> Magic Resistance for <TFTBonus>@ModifiedBarkskinDuration@ (%i:scaleAP%)</TFTBonus> seconds.`,
-		icon: `ASSETS/Characters/TFT9_Ryze/HUD/Icons2D/TFT9_Ryze_R.TFT_Set9.dds`,
-		name: `Realm Warp: Ixtal`,
-		variables: {
-			'ArmorScalar': [1.5, 2, 3, 15],
-			'MRScalar': [1.5, 2, 3, 15],
-			'StunDuration': [2, 2, 2.5, 10],
-			'BarkskinDuration': [4, 4, 4, 4],
-			'BarskinDefenceScalar': [1, 1, 1, 1],
+			'ShimmerDuration': [0, 6, 6, 10],
+			'ShimmerDamagePerSec': [0, 65, 100, 400],
+			'HealPerSec': [0, 20, 25, 120],
 		},
 	},
 	'TFT9_Sion': {
@@ -9860,6 +9891,16 @@ export const abilities: Record<string, AbilityData> = {
 			'ThreeStarBonusAD': [0, 0, 0, 4],
 		},
 	},
+	'TFT9_Sona': {
+		desc: `Send a wave of sound at the largest clump of enemies and deal <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage to enemies hit; each hit reduces this damage by @FalloffPercent*100@%. Allies hit by the wave gain <TFTBonus>@AttackSpeed@%</TFTBonus> Attack Speed for the rest of combat.`,
+		icon: `ASSETS/Characters/TFT9_Sona/HUD/Icons2D/TFT9_Sona_R.TFT_Set9.dds`,
+		name: `Crescendo`,
+		variables: {
+			'MagicDamage': [0, 170, 255, 420],
+			'AttackSpeed': [0, 20, 25, 35],
+			'FalloffPercent': [0.33000001311302185, 0.33000001311302185, 0.33000001311302185, 0.33000001311302185],
+		},
+	},
 	'TFT9_Soraka': {
 		desc: `Heal the lowest health ally for <scaleHealth>@ModifiedHeal@ (%i:scaleAP%)</scaleHealth>. If the ally is below @EmpoweredHealThreshold*100@% Health, heal them for an additional <scaleHealth>@TooltipBonusHeal@ (%i:scaleAP%)</scaleHealth>. <br><br>Over the next @Duration@ seconds, @NumberOfStars@ stars hit the enemy closest to them. Each deals <magicDamage>@ModifiedMagicDamage@ (%i:scaleAP%)</magicDamage> magic damage.`,
 		icon: `ASSETS/Characters/Soraka/HUD/Icons2D/Soraka_W.dds`,
@@ -9873,14 +9914,16 @@ export const abilities: Record<string, AbilityData> = {
 			'NumberOfStars': [5, 5, 5, 5],
 		},
 	},
-	'TFT9_Silco': {
-		desc: `Throw a vial the closest surrounded enemy, covering nearby hexes in chemicals for <scaleLevel>@ShimmerDuration@</scaleLevel> seconds. Deal <magicDamage>@ModifiedShimmerDamagePerSec@ (%i:scaleAP%)</magicDamage> magic damage per second to chemical-affected enemies, and heal affected allies for <scaleHealth>@ModifiedHealPerSec@ (%i:scaleAP%)</scaleHealth> per second. When possible, target unaffected groups.`,
-		icon: `ASSETS/Characters/TFT9_Silco/HUD/Icons2D/TFT6_Silco_EyeOfTheStorm.TFT_Set9_Stage2.dds`,
-		name: `Undercity Tactics`,
+	'TFT9_Swain': {
+		desc: `Transform and gain <scaleHealth>@ModifiedBonusHealth@ (%i:scaleAP%)</scaleHealth> max Health. While transformed, deal <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage to enemies within 2 hexes every second.<br><br>If already transformed, gain an additional <scaleHealth>@ModifiedSecondaryBonusHealth@ (%i:scaleAP%)</scaleHealth> max Health and deal <magicDamage>@ModifiedSecondaryDamage@ (%i:scaleAP%)</magicDamage> magic damage to enemies within.`,
+		icon: `ASSETS/Characters/TFT9_Swain/HUD/Icons2D/TFT9_Swain_R.TFT_Set9.dds`,
+		name: `Demonflare`,
 		variables: {
-			'ShimmerDuration': [0, 6, 6, 10],
-			'ShimmerDamagePerSec': [0, 65, 100, 400],
-			'HealPerSec': [0, 20, 25, 120],
+			'BuffDuration': [5, 5, 5, 5],
+			'BonusMaxHealth': [200, 325, 375, 550],
+			'DamagePerTick': [0, 25, 40, 60],
+			'SecondaryBonusMaxHealth': [200, 225, 260, 385],
+			'SecondaryDamage': [20, 100, 160, 300],
 		},
 	},
 	'TFT9_THex': {
@@ -9893,26 +9936,14 @@ export const abilities: Record<string, AbilityData> = {
 			'FlameBreathDamage': [325, 325, 325, 325],
 		},
 	},
-	'TFT9_RyzeTargon': {
-		desc: `Create a portal to the skies above Mount Targon that beckons the current target. After a few seconds, they descend from the heavens as a meteor towards the largest group of enemies, dealing <magicDamage>@ModifiedPercentMaxHealth@ (%i:scaleAP%)</magicDamage> of the initial target's maximum Health as magic damage. Enemies in the epicenter are briefly knocked up.<br><br>If the target is the only enemy remaining, they never descend.`,
-		icon: `ASSETS/Characters/TFT9_Ryze/HUD/Icons2D/TFT9_Ryze_R.TFT_Set9.dds`,
-		name: `Realm Warp: Targon`,
+	'TFT9_Taliyah': {
+		desc: `<spellPassive>Passive:</spellPassive> Whenever an enemy is knocked up or back by anything, throw a boulder towards them. It deals <magicDamage>@ModifiedBoulderDamage@ (%i:scaleAP%)</magicDamage> magic damage to the first enemy hit.<br><br><spellActive>Active:</spellActive> Deal <magicDamage>@ModifiedSpellDamage@ (%i:scaleAP%)</magicDamage> magic damage to the current target and knock them up, <TFTKeyword>Stunning</TFTKeyword> them for @KnockupDuration@ seconds.`,
+		icon: `ASSETS/Characters/TFT9_Taliyah/HUD/Icons2D/TFT9_Taliyah_W.TFT_Set9.dds`,
+		name: `Seismic Shove`,
 		variables: {
-			'PercentMaxHealth': [0.20000000298023224, 0.18000000715255737, 0.30000001192092896, 1],
-			'DamageHexRadius': [2, 2, 2, 4],
-			'KnockUpRadius': [1, 1, 1, 2],
-			'StunDuration': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
-			'ThreeStarStarfallDamage': [0, 0, 0, 999],
-		},
-	},
-	'TFT9_Sona': {
-		desc: `Send a wave of sound at the largest clump of enemies and deal <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage to enemies hit; each hit reduces this damage by @FalloffPercent*100@%. Allies hit by the wave gain <TFTBonus>@AttackSpeed@%</TFTBonus> Attack Speed for the rest of combat.`,
-		icon: `ASSETS/Characters/TFT9_Sona/HUD/Icons2D/TFT9_Sona_R.TFT_Set9.dds`,
-		name: `Crescendo`,
-		variables: {
-			'MagicDamage': [0, 170, 255, 420],
-			'AttackSpeed': [0, 20, 25, 35],
-			'FalloffPercent': [0.33000001311302185, 0.33000001311302185, 0.33000001311302185, 0.33000001311302185],
+			'KnockupDuration': [1, 2, 2, 2],
+			'SpellDamage': [100, 220, 330, 495],
+			'BoulderDamage': [100, 120, 180, 270],
 		},
 	},
 	'TFT_TrainingDummy': {
@@ -9920,25 +9951,6 @@ export const abilities: Record<string, AbilityData> = {
 		icon: `ASSETS/Characters/TFTDebug_Dummy/HUD/Icons2D/TFTDebug_Dummy_DoNothing.dds`,
 		name: `On Duty!`,
 		variables: {},
-	},
-	'TFT9_Samira': {
-		desc: `Shoot at the current target and deal <physicalDamage>@TotalDamage@ (%i:scaleAD%)</physicalDamage> to the first enemy hit. Reduce their Armor by <TFTBonus>@ModifiedArmorShred@ (%i:scaleAP%)</TFTBonus> for the rest of combat.`,
-		icon: `ASSETS/Characters/Samira/HUD/Icons2D/SamiraQ.dds`,
-		name: `Flair`,
-		variables: {
-			'ADPercent': [2.0999999046325684, 1.899999976158142, 1.899999976158142, 2],
-			'ArmorShred': [0, 10, 15, 20],
-		},
-	},
-	'TFT9_TwistedFate': {
-		desc: `Throw a hand of cards at the current target that deal <magicDamage>@ModifiedInitialMagicDamage@ (%i:scaleAP%)</magicDamage> magic damage. After @Delay@ seconds the cards explode, dealing <magicDamage>@ModifiedDelayedMagicDamage@ (%i:scaleAP%)</magicDamage> magic damage to nearby enemies.`,
-		icon: `ASSETS/Characters/TFT9_TwistedFate/HUD/Cardmaster_RapidToss.TFT_Set9_Stage2.dds`,
-		name: `Stacked Deck`,
-		variables: {
-			'InitialMagicDamage': [175, 155, 235, 355],
-			'DelayedMagicDamage': [175, 155, 235, 380],
-			'Delay': [1.25, 1.25, 1.25, 1.25],
-		},
 	},
 	'TFT9_Taric': {
 		desc: `Gain <TFTBonus>@ModifiedShieldAmount@ (%i:scaleAP%)</TFTBonus> Shield for @Duration@ seconds. It redirects @RedirectPercent*100@% of the damage received by adjacent allies.`,
@@ -9950,26 +9962,14 @@ export const abilities: Record<string, AbilityData> = {
 			'RedirectPercent': [0.5, 0.5, 0.5, 0.5],
 		},
 	},
-	'TFT9_Taliyah': {
-		desc: `<spellPassive>Passive:</spellPassive> Whenever an enemy is knocked up or back by anything, throw a boulder towards them. It deals <magicDamage>@ModifiedBoulderDamage@ (%i:scaleAP%)</magicDamage> magic damage to the first enemy hit.<br><br><spellActive>Active:</spellActive> Deal <magicDamage>@ModifiedSpellDamage@ (%i:scaleAP%)</magicDamage> magic damage to the current target and knock them up, <TFTKeyword>Stunning</TFTKeyword> them for @KnockupDuration@ seconds.`,
-		icon: `ASSETS/Characters/TFT9_Taliyah/HUD/Icons2D/TFT9_Taliyah_W.TFT_Set9.dds`,
-		name: `Seismic Shove`,
+	'TFT9_TwistedFate': {
+		desc: `Throw a hand of cards at the current target that deal <magicDamage>@ModifiedInitialMagicDamage@ (%i:scaleAP%)</magicDamage> magic damage. After @Delay@ seconds the cards explode, dealing <magicDamage>@ModifiedDelayedMagicDamage@ (%i:scaleAP%)</magicDamage> magic damage to nearby enemies.`,
+		icon: `ASSETS/Characters/TFT9_TwistedFate/HUD/Cardmaster_RapidToss.TFT_Set9_Stage2.dds`,
+		name: `Stacked Deck`,
 		variables: {
-			'KnockupDuration': [1, 2, 2, 2],
-			'SpellDamage': [100, 220, 330, 495],
-			'BoulderDamage': [100, 120, 180, 270],
-		},
-	},
-	'TFT9_Swain': {
-		desc: `Transform and gain <scaleHealth>@ModifiedBonusHealth@ (%i:scaleAP%)</scaleHealth> max Health. While transformed, deal <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage to enemies within 2 hexes every second.<br><br>If already transformed, gain an additional <scaleHealth>@ModifiedSecondaryBonusHealth@ (%i:scaleAP%)</scaleHealth> max Health and deal <magicDamage>@ModifiedSecondaryDamage@ (%i:scaleAP%)</magicDamage> magic damage to enemies within.`,
-		icon: `ASSETS/Characters/TFT9_Swain/HUD/Icons2D/TFT9_Swain_R.TFT_Set9.dds`,
-		name: `Demonflare`,
-		variables: {
-			'BuffDuration': [5, 5, 5, 5],
-			'BonusMaxHealth': [200, 325, 375, 550],
-			'DamagePerTick': [0, 25, 40, 60],
-			'SecondaryBonusMaxHealth': [200, 225, 260, 385],
-			'SecondaryDamage': [20, 100, 160, 300],
+			'InitialMagicDamage': [175, 155, 235, 355],
+			'DelayedMagicDamage': [175, 155, 235, 380],
+			'Delay': [1.25, 1.25, 1.25, 1.25],
 		},
 	},
 	'TFT9_VelKoz': {
@@ -9993,17 +9993,6 @@ export const abilities: Record<string, AbilityData> = {
 			'ADPercent': [3, 3, 3, 3],
 		},
 	},
-	'TFT9_Warwick': {
-		desc: `<spellPassive>Passive:</spellPassive> Attacks heal for <scaleHealth>@ModifiedHealAmount@ (%i:scaleAP%)</scaleHealth>.<br><br><spellActive>Active:</spellActive> Gain @BonusAttackSpeed*100@% Attack Speed for @Duration@ seconds. Then, <TFTKeyword>Stun</TFTKeyword> adjacent enemies for <scaleLevel>@StunDuration@</scaleLevel> seconds.`,
-		icon: `ASSETS/Characters/Warwick/HUD/Icons2D/WarwickP.dds`,
-		name: `Primal Howl`,
-		variables: {
-			'HealAmount': [35, 30, 35, 40],
-			'Duration': [2.5, 2.5, 2.5, 2.5],
-			'StunDuration': [0, 1.25, 1.5, 2],
-			'BonusAttackSpeed': [1, 1, 1, 1],
-		},
-	},
 	'TFT9_VoidRemora': {
 		desc: `Gain <TFTBonus>@ModifiedShield@ (%i:scaleAP%)</TFTBonus> Shield for @Duration@ seconds. When it expires, deal <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage to adjacent enemies. `,
 		icon: `ASSETS/Characters/TFT9_VoidRemora/HUD/TFT9_VoidRemora_Square.TFT_Set9.dds`,
@@ -10019,6 +10008,17 @@ export const abilities: Record<string, AbilityData> = {
 		icon: `ASSETS/Characters/TFT_VoidSpawn/HUD/Voidspawn_square.dds`,
 		name: `Voidborn`,
 		variables: {},
+	},
+	'TFT9_Warwick': {
+		desc: `<spellPassive>Passive:</spellPassive> Attacks heal for <scaleHealth>@ModifiedHealAmount@ (%i:scaleAP%)</scaleHealth>.<br><br><spellActive>Active:</spellActive> Gain @BonusAttackSpeed*100@% Attack Speed for @Duration@ seconds. Then, <TFTKeyword>Stun</TFTKeyword> adjacent enemies for <scaleLevel>@StunDuration@</scaleLevel> seconds.`,
+		icon: `ASSETS/Characters/Warwick/HUD/Icons2D/WarwickP.dds`,
+		name: `Primal Howl`,
+		variables: {
+			'HealAmount': [35, 30, 35, 40],
+			'Duration': [2.5, 2.5, 2.5, 2.5],
+			'StunDuration': [0, 1.25, 1.5, 2],
+			'BonusAttackSpeed': [1, 1, 1, 1],
+		},
 	},
 	'TFT9_Xayah': {
 		desc: `Summon <scaleLevel>@NumFeathers@</scaleLevel> feathers that converge on and pierce the current target, dealing <physicalDamage>@TotalDamage@ (%i:scaleAD%%i:scaleAP%)</physicalDamage> physical damage. Each feather removes <TFTBonus>@ArmorShred@</TFTBonus> Armor from the first target they hit until the end of combat.<br><br>Ionia Bonus: Attacks restore an additional %i:scaleMana% @TooltipIoniaBonus@ Mana`,
