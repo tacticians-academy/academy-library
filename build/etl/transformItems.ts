@@ -4,7 +4,7 @@ import { ItemKey } from '../../dist/aggregated.js'
 import { importSetData } from '../../dist/imports.js'
 
 import { formatJS } from '../helpers/formatting.js'
-import { validateTraits } from '../helpers/utils.js'
+import { isAtLeastPatch, validateTraits } from '../helpers/utils.js'
 import { NORMALIZE_EFFECT_KEYS, SUBSTITUTE_EFFECT_KEYS, normalizeEffects } from '../helpers/normalize.js'
 
 const unreplacedIDs = new Set(Object.keys(SUBSTITUTE_EFFECT_KEYS))
@@ -24,8 +24,8 @@ const SET_9_5_REWORK_REMOVED_ITEM_APIKEYS = [
 	'TFT_Item_SeraphsEmbrace',
 ]
 
-export async function transformItems(setNumber: SetNumber, parentSetNumber: SetNumber, itemsData: ItemData[], allTraitKeys: string[]) {
-	const isModernSet = setNumber === 3.5 || setNumber >= 9.5
+export async function transformItems(setNumber: SetNumber, parentSetNumber: SetNumber, patchLine: string, itemsData: ItemData[], allTraitKeys: string[]) {
+	const usesItemRework = isAtLeastPatch(patchLine, 13.18)
 	const { EMBLEM_ITEM_IDS, RETIRED_ITEM_NAMES } = await importSetData(setNumber)
 
 	const currentItemsByType: Record<ItemTypeKey, ItemData[]> = {component: [], completed: [], emblem: [], shadow: [], radiant: [], ornn: [], support: [], shimmerscale: [], consumable: [], hexbuff: [], mod: [], unreleased: []}
@@ -81,7 +81,7 @@ export async function transformItems(setNumber: SetNumber, parentSetNumber: SetN
 			typeKey = 'emblem'
 
 		} else if (item.apiName != null) { // Set >= 5
-			if (isModernSet && SET_9_5_REWORK_REMOVED_ITEM_APIKEYS.includes(item.apiName)) {
+			if (usesItemRework && SET_9_5_REWORK_REMOVED_ITEM_APIKEYS.includes(item.apiName)) {
 				return
 			}
 
@@ -198,18 +198,18 @@ export async function transformItems(setNumber: SetNumber, parentSetNumber: SetN
 		outputItemExports.push(`export const ${itemKey}Items: ItemData[] = ${formatJS(itemsData)}`)
 	}
 	const currentItemNames = ['completedItems', 'emblemItems']
-	if (isModernSet || setNumber === 4.5 || setNumber >= 6) {
+	if (usesItemRework || setNumber === 4.5 || setNumber >= 6) {
 		currentItemNames.splice(2, 0, 'ornnItems')
 	}
 	if (setNumber === 5) {
 		currentItemNames.splice(1, 0, 'shadowItems')
-	} else if (isModernSet || setNumber >= 5.5) {
+	} else if (usesItemRework || setNumber >= 5.5) {
 		currentItemNames.splice(1, 0, 'radiantItems')
 	}
-	if (setNumber >= 7 && !isModernSet) {
+	if (setNumber >= 7 && !usesItemRework) {
 		currentItemNames.splice(2, 0, 'shimmerscaleItems')
 	}
-	if (isModernSet) {
+	if (usesItemRework) {
 		currentItemNames.splice(2, 0, 'supportItems')
 	}
 	outputItemExports.push(`export const currentItems: ItemData[] = componentItems.concat(${currentItemNames.join(', ')})`)

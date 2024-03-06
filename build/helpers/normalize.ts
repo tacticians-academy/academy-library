@@ -1,8 +1,6 @@
 import { BonusKey } from '../../dist/index.js'
 import type { EffectVariables } from '../../dist/index.js'
 
-export const BASE_UNIT_API_NAMES = ['TFT_TrainingDummy', 'TFT_VoidSpawn']
-
 // Traits/Items
 
 export const NORMALIZE_EFFECT_KEYS: Record<string, BonusKey> = {

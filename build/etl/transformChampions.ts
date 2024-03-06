@@ -32,7 +32,7 @@ export async function transformChampions(setNumber: SetNumber, parentSetNumber: 
 				return false
 			}
 			unit.apiName = getAPIName(unit)
-			return !unit.apiName.includes('ArmoryKey') && !IGNORE_UNIT_APINAMES?.includes(unit.apiName)
+			return !unit.apiName.includes('ArmoryKey') && !IGNORE_UNIT_APINAMES?.includes(unit.apiName) && unit.apiName !== 'TFT9_SLIME_Crab'
 		})
 		.sort(sortByName)
 

@@ -1,11 +1,10 @@
 import fs from 'fs/promises'
 
-import type { ItemData, SetNumber } from '../../dist/index.js'
+import { CURRENT_SET_NUMBER, SET_DATA, type ItemData, type SetNumber } from '../../dist/index.js'
 
 import { getPathToPatch, getPathToSet } from '../helpers/files.js'
-import { BASE_UNIT_API_NAMES } from '../helpers/normalize.js'
 import type { GameResponseJSON, MapResponseJSON } from '../helpers/types.js'
-import { getSetDataFrom } from '../helpers/utils.js'
+import { getBaseUnitsFor, getSetDataFrom } from '../helpers/utils.js'
 
 import { transformItems } from './transformItems.js'
 import { transformAugments } from './transformAugments.js'
@@ -15,7 +14,7 @@ import { transformMap } from './transformMap.js'
 
 export async function transformLoad(setNumber: SetNumber) {
 	const parentSetNumber = Math.floor(setNumber) as SetNumber
-	// const patchLine = SET_DATA[setNumber].patchLine
+	const patchLine = SET_DATA[setNumber].patchLine
 
 	let gameResponseJSON: GameResponseJSON
 	let mapResponseJSON: MapResponseJSON
@@ -32,8 +31,8 @@ export async function transformLoad(setNumber: SetNumber) {
 	const { champions, traits, mutator } = getSetDataFrom(setNumber, parentSetNumber, gameResponseJSON)
 	const itemsData = (gameResponseJSON.items as ItemData[]).filter(item => item.name != null && (item.apiName == null || (!item.apiName.startsWith('TFTTutorial_') && !item.apiName.endsWith('_DU') && !item.apiName.endsWith('HR'))))
 
-	const baseSet = gameResponseJSON.sets['1']
-	for (const apiName of BASE_UNIT_API_NAMES) {
+	const baseSet = gameResponseJSON.sets[CURRENT_SET_NUMBER]
+	for (const apiName of getBaseUnitsFor(patchLine)) {
 		if (!champions.some(champion => champion.apiName === apiName)) {
 			const baseUnit = baseSet.champions.find(champion => champion.apiName === apiName)
 			if (baseUnit) {
@@ -47,7 +46,7 @@ export async function transformLoad(setNumber: SetNumber) {
 	const outputTraitData = await transformTraits(setNumber, parentSetNumber, traits)
 	const allTraitKeys = traits.map(t => t.apiName ?? t.name)
 
-	const outputItemExports = await transformItems(setNumber, parentSetNumber, itemsData, allTraitKeys)
+	const outputItemExports = await transformItems(setNumber, parentSetNumber, patchLine, itemsData, allTraitKeys)
 	const outputAugmentSections = await transformAugments(setNumber, parentSetNumber, itemsData, allTraitKeys)
 	const outputChampionExports = await transformChampions(setNumber, parentSetNumber, champions)
 

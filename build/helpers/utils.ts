@@ -48,3 +48,19 @@ export function validateTraits(item: ItemData, allTraitKeys: string[]) {
 export function sortByName(a: {name: string}, b: {name: string}) {
 	return a.name.localeCompare(b.name)
 }
+
+export function getPatchNumber(patchLine: string) {
+	return parseFloat(patchLine) || null
+}
+
+export function isAtLeastPatch(patchLine: string, greaterOrEqualTo: number) {
+	const patchNumber = getPatchNumber(patchLine)
+	return patchNumber === null || patchNumber >= greaterOrEqualTo
+}
+
+export function getBaseUnitsFor(patchLine: string) {
+	if (isAtLeastPatch(patchLine, 14.5)) {
+		return ['TFT_TrainingDummy', 'TFT_Voidspawn']
+	}
+	return ['TFT_TrainingDummy', 'TFT_VoidSpawn']
+}

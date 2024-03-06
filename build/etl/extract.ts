@@ -7,9 +7,9 @@ import path from 'path'
 import { SET_DATA } from '../../dist/index.js'
 
 import { getOutputFolderForSet, getPathToSet, getPathToPatch } from '../helpers/files.js'
-import { BASE_UNIT_API_NAMES, mDataValueSubstitutions, mSpellCalculationsSubstitutions } from '../helpers/normalize.js'
+import { mDataValueSubstitutions, mSpellCalculationsSubstitutions } from '../helpers/normalize.js'
 import type { ChampionJSON, ChampionJSONStats, GameResponseJSON, MapResponseJSON } from '../helpers/types.js'
-import { getAPIName, getSetDataFrom } from '../helpers/utils.js'
+import { getAPIName, getBaseUnitsFor, getSetDataFrom, isAtLeastPatch } from '../helpers/utils.js'
 
 const UNIT_NORMALIZE_DELETE_KEYS: Record<string, string[]> = {
 	SpellObject: [ 'cooldownTime', 'mClientData', 'mAnimationName' ],
@@ -24,6 +24,7 @@ const UNIT_NORMALIZE_RENAME_KEYS: Record<string, Record<string, string>> = {
 
 const UNIT_SKIP_APINAMES = [
 	'TFT6_MercenaryChest',
+	'TFT9_SLIME_Crab',
 ]
 
 export async function extractLatestPatchFor(setNumber: SetNumber) {
@@ -37,7 +38,7 @@ export async function extractLatestPatchFor(setNumber: SetNumber) {
 	}
 }
 
-export async function getPatchFor(setNumber: SetNumber, customPatchLine?: string) {
+async function getPatchFor(setNumber: SetNumber, customPatchLine?: string) {
 	const patchLine = customPatchLine ?? SET_DATA[setNumber].patchLine
 	const baseURL = `https://raw.communitydragon.org/${patchLine}`
 	const gameURL = `${baseURL}/cdragon/tft/en_us.json`
@@ -100,7 +101,7 @@ export async function getPatchFor(setNumber: SetNumber, customPatchLine?: string
 		.map(champion => getAPIName(champion))
 		.filter(apiName => !apiName.includes('ArmoryKey') && !UNIT_SKIP_APINAMES.includes(apiName))
 	if (parentSetNumber >= 5) {
-		for (const apiName of BASE_UNIT_API_NAMES) {
+		for (const apiName of getBaseUnitsFor(patchLine)) {
 			if (!apiNames.includes(apiName)) {
 				apiNames.push(apiName)
 			}
@@ -109,7 +110,7 @@ export async function getPatchFor(setNumber: SetNumber, customPatchLine?: string
 
 	return Promise.all(apiNames.map(async apiName => {
 		const pathName = apiName.toLowerCase()
-		const url = `${baseURL}/game/data/characters/${pathName}/${pathName}.bin.json`
+		const url = isAtLeastPatch(patchLine, 14.2) && !pathName.startsWith('tft_') ? `${baseURL}/game/characters/${pathName}.cdtb.bin.json` : `${baseURL}/game/data/characters/${pathName}/${pathName}.bin.json`
 		// console.log('Loading champion', apiName, url)
 		const response = await fetch(url)
 		if (!response.ok) {
