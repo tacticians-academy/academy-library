@@ -563,7 +563,7 @@ export const itemFlashcards: ItemFlashcard[] = [
 		id: `TFT5_Item_AdaptiveHelmRadiant`,
 		name: `Jak'sho the Protean`,
 		type: `completed`,
-		description: `Combat start: The holder gains two effects, regardless of starting position . Front Two Rows: 80 Armor and Magic Resist. Gain 2 Mana when struck by an attack. Back Two Rows: 55 Ability Power. Gain 20 Mana every 3 seconds .`,
+		description: `Combat start: Gain different bonuses based on starting position. Front Two Rows: 80 Armor and Magic Resist. Gain 2 Mana when struck by an attack. Back Two Rows: 55 Ability Power. Gain 20 Mana every 3 seconds.`,
 		icon: `assets/maps/particles/tft/item_icons/radiant/adaptive_helm_radiant`,
 		from: [],
 		unique: false,

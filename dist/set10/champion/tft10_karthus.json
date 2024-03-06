@@ -5,7 +5,7 @@
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 120,
+			"arBase": 105,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
@@ -30,11 +30,11 @@
 		"tier": 4,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Pentakill",
+				"TraitData": "{11f20023}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Executioner",
+				"TraitData": "{d435e732}",
 				"__type": "TFTTraitContributionData"
 			}
 		],
@@ -43,7 +43,7 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 30,
+		"mInitialMana": 15,
 		"{22f5197d}": 220,
 		"__type": "TFTCharacterRecord"
 	},
@@ -58,9 +58,9 @@
 					"mName": "BaseDamage",
 					"mValues": [
 						15,
-						270,
-						405,
-						900,
+						160,
+						240,
+						540,
 						15,
 						15,
 						15
@@ -69,15 +69,6 @@
 				},
 				{
 					"mName": "ManaGain",
-					"mValues": [
-						10,
-						10,
-						10,
-						10,
-						10,
-						10,
-						10
-					],
 					"__type": "SpellDataValue"
 				},
 				{
@@ -118,6 +109,32 @@
 						15
 					],
 					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "PercentCritAsAP",
+					"mValues": [
+						100,
+						100,
+						100,
+						100,
+						100,
+						100,
+						100
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "APBonus",
+					"mValues": [
+						40,
+						40,
+						40,
+						40,
+						40,
+						40,
+						40
+					],
+					"__type": "SpellDataValue"
 				}
 			],
 			"mSpellCalculations": {
@@ -131,6 +148,19 @@
 							},
 							"mRatio": 0.009999999776482582,
 							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"TotalBonusAP": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mStat": 7,
+							"mDataValue": "PercentCritAsAP",
+							"__type": "StatByNamedDataValueCalculationPart"
 						}
 					],
 					"__type": "GameCalculation"

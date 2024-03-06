@@ -13796,9 +13796,10 @@
 			"apiName": "TFT5_Item_AdaptiveHelmRadiant",
 			"associatedTraits": [],
 			"composition": [],
-			"desc": "Combat start: The holder gains two effects, <TFTRadiantItemBonus>regardless of starting position</TFTRadiantItemBonus>.<br><br>Front Two Rows: <TFTRadiantItemBonus>@FrontRowBonusResists@ Armor and Magic Resist. Gain @FrontLineManaPerHit@ Mana when struck by an attack.</TFTRadiantItemBonus><br><br>Back Two Rows: <TFTRadiantItemBonus>@TotalAPBonus@ Ability Power. Gain @ManaPerTickrate@ Mana every @ManaTickrate@ seconds</TFTRadiantItemBonus>.<br>",
+			"desc": "Combat start: Gain different bonuses based on starting position.<br><br>Front Two Rows: @FrontRowBonusResists@ Armor and Magic Resist. Gain @FrontLineManaPerHit@ Mana when struck by an attack.<br><br>Back Two Rows: @BackRowBonusAP@ Ability Power. Gain @ManaPerTickrate@ Mana every @ManaTickrate@ seconds.<br>",
 			"effects": {
 				"AP": 15,
+				"BackRowBonusAP": 55,
 				"FrontLineManaPerHit": 2,
 				"FrontRowBonusResists": 80,
 				"MagicResist": 30,
@@ -17808,6 +17809,19 @@
 			"id": null,
 			"incompatibleTraits": [],
 			"name": "Charges",
+			"unique": false
+		},
+		{
+			"apiName": "TFT_Consumable_MasterworkUpgrade",
+			"associatedTraits": [],
+			"composition": [],
+			"desc": "Use on a unit to open an armory containing Radiant versions of that unit's craftable completed items. Upgrade the item you choose to its Radiant equivalent, and unequip it.",
+			"effects": {},
+			"from": null,
+			"icon": "ASSETS/Maps/Particles/TFT/Item_Icons/Consumables/MasterworkUpgrade.tex",
+			"id": null,
+			"incompatibleTraits": [],
+			"name": "Masterwork Upgrade",
 			"unique": false
 		},
 		{
@@ -23994,34 +24008,6 @@
 						"range": 1
 					},
 					"tileIcon": "ASSETS/Characters/TFT9_NoxianFlag/HUD/TFT9_NoxianFlag_Square.dds",
-					"traits": []
-				},
-				{
-					"ability": {
-						"desc": null,
-						"icon": "ASSETS/Characters/TFT9_SLIME_Crab/HUD/Icons2D/TFT9_SLIME_Crab_EyeOfTheStorm.tex",
-						"name": null,
-						"variables": []
-					},
-					"apiName": "TFT9_SLIME_Crab",
-					"characterName": "TFT9_SLIME_Crab",
-					"cost": 11,
-					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT9_SLIME_Crab.dds",
-					"name": "SLIME_Crab",
-					"squareIcon": "ASSETS/UX/TFT/ChampionSplashes/TFT9_SLIME_Crab_Mobile.dds",
-					"stats": {
-						"armor": 10,
-						"attackSpeed": 0.800000011920929,
-						"critChance": 0.25,
-						"critMultiplier": 1.399999976158142,
-						"damage": 20,
-						"hp": null,
-						"initialMana": 0,
-						"magicResist": 10,
-						"mana": 100,
-						"range": 1
-					},
-					"tileIcon": "ASSETS/Characters/TFT_ItemUnknown/Skins/Skin0/TFT_Item_Unknown.dds",
 					"traits": []
 				},
 				{
@@ -41387,34 +41373,6 @@
 				},
 				{
 					"ability": {
-						"desc": null,
-						"icon": "ASSETS/Characters/TFT9_SLIME_Crab/HUD/Icons2D/TFT9_SLIME_Crab_EyeOfTheStorm.tex",
-						"name": null,
-						"variables": []
-					},
-					"apiName": "TFT9_SLIME_Crab",
-					"characterName": "TFT9_SLIME_Crab",
-					"cost": 11,
-					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT9_SLIME_Crab.dds",
-					"name": "SLIME_Crab",
-					"squareIcon": "ASSETS/UX/TFT/ChampionSplashes/TFT9_SLIME_Crab_Mobile.dds",
-					"stats": {
-						"armor": 10,
-						"attackSpeed": 0.800000011920929,
-						"critChance": 0.25,
-						"critMultiplier": 1.399999976158142,
-						"damage": 20,
-						"hp": null,
-						"initialMana": 0,
-						"magicResist": 10,
-						"mana": 100,
-						"range": 1
-					},
-					"tileIcon": "ASSETS/Characters/TFT_ItemUnknown/Skins/Skin0/TFT_Item_Unknown.dds",
-					"traits": []
-				},
-				{
-					"ability": {
 						"desc": "Create a portal to Demacia that protects allies for @PortalDuration@ seconds. Allies within the zone gain <TFTBonus>@ModifiedShield@ (%i:scaleAP%)</TFTBonus> Shield. If an ally leaves the safety of the portal, they are healed for <scaleHealth>@ModifiedHeal@ (%i:scaleAP%)</scaleHealth>.<br><br>When the portal expires, enemies within are dealt <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage.<br>",
 						"icon": "ASSETS/Characters/TFT9_RyzeBandleCity/HUD/Icons2D/TFT9_Ryze_R.tex",
 						"name": "Realm Warp: Demacia",
@@ -44507,7 +44465,7 @@
 						"hp": 600,
 						"initialMana": 40,
 						"magicResist": 20,
-						"mana": 135,
+						"mana": 110,
 						"range": 4
 					},
 					"tileIcon": "ASSETS/Characters/TFT10_Aphelios/HUD/TFT10_Aphelios_Square.TFT_Set10.tex",
@@ -44751,11 +44709,11 @@
 						"attackSpeed": 0.6000000238418579,
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
-						"damage": 60,
+						"damage": 90,
 						"hp": 1000,
-						"initialMana": 60,
+						"initialMana": 50,
 						"magicResist": 60,
-						"mana": 120,
+						"mana": 110,
 						"range": 1
 					},
 					"tileIcon": "ASSETS/Characters/TFT10_Blitzcrank/HUD/TFT10_Blitzcrank_Square.TFT_Set10.tex",
@@ -44920,10 +44878,10 @@
 					"squareIcon": "ASSETS/UX/TFT/ChampionSplashes/TFT10_Corki_Mobile.TFT_Set10.tex",
 					"stats": {
 						"armor": 15,
-						"attackSpeed": 0.699999988079071,
+						"attackSpeed": 0.75,
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
-						"damage": 48,
+						"damage": 50,
 						"hp": 450,
 						"initialMana": 15,
 						"magicResist": 15,
@@ -45199,10 +45157,10 @@
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
 						"damage": 45,
-						"hp": 550,
+						"hp": 650,
 						"initialMana": 30,
 						"magicResist": 35,
-						"mana": 90,
+						"mana": 75,
 						"range": 1
 					},
 					"tileIcon": "ASSETS/Characters/TFT10_Evelynn/HUD/TFT10_Evelynn_Square.TFT_Set10.tex",
@@ -45306,7 +45264,7 @@
 						"hp": 700,
 						"initialMana": 0,
 						"magicResist": 30,
-						"mana": 40,
+						"mana": 45,
 						"range": 4
 					},
 					"tileIcon": "ASSETS/Characters/TFT10_Ezreal/HUD/TFT10_Ezreal_Square.TFT_Set10.tex",
@@ -45348,13 +45306,13 @@
 							{
 								"name": "PercentAD",
 								"value": [
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858
+									1.7999999523162842,
+									1.7999999523162842,
+									1.7999999523162842,
+									1.7999999523162842,
+									1.7999999523162842,
+									1.7999999523162842,
+									1.7999999523162842
 								]
 							},
 							{
@@ -45398,7 +45356,7 @@
 						"hp": 800,
 						"initialMana": 40,
 						"magicResist": 45,
-						"mana": 90,
+						"mana": 80,
 						"range": 1
 					},
 					"tileIcon": "ASSETS/Characters/TFT10_Garen/HUD/TFT10_Garen_Square.TFT_Set10.dds",
@@ -45463,7 +45421,7 @@
 					"squareIcon": "ASSETS/UX/TFT/ChampionSplashes/TFT10_Gnar_Mobile.TFT_Set10.tex",
 					"stats": {
 						"armor": 45,
-						"attackSpeed": 0.6499999761581421,
+						"attackSpeed": 0.75,
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
 						"damage": 55,
@@ -45490,9 +45448,9 @@
 								"name": "DAMAGE",
 								"value": [
 									30,
-									190,
-									285,
-									440,
+									240,
+									360,
+									555,
 									350,
 									350,
 									350
@@ -45539,8 +45497,8 @@
 								"value": [
 									0,
 									500,
-									575,
-									650,
+									625,
+									750,
 									0,
 									0,
 									0
@@ -45931,8 +45889,8 @@
 								"name": "PhysicalDamageRatio",
 								"value": [
 									0,
-									0.6000000238418579,
-									0.6000000238418579,
+									0.6600000262260437,
+									0.6600000262260437,
 									4.440000057220459,
 									4.440000057220459,
 									200,
@@ -46074,7 +46032,7 @@
 						"critMultiplier": 1.399999976158142,
 						"damage": 70,
 						"hp": 950,
-						"initialMana": 0,
+						"initialMana": 30,
 						"magicResist": 40,
 						"mana": 50,
 						"range": 4
@@ -46688,7 +46646,7 @@
 						"hp": 1200,
 						"initialMana": 0,
 						"magicResist": 70,
-						"mana": 50,
+						"mana": 40,
 						"range": 1
 					},
 					"tileIcon": "ASSETS/Characters/TFT10_Kayn/HUD/TFT10_Kayn_Square.TFT_Set10.tex",
@@ -46884,13 +46842,13 @@
 							{
 								"name": "ADRatio",
 								"value": [
-									8,
-									8,
-									8,
-									8,
-									8,
-									8,
-									8
+									9.989999771118164,
+									9.989999771118164,
+									9.989999771118164,
+									9.989999771118164,
+									9.989999771118164,
+									9.989999771118164,
+									9.989999771118164
 								]
 							},
 							{
@@ -47681,13 +47639,13 @@
 							{
 								"name": "ShieldPercent",
 								"value": [
-									6,
-									6,
-									6,
-									6,
-									6,
-									6,
-									6
+									8,
+									8,
+									8,
+									8,
+									8,
+									8,
+									8
 								]
 							},
 							{
@@ -47729,22 +47687,22 @@
 							{
 								"name": "HeadlinerMana",
 								"value": [
-									40,
-									40,
-									40,
-									40,
-									40,
-									40,
-									40
+									60,
+									60,
+									60,
+									60,
+									60,
+									60,
+									60
 								]
 							},
 							{
 								"name": "DamagePercent",
 								"value": [
 									0.5,
-									0.699999988079071,
 									0.8999999761581421,
-									1.149999976158142,
+									1.100000023841858,
+									1.399999976158142,
 									0.5,
 									0.5,
 									0.5
@@ -48507,9 +48465,9 @@
 								"name": "BasePercentAD",
 								"value": [
 									2.0999999046325684,
-									2.4000000953674316,
-									2.4000000953674316,
-									2.5,
+									3,
+									3,
+									3.0999999046325684,
 									2.0999999046325684,
 									2.0999999046325684,
 									2.0999999046325684
@@ -48585,7 +48543,7 @@
 					"squareIcon": "ASSETS/UX/TFT/ChampionSplashes/TFT10_Samira_Mobile.TFT_Set10.tex",
 					"stats": {
 						"armor": 20,
-						"attackSpeed": 0.699999988079071,
+						"attackSpeed": 0.75,
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
 						"damage": 60,
@@ -49045,8 +49003,8 @@
 								"value": [
 									15,
 									12,
-									15,
-									25,
+									18,
+									33,
 									75,
 									75,
 									75
@@ -49077,7 +49035,7 @@
 						"attackSpeed": 0.550000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
-						"damage": 70,
+						"damage": 88,
 						"hp": 650,
 						"initialMana": 0,
 						"magicResist": 40,
@@ -51359,9 +51317,9 @@
 							"minUnits": 1,
 							"style": 6,
 							"variables": {
-								"AssassinGoldPerKill": 3,
+								"AssassinGoldPerKill": 5,
 								"NumOfKills": 2,
-								"RhaastPlayerHealthPerKill": 1
+								"RhaastPlayerHealthPerKill": 2
 							}
 						}
 					],
@@ -51388,7 +51346,7 @@
 							"style": 3,
 							"variables": {
 								"ADRatio": 2,
-								"AttackSpeed": 0.44999998807907104,
+								"AttackSpeed": 0.550000011920929,
 								"HealthRatio": 0.5
 							}
 						},
@@ -51398,7 +51356,7 @@
 							"style": 4,
 							"variables": {
 								"ADRatio": 2,
-								"AttackSpeed": 0.699999988079071,
+								"AttackSpeed": 0.8500000238418579,
 								"HealthRatio": 0.5
 							}
 						}
@@ -51510,8 +51468,8 @@
 							"style": 4,
 							"variables": {
 								"Duration": 3,
-								"PercentAD": 0.18000000715255737,
-								"PercentADEmpowered": 0.7200000286102295
+								"PercentAD": 0.20000000298023224,
+								"PercentADEmpowered": 0.800000011920929
 							}
 						},
 						{
@@ -51520,8 +51478,8 @@
 							"style": 4,
 							"variables": {
 								"Duration": 3,
-								"PercentAD": 0.30000001192092896,
-								"PercentADEmpowered": 1.2000000476837158
+								"PercentAD": 0.4000000059604645,
+								"PercentADEmpowered": 1.600000023841858
 							}
 						}
 					],
@@ -51603,8 +51561,8 @@
 							"minUnits": 7,
 							"style": 4,
 							"variables": {
-								"BonusAP": 24,
-								"BonusMaxHealth": 0.23999999463558197,
+								"BonusAP": 27,
+								"BonusMaxHealth": 0.27000001072883606,
 								"ManaPerSecond": "null",
 								"{158db106}": 2
 							}
@@ -51614,8 +51572,8 @@
 							"minUnits": 10,
 							"style": 5,
 							"variables": {
-								"BonusAP": 40,
-								"BonusMaxHealth": 0.4000000059604645,
+								"BonusAP": 45,
+								"BonusMaxHealth": 0.44999998807907104,
 								"ManaPerSecond": 10,
 								"{158db106}": 2
 							}
@@ -51725,13 +51683,23 @@
 							}
 						},
 						{
-							"maxUnits": 25000,
+							"maxUnits": 7,
 							"minUnits": 6,
 							"style": 4,
 							"variables": {
 								"AmountIncrease": 1,
 								"FighterAS": 70,
 								"FighterVamp": 20
+							}
+						},
+						{
+							"maxUnits": 25000,
+							"minUnits": 8,
+							"style": 4,
+							"variables": {
+								"AmountIncrease": 1,
+								"FighterAS": 125,
+								"FighterVamp": 30
 							}
 						}
 					],
@@ -52100,7 +52068,7 @@
 							"variables": {
 								"EDMstats": 0.8999999761581421,
 								"{1d0f36aa}": 3.5,
-								"{34753da8}": 9,
+								"{34753da8}": 8,
 								"{52707149}": 2.5,
 								"{b7559eb7}": 2,
 								"{d8f28e45}": 8,
@@ -52114,9 +52082,9 @@
 							"minUnits": 3,
 							"style": 1,
 							"variables": {
-								"EDMstats": 1,
+								"EDMstats": 1.100000023841858,
 								"{1d0f36aa}": 3.5,
-								"{34753da8}": 9,
+								"{34753da8}": 8,
 								"{52707149}": 2.5,
 								"{b7559eb7}": 2,
 								"{d8f28e45}": 8,
@@ -52130,10 +52098,10 @@
 							"minUnits": 4,
 							"style": 3,
 							"variables": {
-								"EDMstats": 1.100000023841858,
+								"EDMstats": 1.2000000476837158,
 								"EDMtimereduction": 1,
 								"{1d0f36aa}": 3.5,
-								"{34753da8}": 9,
+								"{34753da8}": 8,
 								"{52707149}": 2.5,
 								"{b7559eb7}": 2,
 								"{d8f28e45}": 8,
@@ -52147,10 +52115,10 @@
 							"minUnits": 5,
 							"style": 4,
 							"variables": {
-								"EDMstats": 1.2999999523162842,
+								"EDMstats": 1.350000023841858,
 								"EDMtimereduction": 1,
 								"{1d0f36aa}": 3.5,
-								"{34753da8}": 9,
+								"{34753da8}": 8,
 								"{52707149}": 2.5,
 								"{b7559eb7}": 2,
 								"{d8f28e45}": 8,
@@ -57113,34 +57081,6 @@
 						"range": 1
 					},
 					"tileIcon": "ASSETS/Characters/TFT9_NoxianFlag/HUD/TFT9_NoxianFlag_Square.dds",
-					"traits": []
-				},
-				{
-					"ability": {
-						"desc": null,
-						"icon": "ASSETS/Characters/TFT9_SLIME_Crab/HUD/Icons2D/TFT9_SLIME_Crab_EyeOfTheStorm.tex",
-						"name": null,
-						"variables": []
-					},
-					"apiName": "TFT9_SLIME_Crab",
-					"characterName": "TFT9_SLIME_Crab",
-					"cost": 11,
-					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT9_SLIME_Crab.dds",
-					"name": "SLIME_Crab",
-					"squareIcon": "ASSETS/UX/TFT/ChampionSplashes/TFT9_SLIME_Crab_Mobile.dds",
-					"stats": {
-						"armor": 10,
-						"attackSpeed": 0.800000011920929,
-						"critChance": 0.25,
-						"critMultiplier": 1.399999976158142,
-						"damage": 20,
-						"hp": null,
-						"initialMana": 0,
-						"magicResist": 10,
-						"mana": 100,
-						"range": 1
-					},
-					"tileIcon": "ASSETS/Characters/TFT_ItemUnknown/Skins/Skin0/TFT_Item_Unknown.dds",
 					"traits": []
 				},
 				{
@@ -61423,7 +61363,7 @@
 						"hp": 600,
 						"initialMana": 40,
 						"magicResist": 20,
-						"mana": 135,
+						"mana": 110,
 						"range": 4
 					},
 					"tileIcon": "ASSETS/Characters/TFT10_Aphelios/HUD/TFT10_Aphelios_Square.TFT_Set10.tex",
@@ -61667,11 +61607,11 @@
 						"attackSpeed": 0.6000000238418579,
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
-						"damage": 60,
+						"damage": 90,
 						"hp": 1000,
-						"initialMana": 60,
+						"initialMana": 50,
 						"magicResist": 60,
-						"mana": 120,
+						"mana": 110,
 						"range": 1
 					},
 					"tileIcon": "ASSETS/Characters/TFT10_Blitzcrank/HUD/TFT10_Blitzcrank_Square.TFT_Set10.tex",
@@ -61836,10 +61776,10 @@
 					"squareIcon": "ASSETS/UX/TFT/ChampionSplashes/TFT10_Corki_Mobile.TFT_Set10.tex",
 					"stats": {
 						"armor": 15,
-						"attackSpeed": 0.699999988079071,
+						"attackSpeed": 0.75,
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
-						"damage": 48,
+						"damage": 50,
 						"hp": 450,
 						"initialMana": 15,
 						"magicResist": 15,
@@ -62115,10 +62055,10 @@
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
 						"damage": 45,
-						"hp": 550,
+						"hp": 650,
 						"initialMana": 30,
 						"magicResist": 35,
-						"mana": 90,
+						"mana": 75,
 						"range": 1
 					},
 					"tileIcon": "ASSETS/Characters/TFT10_Evelynn/HUD/TFT10_Evelynn_Square.TFT_Set10.tex",
@@ -62222,7 +62162,7 @@
 						"hp": 700,
 						"initialMana": 0,
 						"magicResist": 30,
-						"mana": 40,
+						"mana": 45,
 						"range": 4
 					},
 					"tileIcon": "ASSETS/Characters/TFT10_Ezreal/HUD/TFT10_Ezreal_Square.TFT_Set10.tex",
@@ -62264,13 +62204,13 @@
 							{
 								"name": "PercentAD",
 								"value": [
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858
+									1.7999999523162842,
+									1.7999999523162842,
+									1.7999999523162842,
+									1.7999999523162842,
+									1.7999999523162842,
+									1.7999999523162842,
+									1.7999999523162842
 								]
 							},
 							{
@@ -62314,7 +62254,7 @@
 						"hp": 800,
 						"initialMana": 40,
 						"magicResist": 45,
-						"mana": 90,
+						"mana": 80,
 						"range": 1
 					},
 					"tileIcon": "ASSETS/Characters/TFT10_Garen/HUD/TFT10_Garen_Square.TFT_Set10.dds",
@@ -62379,7 +62319,7 @@
 					"squareIcon": "ASSETS/UX/TFT/ChampionSplashes/TFT10_Gnar_Mobile.TFT_Set10.tex",
 					"stats": {
 						"armor": 45,
-						"attackSpeed": 0.6499999761581421,
+						"attackSpeed": 0.75,
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
 						"damage": 55,
@@ -62406,9 +62346,9 @@
 								"name": "DAMAGE",
 								"value": [
 									30,
-									190,
-									285,
-									440,
+									240,
+									360,
+									555,
 									350,
 									350,
 									350
@@ -62455,8 +62395,8 @@
 								"value": [
 									0,
 									500,
-									575,
-									650,
+									625,
+									750,
 									0,
 									0,
 									0
@@ -62847,8 +62787,8 @@
 								"name": "PhysicalDamageRatio",
 								"value": [
 									0,
-									0.6000000238418579,
-									0.6000000238418579,
+									0.6600000262260437,
+									0.6600000262260437,
 									4.440000057220459,
 									4.440000057220459,
 									200,
@@ -62990,7 +62930,7 @@
 						"critMultiplier": 1.399999976158142,
 						"damage": 70,
 						"hp": 950,
-						"initialMana": 0,
+						"initialMana": 30,
 						"magicResist": 40,
 						"mana": 50,
 						"range": 4
@@ -63604,7 +63544,7 @@
 						"hp": 1200,
 						"initialMana": 0,
 						"magicResist": 70,
-						"mana": 50,
+						"mana": 40,
 						"range": 1
 					},
 					"tileIcon": "ASSETS/Characters/TFT10_Kayn/HUD/TFT10_Kayn_Square.TFT_Set10.tex",
@@ -63800,13 +63740,13 @@
 							{
 								"name": "ADRatio",
 								"value": [
-									8,
-									8,
-									8,
-									8,
-									8,
-									8,
-									8
+									9.989999771118164,
+									9.989999771118164,
+									9.989999771118164,
+									9.989999771118164,
+									9.989999771118164,
+									9.989999771118164,
+									9.989999771118164
 								]
 							},
 							{
@@ -64597,13 +64537,13 @@
 							{
 								"name": "ShieldPercent",
 								"value": [
-									6,
-									6,
-									6,
-									6,
-									6,
-									6,
-									6
+									8,
+									8,
+									8,
+									8,
+									8,
+									8,
+									8
 								]
 							},
 							{
@@ -64645,22 +64585,22 @@
 							{
 								"name": "HeadlinerMana",
 								"value": [
-									40,
-									40,
-									40,
-									40,
-									40,
-									40,
-									40
+									60,
+									60,
+									60,
+									60,
+									60,
+									60,
+									60
 								]
 							},
 							{
 								"name": "DamagePercent",
 								"value": [
 									0.5,
-									0.699999988079071,
 									0.8999999761581421,
-									1.149999976158142,
+									1.100000023841858,
+									1.399999976158142,
 									0.5,
 									0.5,
 									0.5
@@ -65423,9 +65363,9 @@
 								"name": "BasePercentAD",
 								"value": [
 									2.0999999046325684,
-									2.4000000953674316,
-									2.4000000953674316,
-									2.5,
+									3,
+									3,
+									3.0999999046325684,
 									2.0999999046325684,
 									2.0999999046325684,
 									2.0999999046325684
@@ -65501,7 +65441,7 @@
 					"squareIcon": "ASSETS/UX/TFT/ChampionSplashes/TFT10_Samira_Mobile.TFT_Set10.tex",
 					"stats": {
 						"armor": 20,
-						"attackSpeed": 0.699999988079071,
+						"attackSpeed": 0.75,
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
 						"damage": 60,
@@ -65961,8 +65901,8 @@
 								"value": [
 									15,
 									12,
-									15,
-									25,
+									18,
+									33,
 									75,
 									75,
 									75
@@ -65993,7 +65933,7 @@
 						"attackSpeed": 0.550000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
-						"damage": 70,
+						"damage": 88,
 						"hp": 650,
 						"initialMana": 0,
 						"magicResist": 40,
@@ -68275,9 +68215,9 @@
 							"minUnits": 1,
 							"style": 6,
 							"variables": {
-								"AssassinGoldPerKill": 3,
+								"AssassinGoldPerKill": 5,
 								"NumOfKills": 2,
-								"RhaastPlayerHealthPerKill": 1
+								"RhaastPlayerHealthPerKill": 2
 							}
 						}
 					],
@@ -68304,7 +68244,7 @@
 							"style": 3,
 							"variables": {
 								"ADRatio": 2,
-								"AttackSpeed": 0.44999998807907104,
+								"AttackSpeed": 0.550000011920929,
 								"HealthRatio": 0.5
 							}
 						},
@@ -68314,7 +68254,7 @@
 							"style": 4,
 							"variables": {
 								"ADRatio": 2,
-								"AttackSpeed": 0.699999988079071,
+								"AttackSpeed": 0.8500000238418579,
 								"HealthRatio": 0.5
 							}
 						}
@@ -68426,8 +68366,8 @@
 							"style": 4,
 							"variables": {
 								"Duration": 3,
-								"PercentAD": 0.18000000715255737,
-								"PercentADEmpowered": 0.7200000286102295
+								"PercentAD": 0.20000000298023224,
+								"PercentADEmpowered": 0.800000011920929
 							}
 						},
 						{
@@ -68436,8 +68376,8 @@
 							"style": 4,
 							"variables": {
 								"Duration": 3,
-								"PercentAD": 0.30000001192092896,
-								"PercentADEmpowered": 1.2000000476837158
+								"PercentAD": 0.4000000059604645,
+								"PercentADEmpowered": 1.600000023841858
 							}
 						}
 					],
@@ -68519,8 +68459,8 @@
 							"minUnits": 7,
 							"style": 4,
 							"variables": {
-								"BonusAP": 24,
-								"BonusMaxHealth": 0.23999999463558197,
+								"BonusAP": 27,
+								"BonusMaxHealth": 0.27000001072883606,
 								"ManaPerSecond": "null",
 								"{158db106}": 2
 							}
@@ -68530,8 +68470,8 @@
 							"minUnits": 10,
 							"style": 5,
 							"variables": {
-								"BonusAP": 40,
-								"BonusMaxHealth": 0.4000000059604645,
+								"BonusAP": 45,
+								"BonusMaxHealth": 0.44999998807907104,
 								"ManaPerSecond": 10,
 								"{158db106}": 2
 							}
@@ -68641,13 +68581,23 @@
 							}
 						},
 						{
-							"maxUnits": 25000,
+							"maxUnits": 7,
 							"minUnits": 6,
 							"style": 4,
 							"variables": {
 								"AmountIncrease": 1,
 								"FighterAS": 70,
 								"FighterVamp": 20
+							}
+						},
+						{
+							"maxUnits": 25000,
+							"minUnits": 8,
+							"style": 4,
+							"variables": {
+								"AmountIncrease": 1,
+								"FighterAS": 125,
+								"FighterVamp": 30
 							}
 						}
 					],
@@ -69016,7 +68966,7 @@
 							"variables": {
 								"EDMstats": 0.8999999761581421,
 								"{1d0f36aa}": 3.5,
-								"{34753da8}": 9,
+								"{34753da8}": 8,
 								"{52707149}": 2.5,
 								"{b7559eb7}": 2,
 								"{d8f28e45}": 8,
@@ -69030,9 +68980,9 @@
 							"minUnits": 3,
 							"style": 1,
 							"variables": {
-								"EDMstats": 1,
+								"EDMstats": 1.100000023841858,
 								"{1d0f36aa}": 3.5,
-								"{34753da8}": 9,
+								"{34753da8}": 8,
 								"{52707149}": 2.5,
 								"{b7559eb7}": 2,
 								"{d8f28e45}": 8,
@@ -69046,10 +68996,10 @@
 							"minUnits": 4,
 							"style": 3,
 							"variables": {
-								"EDMstats": 1.100000023841858,
+								"EDMstats": 1.2000000476837158,
 								"EDMtimereduction": 1,
 								"{1d0f36aa}": 3.5,
-								"{34753da8}": 9,
+								"{34753da8}": 8,
 								"{52707149}": 2.5,
 								"{b7559eb7}": 2,
 								"{d8f28e45}": 8,
@@ -69063,10 +69013,10 @@
 							"minUnits": 5,
 							"style": 4,
 							"variables": {
-								"EDMstats": 1.2999999523162842,
+								"EDMstats": 1.350000023841858,
 								"EDMtimereduction": 1,
 								"{1d0f36aa}": 3.5,
-								"{34753da8}": 9,
+								"{34753da8}": 8,
 								"{52707149}": 2.5,
 								"{b7559eb7}": 2,
 								"{d8f28e45}": 8,
@@ -70042,7 +69992,7 @@
 						"hp": 600,
 						"initialMana": 40,
 						"magicResist": 20,
-						"mana": 135,
+						"mana": 110,
 						"range": 4
 					},
 					"tileIcon": "ASSETS/Characters/TFT10_Aphelios/HUD/TFT10_Aphelios_Square.TFT_Set10.tex",
@@ -70286,11 +70236,11 @@
 						"attackSpeed": 0.6000000238418579,
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
-						"damage": 60,
+						"damage": 90,
 						"hp": 1000,
-						"initialMana": 60,
+						"initialMana": 50,
 						"magicResist": 60,
-						"mana": 120,
+						"mana": 110,
 						"range": 1
 					},
 					"tileIcon": "ASSETS/Characters/TFT10_Blitzcrank/HUD/TFT10_Blitzcrank_Square.TFT_Set10.tex",
@@ -70455,10 +70405,10 @@
 					"squareIcon": "ASSETS/UX/TFT/ChampionSplashes/TFT10_Corki_Mobile.TFT_Set10.tex",
 					"stats": {
 						"armor": 15,
-						"attackSpeed": 0.699999988079071,
+						"attackSpeed": 0.75,
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
-						"damage": 48,
+						"damage": 50,
 						"hp": 450,
 						"initialMana": 15,
 						"magicResist": 15,
@@ -70734,10 +70684,10 @@
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
 						"damage": 45,
-						"hp": 550,
+						"hp": 650,
 						"initialMana": 30,
 						"magicResist": 35,
-						"mana": 90,
+						"mana": 75,
 						"range": 1
 					},
 					"tileIcon": "ASSETS/Characters/TFT10_Evelynn/HUD/TFT10_Evelynn_Square.TFT_Set10.tex",
@@ -70841,7 +70791,7 @@
 						"hp": 700,
 						"initialMana": 0,
 						"magicResist": 30,
-						"mana": 40,
+						"mana": 45,
 						"range": 4
 					},
 					"tileIcon": "ASSETS/Characters/TFT10_Ezreal/HUD/TFT10_Ezreal_Square.TFT_Set10.tex",
@@ -70883,13 +70833,13 @@
 							{
 								"name": "PercentAD",
 								"value": [
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858
+									1.7999999523162842,
+									1.7999999523162842,
+									1.7999999523162842,
+									1.7999999523162842,
+									1.7999999523162842,
+									1.7999999523162842,
+									1.7999999523162842
 								]
 							},
 							{
@@ -70933,7 +70883,7 @@
 						"hp": 800,
 						"initialMana": 40,
 						"magicResist": 45,
-						"mana": 90,
+						"mana": 80,
 						"range": 1
 					},
 					"tileIcon": "ASSETS/Characters/TFT10_Garen/HUD/TFT10_Garen_Square.TFT_Set10.dds",
@@ -70998,7 +70948,7 @@
 					"squareIcon": "ASSETS/UX/TFT/ChampionSplashes/TFT10_Gnar_Mobile.TFT_Set10.tex",
 					"stats": {
 						"armor": 45,
-						"attackSpeed": 0.6499999761581421,
+						"attackSpeed": 0.75,
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
 						"damage": 55,
@@ -71025,9 +70975,9 @@
 								"name": "DAMAGE",
 								"value": [
 									30,
-									190,
-									285,
-									440,
+									240,
+									360,
+									555,
 									350,
 									350,
 									350
@@ -71074,8 +71024,8 @@
 								"value": [
 									0,
 									500,
-									575,
-									650,
+									625,
+									750,
 									0,
 									0,
 									0
@@ -71466,8 +71416,8 @@
 								"name": "PhysicalDamageRatio",
 								"value": [
 									0,
-									0.6000000238418579,
-									0.6000000238418579,
+									0.6600000262260437,
+									0.6600000262260437,
 									4.440000057220459,
 									4.440000057220459,
 									200,
@@ -71609,7 +71559,7 @@
 						"critMultiplier": 1.399999976158142,
 						"damage": 70,
 						"hp": 950,
-						"initialMana": 0,
+						"initialMana": 30,
 						"magicResist": 40,
 						"mana": 50,
 						"range": 4
@@ -72223,7 +72173,7 @@
 						"hp": 1200,
 						"initialMana": 0,
 						"magicResist": 70,
-						"mana": 50,
+						"mana": 40,
 						"range": 1
 					},
 					"tileIcon": "ASSETS/Characters/TFT10_Kayn/HUD/TFT10_Kayn_Square.TFT_Set10.tex",
@@ -72419,13 +72369,13 @@
 							{
 								"name": "ADRatio",
 								"value": [
-									8,
-									8,
-									8,
-									8,
-									8,
-									8,
-									8
+									9.989999771118164,
+									9.989999771118164,
+									9.989999771118164,
+									9.989999771118164,
+									9.989999771118164,
+									9.989999771118164,
+									9.989999771118164
 								]
 							},
 							{
@@ -73216,13 +73166,13 @@
 							{
 								"name": "ShieldPercent",
 								"value": [
-									6,
-									6,
-									6,
-									6,
-									6,
-									6,
-									6
+									8,
+									8,
+									8,
+									8,
+									8,
+									8,
+									8
 								]
 							},
 							{
@@ -73264,22 +73214,22 @@
 							{
 								"name": "HeadlinerMana",
 								"value": [
-									40,
-									40,
-									40,
-									40,
-									40,
-									40,
-									40
+									60,
+									60,
+									60,
+									60,
+									60,
+									60,
+									60
 								]
 							},
 							{
 								"name": "DamagePercent",
 								"value": [
 									0.5,
-									0.699999988079071,
 									0.8999999761581421,
-									1.149999976158142,
+									1.100000023841858,
+									1.399999976158142,
 									0.5,
 									0.5,
 									0.5
@@ -74042,9 +73992,9 @@
 								"name": "BasePercentAD",
 								"value": [
 									2.0999999046325684,
-									2.4000000953674316,
-									2.4000000953674316,
-									2.5,
+									3,
+									3,
+									3.0999999046325684,
 									2.0999999046325684,
 									2.0999999046325684,
 									2.0999999046325684
@@ -74120,7 +74070,7 @@
 					"squareIcon": "ASSETS/UX/TFT/ChampionSplashes/TFT10_Samira_Mobile.TFT_Set10.tex",
 					"stats": {
 						"armor": 20,
-						"attackSpeed": 0.699999988079071,
+						"attackSpeed": 0.75,
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
 						"damage": 60,
@@ -74580,8 +74530,8 @@
 								"value": [
 									15,
 									12,
-									15,
-									25,
+									18,
+									33,
 									75,
 									75,
 									75
@@ -74612,7 +74562,7 @@
 						"attackSpeed": 0.550000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
-						"damage": 70,
+						"damage": 88,
 						"hp": 650,
 						"initialMana": 0,
 						"magicResist": 40,
@@ -76894,9 +76844,9 @@
 							"minUnits": 1,
 							"style": 6,
 							"variables": {
-								"AssassinGoldPerKill": 3,
+								"AssassinGoldPerKill": 5,
 								"NumOfKills": 2,
-								"RhaastPlayerHealthPerKill": 1
+								"RhaastPlayerHealthPerKill": 2
 							}
 						}
 					],
@@ -76923,7 +76873,7 @@
 							"style": 3,
 							"variables": {
 								"ADRatio": 2,
-								"AttackSpeed": 0.44999998807907104,
+								"AttackSpeed": 0.550000011920929,
 								"HealthRatio": 0.5
 							}
 						},
@@ -76933,7 +76883,7 @@
 							"style": 4,
 							"variables": {
 								"ADRatio": 2,
-								"AttackSpeed": 0.699999988079071,
+								"AttackSpeed": 0.8500000238418579,
 								"HealthRatio": 0.5
 							}
 						}
@@ -77045,8 +76995,8 @@
 							"style": 4,
 							"variables": {
 								"Duration": 3,
-								"PercentAD": 0.18000000715255737,
-								"PercentADEmpowered": 0.7200000286102295
+								"PercentAD": 0.20000000298023224,
+								"PercentADEmpowered": 0.800000011920929
 							}
 						},
 						{
@@ -77055,8 +77005,8 @@
 							"style": 4,
 							"variables": {
 								"Duration": 3,
-								"PercentAD": 0.30000001192092896,
-								"PercentADEmpowered": 1.2000000476837158
+								"PercentAD": 0.4000000059604645,
+								"PercentADEmpowered": 1.600000023841858
 							}
 						}
 					],
@@ -77138,8 +77088,8 @@
 							"minUnits": 7,
 							"style": 4,
 							"variables": {
-								"BonusAP": 24,
-								"BonusMaxHealth": 0.23999999463558197,
+								"BonusAP": 27,
+								"BonusMaxHealth": 0.27000001072883606,
 								"ManaPerSecond": "null",
 								"{158db106}": 2
 							}
@@ -77149,8 +77099,8 @@
 							"minUnits": 10,
 							"style": 5,
 							"variables": {
-								"BonusAP": 40,
-								"BonusMaxHealth": 0.4000000059604645,
+								"BonusAP": 45,
+								"BonusMaxHealth": 0.44999998807907104,
 								"ManaPerSecond": 10,
 								"{158db106}": 2
 							}
@@ -77260,13 +77210,23 @@
 							}
 						},
 						{
-							"maxUnits": 25000,
+							"maxUnits": 7,
 							"minUnits": 6,
 							"style": 4,
 							"variables": {
 								"AmountIncrease": 1,
 								"FighterAS": 70,
 								"FighterVamp": 20
+							}
+						},
+						{
+							"maxUnits": 25000,
+							"minUnits": 8,
+							"style": 4,
+							"variables": {
+								"AmountIncrease": 1,
+								"FighterAS": 125,
+								"FighterVamp": 30
 							}
 						}
 					],
@@ -77635,7 +77595,7 @@
 							"variables": {
 								"EDMstats": 0.8999999761581421,
 								"{1d0f36aa}": 3.5,
-								"{34753da8}": 9,
+								"{34753da8}": 8,
 								"{52707149}": 2.5,
 								"{b7559eb7}": 2,
 								"{d8f28e45}": 8,
@@ -77649,9 +77609,9 @@
 							"minUnits": 3,
 							"style": 1,
 							"variables": {
-								"EDMstats": 1,
+								"EDMstats": 1.100000023841858,
 								"{1d0f36aa}": 3.5,
-								"{34753da8}": 9,
+								"{34753da8}": 8,
 								"{52707149}": 2.5,
 								"{b7559eb7}": 2,
 								"{d8f28e45}": 8,
@@ -77665,10 +77625,10 @@
 							"minUnits": 4,
 							"style": 3,
 							"variables": {
-								"EDMstats": 1.100000023841858,
+								"EDMstats": 1.2000000476837158,
 								"EDMtimereduction": 1,
 								"{1d0f36aa}": 3.5,
-								"{34753da8}": 9,
+								"{34753da8}": 8,
 								"{52707149}": 2.5,
 								"{b7559eb7}": 2,
 								"{d8f28e45}": 8,
@@ -77682,10 +77642,10 @@
 							"minUnits": 5,
 							"style": 4,
 							"variables": {
-								"EDMstats": 1.2999999523162842,
+								"EDMstats": 1.350000023841858,
 								"EDMtimereduction": 1,
 								"{1d0f36aa}": 3.5,
-								"{34753da8}": 9,
+								"{34753da8}": 8,
 								"{52707149}": 2.5,
 								"{b7559eb7}": 2,
 								"{d8f28e45}": 8,
@@ -82648,34 +82608,6 @@
 						"range": 1
 					},
 					"tileIcon": "ASSETS/Characters/TFT9_NoxianFlag/HUD/TFT9_NoxianFlag_Square.dds",
-					"traits": []
-				},
-				{
-					"ability": {
-						"desc": null,
-						"icon": "ASSETS/Characters/TFT9_SLIME_Crab/HUD/Icons2D/TFT9_SLIME_Crab_EyeOfTheStorm.tex",
-						"name": null,
-						"variables": []
-					},
-					"apiName": "TFT9_SLIME_Crab",
-					"characterName": "TFT9_SLIME_Crab",
-					"cost": 11,
-					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT9_SLIME_Crab.dds",
-					"name": "SLIME_Crab",
-					"squareIcon": "ASSETS/UX/TFT/ChampionSplashes/TFT9_SLIME_Crab_Mobile.dds",
-					"stats": {
-						"armor": 10,
-						"attackSpeed": 0.800000011920929,
-						"critChance": 0.25,
-						"critMultiplier": 1.399999976158142,
-						"damage": 20,
-						"hp": null,
-						"initialMana": 0,
-						"magicResist": 10,
-						"mana": 100,
-						"range": 1
-					},
-					"tileIcon": "ASSETS/Characters/TFT_ItemUnknown/Skins/Skin0/TFT_Item_Unknown.dds",
 					"traits": []
 				},
 				{
@@ -91745,34 +91677,6 @@
 				},
 				{
 					"ability": {
-						"desc": null,
-						"icon": "ASSETS/Characters/TFT9_SLIME_Crab/HUD/Icons2D/TFT9_SLIME_Crab_EyeOfTheStorm.tex",
-						"name": null,
-						"variables": []
-					},
-					"apiName": "TFT9_SLIME_Crab",
-					"characterName": "TFT9_SLIME_Crab",
-					"cost": 11,
-					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT9_SLIME_Crab.dds",
-					"name": "SLIME_Crab",
-					"squareIcon": "ASSETS/UX/TFT/ChampionSplashes/TFT9_SLIME_Crab_Mobile.dds",
-					"stats": {
-						"armor": 10,
-						"attackSpeed": 0.800000011920929,
-						"critChance": 0.25,
-						"critMultiplier": 1.399999976158142,
-						"damage": 20,
-						"hp": null,
-						"initialMana": 0,
-						"magicResist": 10,
-						"mana": 100,
-						"range": 1
-					},
-					"tileIcon": "ASSETS/Characters/TFT_ItemUnknown/Skins/Skin0/TFT_Item_Unknown.dds",
-					"traits": []
-				},
-				{
-					"ability": {
 						"desc": "Create a portal to Demacia that protects allies for @PortalDuration@ seconds. Allies within the zone gain <TFTBonus>@ModifiedShield@ (%i:scaleAP%)</TFTBonus> Shield. If an ally leaves the safety of the portal, they are healed for <scaleHealth>@ModifiedHeal@ (%i:scaleAP%)</scaleHealth>.<br><br>When the portal expires, enemies within are dealt <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage.<br>",
 						"icon": "ASSETS/Characters/TFT9_RyzeBandleCity/HUD/Icons2D/TFT9_Ryze_R.tex",
 						"name": "Realm Warp: Demacia",
@@ -99652,34 +99556,6 @@
 				},
 				{
 					"ability": {
-						"desc": null,
-						"icon": "ASSETS/Characters/TFT9_SLIME_Crab/HUD/Icons2D/TFT9_SLIME_Crab_EyeOfTheStorm.tex",
-						"name": null,
-						"variables": []
-					},
-					"apiName": "TFT9_SLIME_Crab",
-					"characterName": "TFT9_SLIME_Crab",
-					"cost": 11,
-					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT9_SLIME_Crab.dds",
-					"name": "SLIME_Crab",
-					"squareIcon": "ASSETS/UX/TFT/ChampionSplashes/TFT9_SLIME_Crab_Mobile.dds",
-					"stats": {
-						"armor": 10,
-						"attackSpeed": 0.800000011920929,
-						"critChance": 0.25,
-						"critMultiplier": 1.399999976158142,
-						"damage": 20,
-						"hp": null,
-						"initialMana": 0,
-						"magicResist": 10,
-						"mana": 100,
-						"range": 1
-					},
-					"tileIcon": "ASSETS/Characters/TFT_ItemUnknown/Skins/Skin0/TFT_Item_Unknown.dds",
-					"traits": []
-				},
-				{
-					"ability": {
 						"desc": "Create a portal to Demacia that protects allies for @PortalDuration@ seconds. Allies within the zone gain <TFTBonus>@ModifiedShield@ (%i:scaleAP%)</TFTBonus> Shield. If an ally leaves the safety of the portal, they are healed for <scaleHealth>@ModifiedHeal@ (%i:scaleAP%)</scaleHealth>.<br><br>When the portal expires, enemies within are dealt <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage.<br>",
 						"icon": "ASSETS/Characters/TFT9_RyzeBandleCity/HUD/Icons2D/TFT9_Ryze_R.tex",
 						"name": "Realm Warp: Demacia",
@@ -106759,34 +106635,6 @@
 						"range": 1
 					},
 					"tileIcon": "ASSETS/Characters/TFT9_NoxianFlag/HUD/TFT9_NoxianFlag_Square.dds",
-					"traits": []
-				},
-				{
-					"ability": {
-						"desc": null,
-						"icon": "ASSETS/Characters/TFT9_SLIME_Crab/HUD/Icons2D/TFT9_SLIME_Crab_EyeOfTheStorm.tex",
-						"name": null,
-						"variables": []
-					},
-					"apiName": "TFT9_SLIME_Crab",
-					"characterName": "TFT9_SLIME_Crab",
-					"cost": 11,
-					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT9_SLIME_Crab.dds",
-					"name": "SLIME_Crab",
-					"squareIcon": "ASSETS/UX/TFT/ChampionSplashes/TFT9_SLIME_Crab_Mobile.dds",
-					"stats": {
-						"armor": 10,
-						"attackSpeed": 0.800000011920929,
-						"critChance": 0.25,
-						"critMultiplier": 1.399999976158142,
-						"damage": 20,
-						"hp": null,
-						"initialMana": 0,
-						"magicResist": 10,
-						"mana": 100,
-						"range": 1
-					},
-					"tileIcon": "ASSETS/Characters/TFT_ItemUnknown/Skins/Skin0/TFT_Item_Unknown.dds",
 					"traits": []
 				},
 				{
@@ -115852,34 +115700,6 @@
 						"range": 1
 					},
 					"tileIcon": "ASSETS/Characters/TFT9_NoxianFlag/HUD/TFT9_NoxianFlag_Square.dds",
-					"traits": []
-				},
-				{
-					"ability": {
-						"desc": null,
-						"icon": "ASSETS/Characters/TFT9_SLIME_Crab/HUD/Icons2D/TFT9_SLIME_Crab_EyeOfTheStorm.tex",
-						"name": null,
-						"variables": []
-					},
-					"apiName": "TFT9_SLIME_Crab",
-					"characterName": "TFT9_SLIME_Crab",
-					"cost": 11,
-					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT9_SLIME_Crab.dds",
-					"name": "SLIME_Crab",
-					"squareIcon": "ASSETS/UX/TFT/ChampionSplashes/TFT9_SLIME_Crab_Mobile.dds",
-					"stats": {
-						"armor": 10,
-						"attackSpeed": 0.800000011920929,
-						"critChance": 0.25,
-						"critMultiplier": 1.399999976158142,
-						"damage": 20,
-						"hp": null,
-						"initialMana": 0,
-						"magicResist": 10,
-						"mana": 100,
-						"range": 1
-					},
-					"tileIcon": "ASSETS/Characters/TFT_ItemUnknown/Skins/Skin0/TFT_Item_Unknown.dds",
 					"traits": []
 				},
 				{
@@ -132057,34 +131877,6 @@
 				},
 				{
 					"ability": {
-						"desc": null,
-						"icon": "ASSETS/Characters/TFT9_SLIME_Crab/HUD/Icons2D/TFT9_SLIME_Crab_EyeOfTheStorm.tex",
-						"name": null,
-						"variables": []
-					},
-					"apiName": "TFT9_SLIME_Crab",
-					"characterName": "TFT9_SLIME_Crab",
-					"cost": 11,
-					"icon": "ASSETS/UX/TFT/ChampionSplashes/TFT9_SLIME_Crab.dds",
-					"name": "SLIME_Crab",
-					"squareIcon": "ASSETS/UX/TFT/ChampionSplashes/TFT9_SLIME_Crab_Mobile.dds",
-					"stats": {
-						"armor": 10,
-						"attackSpeed": 0.800000011920929,
-						"critChance": 0.25,
-						"critMultiplier": 1.399999976158142,
-						"damage": 20,
-						"hp": null,
-						"initialMana": 0,
-						"magicResist": 10,
-						"mana": 100,
-						"range": 1
-					},
-					"tileIcon": "ASSETS/Characters/TFT_ItemUnknown/Skins/Skin0/TFT_Item_Unknown.dds",
-					"traits": []
-				},
-				{
-					"ability": {
 						"desc": "Create a portal to Demacia that protects allies for @PortalDuration@ seconds. Allies within the zone gain <TFTBonus>@ModifiedShield@ (%i:scaleAP%)</TFTBonus> Shield. If an ally leaves the safety of the portal, they are healed for <scaleHealth>@ModifiedHeal@ (%i:scaleAP%)</scaleHealth>.<br><br>When the portal expires, enemies within are dealt <magicDamage>@ModifiedDamage@ (%i:scaleAP%)</magicDamage> magic damage.<br>",
 						"icon": "ASSETS/Characters/TFT9_RyzeBandleCity/HUD/Icons2D/TFT9_Ryze_R.tex",
 						"name": "Realm Warp: Demacia",
@@ -135175,7 +134967,7 @@
 						"hp": 600,
 						"initialMana": 40,
 						"magicResist": 20,
-						"mana": 135,
+						"mana": 110,
 						"range": 4
 					},
 					"tileIcon": "ASSETS/Characters/TFT10_Aphelios/HUD/TFT10_Aphelios_Square.TFT_Set10.tex",
@@ -135419,11 +135211,11 @@
 						"attackSpeed": 0.6000000238418579,
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
-						"damage": 60,
+						"damage": 90,
 						"hp": 1000,
-						"initialMana": 60,
+						"initialMana": 50,
 						"magicResist": 60,
-						"mana": 120,
+						"mana": 110,
 						"range": 1
 					},
 					"tileIcon": "ASSETS/Characters/TFT10_Blitzcrank/HUD/TFT10_Blitzcrank_Square.TFT_Set10.tex",
@@ -135588,10 +135380,10 @@
 					"squareIcon": "ASSETS/UX/TFT/ChampionSplashes/TFT10_Corki_Mobile.TFT_Set10.tex",
 					"stats": {
 						"armor": 15,
-						"attackSpeed": 0.699999988079071,
+						"attackSpeed": 0.75,
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
-						"damage": 48,
+						"damage": 50,
 						"hp": 450,
 						"initialMana": 15,
 						"magicResist": 15,
@@ -135867,10 +135659,10 @@
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
 						"damage": 45,
-						"hp": 550,
+						"hp": 650,
 						"initialMana": 30,
 						"magicResist": 35,
-						"mana": 90,
+						"mana": 75,
 						"range": 1
 					},
 					"tileIcon": "ASSETS/Characters/TFT10_Evelynn/HUD/TFT10_Evelynn_Square.TFT_Set10.tex",
@@ -135974,7 +135766,7 @@
 						"hp": 700,
 						"initialMana": 0,
 						"magicResist": 30,
-						"mana": 40,
+						"mana": 45,
 						"range": 4
 					},
 					"tileIcon": "ASSETS/Characters/TFT10_Ezreal/HUD/TFT10_Ezreal_Square.TFT_Set10.tex",
@@ -136016,13 +135808,13 @@
 							{
 								"name": "PercentAD",
 								"value": [
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858,
-									1.600000023841858
+									1.7999999523162842,
+									1.7999999523162842,
+									1.7999999523162842,
+									1.7999999523162842,
+									1.7999999523162842,
+									1.7999999523162842,
+									1.7999999523162842
 								]
 							},
 							{
@@ -136066,7 +135858,7 @@
 						"hp": 800,
 						"initialMana": 40,
 						"magicResist": 45,
-						"mana": 90,
+						"mana": 80,
 						"range": 1
 					},
 					"tileIcon": "ASSETS/Characters/TFT10_Garen/HUD/TFT10_Garen_Square.TFT_Set10.dds",
@@ -136131,7 +135923,7 @@
 					"squareIcon": "ASSETS/UX/TFT/ChampionSplashes/TFT10_Gnar_Mobile.TFT_Set10.tex",
 					"stats": {
 						"armor": 45,
-						"attackSpeed": 0.6499999761581421,
+						"attackSpeed": 0.75,
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
 						"damage": 55,
@@ -136158,9 +135950,9 @@
 								"name": "DAMAGE",
 								"value": [
 									30,
-									190,
-									285,
-									440,
+									240,
+									360,
+									555,
 									350,
 									350,
 									350
@@ -136207,8 +135999,8 @@
 								"value": [
 									0,
 									500,
-									575,
-									650,
+									625,
+									750,
 									0,
 									0,
 									0
@@ -136599,8 +136391,8 @@
 								"name": "PhysicalDamageRatio",
 								"value": [
 									0,
-									0.6000000238418579,
-									0.6000000238418579,
+									0.6600000262260437,
+									0.6600000262260437,
 									4.440000057220459,
 									4.440000057220459,
 									200,
@@ -136742,7 +136534,7 @@
 						"critMultiplier": 1.399999976158142,
 						"damage": 70,
 						"hp": 950,
-						"initialMana": 0,
+						"initialMana": 30,
 						"magicResist": 40,
 						"mana": 50,
 						"range": 4
@@ -137356,7 +137148,7 @@
 						"hp": 1200,
 						"initialMana": 0,
 						"magicResist": 70,
-						"mana": 50,
+						"mana": 40,
 						"range": 1
 					},
 					"tileIcon": "ASSETS/Characters/TFT10_Kayn/HUD/TFT10_Kayn_Square.TFT_Set10.tex",
@@ -137552,13 +137344,13 @@
 							{
 								"name": "ADRatio",
 								"value": [
-									8,
-									8,
-									8,
-									8,
-									8,
-									8,
-									8
+									9.989999771118164,
+									9.989999771118164,
+									9.989999771118164,
+									9.989999771118164,
+									9.989999771118164,
+									9.989999771118164,
+									9.989999771118164
 								]
 							},
 							{
@@ -138349,13 +138141,13 @@
 							{
 								"name": "ShieldPercent",
 								"value": [
-									6,
-									6,
-									6,
-									6,
-									6,
-									6,
-									6
+									8,
+									8,
+									8,
+									8,
+									8,
+									8,
+									8
 								]
 							},
 							{
@@ -138397,22 +138189,22 @@
 							{
 								"name": "HeadlinerMana",
 								"value": [
-									40,
-									40,
-									40,
-									40,
-									40,
-									40,
-									40
+									60,
+									60,
+									60,
+									60,
+									60,
+									60,
+									60
 								]
 							},
 							{
 								"name": "DamagePercent",
 								"value": [
 									0.5,
-									0.699999988079071,
 									0.8999999761581421,
-									1.149999976158142,
+									1.100000023841858,
+									1.399999976158142,
 									0.5,
 									0.5,
 									0.5
@@ -139175,9 +138967,9 @@
 								"name": "BasePercentAD",
 								"value": [
 									2.0999999046325684,
-									2.4000000953674316,
-									2.4000000953674316,
-									2.5,
+									3,
+									3,
+									3.0999999046325684,
 									2.0999999046325684,
 									2.0999999046325684,
 									2.0999999046325684
@@ -139253,7 +139045,7 @@
 					"squareIcon": "ASSETS/UX/TFT/ChampionSplashes/TFT10_Samira_Mobile.TFT_Set10.tex",
 					"stats": {
 						"armor": 20,
-						"attackSpeed": 0.699999988079071,
+						"attackSpeed": 0.75,
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
 						"damage": 60,
@@ -139713,8 +139505,8 @@
 								"value": [
 									15,
 									12,
-									15,
-									25,
+									18,
+									33,
 									75,
 									75,
 									75
@@ -139745,7 +139537,7 @@
 						"attackSpeed": 0.550000011920929,
 						"critChance": 0.25,
 						"critMultiplier": 1.399999976158142,
-						"damage": 70,
+						"damage": 88,
 						"hp": 650,
 						"initialMana": 0,
 						"magicResist": 40,
@@ -142025,9 +141817,9 @@
 							"minUnits": 1,
 							"style": 6,
 							"variables": {
-								"AssassinGoldPerKill": 3,
+								"AssassinGoldPerKill": 5,
 								"NumOfKills": 2,
-								"RhaastPlayerHealthPerKill": 1
+								"RhaastPlayerHealthPerKill": 2
 							}
 						}
 					],
@@ -142054,7 +141846,7 @@
 							"style": 3,
 							"variables": {
 								"ADRatio": 2,
-								"AttackSpeed": 0.44999998807907104,
+								"AttackSpeed": 0.550000011920929,
 								"HealthRatio": 0.5
 							}
 						},
@@ -142064,7 +141856,7 @@
 							"style": 4,
 							"variables": {
 								"ADRatio": 2,
-								"AttackSpeed": 0.699999988079071,
+								"AttackSpeed": 0.8500000238418579,
 								"HealthRatio": 0.5
 							}
 						}
@@ -142176,8 +141968,8 @@
 							"style": 4,
 							"variables": {
 								"Duration": 3,
-								"PercentAD": 0.18000000715255737,
-								"PercentADEmpowered": 0.7200000286102295
+								"PercentAD": 0.20000000298023224,
+								"PercentADEmpowered": 0.800000011920929
 							}
 						},
 						{
@@ -142186,8 +141978,8 @@
 							"style": 4,
 							"variables": {
 								"Duration": 3,
-								"PercentAD": 0.30000001192092896,
-								"PercentADEmpowered": 1.2000000476837158
+								"PercentAD": 0.4000000059604645,
+								"PercentADEmpowered": 1.600000023841858
 							}
 						}
 					],
@@ -142269,8 +142061,8 @@
 							"minUnits": 7,
 							"style": 4,
 							"variables": {
-								"BonusAP": 24,
-								"BonusMaxHealth": 0.23999999463558197,
+								"BonusAP": 27,
+								"BonusMaxHealth": 0.27000001072883606,
 								"ManaPerSecond": "null",
 								"{158db106}": 2
 							}
@@ -142280,8 +142072,8 @@
 							"minUnits": 10,
 							"style": 5,
 							"variables": {
-								"BonusAP": 40,
-								"BonusMaxHealth": 0.4000000059604645,
+								"BonusAP": 45,
+								"BonusMaxHealth": 0.44999998807907104,
 								"ManaPerSecond": 10,
 								"{158db106}": 2
 							}
@@ -142391,13 +142183,23 @@
 							}
 						},
 						{
-							"maxUnits": 25000,
+							"maxUnits": 7,
 							"minUnits": 6,
 							"style": 4,
 							"variables": {
 								"AmountIncrease": 1,
 								"FighterAS": 70,
 								"FighterVamp": 20
+							}
+						},
+						{
+							"maxUnits": 25000,
+							"minUnits": 8,
+							"style": 4,
+							"variables": {
+								"AmountIncrease": 1,
+								"FighterAS": 125,
+								"FighterVamp": 30
 							}
 						}
 					],
@@ -142766,7 +142568,7 @@
 							"variables": {
 								"EDMstats": 0.8999999761581421,
 								"{1d0f36aa}": 3.5,
-								"{34753da8}": 9,
+								"{34753da8}": 8,
 								"{52707149}": 2.5,
 								"{b7559eb7}": 2,
 								"{d8f28e45}": 8,
@@ -142780,9 +142582,9 @@
 							"minUnits": 3,
 							"style": 1,
 							"variables": {
-								"EDMstats": 1,
+								"EDMstats": 1.100000023841858,
 								"{1d0f36aa}": 3.5,
-								"{34753da8}": 9,
+								"{34753da8}": 8,
 								"{52707149}": 2.5,
 								"{b7559eb7}": 2,
 								"{d8f28e45}": 8,
@@ -142796,10 +142598,10 @@
 							"minUnits": 4,
 							"style": 3,
 							"variables": {
-								"EDMstats": 1.100000023841858,
+								"EDMstats": 1.2000000476837158,
 								"EDMtimereduction": 1,
 								"{1d0f36aa}": 3.5,
-								"{34753da8}": 9,
+								"{34753da8}": 8,
 								"{52707149}": 2.5,
 								"{b7559eb7}": 2,
 								"{d8f28e45}": 8,
@@ -142813,10 +142615,10 @@
 							"minUnits": 5,
 							"style": 4,
 							"variables": {
-								"EDMstats": 1.2999999523162842,
+								"EDMstats": 1.350000023841858,
 								"EDMtimereduction": 1,
 								"{1d0f36aa}": 3.5,
-								"{34753da8}": 9,
+								"{34753da8}": 8,
 								"{52707149}": 2.5,
 								"{b7559eb7}": 2,
 								"{d8f28e45}": 8,

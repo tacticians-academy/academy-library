@@ -192,13 +192,13 @@
 				{
 					"mName": "DAMAGE_RATIO",
 					"mValues": [
-						3,
-						3,
-						3,
-						3,
-						3,
-						3,
-						3
+						2.799999952316284,
+						2.799999952316284,
+						2.799999952316284,
+						2.799999952316284,
+						2.799999952316284,
+						2.799999952316284,
+						2.799999952316284
 					],
 					"__type": "SpellDataValue"
 				},
@@ -308,7 +308,7 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{5d0b9563}": {
+				"TOTAL_DAMAGE": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -317,12 +317,12 @@
 							"mSubparts": [
 								{
 									"mStat": 2,
-									"mDataValue": "{ecaca35c}",
+									"mDataValue": "DAMAGE_RATIO",
 									"__type": "StatByNamedDataValueCalculationPart"
 								},
 								{
 									"mSubpart": {
-										"mDataValue": "{801e99a4}",
+										"mDataValue": "MAGIC_DAMAGE",
 										"__type": "NamedDataValueCalculationPart"
 									},
 									"mRatio": 0.009999999776482582,
@@ -416,11 +416,11 @@
 		"tier": 1,
 		"mLinkedTraits": [
 			{
-				"TraitData": "True Damage",
+				"TraitData": "{c9bbc394}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Edgelord",
+				"TraitData": "{0f07fb2f}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

@@ -199,27 +199,27 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{5d0b9563}": {
+				"TOTAL_DAMAGE": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mStat": 2,
-							"mDataValue": "{8d520c84}",
+							"mDataValue": "BASE_AD_RATIO",
 							"__type": "StatByNamedDataValueCalculationPart"
 						}
 					],
 					"__type": "GameCalculation"
 				},
-				"{fe9a5339}": {
+				"MODIFIED_AP_MOD": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{6b68b3bf}",
+								"mDataValue": "BASE_AP_MOD",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -229,7 +229,7 @@
 					"mDisplayAsPercent": true,
 					"__type": "GameCalculation"
 				},
-				"{7c21c318}": {
+				"TD_TOTAL_DAMAGE": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -237,12 +237,12 @@
 						{
 							"mPart1": {
 								"mStat": 2,
-								"mDataValue": "{8d520c84}",
+								"mDataValue": "BASE_AD_RATIO",
 								"__type": "StatByNamedDataValueCalculationPart"
 							},
 							"mPart2": {
 								"mSubpart": {
-									"mDataValue": "{6b68b3bf}",
+									"mDataValue": "BASE_AP_MOD",
 									"__type": "NamedDataValueCalculationPart"
 								},
 								"mRatio": 0.009999999776482582,
@@ -468,11 +468,11 @@
 		"tier": 5,
 		"mLinkedTraits": [
 			{
-				"TraitData": "True Damage",
+				"TraitData": "{c9bbc394}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Crowd Diver",
+				"TraitData": "{4f14e6c8}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

@@ -106,9 +106,9 @@
 					"mName": "ZoneDamage",
 					"mValues": [
 						175,
-						220,
-						330,
-						525,
+						200,
+						300,
+						480,
 						450,
 						450,
 						450
@@ -119,9 +119,9 @@
 					"mName": "FinaleDamage",
 					"mValues": [
 						200,
-						220,
-						330,
-						525,
+						200,
+						300,
+						480,
 						200,
 						200,
 						200
@@ -186,7 +186,7 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{e4233d8d}": {
+				"ModifiedZoneDamage": {
 					"{cbcac618}": 5,
 					"mFormulaParts": [
 						{
@@ -214,14 +214,14 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{4629b43c}": {
+				"ModifiedFinaleDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{a9757cf3}",
+								"mDataValue": "FinaleDamage",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -306,11 +306,11 @@
 		"tier": 3,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Pentakill",
+				"TraitData": "{11f20023}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Sentinel",
+				"TraitData": "{427c0889}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

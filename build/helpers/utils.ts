@@ -24,7 +24,8 @@ export function getSetDataFrom(set: SetNumber, parentSet: SetNumber, responseJSO
 		const findSet = responseJSON.setData.find(data => {
 			if (data.number !== parentSet || data.mutator == null || data.mutator.includes('TURBO')) return false
 
-			return (set === parentSet) != (set >= 4 && data.mutator.endsWith('2'))
+			const usesFullSetNumber = set >= 4 && data.mutator.endsWith('2')
+			return (set === parentSet) !== usesFullSetNumber
 		})
 		if (findSet) {
 			return findSet

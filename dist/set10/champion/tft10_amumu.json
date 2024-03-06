@@ -122,7 +122,7 @@
 								},
 								{
 									"mStat": 1,
-									"mDataValue": "{72be5e09}",
+									"mDataValue": "ARRatio",
 									"__type": "StatByNamedDataValueCalculationPart"
 								}
 							],
@@ -234,11 +234,11 @@
 		"tier": 3,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Emo",
+				"TraitData": "{f3f76784}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Guardian",
+				"TraitData": "{18931112}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

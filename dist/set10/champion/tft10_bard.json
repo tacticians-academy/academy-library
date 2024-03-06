@@ -376,12 +376,12 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{467d636b}": {
+				"ModifiedSingleTarDmg": {
 					"{cbcac618}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{bf378adc}",
+								"mDataValue": "SingleTarDmg",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -408,7 +408,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{98e21fe3}": {
+				"ModifiedHeadlinerDootDamage": {
 					"{cbcac618}": 5,
 					"mFormulaParts": [
 						{
@@ -524,11 +524,11 @@
 		"tier": 2,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Jazz",
+				"TraitData": "{2951a0fc}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Dazzler",
+				"TraitData": "{a432b261}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

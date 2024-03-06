@@ -499,11 +499,11 @@
 		"tier": 1,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Emo",
+				"TraitData": "{f3f76784}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Spellweaver",
+				"TraitData": "{c7e3ce1d}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

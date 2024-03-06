@@ -1,4 +1,90 @@
 {
+	"{7f9345e0}": {
+		"mGearData": {
+			"mVFXResourceResolver": {
+				"__type": "ResourceResolver"
+			},
+			"{b6c044fb}": [
+				"{3e53396e}",
+				"{31356855}",
+				"{4b09e042}",
+				"{a973e905}",
+				"{b54c1bdb}",
+				"{91d8aab5}",
+				"{3d73f25e}",
+				"{145316a8}"
+			],
+			"{21b6167e}": [
+				"{22890333}",
+				"{38eb34aa}",
+				"{b4f6ef30}"
+			],
+			"__type": "GearData"
+		},
+		"__type": "GearSkinUpgrade"
+	},
+	"{89386776}": {
+		"mGearData": {
+			"mVFXResourceResolver": {
+				"resourceMap": {
+					"{0597fdd6}": "Characters/TFT10_Kayn/Skins/Skin0/Particles/TFT10_Kayn_Slayer_Q1",
+					"{0497fc43}": "Characters/TFT10_Kayn/Skins/Skin0/Particles/TFT10_Kayn_Slayer_Q2",
+					"Kayn_Skin20_Emote_Dance_Body": "Characters/TFT10_Kayn/Skins/Skin0/Particles/TFT10_Kayn_Base_Dance_Slayer_Body",
+					"Kayn_Skin20_Emote_Dance_Stage": "Characters/TFT10_Kayn/Skins/Skin0/Particles/TFT10_Kayn_Base_BA_Dance_Slayer_Stage"
+				},
+				"__type": "ResourceResolver"
+			},
+			"mEquipAnimation": "Transform_Slayer",
+			"{b6c044fb}": [
+				"{2bba82e7}",
+				"{3d73f25e}",
+				"{22890333}",
+				"{38eb34aa}",
+				"{02d07acb}",
+				"{145316a8}"
+			],
+			"{21b6167e}": [
+				"{3e53396e}",
+				"{31356855}",
+				"{a973e905}",
+				"{b54c1bdb}",
+				"{4b09e042}"
+			],
+			"__type": "GearData"
+		},
+		"__type": "GearSkinUpgrade"
+	},
+	"{d903d96c}": {
+		"mGearData": {
+			"mVFXResourceResolver": {
+				"resourceMap": {
+					"Kayn_Skin20_Emote_Dance_Stage": "Characters/TFT10_Kayn/Skins/Skin0/Particles/TFT10_Kayn_Base_BA_Dance_Slayer_Stage",
+					"{0497fc43}": "Characters/TFT10_Kayn/Skins/Skin0/Particles/TFT10_Kayn_Assassin_Q2",
+					"Kayn_Skin20_Emote_Dance_Body": "Characters/TFT10_Kayn/Skins/Skin0/Particles/TFT10_Kayn_Base_Dance_Slayer_Body",
+					"{0597fdd6}": "Characters/TFT10_Kayn/Skins/Skin0/Particles/TFT10_Kayn_Assassin_Q1"
+				},
+				"__type": "ResourceResolver"
+			},
+			"mEquipAnimation": "Transform_Assassin",
+			"{b6c044fb}": [
+				"{3e53396e}",
+				"{31356855}",
+				"{4b09e042}",
+				"{a973e905}",
+				"{b54c1bdb}",
+				"{22890333}",
+				"{38eb34aa}",
+				"{b4f6ef30}",
+				"{145316a8}"
+			],
+			"{21b6167e}": [
+				"{91d8aab5}",
+				"{c351696c}"
+			],
+			"__type": "GearData"
+		},
+		"__type": "GearSkinUpgrade"
+	},
 	"{144019e5}": {
 		"mScriptName": "TFT10_KaynBasicAttack",
 		"mSpell": {
@@ -237,7 +323,7 @@
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 50,
+			"arBase": 40,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
@@ -262,15 +348,15 @@
 		"tier": 5,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Heartsteel",
+				"TraitData": "{aeb6a5eb}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Edgelord",
+				"TraitData": "{0f07fb2f}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Wildcard",
+				"TraitData": "{aa9fc9a7}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

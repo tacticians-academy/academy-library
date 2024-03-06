@@ -46,11 +46,11 @@
 		"tier": 4,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Disco",
+				"TraitData": "{6fac93d3}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Dazzler",
+				"TraitData": "{a432b261}",
 				"__type": "TFTTraitContributionData"
 			}
 		],
@@ -72,8 +72,8 @@
 					"mName": "BaseDamage",
 					"mValues": [
 						0,
-						50,
-						75,
+						45,
+						70,
 						225,
 						0,
 						0,
@@ -181,7 +181,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{30211187}": {
+				"ModifiedCardCount": {
 					"mFormulaParts": [
 						{
 							"mSubparts": [
@@ -205,7 +205,7 @@
 									"__type": "ProductOfSubPartsCalculationPart"
 								},
 								{
-									"mDataValue": "{f0f1a326}",
+									"mDataValue": "CardCount",
 									"__type": "NamedDataValueCalculationPart"
 								}
 							],

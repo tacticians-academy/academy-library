@@ -27,10 +27,10 @@ const UNIT_SKIP_APINAMES = [
 	'TFT9_SLIME_Crab',
 ]
 
-export async function extractLatestPatchFor(setNumber: SetNumber) {
+export async function extractLatestPatchFor(setNumber: SetNumber, forceUpdate: boolean) {
 	await fs.mkdir(getOutputFolderForSet(setNumber), { recursive: true })
 	const championsPath = getPathToSet(setNumber, 'champion')
-	for (const championJSON of await getPatchFor(setNumber)) {
+	for (const championJSON of await getPatchFor(setNumber, forceUpdate)) {
 		await fs.mkdir(championsPath, { recursive: true })
 		const pathName = Object.values(championJSON).find(entry => entry.mCharacterName)!.mCharacterName.toLowerCase()
 		const outputPath = path.resolve(championsPath, pathName + '.json')
@@ -38,7 +38,7 @@ export async function extractLatestPatchFor(setNumber: SetNumber) {
 	}
 }
 
-async function getPatchFor(setNumber: SetNumber, customPatchLine?: string) {
+async function getPatchFor(setNumber: SetNumber, forceUpdate: boolean, customPatchLine?: string) {
 	const patchLine = customPatchLine ?? SET_DATA[setNumber].patchLine
 	const baseURL = `https://raw.communitydragon.org/${patchLine}`
 	const gameURL = `${baseURL}/cdragon/tft/en_us.json`
@@ -51,17 +51,19 @@ async function getPatchFor(setNumber: SetNumber, customPatchLine?: string) {
 	// const etagPath = getPathToPatch(patchLine, `.etag.local`)
 	const etagPath = getPathToSet(setNumber, `.etag.local`)
 	let oldEtag: string | undefined
-	try {
-		oldEtag = await fs.readFile(etagPath, 'utf8')
-	} catch {
-		console.log('No local hash. Reloading data from:', gameURL)
+	if (!forceUpdate) {
+		try {
+			oldEtag = await fs.readFile(etagPath, 'utf8')
+		} catch {
+			console.log('No local hash. Reloading data from:', gameURL)
+		}
 	}
 	const newEtag = mapResponse.headers.get('etag')
 	if (newEtag != null) {
 		if (newEtag === oldEtag) {
 			return []
 		}
-		console.log(oldEtag === undefined ? 'Loading new Set' : 'File updated! Rebuilding data.', newEtag, oldEtag)
+		console.log(oldEtag === undefined ? 'Loading Set from source' : 'File updated! Rebuilding data.', newEtag, oldEtag)
 		await fs.writeFile(etagPath, newEtag)
 	} else {
 		console.log('No cache etag for resource, reloading data.')
@@ -114,13 +116,13 @@ async function getPatchFor(setNumber: SetNumber, customPatchLine?: string) {
 		// console.log('Loading champion', apiName, url)
 		const response = await fetch(url)
 		if (!response.ok) {
-			console.error(response)
-			throw `ERR ${pathName} Unable to load`
+			console.error(url)
+			throw `ERR ${pathName} Unable to load. ${response.status} ${response.statusText}`
 		}
 		const json = await response.json() as ChampionJSON
 		for (const rootKey in json) { // Remove and rename keys
 			const entry = json[rootKey]
-			if (entry.__type === 'SkinCharacterMetaDataProperties') {
+			if (entry.__type === 'SkinCharacterMetaDataProperties' || entry.__type === 'VfxSystemDefinitionData' || entry.__type === 'ResourceResolver' || entry.__type === 'StaticMaterialDef') {
 				delete json[rootKey]
 				continue
 			}

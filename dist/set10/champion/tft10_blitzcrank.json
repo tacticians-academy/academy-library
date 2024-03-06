@@ -166,14 +166,14 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{ed2df49d}": {
+				"ZapDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{c869a79e}",
+								"mDataValue": "BaseZapDamage",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -467,12 +467,12 @@
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 120,
+			"arBase": 110,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 60,
+		"baseDamage": 90,
 		"baseArmor": 60,
 		"baseSpellBlock": 60,
 		"baseCritChance": 0.25,
@@ -492,11 +492,11 @@
 		"tier": 4,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Disco",
+				"TraitData": "{6fac93d3}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Sentinel",
+				"TraitData": "{427c0889}",
 				"__type": "TFTTraitContributionData"
 			}
 		],
@@ -505,7 +505,7 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 60,
+		"mInitialMana": 50,
 		"{22f5197d}": 190,
 		"__type": "TFTCharacterRecord"
 	}

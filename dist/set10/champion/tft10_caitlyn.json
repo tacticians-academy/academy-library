@@ -125,7 +125,7 @@
 			"mAffectsStatusFlags": 48,
 			"mRequiredUnitTags": {
 				"{a47810c1}": [
-					"Champion"
+					"{ea595ca6}"
 				],
 				"__type": "ObjectTags"
 			},
@@ -198,7 +198,7 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{5d0b9563}": {
+				"TOTAL_DAMAGE": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -313,7 +313,7 @@
 			"mAffectsTypeFlags": 22538,
 			"mRequiredUnitTags": {
 				"{a47810c1}": [
-					"Champion"
+					"{ea595ca6}"
 				],
 				"__type": "ObjectTags"
 			},
@@ -466,7 +466,7 @@
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 90,
+			"arBase": 75,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
@@ -525,11 +525,11 @@
 		"tier": 4,
 		"mLinkedTraits": [
 			{
-				"TraitData": "8-bit",
+				"TraitData": "{4995a396}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Rapidfire",
+				"TraitData": "{c505a558}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

@@ -50,9 +50,9 @@
 					"mName": "DAMAGE",
 					"mValues": [
 						30,
-						190,
-						285,
-						440,
+						240,
+						360,
+						555,
 						350,
 						350,
 						350
@@ -103,8 +103,8 @@
 					"mValues": [
 						0,
 						500,
-						575,
-						650,
+						625,
+						750,
 						0,
 						0,
 						0
@@ -143,7 +143,7 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{5d0b9563}": {
+				"TOTAL_DAMAGE": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -316,15 +316,15 @@
 		"tier": 2,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Disco",
+				"TraitData": "{6fac93d3}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Spellweaver",
+				"TraitData": "{c7e3ce1d}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Bruiser",
+				"TraitData": "{e89aa978}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

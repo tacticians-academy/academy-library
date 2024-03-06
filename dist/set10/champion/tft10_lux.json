@@ -304,9 +304,9 @@
 					"mName": "MagicDamage",
 					"mValues": [
 						0,
-						250,
-						375,
-						550,
+						260,
+						390,
+						575,
 						0,
 						0,
 						0
@@ -399,11 +399,11 @@
 		"tier": 3,
 		"mLinkedTraits": [
 			{
-				"TraitData": "EDM",
+				"TraitData": "{f208ad7f}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Dazzler",
+				"TraitData": "{a432b261}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

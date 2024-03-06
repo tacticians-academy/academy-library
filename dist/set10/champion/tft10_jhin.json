@@ -301,8 +301,8 @@
 					"mName": "PhysicalDamageRatio",
 					"mValues": [
 						0,
-						0.6000000238418579,
-						0.6000000238418579,
+						0.6600000262260437,
+						0.6600000262260437,
 						4.440000057220459,
 						4.440000057220459,
 						200,
@@ -442,7 +442,7 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{5d0b9563}": {
+				"TOTAL_DAMAGE": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -451,12 +451,12 @@
 							"mSubparts": [
 								{
 									"mStat": 2,
-									"mDataValue": "{80d32b78}",
+									"mDataValue": "PhysicalDamageRatio",
 									"__type": "StatByNamedDataValueCalculationPart"
 								},
 								{
 									"mSubpart": {
-										"mDataValue": "{5503d899}",
+										"mDataValue": "MagicalDamageBase",
 										"__type": "NamedDataValueCalculationPart"
 									},
 									"mRatio": 0.009999999776482582,
@@ -554,7 +554,7 @@
 	},
 	"Characters/TFT10_Jhin/CharacterRecords/Root": {
 		"mCharacterName": "TFT10_Jhin",
-		"baseHP": 850,
+		"baseHP": 950,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
@@ -564,8 +564,8 @@
 			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 70,
-		"baseArmor": 30,
-		"baseSpellBlock": 30,
+		"baseArmor": 40,
+		"baseSpellBlock": 40,
 		"baseCritChance": 0.25,
 		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
@@ -594,11 +594,11 @@
 		"tier": 5,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Maestro",
+				"TraitData": "{4da47dd2}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Big Shot",
+				"TraitData": "{b540ffc4}",
 				"__type": "TFTTraitContributionData"
 			}
 		],
@@ -607,6 +607,7 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
+		"mInitialMana": 30,
 		"{22f5197d}": 210,
 		"{7cbc4762}": 20,
 		"__type": "TFTCharacterRecord"

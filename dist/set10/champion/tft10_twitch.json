@@ -39,11 +39,11 @@
 		"tier": 2,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Punk",
+				"TraitData": "{366931dc}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Executioner",
+				"TraitData": "{d435e732}",
 				"__type": "TFTTraitContributionData"
 			}
 		],
@@ -263,7 +263,7 @@
 					"mFormulaParts": [
 						{
 							"mStat": 2,
-							"mDataValue": "{97627dc3}",
+							"mDataValue": "InitialADDamage",
 							"__type": "StatByNamedDataValueCalculationPart"
 						}
 					],
@@ -276,7 +276,7 @@
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{01b53211}",
+								"mDataValue": "SecondaryMagicDamage",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,

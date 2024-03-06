@@ -1,4 +1,139 @@
 {
+	"{5de0361b}": {
+		"mGearData": {
+			"skinMeshProperties": {
+				"skeleton": "ASSETS/Characters/TFT10_Sona/Skins/Base/TFT10_Sona.TFT_Set10.skl",
+				"materialOverride": [
+					{
+						"texture": "ASSETS/Characters/TFT10_Sona/Skins/Base/TFT10_Sona_Base_glow_TX_CM.TFT_Set10.tex",
+						"submesh": "Genre1_Holo",
+						"__type": "SkinMeshDataProperties_MaterialOverride"
+					}
+				],
+				"__type": "SkinMeshDataProperties"
+			},
+			"mVFXResourceResolver": {
+				"__type": "ResourceResolver"
+			},
+			"SquarePortraitIcon": "ASSETS/Characters/TFT10_Sona/HUD/TFT10_Sona_Square.TFT_Set10.dds",
+			"{b6c044fb}": [
+				"{b87ae5f6}",
+				"{67eb7e1f}",
+				"{c2c57fbf}",
+				"{05210e16}"
+			],
+			"{21b6167e}": [
+				"BODY",
+				"{1c1e4241}",
+				"{37bce708}"
+			],
+			"{71202eae}": true,
+			"{0e24cc07}": [
+				{
+					"effectKey": "{90716493}",
+					"boneName": "C_Buffbone_Cstm_Zero_Loc",
+					"__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+				},
+				{
+					"effectKey": "{a3625c4e}",
+					"boneName": "head",
+					"__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+				}
+			],
+			"__type": "GearData"
+		},
+		"__type": "GearSkinUpgrade"
+	},
+	"{5ee037ae}": {
+		"mGearData": {
+			"skinMeshProperties": {
+				"skeleton": "ASSETS/Characters/TFT10_Sona/Skins/Base/TFT10_Sona.TFT_Set10.skl",
+				"materialOverride": [
+					{
+						"texture": "ASSETS/Characters/TFT10_Sona/Skins/Base/TFT10_Sona_Base_glow_TX_CM.TFT_Set10.tex",
+						"submesh": "Genre2_Holo",
+						"__type": "SkinMeshDataProperties_MaterialOverride"
+					}
+				],
+				"__type": "SkinMeshDataProperties"
+			},
+			"mVFXResourceResolver": {
+				"__type": "ResourceResolver"
+			},
+			"SquarePortraitIcon": "ASSETS/Characters/TFT10_Sona/HUD/TFT10_Sona_Square.TFT_Set10.dds",
+			"{b6c044fb}": [
+				"{1c1e4241}",
+				"{37bce708}",
+				"{c2c57fbf}",
+				"{05210e16}"
+			],
+			"{21b6167e}": [
+				"BODY",
+				"{b87ae5f6}",
+				"{67eb7e1f}"
+			],
+			"{71202eae}": true,
+			"{0e24cc07}": [
+				{
+					"effectKey": "TFT10_Sona_Idle_Hair_3",
+					"boneName": "C_Buffbone_Cstm_Zero_Loc",
+					"__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+				},
+				{
+					"effectKey": "{a3625c4e}",
+					"boneName": "head",
+					"__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+				}
+			],
+			"__type": "GearData"
+		},
+		"__type": "GearSkinUpgrade"
+	},
+	"{5fe03941}": {
+		"mGearData": {
+			"skinMeshProperties": {
+				"skeleton": "ASSETS/Characters/TFT10_Sona/Skins/Base/TFT10_Sona.TFT_Set10.skl",
+				"materialOverride": [
+					{
+						"texture": "ASSETS/Characters/TFT10_Sona/Skins/Base/TFT10_Sona_Base_glow_TX_CM.TFT_Set10.tex",
+						"submesh": "Genre3_Holo",
+						"__type": "SkinMeshDataProperties_MaterialOverride"
+					}
+				],
+				"__type": "SkinMeshDataProperties"
+			},
+			"mVFXResourceResolver": {
+				"__type": "ResourceResolver"
+			},
+			"SquarePortraitIcon": "ASSETS/Characters/TFT10_Sona/HUD/TFT10_Sona_Square.TFT_Set10.dds",
+			"{b6c044fb}": [
+				"{1c1e4241}",
+				"{37bce708}",
+				"{b87ae5f6}",
+				"{67eb7e1f}"
+			],
+			"{21b6167e}": [
+				"BODY",
+				"{c2c57fbf}",
+				"{05210e16}"
+			],
+			"{71202eae}": true,
+			"{0e24cc07}": [
+				{
+					"effectKey": "TFT10_Sona_Idle_Hair_2",
+					"boneName": "C_Buffbone_Cstm_Zero_Loc",
+					"__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+				},
+				{
+					"effectKey": "{a3625c4e}",
+					"boneName": "head",
+					"__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+				}
+			],
+			"__type": "GearData"
+		},
+		"__type": "GearSkinUpgrade"
+	},
 	"{2f340dbd}": {
 		"mScriptName": "TFT10_SonaCritAttack",
 		"mSpell": {
@@ -385,14 +520,14 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{00c45eeb}": {
+				"ModifiedProcDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{1d399a91}",
+								"mDataValue": "BaseProcDamage",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -453,8 +588,8 @@
 					"mName": "HealRatio",
 					"mValues": [
 						0.03999999910593033,
-						0.05000000074505806,
-						0.07999999821186066,
+						0.05999999865889549,
+						0.09000000357627869,
 						1,
 						1,
 						1,
@@ -466,8 +601,8 @@
 					"mName": "Duration",
 					"mValues": [
 						6,
-						2,
-						2,
+						2.5,
+						2.5,
 						30,
 						30,
 						30,
@@ -504,13 +639,13 @@
 				{
 					"mName": "HeadlinerAttackSpeedBoost",
 					"mValues": [
-						0.009999999776482582,
-						0.009999999776482582,
-						0.009999999776482582,
-						0.009999999776482582,
-						0.009999999776482582,
-						0.009999999776482582,
-						0.009999999776482582
+						0.019999999552965164,
+						0.019999999552965164,
+						0.019999999552965164,
+						0.019999999552965164,
+						0.019999999552965164,
+						0.019999999552965164,
+						0.019999999552965164
 					],
 					"__type": "SpellDataValue"
 				}
@@ -796,11 +931,11 @@
 		"tier": 5,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Mixmaster",
+				"TraitData": "{bdbcd3bf}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Spellweaver",
+				"TraitData": "{c7e3ce1d}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

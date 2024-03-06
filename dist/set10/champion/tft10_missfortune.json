@@ -277,15 +277,16 @@
 	"Characters/TFT10_MissFortune/Spells/TFT10_MissFortuneSpell": {
 		"mScriptName": "TFT10_MissFortuneSpell",
 		"mSpell": {
+			"flags": 4,
 			"mAffectsTypeFlags": 1029,
 			"mDataValues": [
 				{
 					"mName": "PrimaryADRatio",
 					"mValues": [
-						2.799999952316284,
-						2.799999952316284,
-						2.799999952316284,
-						2.9000000953674316,
+						2.950000047683716,
+						2.950000047683716,
+						2.950000047683716,
+						3.049999952316284,
 						2.799999952316284,
 						2.799999952316284,
 						2.799999952316284
@@ -346,14 +347,14 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{dad318b4}": {
+				"PrimaryTotalDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mStat": 2,
-							"mDataValue": "{15b37e0f}",
+							"mDataValue": "PrimaryADRatio",
 							"__type": "StatByNamedDataValueCalculationPart"
 						}
 					],
@@ -366,13 +367,13 @@
 					"mFormulaParts": [
 						{
 							"mStat": 2,
-							"mDataValue": "{a74d13b7}",
+							"mDataValue": "SecondaryADRatio",
 							"__type": "StatByNamedDataValueCalculationPart"
 						}
 					],
 					"__type": "GameCalculation"
 				},
-				"{1ece8846}": {
+				"ScaledASBuff": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -453,11 +454,11 @@
 		"tier": 3,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Jazz",
+				"TraitData": "{2951a0fc}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Big Shot",
+				"TraitData": "{b540ffc4}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

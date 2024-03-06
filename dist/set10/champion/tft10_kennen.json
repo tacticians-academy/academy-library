@@ -1,7 +1,7 @@
 {
 	"Characters/TFT10_Kennen/CharacterRecords/Root": {
 		"mCharacterName": "TFT10_Kennen",
-		"baseHP": 650,
+		"baseHP": 700,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
@@ -30,15 +30,15 @@
 		"tier": 1,
 		"mLinkedTraits": [
 			{
-				"TraitData": "True Damage",
+				"TraitData": "{c9bbc394}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Superfan",
+				"TraitData": "{fa7abfbd}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Guardian",
+				"TraitData": "{18931112}",
 				"__type": "TFTTraitContributionData"
 			}
 		],
@@ -411,7 +411,7 @@
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{6d17501b}",
+								"mDataValue": "JoltDamage",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,

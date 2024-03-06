@@ -245,26 +245,26 @@
 				{
 					"mName": "HeadlinerHealth",
 					"mValues": [
-						200,
-						200,
-						200,
-						200,
-						200,
-						200,
-						200
+						150,
+						150,
+						150,
+						150,
+						150,
+						150,
+						150
 					],
 					"__type": "SpellDataValue"
 				},
 				{
 					"mName": "HeadlinerAttackDamage",
 					"mValues": [
-						0.20000000298023224,
-						0.20000000298023224,
-						0.20000000298023224,
-						0.20000000298023224,
-						0.20000000298023224,
-						0.20000000298023224,
-						0.20000000298023224
+						0.15000000596046448,
+						0.15000000596046448,
+						0.15000000596046448,
+						0.15000000596046448,
+						0.15000000596046448,
+						0.15000000596046448,
+						0.15000000596046448
 					],
 					"__type": "SpellDataValue"
 				},
@@ -285,7 +285,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{f3bea264}": {
+				"StackingOmnivamp": {
 					"mMultiplier": {
 						"mNumber": 100,
 						"__type": "NumberCalculationPart"
@@ -497,15 +497,15 @@
 		"tier": 3,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Heartsteel",
+				"TraitData": "{aeb6a5eb}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Edgelord",
+				"TraitData": "{0f07fb2f}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Crowd Diver",
+				"TraitData": "{4f14e6c8}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

@@ -48,11 +48,11 @@
 		"tier": 2,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Country",
+				"TraitData": "{eb00b415}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Crowd Diver",
+				"TraitData": "{4f14e6c8}",
 				"__type": "TFTTraitContributionData"
 			}
 		],
@@ -85,9 +85,9 @@
 					"mName": "MagicDamage",
 					"mValues": [
 						0,
-						140,
-						210,
-						315,
+						150,
+						225,
+						340,
 						0,
 						0,
 						0

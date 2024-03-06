@@ -41,8 +41,8 @@
 					"mValues": [
 						15,
 						12,
-						15,
-						25,
+						18,
+						33,
 						75,
 						75,
 						75
@@ -69,7 +69,7 @@
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{21d1ebf2}",
+								"mDataValue": "BaseDR",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -107,7 +107,7 @@
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 70,
+		"baseDamage": 88,
 		"baseArmor": 40,
 		"baseSpellBlock": 40,
 		"baseCritChance": 0.25,
@@ -127,11 +127,11 @@
 		"tier": 1,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Country",
+				"TraitData": "{eb00b415}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Bruiser",
+				"TraitData": "{e89aa978}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

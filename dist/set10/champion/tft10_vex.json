@@ -19,13 +19,13 @@
 				{
 					"mName": "StunDuration",
 					"mValues": [
-						1.5,
-						1.5,
-						1.5,
-						1.5,
-						1.5,
-						1.5,
-						1.5
+						0.75,
+						0.75,
+						0.75,
+						0.75,
+						0.75,
+						0.75,
+						0.75
 					],
 					"__type": "SpellDataValue"
 				},
@@ -318,11 +318,11 @@
 		"tier": 3,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Emo",
+				"TraitData": "{f3f76784}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Executioner",
+				"TraitData": "{d435e732}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

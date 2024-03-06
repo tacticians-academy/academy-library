@@ -108,14 +108,14 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{5d0b9563}": {
+				"TOTAL_DAMAGE": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{ae168e4c}",
+								"mDataValue": "MAGIC_DAMAGE_BASE",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -404,11 +404,11 @@
 		"tier": 1,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Disco",
+				"TraitData": "{6fac93d3}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Dazzler",
+				"TraitData": "{a432b261}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

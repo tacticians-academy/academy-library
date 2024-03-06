@@ -333,7 +333,7 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{5d0b9563}": {
+				"TOTAL_DAMAGE": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -346,7 +346,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{e65830e6}": {
+				"DR_TOTAL": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -358,12 +358,12 @@
 								{
 									"mSubparts": [
 										{
-											"mDataValue": "{35a7fc53}",
+											"mDataValue": "BASE_DR",
 											"__type": "NamedDataValueCalculationPart"
 										},
 										{
 											"mSubpart": {
-												"mDataValue": "{07c4007f}",
+												"mDataValue": "DR_PERCENT_AP",
 												"__type": "NamedDataValueCalculationPart"
 											},
 											"mRatio": 0.009999999776482582,
@@ -469,11 +469,11 @@
 		"tier": 2,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Punk",
+				"TraitData": "{366931dc}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Guardian",
+				"TraitData": "{18931112}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

@@ -1,11 +1,11 @@
 {
 	"Characters/TFT10_Evelynn/CharacterRecords/Root": {
 		"mCharacterName": "TFT10_Evelynn",
-		"baseHP": 550,
+		"baseHP": 650,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 90,
+			"arBase": 75,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
@@ -30,11 +30,11 @@
 		"tier": 1,
 		"mLinkedTraits": [
 			{
-				"TraitData": "K/DA",
+				"TraitData": "{af6fb94d}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Crowd Diver",
+				"TraitData": "{4f14e6c8}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

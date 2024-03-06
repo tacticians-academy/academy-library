@@ -67,13 +67,13 @@
 				{
 					"mName": "ShieldPercent",
 					"mValues": [
-						6,
-						6,
-						6,
-						6,
-						6,
-						6,
-						6
+						8,
+						8,
+						8,
+						8,
+						8,
+						8,
+						8
 					],
 					"__type": "SpellDataValue"
 				},
@@ -119,13 +119,13 @@
 				{
 					"mName": "HeadlinerMana",
 					"mValues": [
-						40,
-						40,
-						40,
-						40,
-						40,
-						40,
-						40
+						60,
+						60,
+						60,
+						60,
+						60,
+						60,
+						60
 					],
 					"__type": "SpellDataValue"
 				},
@@ -133,9 +133,9 @@
 					"mName": "DamagePercent",
 					"mValues": [
 						0.5,
-						0.699999988079071,
 						0.8999999761581421,
-						1.149999976158142,
+						1.100000023841858,
+						1.399999976158142,
 						0.5,
 						0.5,
 						0.5
@@ -319,15 +319,15 @@
 		"tier": 3,
 		"mLinkedTraits": [
 			{
-				"TraitData": "K/DA",
+				"TraitData": "{af6fb94d}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Superfan",
+				"TraitData": "{fa7abfbd}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Guardian",
+				"TraitData": "{18931112}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

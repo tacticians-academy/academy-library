@@ -7925,6 +7925,14 @@ export const abilities: Record<string, AbilityData> = {
 			'TootChance': [5, 5, 5, 5],
 		},
 	},
+	'TFT11_XayahBenchDummy': {
+		desc: ` Xayah deals <physicalDamage>@LoversDamage@</physicalDamage> physical damage to all enemies hit by Rakan's ability.`,
+		icon: `ASSETS/Characters/TFT11_XayahRakanDummy/HUD/Icons2D/TFT11_XayahRakanDummyQ.TFT_Set11.tex`,
+		name: `Deadly Plumage`,
+		variables: {
+			'LoversDamage': [3, 200, 300, 800],
+		},
+	},
 	'TFT11_Xayah': {
 		desc: `Throw @FeatherCount@ feathers at the @NumClosestTargets@&nbsp;closest enemies, each dealing <physicalDamage>@ModifiedFeatherDamage@&nbsp;(%i:scaleAD%)</physicalDamage>&nbsp;physical damage. Then, recall the feathers, dealing <physicalDamage>@TotalFeatherRecallDamage@&nbsp;(%i:scaleAD%%i:scaleAP%)</physicalDamage>&nbsp;physical damage to enemies they pass through.`,
 		icon: `ASSETS/Characters/TFT11_Xayah/HUD/Icons2D/TFT11_Xayah_Ability.tex`,
@@ -7935,14 +7943,6 @@ export const abilities: Record<string, AbilityData> = {
 			'FeatherRecallDamage': [0, 0.30000001192092896, 0.30000001192092896, 1],
 			'FeatherRecallBaseDamage': [0, 15, 25, 75],
 			'FeatherCount': [0, 12, 12, 30],
-		},
-	},
-	'TFT11_XayahBenchDummy': {
-		desc: ` Xayah deals <physicalDamage>@LoversDamage@</physicalDamage> physical damage to all enemies hit by Rakan's ability.`,
-		icon: `ASSETS/Characters/TFT11_XayahRakanDummy/HUD/Icons2D/TFT11_XayahRakanDummyQ.TFT_Set11.tex`,
-		name: `Deadly Plumage`,
-		variables: {
-			'LoversDamage': [3, 200, 300, 800],
 		},
 	},
 	'TFT11_XayahRakanDummy': {

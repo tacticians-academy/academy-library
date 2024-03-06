@@ -216,7 +216,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{18a1e591}": {
+				"ModifiedTentacleDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -242,7 +242,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{c810fc6b}": {
+				"TotalBonusArmor": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -257,7 +257,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{c3bfb9d3}": {
+				"TotalBonusMR": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -379,11 +379,11 @@
 		"tier": 5,
 		"mLinkedTraits": [
 			{
-				"TraitData": "ILLBEATS",
+				"TraitData": "{8fcdf725}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Bruiser",
+				"TraitData": "{e89aa978}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

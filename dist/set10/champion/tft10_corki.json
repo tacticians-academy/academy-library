@@ -252,13 +252,13 @@
 				{
 					"mName": "RocketDamage",
 					"mValues": [
-						3,
-						3,
-						3,
-						3,
-						3,
-						3,
-						3
+						3.200000047683716,
+						3.200000047683716,
+						3.200000047683716,
+						3.200000047683716,
+						3.200000047683716,
+						3.200000047683716,
+						3.200000047683716
 					],
 					"__type": "SpellDataValue"
 				},
@@ -316,14 +316,14 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{8893044d}": {
+				"ModifiedWoundDuration": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{7bfef408}",
+								"mDataValue": "WoundDuration",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -459,14 +459,14 @@
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 48,
+		"baseDamage": 50,
 		"baseArmor": 15,
 		"baseSpellBlock": 15,
 		"baseCritChance": 0.25,
 		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
 		"attackRange": 900,
-		"attackSpeed": 0.699999988079071,
+		"attackSpeed": 0.75,
 		"basicAttack": {
 			"mAttackName": "TFT10_CorkiBasicAttack",
 			"__type": "AttackSlotData"
@@ -495,11 +495,11 @@
 		"tier": 1,
 		"mLinkedTraits": [
 			{
-				"TraitData": "8-bit",
+				"TraitData": "{4995a396}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Big Shot",
+				"TraitData": "{b540ffc4}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

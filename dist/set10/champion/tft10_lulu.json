@@ -98,9 +98,9 @@
 					"mName": "StunDamage",
 					"mValues": [
 						0,
-						120,
-						180,
-						280,
+						150,
+						225,
+						360,
 						0,
 						0,
 						0
@@ -180,7 +180,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{cf08746a}": {
+				"ModifiedBigCastDamage": {
 					"{cbcac618}": 5,
 					"mFormulaParts": [
 						{
@@ -508,11 +508,11 @@
 		"tier": 3,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Hyperpop",
+				"TraitData": "{32777aa0}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Spellweaver",
+				"TraitData": "{c7e3ce1d}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

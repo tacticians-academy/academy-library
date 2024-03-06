@@ -131,7 +131,7 @@
 						0.05000000074505806,
 						0.05000000074505806,
 						0.05000000074505806,
-						0.05000000074505806,
+						0.10000000149011612,
 						0.05000000074505806,
 						0.05000000074505806,
 						0.05000000074505806
@@ -179,7 +179,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{d9ddf189}": {
+				"TotalBonusAD": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -187,13 +187,13 @@
 						{
 							"mStat": 11,
 							"mStatFormula": 2,
-							"mDataValue": "{3513a645}",
+							"mDataValue": "PercentHealthAsAD",
 							"__type": "StatByNamedDataValueCalculationPart"
 						}
 					],
 					"__type": "GameCalculation"
 				},
-				"{1a53f54b}": {
+				"ModifiedPercentHealthHeal": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -260,7 +260,7 @@
 		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
 		"attackRange": 180,
-		"attackSpeed": 0.6499999761581421,
+		"attackSpeed": 0.699999988079071,
 		"spellNames": [
 			"TFT10_PoppySpell",
 			"BaseSpell",
@@ -273,11 +273,11 @@
 		"tier": 4,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Emo",
+				"TraitData": "{f3f76784}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Mosher",
+				"TraitData": "{3afd9bd6}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

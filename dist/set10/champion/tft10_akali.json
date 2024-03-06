@@ -30,15 +30,15 @@
 		"tier": 4,
 		"mLinkedTraits": [
 			{
-				"TraitData": "K/DA",
+				"TraitData": "{af6fb94d}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Executioner",
+				"TraitData": "{d435e732}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Breakout",
+				"TraitData": "{383e2598}",
 				"__type": "TFTTraitContributionData"
 			}
 		],
@@ -179,14 +179,14 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{4fd047a2}": {
+				"Total_Dash_Damage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{951d082b}",
+								"mDataValue": "Base_Dash_Damage",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -195,14 +195,14 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{561545b4}": {
+				"Total_Strike_Damage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mStat": 2,
-							"mDataValue": "{f03bb321}",
+							"mDataValue": "Base_Strike_Damage",
 							"__type": "StatByNamedDataValueCalculationPart"
 						}
 					],

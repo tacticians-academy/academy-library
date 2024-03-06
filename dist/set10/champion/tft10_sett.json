@@ -63,9 +63,9 @@
 					"mName": "Damage",
 					"mValues": [
 						0,
-						275,
-						420,
-						680,
+						250,
+						375,
+						600,
 						0,
 						0,
 						0
@@ -76,9 +76,9 @@
 					"mName": "SecondaryDamage",
 					"mValues": [
 						0,
-						130,
-						210,
-						340,
+						120,
+						180,
+						290,
 						0,
 						0,
 						0
@@ -181,7 +181,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{c823c904}": {
+				"TotalSecondaryDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -293,7 +293,7 @@
 	},
 	"Characters/TFT10_Sett/CharacterRecords/Root": {
 		"mCharacterName": "TFT10_Sett",
-		"baseHP": 950,
+		"baseHP": 900,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
@@ -322,15 +322,15 @@
 		"tier": 3,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Heartsteel",
+				"TraitData": "{aeb6a5eb}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Bruiser",
+				"TraitData": "{e89aa978}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Mosher",
+				"TraitData": "{3afd9bd6}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

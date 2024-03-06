@@ -142,9 +142,9 @@
 					"mName": "BasePercentAD",
 					"mValues": [
 						2.0999999046325684,
-						2.4000000953674316,
-						2.4000000953674316,
-						2.5,
+						3,
+						3,
+						3.0999999046325684,
 						2.0999999046325684,
 						2.0999999046325684,
 						2.0999999046325684
@@ -233,7 +233,7 @@
 					"mDisplayAsPercent": true,
 					"__type": "GameCalculation"
 				},
-				"{302adbe0}": {
+				"ADDamagePerStack": {
 					"{cbcac618}": 5,
 					"mFormulaParts": [
 						{
@@ -244,12 +244,12 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{6ebd7238}": {
+				"BaseADDamage": {
 					"{cbcac618}": 5,
 					"mFormulaParts": [
 						{
 							"mStat": 2,
-							"mDataValue": "{0b4f90f4}",
+							"mDataValue": "BasePercentAD",
 							"__type": "StatByNamedDataValueCalculationPart"
 						}
 					],
@@ -488,7 +488,7 @@
 		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
 		"attackRange": 890,
-		"attackSpeed": 0.699999988079071,
+		"attackSpeed": 0.75,
 		"basicAttack": {
 			"mAttackName": "TFT10_SamiraBasicAttack",
 			"__type": "AttackSlotData"
@@ -517,11 +517,11 @@
 		"tier": 3,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Country",
+				"TraitData": "{eb00b415}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Executioner",
+				"TraitData": "{d435e732}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

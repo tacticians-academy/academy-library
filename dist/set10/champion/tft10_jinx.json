@@ -132,27 +132,27 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{cb98368b}": {
+				"ROCKET_DAMAGE": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mStat": 2,
-							"mDataValue": "{09a3f045}",
+							"mDataValue": "ROCKET_AD_PERCENT",
 							"__type": "StatByNamedDataValueCalculationPart"
 						}
 					],
 					"__type": "GameCalculation"
 				},
-				"{085e56a2}": {
+				"TOTAL_ATTACK_SPEED": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{b9284eb5}",
+								"mDataValue": "ATTACK_SPEED_BONUS",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -169,7 +169,7 @@
 					"mFormulaParts": [
 						{
 							"mStat": 2,
-							"mDataValue": "{ca2afbe8}",
+							"mDataValue": "HeadlinerRocketBonus",
 							"__type": "StatByNamedDataValueCalculationPart"
 						}
 					],
@@ -300,7 +300,7 @@
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 45,
+		"baseDamage": 50,
 		"baseArmor": 15,
 		"baseSpellBlock": 15,
 		"baseCritChance": 0.25,
@@ -325,11 +325,11 @@
 		"tier": 1,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Punk",
+				"TraitData": "{366931dc}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Rapidfire",
+				"TraitData": "{c505a558}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

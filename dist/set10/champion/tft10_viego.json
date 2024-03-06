@@ -289,14 +289,14 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{4e3a954a}": {
+				"ModifiedSlamDamage": {
 					"{cbcac618}": 5,
 					"mFormulaParts": [
 						{
 							"mSubparts": [
 								{
 									"mStat": 2,
-									"mDataValue": "{dd177fa5}",
+									"mDataValue": "SlamDamage",
 									"__type": "StatByNamedDataValueCalculationPart"
 								}
 							],
@@ -305,7 +305,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{45fc298f}": {
+				"ModifiedMarkDuration": {
 					"{cbcac618}": 5,
 					"mFormulaParts": [
 						{
@@ -385,11 +385,11 @@
 		"tier": 4,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Pentakill",
+				"TraitData": "{11f20023}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Edgelord",
+				"TraitData": "{0f07fb2f}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

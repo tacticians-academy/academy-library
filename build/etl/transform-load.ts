@@ -1,6 +1,6 @@
 import fs from 'fs/promises'
 
-import { CURRENT_SET_NUMBER, SET_DATA, type ItemData, type SetNumber } from '../../dist/index.js'
+import { SET_DATA, type ItemData, type SetNumber } from '../../dist/index.js'
 
 import { getPathToPatch, getPathToSet } from '../helpers/files.js'
 import type { GameResponseJSON, MapResponseJSON } from '../helpers/types.js'
@@ -31,7 +31,7 @@ export async function transformLoad(setNumber: SetNumber) {
 	const { champions, traits, mutator } = getSetDataFrom(setNumber, parentSetNumber, gameResponseJSON)
 	const itemsData = (gameResponseJSON.items as ItemData[]).filter(item => item.name != null && (item.apiName == null || (!item.apiName.startsWith('TFTTutorial_') && !item.apiName.endsWith('_DU') && !item.apiName.endsWith('HR'))))
 
-	const baseSet = gameResponseJSON.sets[CURRENT_SET_NUMBER]
+	const baseSet = gameResponseJSON.sets['1']
 	for (const apiName of getBaseUnitsFor(patchLine)) {
 		if (!champions.some(champion => champion.apiName === apiName)) {
 			const baseUnit = baseSet.champions.find(champion => champion.apiName === apiName)

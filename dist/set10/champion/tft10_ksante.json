@@ -92,13 +92,13 @@
 				{
 					"mName": "BaseDR",
 					"mValues": [
-						0.25,
-						0.25,
-						0.25,
-						0.25,
-						0.25,
-						0.25,
-						0.25
+						0.20000000298023224,
+						0.20000000298023224,
+						0.20000000298023224,
+						0.20000000298023224,
+						0.20000000298023224,
+						0.20000000298023224,
+						0.20000000298023224
 					],
 					"__type": "SpellDataValue"
 				},
@@ -118,13 +118,13 @@
 				{
 					"mName": "ADRatio",
 					"mValues": [
-						8,
-						8,
-						8,
-						8,
-						8,
-						8,
-						8
+						9.989999771118164,
+						9.989999771118164,
+						9.989999771118164,
+						9.989999771118164,
+						9.989999771118164,
+						9.989999771118164,
+						9.989999771118164
 					],
 					"__type": "SpellDataValue"
 				},
@@ -168,12 +168,12 @@
 								{
 									"mSubparts": [
 										{
-											"mDataValue": "{21d1ebf2}",
+											"mDataValue": "BaseDR",
 											"__type": "NamedDataValueCalculationPart"
 										},
 										{
 											"mSubpart": {
-												"mDataValue": "{906cde31}",
+												"mDataValue": "DRAPRatio",
 												"__type": "NamedDataValueCalculationPart"
 											},
 											"mRatio": 0.009999999776482582,
@@ -305,11 +305,11 @@
 		"tier": 1,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Heartsteel",
+				"TraitData": "{aeb6a5eb}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Sentinel",
+				"TraitData": "{427c0889}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

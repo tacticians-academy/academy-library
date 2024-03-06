@@ -10,7 +10,7 @@
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 75,
+		"baseDamage": 72,
 		"baseArmor": 60,
 		"baseSpellBlock": 60,
 		"baseCritChance": 0.25,
@@ -30,11 +30,11 @@
 		"tier": 4,
 		"mLinkedTraits": [
 			{
-				"TraitData": "EDM",
+				"TraitData": "{f208ad7f}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Crowd Diver",
+				"TraitData": "{4f14e6c8}",
 				"__type": "TFTTraitContributionData"
 			}
 		],
@@ -168,37 +168,28 @@
 				},
 				{
 					"mName": "HeadlinerAttackDamage",
+					"mValues": [
+						0.05000000074505806,
+						0.05000000074505806,
+						0.05000000074505806,
+						0.05000000074505806,
+						0.05000000074505806,
+						0.05000000074505806,
+						0.05000000074505806
+					],
 					"__type": "SpellDataValue"
 				},
 				{
 					"mName": "HeadlinerShadowAD",
-					"mValues": [
-						0.10000000149011612,
-						0.10000000149011612,
-						0.10000000149011612,
-						0.10000000149011612,
-						0.10000000149011612,
-						0.10000000149011612,
-						0.10000000149011612
-					],
 					"__type": "SpellDataValue"
 				},
 				{
 					"mName": "HeadlinerShadowAS",
-					"mValues": [
-						0.10000000149011612,
-						0.10000000149011612,
-						0.10000000149011612,
-						0.10000000149011612,
-						0.10000000149011612,
-						0.10000000149011612,
-						0.10000000149011612
-					],
 					"__type": "SpellDataValue"
 				}
 			],
 			"mSpellCalculations": {
-				"{728ad1db}": {
+				"ModifiedHealthThreshold": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -214,7 +205,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{253e9e6e}": {
+				"FinalAttackDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -246,7 +237,7 @@
 								},
 								{
 									"mStat": 2,
-									"mDataValue": "{573c99f8}",
+									"mDataValue": "HeadlinerShadowAD",
 									"__type": "StatByNamedDataValueCalculationPart"
 								}
 							],
@@ -255,7 +246,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{50443a39}": {
+				"TotalMarkDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -264,7 +255,7 @@
 							"mSubparts": [
 								{
 									"mStat": 2,
-									"mDataValue": "{882004f7}",
+									"mDataValue": "MarkDamageADRatio",
 									"__type": "StatByNamedDataValueCalculationPart"
 								}
 							],

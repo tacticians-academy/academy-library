@@ -143,7 +143,7 @@
 						0,
 						20,
 						25,
-						35,
+						30,
 						0,
 						0,
 						0
@@ -191,7 +191,7 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{2192a98d}": {
+				"ModifiedHealValue": {
 					"{cbcac618}": 5,
 					"mFormulaParts": [
 						{
@@ -205,7 +205,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{d086982f}": {
+				"ModifiedASValue": {
 					"{cbcac618}": 5,
 					"mFormulaParts": [
 						{
@@ -256,15 +256,15 @@
 		"tier": 1,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Pentakill",
+				"TraitData": "{11f20023}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Bruiser",
+				"TraitData": "{e89aa978}",
 				"__type": "TFTTraitContributionData"
 			}
 		],
-		"{b6b01440}": "{d5823aeb}",
+		"{b6b01440}": "{53d104ac}",
 		"mMoveInterval": -0.10000000149011612,
 		"mMoveProximity": 180,
 		"mMoveRange": 250,

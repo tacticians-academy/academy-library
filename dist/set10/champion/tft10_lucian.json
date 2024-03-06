@@ -297,7 +297,7 @@
 			"mAffectsTypeFlags": 9221,
 			"mRequiredUnitTags": {
 				"{a47810c1}": [
-					"Champion"
+					"{ea595ca6}"
 				],
 				"__type": "ObjectTags"
 			},
@@ -424,7 +424,7 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{5d0b9563}": {
+				"TOTAL_DAMAGE": {
 					"{cbcac618}": 5,
 					"mFormulaParts": [
 						{
@@ -462,22 +462,29 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{ee970b12}": {
+				"ShotsFromAS": {
 					"mFormulaParts": [
 						{
 							"mSubparts": [
 								{
-									"mPart1": {
-										"mStat": 3,
-										"mStatFormula": 2,
-										"mCoefficient": 100,
-										"__type": "StatByCoefficientCalculationPart"
-									},
-									"mPart2": {
-										"mNumber": 0.02500000037252903,
-										"__type": "NumberCalculationPart"
-									},
-									"__type": "ProductOfSubPartsCalculationPart"
+									"mCeiling": 22.777999877929688,
+									"mFloor": null,
+									"mSubparts": [
+										{
+											"mPart1": {
+												"mStat": 3,
+												"mStatFormula": 2,
+												"mCoefficient": 100,
+												"__type": "StatByCoefficientCalculationPart"
+											},
+											"mPart2": {
+												"mNumber": 0.05000000074505806,
+												"__type": "NumberCalculationPart"
+											},
+											"__type": "ProductOfSubPartsCalculationPart"
+										}
+									],
+									"__type": "{803dae4c}"
 								}
 							],
 							"__type": "SumOfSubPartsCalculationPart"
@@ -490,21 +497,12 @@
 						{
 							"mSubparts": [
 								{
-									"mPart1": {
-										"mStat": 3,
-										"mStatFormula": 2,
-										"mCoefficient": 100,
-										"__type": "StatByCoefficientCalculationPart"
-									},
-									"mPart2": {
-										"mNumber": 0.02500000037252903,
-										"__type": "NumberCalculationPart"
-									},
-									"__type": "ProductOfSubPartsCalculationPart"
-								},
-								{
 									"mDataValue": "NumShots",
 									"__type": "NamedDataValueCalculationPart"
+								},
+								{
+									"{88536426}": "ShotsFromAS",
+									"__type": "{f3cbe7b2}"
 								}
 							],
 							"__type": "SumOfSubPartsCalculationPart"
@@ -616,11 +614,11 @@
 		"tier": 5,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Jazz",
+				"TraitData": "{2951a0fc}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Rapidfire",
+				"TraitData": "{c505a558}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

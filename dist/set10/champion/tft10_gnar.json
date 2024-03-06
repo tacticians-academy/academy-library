@@ -167,12 +167,12 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{a9acbddb}": {
+				"ModifiedHealthGain": {
 					"{cbcac618}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{d42806c8}",
+								"mDataValue": "HealthGain",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -282,7 +282,7 @@
 		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
 		"attackRange": 420,
-		"attackSpeed": 0.6499999761581421,
+		"attackSpeed": 0.75,
 		"basicAttack": {
 			"mAttackName": "TFT10_GnarBasicAttack",
 			"__type": "AttackSlotData"
@@ -310,15 +310,15 @@
 		"tier": 2,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Pentakill",
+				"TraitData": "{11f20023}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Superfan",
+				"TraitData": "{fa7abfbd}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Mosher",
+				"TraitData": "{3afd9bd6}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

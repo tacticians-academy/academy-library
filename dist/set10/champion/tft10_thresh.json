@@ -86,7 +86,7 @@
 			"mAffectsTypeFlags": 22538,
 			"mRequiredUnitTags": {
 				"{a47810c1}": [
-					"Champion"
+					"{ea595ca6}"
 				],
 				"__type": "ObjectTags"
 			},
@@ -194,7 +194,7 @@
 			"mAffectsTypeFlags": 22538,
 			"mRequiredUnitTags": {
 				"{a47810c1}": [
-					"Champion"
+					"{ea595ca6}"
 				],
 				"__type": "ObjectTags"
 			},
@@ -264,7 +264,7 @@
 			"mAffectsStatusFlags": 32,
 			"mRequiredUnitTags": {
 				"{a47810c1}": [
-					"Champion"
+					"{ea595ca6}"
 				],
 				"__type": "ObjectTags"
 			},
@@ -474,11 +474,11 @@
 		"tier": 4,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Country",
+				"TraitData": "{eb00b415}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Guardian",
+				"TraitData": "{18931112}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

@@ -136,25 +136,25 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{5d0b9563}": {
+				"TOTAL_DAMAGE": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mStat": 2,
-							"mDataValue": "{0ac5f700}",
+							"mDataValue": "BASE_DAMAGE",
 							"__type": "StatByNamedDataValueCalculationPart"
 						}
 					],
 					"__type": "GameCalculation"
 				},
-				"{1c14de50}": {
+				"TOTAL_MANA_REFUND": {
 					"{cbcac618}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{0607edf5}",
+								"mDataValue": "MANA_REFUND",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -355,15 +355,15 @@
 		"tier": 4,
 		"mLinkedTraits": [
 			{
-				"TraitData": "True Damage",
+				"TraitData": "{c9bbc394}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Executioner",
+				"TraitData": "{d435e732}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Breakout",
+				"TraitData": "{383e2598}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

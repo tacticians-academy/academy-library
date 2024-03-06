@@ -5,9 +5,9 @@ import { transformLoad } from './transform-load.js'
 import { createFlashcardsFor } from '../product/flashcards.js'
 import { validate } from '../product/validate.js'
 
-export async function updateSet(setNumber: SetNumber) {
+export async function updateSet(setNumber: SetNumber, forceUpdate: boolean) {
 	console.log('Update Set', setNumber)
-	await extractLatestPatchFor(setNumber)
+	await extractLatestPatchFor(setNumber, forceUpdate)
 	await transformLoad(setNumber)
 	await validate(setNumber)
 	await createFlashcardsFor(setNumber)

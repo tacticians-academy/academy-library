@@ -190,14 +190,14 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{9609fde3}": {
+				"ModifiedBombDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{38e84fbc}",
+								"mDataValue": "BombDamage",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -545,11 +545,11 @@
 		"tier": 5,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Hyperpop",
+				"TraitData": "{32777aa0}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Dazzler",
+				"TraitData": "{a432b261}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

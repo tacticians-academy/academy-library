@@ -10,8 +10,8 @@
 					"mValues": [
 						0,
 						35,
-						55,
-						80,
+						52,
+						75,
 						0,
 						0,
 						0
@@ -34,13 +34,13 @@
 				{
 					"mName": "Shred",
 					"mValues": [
-						30,
-						30,
-						30,
-						30,
-						30,
-						30,
-						30
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20
 					],
 					"__type": "SpellDataValue"
 				},
@@ -73,24 +73,24 @@
 				{
 					"mName": "HeadlinerAttackSpeed",
 					"mValues": [
-						0.25,
-						0.25,
-						0.25,
-						0.25,
-						0.25,
-						0.25,
-						0.25
+						0.20000000298023224,
+						0.20000000298023224,
+						0.20000000298023224,
+						0.20000000298023224,
+						0.20000000298023224,
+						0.20000000298023224,
+						0.20000000298023224
 					],
 					"__type": "SpellDataValue"
 				}
 			],
 			"mSpellCalculations": {
-				"{4629b43c}": {
+				"ModifiedAttackDamage": {
 					"{cbcac618}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{b7be526e}",
+								"mDataValue": "BaseAttackDamage",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -99,12 +99,12 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"ModifiedAttackDamage": {
+				"ModifiedFinaleDamage": {
 					"{cbcac618}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{d86fa6f5}",
+								"mDataValue": "BaseFinaleDamage",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -311,7 +311,7 @@
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 30,
+			"arBase": 120,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
@@ -351,11 +351,11 @@
 		"tier": 2,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Pentakill",
+				"TraitData": "{11f20023}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Edgelord",
+				"TraitData": "{0f07fb2f}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

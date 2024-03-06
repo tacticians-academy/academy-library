@@ -317,12 +317,12 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{72ce596c}": {
+				"BONUS_DAMAGE": {
 					"{cbcac618}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{fce28154}",
+								"mDataValue": "BONUS_DAMAGE_BASE",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -331,18 +331,18 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{8f9bf805}": {
+				"SHIELD_TOTAL": {
 					"{cbcac618}": 5,
 					"mFormulaParts": [
 						{
 							"mSubparts": [
 								{
 									"mStat": 11,
-									"mDataValue": "{7ad076ac}",
+									"mDataValue": "SHIELD_RATIO",
 									"__type": "StatByNamedDataValueCalculationPart"
 								},
 								{
-									"mDataValue": "{dce6b610}",
+									"mDataValue": "SHIELD_BASE",
 									"__type": "NamedDataValueCalculationPart"
 								}
 							],
@@ -424,11 +424,11 @@
 		"tier": 1,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Disco",
+				"TraitData": "{6fac93d3}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Guardian",
+				"TraitData": "{18931112}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

@@ -178,9 +178,9 @@
 					"mName": "ADRatioNormalCast",
 					"mValues": [
 						2.5999999046325684,
-						3.5,
-						3.5,
-						7,
+						3.700000047683716,
+						3.700000047683716,
+						7.400000095367432,
 						2.5999999046325684,
 						2.5999999046325684,
 						2.5999999046325684
@@ -264,7 +264,7 @@
 								{
 									"mStat": 2,
 									"mSubpart": {
-										"mDataValue": "{33726bbb}",
+										"mDataValue": "ADRatioNormalCast",
 										"__type": "NamedDataValueCalculationPart"
 									},
 									"__type": "StatBySubPartCalculationPart"
@@ -275,7 +275,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{b88724c5}": {
+				"ModifiedBigDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -285,14 +285,14 @@
 								{
 									"mStat": 2,
 									"mSubpart": {
-										"mDataValue": "{27751691}",
+										"mDataValue": "ADRatioSpecialCast",
 										"__type": "NamedDataValueCalculationPart"
 									},
 									"__type": "StatBySubPartCalculationPart"
 								},
 								{
 									"mSubpart": {
-										"mDataValue": "{6647ac35}",
+										"mDataValue": "APRatioSpecialCast",
 										"__type": "NamedDataValueCalculationPart"
 									},
 									"mRatio": 0.009999999776482582,
@@ -655,7 +655,7 @@
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 40,
+			"arBase": 45,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
@@ -679,11 +679,11 @@
 		"tier": 4,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Heartsteel",
+				"TraitData": "{aeb6a5eb}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Big Shot",
+				"TraitData": "{b540ffc4}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

@@ -73,9 +73,9 @@
 					"mName": "MagicDamage",
 					"mValues": [
 						1.2999999523162842,
-						105,
-						155,
-						225,
+						110,
+						165,
+						255,
 						1.2999999523162842,
 						1.2999999523162842,
 						1.2999999523162842
@@ -175,7 +175,7 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{5d0b9563}": {
+				"TOTAL_DAMAGE": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -426,11 +426,11 @@
 		"tier": 2,
 		"mLinkedTraits": [
 			{
-				"TraitData": "True Damage",
+				"TraitData": "{c9bbc394}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Rapidfire",
+				"TraitData": "{c505a558}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

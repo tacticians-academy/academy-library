@@ -17,7 +17,7 @@
 		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
 		"attackRange": 180,
-		"attackSpeed": 0.8500000238418579,
+		"attackSpeed": 0.8999999761581421,
 		"spellNames": [
 			"TFT10_JaxE",
 			"BaseSpell",
@@ -30,11 +30,11 @@
 		"tier": 2,
 		"mLinkedTraits": [
 			{
-				"TraitData": "EDM",
+				"TraitData": "{f208ad7f}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Mosher",
+				"TraitData": "{3afd9bd6}",
 				"__type": "TFTTraitContributionData"
 			}
 		],
@@ -128,9 +128,9 @@
 					"mName": "SlamDamage",
 					"mValues": [
 						0,
-						230,
-						345,
-						520,
+						240,
+						360,
+						560,
 						250,
 						250,
 						250
@@ -217,12 +217,12 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{4e3a954a}": {
+				"ModifiedSlamDamage": {
 					"{cbcac618}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{dd177fa5}",
+								"mDataValue": "SlamDamage",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -231,7 +231,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{3ced7497}": {
+				"ModifiedSpinDamage": {
 					"{cbcac618}": 5,
 					"mFormulaParts": [
 						{
@@ -245,12 +245,12 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{51adb629}": {
+				"ModifiedHexRadius": {
 					"mFormulaParts": [
 						{
 							"mSubparts": [
 								{
-									"mDataValue": "{43e43268}",
+									"mDataValue": "HexRadiusBeforeRange",
 									"__type": "NamedDataValueCalculationPart"
 								},
 								{

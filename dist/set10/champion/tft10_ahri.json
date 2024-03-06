@@ -72,12 +72,12 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{304fb5c7}": {
+				"bonusKissDamage": {
 					"{cbcac618}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{f560a3b6}",
+								"mDataValue": "kissDamage",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -452,12 +452,12 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{304fb5c7}": {
+				"bonusKissDamage": {
 					"{cbcac618}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{f560a3b6}",
+								"mDataValue": "kissDamage",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -547,11 +547,11 @@
 		"tier": 4,
 		"mLinkedTraits": [
 			{
-				"TraitData": "K/DA",
+				"TraitData": "{af6fb94d}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Spellweaver",
+				"TraitData": "{c7e3ce1d}",
 				"__type": "TFTTraitContributionData"
 			}
 		],

@@ -149,7 +149,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"ModifiedAoEDamage": {
+				"ModifiedAOEDamage": {
 					"{cbcac618}": 5,
 					"mFormulaParts": [
 						{
@@ -171,7 +171,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{12d87ff8}": {
+				"DamageSpreadTooltipOnly": {
 					"mMultiplier": {
 						"mNumber": 100,
 						"__type": "NumberCalculationPart"
@@ -430,7 +430,7 @@
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 135,
+			"arBase": 110,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
@@ -454,11 +454,11 @@
 		"tier": 2,
 		"mLinkedTraits": [
 			{
-				"TraitData": "Heartsteel",
+				"TraitData": "{aeb6a5eb}",
 				"__type": "TFTTraitContributionData"
 			},
 			{
-				"TraitData": "Rapidfire",
+				"TraitData": "{c505a558}",
 				"__type": "TFTTraitContributionData"
 			}
 		],
