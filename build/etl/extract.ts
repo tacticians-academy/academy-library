@@ -110,7 +110,7 @@ async function getPatchFor(setNumber: SetNumber, customPatchLine?: string) {
 
 	return Promise.all(apiNames.map(async apiName => {
 		const pathName = apiName.toLowerCase()
-		const url = isAtLeastPatch(patchLine, 14.2) && !pathName.startsWith('tft_') ? `${baseURL}/game/characters/${pathName}.cdtb.bin.json` : `${baseURL}/game/data/characters/${pathName}/${pathName}.bin.json`
+		const url = isAtLeastPatch(patchLine, setNumber >= 10 ? 14.2 : 14.5) && !pathName.startsWith('tft_') ? `${baseURL}/game/characters/${pathName}.cdtb.bin.json` : `${baseURL}/game/data/characters/${pathName}/${pathName}.bin.json`
 		// console.log('Loading champion', apiName, url)
 		const response = await fetch(url)
 		if (!response.ok) {
