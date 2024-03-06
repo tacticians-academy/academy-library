@@ -1,0 +1,233 @@
+{
+	"{30b8ddab}": {
+		"mScriptName": "TFT11_AmumuBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 6095,
+			"delayCastOffsetPercent": -0.29170000553131104,
+			"bHaveHitEffect": true,
+			"castConeDistance": 100,
+			"castFrame": 11,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{4c04d7db}": {
+		"mScriptName": "TFT11_AmumuBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 6095,
+			"delayCastOffsetPercent": -0.29170000553131104,
+			"bHaveHitEffect": true,
+			"castConeDistance": 100,
+			"castFrame": 11,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{cf2a72a3}": {
+		"mScriptName": "TFT11_AmumuCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 6095,
+			"delayCastOffsetPercent": -0.29170000553131104,
+			"bHaveHitEffect": true,
+			"castConeDistance": 100,
+			"castFrame": 11,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{efc5a65f}": {
+		"mScriptName": "TFT11_AmumuSpell",
+		"mSpell": {
+			"mDataValues": [
+				{
+					"mName": "Duration",
+					"mValues": [
+						3,
+						3,
+						3,
+						3,
+						3,
+						3,
+						3
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "SelfHealingAmount",
+					"mValues": [
+						0,
+						175,
+						200,
+						225,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "AllyHealingAmount",
+					"mValues": [
+						0,
+						60,
+						85,
+						110,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "Damage",
+					"mValues": [
+						50,
+						150,
+						225,
+						360,
+						150,
+						175,
+						200
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"{b111b1ae}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{06e3841f}",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{fea57aaa}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{8d8dca8f}",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"ModifiedDamage": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"mCastTime": 0.25,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"{47e0dff9}": {
+				"18": "Play_sfx_tft11_AmumuSpell_OnBuffActivate",
+				"19": "Play_sfx_tft11_AmumuSpell_OnBuffDeactivate"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{327a59e5}": {
+		"mCharacterName": "TFT11_Amumu",
+		"baseHP": 900,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 110,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 60,
+		"baseArmor": 50,
+		"baseSpellBlock": 50,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.6000000238418579,
+		"basicAttack": {
+			"mAttackProbability": 0.5,
+			"mAttackName": "TFT11_AmumuBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 0.5,
+				"mAttackName": "TFT11_AmumuBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT11_AmumuBasicAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT11_AmumuSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 1,
+		"unitTagsString": "Champion",
+		"flags": 9446664,
+		"tier": 3,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{f3e9b33e}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{126a4574}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{2ccf900f}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mInitialMana": 60,
+		"__type": "TFTCharacterRecord"
+	}
+}

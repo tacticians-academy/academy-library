@@ -1,0 +1,78 @@
+{
+	"{3e3b1ced}": {
+		"mScriptName": "TFT11_FortuneProp",
+		"mSpell": {
+			"mDataValues": [
+				{
+					"mName": "RoundsToHatch",
+					"mValues": [
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mCastTime": 0.5,
+			"mCantCancelWhileWindingUp": true,
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{d3d665aa}": {
+		"mCharacterName": "TFT11_FortuneProp",
+		"baseHP": 88888,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseArmor": 88,
+		"baseSpellBlock": 88,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.800000011920929,
+		"basicAttack": {
+			"mAttackName": "TFT10_PBJPropBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT10_PBJPropBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT10_PBJPropCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT11_FortuneProp",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446656,
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"{4e28a666}": "Root",
+		"{d75e19ad}": 2,
+		"__type": "TFTCharacterRecord"
+	}
+}

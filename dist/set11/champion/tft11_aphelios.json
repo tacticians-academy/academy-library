@@ -1,0 +1,565 @@
+{
+	"{31f497d9}": {
+		"mScriptName": "TFT11_ApheliosCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "GarenBasicAttack",
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Infernum_Orb",
+					"mSpeed": 2250,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 9,
+			"missileSpeed": 2250,
+			"mMissileEffectKey": "{607818fe}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{44516555}": {
+		"mScriptName": "TFT11_ApheliosSpell",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mDataValues": [
+				{
+					"mName": "PercentAttackDamage",
+					"mValues": [
+						0.5,
+						1.850000023841858,
+						1.850000023841858,
+						1.9500000476837158,
+						0.5,
+						0.5,
+						0.5
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "Duration",
+					"mValues": [
+						7,
+						7,
+						7,
+						7,
+						7,
+						7,
+						7
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ConeRadius",
+					"mValues": [
+						45,
+						22,
+						22,
+						22,
+						45,
+						45,
+						45
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "FatedBonus",
+					"mValues": [
+						0.25,
+						0.25,
+						0.25,
+						0.25,
+						0.25,
+						0.25,
+						0.25
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "SunderTooltipPercent",
+					"mValues": [
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "NumShots",
+					"mValues": [
+						3,
+						3,
+						3,
+						3,
+						3,
+						3,
+						3
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "BaseDamage",
+					"mValues": [
+						0,
+						30,
+						45,
+						70,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"ModifiedDamage": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubparts": [
+								{
+									"mStat": 2,
+									"mDataValue": "PercentAttackDamage",
+									"__type": "StatByNamedDataValueCalculationPart"
+								},
+								{
+									"mSubpart": {
+										"mDataValue": "BaseDamage",
+										"__type": "NamedDataValueCalculationPart"
+									},
+									"mRatio": 0.009999999776482582,
+									"__type": "SubPartScaledProportionalToStat"
+								}
+							],
+							"__type": "SumOfSubPartsCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{dfe3af6d}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mStat": 2,
+							"mDataValue": "PercentAttackDamage",
+							"__type": "StatByNamedDataValueCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"TooltipBaseDamage": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "BaseDamage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"mCastTime": 0.25,
+			"delayCastOffsetPercent": 0.20000004768371582,
+			"delayTotalTimePercent": -0.5,
+			"canCastOrQueueWhileCasting": true,
+			"castRange": [
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500
+			],
+			"castFrame": 6,
+			"mLineWidth": 60,
+			"selectionPriority": 1,
+			"mTargetingTypeData": {
+				"__type": "Location"
+			},
+			"{47e0dff9}": {
+				"12": "Play_sfx_tft11_ApheliosSpellAccelerationGate_OnCast",
+				"15": "Play_sfx_tft11_ApheliosSpellBlast_OnCast",
+				"16": "Play_sfx_tft11_ApheliosSpellBlastWallMis_OnMissileLaunch",
+				"18": "Play_sfx_tft11_ApheliosSpellAcceleratorChampionBuff_OnBuffActivate"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{4a73a559}": {
+		"mScriptName": "TFT11_ApheliosBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "GarenBasicAttack",
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Infernum_Orb",
+					"mSpeed": 2250,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 9,
+			"missileSpeed": 2250,
+			"mMissileEffectKey": "{607818fe}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{9f0d6771}": {
+		"mScriptName": "TFT11_ApheliosBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "JayceBasicAttack2",
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Infernum_Orb",
+					"mSpeed": 2250,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 9,
+			"missileSpeed": 2250,
+			"mMissileEffectKey": "{607818fe}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{c5ce9d33}": {
+		"mScriptName": "TFT11_ApheliosInfernumQMis",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mCastTime": 0.10000000149011612,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mPreCastLockoutDeltaTime": 0.6000000238418579,
+			"canCastWhileDisabled": true,
+			"canCastOrQueueWhileCasting": true,
+			"mApplyAttackDamage": true,
+			"mIsDisabledWhileDead": false,
+			"mCanMoveWhileChanneling": true,
+			"mDoNotNeedToFaceTarget": true,
+			"castRange": [
+				200000,
+				200000,
+				200000,
+				200000,
+				200000,
+				200000,
+				200000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 40,
+				"movementComponent": {
+					"mUseHeightOffsetAtEnd": true,
+					"mTargetHeightAugment": 100,
+					"mProjectTargetToCastRange": true,
+					"mUseGroundHeightAtTarget": false,
+					"mAcceleration": -4000,
+					"mMinSpeed": 2500,
+					"mMaxSpeed": 20000,
+					"mInitialSpeed": 2400,
+					"__type": "AcceleratingMovement"
+				},
+				"heightSolver": {
+					"__type": "BlendedLinearHeightSolver"
+				},
+				"behaviors": [
+					{
+						"__type": "DestroyOnMovementComplete"
+					},
+					{
+						"__type": "CastOnHit"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 5,
+			"missileSpeed": 1500,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "{c0fcf60a}",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{d1b894e7}": {
+		"mScriptName": "TFT11_ApheliosCalibrumAttackMis",
+		"mSpell": {
+			"mAffectsTypeFlags": 6826,
+			"mAlternateName": "ApheliosCalibrumAttack",
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"canCastWhileDisabled": true,
+			"mCantCancelWhileWindingUp": true,
+			"mApplyAttackDamage": true,
+			"bHaveHitEffect": true,
+			"mIgnoreRangeCheck": true,
+			"castRange": [
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 60,
+				"movementComponent": {
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Calibrum_Orb",
+					"mTargetBoneName": "C_Buffbone_Glb_Chest_Loc",
+					"mUseGroundHeightAtTarget": false,
+					"mSpeed": 3000,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"__type": "FollowTerrainHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnHit"
+					},
+					{
+						"__type": "DestroyOnHit"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					},
+					{
+						"__type": "CastOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 7.32106876373291,
+			"missileSpeed": 1500,
+			"mMissileEffectKey": "{e1f58cc7}",
+			"mHitEffectKey": "{26492491}",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{7146b567}": {
+		"mCharacterName": "TFT11_Aphelios",
+		"baseHP": 650,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 60,
+		"baseArmor": 25,
+		"baseSpellBlock": 25,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 890,
+		"attackSpeed": 0.75,
+		"basicAttack": {
+			"mAttackProbability": 0.5,
+			"mAttackName": "TFT11_ApheliosBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 0.5,
+				"mAttackName": "TFT11_ApheliosBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT11_ApheliosCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT11_ApheliosSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446656,
+		"tier": 3,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{86bf37d5}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{18ff8266}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{2ae695df}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mInitialMana": 40,
+		"__type": "TFTCharacterRecord"
+	}
+}

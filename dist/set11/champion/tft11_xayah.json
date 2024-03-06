@@ -1,0 +1,712 @@
+{
+	"{10b115b7}": {
+		"mScriptName": "TFT11_XayahSpell",
+		"mSpell": {
+			"mAffectsTypeFlags": 7183,
+			"mAffectsStatusFlags": 32,
+			"mDataValues": [
+				{
+					"mName": "NumClosestTargets",
+					"mValues": [
+						4,
+						4,
+						4,
+						4,
+						4,
+						4,
+						4
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "FeatherDamage",
+					"mValues": [
+						0,
+						0.699999988079071,
+						0.699999988079071,
+						5,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "FeatherRecallDamage",
+					"mValues": [
+						0,
+						0.30000001192092896,
+						0.30000001192092896,
+						1,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "FeatherRecallBaseDamage",
+					"mValues": [
+						0,
+						15,
+						25,
+						75,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "FeatherCount",
+					"mValues": [
+						0,
+						12,
+						12,
+						30,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"{3b9ce440}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mStat": 2,
+							"mDataValue": "FeatherDamage",
+							"__type": "StatByNamedDataValueCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{f834bbe1}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mStat": 2,
+							"mDataValue": "{9e738d10}",
+							"__type": "StatByNamedDataValueCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{aef1cdd0}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{075f6969}",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{aed3fbd8}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubparts": [
+								{
+									"mSubpart": {
+										"mDataValue": "{075f6969}",
+										"__type": "NamedDataValueCalculationPart"
+									},
+									"mRatio": 0.009999999776482582,
+									"__type": "SubPartScaledProportionalToStat"
+								},
+								{
+									"mStat": 2,
+									"mDataValue": "{9e738d10}",
+									"__type": "StatByNamedDataValueCalculationPart"
+								}
+							],
+							"__type": "SumOfSubPartsCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"delayCastOffsetPercent": 1,
+			"delayTotalTimePercent": -0.5,
+			"canCastOrQueueWhileCasting": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				20,
+				20,
+				20,
+				20,
+				20,
+				20,
+				20
+			],
+			"castConeDistance": 100,
+			"castFrame": 29,
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"selectionPriority": 1,
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{45a1ed89}": {
+		"mScriptName": "TFT11_XayahSpellMissile",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"bHaveHitEffect": true,
+			"castRange": [
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 90,
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "",
+					"mTargetBoneName": "C_Buffbone_Glb_Center_Loc",
+					"mSpeed": 10,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"__type": "BlendedLinearHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VerticalFacingFaceTarget"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"mActions": [
+							{
+								"mSpeedValue": 5000,
+								"__type": "ChangeMissileSpeed"
+							}
+						],
+						"mTriggerName": "MissileYeet",
+						"__type": "TriggerFromScript"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"missileSpeed": 2500,
+			"mMissileEffectKey": "{6c7c185b}",
+			"mHitEffectKey": "{c246e95f}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_Buffbone_Glb_Center_Loc",
+			"mTargetingTypeData": {
+				"__type": "TargetOrLocation"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{4eafec23}": {
+		"mScriptName": "TFT11_XayahBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"luaOnMissileUpdateDistanceInterval": 51,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "root",
+					"mSpeed": 2500,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 2500,
+			"mMissileEffectKey": "{090a3d7d}",
+			"mLookAtPolicy": 1,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_Buffbone_Glb_Layout_Loc",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{bf05134b}": {
+		"mScriptName": "TFT11_XayahCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"luaOnMissileUpdateDistanceInterval": 51,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "root",
+					"mSpeed": 2500,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 6,
+			"missileSpeed": 2500,
+			"mMissileEffectKey": "{090a3d7d}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_Buffbone_Glb_Layout_Loc",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{edd981c7}": {
+		"mScriptName": "TFT11_XayahReturnMissile",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"castRange": [
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 90,
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "",
+					"mTargetBoneName": "C_Buffbone_Glb_Center_Loc",
+					"mSpeed": 4800,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"__type": "BlendedLinearHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VerticalFacingFaceTarget"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnHit"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"missileSpeed": 2500,
+			"mMissileEffectKey": "{dc8f376f}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_Buffbone_Glb_Center_Loc",
+			"mTargetingTypeData": {
+				"__type": "TargetOrLocation"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{eef09d30}": {
+		"mScriptName": "TFT11_XayahBasicAttack3",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"luaOnMissileUpdateDistanceInterval": 51,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "root",
+					"mSpeed": 2500,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 2500,
+			"mMissileEffectKey": "{090a3d7d}",
+			"mLookAtPolicy": 1,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_Buffbone_Glb_Layout_Loc",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{eff09ec3}": {
+		"mScriptName": "TFT11_XayahBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"luaOnMissileUpdateDistanceInterval": 51,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "root",
+					"mSpeed": 2500,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 2500,
+			"mMissileEffectKey": "{090a3d7d}",
+			"mLookAtPolicy": 1,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_Buffbone_Glb_Layout_Loc",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{f5f0a835}": {
+		"mScriptName": "TFT11_XayahBasicAttack4",
+		"mSpell": {
+			"mAffectsTypeFlags": 7919,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"luaOnMissileUpdateDistanceInterval": 51,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "root",
+					"mSpeed": 2500,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 2500,
+			"mMissileEffectKey": "{090a3d7d}",
+			"mLookAtPolicy": 1,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_Buffbone_Glb_Layout_Loc",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{4569e425}": {
+		"mCharacterName": "TFT11_Xayah",
+		"baseHP": 850,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 80,
+		"baseArmor": 40,
+		"baseSpellBlock": 40,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 890,
+		"attackSpeed": 0.8999999761581421,
+		"basicAttack": {
+			"mAttackName": "TFT11_XayahBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT11_XayahBasicAttack2",
+				"__type": "AttackSlotData"
+			},
+			{
+				"mAttackName": "TFT11_XayahBasicAttack3",
+				"__type": "AttackSlotData"
+			},
+			{
+				"mAttackName": "TFT11_XayahBasicAttack4",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT11_XayahCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT11_XayahSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446656,
+		"tier": 5,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{9eaa7b4d}",
+				"{a91037f5}": false,
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{9a28680e}",
+				"{a91037f5}": false,
+				"{baeca565}": true,
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{90a3a954}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{34ed6daa}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mInitialMana": 30,
+		"{1c8f77df}": [
+			{
+				"definition": "{629b5f84}",
+				"value": {
+					"value": 100,
+					"__type": "TftUnitPropertyValueInteger"
+				},
+				"__type": "{5a0a682a}"
+			}
+		],
+		"__type": "TFTCharacterRecord"
+	}
+}

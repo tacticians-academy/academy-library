@@ -1,0 +1,277 @@
+{
+	"{031413e3}": {
+		"mCharacterName": "TFT11_TahmKench",
+		"baseHP": 850,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 60,
+		"baseArmor": 45,
+		"baseSpellBlock": 45,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.6000000238418579,
+		"basicAttack": {
+			"mAttackProbability": 0.5,
+			"mAttackName": "TFT11_TahmKenchBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 0.5,
+				"mAttackName": "TFT11_TahmKenchBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT11_TahmKenchCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT11_TahmKenchSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"passiveRange": 3,
+		"unitTagsString": "Champion",
+		"flags": 9446664,
+		"tier": 3,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{7362d06b}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{9e708dcf}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{2ccf900f}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mInitialMana": 40,
+		"__type": "TFTCharacterRecord"
+	},
+	"{5349004f}": {
+		"mScriptName": "TFT11_TahmKenchBasicAttack",
+		"mSpell": {
+			"bHaveHitEffect": true,
+			"castFrame": 9,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{5daf1ed7}": {
+		"mScriptName": "TFT11_TahmKenchCritAttack",
+		"mSpell": {
+			"bHaveHitEffect": true,
+			"castFrame": 9,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{98ebc4c7}": {
+		"mScriptName": "TFT11_TahmKenchBasicAttack2",
+		"mSpell": {
+			"bHaveHitEffect": true,
+			"castFrame": 9,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{bec0f16b}": {
+		"mScriptName": "TFT11_TahmKenchSpell",
+		"mSpell": {
+			"mAffectsTypeFlags": 23594,
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						0,
+						320,
+						480,
+						770,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "PercentHealthShield",
+					"mValues": [
+						0,
+						0.20000000298023224,
+						0.20000000298023224,
+						0.20000000298023224,
+						160,
+						200,
+						240
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "Duration",
+					"mValues": [
+						3,
+						3,
+						3,
+						3,
+						3,
+						3,
+						3
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "BonusShield",
+					"mValues": [
+						0,
+						200,
+						250,
+						300,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "BonusPercentDamage",
+					"mValues": [
+						2.25,
+						2.25,
+						2.25,
+						2.25,
+						2.25,
+						2.25,
+						2.25
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"ModifiedDamage": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"ModifiedShield": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubparts": [
+								{
+									"mStat": 11,
+									"mDataValue": "PercentHealthShield",
+									"__type": "StatByNamedDataValueCalculationPart"
+								}
+							],
+							"__type": "SumOfSubPartsCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{504c56fa}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "BonusShield",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{7b60ce82}": {
+					"mMultiplier": {
+						"mDataValue": "BonusPercentDamage",
+						"__type": "NamedDataValueCalculationPart"
+					},
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mModifiedGameCalculation": "ModifiedDamage",
+					"__type": "GameCalculationModified"
+				}
+			},
+			"delayCastOffsetPercent": -0.3999999761581421,
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				20,
+				20,
+				20,
+				20,
+				20,
+				20,
+				20
+			],
+			"castConeDistance": 100,
+			"castFrame": 12,
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"selectionPriority": 1,
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	}
+}

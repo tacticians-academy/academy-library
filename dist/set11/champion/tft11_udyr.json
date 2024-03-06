@@ -1,0 +1,571 @@
+{
+	"{0523b132}": {
+		"mCharacterName": "TFT11_Udyr",
+		"baseHP": 1000,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 90,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 50,
+		"baseArmor": 50,
+		"baseSpellBlock": 50,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 1,
+		"basicAttack": {
+			"mAttackName": "TFT11_UdyrBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT11_UdyrBasicAttack2",
+				"__type": "AttackSlotData"
+			},
+			{
+				"mAttackName": "TFT11_UdyrBasicAttack3",
+				"__type": "AttackSlotData"
+			},
+			{
+				"mAttackName": "TFT11_UdyrBasicAttack4",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT11_UdyrSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 8398088,
+		"tier": 5,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{4bb4f7a7}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{80d50477}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{cec1d872}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{44de5928}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mInitialMana": 30,
+		"__type": "TFTCharacterRecord"
+	},
+	"{14867ca1}": {
+		"mScriptName": "TFT11_UdyrShurikenBounceMis2",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 22538,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"canCastWhileDisabled": true,
+			"canCastOrQueueWhileCasting": true,
+			"mIsDisabledWhileDead": false,
+			"bHaveHitEffect": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				20,
+				20,
+				20,
+				20,
+				20,
+				20,
+				20
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mUseHeightOffsetAtEnd": true,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "",
+					"mSplineInfo": {
+						"mControlPoint1": [
+							-1.0032786130905151,
+							0,
+							-0.42280179262161255
+						],
+						"mControlPoint2": [
+							2.0226528644561768,
+							0,
+							0.615946352481842
+						],
+						"__type": "HermiteSplineInfo"
+					},
+					"mTravelTime": 0.1899999976158142,
+					"__type": "FixedTimeSplineMovement"
+				},
+				"heightSolver": {
+					"__type": "GravityHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VerticalFacingFaceTarget"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 13,
+			"missileSpeed": 600,
+			"mMissileEffectKey": "{b3ef1ffe}",
+			"mHitEffectKey": "{5ddf95f1}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_Buffbone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{5caeacf1}": {
+		"mScriptName": "TFT11_UdyrSpell",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 22538,
+			"mSpellTags": [
+				""
+			],
+			"mDataValues": [
+				{
+					"mName": "HexDistance",
+					"mValues": [
+						0,
+						2,
+						2,
+						10,
+						160,
+						200,
+						240
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "Damage",
+					"mValues": [
+						0,
+						300,
+						450,
+						5555,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ShieldAmt",
+					"mValues": [
+						0,
+						350,
+						425,
+						3000,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ShieldDuration",
+					"mValues": [
+						3,
+						3,
+						3,
+						3,
+						3,
+						3,
+						3
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ASPercent",
+					"mValues": [
+						1.5,
+						0.800000011920929,
+						0.800000011920929,
+						5,
+						1.5,
+						1.5,
+						1.5
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "BuffDuration",
+					"mValues": [
+						4,
+						6,
+						6,
+						30,
+						4,
+						4,
+						4
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "BounceCount",
+					"mValues": [
+						0,
+						4,
+						4,
+						20,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "ShurikenDamage",
+					"mValues": [
+						0,
+						200,
+						300,
+						1500,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "OmnivampPercent",
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "BearWearManaCost",
+					"mValues": [
+						40,
+						40,
+						40,
+						40,
+						40,
+						40,
+						40
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"ModifiedDamage": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"ModifiedShield": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{db2b2efa}",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{e167ffa0}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{4d347543}",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"delayTotalTimePercent": -0.5,
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"mIgnoreRangeCheck": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"mTargetingTypeData": {
+				"__type": "TargetOrLocation"
+			},
+			"{00f7e5bc}": true,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{6da43949}": {
+		"mScriptName": "TFT11_UdyrShurikenBounceMis",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 22538,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"canCastWhileDisabled": true,
+			"canCastOrQueueWhileCasting": true,
+			"mIsDisabledWhileDead": false,
+			"bHaveHitEffect": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				20,
+				20,
+				20,
+				20,
+				20,
+				20,
+				20
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mUseHeightOffsetAtEnd": true,
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "",
+					"mSplineInfo": {
+						"mControlPoint1": [
+							1.4968702793121338,
+							0,
+							-0.44426229596138
+						],
+						"mControlPoint2": [
+							-1.9904619455337524,
+							0,
+							0.5837555527687073
+						],
+						"__type": "HermiteSplineInfo"
+					},
+					"mTravelTime": 0.1899999976158142,
+					"__type": "FixedTimeSplineMovement"
+				},
+				"heightSolver": {
+					"__type": "GravityHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VerticalFacingFaceTarget"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 13,
+			"missileSpeed": 600,
+			"mMissileEffectKey": "{b3ef1ffe}",
+			"mHitEffectKey": "{5ddf95f1}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_Buffbone_Glb_Center_Loc",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{b34d6893}": {
+		"mScriptName": "TFT11_UdyrBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 6282,
+			"delayCastOffsetPercent": -0.3506999909877777,
+			"canCastOrQueueWhileCasting": true,
+			"bHaveHitEffect": true,
+			"mTurnSpeedScalar": 5,
+			"castRange": [
+				125,
+				125,
+				125,
+				125,
+				125,
+				125,
+				125
+			],
+			"castRadius": [
+				125,
+				125,
+				125,
+				125,
+				125,
+				125,
+				125
+			],
+			"castConeDistance": 100,
+			"castFrame": 11,
+			"missileSpeed": 467,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{e2dbb3e0}": {
+		"mScriptName": "TFT11_UdyrBasicAttack3",
+		"mSpell": {
+			"mAffectsTypeFlags": 6282,
+			"delayCastOffsetPercent": -0.3500000238418579,
+			"canCastOrQueueWhileCasting": true,
+			"bHaveHitEffect": true,
+			"mTurnSpeedScalar": 5,
+			"castRange": [
+				125,
+				125,
+				125,
+				125,
+				125,
+				125,
+				125
+			],
+			"castRadius": [
+				125,
+				125,
+				125,
+				125,
+				125,
+				125,
+				125
+			],
+			"castConeDistance": 100,
+			"castFrame": 11,
+			"missileSpeed": 467,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{e3dbb573}": {
+		"mScriptName": "TFT11_UdyrBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 6282,
+			"delayCastOffsetPercent": -0.3506999909877777,
+			"canCastOrQueueWhileCasting": true,
+			"bHaveHitEffect": true,
+			"mTurnSpeedScalar": 5,
+			"castRange": [
+				125,
+				125,
+				125,
+				125,
+				125,
+				125,
+				125
+			],
+			"castRadius": [
+				125,
+				125,
+				125,
+				125,
+				125,
+				125,
+				125
+			],
+			"castConeDistance": 100,
+			"castFrame": 11,
+			"missileSpeed": 467,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{e9dbbee5}": {
+		"mScriptName": "TFT11_UdyrBasicAttack4",
+		"mSpell": {
+			"mAffectsTypeFlags": 6282,
+			"delayCastOffsetPercent": -0.3500000238418579,
+			"canCastOrQueueWhileCasting": true,
+			"bHaveHitEffect": true,
+			"mTurnSpeedScalar": 5,
+			"castRange": [
+				125,
+				125,
+				125,
+				125,
+				125,
+				125,
+				125
+			],
+			"castRadius": [
+				125,
+				125,
+				125,
+				125,
+				125,
+				125,
+				125
+			],
+			"castConeDistance": 100,
+			"castFrame": 11,
+			"missileSpeed": 467,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	}
+}

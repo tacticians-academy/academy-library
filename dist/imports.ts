@@ -34,7 +34,10 @@ export async function importAugments(set: SetNumber) {
 	if (set === 10) {
 		return await import('./set10/augments.js')
 	}
-	throw 'Unsupported set:' + set
+	if (set === 11) {
+		return await import('./set11/augments.js')
+	}
+	throw 'Unsupported Set:' + set
 }
 
 export async function importChampions(set: SetNumber) {
@@ -89,7 +92,10 @@ export async function importChampions(set: SetNumber) {
 	if (set === 10) {
 		return await import('./set10/champions.js')
 	}
-	throw 'Unsupported set:' + set
+	if (set === 11) {
+		return await import('./set11/champions.js')
+	}
+	throw 'Unsupported Set:' + set
 }
 
 export async function importItems(set: SetNumber) {
@@ -144,7 +150,10 @@ export async function importItems(set: SetNumber) {
 	if (set === 10) {
 		return await import('./set10/items.js')
 	}
-	throw 'Unsupported set:' + set
+	if (set === 11) {
+		return await import('./set11/items.js')
+	}
+	throw 'Unsupported Set:' + set
 }
 
 export async function importSetData(set: SetNumber) {
@@ -200,7 +209,10 @@ export async function importSetData(set: SetNumber) {
 	if (set === 10) {
 		return await import('./set10/data.js') as SetData
 	}
-	throw 'Unsupported set:' + set
+	if (set === 11) {
+		return await import('./set11/data.js') as SetData
+	}
+	throw 'Unsupported Set:' + set
 }
 
 export async function importTraits(set: SetNumber) {
@@ -255,7 +267,10 @@ export async function importTraits(set: SetNumber) {
 	if (set === 10) {
 		return await import('./set10/traits.js')
 	}
-	throw 'Unsupported set:' + set
+	if (set === 11) {
+		return await import('./set11/traits.js')
+	}
+	throw 'Unsupported Set:' + set
 }
 
 export async function importMap(set: SetNumber) {
@@ -311,5 +326,8 @@ export async function importMap(set: SetNumber) {
 	if (set === 10) {
 		return await import('./set10/map.js') as MapData
 	}
-	throw 'Unsupported set:' + set
+	if (set === 11) {
+		return await import('./set11/map.js') as MapData
+	}
+	throw 'Unsupported Set:' + set
 }

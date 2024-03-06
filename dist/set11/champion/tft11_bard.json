@@ -1,0 +1,682 @@
+{
+	"{3a30c165}": {
+		"mScriptName": "TFT11_BardBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.23579999804496765,
+			"mApplyAttackDamage": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				550,
+				550,
+				550,
+				550,
+				550,
+				550,
+				550
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mStartBoneName": "Buffbone_Glb_Weapon_1",
+					"mUseGroundHeightAtTarget": false,
+					"mSpeed": 2000,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 10.5,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{53126369}",
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{a2fbb109}": {
+		"mScriptName": "TFT11_BardSpell",
+		"mSpell": {
+			"mAffectsTypeFlags": 8192,
+			"mEffectAmount": [
+				{
+					"value": [
+						6,
+						6,
+						6,
+						6,
+						6,
+						6,
+						6
+					],
+					"__type": "SpellEffectAmount"
+				}
+			],
+			"mDataValues": [
+				{
+					"mName": "Duration",
+					"mValues": [
+						6,
+						6,
+						6,
+						6,
+						6,
+						6,
+						6
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "PercentAttackDamage",
+					"mValues": [
+						0.800000011920929,
+						0.6499999761581421,
+						0.6499999761581421,
+						0.699999988079071,
+						0.800000011920929,
+						0.800000011920929,
+						0.800000011920929
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "APDamage",
+					"mValues": [
+						200,
+						25,
+						40,
+						65,
+						500,
+						575,
+						650
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "AOEDamageMultiplier",
+					"mValues": [
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "HexDistance",
+					"mValues": [
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"ModifiedPhysicalDamage": {
+					"mMultiplier": {
+						"mNumber": 1,
+						"__type": "NumberCalculationPart"
+					},
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubparts": [
+								{
+									"mStat": 2,
+									"mSubpart": {
+										"mDataValue": "PercentAttackDamage",
+										"__type": "NamedDataValueCalculationPart"
+									},
+									"__type": "StatBySubPartCalculationPart"
+								}
+							],
+							"__type": "SumOfSubPartsCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{9e924a4b}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mDataValue": "Duration",
+							"__type": "NamedDataValueCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"ModifiedMagicDamage": {
+					"mMultiplier": {
+						"mNumber": 1,
+						"__type": "NumberCalculationPart"
+					},
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubparts": [
+								{
+									"mSubpart": {
+										"mDataValue": "APDamage",
+										"__type": "NamedDataValueCalculationPart"
+									},
+									"mRatio": 0.009999999776482582,
+									"__type": "SubPartScaledProportionalToStat"
+								}
+							],
+							"__type": "SumOfSubPartsCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{d4bf8645}": {
+					"mFormulaParts": [
+						{
+							"mSubparts": [
+								{
+									"mSubpart": {
+										"mDataValue": "APDamage",
+										"__type": "NamedDataValueCalculationPart"
+									},
+									"mRatio": 0.009999999776482582,
+									"__type": "SubPartScaledProportionalToStat"
+								},
+								{
+									"mStat": 2,
+									"mSubpart": {
+										"mDataValue": "PercentAttackDamage",
+										"__type": "NamedDataValueCalculationPart"
+									},
+									"__type": "StatBySubPartCalculationPart"
+								}
+							],
+							"__type": "SumOfSubPartsCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.875,
+			"mAmmoUsed": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"mCantCancelWhileChanneling": true,
+			"mChannelIsInterruptedByDisables": false,
+			"mChannelIsInterruptedByAttacking": false,
+			"mCanMoveWhileChanneling": true,
+			"mShowChannelBar": false,
+			"alwaysSnapFacing": true,
+			"bIsToggleSpell": true,
+			"castRange": [
+				725,
+				725,
+				725,
+				725,
+				725,
+				725,
+				725
+			],
+			"castRangeDisplayOverride": [
+				650,
+				650,
+				650,
+				650,
+				650,
+				650,
+				650
+			],
+			"castRadius": [
+				725,
+				725,
+				725,
+				725,
+				725,
+				725,
+				725
+			],
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{ade2d85d}": {
+		"mScriptName": "TFT11_BardSharpshooterBounce",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 4234,
+			"mAmmoUsed": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"canCastOrQueueWhileCasting": true,
+			"bHaveHitEffect": true,
+			"mConsideredAsAutoAttack": true,
+			"castRange": [
+				9999,
+				9999,
+				9999,
+				9999,
+				9999,
+				9999,
+				9999
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "C_Buffbone_Glb_Chest_Loc",
+					"mSpeed": 1000,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 10,
+			"missileSpeed": 1300,
+			"mMissileEffectKey": "{53126369}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{bb643c35}": {
+		"mScriptName": "TFT11_BardCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.23579999804496765,
+			"mApplyAttackDamage": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				550,
+				550,
+				550,
+				550,
+				550,
+				550,
+				550
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mStartBoneName": "Buffbone_Glb_Weapon_1",
+					"mUseGroundHeightAtTarget": false,
+					"mSpeed": 2000,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 12,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{53126369}",
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{ea9882ed}": {
+		"mScriptName": "TFT11_BardMeepToss",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -0.06800001859664917,
+			"mCantCancelWhileWindingUp": true,
+			"{7e3432a0}": true,
+			"mSpellRevealsChampion": false,
+			"alwaysSnapFacing": true,
+			"mUseAutoattackCastTimeData": {
+				"__type": "UseAutoattackCastTimeData"
+			},
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				275,
+				275,
+				275,
+				275,
+				275,
+				275,
+				275
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mStartBoneName": "Buffbone_Glb_Weapon_1",
+					"mTargetBoneName": "C_Buffbone_Glb_Chest_Loc",
+					"mUseGroundHeightAtTarget": false,
+					"mSpeed": 1300,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"mGravity": 3000,
+					"__type": "GravityHeightSolver"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 10.5,
+			"missileSpeed": 1750,
+			"mMissileEffectKey": "{89c8910b}",
+			"selectionPriority": 1,
+			"{47e0dff9}": {
+				"13": "Play_sfx_tft11_BardSpellMissile_OnHit",
+				"16": "Play_sfx_tft11_BardSpellMissile_OnMissileLaunch"
+			},
+			"{00f7e5bc}": true,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{f1c05bf5}": {
+		"mScriptName": "TFT11_BardBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.23579999804496765,
+			"mApplyAttackDamage": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				550,
+				550,
+				550,
+				550,
+				550,
+				550,
+				550
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mStartBoneName": "Buffbone_Glb_Weapon_1",
+					"mUseGroundHeightAtTarget": false,
+					"mSpeed": 2000,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 10.5,
+			"missileSpeed": 2000,
+			"mMissileEffectKey": "{53126369}",
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{f85d1865}": {
+		"mScriptName": "TFT11_BardMeepTossSharpshooterBounce",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -0.06800001859664917,
+			"delayTotalTimePercent": -1,
+			"mCantCancelWhileWindingUp": true,
+			"{7e3432a0}": true,
+			"mSpellRevealsChampion": false,
+			"alwaysSnapFacing": true,
+			"mUseAutoattackCastTimeData": {
+				"__type": "UseAutoattackCastTimeData"
+			},
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castRadius": [
+				275,
+				275,
+				275,
+				275,
+				275,
+				275,
+				275
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mStartBoneName": "root",
+					"mUseGroundHeightAtTarget": false,
+					"mSpeed": 1000,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"mGravity": 2000,
+					"__type": "GravityHeightSolver"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"missileSpeed": 1750,
+			"mMissileEffectKey": "{89c8910b}",
+			"selectionPriority": 1,
+			"{00f7e5bc}": true,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{c90ff9ab}": {
+		"mCharacterName": "TFT11_Bard",
+		"baseHP": 650,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 50,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 50,
+		"baseArmor": 25,
+		"baseSpellBlock": 25,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 890,
+		"attackSpeed": 0.75,
+		"basicAttack": {
+			"mAttackProbability": 0.5,
+			"mAttackName": "TFT11_BardBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 0.5,
+				"mAttackName": "TFT11_BardBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT11_BardCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT11_BardSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446656,
+		"tier": 3,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{7362d06b}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{90a3a954}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{34ed6daa}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"__type": "TFTCharacterRecord"
+	}
+}

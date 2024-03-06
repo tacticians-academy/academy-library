@@ -1,0 +1,660 @@
+{
+	"{01e08f49}": {
+		"mScriptName": "TFT11_IreliaSpell",
+		"mSpell": {
+			"mAffectsTypeFlags": 11333,
+			"mAffectsStatusFlags": 32,
+			"mDataValues": [
+				{
+					"mName": "NumOfBlades",
+					"mValues": [
+						7,
+						7,
+						7,
+						20,
+						7,
+						7,
+						7
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "BladeHitAD",
+					"mValues": [
+						0,
+						1.75,
+						1.75,
+						7,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "AttacksToCast_MustMatchResourceMaximum",
+					"mValues": [
+						8,
+						8,
+						8,
+						8,
+						8,
+						8,
+						8
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "SpellAPDamage",
+					"mValues": [
+						100,
+						100,
+						100,
+						100,
+						100,
+						100,
+						100
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "SpellHitAD",
+					"mValues": [
+						0,
+						3.5,
+						3.5,
+						20,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "AttackSpeedToDamage",
+					"mValues": [
+						0.5,
+						0.5,
+						0.5,
+						0.5,
+						0.5,
+						0.5,
+						0.5
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "AttackSpeedToBladeSpeed",
+					"mValues": [
+						0.25,
+						0.25,
+						0.25,
+						0.25,
+						0.25,
+						0.25,
+						0.25
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "NumSpellBlades",
+					"mValues": [
+						3,
+						3,
+						3,
+						3,
+						3,
+						3,
+						3
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "NumSpellHIts",
+					"mValues": [
+						3,
+						3,
+						3,
+						3,
+						3,
+						3,
+						3
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "SunderDuration",
+					"mValues": [
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"{0f437b7e}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mStat": 2,
+							"mDataValue": "{74ec0113}",
+							"__type": "StatByNamedDataValueCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{0003c576}": {
+					"mFormulaParts": [
+						{
+							"mSubparts": [
+								{
+									"mStat": 2,
+									"mDataValue": "{674255fb}",
+									"__type": "StatByNamedDataValueCalculationPart"
+								},
+								{
+									"mSubpart": {
+										"mDataValue": "{107f7eb9}",
+										"__type": "NamedDataValueCalculationPart"
+									},
+									"mRatio": 0.009999999776482582,
+									"__type": "SubPartScaledProportionalToStat"
+								}
+							],
+							"__type": "SumOfSubPartsCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{0af99eb5}": {
+		"mScriptName": "TFT11_IreliaBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 4234,
+			"mAlternateName": "IreliaBasicAttack2",
+			"delayCastOffsetPercent": -0.3506999909877777,
+			"bHaveHitEffect": true,
+			"castRange": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 10,
+			"missileSpeed": 467,
+			"mMissileEffectName": "EvelynnBasicAttack_mis.troy",
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{1fc4a19c}": {
+		"mScriptName": "TFT11_Irelia_BA_SplineMis",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mUpdateRotationWhenCasting": true,
+			"castRange": [
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"luaOnMissileUpdateDistanceInterval": 51,
+			"mMissileSpec": {
+				"mMissileWidth": 30,
+				"movementComponent": {
+					"mUseHeightOffsetAtEnd": true,
+					"mTargetHeightAugment": 150,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_Buffbone_Glb_Hand_Loc",
+					"mTargetBoneName": "C_Buffbone_Glb_Center_Loc",
+					"mSplineInfo": {
+						"mControlPoint1": [
+							0.9768573045730591,
+							0,
+							0.015308110043406487
+						],
+						"mControlPoint2": [
+							-0.9956430196762085,
+							0,
+							0.017213057726621628
+						],
+						"__type": "HermiteSplineInfo"
+					},
+					"{ff738f10}": 2,
+					"mSpeed": 700,
+					"__type": "FixedSpeedSplineMovement"
+				},
+				"heightSolver": {
+					"__type": "SinusoidalHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"{9aa2fc4c}": true,
+						"__type": "CastOnHit"
+					},
+					{
+						"mActions": [
+							{
+								"__type": "ClearAlreadyHitTracking"
+							}
+						],
+						"__type": "TriggerOnMovementComplete"
+					},
+					{
+						"mActions": [
+							{
+								"__type": "Destroy"
+							}
+						],
+						"mDelay": 60,
+						"__type": "TriggerOnDelay"
+					},
+					{
+						"mTriggerName": "ReturnBlade",
+						"mDelay": 0.09399999678134918,
+						"__type": "TriggerFromScript"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 8,
+			"castFrame": 6.5,
+			"missileSpeed": 1000,
+			"mMissileEffectKey": "{198522e0}",
+			"mLineWidth": 100,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "{4fc8917a}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {
+				"__type": "TargetOrLocation"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{22972ba5}": {
+		"mScriptName": "TFT11_IreliaBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 4234,
+			"mAlternateName": "IreliaBasicAttack",
+			"delayCastOffsetPercent": -0.3506999909877777,
+			"bHaveHitEffect": true,
+			"castRange": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 10,
+			"missileSpeed": 467,
+			"mMissileEffectKey": "{198522e0}",
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{75e55ae7}": {
+		"mScriptName": "TFT11_Irelia_Spell_SplineMis",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mUpdateRotationWhenCasting": true,
+			"castRange": [
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"mMissileSpec": {
+				"mMissileWidth": 30,
+				"movementComponent": {
+					"mTargetHeightAugment": 150,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_Buffbone_Glb_Hand_Loc",
+					"mTargetBoneName": "C_Buffbone_Glb_Center_Loc",
+					"mSplineInfo": {
+						"mUseMissilePositionAsOrigin": true,
+						"mControlPoint1": [
+							0,
+							0,
+							1
+						],
+						"mControlPoint2": [
+							0,
+							0,
+							1
+						],
+						"__type": "HermiteSplineInfo"
+					},
+					"{ff738f10}": 2,
+					"mTravelTime": 0.75,
+					"__type": "FixedTimeSplineMovement"
+				},
+				"heightSolver": {
+					"mVerticalOffset": 100,
+					"mAmplitude": 100,
+					"mNumberOfPeriods": 1,
+					"{e1833fac}": -0.25,
+					"__type": "SinusoidalHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"{9aa2fc4c}": true,
+						"__type": "CastOnHit"
+					},
+					{
+						"mActions": [
+							{
+								"__type": "ClearAlreadyHitTracking"
+							}
+						],
+						"__type": "TriggerOnMovementComplete"
+					},
+					{
+						"mActions": [
+							{
+								"__type": "Destroy"
+							}
+						],
+						"mDelay": 60,
+						"__type": "TriggerOnDelay"
+					},
+					{
+						"mTriggerName": "ReturnBlade",
+						"mDelay": 0.09399999678134918,
+						"__type": "TriggerFromScript"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 8,
+			"castFrame": 6.5,
+			"missileSpeed": 1000,
+			"mMissileEffectKey": "{85c76811}",
+			"mLineWidth": 100,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "{4fc8917a}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {
+				"__type": "TargetOrLocation"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{8dcd4475}": {
+		"mScriptName": "TFT11_IreliaCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 512,
+			"delayCastOffsetPercent": -0.3999999761581421,
+			"delayTotalTimePercent": -0.25,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castConeDistance": 100,
+			"castFrame": 9,
+			"missileSpeed": 0,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{f47325ac}": {
+		"mScriptName": "TFT11_Irelia_Spell_BladeMis",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mUpdateRotationWhenCasting": true,
+			"castRange": [
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"mMissileSpec": {
+				"mMissileWidth": 30,
+				"movementComponent": {
+					"mUseHeightOffsetAtEnd": true,
+					"mTargetHeightAugment": 150,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "R_Buffbone_Glb_Hand_Loc",
+					"mTargetBoneName": "C_Buffbone_Glb_Center_Loc",
+					"mSplineInfo": {
+						"mUseMissilePositionAsOrigin": true,
+						"__type": "HermiteSplineInfo"
+					},
+					"mSpeed": 1000,
+					"__type": "FixedSpeedSplineMovement"
+				},
+				"heightSolver": {
+					"__type": "CurveTheDifferenceHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"{9aa2fc4c}": true,
+						"__type": "CastOnHit"
+					},
+					{
+						"mActions": [
+							{
+								"{f73a559d}": true,
+								"mOverrideMovement": {
+									"mSplineInfo": {
+										"__type": "HermiteSplineInfo"
+									},
+									"mSpeed": 1000,
+									"__type": "FixedSpeedSplineMovement"
+								},
+								"__type": "ClearTargetAndKeepMoving"
+							}
+						],
+						"mTriggerName": "StartArc",
+						"mDelay": 0,
+						"__type": "TriggerFromScript"
+					},
+					{
+						"__type": "{72f86c81}"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 6.5,
+			"missileSpeed": 1000,
+			"mMissileEffectKey": "{198522e0}",
+			"mLineWidth": 100,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "{4fc8917a}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {
+				"__type": "Location"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{237d35c0}": {
+		"mCharacterName": "TFT11_Irelia",
+		"baseHP": 900,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 11,
+			"arBase": 8,
+			"arBaseStaticRegen": 0,
+			"arIncrements": 1,
+			"arMaxSegments": 10,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 75,
+		"baseArmor": 40,
+		"baseSpellBlock": 40,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 1800,
+		"attackSpeed": 0.8999999761581421,
+		"spellNames": [
+			"TFT11_IreliaSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446656,
+		"tier": 5,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{071061fa}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{dbc16ec1}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{34ed6daa}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"{7cbc4762}": 0,
+		"__type": "TFTCharacterRecord"
+	}
+}

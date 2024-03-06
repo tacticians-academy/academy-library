@@ -1,0 +1,506 @@
+{
+	"{1b853b57}": {
+		"mScriptName": "TFT11_SennaBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 6794,
+			"mAlternateName": "VelkozBasicAttack",
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mPreCastLockoutDeltaTime": 0.125,
+			"mPreCastLockoutDeltaTimeData": {
+				"mSpellLockDeltaTimeCalculation": {
+					"mFormulaParts": [
+						{
+							"mStartValue": 0.125,
+							"mEndValue": 0.08699999749660492,
+							"{a331f6bf}": false,
+							"__type": "ByCharLevelInterpolationCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"__type": "SpellLockDeltaTimeData"
+			},
+			"bHaveHitEffect": true,
+			"castRange": [
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Buffbone_Glb_Weapon_1_end",
+					"mSpeed": 3500,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 14,
+			"missileSpeed": 8000,
+			"mMissileEffectKey": "{e4d8de01}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1,
+			"{39381720}": true,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{3972099f}": {
+		"mScriptName": "TFT11_SennaBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 6794,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mPreCastLockoutDeltaTime": 0.125,
+			"mPreCastLockoutDeltaTimeData": {
+				"mSpellLockDeltaTimeCalculation": {
+					"mFormulaParts": [
+						{
+							"mStartValue": 0.125,
+							"mEndValue": 0.08699999749660492,
+							"{a331f6bf}": false,
+							"__type": "ByCharLevelInterpolationCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"__type": "SpellLockDeltaTimeData"
+			},
+			"bHaveHitEffect": true,
+			"castRange": [
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Buffbone_Glb_Weapon_1_end",
+					"mSpeed": 3500,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 14,
+			"missileSpeed": 8000,
+			"mMissileEffectKey": "{e4d8de01}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1,
+			"{39381720}": true,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{52fc7bdb}": {
+		"mScriptName": "TFT11_SennaSpell",
+		"mSpell": {
+			"flags": 4194304,
+			"mAffectsTypeFlags": 16418,
+			"mSpellTags": [
+				""
+			],
+			"mDataValues": [
+				{
+					"mName": "BonusAttackDamage",
+					"mValues": [
+						0,
+						20,
+						25,
+						30,
+						160,
+						200,
+						240
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "PercentAttackDamage",
+					"mValues": [
+						2,
+						2.450000047683716,
+						2.450000047683716,
+						2.549999952316284,
+						2,
+						2,
+						2
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "Duration",
+					"mValues": [
+						4,
+						4,
+						4,
+						4,
+						4,
+						4,
+						4
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "BonusRange",
+					"mValues": [
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "BaseDamageAPScaling",
+					"mValues": [
+						0,
+						20,
+						30,
+						45,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"ModifiedDamage": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubparts": [
+								{
+									"mStat": 2,
+									"mDataValue": "PercentAttackDamage",
+									"__type": "StatByNamedDataValueCalculationPart"
+								},
+								{
+									"mSubpart": {
+										"mDataValue": "{25f2bd2d}",
+										"__type": "NamedDataValueCalculationPart"
+									},
+									"mRatio": 0.009999999776482582,
+									"__type": "SubPartScaledProportionalToStat"
+								}
+							],
+							"__type": "SumOfSubPartsCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{75f83832}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "{25f2bd2d}",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"delayCastOffsetPercent": 1,
+			"delayTotalTimePercent": -0.5,
+			"canCastOrQueueWhileCasting": true,
+			"mCantCancelWhileWindingUp": true,
+			"mUseMinimapTargeting": true,
+			"mMinimapIconRotation": true,
+			"castRange": [
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000,
+				3000
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"castConeDistance": 100,
+			"castFrame": 25,
+			"mLineWidth": 180,
+			"selectionPriority": 1,
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"{00f7e5bc}": true,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{a5873327}": {
+		"mScriptName": "TFT11_SennaCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 6794,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mPreCastLockoutDeltaTime": 0.125,
+			"mPreCastLockoutDeltaTimeData": {
+				"mSpellLockDeltaTimeCalculation": {
+					"mFormulaParts": [
+						{
+							"mStartValue": 0.125,
+							"mEndValue": 0.08699999749660492,
+							"{a331f6bf}": false,
+							"__type": "ByCharLevelInterpolationCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"__type": "SpellLockDeltaTimeData"
+			},
+			"bHaveHitEffect": true,
+			"castRange": [
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000,
+				10000
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Buffbone_Glb_Weapon_1_end",
+					"mSpeed": 3500,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 14,
+			"missileSpeed": 8000,
+			"mMissileEffectKey": "{e4d8de01}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1,
+			"{39381720}": true,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{e464a8a6}": {
+		"mScriptName": "TFT11_SennaPassive_Soul",
+		"mSpell": {
+			"flags": 4,
+			"mIsDisabledWhileDead": false,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 35,
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "C_Buffbone_Glb_Center_Loc",
+					"mTargetBoneName": "L_BUFFBONE_GLB_HAND_LOC",
+					"mTravelTime": 0.5,
+					"__type": "FixedTimeMovement"
+				},
+				"visibilityComponent": {
+					"mVisibleToOwnerTeamOnly": true,
+					"__type": "Defaultvisibility"
+				},
+				"heightSolver": {
+					"mGravity": 1000,
+					"__type": "GravityHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "DestroyOnHit"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 3,
+			"castFrame": 1,
+			"missileSpeed": 1700,
+			"mMissileEffectKey": "{e8128ea5}",
+			"mTargetingTypeData": {
+				"__type": "TargetOrLocation"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{86927365}": {
+		"mCharacterName": "TFT11_Senna",
+		"baseHP": 600,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 75,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 55,
+		"baseArmor": 20,
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 890,
+		"attackSpeed": 0.75,
+		"basicAttack": {
+			"mAttackName": "TFT11_SennaBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT11_SennaBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT11_SennaCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT11_SennaSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446656,
+		"tier": 2,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{4bb4f7a7}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{18ff8266}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{34ed6daa}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mInitialMana": 20,
+		"__type": "TFTCharacterRecord"
+	}
+}

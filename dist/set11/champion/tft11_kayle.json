@@ -1,0 +1,957 @@
+{
+	"{3e8fac81}": {
+		"mGearData": {
+			"skinMeshProperties": {
+				"materialOverride": [
+					{
+						"material": "{ac7e59cd}",
+						"submesh": "Body",
+						"__type": "SkinMeshDataProperties_MaterialOverride"
+					},
+					{
+						"material": "{ac7e59cd}",
+						"submesh": "level11",
+						"__type": "SkinMeshDataProperties_MaterialOverride"
+					},
+					{
+						"material": "{92340115}",
+						"submesh": "sword_hilt_combined",
+						"__type": "SkinMeshDataProperties_MaterialOverride"
+					},
+					{
+						"material": "{92340115}",
+						"submesh": "sword_blade_combined",
+						"__type": "SkinMeshDataProperties_MaterialOverride"
+					},
+					{
+						"material": "{92340115}",
+						"submesh": "sword_hilt",
+						"__type": "SkinMeshDataProperties_MaterialOverride"
+					},
+					{
+						"material": "{92340115}",
+						"submesh": "sword_blade",
+						"__type": "SkinMeshDataProperties_MaterialOverride"
+					}
+				],
+				"__type": "SkinMeshDataProperties"
+			},
+			"mVFXResourceResolver": {
+				"__type": "ResourceResolver"
+			},
+			"{b6c044fb}": [
+				"Level1",
+				"{a65e0de1}",
+				"{b78a41c1}",
+				"{2c26c60e}"
+			],
+			"{21b6167e}": [
+				"{337ee4ef}",
+				"{1bb5c9f7}",
+				"{048a6a97}",
+				"{46e3f07e}"
+			],
+			"{71202eae}": true,
+			"{0e24cc07}": [
+				{
+					"effectKey": "{1d65e980}",
+					"boneName": "Buffbone_Glb_Ground_Loc",
+					"__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+				},
+				{
+					"effectKey": "{864158b0}",
+					"boneName": "R_Sword",
+					"__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+				},
+				{
+					"effectKey": "{330d179d}",
+					"boneName": "L_Sword",
+					"__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+				}
+			],
+			"__type": "GearData"
+		},
+		"__type": "GearSkinUpgrade"
+	},
+	"{3f8fae14}": {
+		"mGearData": {
+			"mVFXResourceResolver": {
+				"__type": "ResourceResolver"
+			},
+			"{b6c044fb}": [
+				"{337ee4ef}"
+			],
+			"{21b6167e}": [
+				"Level1",
+				"{a65e0de1}",
+				"{b78a41c1}",
+				"{2c26c60e}"
+			],
+			"{71202eae}": true,
+			"{0e24cc07}": [
+				{
+					"effectKey": "{864158b0}",
+					"boneName": "R_Sword",
+					"__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+				},
+				{
+					"effectKey": "{2065ee39}",
+					"boneName": "Buffbone_Glb_Ground_Loc",
+					"__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+				}
+			],
+			"__type": "GearData"
+		},
+		"__type": "GearSkinUpgrade"
+	},
+	"{408fafa7}": {
+		"mGearData": {
+			"mVFXResourceResolver": {
+				"__type": "ResourceResolver"
+			},
+			"{b6c044fb}": [
+				"{337ee4ef}",
+				"{2c26c60e}"
+			],
+			"{21b6167e}": [
+				"Level1",
+				"{b78a41c1}",
+				"{a65e0de1}"
+			],
+			"{71202eae}": true,
+			"{0e24cc07}": [
+				{
+					"effectKey": "{864158b0}",
+					"boneName": "R_Sword",
+					"__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+				}
+			],
+			"__type": "GearData"
+		},
+		"__type": "GearSkinUpgrade"
+	},
+	"{418fb13a}": {
+		"mGearData": {
+			"mVFXResourceResolver": {
+				"__type": "ResourceResolver"
+			},
+			"{b6c044fb}": [
+				"{337ee4ef}",
+				"{2c26c60e}",
+				"{a65e0de1}"
+			],
+			"{21b6167e}": [
+				"Level1",
+				"{b78a41c1}"
+			],
+			"__type": "GearData"
+		},
+		"__type": "GearSkinUpgrade"
+	},
+	"{3c9d8275}": {
+		"mScriptName": "TFT11_KayleCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 21711,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mStartBoneName": "Buffbone_SwordA",
+					"mTargetBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+					"mSpeed": 5000,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 2250,
+			"mMissileEffectKey": "{9ddbe55a}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{51d0a3db}": {
+		"mScriptName": "TFT11_KayleSpellWideDouble",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayTotalTimePercent": -0.25,
+			"mProjectTargetToCastRange": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				1000,
+				1000,
+				1000,
+				1000,
+				1000,
+				1000,
+				1000
+			],
+			"castRadius": [
+				20,
+				20,
+				20,
+				20,
+				20,
+				20,
+				20
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 200,
+				"movementComponent": {
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "",
+					"mTargetBoneName": "C_Buffbone_Glb_Chest_Loc",
+					"mProjectTargetToCastRange": true,
+					"mUseGroundHeightAtTarget": false,
+					"mSpeed": 2500,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"__type": "BlendedLinearHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnHit"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 10,
+			"mMissileEffectKey": "{ac514ffa}",
+			"mHitEffectKey": "{42549e54}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"mTargetingTypeData": {
+				"__type": "TargetOrLocation"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{5468c5a5}": {
+		"mScriptName": "TFT11_KayleBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 21711,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mStartBoneName": "Buffbone_SwordA",
+					"mTargetBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+					"mSpeed": 5000,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 2250,
+			"mMissileEffectKey": "{9ddbe55a}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{648c0476}": {
+		"mScriptName": "TFT11_KayleSpellWide",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayTotalTimePercent": -0.25,
+			"mProjectTargetToCastRange": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				1000,
+				1000,
+				1000,
+				1000,
+				1000,
+				1000,
+				1000
+			],
+			"castRadius": [
+				20,
+				20,
+				20,
+				20,
+				20,
+				20,
+				20
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 200,
+				"movementComponent": {
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "",
+					"mTargetBoneName": "C_Buffbone_Glb_Center_Loc",
+					"mProjectTargetToCastRange": true,
+					"mUseGroundHeightAtTarget": false,
+					"mSpeed": 2500,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"__type": "BlendedLinearHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnHit"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 10,
+			"mMissileEffectKey": "{ac514ffa}",
+			"mHitEffectKey": "{42549e54}",
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"mTargetingTypeData": {
+				"__type": "TargetOrLocation"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{71ef0343}": {
+		"mScriptName": "TFT11_KayleBasicAttack4",
+		"mSpell": {
+			"mAffectsTypeFlags": 7183,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mStartBoneName": "Buffbone_SwordA",
+					"mTargetBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+					"mSpeed": 5000,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 2250,
+			"mMissileEffectKey": "{9ddbe55a}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{76ef0b22}": {
+		"mScriptName": "TFT11_KayleBasicAttack3",
+		"mSpell": {
+			"mAffectsTypeFlags": 7183,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mStartBoneName": "Buffbone_SwordA",
+					"mTargetBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+					"mSpeed": 5000,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 2250,
+			"mMissileEffectKey": "{9ddbe55a}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{77ef0cb5}": {
+		"mScriptName": "TFT11_KayleBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 21711,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mStartBoneName": "Buffbone_SwordA",
+					"mTargetBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+					"mSpeed": 5000,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 2250,
+			"mMissileEffectKey": "{9ddbe55a}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{b2f415c5}": {
+		"mScriptName": "TFT11_KayleCritAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 21711,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500,
+				2500
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mStartBoneName": "Buffbone_SwordA",
+					"mTargetBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+					"mSpeed": 5000,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 8,
+			"missileSpeed": 2250,
+			"mMissileEffectKey": "{9ddbe55a}",
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{d67bcb44}": {
+		"mScriptName": "TFT11_KayleSpellDouble",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayTotalTimePercent": -0.25,
+			"mProjectTargetToCastRange": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				1000,
+				1000,
+				1000,
+				1000,
+				1000,
+				1000,
+				1000
+			],
+			"castRadius": [
+				20,
+				20,
+				20,
+				20,
+				20,
+				20,
+				20
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 200,
+				"movementComponent": {
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "",
+					"mTargetBoneName": "C_Buffbone_Glb_Center_Loc",
+					"mProjectTargetToCastRange": true,
+					"mUseGroundHeightAtTarget": false,
+					"mSpeed": 2500,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"__type": "BlendedLinearHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnHit"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 10,
+			"mMissileEffectKey": "{97a8ae08}",
+			"mHitEffectKey": "{42549e54}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"mTargetingTypeData": {
+				"__type": "TargetOrLocation"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{e2497949}": {
+		"mScriptName": "TFT11_KayleSpell",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						0,
+						180,
+						270,
+						450,
+						800,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "OnHitDamage",
+					"mValues": [
+						0,
+						20,
+						30,
+						40,
+						90,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"ModifiedDamage": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Damage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{50e8d20d}": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "OnHitDamage",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mProjectTargetToCastRange": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				1130,
+				1130,
+				1130,
+				1130,
+				1130,
+				1130,
+				1130
+			],
+			"castRadius": [
+				20,
+				20,
+				20,
+				20,
+				20,
+				20,
+				20
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 200,
+				"movementComponent": {
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "Buffbone_SwordA",
+					"mTargetBoneName": "C_Buffbone_Glb_Center_Loc",
+					"mProjectTargetToCastRange": true,
+					"mUseGroundHeightAtTarget": false,
+					"mSpeed": 2500,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"__type": "BlendedLinearHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnHit"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"mMissileEffectKey": "{97a8ae08}",
+			"mHitEffectKey": "{42549e54}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			],
+			"mTargetingTypeData": {
+				"__type": "TargetOrLocation"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{5dff465a}": {
+		"mCharacterName": "TFT11_Kayle",
+		"baseHP": 450,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 90,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 30,
+		"baseArmor": 25,
+		"baseSpellBlock": 25,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 1130,
+		"attackSpeed": 0.75,
+		"basicAttack": {
+			"mAttackName": "TFT11_KayleBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT11_KayleBasicAttack2",
+				"__type": "AttackSlotData"
+			},
+			{
+				"mAttackName": "TFT11_KayleBasicAttack3",
+				"__type": "AttackSlotData"
+			},
+			{
+				"mAttackName": "TFT11_KayleBasicAttack4",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT11_KayleCritAttack",
+				"__type": "AttackSlotData"
+			},
+			{
+				"mAttackName": "TFT11_KayleCritAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT11_KayleSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"__type": "TFTCharacterRecord"
+	}
+}

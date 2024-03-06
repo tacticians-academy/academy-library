@@ -1,0 +1,66 @@
+{
+	"{b871c720}": {
+		"mCharacterName": "TFT11_AzirSoldier",
+		"baseHP": 900,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 0,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseArmor": 40,
+		"baseSpellBlock": 40,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 1500,
+		"attackRange": 180,
+		"attackSpeed": 0.699999988079071,
+		"basicAttack": {
+			"mAttackName": "TFT11_AzirSoldierBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"critAttacks": [
+			{
+				"mAttackName": "TFT11_AzirSoldierBasicAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT11_AzirSoldierSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 2500,
+		"mMoveHeight": 0,
+		"__type": "TFTCharacterRecord"
+	},
+	"{c04afd99}": {
+		"mScriptName": "TFT11_AzirSoldierBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 7183,
+			"mCantCancelWhileWindingUp": true,
+			"mCantCancelWhileChanneling": true,
+			"castRangeUseBoundingBoxes": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625,
+				549.4000244140625
+			],
+			"castFrame": 20,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	}
+}

@@ -1,0 +1,532 @@
+{
+	"{3ce16308}": {
+		"mScriptName": "TFT11_Qiyana_FlameDisc_Mis",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mConsideredAsAutoAttack": true,
+			"castRange": [
+				500,
+				500,
+				500,
+				500,
+				500,
+				500,
+				500
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 100,
+				"movementComponent": {
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "",
+					"mProjectTargetToCastRange": true,
+					"mUseGroundHeightAtTarget": false,
+					"mSpeed": 1500,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"__type": "BlendedLinearHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VerticalFacingFaceTarget"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnHit"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 9,
+			"castFrame": 6.5,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{766f224c}",
+			"mLineWidth": 100,
+			"mHitEffectKey": "{427b6bdf}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {
+				"__type": "Location"
+			},
+			"{47e0dff9}": {
+				"13": "Play_sfx_tft11_QiyanaSpell_OnHit",
+				"15": "Play_sfx_tft11_QiyanaSpell_OnMissileCast"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{70712035}": {
+		"mScriptName": "TFT11_Qiyana_FlameDisc_Attack",
+		"mSpell": {
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.875,
+			"mCantCancelWhileChanneling": true,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9,
+			"missileSpeed": 0,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{7ce53349}": {
+		"mScriptName": "TFT11_QiyanaSpell",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 11333,
+			"mAffectsStatusFlags": 32,
+			"mDataValues": [
+				{
+					"mName": "Damage",
+					"mValues": [
+						0,
+						20,
+						30,
+						45,
+						160,
+						200,
+						240
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "Duration",
+					"mValues": [
+						4,
+						4,
+						4,
+						4,
+						4,
+						4,
+						4
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "SecondaryTargetPercentage",
+					"mValues": [
+						0,
+						0.75,
+						0.75,
+						0.75,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "PercentAttackDamage",
+					"mValues": [
+						1.2999999523162842,
+						1.350000023841858,
+						1.350000023841858,
+						1.350000023841858,
+						1.2999999523162842,
+						1.2999999523162842,
+						1.2999999523162842
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"ModifiedDamage": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubparts": [
+								{
+									"mStat": 2,
+									"mSubpart": {
+										"mDataValue": "PercentAttackDamage",
+										"__type": "NamedDataValueCalculationPart"
+									},
+									"__type": "StatBySubPartCalculationPart"
+								},
+								{
+									"mSubpart": {
+										"mDataValue": "Damage",
+										"__type": "NamedDataValueCalculationPart"
+									},
+									"mRatio": 0.009999999776482582,
+									"__type": "SubPartScaledProportionalToStat"
+								}
+							],
+							"__type": "SumOfSubPartsCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"SecondaryDamage": {
+					"mMultiplier": {
+						"mDataValue": "{430b9694}",
+						"__type": "NamedDataValueCalculationPart"
+					},
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubparts": [
+								{
+									"mStat": 2,
+									"mSubpart": {
+										"mDataValue": "PercentAttackDamage",
+										"__type": "NamedDataValueCalculationPart"
+									},
+									"__type": "StatBySubPartCalculationPart"
+								},
+								{
+									"mSubpart": {
+										"mDataValue": "Damage",
+										"__type": "NamedDataValueCalculationPart"
+									},
+									"mRatio": 0.009999999776482582,
+									"__type": "SubPartScaledProportionalToStat"
+								}
+							],
+							"__type": "SumOfSubPartsCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{87d23075}": {
+		"mScriptName": "TFT11_QiyanaCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 7375,
+			"delayCastOffsetPercent": -0.17399999499320984,
+			"mCantCancelWhileChanneling": true,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 6.5,
+			"missileSpeed": 0,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{b856afa5}": {
+		"mScriptName": "TFT11_QiyanaBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 7375,
+			"delayCastOffsetPercent": -0.17399999499320984,
+			"bHaveHitEffect": true,
+			"castRange": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 6.5,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{bc58d11f}": {
+		"mScriptName": "TFT11_Qiyana_FlameDisc_SplineMis",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 6154,
+			"delayCastOffsetPercent": -1,
+			"delayTotalTimePercent": -1,
+			"mConsideredAsAutoAttack": true,
+			"castRange": [
+				1600,
+				1600,
+				1600,
+				1600,
+				1600,
+				1600,
+				1600
+			],
+			"castRadius": [
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875,
+				299.29998779296875
+			],
+			"castConeDistance": 100,
+			"mMissileSpec": {
+				"mMissileWidth": 400,
+				"movementComponent": {
+					"mUseHeightOffsetAtEnd": true,
+					"mTracksTarget": false,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "",
+					"mSplineInfo": {
+						"__type": "HermiteSplineInfo"
+					},
+					"mSpeed": 2000,
+					"__type": "FixedSpeedSplineMovement"
+				},
+				"heightSolver": {
+					"__type": "BlendedLinearHeightSolver"
+				},
+				"verticalFacing": {
+					"__type": "VerticalFacingFaceTarget"
+				},
+				"behaviors": [
+					{
+						"__type": "DestroyOnMovementComplete"
+					},
+					{
+						"__type": "CastOnHit"
+					},
+					{
+						"mActions": [
+							{
+								"{f73a559d}": true,
+								"mOverrideMovement": {
+									"mTracksTarget": false,
+									"mStartBoneName": "",
+									"mProjectTargetToCastRange": true,
+									"mSpeed": 1000,
+									"__type": "FixedSpeedMovement"
+								},
+								"__type": "ClearTargetAndKeepMoving"
+							}
+						],
+						"mTriggerName": "ReleaseMissile",
+						"__type": "TriggerFromScript"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 8,
+			"castFrame": 6.5,
+			"missileSpeed": 2800,
+			"mMissileEffectKey": "{766f224c}",
+			"mLineWidth": 100,
+			"mHitEffectKey": "{427b6bdf}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+			"selectionPriority": 1,
+			"mTargetingTypeData": {
+				"__type": "Location"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{c7766ab5}": {
+		"mScriptName": "TFT11_QiyanaBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 7375,
+			"delayCastOffsetPercent": -0.17389999330043793,
+			"bHaveHitEffect": true,
+			"castRange": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 9,
+			"missileSpeed": 0,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{a0313c81}": {
+		"mCharacterName": "TFT11_Qiyana",
+		"baseHP": 700,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 20,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 50,
+		"baseArmor": 35,
+		"baseSpellBlock": 35,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.75,
+		"basicAttack": {
+			"mAttackProbability": 0.5,
+			"mAttackName": "TFT11_QiyanaBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackProbability": 0.5,
+				"mAttackName": "TFT11_QiyanaBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackProbability": 0,
+				"mAttackName": "TFT11_QiyanaBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT11_QiyanaSpell",
+			"TFT11_QiyanaR",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446664,
+		"tier": 2,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{4646ed3d}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{dbc16ec1}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{14a36a9c}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"__type": "TFTCharacterRecord"
+	}
+}

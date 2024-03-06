@@ -1,0 +1,283 @@
+{
+	"{7062d74f}": {
+		"mScriptName": "TFT11_FortuneYordBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "NunuBasicAttack2",
+			"delayCastOffsetPercent": -0.4180000126361847,
+			"bHaveHitEffect": true,
+			"castRange": [
+				265,
+				265,
+				265,
+				265,
+				265,
+				265,
+				265
+			],
+			"castConeDistance": 100,
+			"castFrame": 9,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{8ac06c23}": {
+		"mScriptName": "TFT11_FortuneYordSpell",
+		"mSpell": {
+			"mAffectsTypeFlags": 11333,
+			"mAffectsStatusFlags": 32,
+			"mDataValues": [
+				{
+					"mName": "PermanentHealthPerInterest",
+					"mValues": [
+						30,
+						10,
+						15,
+						25,
+						30,
+						30,
+						30
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "Duration",
+					"mValues": [
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "Heal",
+					"mValues": [
+						60,
+						300,
+						350,
+						400,
+						100,
+						110,
+						120
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "DamageHPPercent",
+					"mValues": [
+						0.10000000149011612,
+						0.10000000149011612,
+						0.10000000149011612,
+						0.10000000149011612,
+						0.10000000149011612,
+						0.10000000149011612,
+						0.10000000149011612
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "HRHealthPerRound",
+					"mValues": [
+						15,
+						60,
+						80,
+						200,
+						15,
+						15,
+						15
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mSpellCalculations": {
+				"ModifiedHeal": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "Heal",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"ModifiedDamageAmount": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mStat": 11,
+							"mDataValue": "{1e0630e9}",
+							"__type": "StatByNamedDataValueCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				}
+			},
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"castFrame": 22,
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{a784b11f}": {
+		"mScriptName": "TFT11_FortuneYordCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"delayCastOffsetPercent": -0.4180000126361847,
+			"bHaveHitEffect": true,
+			"castRange": [
+				265,
+				265,
+				265,
+				265,
+				265,
+				265,
+				265
+			],
+			"castConeDistance": 100,
+			"castFrame": 9,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{dc2d58e7}": {
+		"mScriptName": "TFT11_FortuneYordBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 5327,
+			"mAlternateName": "NunuBasicAttack",
+			"delayCastOffsetPercent": -0.4180000126361847,
+			"bHaveHitEffect": true,
+			"castRange": [
+				265,
+				265,
+				265,
+				265,
+				265,
+				265,
+				265
+			],
+			"castConeDistance": 100,
+			"castFrame": 6,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"selectionPriority": 1,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{f6f9252d}": {
+		"mCharacterName": "TFT11_FortuneYord",
+		"baseHP": 650,
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBase": 80,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseDamage": 65,
+		"baseArmor": 30,
+		"baseSpellBlock": 30,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.5,
+		"basicAttack": {
+			"mAttackName": "TFT11_FortuneYordBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT11_FortuneYordBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT11_FortuneYordCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT11_FortuneYordSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446664,
+		"tier": 1,
+		"mLinkedTraits": [
+			{
+				"TraitData": "{1367cf0e}",
+				"__type": "TFTTraitContributionData"
+			},
+			{
+				"TraitData": "{9e708dcf}",
+				"__type": "TFTTraitContributionData"
+			}
+		],
+		"{b6b01440}": "{2ccf900f}",
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"mInitialMana": 30,
+		"__type": "TFTCharacterRecord"
+	}
+}

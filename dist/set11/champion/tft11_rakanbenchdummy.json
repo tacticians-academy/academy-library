@@ -1,0 +1,269 @@
+{
+	"{03602e7b}": {
+		"mScriptName": "TFT11_RakanBenchDummyBasicAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 512,
+			"delayCastOffsetPercent": -0.6000000238418579,
+			"canCastWhileDisabled": true,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"mIgnoreAnimContinueUntilCastFrame": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 10,
+			"missileSpeed": 1000,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{4d5f964f}": {
+		"mScriptName": "TFT11_RakanBenchDummySpell",
+		"mSpell": {
+			"flags": 4,
+			"mAffectsTypeFlags": 19461,
+			"mAffectsStatusFlags": 32,
+			"mDataValues": [
+				{
+					"mName": "LoversTargets",
+					"mValues": [
+						3,
+						3,
+						3,
+						3,
+						3,
+						3,
+						3
+					],
+					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "LoversHealAmt",
+					"mValues": [
+						0,
+						150,
+						250,
+						1000,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"delayCastOffsetPercent": -0.5,
+			"delayTotalTimePercent": -0.875,
+			"bHaveHitEffect": true,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"mMissileSpec": {
+				"mMissileWidth": 65,
+				"movementComponent": {
+					"mOffsetInitialTargetHeight": 100,
+					"mTargetBoneName": "C_Buffbone_Glb_Center_Loc",
+					"mSpeed": 2500,
+					"__type": "FixedSpeedMovement"
+				},
+				"visibilityComponent": {
+					"mPerceptionBubbleRadius": 2,
+					"__type": "Defaultvisibility"
+				},
+				"verticalFacing": {
+					"__type": "VerticalFacingFaceTarget"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"mActions": [
+							{
+								"mSpeedValue": 5000,
+								"__type": "ChangeMissileSpeed"
+							}
+						],
+						"mTriggerName": "MissileYeet",
+						"__type": "TriggerFromScript"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 6,
+			"mMissileEffectKey": "{d941d81b}",
+			"mHitEffectKey": "{a127930a}",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_Buffbone_Glb_Center_Loc",
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{9968dceb}": {
+		"mScriptName": "TFT11_RakanBenchDummyBasicAttack2",
+		"mSpell": {
+			"mAffectsTypeFlags": 512,
+			"delayCastOffsetPercent": -0.6000000238418579,
+			"canCastWhileDisabled": true,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"mIgnoreAnimContinueUntilCastFrame": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 10,
+			"missileSpeed": 1000,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Hit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{c60572b3}": {
+		"mScriptName": "TFT11_RakanBenchDummyCritAttack",
+		"mSpell": {
+			"mAffectsTypeFlags": 512,
+			"delayCastOffsetPercent": -0.6000000238418579,
+			"canCastWhileDisabled": true,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"mIgnoreAnimContinueUntilCastFrame": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"castFrame": 10,
+			"missileSpeed": 1000,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"{6abbc85d}": {
+		"mCharacterName": "TFT11_RakanBenchDummy",
+		"baseStaticHPRegen": 0,
+		"primaryAbilityResource": {
+			"arType": 0,
+			"arBaseStaticRegen": 0,
+			"arAllowMaxValueToBeOverridden": true,
+			"__type": "AbilityResourceSlotInfo"
+		},
+		"baseSpellBlock": 20,
+		"baseCritChance": 0.25,
+		"critDamageMultiplier": 1.399999976158142,
+		"baseMoveSpeed": 500,
+		"attackRange": 180,
+		"attackSpeed": 0.800000011920929,
+		"basicAttack": {
+			"mAttackName": "TFT11_RakanBenchDummyBasicAttack",
+			"__type": "AttackSlotData"
+		},
+		"extraAttacks": [
+			{
+				"mAttackName": "TFT11_RakanBenchDummyBasicAttack2",
+				"__type": "AttackSlotData"
+			}
+		],
+		"critAttacks": [
+			{
+				"mAttackName": "TFT11_RakanBenchDummyCritAttack",
+				"__type": "AttackSlotData"
+			}
+		],
+		"spellNames": [
+			"TFT11_RakanBenchDummySpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
+		"unitTagsString": "Champion",
+		"flags": 9446656,
+		"mMoveInterval": -0.10000000149011612,
+		"mMoveProximity": 180,
+		"mMoveRange": 250,
+		"mMoveHeight": 0,
+		"{d75e19ad}": 2,
+		"__type": "TFTCharacterRecord"
+	}
+}
