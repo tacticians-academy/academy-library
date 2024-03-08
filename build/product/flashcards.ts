@@ -54,9 +54,7 @@ async function generateAugmentFlashcards(activeAugments: AugmentData[]) {
 		const tierIndex = augment.tier - 1
 		entry.nameExtensions[tierIndex] = nameExtension
 		entry.tiers[tierIndex] = augment.tier
-		if (!entry.descriptions.includes(augment.desc)) {
-			entry.descriptions[tierIndex] = augment.desc
-		}
+		entry.descriptions[tierIndex] = augment.desc.trim()
 		entry.effectsArray[tierIndex] = getNormalizedKeyValues(augment.effects)
 		entry.icons[tierIndex] = getIconPath(augment, true)
 	})
@@ -65,8 +63,9 @@ async function generateAugmentFlashcards(activeAugments: AugmentData[]) {
 		.sort(sortByName)
 		.map(({name, nameExtensions, tiers, descriptions, effectsArray, icons}): AugmentFlashcard => {
 			const validDescriptions = descriptions.filter(description => description)
+			const allDescriptionsEqual = validDescriptions.length <= 1 || descriptions.every(desc => desc === validDescriptions[0])
 			let description: string
-			if (validDescriptions.length > 1) {
+			if (!allDescriptionsEqual) {
 				description = descriptions
 					.map((description, index) => {
 						return description ? `${index + 1}: ${substituteVariables(description, effectsArray.slice(index, index + 1))}` : null
