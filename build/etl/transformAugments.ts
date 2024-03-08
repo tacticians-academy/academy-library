@@ -53,7 +53,7 @@ export async function transformAugments(setNumber: SetNumber, parentSetNumber: S
 					tier = lastNumber as AugmentTier
 				}
 			} else {
-				const wordTier = getTierFromWord(pathName.split('-').pop()!)
+				const wordTier = getTierFromWord(pathName.split('-').pop()!.split('_').pop()!)
 				if (wordTier && wordTier !== tier) {
 					if (tier && tier !== wordTier - 1) {
 						console.log('Multiple tier designations', tier, wordTier, item)
