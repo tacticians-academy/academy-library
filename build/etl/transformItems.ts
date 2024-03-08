@@ -28,7 +28,7 @@ export async function transformItems(setNumber: SetNumber, parentSetNumber: SetN
 	const usesItemRework = isAtLeastPatch(patchLine, 13.18)
 	const { EMBLEM_ITEM_IDS, RETIRED_ITEM_NAMES } = await importSetData(setNumber)
 
-	const currentItemsByType: Record<ItemTypeKey, ItemData[]> = {component: [], completed: [], emblem: [], shadow: [], radiant: [], ornn: [], support: [], shimmerscale: [], consumable: [], hexbuff: [], mod: [], unreleased: []}
+	const currentItemsByType: Record<ItemTypeKey, ItemData[]> = {component: [], completed: [], emblem: [], shadow: [], radiant: [], ornn: [], support: [], shimmerscale: [], consumable: [], hexbuff: [], mod: [], temporary: [], unreleased: []}
 
 	const foundItemIDs: number[] = []
 	itemsData.reverse().forEach(item => {
@@ -55,7 +55,7 @@ export async function transformItems(setNumber: SetNumber, parentSetNumber: SetN
 			return
 		}
 		if (item.apiName != null) {
-			if (item.apiName.includes('_Augment_') || item.apiName.includes('_HyperRollAugment_') || item.apiName.startsWith('TFT_Assist_') || item.apiName.startsWith('TFTEvent_') || item.apiName.startsWith('TFT_Item_Free') || item.apiName.startsWith('TFT_Item_Grant')) {
+			if (item.apiName.includes('_Augment_') || item.apiName.includes('_HyperRollAugment_') || item.apiName.includes('_ChampionItem_') || item.apiName.startsWith('TFT_Assist_') || item.apiName.startsWith('TFTEvent_') || item.apiName.startsWith('TFT_Item_Free') || item.apiName.startsWith('TFT_Item_Grant')) {
 				return
 			}
 			if (item.apiName.endsWith('Slot')) {
@@ -65,6 +65,8 @@ export async function transformItems(setNumber: SetNumber, parentSetNumber: SetN
 		let typeKey: ItemTypeKey | undefined
 		if (item.id != null && GLOBAL_UNRELEASED_ITEM_IDS.includes(item.id)) {
 			typeKey = 'unreleased'
+		} else if (item.apiName?.includes('_Encounter_ChoiceItem_') == true) {
+			typeKey = 'temporary'
 		} else if (iconNormalized.includes('tft_item_hex_')) {
 			typeKey = 'hexbuff'
 		} else if (iconNormalized.includes('/radiant/')) {
@@ -80,7 +82,7 @@ export async function transformItems(setNumber: SetNumber, parentSetNumber: SetN
 		} else if (item.id === 88 || item.apiName === 'TFT_Item_ForceOfNature') {
 			typeKey = 'emblem'
 
-		} else if (item.apiName != null) { // Set >= 5
+		} else if (item.apiName != null) { // Set >= 5 (what patch was this? not true for rereleased Sets)
 			if (usesItemRework && SET_9_5_REWORK_REMOVED_ITEM_APIKEYS.includes(item.apiName)) {
 				return
 			}
@@ -89,6 +91,8 @@ export async function transformItems(setNumber: SetNumber, parentSetNumber: SetN
 				typeKey = 'unreleased'
 
 			// Mods
+			} else if (item.apiName.includes('_Item_Inkshadow') || item.apiName.startsWith('TFT11_Storyweaver')) { // Set 11
+				typeKey = 'mod'
 			} else if (item.apiName === 'TFT6_Item_EliteSpotlight') {
 				if (parentSetNumber !== 6) {
 					return
@@ -197,6 +201,7 @@ export async function transformItems(setNumber: SetNumber, parentSetNumber: SetN
 		const itemsData = currentItemsByType[itemKey]
 		outputItemExports.push(`export const ${itemKey}Items: ItemData[] = ${formatJS(itemsData)}`)
 	}
+
 	const currentItemNames = ['completedItems', 'emblemItems']
 	if (usesItemRework || setNumber === 4.5 || setNumber >= 6) {
 		currentItemNames.splice(2, 0, 'ornnItems')
