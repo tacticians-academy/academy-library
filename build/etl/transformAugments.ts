@@ -5,7 +5,7 @@ import { importSetData } from '../../dist/imports.js'
 import { loadHardcodedTXT } from '../helpers/files.js'
 import { formatJS } from '../helpers/formatting.js'
 import { SUBSTITUTE_EFFECT_KEYS } from '../helpers/normalize.js'
-import { getAugmentNameKey, removeSymbols, validateTraits } from '../helpers/utils.js'
+import { getAugmentNameKey, removeSymbols, sortByName, validateTraits } from '../helpers/utils.js'
 
 const GLOBAL_UNUSED_AUGMENT_NAME_KEYS = ['no scope', 'eagle eye']
 
@@ -21,7 +21,7 @@ export async function transformAugments(setNumber: SetNumber, parentSetNumber: S
 	const inactiveAugments: AugmentData[] = []
 	const choiceAugments: AugmentData[] = []
 
-	for (const item of itemsData.sort((a, b) => a.name.localeCompare(b.name))) {
+	for (const item of itemsData.sort(sortByName)) {
 		const iconNormalized = item.icon.toLowerCase()
 		const pathComponents = iconNormalized.split('/')
 		const pathNameComponent = pathComponents[pathComponents.length - 1]

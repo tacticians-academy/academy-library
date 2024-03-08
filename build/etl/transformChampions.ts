@@ -190,13 +190,15 @@ export async function transformChampions(setNumber: SetNumber, parentSetNumber: 
 
 	const outputChampions: ChampionData[] = []
 	const outputOtherUnits: ChampionData[] = []
-	formattedUnits.forEach(unit => {
-		if (GLOBAL_IGNORE_UNIT_APINAMES.includes(unit.apiName)) {
-			outputOtherUnits.push(unit)
-		} else {
-			outputChampions.push(unit)
-		}
-	})
+	formattedUnits
+		.sort(sortByName)
+		.forEach(unit => {
+			if (GLOBAL_IGNORE_UNIT_APINAMES.includes(unit.apiName)) {
+				outputOtherUnits.push(unit)
+			} else {
+				outputChampions.push(unit)
+			}
+		})
 	abilities.sort((a, b) => a[2].localeCompare(b[2]))
 
 	return [

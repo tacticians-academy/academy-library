@@ -4,7 +4,7 @@ import { ItemKey } from '../../dist/aggregated.js'
 import { importSetData } from '../../dist/imports.js'
 
 import { formatJS } from '../helpers/formatting.js'
-import { isAtLeastPatch, validateTraits } from '../helpers/utils.js'
+import { isAtLeastPatch, sortByName, validateTraits } from '../helpers/utils.js'
 import { NORMALIZE_EFFECT_KEYS, SUBSTITUTE_EFFECT_KEYS, normalizeEffects } from '../helpers/normalize.js'
 
 const unreplacedIDs = new Set(Object.keys(SUBSTITUTE_EFFECT_KEYS))
@@ -197,7 +197,7 @@ export async function transformItems(setNumber: SetNumber, parentSetNumber: SetN
 	const outputItemExports = []
 	for (const key in currentItemsByType) {
 		const itemKey = key as ItemTypeKey
-		currentItemsByType[itemKey].sort((a, b) => a.name.localeCompare(b.name))
+		currentItemsByType[itemKey].sort(sortByName)
 		const itemsData = currentItemsByType[itemKey]
 		outputItemExports.push(`export const ${itemKey}Items: ItemData[] = ${formatJS(itemsData)}`)
 	}

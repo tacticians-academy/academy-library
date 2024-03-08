@@ -16,7 +16,7 @@ export function substituteVariables(description: string, variablesArray: EffectV
 		if (multiplier) {
 			substitutions = substitutions.map(substitution => Math.round(substitution! * parseFloat(multiplier)))
 		}
-		return new Set(substitutions).size === 1 ? substitutions[0]!.toString() : substitutions.join('/')
+		return new Set(substitutions).size === 1 ? substitutions[0].toString() : substitutions.join('/')
 	})
 }
 

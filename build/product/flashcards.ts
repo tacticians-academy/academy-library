@@ -7,7 +7,7 @@ import { importAugments, importChampions, importItems } from '../../dist/imports
 
 import { getPathToSet } from '../helpers/files.js'
 import { formatJS } from '../helpers/formatting.js'
-import { getAugmentNameKey, removeSymbols } from '../helpers/utils.js'
+import { getAugmentNameKey, removeSymbols, sortByName } from '../helpers/utils.js'
 
 const REGEX_ASSET_PREFIX = /https:\/\/raw.communitydragon.org\/\w+?\/game\//
 
@@ -62,14 +62,14 @@ async function generateAugmentFlashcards(activeAugments: AugmentData[]) {
 	})
 
 	return results
-		.sort((a, b) => a.name.localeCompare(b.name))
+		.sort(sortByName)
 		.map(({name, nameExtensions, tiers, descriptions, effectsArray, icons}): AugmentFlashcard => {
 			const validDescriptions = descriptions.filter(description => description)
 			let description: string
 			if (validDescriptions.length > 1) {
 				description = descriptions
 					.map((description, index) => {
-						return description ? `${index + 1}: ${substituteVariables(description, [effectsArray[index]])}` : null
+						return description ? `${index + 1}: ${substituteVariables(description, effectsArray.slice(index, index + 1))}` : null
 					})
 					.filter((description): description is string => description != null)
 					.join('  ')

@@ -46,8 +46,8 @@ export function validateTraits(item: ItemData, allTraitKeys: string[]) {
 	return true
 }
 
-export function sortByName(a: {name: string}, b: {name: string}) {
-	return a.name.localeCompare(b.name)
+export function sortByName(a: {name: string, apiName?: string}, b: {name: string, apiName?: string}) {
+	return a.name === b.name && a.apiName != null && b.apiName != null ? a.apiName.localeCompare(b.apiName) : a.name.localeCompare(b.name)
 }
 
 export function getPatchNumber(patchLine: string) {
