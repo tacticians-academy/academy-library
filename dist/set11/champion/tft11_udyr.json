@@ -1,7 +1,7 @@
 {
-	"{0523b132}": {
+	"Characters/TFT11_Udyr/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Udyr",
-		"baseHP": 1000,
+		"baseHP": 950,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
@@ -138,8 +138,8 @@
 			"mCastType": 1,
 			"castFrame": 13,
 			"missileSpeed": 600,
-			"mMissileEffectKey": "{b3ef1ffe}",
-			"mHitEffectKey": "{5ddf95f1}",
+			"mMissileEffectKey": "TFT11_Udyr_Q_Awaken_Bounce_Missile",
+			"mHitEffectKey": "TFT11_Udyr_Q_Lightning_hitFlash_01",
 			"bHaveHitBone": true,
 			"mHitBoneName": "C_Buffbone_Glb_Center_Loc",
 			"selectionPriority": 1,
@@ -147,7 +147,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{5caeacf1}": {
+	"Characters/TFT11_Udyr/Spells/TFT11_UdyrSpell": {
 		"mScriptName": "TFT11_UdyrSpell",
 		"mSpell": {
 			"flags": 4,
@@ -251,8 +251,8 @@
 					"mName": "ShurikenDamage",
 					"mValues": [
 						0,
-						200,
-						300,
+						150,
+						225,
 						1500,
 						0,
 						0,
@@ -420,8 +420,8 @@
 			"mCastType": 1,
 			"castFrame": 13,
 			"missileSpeed": 600,
-			"mMissileEffectKey": "{b3ef1ffe}",
-			"mHitEffectKey": "{5ddf95f1}",
+			"mMissileEffectKey": "TFT11_Udyr_Q_Awaken_Bounce_Missile",
+			"mHitEffectKey": "TFT11_Udyr_Q_Lightning_hitFlash_01",
 			"bHaveHitBone": true,
 			"mHitBoneName": "C_Buffbone_Glb_Center_Loc",
 			"__type": "SpellDataResource"

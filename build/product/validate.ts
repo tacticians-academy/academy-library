@@ -6,9 +6,8 @@ import { getAugmentNameKey } from '../helpers/utils.js'
 
 function recursiveCheckTiers(tier: AugmentTierProbability) {
 	const children = tier[1]
-	if (!children) {
-		return
-	}
+	if (!children) { return }
+
 	const sum = children.reduce((acc, child) => acc + child[0], 0)
 	if (sum !== 100) {
 		throw `Invalid augment tier probability total: ${sum}, ` + JSON.stringify(children)

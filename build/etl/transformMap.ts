@@ -37,7 +37,7 @@ export async function transformMap(setNumber: SetNumber, parentSetNumber: SetNum
 		})
 	}
 
-	const rawHeadlinerSystemParameters = parentSetNumber !== 3 && mapResponse['{1787a45d}']
+	const rawHeadlinerSystemParameters = parentSetNumber === 10 && mapResponse['{1787a45d}']
 	const headlinerSystemParameters = rawHeadlinerSystemParameters != null ? formatConstValues(rawHeadlinerSystemParameters) : undefined
 
 	const rawStreaks = mapResponse['{4cb79a04}']

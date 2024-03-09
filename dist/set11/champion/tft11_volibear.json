@@ -1,11 +1,11 @@
 {
-	"{4c2dc506}": {
+	"Characters/TFT11_Volibear/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Volibear",
 		"baseHP": 900,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 90,
+			"arBase": 50,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
@@ -17,7 +17,7 @@
 		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
 		"attackRange": 180,
-		"attackSpeed": 0.75,
+		"attackSpeed": 0.800000011920929,
 		"basicAttack": {
 			"mAttackName": "TFT11_VolibearBasicAttack",
 			"__type": "AttackSlotData"
@@ -76,10 +76,9 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 40,
 		"__type": "TFTCharacterRecord"
 	},
-	"{4c4497dd}": {
+	"Characters/TFT11_Volibear/Spells/TFT11_VolibearBasicAttack2": {
 		"mScriptName": "TFT11_VolibearBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 7375,
@@ -114,7 +113,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{a95ef53d}": {
+	"Characters/TFT11_Volibear/Spells/TFT11_VolibearCritAttack": {
 		"mScriptName": "TFT11_VolibearCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 7375,
@@ -150,7 +149,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{ac88b87d}": {
+	"Characters/TFT11_Volibear/Spells/TFT11_VolibearSpellStunAttack": {
 		"mScriptName": "TFT11_VolibearSpellStunAttack",
 		"mSpell": {
 			"castFrame": 15,
@@ -158,7 +157,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{b18aa6fd}": {
+	"Characters/TFT11_Volibear/Spells/TFT11_VolibearBasicAttack": {
 		"mScriptName": "TFT11_VolibearBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 4234,
@@ -193,7 +192,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{c1fd0e01}": {
+	"Characters/TFT11_Volibear/Spells/TFT11_VolibearSpell": {
 		"mScriptName": "TFT11_VolibearSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 11333,
@@ -203,9 +202,9 @@
 					"mName": "HealAmount",
 					"mValues": [
 						0,
-						280,
-						330,
-						380,
+						210,
+						240,
+						270,
 						160,
 						200,
 						240
@@ -242,9 +241,9 @@
 					"mName": "LargeDamage",
 					"mValues": [
 						0,
-						125,
-						190,
-						305,
+						100,
+						150,
+						240,
 						0,
 						0,
 						0

@@ -1,5 +1,5 @@
 {
-	"{536dfa84}": {
+	"Characters/TFT11_ExaltedCore/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_ExaltedCore",
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
@@ -45,7 +45,7 @@
 		"{d75e19ad}": 2,
 		"__type": "TFTCharacterRecord"
 	},
-	"{a4ed3785}": {
+	"Characters/TFT11_ExaltedCore/Spells/TFT11_ExaltedCoreSpell": {
 		"mScriptName": "TFT11_ExaltedCoreSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 7183,

@@ -1,5 +1,5 @@
 {
-	"{4fd3943b}": {
+	"Characters/TFT11_Tibbers/Spells/TFT11_TibbersSpell": {
 		"mScriptName": "TFT11_TibbersSpell",
 		"mSpell": {
 			"flags": 4,
@@ -86,7 +86,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{885e67b7}": {
+	"Characters/TFT11_Tibbers/Spells/TFT11_TibbersBasicAttack2": {
 		"mScriptName": "TFT11_TibbersBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -120,7 +120,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{b6d87607}": {
+	"Characters/TFT11_Tibbers/Spells/TFT11_TibbersCritAttack": {
 		"mScriptName": "TFT11_TibbersCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -154,7 +154,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{bb3967ff}": {
+	"Characters/TFT11_Tibbers/Spells/TFT11_TibbersBasicAttack": {
 		"mScriptName": "TFT11_TibbersBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -188,7 +188,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{5e60a57f}": {
+	"Characters/TFT11_Tibbers/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Tibbers",
 		"baseHP": 850,
 		"baseStaticHPRegen": 0,

@@ -1,5 +1,5 @@
 {
-	"{17389de5}": {
+	"Characters/TFT11_Jax/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Jax",
 		"baseHP": 650,
 		"baseStaticHPRegen": 0,
@@ -61,7 +61,7 @@
 		"mInitialMana": 20,
 		"__type": "TFTCharacterRecord"
 	},
-	"{42f2f903}": {
+	"Characters/TFT11_Jax/Spells/TFT11_JaxCritAttack": {
 		"mScriptName": "TFT11_JaxCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -95,7 +95,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{cfd9058b}": {
+	"Characters/TFT11_Jax/Spells/TFT11_JaxBasicAttack": {
 		"mScriptName": "TFT11_JaxBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -131,7 +131,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{eba4023b}": {
+	"Characters/TFT11_Jax/Spells/TFT11_JaxBasicAttack2": {
 		"mScriptName": "TFT11_JaxBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -167,7 +167,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{fa6fcf3f}": {
+	"Characters/TFT11_Jax/Spells/TFT11_JaxSpell": {
 		"mScriptName": "TFT11_JaxSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 7183,

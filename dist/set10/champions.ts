@@ -1,6 +1,6 @@
 import type { AbilityData, ChampionData } from '../index'
 
-export enum ChampionKey { Ahri = `TFT10_Ahri`, AkaliTrueDamage = `TFT10_Akali_TrueDamage`, Akali = `TFT10_Akali`, Amumu = `TFT10_Amumu`, Annie = `TFT10_Annie`, Aphelios = `TFT10_Aphelios`, Bard = `TFT10_Bard`, Blitzcrank = `TFT10_Blitzcrank`, Caitlyn = `TFT10_Caitlyn`, Corki = `TFT10_Corki`, DiscoBall = `TFT10_DiscoBall`, Ekko = `TFT10_Ekko`, Evelynn = `TFT10_Evelynn`, Ezreal = `TFT10_Ezreal`, Garen = `TFT10_Garen`, Gnar = `TFT10_Gnar`, Gragas = `TFT10_Gragas`, Illaoi = `TFT10_Illaoi`, Jax = `TFT10_Jax`, Jhin = `TFT10_Jhin`, Jinx = `TFT10_Jinx`, KSante = `TFT10_KSante`, Kaisa = `TFT10_Kaisa`, Karthus = `TFT10_Karthus`, Katarina = `TFT10_Katarina`, Kayle = `TFT10_Kayle`, Kayn = `TFT10_Kayn`, Kennen = `TFT10_Kennen`, Lillia = `TFT10_Lillia`, Lucian = `TFT10_Lucian`, Lulu = `TFT10_Lulu`, LuluPolymorph = `TFT10_LuluPolymorph`, Lux = `TFT10_Lux`, MissFortune = `TFT10_MissFortune`, Mordekaiser = `TFT10_Mordekaiser`, Nami = `TFT10_Nami`, Neeko = `TFT10_Neeko`, Olaf = `TFT10_Olaf`, Pantheon = `TFT10_Pantheon`, Poppy = `TFT10_Poppy`, Qiyana = `TFT10_Qiyana`, Riven = `TFT10_Riven`, Samira = `TFT10_Samira`, Senna = `TFT10_Senna`, Seraphine = `TFT10_Seraphine`, Sett = `TFT10_Sett`, PBJProp = `TFT10_PBJProp`, Sona = `TFT10_Sona`, TahmKench = `TFT10_TahmKench`, TrainingDummy = `TFT_TrainingDummy`, Taric = `TFT10_Taric`, IllaoiMinion = `TFT10_IllaoiMinion`, CountryHecarim = `TFT10_CountryHecarim`, Thresh = `TFT10_Thresh`, TwistedFate = `TFT10_TwistedFate`, Twitch = `TFT10_Twitch`, Urgot = `TFT10_Urgot`, Vex = `TFT10_Vex`, Vi = `TFT10_Vi`, Viego = `TFT10_Viego`, Voidspawn = `TFT_Voidspawn`, Yasuo = `TFT10_Yasuo`, Yone = `TFT10_Yone`, Yorick = `TFT10_Yorick`, YorickGhoulMelee = `TFT10_YorickGhoulMelee`, Zac = `TFT10_Zac`, Zed = `TFT10_Zed`, Ziggs = `TFT10_Ziggs` }
+export enum ChampionKey { Ahri = `TFT10_Ahri`, Akali = `TFT10_Akali`, AkaliTrueDamage = `TFT10_Akali_TrueDamage`, Amumu = `TFT10_Amumu`, Annie = `TFT10_Annie`, Aphelios = `TFT10_Aphelios`, Bard = `TFT10_Bard`, Blitzcrank = `TFT10_Blitzcrank`, Caitlyn = `TFT10_Caitlyn`, Corki = `TFT10_Corki`, DiscoBall = `TFT10_DiscoBall`, Ekko = `TFT10_Ekko`, Evelynn = `TFT10_Evelynn`, Ezreal = `TFT10_Ezreal`, Garen = `TFT10_Garen`, Gnar = `TFT10_Gnar`, Gragas = `TFT10_Gragas`, Illaoi = `TFT10_Illaoi`, Jax = `TFT10_Jax`, Jhin = `TFT10_Jhin`, Jinx = `TFT10_Jinx`, KSante = `TFT10_KSante`, Kaisa = `TFT10_Kaisa`, Karthus = `TFT10_Karthus`, Katarina = `TFT10_Katarina`, Kayle = `TFT10_Kayle`, Kayn = `TFT10_Kayn`, Kennen = `TFT10_Kennen`, Lillia = `TFT10_Lillia`, Lucian = `TFT10_Lucian`, Lulu = `TFT10_Lulu`, LuluPolymorph = `TFT10_LuluPolymorph`, Lux = `TFT10_Lux`, MissFortune = `TFT10_MissFortune`, Mordekaiser = `TFT10_Mordekaiser`, Nami = `TFT10_Nami`, Neeko = `TFT10_Neeko`, Olaf = `TFT10_Olaf`, Pantheon = `TFT10_Pantheon`, Poppy = `TFT10_Poppy`, Qiyana = `TFT10_Qiyana`, Riven = `TFT10_Riven`, Samira = `TFT10_Samira`, Senna = `TFT10_Senna`, Seraphine = `TFT10_Seraphine`, Sett = `TFT10_Sett`, PBJProp = `TFT10_PBJProp`, Sona = `TFT10_Sona`, TahmKench = `TFT10_TahmKench`, TrainingDummy = `TFT_TrainingDummy`, Taric = `TFT10_Taric`, IllaoiMinion = `TFT10_IllaoiMinion`, CountryHecarim = `TFT10_CountryHecarim`, Thresh = `TFT10_Thresh`, TwistedFate = `TFT10_TwistedFate`, Twitch = `TFT10_Twitch`, Urgot = `TFT10_Urgot`, Vex = `TFT10_Vex`, Vi = `TFT10_Vi`, Viego = `TFT10_Viego`, Voidspawn = `TFT_Voidspawn`, Yasuo = `TFT10_Yasuo`, Yone = `TFT10_Yone`, Yorick = `TFT10_Yorick`, YorickGhoulMelee = `TFT10_YorickGhoulMelee`, Zac = `TFT10_Zac`, Zed = `TFT10_Zed`, Ziggs = `TFT10_Ziggs` }
 
 export const champions: ChampionData[] = [
 	{
@@ -165,104 +165,6 @@ export const champions: ChampionData[] = [
 		],
 	},
 	{
-		apiName: `TFT10_Akali_TrueDamage`,
-		name: `Akali`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT10_Akali_TrueDamage.TFT_Set10.tex`,
-		cost: 4,
-		starLevel: undefined,
-		teamSize: undefined,
-		isSpawn: false,
-		traits: [`True Damage`, `Executioner`, `Breakout`],
-		stats: {
-			armor: 65,
-			attackSpeed: 0.8999999761581421,
-			critChance: 0.25,
-			critMultiplier: 1.399999976158142,
-			damage: 70,
-			hp: 1000,
-			initialMana: 0,
-			magicResist: 65,
-			mana: 60,
-			moveSpeed: 500,
-			range: 1,
-		},
-		basicAttackMissileSpeed: 0,
-		critAttackMissileSpeed: 467,
-		passive: undefined,
-		spells: [
-			{
-				name: `TFT10_Akali_TrueDamageSpell`,
-				castTime: undefined,
-				missile: undefined,
-				variables: {
-					'BASE_DAMAGE': [0, 2.75, 2.75, 5.5],
-					'KUNAI_BASE_COUNT': [18, 18, 18, 27],
-					'BLING_HEAL_PERCENT': [20, 20, 20, 20],
-					'BLING_HEAL_PERCENT_EMPOWERED': [40, 40, 40, 40],
-					'HeadlinerHealth': [100, 100, 100, 100],
-					'HeadlinerAttackSpeed': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
-					'MANA_REFUND': [5, 12, 12, 20],
-				},
-				calculations: {
-					'TOTAL_DAMAGE': {
-						asPercent: false,
-						parts: [
-							{
-								operator: undefined,
-								subparts: [
-									{
-										variable: `BASE_DAMAGE`,
-										starValues: [0, 2.75, 2.75, 5.5],
-										stat: `AD`,
-										ratio: 1,
-									},
-								],
-							},
-						],
-					},
-					'TOTAL_MANA_REFUND': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `MANA_REFUND`,
-										starValues: [5, 12, 12, 20],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-				},
-				cantCastWhileRooted: undefined,
-				uninterruptable: undefined,
-			},
-		],
-		missiles: [
-			{
-				name: `TFT10_Akali_TrueDamageSpellMis`,
-				castTime: undefined,
-				missile: {
-					width: 60,
-					travelTime: undefined,
-					speedInitial: 3200,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: false,
-				},
-				variables: {},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-		],
-	},
-	{
 		apiName: `TFT10_Akali`,
 		name: `Akali`,
 		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT10_Akali.TFT_Set10.tex`,
@@ -381,6 +283,104 @@ export const champions: ChampionData[] = [
 				calculations: {},
 				cantCastWhileRooted: undefined,
 				uninterruptable: undefined,
+			},
+		],
+	},
+	{
+		apiName: `TFT10_Akali_TrueDamage`,
+		name: `Akali`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT10_Akali_TrueDamage.TFT_Set10.tex`,
+		cost: 4,
+		starLevel: undefined,
+		teamSize: undefined,
+		isSpawn: false,
+		traits: [`True Damage`, `Executioner`, `Breakout`],
+		stats: {
+			armor: 65,
+			attackSpeed: 0.8999999761581421,
+			critChance: 0.25,
+			critMultiplier: 1.399999976158142,
+			damage: 70,
+			hp: 1000,
+			initialMana: 0,
+			magicResist: 65,
+			mana: 60,
+			moveSpeed: 500,
+			range: 1,
+		},
+		basicAttackMissileSpeed: 0,
+		critAttackMissileSpeed: 467,
+		passive: undefined,
+		spells: [
+			{
+				name: `TFT10_Akali_TrueDamageSpell`,
+				castTime: undefined,
+				missile: undefined,
+				variables: {
+					'BASE_DAMAGE': [0, 2.75, 2.75, 5.5],
+					'KUNAI_BASE_COUNT': [18, 18, 18, 27],
+					'BLING_HEAL_PERCENT': [20, 20, 20, 20],
+					'BLING_HEAL_PERCENT_EMPOWERED': [40, 40, 40, 40],
+					'HeadlinerHealth': [100, 100, 100, 100],
+					'HeadlinerAttackSpeed': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
+					'MANA_REFUND': [5, 12, 12, 20],
+				},
+				calculations: {
+					'TOTAL_DAMAGE': {
+						asPercent: false,
+						parts: [
+							{
+								operator: undefined,
+								subparts: [
+									{
+										variable: `BASE_DAMAGE`,
+										starValues: [0, 2.75, 2.75, 5.5],
+										stat: `AD`,
+										ratio: 1,
+									},
+								],
+							},
+						],
+					},
+					'TOTAL_MANA_REFUND': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `MANA_REFUND`,
+										starValues: [5, 12, 12, 20],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+		],
+		missiles: [
+			{
+				name: `TFT10_Akali_TrueDamageSpellMis`,
+				castTime: undefined,
+				missile: {
+					width: 60,
+					travelTime: undefined,
+					speedInitial: 3200,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: false,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
 			},
 		],
 	},

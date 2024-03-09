@@ -1,5 +1,5 @@
 {
-	"{0deca1d3}": {
+	"Characters/TFT11_Garen/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Garen",
 		"baseHP": 600,
 		"baseStaticHPRegen": 0,
@@ -63,7 +63,7 @@
 		"mInitialMana": 30,
 		"__type": "TFTCharacterRecord"
 	},
-	"{440bbeb3}": {
+	"Characters/TFT11_Garen/Spells/TFT11_GarenCritAttack": {
 		"mScriptName": "TFT11_GarenCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -99,7 +99,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{6749d27b}": {
+	"Characters/TFT11_Garen/Spells/TFT11_GarenBasicAttack": {
 		"mScriptName": "TFT11_GarenBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -136,7 +136,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{79a75a4f}": {
+	"Characters/TFT11_Garen/Spells/TFT11_GarenSpell": {
 		"mScriptName": "TFT11_GarenSpell",
 		"mSpell": {
 			"flags": 4,
@@ -185,13 +185,13 @@
 				{
 					"mName": "ADPercent",
 					"mValues": [
-						3.5,
-						3.5,
-						3.5,
-						3.5,
-						3.5,
-						3.5,
-						3.5
+						4.5,
+						4.5,
+						4.5,
+						4.5,
+						4.5,
+						4.5,
+						4.5
 					],
 					"__type": "SpellDataValue"
 				}
@@ -296,7 +296,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{e23608eb}": {
+	"Characters/TFT11_Garen/Spells/TFT11_GarenBasicAttack2": {
 		"mScriptName": "TFT11_GarenBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,

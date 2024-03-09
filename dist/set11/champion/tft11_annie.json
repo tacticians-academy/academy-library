@@ -1,5 +1,5 @@
 {
-	"{1b18d5df}": {
+	"Characters/TFT11_Annie/Spells/TFT11_AnnieSpell": {
 		"mScriptName": "TFT11_AnnieSpell",
 		"mSpell": {
 			"flags": 4,
@@ -37,7 +37,7 @@
 						0,
 						180,
 						270,
-						1500,
+						2500,
 						0,
 						0,
 						0
@@ -61,8 +61,8 @@
 					"mName": "APHealth",
 					"mValues": [
 						0,
-						250,
-						300,
+						325,
+						400,
 						1500,
 						0,
 						0,
@@ -169,7 +169,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{5cf6912b}": {
+	"Characters/TFT11_Annie/Spells/TFT11_AnnieBasicAttack": {
 		"mScriptName": "TFT11_AnnieBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 24527,
@@ -228,7 +228,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{71266a5b}": {
+	"Characters/TFT11_Annie/Spells/TFT11_AnnieBasicAttack2": {
 		"mScriptName": "TFT11_AnnieBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 24527,
@@ -287,7 +287,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{de342123}": {
+	"Characters/TFT11_Annie/Spells/TFT11_AnnieCritAttack": {
 		"mScriptName": "TFT11_AnnieCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 24527,
@@ -346,7 +346,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{a2c4086f}": {
+	"Characters/TFT11_Annie/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Annie",
 		"baseHP": 850,
 		"baseStaticHPRegen": 0,

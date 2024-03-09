@@ -1,7 +1,7 @@
 {
-	"{33ca8ec6}": {
+	"Characters/TFT11_Thresh/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Thresh",
-		"baseHP": 850,
+		"baseHP": 900,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
@@ -63,7 +63,7 @@
 		"mInitialMana": 30,
 		"__type": "TFTCharacterRecord"
 	},
-	"{66730e21}": {
+	"Characters/TFT11_Thresh/Spells/TFT11_ThreshSpell": {
 		"mScriptName": "TFT11_ThreshSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 11333,
@@ -237,7 +237,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{99668e1d}": {
+	"Characters/TFT11_Thresh/Spells/TFT11_ThreshBasicAttack": {
 		"mScriptName": "TFT11_ThreshBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 512,
@@ -276,7 +276,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{ab71d3fd}": {
+	"Characters/TFT11_Thresh/Spells/TFT11_ThreshBasicAttack2": {
 		"mScriptName": "TFT11_ThreshBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 512,
@@ -315,7 +315,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{cfc06edd}": {
+	"Characters/TFT11_Thresh/Spells/TFT11_ThreshCritAttack": {
 		"mScriptName": "TFT11_ThreshCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 512,

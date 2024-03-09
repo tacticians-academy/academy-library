@@ -1,5 +1,5 @@
 {
-	"{230e2ce1}": {
+	"Characters/TFT11_Galio/Spells/TFT11_GalioSpell": {
 		"mScriptName": "TFT11_GalioSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 22666,
@@ -11,9 +11,9 @@
 					"mName": "BaseResists",
 					"mValues": [
 						2,
-						85,
-						120,
-						400,
+						100,
+						150,
+						500,
 						2,
 						2,
 						2
@@ -65,7 +65,7 @@
 						100,
 						100,
 						150,
-						1200,
+						1800,
 						100,
 						100,
 						100
@@ -76,9 +76,9 @@
 					"mName": "ShieldPercent",
 					"mValues": [
 						0.10000000149011612,
-						100,
-						150,
-						1000,
+						200,
+						250,
+						2000,
 						0.10000000149011612,
 						0.10000000149011612,
 						0.10000000149011612
@@ -200,7 +200,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{3b74803d}": {
+	"Characters/TFT11_Galio/Spells/TFT11_GalioBasicAttack2": {
 		"mScriptName": "TFT11_GalioBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 512,
@@ -224,7 +224,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{b7c5d8dd}": {
+	"Characters/TFT11_Galio/Spells/TFT11_GalioBasicAttack": {
 		"mScriptName": "TFT11_GalioBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 512,
@@ -248,7 +248,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{dc941e9d}": {
+	"Characters/TFT11_Galio/Spells/TFT11_GalioCritAttack": {
 		"mScriptName": "TFT11_GalioCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 512,
@@ -282,7 +282,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{a2d6406e}": {
+	"Characters/TFT11_Galio/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Galio",
 		"baseHP": 1100,
 		"baseStaticHPRegen": 0,

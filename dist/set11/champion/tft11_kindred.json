@@ -1,5 +1,5 @@
 {
-	"{0a6fdc4b}": {
+	"Characters/TFT11_Kindred/Spells/TFT11_KindredBasicAttack2": {
 		"mScriptName": "TFT11_KindredBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -58,7 +58,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{35894e2f}": {
+	"Characters/TFT11_Kindred/Spells/TFT11_KindredSpell": {
 		"mScriptName": "TFT11_KindredSpell",
 		"mSpell": {
 			"flags": 4,
@@ -373,7 +373,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{ccf24d5b}": {
+	"Characters/TFT11_Kindred/Spells/TFT11_KindredBasicAttack": {
 		"mScriptName": "TFT11_KindredBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -432,7 +432,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{f7808013}": {
+	"Characters/TFT11_Kindred/Spells/TFT11_KindredCritAttack": {
 		"mScriptName": "TFT11_KindredCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -490,7 +490,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{8ca5c66b}": {
+	"Characters/TFT11_Kindred/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Kindred",
 		"baseHP": 550,
 		"baseStaticHPRegen": 0,
@@ -553,6 +553,7 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
+		"{22f5197d}": 120,
 		"__type": "TFTCharacterRecord"
 	}
 }

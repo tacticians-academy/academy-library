@@ -663,7 +663,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `flaming ricochet`,
 		name: `Flaming Ricochet`,
 		tiers: [3],
-		description: `Gain a Gangplank. Your strongest Gangplank's Ability bounces to a second target, dealing 80% damage. `,
+		description: `Gain a Gangplank. Your strongest Gangplank's Ability bounces to a second target, dealing 80% damage.`,
 		icons: [`assets/characters/tft8_gangplank/hud/tft8_gangplank.tft_set8`],
 	},
 	{
@@ -1391,7 +1391,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `rising tide`,
 		name: `Rising Tide`,
 		tiers: [3],
-		description: `Gain an Urgot. Combat start: Your strongest Urgot grants adjacent allies 50% Attack Speed. `,
+		description: `Gain an Urgot. Combat start: Your strongest Urgot grants adjacent allies 50% Attack Speed.`,
 		icons: [`assets/characters/tft8_urgot/hud/tft8_urgot.tft_set8`],
 	},
 	{

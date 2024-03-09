@@ -1,5 +1,5 @@
 {
-	"{1c5567b3}": {
+	"Characters/TFT11_Ashe/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Ashe",
 		"baseHP": 700,
 		"baseStaticHPRegen": 0,
@@ -63,7 +63,7 @@
 		"mInitialMana": 20,
 		"__type": "TFTCharacterRecord"
 	},
-	"{288c1d2d}": {
+	"Characters/TFT11_Ashe/Spells/TFT11_AsheBasicAttack": {
 		"mScriptName": "TFT11_AsheBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -207,7 +207,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{ad343c51}": {
+	"Characters/TFT11_Ashe/Spells/TFT11_AsheSpell": {
 		"mScriptName": "TFT11_AsheSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 8192,
@@ -217,9 +217,9 @@
 					"mName": "PercentAttackDamage",
 					"mValues": [
 						0.30000001192092896,
-						0.30000001192092896,
-						0.30000001192092896,
-						0.6000000238418579,
+						0.4000000059604645,
+						0.4000000059604645,
+						1,
 						0.30000001192092896,
 						0.30000001192092896,
 						0.30000001192092896
@@ -406,7 +406,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{c906a42d}": {
+	"Characters/TFT11_Ashe/Spells/TFT11_AsheCritAttack": {
 		"mScriptName": "TFT11_AsheCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -472,7 +472,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{f391d7cd}": {
+	"Characters/TFT11_Ashe/Spells/TFT11_AsheBasicAttack2": {
 		"mScriptName": "TFT11_AsheBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,

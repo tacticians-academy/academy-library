@@ -1,5 +1,5 @@
 {
-	"{2519a37e}": {
+	"Characters/TFT11_Darius/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Darius",
 		"baseHP": 650,
 		"baseStaticHPRegen": 0,
@@ -62,7 +62,7 @@
 		"mMoveHeight": 0,
 		"__type": "TFTCharacterRecord"
 	},
-	"{302b0d0d}": {
+	"Characters/TFT11_Darius/Spells/TFT11_DariusBasicAttack2": {
 		"mScriptName": "TFT11_DariusBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -101,7 +101,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{3a9a3bed}": {
+	"Characters/TFT11_Darius/Spells/TFT11_DariusCritAttack": {
 		"mScriptName": "TFT11_DariusCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -138,7 +138,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{3e745aed}": {
+	"Characters/TFT11_Darius/Spells/TFT11_DariusBasicAttack": {
 		"mScriptName": "TFT11_DariusBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -200,7 +200,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{95ebfe11}": {
+	"Characters/TFT11_Darius/Spells/TFT11_DariusSpell": {
 		"mScriptName": "TFT11_DariusSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 8192,
@@ -223,9 +223,9 @@
 					"mName": "Damage",
 					"mValues": [
 						0.5,
-						150,
-						225,
-						340,
+						200,
+						300,
+						450,
 						0.5,
 						0.5,
 						0.5

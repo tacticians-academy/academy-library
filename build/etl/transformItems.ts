@@ -73,7 +73,7 @@ export async function transformItems(setNumber: SetNumber, parentSetNumber: SetN
 			typeKey = 'radiant'
 		} else if (iconNormalized.includes('ornnitem') || iconNormalized.includes('ornn_item')) {
 			typeKey = 'ornn'
-		} else if (iconNormalized.includes('_supportitems/')) {
+		} else if (iconNormalized.includes('_supportitems/' || item.apiName?.endsWith('Support'))) {
 			typeKey = 'support'
 		} else if (iconNormalized.includes('shimmerscale/')) {
 			typeKey = 'shimmerscale'

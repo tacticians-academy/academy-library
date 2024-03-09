@@ -800,33 +800,6 @@ export const championFlashcards: ChampionFlashcard[] = [
 		},
 	},
 	{
-		id: `TFT7_NomsyMage`,
-		name: `Nomsy`,
-		stats: {
-			armor: 30,
-			attackSpeed: 0.75,
-			critChance: 0.25,
-			critMultiplier: 1.2999999523162842,
-			damage: 60,
-			hp: 650,
-			initialMana: 0,
-			magicResist: 30,
-			mana: 90,
-			moveSpeed: 500,
-			range: 4,
-		},
-		icon: `assets/ux/tft/championsplashes/tft7_nomsy.tft_set7_stage2`,
-		ability: {
-			name: `Fireballs!`,
-			variables: {
-				'MagicDamage': [0, 190, 270, 420],
-				'PercentDamage': [0, 0.30000001192092896, 0.3499999940395355, 0.4000000059604645],
-			},
-			description: `Nomsy bellows, lobbing a massive fireball towards a random enemy that explodes on impact, dealing 190/270/420 magic damage to enemies within 1 hex, and bouncing additional fireballs outward that deal 30/35/40% of the damage.`,
-			icon: `assets/characters/brand/hud/icons2d/brandpyroclasm`,
-		},
-	},
-	{
 		id: `TFT7_NomsyCannoneer`,
 		name: `Nomsy`,
 		stats: {
@@ -855,6 +828,33 @@ export const championFlashcards: ChampionFlashcard[] = [
 	},
 	{
 		id: `TFT7_NomsyEvoker`,
+		name: `Nomsy`,
+		stats: {
+			armor: 30,
+			attackSpeed: 0.75,
+			critChance: 0.25,
+			critMultiplier: 1.2999999523162842,
+			damage: 60,
+			hp: 650,
+			initialMana: 0,
+			magicResist: 30,
+			mana: 90,
+			moveSpeed: 500,
+			range: 4,
+		},
+		icon: `assets/ux/tft/championsplashes/tft7_nomsy.tft_set7_stage2`,
+		ability: {
+			name: `Fireballs!`,
+			variables: {
+				'MagicDamage': [0, 190, 270, 420],
+				'PercentDamage': [0, 0.30000001192092896, 0.3499999940395355, 0.4000000059604645],
+			},
+			description: `Nomsy bellows, lobbing a massive fireball towards a random enemy that explodes on impact, dealing 190/270/420 magic damage to enemies within 1 hex, and bouncing additional fireballs outward that deal 30/35/40% of the damage.`,
+			icon: `assets/characters/brand/hud/icons2d/brandpyroclasm`,
+		},
+	},
+	{
+		id: `TFT7_NomsyMage`,
 		name: `Nomsy`,
 		stats: {
 			armor: 30,

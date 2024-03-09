@@ -1,5 +1,5 @@
 {
-	"{2ba39e19}": {
+	"Characters/TFT11_Azir/Spells/TFT11_AzirCritAttack": {
 		"mScriptName": "TFT11_AzirCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 6154,
@@ -51,7 +51,7 @@
 			"mCastType": 1,
 			"castFrame": 7.5,
 			"missileSpeed": 2600,
-			"mMissileEffectKey": "{0f2a77eb}",
+			"mMissileEffectKey": "TFT11_Azir_Turret_mis",
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Crit",
 			"selectionPriority": 1,
@@ -125,7 +125,7 @@
 			},
 			"mCastType": 8,
 			"missileSpeed": 3000,
-			"mMissileEffectKey": "{0f2a77eb}",
+			"mMissileEffectKey": "TFT11_Azir_Turret_mis",
 			"mHitEffectKey": "{026ab14f}",
 			"bHaveHitBone": true,
 			"mHitBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
@@ -136,7 +136,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{5aac2931}": {
+	"Characters/TFT11_Azir/Spells/TFT11_AzirBasicAttack2": {
 		"mScriptName": "TFT11_AzirBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 6154,
@@ -188,7 +188,7 @@
 			"mCastType": 1,
 			"castFrame": 7.5,
 			"missileSpeed": 2600,
-			"mMissileEffectKey": "{0f2a77eb}",
+			"mMissileEffectKey": "TFT11_Azir_Turret_mis",
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Hit",
 			"selectionPriority": 1,
@@ -255,7 +255,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{79c94495}": {
+	"Characters/TFT11_Azir/Spells/TFT11_AzirSpell": {
 		"mScriptName": "TFT11_AzirSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 6154,
@@ -337,7 +337,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{e009f499}": {
+	"Characters/TFT11_Azir/Spells/TFT11_AzirBasicAttack": {
 		"mScriptName": "TFT11_AzirBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 6154,
@@ -389,7 +389,7 @@
 			"mCastType": 1,
 			"castFrame": 7.5,
 			"missileSpeed": 2600,
-			"mMissileEffectKey": "{0f2a77eb}",
+			"mMissileEffectKey": "TFT11_Azir_Turret_mis",
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Hit",
 			"selectionPriority": 1,
@@ -397,7 +397,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{ce181f18}": {
+	"Characters/TFT11_Azir/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Azir",
 		"baseHP": 800,
 		"baseStaticHPRegen": 0,

@@ -2556,6 +2556,8 @@ export const hexbuffItems: ItemData[] = [
 
 export const modItems: ItemData[] = []
 
+export const temporaryItems: ItemData[] = []
+
 export const unreleasedItems: ItemData[] = [
 	{
 		apiName: `TFT_Item_Catalyst`,

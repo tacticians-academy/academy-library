@@ -1,5 +1,5 @@
 {
-	"{3e602781}": {
+	"Characters/TFT11_Illaoi/Spells/TFT11_IllaoiSpell": {
 		"mScriptName": "TFT11_IllaoiSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 11333,
@@ -35,9 +35,9 @@
 					"mName": "Shield",
 					"mValues": [
 						0,
-						325,
 						400,
-						500,
+						450,
+						550,
 						0,
 						0,
 						0
@@ -48,9 +48,9 @@
 					"mName": "Heal",
 					"mValues": [
 						0,
-						30,
-						35,
-						40,
+						50,
+						60,
+						70,
 						0,
 						0,
 						0
@@ -146,7 +146,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{5618985d}": {
+	"Characters/TFT11_Illaoi/Spells/TFT11_IllaoiBasicAttack2": {
 		"mScriptName": "TFT11_IllaoiBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 4234,
@@ -181,7 +181,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{876de1bd}": {
+	"Characters/TFT11_Illaoi/Spells/TFT11_IllaoiCritAttack": {
 		"mScriptName": "TFT11_IllaoiCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 4234,
@@ -215,7 +215,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{c308f47d}": {
+	"Characters/TFT11_Illaoi/Spells/TFT11_IllaoiBasicAttack": {
 		"mScriptName": "TFT11_IllaoiBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 4234,
@@ -250,20 +250,20 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{da1f8726}": {
+	"Characters/TFT11_Illaoi/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Illaoi",
-		"baseHP": 850,
+		"baseHP": 900,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 110,
+			"arBase": 80,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 50,
-		"baseArmor": 40,
-		"baseSpellBlock": 40,
+		"baseArmor": 50,
+		"baseSpellBlock": 50,
 		"baseCritChance": 0.25,
 		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
@@ -315,7 +315,6 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 20,
 		"__type": "TFTCharacterRecord"
 	}
 }

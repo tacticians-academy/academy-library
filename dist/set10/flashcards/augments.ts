@@ -75,7 +75,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `battle ready`,
 		name: `Battle Ready`,
 		tiers: [1, 2, 3],
-		description: `Your team deals 3/6/8% more damage and takes 3/6/8% less damage. `,
+		description: `Your team deals 3/6/8% more damage and takes 3/6/8% less damage.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/battle-ready-i`, `assets/maps/tft/icons/augments/hexcore/battle-ready-ii`, `assets/maps/tft/icons/augments/hexcore/battle-ready-iii`],
 	},
 	{
@@ -180,7 +180,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `blood price`,
 		name: `Blood Price`,
 		tiers: [1, 2, 3],
-		description: `1: Your units gain 3% Attack Speed for each 10 Tactician HP missing.  2: Your team gains 4% Attack Speed for each 10 Tactician HP missing.`,
+		description: `1: Your units gain 3% Attack Speed for each 10 Tactician HP missing.  2: Your team gains 4% Attack Speed for each 10 Tactician HP missing.  3: Your team gains 5% Attack Speed for each 10 Tactician HP missing.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/blood-price-i-i`, `assets/maps/tft/icons/augments/hexcore/blood-price-ii-ii`, `assets/maps/tft/icons/augments/hexcore/blood-price-iii-iii`],
 	},
 	{
@@ -271,7 +271,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `cluttered mind`,
 		name: `Cluttered Mind`,
 		tiers: [2],
-		description: `Gain 4 random 1-cost champions now. If your bench is full at the end of player combat, gain 3 XP. `,
+		description: `Gain 4 random 1-cost champions now. If your bench is full at the end of player combat, gain 3 XP.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/dizzy-ii`],
 	},
 	{
@@ -327,7 +327,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `crash test dummies`,
 		name: `Crash Test Dummies`,
 		tiers: [2],
-		description: `Gain 2 Target Dummies. Combat start: Your Target Dummies launch themselves towards the largest clump of enemies and Stun them for 1.25 seconds. `,
+		description: `Gain 2 Target Dummies. Combat start: Your Target Dummies launch themselves towards the largest clump of enemies and Stun them for 1.25 seconds.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/crash-test-dummies-ii.tft_set10`],
 	},
 	{
@@ -376,7 +376,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `cybernetic leech`,
 		name: `Cybernetic Leech`,
 		tiers: [1, 2, 3],
-		description: `1: Champions holding an item gain 80 HP and 10% Omnivamp. <br><br><rules>(Omnivamp: healing for a percent of damage dealt)</rules>.  2: Champions holding an item gain 120 HP and 15% Omnivamp <rules>(healing for a percent of damage dealt)</rules>.`,
+		description: `1: Champions holding an item gain 80 HP and 10% Omnivamp. <br><br><rules>(Omnivamp: healing for a percent of damage dealt)</rules>.  2: Champions holding an item gain 120 HP and 15% Omnivamp <rules>(healing for a percent of damage dealt)</rules>.  3: Champions holding an item gain 250 HP and 20% Omnivamp <rules>(healing for a percent of damage dealt)</rules>.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/cybernetic-leech-i`, `assets/maps/tft/icons/augments/hexcore/cybernetic-leech-ii`, `assets/maps/tft/icons/augments/hexcore/cybernetic-leech-iii`],
 	},
 	{
@@ -523,7 +523,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `final grab bag`,
 		name: `Final Grab Bag`,
 		tiers: [1, 2],
-		description: `1: Gain a random component, 10 gold, and a Reforger.   2: Gain 2 random components, 12 gold, and a Magnetic Remover. `,
+		description: `1: Gain a random component, 10 gold, and a Reforger.  2: Gain 2 random components, 12 gold, and a Magnetic Remover.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/final-grab-bag-i`, `assets/maps/tft/icons/augments/hexcore/final-grab-bag-ii`],
 	},
 	{
@@ -579,7 +579,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `giant grab bag`,
 		name: `Giant Grab Bag`,
 		tiers: [3],
-		description: `Gain 3 random components, 4 gold, and a Lesser Champion Duplicator. `,
+		description: `Gain 3 random components, 4 gold, and a Lesser Champion Duplicator.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/grab-bag-iii`],
 	},
 	{
@@ -803,21 +803,21 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `it pays to learn`,
 		name: `It Pays To Learn`,
 		tiers: [1, 2, 3],
-		description: `Gain 10/16/24 XP and 8/12/16 gold. `,
+		description: `Gain 10/16/24 XP and 8/12/16 gold.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/it-pays-to-learn-i`, `assets/maps/tft/icons/augments/hexcore/it-pays-to-learn-ii`, `assets/maps/tft/icons/augments/hexcore/it-pays-to-learn-iii`],
 	},
 	{
 		id: `item grab bag`,
 		name: `Item Grab Bag`,
 		tiers: [1, 2, 3],
-		description: `1: Gain 1 random completed item.  2: Gain a random completed item, a random component, and 1 gold.   3: Gain 2 random completed items and 4 Gold.`,
+		description: `1: Gain 1 random completed item.  2: Gain a random completed item, a random component, and 1 gold.  3: Gain 2 random completed items and 4 Gold.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/itemgrabbag1`, `assets/maps/tft/icons/augments/hexcore/itemgrabbag2`, `assets/maps/tft/icons/augments/hexcore/itemgrabbag3`],
 	},
 	{
 		id: `jeweled lotus`,
 		name: `Jeweled Lotus`,
 		tiers: [1, 2, 3],
-		description: `1: Combat start: Your strongest unit gains 40% Critical Strike Chance and their abilities can critically strike.  2: Your team gains 20% Critical Strike chance, and their Abilities can critically strike.`,
+		description: `1: Combat start: Your strongest unit gains 40% Critical Strike Chance and their abilities can critically strike.  2: Your team gains 15% Critical Strike chance, and their Abilities can critically strike.  3: Your team gains 40% Critical Strike chance, and their Abilities can critically strike.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/jeweled-lotus-i`, `assets/maps/tft/icons/augments/hexcore/jeweled-lotus-ii`, `assets/maps/tft/icons/augments/hexcore/jeweled-lotus-iii`],
 	},
 	{
@@ -1489,7 +1489,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `stationary support`,
 		name: `Stationary Support`,
 		tiers: [1, 2, 3],
-		description: `1: After 8 player combats, gain 1 Training Dummy(s) with 1 permanently attached Support item(s).  2: Gain 1 Training Dummy with 1 permanently attached Support item(s).`,
+		description: `1: After 8 player combats, gain 1 Training Dummy(s) with 1 permanently attached Support item(s).  2: Gain 1 Training Dummy with 1 permanently attached Support item(s).  3: Gain 1 Training Dummy with 2 permanently attached Support item(s).`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/stationary-support-i`, `assets/maps/tft/icons/augments/hexcore/stationary-support-ii`, `assets/maps/tft/icons/augments/hexcore/stationary-support-iii`],
 	},
 	{
@@ -1636,7 +1636,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `tiny grab bag`,
 		name: `Tiny Grab Bag`,
 		tiers: [1],
-		description: `Gain a random component, 2 gold, a Magnetic Remover. `,
+		description: `Gain a random component, 2 gold, a Magnetic Remover.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/grab-bag-i`],
 	},
 	{
@@ -1685,7 +1685,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `training reward`,
 		name: `Training Reward`,
 		tiers: [1, 2, 3],
-		description: `1: Gain 5 gold and a Lesser Champion Duplicator.  3: Gain 24 gold and a Champion Duplicator. `,
+		description: `1: Gain 5 gold and a Lesser Champion Duplicator.  2: Gain 12 gold and a Lesser Champion Duplicator.  3: Gain 24 gold and a Champion Duplicator.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/training-reward-i`, `assets/maps/tft/icons/augments/hexcore/training-reward-ii`, `assets/maps/tft/icons/augments/hexcore/training-reward-iii`],
 	},
 	{
@@ -1734,7 +1734,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `unified resistance`,
 		name: `Unified Resistance`,
 		tiers: [1, 2],
-		description: `If you have 3 or more champions in the same row at the start of combat, they all gain 15/25 Armor and Magic Resist. `,
+		description: `If you have 3 or more champions in the same row at the start of combat, they all gain 15/25 Armor and Magic Resist.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/red-rover-i`, `assets/maps/tft/icons/augments/hexcore/red-rover-ii`],
 	},
 	{
@@ -1783,7 +1783,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `wellearned comforts`,
 		name: `Well-Earned Comforts`,
 		tiers: [1, 2, 3],
-		description: `1: Your units gain 70 HP for each item equipped.  3: Your units gain 120 HP and 6% Attack Speed for each item equipped.`,
+		description: `1: Your units gain 70 HP for each item equipped.  2: Your units gain 111 HP for each item equipped.  3: Your units gain 120 HP and 6% Attack Speed for each item equipped.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/well-earned-comforts-i`, `assets/maps/tft/icons/augments/hexcore/well-earned-comforts-ii`, `assets/maps/tft/icons/augments/hexcore/well-earned-comforts-iii`],
 	},
 	{
@@ -1846,14 +1846,14 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `you have my bow`,
 		name: `You Have My Bow`,
 		tiers: [2],
-		description: `Gain a Recurve Bow. Your units gain 12% Attack Speed. `,
+		description: `Gain a Recurve Bow. Your units gain 12% Attack Speed.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/you-have-my-bow-ii`],
 	},
 	{
 		id: `you have my sword`,
 		name: `You Have My Sword`,
 		tiers: [2],
-		description: `Gain a B.F. Sword. Your units gain 15% Attack Damage. `,
+		description: `Gain a B.F. Sword. Your units gain 15% Attack Damage.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/you-have-my-sword-ii`],
 	},
 	{

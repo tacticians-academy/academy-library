@@ -302,7 +302,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{435812f5}": {
+	"Characters/TFT11_Lillia/Spells/TFT11_LilliaCritAttack": {
 		"mScriptName": "TFT11_LilliaCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 24527,
@@ -360,7 +360,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{44515135}": {
+	"Characters/TFT11_Lillia/Spells/TFT11_LilliaBasicAttack2": {
 		"mScriptName": "TFT11_LilliaBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 24527,
@@ -592,7 +592,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{71bc1ec9}": {
+	"Characters/TFT11_Lillia/Spells/TFT11_LilliaSpell": {
 		"mScriptName": "TFT11_LilliaSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 6346,
@@ -788,7 +788,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{41f507e5}": {
+	"Characters/TFT11_Lillia/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Lillia",
 		"baseHP": 700,
 		"baseStaticHPRegen": 0,

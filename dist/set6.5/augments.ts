@@ -2188,16 +2188,6 @@ export const inactiveAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Missing-T1.TFT_Set6.dds`,
 	},
 	{
-		tier: 3,
-		name: `At Odds II`,
-		groupID: `atOdds`,
-		desc: `Your 1, 3, and 5-cost units gain @Stats@ Attack Damage and Ability Power.`,
-		effects: {
-			'Stats': 40,
-		},
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Missing-T3.TFT_Set6.dds`,
-	},
-	{
 		tier: 2,
 		name: `At Odds II`,
 		groupID: `atOdds`,
@@ -2206,6 +2196,16 @@ export const inactiveAugments: AugmentData[] = [
 			'Stats': 30,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Missing-T2.TFT_Set6.dds`,
+	},
+	{
+		tier: 3,
+		name: `At Odds II`,
+		groupID: `atOdds`,
+		desc: `Your 1, 3, and 5-cost units gain @Stats@ Attack Damage and Ability Power.`,
+		effects: {
+			'Stats': 40,
+		},
+		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/Missing-T3.TFT_Set6.dds`,
 	},
 	{
 		tier: 1,
@@ -2354,7 +2354,7 @@ export const choiceAugments: AugmentData[] = [
 		desc: `TFT6_Augment_Overclock_Description`,
 		effects: {
 			'AS': 400,
-			'Duration': 10,
+			'Duration': 5,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/TFT6_Augment_ClockworkOverclock.TFT_Set6.dds`,
 	},
@@ -2365,7 +2365,7 @@ export const choiceAugments: AugmentData[] = [
 		desc: `TFT6_Augment_Overclock_Description`,
 		effects: {
 			'AS': 400,
-			'Duration': 5,
+			'Duration': 10,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/TFT6_Augment_ClockworkOverclock.TFT_Set6.dds`,
 	},

@@ -1,5 +1,5 @@
 {
-	"{031413e3}": {
+	"Characters/TFT11_TahmKench/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_TahmKench",
 		"baseHP": 850,
 		"baseStaticHPRegen": 0,
@@ -63,7 +63,7 @@
 		"mInitialMana": 40,
 		"__type": "TFTCharacterRecord"
 	},
-	"{5349004f}": {
+	"Characters/TFT11_TahmKench/Spells/TFT11_TahmKenchBasicAttack": {
 		"mScriptName": "TFT11_TahmKenchBasicAttack",
 		"mSpell": {
 			"bHaveHitEffect": true,
@@ -73,7 +73,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{5daf1ed7}": {
+	"Characters/TFT11_TahmKench/Spells/TFT11_TahmKenchCritAttack": {
 		"mScriptName": "TFT11_TahmKenchCritAttack",
 		"mSpell": {
 			"bHaveHitEffect": true,
@@ -83,7 +83,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{98ebc4c7}": {
+	"Characters/TFT11_TahmKench/Spells/TFT11_TahmKenchBasicAttack2": {
 		"mScriptName": "TFT11_TahmKenchBasicAttack2",
 		"mSpell": {
 			"bHaveHitEffect": true,
@@ -93,7 +93,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{bec0f16b}": {
+	"Characters/TFT11_TahmKench/Spells/TFT11_TahmKenchSpell": {
 		"mScriptName": "TFT11_TahmKenchSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 23594,
@@ -102,9 +102,9 @@
 					"mName": "Damage",
 					"mValues": [
 						0,
-						320,
-						480,
-						770,
+						300,
+						450,
+						700,
 						0,
 						0,
 						0
@@ -153,13 +153,13 @@
 				{
 					"mName": "BonusPercentDamage",
 					"mValues": [
-						2.25,
-						2.25,
-						2.25,
-						2.25,
-						2.25,
-						2.25,
-						2.25
+						1.600000023841858,
+						1.600000023841858,
+						1.600000023841858,
+						1.600000023841858,
+						1.600000023841858,
+						1.600000023841858,
+						1.600000023841858
 					],
 					"__type": "SpellDataValue"
 				}

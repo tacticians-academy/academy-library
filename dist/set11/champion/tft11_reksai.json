@@ -1,5 +1,5 @@
 {
-	"{15c77ab5}": {
+	"Characters/TFT11_RekSai/Spells/TFT11_RekSaiSpell": {
 		"mScriptName": "TFT11_RekSaiSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 11269,
@@ -186,7 +186,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{d1dd03b9}": {
+	"Characters/TFT11_RekSai/Spells/TFT11_RekSaiBasicAttack": {
 		"mScriptName": "TFT11_RekSaiBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -201,7 +201,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{dfa073b9}": {
+	"Characters/TFT11_RekSai/Spells/TFT11_RekSaiCritAttack": {
 		"mScriptName": "TFT11_RekSaiCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -216,7 +216,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{e9ec93d1}": {
+	"Characters/TFT11_RekSai/Spells/TFT11_RekSaiBasicAttack2": {
 		"mScriptName": "TFT11_RekSaiBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -231,7 +231,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{abdacc79}": {
+	"Characters/TFT11_RekSai/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_RekSai",
 		"baseHP": 650,
 		"baseStaticHPRegen": 0,
@@ -242,8 +242,8 @@
 			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 50,
-		"baseArmor": 35,
-		"baseSpellBlock": 35,
+		"baseArmor": 45,
+		"baseSpellBlock": 45,
 		"baseCritChance": 0.25,
 		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,

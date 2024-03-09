@@ -1,5 +1,5 @@
 {
-	"{31f497d9}": {
+	"Characters/TFT11_Aphelios/Spells/TFT11_ApheliosCritAttack": {
 		"mScriptName": "TFT11_ApheliosCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -58,7 +58,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{44516555}": {
+	"Characters/TFT11_Aphelios/Spells/TFT11_ApheliosSpell": {
 		"mScriptName": "TFT11_ApheliosSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 6154,
@@ -241,7 +241,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{4a73a559}": {
+	"Characters/TFT11_Aphelios/Spells/TFT11_ApheliosBasicAttack": {
 		"mScriptName": "TFT11_ApheliosBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -300,7 +300,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{9f0d6771}": {
+	"Characters/TFT11_Aphelios/Spells/TFT11_ApheliosBasicAttack2": {
 		"mScriptName": "TFT11_ApheliosBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -499,7 +499,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{7146b567}": {
+	"Characters/TFT11_Aphelios/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Aphelios",
 		"baseHP": 650,
 		"baseStaticHPRegen": 0,

@@ -1,5 +1,5 @@
 {
-	"{20397394}": {
+	"Characters/TFT11_Zoe/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Zoe",
 		"baseHP": 650,
 		"baseStaticHPRegen": 0,
@@ -65,7 +65,7 @@
 		"mInitialMana": 20,
 		"__type": "TFTCharacterRecord"
 	},
-	"{229fe911}": {
+	"Characters/TFT11_Zoe/Spells/TFT11_ZoeSpell": {
 		"mScriptName": "TFT11_ZoeSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 6154,
@@ -345,7 +345,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{9ad33ced}": {
+	"Characters/TFT11_Zoe/Spells/TFT11_ZoeCritAttack": {
 		"mScriptName": "TFT11_ZoeCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 7375,
@@ -408,7 +408,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{b830eded}": {
+	"Characters/TFT11_Zoe/Spells/TFT11_ZoeBasicAttack": {
 		"mScriptName": "TFT11_ZoeBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 7375,
@@ -463,7 +463,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{d406760d}": {
+	"Characters/TFT11_Zoe/Spells/TFT11_ZoeBasicAttack2": {
 		"mScriptName": "TFT11_ZoeBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 7375,

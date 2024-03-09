@@ -1,5 +1,5 @@
 {
-	"{24b0b751}": {
+	"Characters/TFT11_ChoGath/Spells/TFT11_ChoGathSpell": {
 		"mScriptName": "TFT11_ChoGathSpell",
 		"mSpell": {
 			"flags": 4,
@@ -109,7 +109,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{524cc02d}": {
+	"Characters/TFT11_ChoGath/Spells/TFT11_ChoGathBasicAttack": {
 		"mScriptName": "TFT11_ChoGathBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -126,7 +126,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{8ff5552d}": {
+	"Characters/TFT11_ChoGath/Spells/TFT11_ChoGathCritAttack": {
 		"mScriptName": "TFT11_ChoGathCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -141,7 +141,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{add270cd}": {
+	"Characters/TFT11_ChoGath/Spells/TFT11_ChoGathBasicAttack2": {
 		"mScriptName": "TFT11_ChoGathBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -158,13 +158,13 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{90ce9b5a}": {
+	"Characters/TFT11_ChoGath/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_ChoGath",
 		"baseHP": 650,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 110,
+			"arBase": 90,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
@@ -220,7 +220,7 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 50,
+		"mInitialMana": 40,
 		"__type": "TFTCharacterRecord"
 	}
 }

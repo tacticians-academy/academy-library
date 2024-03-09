@@ -787,6 +787,8 @@ export const hexbuffItems: ItemData[] = [
 
 export const modItems: ItemData[] = []
 
+export const temporaryItems: ItemData[] = []
+
 export const unreleasedItems: ItemData[] = [
 	{
 		desc: `Whenever any unit dies, gain X Mana.`,

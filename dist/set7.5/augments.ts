@@ -248,7 +248,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `baseCamp`,
 		desc: `Scalescorns gain @DamageAmp@% damage each time they start combat in the same hex, stacking up to @MaxStacks@ times. Gain a Lillia.`,
 		effects: {
-			'DamageAmp': 8,
+			'DamageAmp': 7,
 			'MaxStacks': 4,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Nomads-II.TFT_Set7.dds`,
@@ -259,7 +259,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `baseCamp`,
 		desc: `Scalescorns gain @DamageAmp@% damage each time they start combat in the same hex, stacking up to @MaxStacks@ times. Gain a Lillia.`,
 		effects: {
-			'DamageAmp': 7,
+			'DamageAmp': 8,
 			'MaxStacks': 4,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Nomads-II.TFT_Set7.dds`,
@@ -2819,16 +2819,6 @@ export const inactiveAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T1.dds`,
 	},
 	{
-		tier: 3,
-		name: `At Odds II`,
-		groupID: `atOdds`,
-		desc: `Your 1, 3, and 5-cost units gain @Stats@ Attack Damage and Ability Power.`,
-		effects: {
-			'Stats': 40,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.dds`,
-	},
-	{
 		tier: 2,
 		name: `At Odds II`,
 		groupID: `atOdds`,
@@ -2837,6 +2827,16 @@ export const inactiveAugments: AugmentData[] = [
 			'Stats': 30,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.dds`,
+	},
+	{
+		tier: 3,
+		name: `At Odds II`,
+		groupID: `atOdds`,
+		desc: `Your 1, 3, and 5-cost units gain @Stats@ Attack Damage and Ability Power.`,
+		effects: {
+			'Stats': 40,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.dds`,
 	},
 	{
 		tier: 3,

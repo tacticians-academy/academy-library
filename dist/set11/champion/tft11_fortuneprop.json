@@ -1,5 +1,5 @@
 {
-	"{3e3b1ced}": {
+	"Characters/TFT11_FortuneProp/Spells/TFT11_FortuneProp": {
 		"mScriptName": "TFT11_FortuneProp",
 		"mSpell": {
 			"mDataValues": [
@@ -26,7 +26,34 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{d3d665aa}": {
+	"{f2b04b18}": {
+		"mScriptName": "TFT11_FortuneProp_HR",
+		"mSpell": {
+			"mDataValues": [
+				{
+					"mName": "RoundsToHatch",
+					"mValues": [
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2
+					],
+					"__type": "SpellDataValue"
+				}
+			],
+			"mCastTime": 0.5,
+			"mCantCancelWhileWindingUp": true,
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT11_FortuneProp/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_FortuneProp",
 		"baseHP": 88888,
 		"baseStaticHPRegen": 0,

@@ -1,5 +1,5 @@
 {
-	"{01e08f49}": {
+	"Characters/TFT11_Irelia/Spells/TFT11_IreliaSpell": {
 		"mScriptName": "TFT11_IreliaSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 11333,
@@ -11,7 +11,7 @@
 						7,
 						7,
 						7,
-						20,
+						7,
 						7,
 						7,
 						7
@@ -22,8 +22,8 @@
 					"mName": "BladeHitAD",
 					"mValues": [
 						0,
-						1.75,
-						1.75,
+						1.5,
+						1.5,
 						7,
 						0,
 						0,
@@ -61,8 +61,8 @@
 					"mName": "SpellHitAD",
 					"mValues": [
 						0,
-						3.5,
-						3.5,
+						3,
+						3,
 						20,
 						0,
 						0,
@@ -169,6 +169,29 @@
 								}
 							],
 							"__type": "SumOfSubPartsCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"{5dcd4f06}": {
+					"mFormulaParts": [
+						{
+							"mPart1": {
+								"{88536426}": "{0f437b7e}",
+								"__type": "{f3cbe7b2}"
+							},
+							"mPart2": {
+								"{163d3c3f}": {
+									"mDataValue": "{c01c7489}",
+									"__type": "NamedDataValueCalculationPart"
+								},
+								"{173d3dd2}": {
+									"mNumber": -1,
+									"__type": "NumberCalculationPart"
+								},
+								"__type": "{202bfbf6}"
+							},
+							"__type": "ProductOfSubPartsCalculationPart"
 						}
 					],
 					"__type": "GameCalculation"
@@ -320,7 +343,7 @@
 								"__type": "Destroy"
 							}
 						],
-						"mDelay": 60,
+						"mDelay": 30,
 						"__type": "TriggerOnDelay"
 					},
 					{
@@ -462,7 +485,7 @@
 								"__type": "Destroy"
 							}
 						],
-						"mDelay": 60,
+						"mDelay": 10,
 						"__type": "TriggerOnDelay"
 					},
 					{
@@ -476,7 +499,7 @@
 			"mCastType": 8,
 			"castFrame": 6.5,
 			"missileSpeed": 1000,
-			"mMissileEffectKey": "{85c76811}",
+			"mMissileEffectKey": "TFT11_Irelia_Base_Spell_Mis",
 			"mLineWidth": 100,
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "{4fc8917a}",
@@ -609,7 +632,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{237d35c0}": {
+	"Characters/TFT11_Irelia/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Irelia",
 		"baseHP": 900,
 		"baseStaticHPRegen": 0,

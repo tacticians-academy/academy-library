@@ -2015,6 +2015,8 @@ export const modItems: ItemData[] = [
 	},
 ]
 
+export const temporaryItems: ItemData[] = []
+
 export const unreleasedItems: ItemData[] = [
 	{
 		apiName: `TFT6_Item_EliteSpotlight`,

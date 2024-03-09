@@ -1,10 +1,11 @@
 {
-	"{2963e1e7}": {
+	"Characters/TFT11_Hwei/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Hwei",
 		"baseHP": 800,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
+			"arBase": 105,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
@@ -59,7 +60,7 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 40,
+		"mInitialMana": 30,
 		"__type": "TFTCharacterRecord"
 	},
 	"{56d95e36}": {
@@ -191,7 +192,7 @@
 			},
 			"mCastType": 3,
 			"castFrame": 11,
-			"mMissileEffectKey": "{aa2c125e}",
+			"mMissileEffectKey": "TFT11_Hwei_R_Mis",
 			"mFloatVarsDecimals": [
 				0,
 				0,
@@ -213,12 +214,15 @@
 			"mTargetingTypeData": {
 				"__type": "Location"
 			},
+			"{47e0dff9}": {
+				"12": "Play_vo_tft11_HweiSpell3Star_OnCast"
+			},
 			"mSpellCooldownOrSealedQueueThreshold": 0.5,
 			"__type": "SpellDataResource"
 		},
 		"__type": "SpellObject"
 	},
-	"{5ccf6aed}": {
+	"Characters/TFT11_Hwei/Spells/TFT11_HweiBasicAttack2": {
 		"mScriptName": "TFT11_HweiBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -262,7 +266,7 @@
 			"mCastType": 1,
 			"castFrame": 9,
 			"missileSpeed": 347.79998779296875,
-			"mMissileEffectKey": "{8eaddcb1}",
+			"mMissileEffectKey": "TFT11_Hwei_BA_mis",
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Hit",
 			"bHaveHitBone": true,
@@ -271,7 +275,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{8368b14d}": {
+	"Characters/TFT11_Hwei/Spells/TFT11_HweiBasicAttack": {
 		"mScriptName": "TFT11_HweiBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -316,7 +320,7 @@
 			"mCastType": 1,
 			"castFrame": 9,
 			"missileSpeed": 347.79998779296875,
-			"mMissileEffectKey": "{8eaddcb1}",
+			"mMissileEffectKey": "TFT11_Hwei_BA_mis",
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Hit",
 			"bHaveHitBone": true,
@@ -325,7 +329,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{8f92c8cd}": {
+	"Characters/TFT11_Hwei/Spells/TFT11_HweiCritAttack": {
 		"mScriptName": "TFT11_HweiCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -369,7 +373,7 @@
 			"mCastType": 1,
 			"castFrame": 9,
 			"missileSpeed": 347.79998779296875,
-			"mMissileEffectKey": "{8eaddcb1}",
+			"mMissileEffectKey": "TFT11_Hwei_BA_mis",
 			"mHitEffectKey": "TFT_Global_BA_Hit",
 			"bHaveHitBone": true,
 			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
@@ -432,7 +436,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{e930a671}": {
+	"Characters/TFT11_Hwei/Spells/TFT11_HweiSpell": {
 		"mScriptName": "TFT11_HweiSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 7183,
@@ -442,9 +446,9 @@
 					"mName": "Damage",
 					"mValues": [
 						0,
-						250,
-						375,
-						1000,
+						240,
+						360,
+						2000,
 						0,
 						0,
 						0
@@ -561,7 +565,7 @@
 			},
 			"mCastType": 3,
 			"castFrame": 11,
-			"mMissileEffectKey": "{aa2c125e}",
+			"mMissileEffectKey": "TFT11_Hwei_R_Mis",
 			"mFloatVarsDecimals": [
 				0,
 				0,

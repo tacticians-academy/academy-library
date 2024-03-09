@@ -1,5 +1,5 @@
 {
-	"{0284793f}": {
+	"Characters/TFT11_Lissandra/Spells/TFT11_LissandraBasicAttack": {
 		"mScriptName": "TFT11_LissandraBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 24527,
@@ -49,7 +49,7 @@
 			"mCastType": 1,
 			"castFrame": 9,
 			"missileSpeed": 2000,
-			"mMissileEffectKey": "{78191a3d}",
+			"mMissileEffectKey": "TFT11_Lissandra_BA_mis",
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Hit",
 			"bHaveHitBone": true,
@@ -59,7 +59,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{038a8f77}": {
+	"Characters/TFT11_Lissandra/Spells/TFT11_LissandraBasicAttack2": {
 		"mScriptName": "TFT11_LissandraBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 24527,
@@ -109,7 +109,7 @@
 			"mCastType": 1,
 			"castFrame": 9,
 			"missileSpeed": 2000,
-			"mMissileEffectKey": "{78191a3d}",
+			"mMissileEffectKey": "TFT11_Lissandra_BA_mis",
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Hit",
 			"bHaveHitBone": true,
@@ -119,7 +119,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{a41e127b}": {
+	"Characters/TFT11_Lissandra/Spells/TFT11_LissandraSpell": {
 		"mScriptName": "TFT11_LissandraSpell",
 		"mSpell": {
 			"flags": 4,
@@ -143,8 +143,8 @@
 					"mName": "Damage",
 					"mValues": [
 						0,
-						700,
-						1100,
+						640,
+						960,
 						8888,
 						160,
 						200,
@@ -285,7 +285,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{ea3f7647}": {
+	"Characters/TFT11_Lissandra/Spells/TFT11_LissandraCritAttack": {
 		"mScriptName": "TFT11_LissandraCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 24527,
@@ -335,7 +335,7 @@
 			"mCastType": 1,
 			"castFrame": 9,
 			"missileSpeed": 2000,
-			"mMissileEffectKey": "{78191a3d}",
+			"mMissileEffectKey": "TFT11_Lissandra_BA_mis",
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Crit",
 			"bHaveHitBone": true,
@@ -345,7 +345,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{64727fb1}": {
+	"Characters/TFT11_Lissandra/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Lissandra",
 		"baseHP": 1000,
 		"baseStaticHPRegen": 0,

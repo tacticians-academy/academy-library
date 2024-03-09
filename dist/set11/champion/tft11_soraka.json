@@ -1,5 +1,5 @@
 {
-	"{28379739}": {
+	"Characters/TFT11_Soraka/Spells/TFT11_SorakaCritAttack": {
 		"mScriptName": "TFT11_SorakaCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -57,7 +57,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{97c9e639}": {
+	"Characters/TFT11_Soraka/Spells/TFT11_SorakaBasicAttack": {
 		"mScriptName": "TFT11_SorakaBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 512,
@@ -115,7 +115,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{d9d51135}": {
+	"Characters/TFT11_Soraka/Spells/TFT11_SorakaSpell": {
 		"mScriptName": "TFT11_SorakaSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 6351,
@@ -127,9 +127,9 @@
 					"mName": "Damage",
 					"mValues": [
 						0,
-						285,
-						435,
-						685,
+						250,
+						375,
+						580,
 						160,
 						200,
 						240
@@ -140,9 +140,9 @@
 					"mName": "AoEDamage",
 					"mValues": [
 						0,
-						150,
-						225,
-						360,
+						140,
+						210,
+						325,
 						0,
 						0,
 						0
@@ -247,7 +247,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{fdd52351}": {
+	"Characters/TFT11_Soraka/Spells/TFT11_SorakaBasicAttack2": {
 		"mScriptName": "TFT11_SorakaBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -305,7 +305,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{42d876c7}": {
+	"Characters/TFT11_Soraka/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Soraka",
 		"baseHP": 650,
 		"baseStaticHPRegen": 0,
@@ -323,7 +323,7 @@
 		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
 		"attackRange": 890,
-		"attackSpeed": 0.699999988079071,
+		"attackSpeed": 0.75,
 		"basicAttack": {
 			"mAttackProbability": 0.5,
 			"mAttackName": "TFT11_SorakaBasicAttack",
@@ -366,7 +366,6 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 10,
 		"__type": "TFTCharacterRecord"
 	}
 }

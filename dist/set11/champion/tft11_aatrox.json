@@ -1,5 +1,5 @@
 {
-	"{461989e7}": {
+	"Characters/TFT11_Aatrox/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Aatrox",
 		"baseHP": 700,
 		"baseStaticHPRegen": 0,
@@ -67,7 +67,7 @@
 		"mInitialMana": 40,
 		"__type": "TFTCharacterRecord"
 	},
-	"{61f7f2c9}": {
+	"Characters/TFT11_Aatrox/Spells/TFT11_AatroxCritAttack": {
 		"mScriptName": "TFT11_AatroxCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -103,7 +103,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{7e089365}": {
+	"Characters/TFT11_Aatrox/Spells/TFT11_AatroxSpell": {
 		"mScriptName": "TFT11_AatroxSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 22538,
@@ -213,7 +213,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{b999b061}": {
+	"Characters/TFT11_Aatrox/Spells/TFT11_AatroxBasicAttack2": {
 		"mScriptName": "TFT11_AatroxBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -250,7 +250,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{c3038e89}": {
+	"Characters/TFT11_Aatrox/Spells/TFT11_AatroxBasicAttack": {
 		"mScriptName": "TFT11_AatroxBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,

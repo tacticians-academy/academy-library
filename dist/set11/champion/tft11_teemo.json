@@ -1,5 +1,5 @@
 {
-	"{61708195}": {
+	"Characters/TFT11_Teemo/Spells/TFT11_TeemoSpell": {
 		"mScriptName": "TFT11_TeemoSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 6154,
@@ -21,9 +21,9 @@
 					"mName": "Damage",
 					"mValues": [
 						0,
-						390,
-						585,
-						935,
+						400,
+						600,
+						1000,
 						0,
 						0,
 						0
@@ -131,7 +131,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{ccf21519}": {
+	"Characters/TFT11_Teemo/Spells/TFT11_TeemoCritAttack": {
 		"mScriptName": "TFT11_TeemoCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 4234,
@@ -198,7 +198,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{ce8f4999}": {
+	"Characters/TFT11_Teemo/Spells/TFT11_TeemoBasicAttack": {
 		"mScriptName": "TFT11_TeemoBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 4234,
@@ -256,7 +256,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{d690f831}": {
+	"Characters/TFT11_Teemo/Spells/TFT11_TeemoBasicAttack2": {
 		"mScriptName": "TFT11_TeemoBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 4234,
@@ -388,7 +388,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{baba7ea4}": {
+	"Characters/TFT11_Teemo/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Teemo",
 		"baseHP": 550,
 		"baseStaticHPRegen": 0,

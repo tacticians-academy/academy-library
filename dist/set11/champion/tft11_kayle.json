@@ -4,32 +4,32 @@
 			"skinMeshProperties": {
 				"materialOverride": [
 					{
-						"material": "{ac7e59cd}",
+						"material": "Characters/TFT11_Kayle/Skins/Skin0/Materials/TierUpgrade_Body_Glow",
 						"submesh": "Body",
 						"__type": "SkinMeshDataProperties_MaterialOverride"
 					},
 					{
-						"material": "{ac7e59cd}",
+						"material": "Characters/TFT11_Kayle/Skins/Skin0/Materials/TierUpgrade_Body_Glow",
 						"submesh": "level11",
 						"__type": "SkinMeshDataProperties_MaterialOverride"
 					},
 					{
-						"material": "{92340115}",
+						"material": "Characters/TFT11_Kayle/Skins/Skin0/Materials/TierUpgrade_Weapon_Glow",
 						"submesh": "sword_hilt_combined",
 						"__type": "SkinMeshDataProperties_MaterialOverride"
 					},
 					{
-						"material": "{92340115}",
+						"material": "Characters/TFT11_Kayle/Skins/Skin0/Materials/TierUpgrade_Weapon_Glow",
 						"submesh": "sword_blade_combined",
 						"__type": "SkinMeshDataProperties_MaterialOverride"
 					},
 					{
-						"material": "{92340115}",
+						"material": "Characters/TFT11_Kayle/Skins/Skin0/Materials/TierUpgrade_Weapon_Glow",
 						"submesh": "sword_hilt",
 						"__type": "SkinMeshDataProperties_MaterialOverride"
 					},
 					{
-						"material": "{92340115}",
+						"material": "Characters/TFT11_Kayle/Skins/Skin0/Materials/TierUpgrade_Weapon_Glow",
 						"submesh": "sword_blade",
 						"__type": "SkinMeshDataProperties_MaterialOverride"
 					}
@@ -148,7 +148,7 @@
 		},
 		"__type": "GearSkinUpgrade"
 	},
-	"{3c9d8275}": {
+	"Characters/TFT11_Kayle/Spells/TFT11_KayleCritAttack": {
 		"mScriptName": "TFT11_KayleCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 21711,
@@ -196,7 +196,7 @@
 			"mCastType": 1,
 			"castFrame": 8,
 			"missileSpeed": 2250,
-			"mMissileEffectKey": "{9ddbe55a}",
+			"mMissileEffectKey": "TFT11_Kayle_BA_Ranged",
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Crit",
 			"bHaveHitBone": true,
@@ -214,13 +214,13 @@
 			"mProjectTargetToCastRange": true,
 			"bHaveHitEffect": true,
 			"castRange": [
-				1000,
-				1000,
-				1000,
-				1000,
-				1000,
-				1000,
-				1000
+				1130,
+				1130,
+				1130,
+				1130,
+				1130,
+				1130,
+				1130
 			],
 			"castRadius": [
 				20,
@@ -262,8 +262,8 @@
 			},
 			"mCastType": 1,
 			"castFrame": 10,
-			"mMissileEffectKey": "{ac514ffa}",
-			"mHitEffectKey": "{42549e54}",
+			"mMissileEffectKey": "TFT11_Kayle_Wave_Mis_Wide",
+			"mHitEffectKey": "TFT11_Kayle_Wave_Tar",
 			"bHaveHitBone": true,
 			"mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
 			"mFloatVarsDecimals": [
@@ -291,7 +291,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{5468c5a5}": {
+	"Characters/TFT11_Kayle/Spells/TFT11_KayleBasicAttack": {
 		"mScriptName": "TFT11_KayleBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 21711,
@@ -339,7 +339,7 @@
 			"mCastType": 1,
 			"castFrame": 8,
 			"missileSpeed": 2250,
-			"mMissileEffectKey": "{9ddbe55a}",
+			"mMissileEffectKey": "TFT11_Kayle_BA_Ranged",
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Hit",
 			"bHaveHitBone": true,
@@ -357,13 +357,13 @@
 			"mProjectTargetToCastRange": true,
 			"bHaveHitEffect": true,
 			"castRange": [
-				1000,
-				1000,
-				1000,
-				1000,
-				1000,
-				1000,
-				1000
+				1130,
+				1130,
+				1130,
+				1130,
+				1130,
+				1130,
+				1130
 			],
 			"castRadius": [
 				20,
@@ -405,8 +405,8 @@
 			},
 			"mCastType": 1,
 			"castFrame": 10,
-			"mMissileEffectKey": "{ac514ffa}",
-			"mHitEffectKey": "{42549e54}",
+			"mMissileEffectKey": "TFT11_Kayle_Wave_Mis_Wide",
+			"mHitEffectKey": "TFT11_Kayle_Wave_Tar",
 			"mFloatVarsDecimals": [
 				0,
 				0,
@@ -432,7 +432,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{71ef0343}": {
+	"Characters/TFT11_Kayle/Spells/TFT11_KayleBasicAttack4": {
 		"mScriptName": "TFT11_KayleBasicAttack4",
 		"mSpell": {
 			"mAffectsTypeFlags": 7183,
@@ -480,7 +480,7 @@
 			"mCastType": 1,
 			"castFrame": 8,
 			"missileSpeed": 2250,
-			"mMissileEffectKey": "{9ddbe55a}",
+			"mMissileEffectKey": "TFT11_Kayle_BA_Ranged",
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Hit",
 			"bHaveHitBone": true,
@@ -489,7 +489,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{76ef0b22}": {
+	"Characters/TFT11_Kayle/Spells/TFT11_KayleBasicAttack3": {
 		"mScriptName": "TFT11_KayleBasicAttack3",
 		"mSpell": {
 			"mAffectsTypeFlags": 7183,
@@ -537,7 +537,7 @@
 			"mCastType": 1,
 			"castFrame": 8,
 			"missileSpeed": 2250,
-			"mMissileEffectKey": "{9ddbe55a}",
+			"mMissileEffectKey": "TFT11_Kayle_BA_Ranged",
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Hit",
 			"bHaveHitBone": true,
@@ -546,7 +546,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{77ef0cb5}": {
+	"Characters/TFT11_Kayle/Spells/TFT11_KayleBasicAttack2": {
 		"mScriptName": "TFT11_KayleBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 21711,
@@ -594,7 +594,7 @@
 			"mCastType": 1,
 			"castFrame": 8,
 			"missileSpeed": 2250,
-			"mMissileEffectKey": "{9ddbe55a}",
+			"mMissileEffectKey": "TFT11_Kayle_BA_Ranged",
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Hit",
 			"bHaveHitBone": true,
@@ -603,7 +603,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{b2f415c5}": {
+	"Characters/TFT11_Kayle/Spells/TFT11_KayleCritAttack2": {
 		"mScriptName": "TFT11_KayleCritAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 21711,
@@ -651,7 +651,7 @@
 			"mCastType": 1,
 			"castFrame": 8,
 			"missileSpeed": 2250,
-			"mMissileEffectKey": "{9ddbe55a}",
+			"mMissileEffectKey": "TFT11_Kayle_BA_Ranged",
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "TFT_Global_BA_Crit",
 			"bHaveHitBone": true,
@@ -717,8 +717,8 @@
 			},
 			"mCastType": 1,
 			"castFrame": 10,
-			"mMissileEffectKey": "{97a8ae08}",
-			"mHitEffectKey": "{42549e54}",
+			"mMissileEffectKey": "TFT11_Kayle_Wave_Mis",
+			"mHitEffectKey": "TFT11_Kayle_Wave_Tar",
 			"bHaveHitBone": true,
 			"mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
 			"mFloatVarsDecimals": [
@@ -746,7 +746,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{e2497949}": {
+	"Characters/TFT11_Kayle/Spells/TFT11_KayleSpell": {
 		"mScriptName": "TFT11_KayleSpell",
 		"mSpell": {
 			"flags": 4,
@@ -756,9 +756,9 @@
 					"mName": "Damage",
 					"mValues": [
 						0,
-						180,
-						270,
-						450,
+						150,
+						225,
+						375,
 						800,
 						0,
 						0
@@ -865,8 +865,8 @@
 				"__type": "MissileSpecification"
 			},
 			"mCastType": 1,
-			"mMissileEffectKey": "{97a8ae08}",
-			"mHitEffectKey": "{42549e54}",
+			"mMissileEffectKey": "TFT11_Kayle_Wave_Mis",
+			"mHitEffectKey": "TFT11_Kayle_Wave_Tar",
 			"bHaveHitBone": true,
 			"mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
 			"mFloatVarsDecimals": [
@@ -894,13 +894,12 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{5dff465a}": {
+	"Characters/TFT11_Kayle/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Kayle",
 		"baseHP": 450,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 90,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
@@ -912,7 +911,7 @@
 		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
 		"attackRange": 1130,
-		"attackSpeed": 0.75,
+		"attackSpeed": 0.699999988079071,
 		"basicAttack": {
 			"mAttackName": "TFT11_KayleBasicAttack",
 			"__type": "AttackSlotData"

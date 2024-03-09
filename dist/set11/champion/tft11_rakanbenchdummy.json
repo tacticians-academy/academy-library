@@ -1,5 +1,5 @@
 {
-	"{03602e7b}": {
+	"Characters/TFT11_RakanBenchDummy/Spells/TFT11_RakanBenchDummyBasicAttack": {
 		"mScriptName": "TFT11_RakanBenchDummyBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 512,
@@ -37,7 +37,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{4d5f964f}": {
+	"Characters/TFT11_RakanBenchDummy/Spells/TFT11_RakanBenchDummySpell": {
 		"mScriptName": "TFT11_RakanBenchDummySpell",
 		"mSpell": {
 			"flags": 4,
@@ -111,14 +111,23 @@
 						],
 						"mTriggerName": "MissileYeet",
 						"__type": "TriggerFromScript"
+					},
+					{
+						"mActions": [
+							{
+								"__type": "Destroy"
+							}
+						],
+						"mDelay": 2,
+						"__type": "TriggerOnDelay"
 					}
 				],
 				"__type": "MissileSpecification"
 			},
 			"mCastType": 1,
 			"castFrame": 6,
-			"mMissileEffectKey": "{d941d81b}",
-			"mHitEffectKey": "{a127930a}",
+			"mMissileEffectKey": "TFT11_RakanBenchDummy_Q_mis",
+			"mHitEffectKey": "TFT11_RakanBenchDummy_Q_heal",
 			"bHaveHitBone": true,
 			"mHitBoneName": "C_Buffbone_Glb_Center_Loc",
 			"mFloatVarsDecimals": [
@@ -144,7 +153,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{9968dceb}": {
+	"Characters/TFT11_RakanBenchDummy/Spells/TFT11_RakanBenchDummyBasicAttack2": {
 		"mScriptName": "TFT11_RakanBenchDummyBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 512,
@@ -182,7 +191,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{c60572b3}": {
+	"Characters/TFT11_RakanBenchDummy/Spells/TFT11_RakanBenchDummyCritAttack": {
 		"mScriptName": "TFT11_RakanBenchDummyCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 512,
@@ -220,7 +229,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{6abbc85d}": {
+	"Characters/TFT11_RakanBenchDummy/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_RakanBenchDummy",
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {

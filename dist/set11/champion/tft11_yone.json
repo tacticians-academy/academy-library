@@ -1,5 +1,5 @@
 {
-	"{062bad6e}": {
+	"Characters/TFT11_Yone/Spells/TFT11_YoneBasicAttack3": {
 		"mScriptName": "TFT11_YoneBasicAttack3",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -36,7 +36,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{072baf01}": {
+	"Characters/TFT11_Yone/Spells/TFT11_YoneBasicAttack2": {
 		"mScriptName": "TFT11_YoneBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -73,7 +73,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{092bb227}": {
+	"Characters/TFT11_Yone/Spells/TFT11_YoneBasicAttack4": {
 		"mScriptName": "TFT11_YoneBasicAttack4",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -110,7 +110,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{1e47d185}": {
+	"Characters/TFT11_Yone/Spells/TFT11_YoneSpell": {
 		"mScriptName": "TFT11_YoneSpell",
 		"mSpell": {
 			"flags": 4,
@@ -262,7 +262,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{2a9760ae}": {
+	"Characters/TFT11_Yone/Spells/TFT11_YoneCritAttack3": {
 		"mScriptName": "TFT11_YoneCritAttack3",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -298,7 +298,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{2b976241}": {
+	"Characters/TFT11_Yone/Spells/TFT11_YoneCritAttack2": {
 		"mScriptName": "TFT11_YoneCritAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -334,7 +334,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{2d976567}": {
+	"Characters/TFT11_Yone/Spells/TFT11_YoneCritAttack4": {
 		"mScriptName": "TFT11_YoneCritAttack4",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -370,7 +370,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{cb8b39a9}": {
+	"Characters/TFT11_Yone/Spells/TFT11_YoneBasicAttack": {
 		"mScriptName": "TFT11_YoneBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -407,7 +407,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{ef5dc169}": {
+	"Characters/TFT11_Yone/Spells/TFT11_YoneCritAttack": {
 		"mScriptName": "TFT11_YoneCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -443,7 +443,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{725f1dc9}": {
+	"Characters/TFT11_Yone/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Yone",
 		"baseHP": 800,
 		"baseStaticHPRegen": 0,

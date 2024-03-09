@@ -1,5 +1,5 @@
 {
-	"{053de19b}": {
+	"Characters/TFT11_Sivir/Spells/TFT11_SivirBasicAttack": {
 		"mScriptName": "TFT11_SivirBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 24527,
@@ -58,7 +58,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{2d8fdd6f}": {
+	"Characters/TFT11_Sivir/Spells/TFT11_SivirSpell": {
 		"mScriptName": "TFT11_SivirSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 11333,
@@ -68,9 +68,9 @@
 					"mName": "PercentAttackDamage",
 					"mValues": [
 						0.44999998807907104,
-						0.800000011920929,
-						0.800000011920929,
-						0.8500000238418579,
+						0.949999988079071,
+						0.949999988079071,
+						1,
 						0.44999998807907104,
 						0.44999998807907104,
 						0.44999998807907104
@@ -300,7 +300,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{e96a3d0b}": {
+	"Characters/TFT11_Sivir/Spells/TFT11_SivirBasicAttack2": {
 		"mScriptName": "TFT11_SivirBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 24527,
@@ -359,7 +359,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{f3b48853}": {
+	"Characters/TFT11_Sivir/Spells/TFT11_SivirCritAttack": {
 		"mScriptName": "TFT11_SivirCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 24527,
@@ -417,7 +417,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{fb5c6fdf}": {
+	"Characters/TFT11_Sivir/Spells/TFT11_SivirEmpoweredBasicAttack": {
 		"mScriptName": "TFT11_SivirEmpoweredBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 24527,
@@ -467,6 +467,15 @@
 					},
 					{
 						"__type": "CastOnMovementComplete"
+					},
+					{
+						"mActions": [
+							{
+								"__type": "Destroy"
+							}
+						],
+						"mDelay": 4,
+						"__type": "TriggerOnDelay"
 					}
 				],
 				"__type": "MissileSpecification"
@@ -483,7 +492,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{0b30dc4b}": {
+	"Characters/TFT11_Sivir/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Sivir",
 		"baseHP": 500,
 		"baseStaticHPRegen": 0,

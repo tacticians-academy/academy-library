@@ -1,5 +1,5 @@
 {
-	"{081425c5}": {
+	"Characters/TFT11_Neeko/Spells/TFT11_NeekoSpell": {
 		"mScriptName": "TFT11_NeekoSpell",
 		"mSpell": {
 			"flags": 4,
@@ -49,9 +49,9 @@
 					"mName": "DR",
 					"mValues": [
 						0,
-						0.25,
-						0.25,
 						0.3499999940395355,
+						0.3499999940395355,
+						0.4000000059604645,
 						0,
 						0,
 						0
@@ -142,7 +142,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{7def87a9}": {
+	"Characters/TFT11_Neeko/Spells/TFT11_NeekoCritAttack": {
 		"mScriptName": "TFT11_NeekoCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -318,7 +318,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{b489ea44}": {
+	"Characters/TFT11_Neeko/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Neeko",
 		"baseHP": 800,
 		"baseStaticHPRegen": 0,

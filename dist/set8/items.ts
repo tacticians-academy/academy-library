@@ -156,23 +156,6 @@ export const completedItems: ItemData[] = [
 		unique: false,
 	},
 	{
-		apiName: `TFT_Item_SeraphsEmbrace`,
-		composition: [`TFT_Item_TearOfTheGoddess`, `TFT_Item_TearOfTheGoddess`],
-		desc: `Abilities cost %i:scaleMana% @ManaReduction@ less Mana to cast. <br><br>If the holder gets at least 1 takedown within @TakedownTimer@ seconds of casting, gain %i:scaleMana% @ManaOnTakedown@ Mana.<br><br><tftitemrules>[Unique - only 1 per champion]</tftitemrules><br>`,
-		effects: {
-			'AP': 10,
-			'Mana': 40,
-			'{0cea77dc}': 10,
-			'{2a5b6a9f}': 3,
-			'{7ccd3647}': 10,
-		},
-		from: null,
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/Blue_Buff.dds`,
-		id: null,
-		name: `Blue Buff`,
-		unique: true,
-	},
-	{
 		apiName: `TFT_Item_BrambleVest`,
 		composition: [`TFT_Item_ChainVest`, `TFT_Item_ChainVest`],
 		desc: `Negates @CritReduction*100@% bonus damage from incoming critical strikes. When struck by an attack, deal @1StarAoEDamage@/@2StarAoEDamage@/@3StarAoEDamage@ %i:star% magic damage to all nearby enemies (once every @ICD@ seconds).<br><br><tftitemrules>[Direct damage item]</tftitemrules>`,
@@ -734,21 +717,6 @@ export const completedItems: ItemData[] = [
 		id: null,
 		name: `Zephyr`,
 		unique: true,
-	},
-	{
-		apiName: `TFT_Item_TitanicHydra`,
-		composition: [`TFT_Item_RecurveBow`, `TFT_Item_GiantsBelt`],
-		desc: `Combat start: <TFTKeyword>Taunt</TFTKeyword>.<br>On death, a Voidspawn arises, <TFTKeyword>Taunting</TFTKeyword> nearby enemies. <br><br><tftitemrules><tftbold>Taunt</tftbold>: enemies that are able and in range must attack the taunter</tftitemrules>`,
-		effects: {
-			'AS': 10,
-			'HP': 150,
-			'SummonedStatReduction': 25,
-		},
-		from: null,
-		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Standard/ZZRot_Portal.dds`,
-		id: null,
-		name: `Zz'Rot Portal`,
-		unique: false,
 	},
 ]
 
@@ -2327,6 +2295,8 @@ export const modItems: ItemData[] = [
 	},
 ]
 
+export const temporaryItems: ItemData[] = []
+
 export const unreleasedItems: ItemData[] = [
 	{
 		apiName: `TFT6_Item_EliteSpotlight`,
@@ -2341,4 +2311,4 @@ export const unreleasedItems: ItemData[] = [
 	},
 ]
 
-export const currentItems: ItemData[] = componentItems.concat(completedItems, radiantItems, shimmerscaleItems, emblemItems, ornnItems)
+export const currentItems: ItemData[] = componentItems.concat(completedItems, radiantItems, supportItems, emblemItems, ornnItems)

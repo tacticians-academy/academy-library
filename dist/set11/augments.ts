@@ -5,6 +5,16 @@ export const emptyImplementationAugments: AugmentGroupKey[] = []
 
 export const activeAugments: AugmentData[] = [
 	{
+		tier: 1,
+		name: ` The Golden Remover`,
+		groupID: `undefinedTheGoldenRemover`,
+		desc: `Gain a Golden Remover and component item anvil.`,
+		effects: {
+			'{2b33ebd5}': 1,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/GoldenRemover_I.TFT_Set11.tex`,
+	},
+	{
 		tier: 2,
 		name: `A Cut Above`,
 		groupID: `aCutAbove`,
@@ -14,6 +24,16 @@ export const activeAugments: AugmentData[] = [
 			'ProcChance': 0.20000000298023224,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/A-Cut-Above-II.tex`,
+	},
+	{
+		tier: 3,
+		name: `Accomplice`,
+		groupID: `accomplice`,
+		desc: `Get a Support Thief's Gloves and&nbsp;@gold@&nbsp;gold.`,
+		effects: {
+			'Gold': 8,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Accomplice_III.TFT_Set11.tex`,
 	},
 	{
 		tier: 1,
@@ -135,6 +155,16 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Ascension2.tex`,
 	},
 	{
+		tier: 3,
+		name: `At What Cost`,
+		groupID: `atWhatCost`,
+		desc: `Immediately go to level 6. You don't get to choose your future augments.`,
+		effects: {
+			'Level': 6,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/AtWhatCost_III.TFT_Set11.tex`,
+	},
+	{
 		tier: 2,
 		name: `Axiom Arc II`,
 		groupID: `axiomArc`,
@@ -143,6 +173,17 @@ export const activeAugments: AugmentData[] = [
 			'ManaGain': 30,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Axiom-Arc-II.tex`,
+	},
+	{
+		tier: 2,
+		name: `Ba-BOOM!`,
+		groupID: `baBOOM`,
+		desc: `Your champions deal @BonusDamage*100@% more damage for @Duration@ seconds on every other cast.`,
+		effects: {
+			'BonusDamage': 0.75,
+			'Duration': 2,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/BaBoom_II.TFT_Set11.tex`,
 	},
 	{
 		tier: 1,
@@ -286,7 +327,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 3,
 		name: `Behemoth Crown`,
 		groupID: `behemothCrown`,
-		desc: `Gain a Behemoth Emblem, a Warmogs Armor, and a Malphite`,
+		desc: `Gain a Behemoth Emblem, a Warmogs Armor, and a Yorick.`,
 		effects: {},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Behemoth_III.TFT_Set11.tex`,
 	},
@@ -435,8 +476,8 @@ export const activeAugments: AugmentData[] = [
 		groupID: `bloodMoney`,
 		desc: `Gain @Gold@ gold per @HPPerGold@ HP your Tactician loses.`,
 		effects: {
-			'Gold': 3,
-			'HPPerGold': 10,
+			'Damage': 1,
+			'{521fb564}': 15,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Blood-Money-I.tex`,
 	},
@@ -446,8 +487,8 @@ export const activeAugments: AugmentData[] = [
 		groupID: `bloodMoney`,
 		desc: `Gain @Gold@ gold per @HPPerGold@ HP your Tactician loses.`,
 		effects: {
-			'Damage': 1,
-			'{521fb564}': 15,
+			'Gold': 3,
+			'HPPerGold': 10,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Blood-Money-I.tex`,
 	},
@@ -507,7 +548,7 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Blue-Battery-III.tex`,
 	},
 	{
-		tier: 3,
+		tier: 2,
 		name: `Boiling Point`,
 		groupID: `boilingPoint`,
 		desc: `Porcelains' attacks grant @manarestore@ bonus Mana. While boiling, their attacks also Burn and Wound. Gain&nbsp;a&nbsp;Lux.`,
@@ -515,6 +556,16 @@ export const activeAugments: AugmentData[] = [
 			'ManaRestore': 5,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/BoilingPoint_II.TFT_Set11.tex`,
+	},
+	{
+		tier: 1,
+		name: `Branching Out`,
+		groupID: `branchingOut`,
+		desc: `After @numberofcombats@ player combat(s) Gain a random Emblem and a Reforger.<br><br><rules>Reforgers allow you to remake any item.</rules>`,
+		effects: {
+			'Numberofcombats': 1,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Branching-Out-I.tex`,
 	},
 	{
 		tier: 1,
@@ -546,9 +597,9 @@ export const activeAugments: AugmentData[] = [
 		tier: 3,
 		name: `Build a Bud!`,
 		groupID: `buildABud`,
-		desc: `Gain a random three star 1-cost unit, @gold@ gold, and a Completed Item&nbsp;Anvil.`,
+		desc: `Gain a random three star 1-cost unit and @gold@ gold.`,
 		effects: {
-			'Gold': 1,
+			'Gold': 6,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/BuildABud_III.TFT_Set11.tex`,
 	},
@@ -644,10 +695,22 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/CalculatedLoss2.tex`,
 	},
 	{
+		tier: 2,
+		name: `Call to Adventure`,
+		groupID: `callToAdventure`,
+		desc: `Every @TakeDowns@ takedowns, Storyweaver Kayle permanently gains @AP@ Ability Power and @HP@ HP. Gain a Garen and a Sivir.`,
+		effects: {
+			'AP': 1,
+			'HP': 10,
+			'{9fea86d7}': 2,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/CallToAdventure_II.TFT_Set11.tex`,
+	},
+	{
 		tier: 3,
 		name: `Call to Chaos`,
 		groupID: `callToChaos`,
-		desc: `Gain a powerful and random reward.<br><br><showIf.TFTUnitProperty.item:TFT11_Augment_CallToChaosShowIndicator>Reward: @TFTUnitProperty.item:TFT11_Augment_CallToChaos@</showIf.TFTUnitProperty.item:TFT11_Augment_CallToChaosShowIndicator>`,
+		desc: `Gain a powerful and random reward.<br><br>Reward: @TFTUnitProperty.item:TFT11_Augment_CallToChaos@`,
 		effects: {
 			'Gold': 50,
 			'Rerolls': 30,
@@ -774,15 +837,15 @@ export const activeAugments: AugmentData[] = [
 		desc: `tft_item_description_TFT8_AdminCause_CombatStart`,
 		effects: {
 			'AoEDamage': 200,
-			'AttackSpeedAmount': 25,
+			'AttackSpeedAmount': 40,
 			'AttackSpeedDuration': 200,
-			'GoldChance': 25,
-			'PercentHealthShield': 25,
+			'GoldChance': 50,
+			'PercentHealthShield': 35,
 			'ShieldDuration': 15,
-			'{00ac4fc9}': 20,
-			'{2d7e43a8}': 25,
-			'{3ba78496}': 25,
-			'{5d8ecbba}': 25,
+			'{00ac4fc9}': 30,
+			'{2d7e43a8}': 50,
+			'{3ba78496}': 40,
+			'{5d8ecbba}': 40,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/InnovatorSoul1.tex`,
 	},
@@ -793,15 +856,15 @@ export const activeAugments: AugmentData[] = [
 		desc: `tft_item_description_TFT8_AdminCause_CombatStart`,
 		effects: {
 			'AoEDamage': 200,
-			'AttackSpeedAmount': 40,
+			'AttackSpeedAmount': 25,
 			'AttackSpeedDuration': 200,
-			'GoldChance': 50,
-			'PercentHealthShield': 35,
+			'GoldChance': 25,
+			'PercentHealthShield': 25,
 			'ShieldDuration': 15,
-			'{00ac4fc9}': 30,
-			'{2d7e43a8}': 50,
-			'{3ba78496}': 40,
-			'{5d8ecbba}': 40,
+			'{00ac4fc9}': 20,
+			'{2d7e43a8}': 25,
+			'{3ba78496}': 25,
+			'{5d8ecbba}': 25,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/InnovatorSoul1.tex`,
 	},
@@ -1112,6 +1175,17 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/A-Determined-Investor-III.TFT_Set10.tex`,
 	},
 	{
+		tier: 2,
+		name: `Divine Rolls`,
+		groupID: `divineRolls`,
+		desc: `At the start of every stage, including this one, gain @BaseRerolls@ free rerolls + @BonusRerolls@ for each of your Heavenly champions. Gain a Kha'Zix and a Malphite.`,
+		effects: {
+			'BaseRerolls': 4,
+			'{28d45b77}': 1,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/DivineRolls_II.TFT_Set11.tex`,
+	},
+	{
 		tier: 1,
 		name: `Double Trouble I`,
 		groupID: `doubleTrouble`,
@@ -1143,6 +1217,17 @@ export const activeAugments: AugmentData[] = [
 	},
 	{
 		tier: 2,
+		name: `Dragon's Spirit`,
+		groupID: `dragonsSpirit`,
+		desc: `Gain a Dragon's Claw. Every time you heal @HPCap@ HP with Dragon's Claws, gain an item component, up to @MaxComponents@. (Current:&nbsp;@TFTUnitProperty.item:TFT11_Augment_DragonSpirit_HPHealed@)`,
+		effects: {
+			'MaxComponents': 4,
+			'{5521699d}': 8000,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/DragonsSpirit_II.TFT_Set11.tex`,
+	},
+	{
+		tier: 2,
 		name: `Dragonlord Crest`,
 		groupID: `dragonlordCrest`,
 		desc: `Gain a Dragonlord Emblem and&nbsp;a&nbsp;Janna.`,
@@ -1156,6 +1241,18 @@ export const activeAugments: AugmentData[] = [
 		desc: `Gain a Dragonlord emblem, a Guinsoo's Rageblade, and a Janna.`,
 		effects: {},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Dragonlord_III.TFT_Set11.tex`,
+	},
+	{
+		tier: 2,
+		name: `Drop Blossom!`,
+		groupID: `dropBlossom`,
+		desc: `Gain a Neeko. Your strongest Neeko's spell Heals @healamp*100@% more, and slams for @damageamp*100@% increased damage. Each cast increases the spell radius by @radius@.`,
+		effects: {
+			'DamageAmp': 0.25,
+			radius: 1,
+			'{033f554b}': 0.25,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/DropBlossom_II.TFT_Set11.tex`,
 	},
 	{
 		tier: 2,
@@ -1185,9 +1282,19 @@ export const activeAugments: AugmentData[] = [
 		tier: 3,
 		name: `Duelist Crown`,
 		groupID: `duelistCrown`,
-		desc: `Gain a Duelist Emblem, a Giant Slayer, and a Tristana.`,
+		desc: `Gain a Duelist Emblem, a Giant Slayer, and a Qiyana.`,
 		effects: {},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Duelist_III.TFT_Set11.tex`,
+	},
+	{
+		tier: 2,
+		name: `Dynamic Duo`,
+		groupID: `dynamicDuo`,
+		desc: `Get a random 5-cost champion and a random champion that shares a trait with them. Get @Gold@ gold.`,
+		effects: {
+			'Gold': 10,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/DynamicDuo_II.TFT_Set11.tex`,
 	},
 	{
 		tier: 2,
@@ -1290,6 +1397,38 @@ export const activeAugments: AugmentData[] = [
 	},
 	{
 		tier: 2,
+		name: `Enter the Dragon`,
+		groupID: `enterTheDragon`,
+		desc: `After the dragon strikes, Dragonlords deal @BonusDamage*100@% bonus true damage. Gain a Janna.`,
+		effects: {
+			'BonusDamage': 0.20000000298023224,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/EnterTheDragon_II.TFT_Set11.tex`,
+	},
+	{
+		tier: 2,
+		name: `Epoch`,
+		groupID: `epoch`,
+		desc: `Now, and at the start of every stage, gain @XP@ XP and @Rerolls@ free rerolls for that round only.`,
+		effects: {
+			'Rerolls': 4,
+			'XP': 6,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Epoch_II.TFT_Set11.tex`,
+	},
+	{
+		tier: 2,
+		name: `Epoch+`,
+		groupID: `epochplus`,
+		desc: `Now, and at the start of every stage, gain @XP@ XP and @Rerolls@ free rerolls for that round only.`,
+		effects: {
+			'Rerolls': 4,
+			'XP': 8,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Epoch_II.TFT_Set11.tex`,
+	},
+	{
+		tier: 2,
 		name: `Escort Quest`,
 		groupID: `escortQuest`,
 		desc: `Gain a Training Dummy. You gain @Gold@ gold every time it survives player combat.`,
@@ -1299,14 +1438,25 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Escort-Quest-II.tex`,
 	},
 	{
-		tier: 3,
+		tier: 2,
+		name: `Ethereal Blades`,
+		groupID: `etherealBlades`,
+		desc: `Gain a Shen. Your strongest Shen has +@IncRange@ Range and his spell does @damageamp*100@% increased damage.`,
+		effects: {
+			'DamageAmp': 0.8999999761581421,
+			'{113e42dc}': 3,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/EtherealBlades_II.TFT_Set11.tex`,
+	},
+	{
+		tier: 2,
 		name: `Everything Must Go!`,
 		groupID: `everythingMustGo`,
 		desc: `Your units buy and sell for @cost@ gold. Gain @gold@ gold.`,
 		effects: {
 			'Gold': 1,
 		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/EverythingMustGo_III.TFT_Set11.tex`,
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/EverythingMustGo_II.TFT_Set11.tex`,
 	},
 	{
 		tier: 2,
@@ -1320,7 +1470,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 3,
 		name: `Exalted Crown`,
 		groupID: `exaltedCrown`,
-		desc: `Gain an Exalted Emblem and a Redemption`,
+		desc: `Gain an Exalted Emblem and a Redemption.`,
 		effects: {},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Crown_Exalted_III.TFT_Set11.tex`,
 	},
@@ -1356,6 +1506,17 @@ export const activeAugments: AugmentData[] = [
 			'ShieldDuration': 10,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Exiles3.tex`,
+	},
+	{
+		tier: 2,
+		name: `Extended Duel`,
+		groupID: `extendedDuel`,
+		desc: `Your Duelists start combat with @StartingStacks@ stacks. At max stacks, they gain @Omnivamp*100@%&nbsp;Omnivamp. Gain a Darius and&nbsp;a&nbsp;Yasuo.`,
+		effects: {
+			'Omnivamp': 0.15000000596046448,
+			'StartingStacks': 3,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Gadget-Expert-II.tex`,
 	},
 	{
 		tier: 2,
@@ -1456,6 +1617,16 @@ export const activeAugments: AugmentData[] = [
 	},
 	{
 		tier: 1,
+		name: `Fine Vintage`,
+		groupID: `fineVintage`,
+		desc: `Completed items left on your bench for @Rounds@ rounds transform into Support&nbsp;Anvils.`,
+		effects: {
+			rounds: 3,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/FineVintage_I.TFT_Set11.tex`,
+	},
+	{
+		tier: 1,
 		name: `First Aid Kit I`,
 		groupID: `firstAidKit`,
 		desc: `All healing and shielding on your units is increased by @HealShieldIncrease*100@%.`,
@@ -1508,6 +1679,14 @@ export const activeAugments: AugmentData[] = [
 			'Tier1Rolls': 8,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Pirates2.tex`,
+	},
+	{
+		tier: 2,
+		name: `Full Sleeve`,
+		groupID: `fullSleeve`,
+		desc: `Open an armory that grants an extra Inkshadow item while the trait is active. Gain a Jax and an Aatrox.`,
+		effects: {},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/PassingTheCanvas_II.TFT_Set11.tex`,
 	},
 	{
 		tier: 2,
@@ -1664,6 +1843,17 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Gotta-Go-Fast-III.tex`,
 	},
 	{
+		tier: 2,
+		name: `Grim Harvest`,
+		groupID: `grimHarvest`,
+		desc: `Your Reapers gain @crit*100@% Critical Strike Chance and @omnivamp*100@% Omnivamp. They gain this bonus again every time they get a takedown. Gain a Kindred.`,
+		effects: {
+			'Crit': 0.07999999821186066,
+			'Omnivamp': 0.03999999910593033,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/GrimHarvest_II.TFT_Set11.tex`,
+	},
+	{
 		tier: 1,
 		name: `Harmacist I`,
 		groupID: `harmacist`,
@@ -1695,6 +1885,16 @@ export const activeAugments: AugmentData[] = [
 			'Omnivamp': 25,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Harmacist-1-2-3-III.tex`,
+	},
+	{
+		tier: 2,
+		name: `Haunted House`,
+		groupID: `hauntedHouse`,
+		desc: `Enemies that die while haunted by Ghostly pass @BonusHaunts@ extra spectre to a nearby enemy. Gain a Caitlyn and&nbsp;a&nbsp;Shen.`,
+		effects: {
+			'{a52713ed}': 1,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/HauntedHouse_II.TFT_Set11.tex`,
 	},
 	{
 		tier: 1,
@@ -1999,6 +2199,17 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/It-Pays-To-Learn-III.tex`,
 	},
 	{
+		tier: 2,
+		name: `It's Going to be Epic`,
+		groupID: `itsGoingToBeEpic`,
+		desc: `Every time a unique Mythic champion becomes Epic, gain @HP@ player HP and @Gold@ gold. Gain a Cho'Gath and Kog'Maw.`,
+		effects: {
+			'Gold': 3,
+			'HP': 3,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/GoingToBeEpic_II.TFT_Set11.tex`,
+	},
+	{
 		tier: 1,
 		name: `Item Grab Bag I`,
 		groupID: `itemGrabBag`,
@@ -2007,6 +2218,17 @@ export const activeAugments: AugmentData[] = [
 			'NumItems': 1,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/ItemGrabBag1.tex`,
+	},
+	{
+		tier: 3,
+		name: `Item Grab Bag II`,
+		groupID: `itemGrabBag`,
+		desc: `Gain @NumItems@ random completed items and @NumReforgers@ Reforgers.`,
+		effects: {
+			'NumItems': 2,
+			'NumReforgers': 2,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/ItemGrabBag3.tex`,
 	},
 	{
 		tier: 2,
@@ -2019,17 +2241,6 @@ export const activeAugments: AugmentData[] = [
 			'NumItems': 1,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/ItemGrabBag2.tex`,
-	},
-	{
-		tier: 3,
-		name: `Item Grab Bag II`,
-		groupID: `itemGrabBag`,
-		desc: `Gain @NumItems@ random completed items and @NumReforgers@ Reforgers.`,
-		effects: {
-			'NumItems': 2,
-			'NumReforgers': 2,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/ItemGrabBag3.tex`,
 	},
 	{
 		tier: 3,
@@ -2058,7 +2269,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `jeweledLotus`,
 		desc: `Your team gains @critchance@% Critical Strike chance, and their Abilities can critically strike.`,
 		effects: {
-			'CritChance': 15,
+			'CritChance': 20,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Jeweled-Lotus-II.tex`,
 	},
@@ -2068,7 +2279,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `jeweledLotus`,
 		desc: `Your team gains @critchance@% Critical Strike chance, and their Abilities can critically strike.`,
 		effects: {
-			'CritChance': 20,
+			'CritChance': 15,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Jeweled-Lotus-II.tex`,
 	},
@@ -2327,6 +2538,16 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Spoils-of-War-II.tex`,
 	},
 	{
+		tier: 1,
+		name: `Long Distance Pals`,
+		groupID: `longDistancePals`,
+		desc: `Combat start: Your 2 units furthest from each other form a bond, sharing @PercentShare*100@% of their Armor, Magic Resist, Attack Damage, and Ability Power with each other.`,
+		effects: {
+			'PercentShare': 0.20000000298023224,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Heart-Crown-I.tex`,
+	},
+	{
 		tier: 2,
 		name: `Long Distance Pals`,
 		groupID: `longDistancePals`,
@@ -2337,14 +2558,15 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Long-Distance-Relationship-II.tex`,
 	},
 	{
-		tier: 1,
-		name: `Long Distance Pals`,
-		groupID: `longDistancePals`,
-		desc: `Combat start: Your 2 units furthest from each other form a bond, sharing @PercentShare*100@% of their Armor, Magic Resist, Attack Damage, and Ability Power with each other.`,
+		tier: 2,
+		name: `Long Shot`,
+		groupID: `longShot`,
+		desc: `Snipers gain @AS*100@% Attack Speed. Gain a Caitlyn and a Kog'Maw. After Snipers have attacked a total distance of @Distance@ hexes, gain a Sniper's Focus. (Current:&nbsp;@TFTUnitProperty.item:TFT11_Augment_Sniper_DistanceShot@)`,
 		effects: {
-			'PercentShare': 0.20000000298023224,
+			'AS': 0.15000000596046448,
+			'{2eb31462}': 1000,
 		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Heart-Crown-I.tex`,
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/LongShot_II.TFT_Set11.tex`,
 	},
 	{
 		tier: 2,
@@ -2376,6 +2598,29 @@ export const activeAugments: AugmentData[] = [
 			'NumGloves': 3,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Lucky-Gloves-III.tex`,
+	},
+	{
+		tier: 2,
+		name: `Lucky Paws`,
+		groupID: `luckyPaws`,
+		desc: `Gain a 2-star Kobuko. Your strongest Kobuko's Ability deals @damageamp*100@% damage. If Kobuko kills an enemy, they have a @goldchance@% chance to drop&nbsp;@gold@&nbsp;gold.`,
+		effects: {
+			'DamageAmp': 2.5,
+			'Gold': 1,
+			'GoldChance': 100,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/LuckyPaws_II.TFT_Set11.tex`,
+	},
+	{
+		tier: 2,
+		name: `Lucky Ricochet`,
+		groupID: `luckyRicochet`,
+		desc: `Trickshots bounce @ExtraBounces@ additional time for @DamageReduction*100@% of original damage.`,
+		effects: {
+			'DamageReduction': 0.5,
+			'{93d13af6}': 1,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/LuckyRicochet_II.TFT_Set11.tex`,
 	},
 	{
 		tier: 2,
@@ -2428,6 +2673,17 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Ludens-Echo-III.tex`,
 	},
 	{
+		tier: 1,
+		name: `Lunch Money`,
+		groupID: `lunchMoney`,
+		desc: `Every @Damage@ damage you deal to enemy tacticians gives you 2 gold.<br>(Current: @TFTUnitProperty.item:TFT11_BloodBankDamage@)`,
+		effects: {
+			'Damage': 8,
+			'Gold': 2,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/BloodBank_I.TFT_Set11.tex`,
+	},
+	{
 		tier: 2,
 		name: `Magic Wand`,
 		groupID: `magicWand`,
@@ -2476,6 +2732,16 @@ export const activeAugments: AugmentData[] = [
 			'MaxHPPerSecond': 1,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Mana-Burn-II.tex`,
+	},
+	{
+		tier: 2,
+		name: `Mana Shield`,
+		groupID: `manaShield`,
+		desc: `Whenever an Invoker casts, grant the lowest HP ally Shield equal to @ManaShield*100@% of Mana spent. Gain a Janna.`,
+		effects: {
+			'{6d4321f7}': 2.5,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/ManaShield_II.TFT_Set11.tex`,
 	},
 	{
 		tier: 3,
@@ -2559,6 +2825,27 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/MetabolicAccel2.tex`,
 	},
 	{
+		tier: 2,
+		name: `Midnight Siphon`,
+		groupID: `midnightSiphon`,
+		desc: `Gain a Yorick. Your strongest Yorick gains @MaxHPPct*100@% max HP and additionally deals @MaxHPDmg*100@% of his max HP with his Ability.`,
+		effects: {
+			'{70588aa5}': 0.3499999940395355,
+			'{ff744686}': 0.25,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/MidnightSiphon_II.TFT_Set11.tex`,
+	},
+	{
+		tier: 2,
+		name: `Mind Over Matter`,
+		groupID: `mindOverMatter`,
+		desc: `Arcanists grant @APtoShieldRatio*100@% of their combined Ability Power as bonus HP to your Training Dummies. Get an Ahri and a Training Dummy.`,
+		effects: {
+			'{df6154bb}': 2.5,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/MindOverMatter_II.TFT_Set11.tex`,
+	},
+	{
 		tier: 1,
 		name: `Missed Connections`,
 		groupID: `missedConnections`,
@@ -2622,18 +2909,18 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Money-I.tex`,
 	},
 	{
-		tier: 3,
+		tier: 2,
 		name: `Mulched`,
 		groupID: `mulched`,
-		desc: `Every round, gain @RoundStacks@ Dryad stacks. If a Dryad kills an enemy, gain @KillStacks@ additional stack. Gain a Rek'Sai and&nbsp;a&nbsp;Gnar.`,
+		desc: `Every round, gain @RoundStacks@ Dryad stacks. Dryads deal @bonusdamage*100@% additional damage. Gain a Rek'Sai and&nbsp;a&nbsp;Gnar.`,
 		effects: {
-			'{9e063dc0}': 1,
+			'BonusDamage': 0.10000000149011612,
 			'{b49d297a}': 2,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Mulched_II.TFT_Set11.tex`,
 	},
 	{
-		tier: 3,
+		tier: 2,
 		name: `My Heart Will Go On`,
 		groupID: `myHeartWillGoOn`,
 		desc: `When one of your Fated pair dies, your team gains @DeathBonus*100@% of the surviving one's bonus for the rest of combat. Gain an Ahri and a Yasuo.`,
@@ -2712,6 +2999,17 @@ export const activeAugments: AugmentData[] = [
 			tier1champs: 3,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Threes-Company-I.tex`,
+	},
+	{
+		tier: 1,
+		name: `Over Encumbered`,
+		groupID: `overEncumbered`,
+		desc: `For the next stage, you only get @BenchSlots@ bench slots. After, get @Components@ item&nbsp;components.`,
+		effects: {
+			'BenchSlots': 3,
+			'{1bf51169}': 3,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/OverEncumbered_I.TFT_Set11.tex`,
 	},
 	{
 		tier: 3,
@@ -2823,6 +3121,28 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Phreaky-Friday-III.tex`,
 	},
 	{
+		tier: 1,
+		name: `Pick of the Litter`,
+		groupID: `pickOfTheLitter`,
+		desc: `Open a special shop with three free @ChampionTier@-cost champions. You can only pick one, but you get @NumCopies@ copies of it.`,
+		effects: {
+			'{4184975e}': 3,
+			'{8c4cd3ea}': 2,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/PickOfTheLitter_I.TFT_Set11.tex`,
+	},
+	{
+		tier: 1,
+		name: `Pick of the Litter+`,
+		groupID: `pickOfTheLitterplus`,
+		desc: `Open a special shop with three free @ChampionTier@-cost champions. You can only pick one, but you get @NumCopies@ copies of it.`,
+		effects: {
+			'{4184975e}': 4,
+			'{8c4cd3ea}': 2,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/PickOfTheLitter_I.TFT_Set11.tex`,
+	},
+	{
 		tier: 2,
 		name: `Porcelain Crest`,
 		groupID: `porcelainCrest`,
@@ -2918,6 +3238,16 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/GoldenTicket3.tex`,
 	},
 	{
+		tier: 2,
+		name: `Prizefighter`,
+		groupID: `prizefighter`,
+		desc: `Every @WinsNeeded@ wins gives you an item&nbsp;component.`,
+		effects: {
+			'{17dd5c2f}': 3,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/PrizeFighter_II.TFT_Set11.tex`,
+	},
+	{
 		tier: 1,
 		name: `Pumping Up I`,
 		groupID: `pumpingUp`,
@@ -2956,7 +3286,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `radiantRefactor`,
 		desc: `Gain a Masterwork Upgrade and @anvils@ component anvils.<br><br><rules>Masterwork Upgrade upgrades an item to Radiant!</rules>`,
 		effects: {
-			anvils: 2,
+			anvils: 1,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/RadiantRefactor_III.TFT_Set11.tex`,
 	},
@@ -2971,16 +3301,38 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/RadiantRelic-III.tex`,
 	},
 	{
-		tier: 3,
+		tier: 2,
 		name: `Raid Boss`,
 		groupID: `raidBoss`,
-		desc: `Combat start: Your strongest Behemoth gains @HP*100@% HP. When other Behomoths die, they transfer @DefenseRatio*100@% of their Armor and Magic Resist to it. Gain a Cho'Gath and&nbsp;a&nbsp;Malphite. `,
+		desc: `Combat start: Your strongest Behemoth gains @HP*100@% HP. When other Behemoths die, they transfer @DefenseRatio*100@% of their Armor and Magic Resist to it. Gain a Cho'Gath and&nbsp;a&nbsp;Malphite. `,
 		effects: {
 			'HP': 0.25,
 			'SizeIncrease': 0.5,
-			'{4700e996}': 0.25,
+			'{4700e996}': 0.11999999731779099,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/RaidBoss_II.TFT_Set11.tex`,
+	},
+	{
+		tier: 2,
+		name: `Raining Gold`,
+		groupID: `rainingGold`,
+		desc: `Gain @InstantGold@ gold now and @RoundGold@ gold every&nbsp;round.`,
+		effects: {
+			'{02634780}': 10,
+			'{d2f661e9}': 1,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/RainingGold_II.TFT_Set11.tex`,
+	},
+	{
+		tier: 2,
+		name: `Raining Gold+`,
+		groupID: `rainingGoldplus`,
+		desc: `Gain @InstantGold@ gold now and @RoundGold@ gold every&nbsp;round.`,
+		effects: {
+			'{02634780}': 20,
+			'{d2f661e9}': 1,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/RainingGold_II.TFT_Set11.tex`,
 	},
 	{
 		tier: 1,
@@ -3019,6 +3371,16 @@ export const activeAugments: AugmentData[] = [
 			'NumRemovers': 2,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Recombobulator-I.tex`,
+	},
+	{
+		tier: 2,
+		name: `ReinFOURcement`,
+		groupID: `reinFOURcement`,
+		desc: `The next 4-cost champion you buy is instantly upgraded to 2-star. Get&nbsp;@Gold@&nbsp;gold.`,
+		effects: {
+			'Gold': 4,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Reinfourcement_II.TFT_Set11.tex`,
 	},
 	{
 		tier: 2,
@@ -3173,6 +3535,19 @@ export const activeAugments: AugmentData[] = [
 	},
 	{
 		tier: 2,
+		name: `Scoreboard Scrapper`,
+		groupID: `scoreboardScrapper`,
+		desc: `Every round, if you're in the bottom @BottomHalf@, your team permanently gains @LoserBoost*100@% Attack Damage and Ability Power. If you're in the top @UpperHalf@, they have @WinningStatBoost*100@% more HP.`,
+		effects: {
+			'{274fd9e8}': 0.10000000149011612,
+			'{2dbbd01d}': 0.009999999776482582,
+			'{db15f20a}': 4,
+			'{df367657}': 4,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/ScoreboardScrapper_II.TFT_Set11.tex`,
+	},
+	{
+		tier: 2,
 		name: `Scrappy Inventions`,
 		groupID: `scrappyInventions`,
 		desc: `Combat start: Up to @MaxComponents@ equipped components turn into completed items for the rest of combat. Gain a component at the start of the next @NumStages@ stages.`,
@@ -3203,6 +3578,17 @@ export const activeAugments: AugmentData[] = [
 			'HealPercent': 60,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Second--Wind-II.tex`,
+	},
+	{
+		tier: 1,
+		name: `Sharing Is Caring`,
+		groupID: `sharingIsCaring`,
+		desc: `Combat start: You gain @YourGold@ gold and your opponent gains @EnemyGold@ gold.`,
+		effects: {
+			'{74a84398}': 1,
+			'{d2d73a99}': 1,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/SharingIsCaring_I.TFT_Set11.tex`,
 	},
 	{
 		tier: 2,
@@ -3266,6 +3652,29 @@ export const activeAugments: AugmentData[] = [
 			'BonusAS': 0.05000000074505806,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/The-Silver-Veil-I.TFT_Set10.tex`,
+	},
+	{
+		tier: 2,
+		name: `Slammin'`,
+		groupID: `slammin`,
+		desc: `Gain @components@ random Component(s). After each player combat, if there are no items on your bench (other than Consumables), gain @XP@ XP.`,
+		effects: {
+			'XP': 2,
+			'{1bf51169}': 1,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Slammin_II.TFT_Set11.tex`,
+	},
+	{
+		tier: 2,
+		name: `Slammin'+`,
+		groupID: `slamminplus`,
+		desc: `Gain @components@ random component(s) and @XPNow@ XP now. After each player combat, if there are no items on your bench (other than Consumables), gain @XP@ XP.`,
+		effects: {
+			'XP': 2,
+			'{1bf51169}': 1,
+			'{acf6f8c7}': 12,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Slammin_II.TFT_Set11.tex`,
 	},
 	{
 		tier: 2,
@@ -3344,6 +3753,17 @@ export const activeAugments: AugmentData[] = [
 			'NumItems': 4,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Gifts-from-Above-III.tex`,
+	},
+	{
+		tier: 2,
+		name: `Spirit Guardians`,
+		groupID: `spiritGuardians`,
+		desc: `Wardens' start of combat damage reduction is increased by @TempDamageReduction@%. @DamageReduction*100@% of damage dealt to non-Wardens is instead distributed across your Wardens. Get a Garen and a Jax.`,
+		effects: {
+			'DamageReduction': 0.20000000298023224,
+			'{392a301b}': 12,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/SpiritGuardians_II.TFT_Set11.tex`,
 	},
 	{
 		tier: 1,
@@ -3491,6 +3911,16 @@ export const activeAugments: AugmentData[] = [
 	},
 	{
 		tier: 2,
+		name: `Storied Champion`,
+		groupID: `storiedChampion`,
+		desc: `Gain a 2-star Garen. Your strongest Garen's Ability now grants stacking max HP instead of Shield. If he has more max HP than his target, his Ability deals @damageamp*100@% bonus true damage.`,
+		effects: {
+			'DamageAmp': 0.4000000059604645,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/StoriedChampion_II.TFT_Set11.tex`,
+	},
+	{
+		tier: 2,
 		name: `Storyweaver Crest`,
 		groupID: `storyweaverCrest`,
 		desc: `Gain a Storyweaver Emblem and&nbsp;a&nbsp;Riven.`,
@@ -3615,12 +4045,13 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/The-Golden-Egg-III.tex`,
 	},
 	{
-		tier: 3,
+		tier: 2,
 		name: `The Road Less Traveled`,
 		groupID: `theRoadLessTraveled`,
-		desc: `Each unique Sage that starts combat in the middle 2 rows grants @XP@ XP. Gain a Zyra.`,
+		desc: `Gain @BaseXP@ XP at the start of each combat. Each unique Sage that starts in the middle two rows grants @XP@ more. Gain a Zyra.`,
 		effects: {
-			'XP': 2,
+			'XP': 1,
+			'{178cb7b0}': 1,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/TheRoadLessTraveled_II.TFT_Set11.tex`,
 	},
@@ -3757,6 +4188,19 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Tiny-Titans-I.tex`,
 	},
 	{
+		tier: 3,
+		name: `Tiny, but Deadly`,
+		groupID: `tinyButDeadly`,
+		desc: `Your units are @TooltipSizeScale*100@% smaller, but move and attack @AS*100@% faster.`,
+		effects: {
+			'AS': 0.30000001192092896,
+			'MoveSpeed': 0.75,
+			'{1ecfa8f5}': 0.5,
+			'{858a62b6}': 0.4000000059604645,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/TinyButDeadly_III.TFT_Set11.tex`,
+	},
+	{
 		tier: 2,
 		name: `Tons of Stats!`,
 		groupID: `tonsOfStats`,
@@ -3771,6 +4215,17 @@ export const activeAugments: AugmentData[] = [
 			'Mana': 4,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Tons-of-Stats-II.tex`,
+	},
+	{
+		tier: 3,
+		name: `Too Much Candy`,
+		groupID: `tooMuchCandy`,
+		desc: `Your rerolls cost @StartingCost@ gold. Every @NumUntilIncrease@ rerolls, the cost goes up by @IncreaseBy@ gold. At the start of each stage your reroll cost is reset to @StartingCost@.`,
+		effects: {
+			'{54f474ac}': 1,
+			'{c4e0422d}': 6,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/TooMuchCandy_III.TFT_Set11.tex`,
 	},
 	{
 		tier: 2,
@@ -3859,6 +4314,17 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Transfusion-III.tex`,
 	},
 	{
+		tier: 3,
+		name: `Trash to Treasure`,
+		groupID: `trashToTreasure`,
+		desc: `Reforging completed items turns them into a random Artifact and does not consume the reforger. Gain a Reforger and @ComponentAnvils@ Component Anvil(s).`,
+		effects: {
+			'{4f839cbf}': 2,
+			'{9324b9a4}': 1,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/TrashToTreasure_III.TFT_Set11.tex`,
+	},
+	{
 		tier: 1,
 		name: `Tri Force I`,
 		groupID: `triForce`,
@@ -3926,7 +4392,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 3,
 		name: `Two for One`,
 		groupID: `twoForOne`,
-		desc: `Gain a copy of the first champion you buy each round.`,
+		desc: `Each round, get a copy of the first champion you buy that costs 3 or less.`,
 		effects: {},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/TwoForOne_III.TFT_Set11.tex`,
 	},
@@ -4046,7 +4512,9 @@ export const activeAugments: AugmentData[] = [
 		groupID: `vampirism`,
 		desc: `Your team gains @BaseHP@ HP. Gain another @BonusHPPer5MissingHP@ HP and @OmnivampPercentPer5MissingHP*100@% Omnivamp per 5 missing player HP.<br><rules>(Omnivamp: healing for a percent of damage dealt)</rules>`,
 		effects: {
-			'{c56ea2ab}': 20,
+			'BaseHP': 20,
+			'BonusHPPer5MissingHP': 2,
+			'OmnivampPercentPer5MissingHP': 0.009999999776482582,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Vampirism-I.TFT_Set10.tex`,
 	},
@@ -4056,9 +4524,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `vampirism`,
 		desc: `Your team gains @BaseHP@ HP. Gain another @BonusHPPer5MissingHP@ HP and @OmnivampPercentPer5MissingHP*100@% Omnivamp per 5 missing player HP.<br><rules>(Omnivamp: healing for a percent of damage dealt)</rules>`,
 		effects: {
-			'BaseHP': 20,
-			'BonusHPPer5MissingHP': 2,
-			'OmnivampPercentPer5MissingHP': 0.009999999776482582,
+			'{c56ea2ab}': 20,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Vampirism-I.TFT_Set10.tex`,
 	},
@@ -4075,6 +4541,17 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Vampirism-II.TFT_Set10.tex`,
 	},
 	{
+		tier: 2,
+		name: `Venerable Piggy Bank`,
+		groupID: `venerablePiggyBank`,
+		desc: `Gain @NumChamps@ Exalted Champions. Your Exalted Soul Core gains gold instead of XP. If you lose combat, it gains @BonusGold@ bonus gold.<br><br><rules>If there no 1 or 2-cost Exalted champions, get one 3-cost instead.</rules>`,
+		effects: {
+			'BonusGold': 2,
+			'NumChamps': 2,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/VenerablePiggyBank_II.TFT_Set11.tex`,
+	},
+	{
 		tier: 3,
 		name: `Verdant Veil`,
 		groupID: `verdantVeil`,
@@ -4086,6 +4563,17 @@ export const activeAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Verdant-Veil-III.tex`,
 	},
 	{
+		tier: 2,
+		name: `Wandering Trainer I`,
+		groupID: `wanderingTrainer`,
+		desc: `Gain @gold@ gold and a Training Dummy with @NumOfEmblems@ permanently attached Emblems.`,
+		effects: {
+			'Gold': 1,
+			'NumOfEmblems': 2,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Wandering-Trainer-II.tex`,
+	},
+	{
 		tier: 1,
 		name: `Wandering Trainer I`,
 		groupID: `wanderingTrainer`,
@@ -4095,17 +4583,6 @@ export const activeAugments: AugmentData[] = [
 			'NumOfEmblems': 1,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Wandering-Trainer-I.tex`,
-	},
-	{
-		tier: 2,
-		name: `Wandering Trainer I`,
-		groupID: `wanderingTrainer`,
-		desc: `Gain @gold@ gold and a Training Dummy with @NumOfEmblems@ permanently attached Emblems.`,
-		effects: {
-			'Gold': 3,
-			'NumOfEmblems': 2,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Wandering-Trainer-II.tex`,
 	},
 	{
 		tier: 3,
@@ -4145,6 +4622,17 @@ export const activeAugments: AugmentData[] = [
 			'HealReductionPercent': 50,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Weakspot1.tex`,
+	},
+	{
+		tier: 2,
+		name: `Well Fed`,
+		groupID: `wellFed`,
+		desc: `Bruisers heal @HPPercent*100@% of their max HP every @HealRate@ second. Gain a Kobuko and&nbsp;a&nbsp;Rek'Sai.`,
+		effects: {
+			'HPPercent': 0.019999999552965164,
+			'{c0d92fa1}': 1,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/WellFed_II.TFT_Set11.tex`,
 	},
 	{
 		tier: 1,
@@ -4260,6 +4748,16 @@ export const activeAugments: AugmentData[] = [
 	},
 	{
 		tier: 2,
+		name: `Wrath of the Moon`,
+		groupID: `wrathOfTheMoon`,
+		desc: `Umbral champions deal @BonusDamage*100@% more damage every second they continue attacking an enemy. Resets when they swap targets. Gain a Darius and a Yorick.`,
+		effects: {
+			'BonusDamage': 0.029999999329447746,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/WrathOfTheMoon_II.TFT_Set11.tex`,
+	},
+	{
+		tier: 2,
 		name: `You Have My Bow`,
 		groupID: `youHaveMyBow`,
 		desc: `Gain a Recurve Bow. Your units gain @AS@% Attack Speed. `,
@@ -4291,26 +4789,6 @@ export const activeAugments: AugmentData[] = [
 ]
 
 export const inactiveAugments: AugmentData[] = [
-	{
-		tier: 1,
-		name: ` The Golden Remover`,
-		groupID: `undefinedTheGoldenRemover`,
-		desc: `Gain a Golden Remover and component item anvil.`,
-		effects: {
-			'{2b33ebd5}': 1,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T1.tex`,
-	},
-	{
-		tier: 3,
-		name: `Accomplice`,
-		groupID: `accomplice`,
-		desc: `Get a Support Thief's Gloves and&nbsp;@gold@&nbsp;gold.`,
-		effects: {
-			'Gold': 2,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex`,
-	},
 	{
 		tier: 1,
 		name: `Action Surge`,
@@ -4389,27 +4867,6 @@ export const inactiveAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex`,
 	},
 	{
-		tier: 3,
-		name: `At What Cost`,
-		groupID: `atWhatCost`,
-		desc: `Immediately go to level 6. You don't get to choose your future augments.`,
-		effects: {
-			'Level': 6,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex`,
-	},
-	{
-		tier: 3,
-		name: `Ba-BOOM!`,
-		groupID: `baBOOM`,
-		desc: `Your champions deal @BonusDamage*100@% more damage for @Duration@ seconds on every other cast.`,
-		effects: {
-			'BonusDamage': 0.75,
-			'Duration': 1.5,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex`,
-	},
-	{
 		tier: 1,
 		name: `Berserkers I`,
 		groupID: `berserkers`,
@@ -4444,17 +4901,6 @@ export const inactiveAugments: AugmentData[] = [
 	},
 	{
 		tier: 1,
-		name: `Blood Bank`,
-		groupID: `bloodBank`,
-		desc: `Every @Damage@ damage you deal to enemy tacticians gives you 2 gold.<br>(Current: @TFTUnitProperty.item:TFT11_BloodBankDamage@)`,
-		effects: {
-			'Damage': 8,
-			'Gold': 2,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T1.tex`,
-	},
-	{
-		tier: 1,
 		name: `Broken Trade Sector`,
 		groupID: `brokenTradeSector`,
 		desc: `Gain a free Shop reroll now, and every @RoundsPerRefresh@ player combats.`,
@@ -4462,18 +4908,6 @@ export const inactiveAugments: AugmentData[] = [
 			'RoundsPerRefresh': 2,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T1.tex`,
-	},
-	{
-		tier: 2,
-		name: `Call to Adventure`,
-		groupID: `callToAdventure`,
-		desc: `Every @TakeDowns@ takedowns, Storyweaver Kayle permanently gains @AP@ Ability Power and @HP@ HP. Gain a Garen and a Sivir.`,
-		effects: {
-			'AP': 1,
-			'HP': 10,
-			'{9fea86d7}': 2,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
 	},
 	{
 		tier: 2,
@@ -4608,55 +5042,12 @@ export const inactiveAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex`,
 	},
 	{
-		tier: 2,
-		name: `Divine Rolls`,
-		groupID: `divineRolls`,
-		desc: `At the start of every stage, including this one, gain @BaseRerolls@ free rerolls + @BonusRerolls@ for each of your Heavenly champions. Gain a Kha'Zix and a Malphite.`,
-		effects: {
-			'BaseRerolls': 3,
-			'{28d45b77}': 1,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
-	},
-	{
 		tier: 1,
 		name: `Double Equipment`,
 		groupID: `doubleEquipment`,
 		desc: `Gain two copies of a random component.`,
 		effects: {},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T1.tex`,
-	},
-	{
-		tier: 2,
-		name: `Dragon's Spirit`,
-		groupID: `dragonsSpirit`,
-		desc: `Gain a Dragon's Claw. Every time you heal @HPCap@ HP with Dragon's Claws, gain an item component. (Current:&nbsp;@TFTUnitProperty.item:TFT11_Augment_DragonSpirit_HPHealed@)`,
-		effects: {
-			'{5521699d}': 5000,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
-	},
-	{
-		tier: 2,
-		name: `Drop Blossom!`,
-		groupID: `dropBlossom`,
-		desc: `Gain a Neeko. Your strongest Neeko's spell lasts @length@ second longer, Heals @healamp*100@% more, and slams for @damageamp*100@% increased damage.`,
-		effects: {
-			'DamageAmp': 1,
-			'{033f554b}': 0.5,
-			'{83d03615}': 1,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
-	},
-	{
-		tier: 2,
-		name: `Dynamic Duo`,
-		groupID: `dynamicDuo`,
-		desc: `Get a random 5-cost champion and a random champion that shares a trait with them. Get @Gold@ gold.`,
-		effects: {
-			'Gold': 10,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
 	},
 	{
 		tier: 3,
@@ -4701,60 +5092,6 @@ export const inactiveAugments: AugmentData[] = [
 			'AS': 0.4000000059604645,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex`,
-	},
-	{
-		tier: 2,
-		name: `En Garde!`,
-		groupID: `enGarde`,
-		desc: `Your Duelists start combat with @StartingStacks@ stacks. At max stacks, they gain @Omnivamp*100@%&nbsp;Omnivamp. Gain a Darius and&nbsp;a&nbsp;Yasuo.`,
-		effects: {
-			'Omnivamp': 0.20000000298023224,
-			'StartingStacks': 3,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
-	},
-	{
-		tier: 2,
-		name: `Enter the Dragon`,
-		groupID: `enterTheDragon`,
-		desc: `After the dragon strikes, Dragonlords deal @BonusDamage*100@% bonus true damage. Gain a Janna.`,
-		effects: {
-			'BonusDamage': 0.20000000298023224,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
-	},
-	{
-		tier: 2,
-		name: `Epoch`,
-		groupID: `epoch`,
-		desc: `Now, and at the start of every stage, gain @XP@ XP and @Rerolls@ free rerolls for that round only.`,
-		effects: {
-			'Rerolls': 3,
-			'XP': 10,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
-	},
-	{
-		tier: 2,
-		name: `Epoch+`,
-		groupID: `epochplus`,
-		desc: `Now, and at the start of every stage, gain @XP@ XP and @Rerolls@ free rerolls for that round only.`,
-		effects: {
-			'Rerolls': 5,
-			'XP': 17,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
-	},
-	{
-		tier: 2,
-		name: `Ethereal Blades`,
-		groupID: `etherealBlades`,
-		desc: `Gain a Shen. Your strongest Shen has +@IncRange@ Range and his spell does @damageamp*100@% increased damage.`,
-		effects: {
-			'DamageAmp': 0.75,
-			'{113e42dc}': 3,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
 	},
 	{
 		tier: 2,
@@ -4805,24 +5142,6 @@ export const inactiveAugments: AugmentData[] = [
 	},
 	{
 		tier: 1,
-		name: `Fine Vintage`,
-		groupID: `fineVintage`,
-		desc: `Completed items left on your bench for @Rounds@ rounds transform into Support&nbsp;items.`,
-		effects: {
-			rounds: 1,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T1.tex`,
-	},
-	{
-		tier: 2,
-		name: `Full Sleeve`,
-		groupID: `fullSleeve`,
-		desc: `Open an armory that grants an extra Inkshadow item while the trait is active. Gain a Jax and an Aatrox.`,
-		effects: {},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
-	},
-	{
-		tier: 1,
 		name: `Gadgeteen Spirit`,
 		groupID: `gadgeteenSpirit`,
 		desc: `Combat start: Distribute @numitems@ temporary items to the champions with the fewest items.`,
@@ -4851,17 +5170,6 @@ export const inactiveAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
 	},
 	{
-		tier: 2,
-		name: `Grim Harvest`,
-		groupID: `grimHarvest`,
-		desc: `Your Reapers gain @crit*100@% Critical Strike Chance and @omnivamp*100@% Omnivamp. They gain this bonus again every time they get a takedown. Gain a Kindred.`,
-		effects: {
-			'Crit': 0.07999999821186066,
-			'Omnivamp': 0.03999999910593033,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
-	},
-	{
 		tier: 3,
 		name: `Guild of Thieves`,
 		groupID: `guildOfThieves`,
@@ -4883,16 +5191,6 @@ export const inactiveAugments: AugmentData[] = [
 	},
 	{
 		tier: 2,
-		name: `Haunted House`,
-		groupID: `hauntedHouse`,
-		desc: `Enemies that die while haunted by Ghostly pass @BonusHaunts@ extra spectre to a nearby enemy. Gain a Caitlyn and&nbsp;a&nbsp;Shen.`,
-		effects: {
-			'{a52713ed}': 1,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
-	},
-	{
-		tier: 2,
 		name: `IRA`,
 		groupID: `iRA`,
 		desc: `You have no max interest. Any interest above @MinInterest@ gold gets converted to @XPPerGold@ XP each. Get @Gold@ gold.`,
@@ -4901,17 +5199,6 @@ export const inactiveAugments: AugmentData[] = [
 			'InterestCap': 20,
 			'{94e81eda}': 2,
 			'{a1b96499}': 5,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
-	},
-	{
-		tier: 2,
-		name: `It's Going to be Epic`,
-		groupID: `itsGoingToBeEpic`,
-		desc: `Every time a unique Mythic champion becomes Epic, gain @HP@ player HP and @Gold@ gold. Gain a Cho'Gath and Kog'Maw.`,
-		effects: {
-			'Gold': 3,
-			'HP': 3,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
 	},
@@ -4964,40 +5251,6 @@ export const inactiveAugments: AugmentData[] = [
 		effects: {
 			'AS': 0.03999999910593033,
 			'MaxStacks': 10,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
-	},
-	{
-		tier: 2,
-		name: `Long Shot`,
-		groupID: `longShot`,
-		desc: `Snipers gain @AS*100@% Attack Speed. Gain a Caitlyn and a Kog'Maw. After Snipers have attacked a total distance of @Distance@ hexes, gain a Sniper's Focus. (Current:&nbsp;@TFTUnitProperty.item:TFT11_Augment_Sniper_DistanceShot@)`,
-		effects: {
-			'AS': 0.15000000596046448,
-			'{2eb31462}': 1000,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
-	},
-	{
-		tier: 2,
-		name: `Lucky Paws`,
-		groupID: `luckyPaws`,
-		desc: `Gain a 2-star Kobuko. Your strongest Kobuko's spell does @damageamp*100@% damage. If Kobuko kills an enemy, they have a @goldchance@% chance to drop&nbsp;@gold@&nbsp;gold.`,
-		effects: {
-			'DamageAmp': 3,
-			'Gold': 1,
-			'GoldChance': 100,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
-	},
-	{
-		tier: 2,
-		name: `Lucky Ricochet`,
-		groupID: `luckyRicochet`,
-		desc: `Trickshots bounce @ExtraBounces@ additional time for @DamageReduction*100@% of original damage.`,
-		effects: {
-			'DamageReduction': 0.5,
-			'{93d13af6}': 1,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
 	},
@@ -5065,37 +5318,6 @@ export const inactiveAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex`,
 	},
 	{
-		tier: 2,
-		name: `Mana Shield`,
-		groupID: `manaShield`,
-		desc: `Whenever an Invoker casts, grant the lowest HP ally Shield equal to 300% of Mana spent. Gain a Janna.`,
-		effects: {
-			'{6d4321f7}': 3,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
-	},
-	{
-		tier: 2,
-		name: `Midnight Siphon`,
-		groupID: `midnightSiphon`,
-		desc: `Gain a Yorick. Your strongest Yorick's spell does @damageamp*100@% more damage and hits @extratargets@ additional target.`,
-		effects: {
-			'DamageAmp': 0.5,
-			'{1b6a7dbd}': 1,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
-	},
-	{
-		tier: 2,
-		name: `Mind Over Matter`,
-		groupID: `mindOverMatter`,
-		desc: `Arcanists grant @APtoShieldRatio*100@% of their combined Ability Power as bonus HP to your Training Dummies. Get an Ahri and a Training Dummy.`,
-		effects: {
-			'{df6154bb}': 2.5,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
-	},
-	{
 		tier: 3,
 		name: `No Scope`,
 		groupID: `noScope`,
@@ -5143,17 +5365,6 @@ export const inactiveAugments: AugmentData[] = [
 	},
 	{
 		tier: 1,
-		name: `Over Encumbered`,
-		groupID: `overEncumbered`,
-		desc: `For the next stage, you only get @BenchSlots@ bench slots. After, get @Components@ item&nbsp;components.`,
-		effects: {
-			'BenchSlots': 3,
-			'{1bf51169}': 3,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T1.tex`,
-	},
-	{
-		tier: 1,
 		name: `Patient Study I`,
 		groupID: `patientStudy`,
 		desc: `After player combat, gain @winxp@ XP if you won or @lossxp@ XP if you lost.`,
@@ -5175,83 +5386,6 @@ export const inactiveAugments: AugmentData[] = [
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex`,
 	},
 	{
-		tier: 1,
-		name: `Pick of the Litter`,
-		groupID: `pickOfTheLitter`,
-		desc: `Open a special shop with three free @ChampionTier@-cost champions. You can only pick one, but you get @NumCopies@ copies of it.`,
-		effects: {
-			'{4184975e}': 3,
-			'{8c4cd3ea}': 2,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T1.tex`,
-	},
-	{
-		tier: 1,
-		name: `Pick of the Litter+`,
-		groupID: `pickOfTheLitterplus`,
-		desc: `Open a special shop with three free @ChampionTier@-cost champions. You can only pick one, but you get @NumCopies@ copies of it.`,
-		effects: {
-			'{4184975e}': 4,
-			'{8c4cd3ea}': 2,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T1.tex`,
-	},
-	{
-		tier: 2,
-		name: `Prizefighter`,
-		groupID: `prizefighter`,
-		desc: `Every @WinsNeeded@ wins gives you an item&nbsp;component.`,
-		effects: {
-			'{17dd5c2f}': 3,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
-	},
-	{
-		tier: 2,
-		name: `Raining Gold`,
-		groupID: `rainingGold`,
-		desc: `Gain @InstantGold@ gold now and @RoundGold@ gold every&nbsp;round.`,
-		effects: {
-			'{02634780}': 10,
-			'{d2f661e9}': 1,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
-	},
-	{
-		tier: 2,
-		name: `Raining Gold+`,
-		groupID: `rainingGoldplus`,
-		desc: `Gain @InstantGold@ gold now and @RoundGold@ gold every&nbsp;round.`,
-		effects: {
-			'{02634780}': 20,
-			'{d2f661e9}': 1,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
-	},
-	{
-		tier: 2,
-		name: `ReinFOURcement`,
-		groupID: `reinFOURcement`,
-		desc: `The next 4-cost champion you buy is instantly upgraded to 2-star. Get&nbsp;@Gold@&nbsp;gold.`,
-		effects: {
-			'Gold': 4,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
-	},
-	{
-		tier: 2,
-		name: `Scoreboard Scrapper`,
-		groupID: `scoreboardScrapper`,
-		desc: `Every round, if you're in the bottom @BottomHalf@, your team permanently gains @LoserBoost*100@% Attack Damage and Ability Power. If you're in the top @UpperHalf@, they have @WinningStatBoost*100@% more HP.`,
-		effects: {
-			'{274fd9e8}': 0.10000000149011612,
-			'{2dbbd01d}': 0.009999999776482582,
-			'{db15f20a}': 4,
-			'{df367657}': 4,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
-	},
-	{
 		tier: 2,
 		name: `Sentinel's Shield`,
 		groupID: `sentinelsShield`,
@@ -5260,62 +5394,6 @@ export const inactiveAugments: AugmentData[] = [
 			'AS': 0.4000000059604645,
 			'Duration': 3,
 			'Shield': 400,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
-	},
-	{
-		tier: 1,
-		name: `Sharing Is Caring`,
-		groupID: `sharingIsCaring`,
-		desc: `Combat start: You gain @YourGold@ gold and your opponent gains @EnemyGold@ gold.`,
-		effects: {
-			'{74a84398}': 1,
-			'{d2d73a99}': 1,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T1.tex`,
-	},
-	{
-		tier: 2,
-		name: `Slammin'`,
-		groupID: `slammin`,
-		desc: `Gain @components@ Component Anvil. After each player combat, if there are no items on your bench (other than Consumables), gain @XP@ XP.`,
-		effects: {
-			'XP': 2,
-			'{1bf51169}': 1,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
-	},
-	{
-		tier: 2,
-		name: `Slammin'+`,
-		groupID: `slamminplus`,
-		desc: `Gain @components@ Component Anvil and @XPNow@ XP now. After each player combat, if there are no items on your bench (other than Consumables), gain @XP@ XP.`,
-		effects: {
-			'XP': 2,
-			'{1bf51169}': 1,
-			'{acf6f8c7}': 15,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
-	},
-	{
-		tier: 2,
-		name: `Spirit Guardians`,
-		groupID: `spiritGuardians`,
-		desc: `Wardens' start of combat damage reduction is increased by @TempDamageReduction@%. @DamageReduction*100@% of damage dealt to non-Wardens is instead distributed across your Wardens. Get a Garen and a Jax.`,
-		effects: {
-			'DamageReduction': 0.20000000298023224,
-			'{392a301b}': 12,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
-	},
-	{
-		tier: 2,
-		name: `Storied Champion`,
-		groupID: `storiedChampion`,
-		desc: `Gain a 2-star Garen. Your strongest Garen's spell does @damageamp*100@% increased damage and costs @manareduction@ less Mana.`,
-		effects: {
-			'DamageAmp': 0.4000000059604645,
-			'ManaReduction': 15,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
 	},
@@ -5382,72 +5460,6 @@ export const inactiveAugments: AugmentData[] = [
 			'HP': 150,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex`,
-	},
-	{
-		tier: 3,
-		name: `Tiny, but Deadly`,
-		groupID: `tinyButDeadly`,
-		desc: `Your units are @TooltipSizeScale*100@% smaller, but move and attack @AS*100@% faster.`,
-		effects: {
-			'AS': 0.30000001192092896,
-			'MoveSpeed': 0.75,
-			'{1ecfa8f5}': 0.5,
-			'{858a62b6}': 0.4000000059604645,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex`,
-	},
-	{
-		tier: 2,
-		name: `Too Much Candy`,
-		groupID: `tooMuchCandy`,
-		desc: `Your rerolls cost @StartingCost@ gold. Every @NumUntilIncrease@ rerolls, the cost goes up by @IncreaseBy@ gold. At the start of each stage your reroll cost is reset to @StartingCost@.`,
-		effects: {
-			'{54f474ac}': 1,
-			'{c4e0422d}': 3,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
-	},
-	{
-		tier: 3,
-		name: `Trash to Treasure`,
-		groupID: `trashToTreasure`,
-		desc: `Whenever you use a Reforger, completed items are reforged into random Artifacts instead. Get&nbsp;@Reforgers@&nbsp;Reforgers.`,
-		effects: {
-			'{9324b9a4}': 2,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T3.tex`,
-	},
-	{
-		tier: 2,
-		name: `Venerable Piggy Bank`,
-		groupID: `venerablePiggyBank`,
-		desc: `Gain @NumChamps@ Exalted Champions. Your Exalted Soul Core gains gold instead of XP. If you lose combat, it gains @BonusGold@ bonus gold.<br><br><rules>If there no 1 or 2-cost Exalted champions, get one 3-cost instead.</rules>`,
-		effects: {
-			'BonusGold': 2,
-			'NumChamps': 2,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
-	},
-	{
-		tier: 2,
-		name: `Well Fed`,
-		groupID: `wellFed`,
-		desc: `Bruisers heal @HPPercent*100@% of their max HP every @HealRate@ second. Gain a Kobuko and&nbsp;a&nbsp;Rek'Sai.`,
-		effects: {
-			'HPPercent': 0.019999999552965164,
-			'{c0d92fa1}': 1,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
-	},
-	{
-		tier: 2,
-		name: `Wrath of the Moon`,
-		groupID: `wrathOfTheMoon`,
-		desc: `Umbral champions deal @BonusDamage*100@% more damage every second they attack the same enemy. Resets when they swap targets. Gain a Darius and a Yorick.`,
-		effects: {
-			'BonusDamage': 0.029999999329447746,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Missing-T2.tex`,
 	},
 ]
 
@@ -5548,18 +5560,6 @@ export const choiceAugments: AugmentData[] = [
 		groupID: `allOfYour@Cost@costUnitsGain@Health@HealthAnd@AS*100@%AttackSpeed`,
 		desc: ``,
 		effects: {
-			'AS': 0.10000000149011612,
-			'Health': 100,
-			'{e85c3338}': 4,
-		},
-		icon: `ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/ADMIN_Armorery_Icon.tex`,
-	},
-	{
-		tier: 3,
-		name: `All of your @Cost@-cost units gain @Health@ Health and @AS*100@% Attack Speed.`,
-		groupID: `allOfYour@Cost@costUnitsGain@Health@HealthAnd@AS*100@%AttackSpeed`,
-		desc: ``,
-		effects: {
 			'AS': 0.20000000298023224,
 			'Health': 200,
 			'{e85c3338}': 2,
@@ -5575,6 +5575,18 @@ export const choiceAugments: AugmentData[] = [
 			'AS': 0.15000000596046448,
 			'Health': 150,
 			'{e85c3338}': 3,
+		},
+		icon: `ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/ADMIN_Armorery_Icon.tex`,
+	},
+	{
+		tier: 3,
+		name: `All of your @Cost@-cost units gain @Health@ Health and @AS*100@% Attack Speed.`,
+		groupID: `allOfYour@Cost@costUnitsGain@Health@HealthAnd@AS*100@%AttackSpeed`,
+		desc: ``,
+		effects: {
+			'AS': 0.10000000149011612,
+			'Health': 100,
+			'{e85c3338}': 4,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/ADMIN_Armorery_Icon.tex`,
 	},
@@ -6481,8 +6493,8 @@ export const choiceAugments: AugmentData[] = [
 	},
 	{
 		tier: 3,
-		name: `Spend 25 gold. Gain an Artifact Anvil.`,
-		groupID: `spend25GoldGainAnArtifactAnvil`,
+		name: `Spend 22 gold. Gain an Artifact Anvil.`,
+		groupID: `spend22GoldGainAnArtifactAnvil`,
 		desc: ``,
 		effects: {},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/ChoiceUI/ADMIN_Armorery_Icon.tex`,

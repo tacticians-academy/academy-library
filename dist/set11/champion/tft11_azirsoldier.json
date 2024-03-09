@@ -1,5 +1,5 @@
 {
-	"{b871c720}": {
+	"Characters/TFT11_AzirSoldier/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_AzirSoldier",
 		"baseHP": 900,
 		"baseStaticHPRegen": 0,
@@ -40,7 +40,7 @@
 		"mMoveHeight": 0,
 		"__type": "TFTCharacterRecord"
 	},
-	"{c04afd99}": {
+	"Characters/TFT11_AzirSoldier/Spells/TFT11_AzirSoldierBasicAttack": {
 		"mScriptName": "TFT11_AzirSoldierBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 7183,

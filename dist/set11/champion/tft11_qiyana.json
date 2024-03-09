@@ -111,7 +111,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{7ce53349}": {
+	"Characters/TFT11_Qiyana/Spells/TFT11_QiyanaSpell": {
 		"mScriptName": "TFT11_QiyanaSpell",
 		"mSpell": {
 			"flags": 4,
@@ -306,7 +306,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{b856afa5}": {
+	"Characters/TFT11_Qiyana/Spells/TFT11_QiyanaBasicAttack": {
 		"mScriptName": "TFT11_QiyanaBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 7375,
@@ -430,7 +430,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{c7766ab5}": {
+	"Characters/TFT11_Qiyana/Spells/TFT11_QiyanaBasicAttack2": {
 		"mScriptName": "TFT11_QiyanaBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 7375,
@@ -465,7 +465,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{a0313c81}": {
+	"Characters/TFT11_Qiyana/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Qiyana",
 		"baseHP": 700,
 		"baseStaticHPRegen": 0,

@@ -1,5 +1,5 @@
 {
-	"{14774ef7}": {
+	"Characters/TFT11_Kaisa/Spells/TFT11_KaisaBasicAttack": {
 		"mScriptName": "TFT11_KaisaBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -128,7 +128,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{28faa92f}": {
+	"Characters/TFT11_Kaisa/Spells/TFT11_KaisaCritAttack": {
 		"mScriptName": "TFT11_KaisaCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -921,9 +921,9 @@
 			},
 			"mCastType": 3,
 			"missileSpeed": 0,
-			"mMissileEffectKey": "{46e54e0a}",
+			"mMissileEffectKey": "TFT11_Kaisa_Q_Child",
 			"mLineWidth": 40,
-			"mHitEffectKey": "{33b10bcc}",
+			"mHitEffectKey": "TFT11_Kaisa_QHit",
 			"mHitBoneName": "C_Buffbone_Glb_Center_Loc",
 			"mTargetingTypeData": {
 				"__type": "Location"
@@ -1042,9 +1042,9 @@
 			},
 			"mCastType": 3,
 			"missileSpeed": 0,
-			"mMissileEffectKey": "{46e54e0a}",
+			"mMissileEffectKey": "TFT11_Kaisa_Q_Child",
 			"mLineWidth": 40,
-			"mHitEffectKey": "{33b10bcc}",
+			"mHitEffectKey": "TFT11_Kaisa_QHit",
 			"mHitBoneName": "C_Buffbone_Glb_Center_Loc",
 			"mTargetingTypeData": {
 				"__type": "Location"
@@ -1053,7 +1053,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{fa7f9693}": {
+	"Characters/TFT11_Kaisa/Spells/TFT11_KaisaSpell": {
 		"mScriptName": "TFT11_KaisaSpell",
 		"mSpell": {
 			"flags": 4,
@@ -1066,8 +1066,8 @@
 					"mName": "PercentAttackDamage",
 					"mValues": [
 						0,
-						0.5,
-						0.5,
+						0.44999998807907104,
+						0.44999998807907104,
 						1,
 						160,
 						200,
@@ -1131,9 +1131,9 @@
 					"mName": "AmpedPercentAD",
 					"mValues": [
 						0,
-						0.6000000238418579,
-						0.6000000238418579,
-						1.2000000476837158,
+						0.699999988079071,
+						0.699999988079071,
+						1.399999976158142,
 						0,
 						0,
 						0
@@ -1304,7 +1304,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{fcd1001f}": {
+	"Characters/TFT11_Kaisa/Spells/TFT11_KaisaBasicAttack2": {
 		"mScriptName": "TFT11_KaisaBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -1367,7 +1367,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{f095078d}": {
+	"Characters/TFT11_Kaisa/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Kaisa",
 		"baseHP": 700,
 		"baseStaticHPRegen": 0,

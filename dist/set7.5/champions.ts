@@ -1,6 +1,6 @@
 import type { AbilityData, ChampionData } from '../index'
 
-export enum ChampionKey { AoShin = `TFT7_AoShin`, Aphelios = `TFT7_Aphelios`, AurelionSol = `TFT7_AurelionSol`, Bard = `TFT7_Bard`, Braum = `TFT7_Braum`, DragonBlue = `TFT7_DragonBlue`, Diana = `TFT7_Diana`, Ezreal = `TFT7_Ezreal`, Gnar = `TFT7_Gnar`, Graves = `TFT7_Graves`, Hecarim = `TFT7_Hecarim`, Heimerdinger = `TFT7b_Heimerdinger`, DragonGold = `TFT7_DragonGold`, JadeStatue = `TFT7_JadeStatue`, Jax = `TFT7_Jax`, Jayce = `TFT7_Jayce`, Kaisa = `TFT7_Kaisa`, Karma = `TFT7_Karma`, LeeSin = `TFT7_LeeSin`, Leona = `TFT7_Leona`, Lillia = `TFT7_Lillia`, Lulu = `TFT7b_Lulu`, Lux = `TFT7_Lux`, Malphite = `TFT7_Malphite`, Nasus = `TFT7_Nasus`, Nidalee = `TFT7_Nidalee`, Nilah = `TFT7_Nilah`, Nomsy = `TFT7_Nomsy`, NomsyMage = `TFT7_NomsyMage`, NomsyCannoneer = `TFT7_NomsyCannoneer`, NomsyEvoker = `TFT7_NomsyEvoker`, Nunu = `TFT7_Nunu`, Olaf = `TFT7_Olaf`, Pantheon = `TFT7_Pantheon`, Qiyana = `TFT7_Qiyana`, Rakan = `TFT7_Rakan`, Rell = `TFT7_Rell`, Rengar = `TFT7_Rengar`, LagoonRelic = `TFT7_LagoonRelic`, Sejuani = `TFT7_Sejuani`, Senna = `TFT7_Senna`, Seraphine = `TFT7_Seraphine`, Sett = `TFT7_Sett`, DragonGreen = `TFT7_DragonGreen`, Shyvana = `TFT7_Shyvana`, Skarner = `TFT7_Skarner`, AquaticDragon = `TFT7_AquaticDragon`, Soraka = `TFT7_Soraka`, DragonPurple = `TFT7_DragonPurple`, Sylas = `TFT7_Sylas`, Taliyah = `TFT7_Taliyah`, TrainingDummy = `TFT_TrainingDummy`, DragonEarth = `TFT7_DragonEarth`, Tristana = `TFT7b_Tristana`, Twitch = `TFT7_Twitch`, DragonSwain = `TFT7_DragonSwain`, Varus = `TFT7_Varus`, Vladimir = `TFT7_Vladimir`, Voidspawn = `TFT_Voidspawn`, Volibear = `TFT7b_Volibear`, Wukong = `TFT7_Wukong`, Xayah = `TFT7_Xayah`, Yasuo = `TFT7_Yasuo`, Yone = `TFT7_Yone`, Zac = `TFT7_Zac`, Zeri = `TFT7_Zeri`, DragonGuild = `TFT7_DragonGuild`, Zoe = `TFT7_Zoe`, IvernMinion = `TFT7_IvernMinion`, Zyra = `TFT7_Zyra` }
+export enum ChampionKey { AoShin = `TFT7_AoShin`, Aphelios = `TFT7_Aphelios`, AurelionSol = `TFT7_AurelionSol`, Bard = `TFT7_Bard`, Braum = `TFT7_Braum`, DragonBlue = `TFT7_DragonBlue`, Diana = `TFT7_Diana`, Ezreal = `TFT7_Ezreal`, Gnar = `TFT7_Gnar`, Graves = `TFT7_Graves`, Hecarim = `TFT7_Hecarim`, Heimerdinger = `TFT7b_Heimerdinger`, DragonGold = `TFT7_DragonGold`, JadeStatue = `TFT7_JadeStatue`, Jax = `TFT7_Jax`, Jayce = `TFT7_Jayce`, Kaisa = `TFT7_Kaisa`, Karma = `TFT7_Karma`, LeeSin = `TFT7_LeeSin`, Leona = `TFT7_Leona`, Lillia = `TFT7_Lillia`, Lulu = `TFT7b_Lulu`, Lux = `TFT7_Lux`, Malphite = `TFT7_Malphite`, Nasus = `TFT7_Nasus`, Nidalee = `TFT7_Nidalee`, Nilah = `TFT7_Nilah`, Nomsy = `TFT7_Nomsy`, NomsyCannoneer = `TFT7_NomsyCannoneer`, NomsyEvoker = `TFT7_NomsyEvoker`, NomsyMage = `TFT7_NomsyMage`, Nunu = `TFT7_Nunu`, Olaf = `TFT7_Olaf`, Pantheon = `TFT7_Pantheon`, Qiyana = `TFT7_Qiyana`, Rakan = `TFT7_Rakan`, Rell = `TFT7_Rell`, Rengar = `TFT7_Rengar`, LagoonRelic = `TFT7_LagoonRelic`, Sejuani = `TFT7_Sejuani`, Senna = `TFT7_Senna`, Seraphine = `TFT7_Seraphine`, Sett = `TFT7_Sett`, DragonGreen = `TFT7_DragonGreen`, Shyvana = `TFT7_Shyvana`, Skarner = `TFT7_Skarner`, AquaticDragon = `TFT7_AquaticDragon`, Soraka = `TFT7_Soraka`, DragonPurple = `TFT7_DragonPurple`, Sylas = `TFT7_Sylas`, Taliyah = `TFT7_Taliyah`, TrainingDummy = `TFT_TrainingDummy`, DragonEarth = `TFT7_DragonEarth`, Tristana = `TFT7b_Tristana`, Twitch = `TFT7_Twitch`, DragonSwain = `TFT7_DragonSwain`, Varus = `TFT7_Varus`, Vladimir = `TFT7_Vladimir`, Voidspawn = `TFT_Voidspawn`, Volibear = `TFT7b_Volibear`, Wukong = `TFT7_Wukong`, Xayah = `TFT7_Xayah`, Yasuo = `TFT7_Yasuo`, Yone = `TFT7_Yone`, Zac = `TFT7_Zac`, Zeri = `TFT7_Zeri`, DragonGuild = `TFT7_DragonGuild`, Zoe = `TFT7_Zoe`, IvernMinion = `TFT7_IvernMinion`, Zyra = `TFT7_Zyra` }
 
 export const champions: ChampionData[] = [
 	{
@@ -2969,92 +2969,6 @@ export const champions: ChampionData[] = [
 		missiles: [],
 	},
 	{
-		apiName: `TFT7_NomsyMage`,
-		name: `Nomsy`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT7_Nomsy.TFT_Set7_Stage2.dds`,
-		cost: 3,
-		starLevel: undefined,
-		teamSize: 2,
-		isSpawn: false,
-		traits: [`Prodigy`, `Dragon`, `Mage`],
-		stats: {
-			armor: 30,
-			attackSpeed: 0.75,
-			critChance: 0.25,
-			critMultiplier: 1.2999999523162842,
-			damage: 60,
-			hp: 650,
-			initialMana: 0,
-			magicResist: 30,
-			mana: 90,
-			moveSpeed: 500,
-			range: 4,
-		},
-		basicAttackMissileSpeed: 1500,
-		critAttackMissileSpeed: undefined,
-		passive: undefined,
-		spells: [
-			{
-				name: `TFT7_NomsyMageSpell`,
-				castTime: undefined,
-				missile: {
-					width: 120,
-					travelTime: 0.75,
-					speedInitial: 3000,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {
-					'MagicDamage': [0, 190, 270, 420],
-					'PercentDamage': [0, 0.30000001192092896, 0.3499999940395355, 0.4000000059604645],
-				},
-				calculations: {
-					'Damage': {
-						asPercent: false,
-						parts: [
-							{
-								operator: `scale`,
-								subparts: [
-									{
-										variable: `MagicDamage`,
-										starValues: [0, 190, 270, 420],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-				},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-		],
-		missiles: [
-			{
-				name: `TFT7_NomsyMageSpellBounce`,
-				castTime: 0.30000001192092896,
-				missile: {
-					width: 120,
-					travelTime: 0.5,
-					speedInitial: 3000,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-		],
-	},
-	{
 		apiName: `TFT7_NomsyCannoneer`,
 		name: `Nomsy`,
 		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT7_Nomsy.TFT_Set7_Stage2.dds`,
@@ -3208,6 +3122,92 @@ export const champions: ChampionData[] = [
 		missiles: [
 			{
 				name: `TFT7_NomsyEvokerSpellBounce`,
+				castTime: 0.30000001192092896,
+				missile: {
+					width: 120,
+					travelTime: 0.5,
+					speedInitial: 3000,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
+			},
+		],
+	},
+	{
+		apiName: `TFT7_NomsyMage`,
+		name: `Nomsy`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT7_Nomsy.TFT_Set7_Stage2.dds`,
+		cost: 3,
+		starLevel: undefined,
+		teamSize: 2,
+		isSpawn: false,
+		traits: [`Prodigy`, `Dragon`, `Mage`],
+		stats: {
+			armor: 30,
+			attackSpeed: 0.75,
+			critChance: 0.25,
+			critMultiplier: 1.2999999523162842,
+			damage: 60,
+			hp: 650,
+			initialMana: 0,
+			magicResist: 30,
+			mana: 90,
+			moveSpeed: 500,
+			range: 4,
+		},
+		basicAttackMissileSpeed: 1500,
+		critAttackMissileSpeed: undefined,
+		passive: undefined,
+		spells: [
+			{
+				name: `TFT7_NomsyMageSpell`,
+				castTime: undefined,
+				missile: {
+					width: 120,
+					travelTime: 0.75,
+					speedInitial: 3000,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {
+					'MagicDamage': [0, 190, 270, 420],
+					'PercentDamage': [0, 0.30000001192092896, 0.3499999940395355, 0.4000000059604645],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `MagicDamage`,
+										starValues: [0, 190, 270, 420],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
+			},
+		],
+		missiles: [
+			{
+				name: `TFT7_NomsyMageSpellBounce`,
 				castTime: 0.30000001192092896,
 				missile: {
 					width: 120,
@@ -7202,7 +7202,7 @@ export const abilities: Record<string, AbilityData> = {
 			'PercentDamage': [0, 0.30000001192092896, 0.3499999940395355, 0.4000000059604645],
 		},
 	},
-	'TFT7_NomsyMage': {
+	'TFT7_NomsyCannoneer': {
 		desc: `Nomsy bellows, lobbing a massive fireball towards a random enemy that explodes on impact, dealing @ModifiedDamage@ magic damage to enemies within 1 hex, and bouncing additional fireballs outward that deal @PercentDamage*100@% of the damage.`,
 		icon: `ASSETS/Characters/Brand/HUD/Icons2D/BrandPyroclasm.dds`,
 		name: `Fireballs!`,
@@ -7220,7 +7220,7 @@ export const abilities: Record<string, AbilityData> = {
 			'PercentDamage': [0, 0.30000001192092896, 0.3499999940395355, 0.4000000059604645],
 		},
 	},
-	'TFT7_NomsyCannoneer': {
+	'TFT7_NomsyMage': {
 		desc: `Nomsy bellows, lobbing a massive fireball towards a random enemy that explodes on impact, dealing @ModifiedDamage@ magic damage to enemies within 1 hex, and bouncing additional fireballs outward that deal @PercentDamage*100@% of the damage.`,
 		icon: `ASSETS/Characters/Brand/HUD/Icons2D/BrandPyroclasm.dds`,
 		name: `Fireballs!`,

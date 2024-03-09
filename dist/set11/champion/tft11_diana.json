@@ -1,5 +1,5 @@
 {
-	"{6ba12587}": {
+	"Characters/TFT11_Diana/Spells/TFT11_DianaBasicAttack2": {
 		"mScriptName": "TFT11_DianaBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -33,7 +33,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{6e4c9e17}": {
+	"Characters/TFT11_Diana/Spells/TFT11_DianaCritAttack": {
 		"mScriptName": "TFT11_DianaCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -67,7 +67,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{c9cd948f}": {
+	"Characters/TFT11_Diana/Spells/TFT11_DianaBasicAttack": {
 		"mScriptName": "TFT11_DianaBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -101,7 +101,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{cca1aaab}": {
+	"Characters/TFT11_Diana/Spells/TFT11_DianaSpell": {
 		"mScriptName": "TFT11_DianaSpell",
 		"mSpell": {
 			"flags": 4,
@@ -110,9 +110,9 @@
 					"mName": "Damage",
 					"mValues": [
 						0,
-						130,
-						195,
-						310,
+						100,
+						150,
+						235,
 						0,
 						0,
 						0
@@ -135,13 +135,13 @@
 				{
 					"mName": "DR",
 					"mValues": [
-						0.20000000298023224,
-						0.20000000298023224,
-						0.20000000298023224,
-						0.20000000298023224,
-						0.20000000298023224,
-						0.20000000298023224,
-						0.20000000298023224
+						0.30000001192092896,
+						0.30000001192092896,
+						0.30000001192092896,
+						0.30000001192092896,
+						0.30000001192092896,
+						0.30000001192092896,
+						0.30000001192092896
 					],
 					"__type": "SpellDataValue"
 				},
@@ -149,9 +149,9 @@
 					"mName": "Heal",
 					"mValues": [
 						0,
-						250,
 						300,
-						350,
+						325,
+						400,
 						0,
 						0,
 						0
@@ -201,7 +201,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{d1f94c49}": {
+	"Characters/TFT11_Diana/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Diana",
 		"baseHP": 900,
 		"baseStaticHPRegen": 0,
@@ -213,8 +213,8 @@
 			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 50,
-		"baseArmor": 45,
-		"baseSpellBlock": 45,
+		"baseArmor": 55,
+		"baseSpellBlock": 55,
 		"baseCritChance": 0.25,
 		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
@@ -260,7 +260,8 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 50,
+		"mInitialMana": 70,
+		"{22f5197d}": 130,
 		"__type": "TFTCharacterRecord"
 	}
 }

@@ -75,7 +75,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `assassin`,
 		name: `Assassin Heart/Crest/Soul`,
 		tiers: [1, 2, 3],
-		description: `1: Your team counts as having 1 additional Assassin. Gain a Talon.  2: Gain an Assassin Emblem and a Talon.  3: Your team counts as having 2 additional Assassins.`,
+		description: `1: Your team counts as having 1 additional Assassin. Gain a Kayn.  2: Gain an Assassin Emblem and a Kayn.  3: Your team counts as having 2 additional Assassins.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/assassinheart1.tft_set6`, `assets/maps/particles/tft/item_icons/augments/hexcore/assassinemblem2.tft_set6`, `assets/maps/particles/tft/item_icons/augments/hexcore/assassinsoul3.tft_set6`],
 	},
 	{
@@ -173,7 +173,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `bruiser`,
 		name: `Bruiser Heart/Crest/Soul`,
 		tiers: [1, 2, 3],
-		description: `1: Your team counts as having 1 additional Bruiser. Gain a Sejuani.  2: Gain a Bruiser Emblem and a Sejuani.  3: Your team counts as having 2 additional Bruisers.`,
+		description: `1: Your team counts as having 1 additional Bruiser. Gain a Shen.  2: Gain a Bruiser Emblem and a Shen.  3: Your team counts as having 2 additional Bruisers.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/bruiserheart1.tft_set6`, `assets/maps/particles/tft/item_icons/augments/hexcore/bruiseremblem2.tft_set6`, `assets/maps/particles/tft/item_icons/augments/hexcore/bruisersoul3.tft_set6`],
 	},
 	{
@@ -236,7 +236,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `chemical overload`,
 		name: `Chemical Overload`,
 		tiers: [1, 2, 3],
-		description: `1: Chemtechs explode on death, dealing 20% of their max HP as magic damage to enemies within 2 hexes. Gain a Warwick.  2: Chemtechs explode on death, dealing 30% of their max HP as magic damage to enemies within 2 hexes. Gain a Zac.`,
+		description: `1: Chemtechs explode on death, dealing 20% of their max HP as magic damage to enemies within 2 hexes. Gain a Warwick.  2: Chemtechs explode on death, dealing 30% of their max HP as magic damage to enemies within 2 hexes. Gain a Zac.  3: Chemtechs explode on death, dealing 40% of their max HP as magic damage to enemies within 2 hexes. Gain a Warwick.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/chemicaloverlord1.tft_set6`, `assets/maps/particles/tft/item_icons/augments/hexcore/chemicaloverlord2.tft_set6`, `assets/maps/particles/tft/item_icons/augments/hexcore/chemicaloverlord3.tft_set6`],
 	},
 	{
@@ -999,7 +999,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `revel`,
 		name: `Revel Heart/Crest/Crown`,
 		tiers: [1, 2, 3],
-		description: `1: Your team counts as having 1 additional Revel. Gain a Jinx.  2: Gain a Revel Emblem and a Jinx.`,
+		description: `1: Your team counts as having 1 additional Revel. Gain a Jinx.  2: Gain a Revel Emblem and a Jinx.  3: Gain a Revel Emblem and a Jinx.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/revel-heart-i.tft_set7`, `assets/maps/particles/tft/item_icons/augments/hexcore/revel-crest-ii.tft_set7`, `assets/maps/particles/tft/item_icons/augments/hexcore/revel-crown-iii.tft_set7`],
 	},
 	{
@@ -1034,7 +1034,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `runic shield`,
 		name: `Runic Shield`,
 		tiers: [1, 2, 3],
-		description: `Arcanists start combat with a shield equal to 300/450/600% of their Ability Power for 8 seconds. Gain a Swain.`,
+		description: `1: Arcanists start combat with a shield equal to 300% of their Ability Power for 8 seconds. Gain a Swain.  3: Arcanists start combat with a shield equal to 600% of their Ability Power for 8 seconds. Gain a Swain.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/runicshield1.tft_set6`, `assets/maps/particles/tft/item_icons/augments/hexcore/runicshield2.tft_set6`, `assets/maps/particles/tft/item_icons/augments/hexcore/runicshield3.tft_set6`],
 	},
 	{
@@ -1167,7 +1167,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `socialite`,
 		name: `Socialite Heart/Soul`,
 		tiers: [1, 3],
-		description: `1: Your team counts as having 1 additional Socialite.   3: Your team counts as having 2 additional Socialites.`,
+		description: `1: Your team counts as having 1 additional Socialite.  3: Your team counts as having 2 additional Socialites.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/socialiteheart1.tft_set6`, `assets/maps/particles/tft/item_icons/augments/hexcore/socialitesoul3.tft_set6`],
 	},
 	{

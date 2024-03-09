@@ -2936,6 +2936,8 @@ export const hexbuffItems: ItemData[] = []
 
 export const modItems: ItemData[] = []
 
+export const temporaryItems: ItemData[] = []
+
 export const unreleasedItems: ItemData[] = []
 
 export const currentItems: ItemData[] = componentItems.concat(completedItems, radiantItems, supportItems, emblemItems, ornnItems)

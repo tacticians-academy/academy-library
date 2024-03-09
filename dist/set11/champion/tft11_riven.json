@@ -1,5 +1,5 @@
 {
-	"{2b985175}": {
+	"Characters/TFT11_Riven/Spells/TFT11_RivenSpell": {
 		"mScriptName": "TFT11_RivenSpell",
 		"mSpell": {
 			"flags": 4,
@@ -125,7 +125,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{4d66b479}": {
+	"Characters/TFT11_Riven/Spells/TFT11_RivenCritAttack": {
 		"mScriptName": "TFT11_RivenCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -161,7 +161,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{93be9411}": {
+	"Characters/TFT11_Riven/Spells/TFT11_RivenBasicAttack2": {
 		"mScriptName": "TFT11_RivenBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -197,7 +197,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{d3142a79}": {
+	"Characters/TFT11_Riven/Spells/TFT11_RivenBasicAttack": {
 		"mScriptName": "TFT11_RivenBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -485,7 +485,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{851adf24}": {
+	"Characters/TFT11_Riven/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Riven",
 		"baseHP": 700,
 		"baseStaticHPRegen": 0,

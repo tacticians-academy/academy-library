@@ -131,7 +131,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `battle ready`,
 		name: `Battle Ready`,
 		tiers: [1, 2, 3],
-		description: `Your team deals 3/6/8% more damage and takes 3/6/8% less damage. `,
+		description: `Your team deals 3/6/8% more damage and takes 3/6/8% less damage.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/battle-ready-i.tft_set9`, `assets/maps/tft/icons/augments/hexcore/battle-ready-ii.tft_set9`, `assets/maps/tft/icons/augments/hexcore/battle-ready-iii.tft_set9`],
 	},
 	{
@@ -166,7 +166,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `big grab bag`,
 		name: `Big Grab Bag`,
 		tiers: [2],
-		description: `Gain 2 random components, 8 gold, and a Reforger. `,
+		description: `Gain 2 random components, 8 gold, and a Reforger.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/grab-bag-ii.tft_set9`],
 	},
 	{
@@ -201,7 +201,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `blood price`,
 		name: `Blood Price`,
 		tiers: [1, 2, 3],
-		description: `1: Your units gain 3% Attack Speed for each 10 Tactician HP missing.  2: Your team gains 4% Attack Speed for each 10 Tactician HP missing.`,
+		description: `1: Your units gain 3% Attack Speed for each 10 Tactician HP missing.  2: Your team gains 4% Attack Speed for each 10 Tactician HP missing.  3: Your team gains 5% Attack Speed for each 10 Tactician HP missing.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/blood-price-i-i.tft_set9`, `assets/maps/tft/icons/augments/hexcore/blood-price-ii-ii.tft_set9`, `assets/maps/tft/icons/augments/hexcore/blood-price-iii-iii.tft_set9`],
 	},
 	{
@@ -579,7 +579,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `escort quest`,
 		name: `Escort Quest`,
 		tiers: [2],
-		description: `Gain a Training Dummy. Each round, if it survives combat, gain 3 gold. `,
+		description: `Gain a Training Dummy. Each round, if it survives combat, gain 3 gold.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/escort-quest-ii.tft_set9`],
 	},
 	{
@@ -621,7 +621,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `final grab bag`,
 		name: `Final Grab Bag`,
 		tiers: [1, 2],
-		description: `1: Gain a random component, 10 gold, and a Reforger.   2: Gain 2 random components, 12 gold, and a Magnetic Remover. `,
+		description: `1: Gain a random component, 10 gold, and a Reforger.  2: Gain 2 random components, 12 gold, and a Magnetic Remover.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/final-grab-bag-i.tft_set9`, `assets/maps/tft/icons/augments/hexcore/final-grab-bag-ii.tft_set9`],
 	},
 	{
@@ -712,7 +712,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `giant grab bag`,
 		name: `Giant Grab Bag`,
 		tiers: [3],
-		description: `Gain 3 random components, 10 gold, and a Lesser Champion Duplicator. `,
+		description: `Gain 3 random components, 10 gold, and a Lesser Champion Duplicator.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/grab-bag-iii.tft_set9`],
 	},
 	{
@@ -922,21 +922,21 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `it pays to learn`,
 		name: `It Pays To Learn`,
 		tiers: [1, 2, 3],
-		description: `Gain 10/16/20 XP and 8/12/16 gold. `,
+		description: `Gain 10/16/20 XP and 8/12/16 gold.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/it-pays-to-learn-i.tft_set9`, `assets/maps/tft/icons/augments/hexcore/it-pays-to-learn-ii.tft_set9`, `assets/maps/tft/icons/augments/hexcore/it-pays-to-learn-iii.tft_set9`],
 	},
 	{
 		id: `item grab bag`,
 		name: `Item Grab Bag`,
 		tiers: [1, 2, 3],
-		description: `1: Gain 1 random completed item.  2: Gain a random completed item, a random component, and 5 gold.   3: Gain 2 random completed items and 8 Gold.`,
+		description: `1: Gain 1 random completed item.  2: Gain a random completed item, a random component, and 5 gold.  3: Gain 2 random completed items and 8 Gold.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/itemgrabbag1`, `assets/maps/tft/icons/augments/hexcore/itemgrabbag2`, `assets/maps/tft/icons/augments/hexcore/itemgrabbag3`],
 	},
 	{
 		id: `jeweled lotus`,
 		name: `Jeweled Lotus`,
 		tiers: [1, 2, 3],
-		description: `1: Combat start: Your strongest unit gains 40% Critical Strike Chance and their spells can critically strike.  2: Your units' Abilities can critically strike. Your units gain 15% Critical Strike chance.`,
+		description: `1: Combat start: Your strongest unit gains 40% Critical Strike Chance and their spells can critically strike.  2: Your units' Abilities can critically strike. Your units gain 15% Critical Strike chance.  3: Your units' Abilities can critically strike. Your units gain 45% Critical Strike chance.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/jeweled-lotus-i`, `assets/maps/tft/icons/augments/hexcore/jeweled-lotus-ii`, `assets/maps/tft/icons/augments/hexcore/jeweled-lotus-iii`],
 	},
 	{
@@ -1440,7 +1440,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `rising tide`,
 		name: `Rising Tide`,
 		tiers: [3],
-		description: `Gain an Urgot. Combat start: Your strongest Urgot grants adjacent allies 50% Attack Speed. `,
+		description: `Gain an Urgot. Combat start: Your strongest Urgot grants adjacent allies 50% Attack Speed.`,
 		icons: [`assets/characters/tft8_urgot/hud/tft8_urgot.tft_set8`],
 	},
 	{
@@ -1762,7 +1762,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `threes a crowd`,
 		name: `Three's a Crowd`,
 		tiers: [2],
-		description: `Your units gain 111 HP for each unique Tier 3 unit you field. `,
+		description: `Your units gain 111 HP for each unique Tier 3 unit you field.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/three_s-a-crowd-ii.tft_set9`],
 	},
 	{
@@ -1790,7 +1790,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `tiny grab bag`,
 		name: `Tiny Grab Bag`,
 		tiers: [1],
-		description: `Gain a random component, 4 gold, a Magnetic Remover. `,
+		description: `Gain a random component, 4 gold, a Magnetic Remover.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/grab-bag-i.tft_set9`],
 	},
 	{
@@ -1853,7 +1853,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `training reward`,
 		name: `Training Reward`,
 		tiers: [1, 2, 3],
-		description: `1: Gain 7 gold and a Lesser Champion Duplicator.  3: Gain 24 gold and a Champion Duplicator. `,
+		description: `1: Gain 7 gold and a Lesser Champion Duplicator.  2: Gain 15 gold and a Lesser Champion Duplicator.  3: Gain 24 gold and a Champion Duplicator.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/training-reward-i.tft_set9`, `assets/maps/tft/icons/augments/hexcore/training-reward-ii.tft_set9`, `assets/maps/tft/icons/augments/hexcore/training-reward-iii.tft_set9`],
 	},
 	{
@@ -1888,7 +1888,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `two healthy`,
 		name: `Two Healthy`,
 		tiers: [2],
-		description: `Your units gain 111 HP for each unique Tier 2 unit you field. `,
+		description: `Your units gain 111 HP for each unique Tier 2 unit you field.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/two-healthy-ii.tft_set9`],
 	},
 	{
@@ -1909,7 +1909,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `unified resistance`,
 		name: `Unified Resistance`,
 		tiers: [1, 2],
-		description: `If you have 3 or more units in the same row at the start of combat, they all gain 18/30 Armor and Magic Resist. `,
+		description: `If you have 3 or more units in the same row at the start of combat, they all gain 18/30 Armor and Magic Resist.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/red-rover-i.tft_set9`, `assets/maps/tft/icons/augments/hexcore/red-rover-ii.tft_set9`],
 	},
 	{
@@ -1930,7 +1930,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `urfs grab bag`,
 		name: `Urf's Grab Bag`,
 		tiers: [2, 3],
-		description: `2: Gain 1 Spatula and 1 random item component(s).  3: Gain {NumItems} random components, a Champion Duplicator, and a Spatula. `,
+		description: `Gain 1 Spatula and 1/3 random item component(s).`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/urfs-grab-bag-ii`, `assets/maps/tft/icons/augments/hexcore/urfs-grab-bag-iii`],
 	},
 	{
@@ -1986,7 +1986,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `wellearned comforts`,
 		name: `Well-Earned Comforts`,
 		tiers: [1, 2, 3],
-		description: `1: Your units gain 60 HP for each item equipped.  3: Your units gain 120 HP and 8% Attack Speed for each item equipped.`,
+		description: `1: Your units gain 60 HP for each item equipped.  2: Your units gain 111 HP for each item equipped.  3: Your units gain 120 HP and 8% Attack Speed for each item equipped.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/well-earned-comforts-i.tft_set9`, `assets/maps/tft/icons/augments/hexcore/well-earned-comforts-ii.tft_set9`, `assets/maps/tft/icons/augments/hexcore/well-earned-comforts-iii.tft_set9`],
 	},
 	{
@@ -2063,14 +2063,14 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `you have my bow`,
 		name: `You Have My Bow`,
 		tiers: [2],
-		description: `Gain a Recurve Bow. Your units gain 15% Attack Speed. `,
+		description: `Gain a Recurve Bow. Your units gain 15% Attack Speed.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/you-have-my-bow-ii.tft_set9`],
 	},
 	{
 		id: `you have my sword`,
 		name: `You Have My Sword`,
 		tiers: [2],
-		description: `Gain a B.F. Sword. Your units gain 18% Attack Damage. `,
+		description: `Gain a B.F. Sword. Your units gain 18% Attack Damage.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/you-have-my-sword-ii.tft_set9`],
 	},
 	{

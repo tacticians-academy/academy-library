@@ -1,5 +1,5 @@
 {
-	"{1b853b57}": {
+	"Characters/TFT11_Senna/Spells/TFT11_SennaBasicAttack2": {
 		"mScriptName": "TFT11_SennaBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 6794,
@@ -76,7 +76,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{3972099f}": {
+	"Characters/TFT11_Senna/Spells/TFT11_SennaBasicAttack": {
 		"mScriptName": "TFT11_SennaBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 6794,
@@ -152,7 +152,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{52fc7bdb}": {
+	"Characters/TFT11_Senna/Spells/TFT11_SennaSpell": {
 		"mScriptName": "TFT11_SennaSpell",
 		"mSpell": {
 			"flags": 4194304,
@@ -308,7 +308,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{a5873327}": {
+	"Characters/TFT11_Senna/Spells/TFT11_SennaCritAttack": {
 		"mScriptName": "TFT11_SennaCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 6794,
@@ -441,7 +441,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{86927365}": {
+	"Characters/TFT11_Senna/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Senna",
 		"baseHP": 600,
 		"baseStaticHPRegen": 0,

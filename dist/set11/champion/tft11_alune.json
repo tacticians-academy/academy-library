@@ -1,5 +1,5 @@
 {
-	"{43476b8b}": {
+	"Characters/TFT11_Alune/Spells/TFT11_AluneSpell": {
 		"mScriptName": "TFT11_AluneSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 6154,
@@ -60,9 +60,9 @@
 					"mName": "AttackSpeed",
 					"mValues": [
 						0.4000000059604645,
-						0.4000000059604645,
-						0.4000000059604645,
-						0.4000000059604645,
+						0.20000000298023224,
+						0.25,
+						0.30000001192092896,
 						0.4000000059604645,
 						0.4000000059604645,
 						0.4000000059604645
@@ -176,7 +176,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{8ca49967}": {
+	"Characters/TFT11_Alune/Spells/TFT11_AluneBasicAttack2": {
 		"mScriptName": "TFT11_AluneBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -277,14 +277,14 @@
 			},
 			"mCastType": 3,
 			"missileSpeed": 4500,
-			"mMissileEffectKey": "{259cc8e1}",
+			"mMissileEffectKey": "TFT11_Alune_OrbMissile",
 			"mLineWidth": 140,
 			"mHitEffectOrientType": 2,
 			"__type": "SpellDataResource"
 		},
 		"__type": "SpellObject"
 	},
-	"{ae2c3d6f}": {
+	"Characters/TFT11_Alune/Spells/TFT11_AluneBasicAttack": {
 		"mScriptName": "TFT11_AluneBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 512,
@@ -341,7 +341,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{cafed177}": {
+	"Characters/TFT11_Alune/Spells/TFT11_AluneCritAttack": {
 		"mScriptName": "TFT11_AluneCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -443,7 +443,7 @@
 			"mCastType": 3,
 			"castFrame": 8.5,
 			"missileSpeed": 4500,
-			"mMissileEffectKey": "{259cc8e1}",
+			"mMissileEffectKey": "TFT11_Alune_OrbMissile",
 			"mLineWidth": 140,
 			"mHitEffectOrientType": 2,
 			"mTargetingTypeData": {
@@ -453,7 +453,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{f257732b}": {
+	"Characters/TFT11_Alune/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Alune",
 		"baseHP": 650,
 		"baseStaticHPRegen": 0,
@@ -514,7 +514,6 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 20,
 		"__type": "TFTCharacterRecord"
 	}
 }

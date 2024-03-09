@@ -1,6 +1,6 @@
 import type { AbilityData, ChampionData } from '../index'
 
-export enum ChampionKey { Alistar = `TFT8_Alistar`, Annie = `TFT8_Annie`, Aphelios = `TFT8_Aphelios`, ArchiveOfAugments = `TFT6_ArchiveOfAugments`, Ashe = `TFT8_Ashe`, AurelionSol = `TFT8_AurelionSol`, BelVeth = `TFT8_BelVeth`, Blitzcrank = `TFT8_Blitzcrank`, Camille = `TFT8_Camille`, Chogath = `TFT8_Chogath`, Draven = `TFT8_Draven`, Ekko = `TFT8_Ekko`, Ezreal = `TFT8_Ezreal`, Fiddlesticks = `TFT8_Fiddlesticks`, Fiora = `TFT8_Fiora`, Galio = `TFT8_Galio`, Gangplank = `TFT8_Gangplank`, BossUrgot = `TFT8_Boss_Urgot`, Hecarim = `TFT8_Hecarim`, Janna = `TFT8_Janna`, Jax = `TFT8_Jax`, Jinx = `TFT8_Jinx`, Kaisa = `TFT8_Kaisa`, Kayle = `TFT8_Kayle`, Leblanc = `TFT8_Leblanc`, LeeSin = `TFT8_LeeSin`, Leona = `TFT8_Leona`, Lulu = `TFT8_Lulu`, Lux = `TFT8_Lux`, Malphite = `TFT8_Malphite`, MissFortune = `TFT8_MissFortune`, Mordekaiser = `TFT8_Mordekaiser`, BossZac = `TFT8_Boss_Zac`, Nasus = `TFT8_Nasus`, Nilah = `TFT8_Nilah`, Nunu = `TFT8_Nunu`, Poppy = `TFT8_Poppy`, Rammus = `TFT8_Rammus`, Rell = `TFT8_Rell`, Renekton = `TFT8_Renekton`, Riven = `TFT8_Riven`, Samira = `TFT8_Samira`, Sejuani = `TFT8_Sejuani`, Senna = `TFT8_Senna`, Sett = `TFT8_Sett`, Sivir = `TFT8_Sivir`, Sona = `TFT8_Sona`, Soraka = `TFT8_Soraka`, Sylas = `TFT8_Sylas`, Syndra = `TFT8_Syndra`, Taliyah = `TFT8_Taliyah`, Talon = `TFT8_Talon`, PranksterDummy = `TFT8_PranksterDummy`, TrainingDummy = `TFT_TrainingDummy`, Urgot = `TFT8_Urgot`, Vayne = `TFT8_Vayne`, Velkoz = `TFT8_Velkoz`, Vi = `TFT8_Vi`, Viego = `TFT8_Viego`, VoidSpawn = `TFT_VoidSpawn`, BossAurelionSol = `TFT8_Boss_AurelionSol`, WuKong = `TFT8_WuKong`, Yasuo = `TFT8_Yasuo`, Yuumi = `TFT8_Yuumi`, Zac = `TFT8_Zac`, Zed = `TFT8_Zed`, Zoe = `TFT8_Zoe` }
+export enum ChampionKey { Alistar = `TFT8_Alistar`, Annie = `TFT8_Annie`, Aphelios = `TFT8_Aphelios`, ArchiveOfAugments = `TFT6_ArchiveOfAugments`, Ashe = `TFT8_Ashe`, AurelionSol = `TFT8_AurelionSol`, BelVeth = `TFT8_BelVeth`, Blitzcrank = `TFT8_Blitzcrank`, Camille = `TFT8_Camille`, Chogath = `TFT8_Chogath`, Draven = `TFT8_Draven`, Ekko = `TFT8_Ekko`, Ezreal = `TFT8_Ezreal`, Fiddlesticks = `TFT8_Fiddlesticks`, Fiora = `TFT8_Fiora`, Galio = `TFT8_Galio`, Gangplank = `TFT8_Gangplank`, BossUrgot = `TFT8_Boss_Urgot`, Hecarim = `TFT8_Hecarim`, Janna = `TFT8_Janna`, Jax = `TFT8_Jax`, Jinx = `TFT8_Jinx`, Kaisa = `TFT8_Kaisa`, Kayle = `TFT8_Kayle`, Leblanc = `TFT8_Leblanc`, LeeSin = `TFT8_LeeSin`, Leona = `TFT8_Leona`, Lulu = `TFT8_Lulu`, Lux = `TFT8_Lux`, Malphite = `TFT8_Malphite`, MissFortune = `TFT8_MissFortune`, Mordekaiser = `TFT8_Mordekaiser`, BossZac = `TFT8_Boss_Zac`, Nasus = `TFT8_Nasus`, Nilah = `TFT8_Nilah`, Nunu = `TFT8_Nunu`, Poppy = `TFT8_Poppy`, Rammus = `TFT8_Rammus`, Rell = `TFT8_Rell`, Renekton = `TFT8_Renekton`, Riven = `TFT8_Riven`, Samira = `TFT8_Samira`, Sejuani = `TFT8_Sejuani`, Senna = `TFT8_Senna`, Sett = `TFT8_Sett`, Sivir = `TFT8_Sivir`, Sona = `TFT8_Sona`, Soraka = `TFT8_Soraka`, Sylas = `TFT8_Sylas`, Syndra = `TFT8_Syndra`, Taliyah = `TFT8_Taliyah`, Talon = `TFT8_Talon`, TrainingDummy = `TFT_TrainingDummy`, PranksterDummy = `TFT8_PranksterDummy`, Urgot = `TFT8_Urgot`, Vayne = `TFT8_Vayne`, Velkoz = `TFT8_Velkoz`, Vi = `TFT8_Vi`, Viego = `TFT8_Viego`, VoidSpawn = `TFT_VoidSpawn`, BossAurelionSol = `TFT8_Boss_AurelionSol`, WuKong = `TFT8_WuKong`, Yasuo = `TFT8_Yasuo`, Yuumi = `TFT8_Yuumi`, Zac = `TFT8_Zac`, Zed = `TFT8_Zed`, Zoe = `TFT8_Zoe` }
 
 export const champions: ChampionData[] = [
 	{
@@ -4882,34 +4882,6 @@ export const champions: ChampionData[] = [
 		],
 	},
 	{
-		apiName: `TFT8_PranksterDummy`,
-		name: `Target Dummy`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT8_PranksterDummy.TFT_Set8.dds`,
-		cost: undefined,
-		starLevel: undefined,
-		teamSize: undefined,
-		isSpawn: true,
-		traits: [],
-		stats: {
-			armor: 20,
-			attackSpeed: 0.20000000298023224,
-			critChance: 0.25,
-			critMultiplier: 1.399999976158142,
-			damage: 0,
-			hp: 350,
-			initialMana: 0,
-			magicResist: 20,
-			mana: 150,
-			moveSpeed: 500,
-			range: 0,
-		},
-		basicAttackMissileSpeed: undefined,
-		critAttackMissileSpeed: undefined,
-		passive: undefined,
-		spells: [],
-		missiles: [],
-	},
-	{
 		apiName: `TFT_TrainingDummy`,
 		name: `Target Dummy`,
 		icon: `ASSETS/UX/TFT/ChampionSplashes/TFTDebug_Dummy.dds`,
@@ -4946,6 +4918,34 @@ export const champions: ChampionData[] = [
 				uninterruptable: undefined,
 			},
 		],
+	},
+	{
+		apiName: `TFT8_PranksterDummy`,
+		name: `Target Dummy`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT8_PranksterDummy.TFT_Set8.dds`,
+		cost: undefined,
+		starLevel: undefined,
+		teamSize: undefined,
+		isSpawn: true,
+		traits: [],
+		stats: {
+			armor: 20,
+			attackSpeed: 0.20000000298023224,
+			critChance: 0.25,
+			critMultiplier: 1.399999976158142,
+			damage: 0,
+			hp: 350,
+			initialMana: 0,
+			magicResist: 20,
+			mana: 150,
+			moveSpeed: 500,
+			range: 0,
+		},
+		basicAttackMissileSpeed: undefined,
+		critAttackMissileSpeed: undefined,
+		passive: undefined,
+		spells: [],
+		missiles: [],
 	},
 	{
 		apiName: `TFT8_Urgot`,
@@ -6851,15 +6851,15 @@ export const abilities: Record<string, AbilityData> = {
 			'HealAmount': [0, 150, 200, 250],
 		},
 	},
-	'TFT8_PranksterDummy': {
-		desc: `The Training Dummy cannot move or attack. It is also dressed like a devilishly handsome Yordle.`,
-		icon: `ASSETS/Characters/TFT8_PranksterDummy/HUD/Icons2D/TFT8_PranksterDummy_EyeOfTheStorm.TFT_Set8.dds`,
-		name: `On Duty!`,
-		variables: {},
-	},
 	'TFT_TrainingDummy': {
 		desc: `The Training Dummy cannot move or attack. It is also dressed like a devilishly handsome Yordle.`,
 		icon: `ASSETS/Characters/TFTDebug_Dummy/HUD/Icons2D/TFTDebug_Dummy_DoNothing.dds`,
+		name: `On Duty!`,
+		variables: {},
+	},
+	'TFT8_PranksterDummy': {
+		desc: `The Training Dummy cannot move or attack. It is also dressed like a devilishly handsome Yordle.`,
+		icon: `ASSETS/Characters/TFT8_PranksterDummy/HUD/Icons2D/TFT8_PranksterDummy_EyeOfTheStorm.TFT_Set8.dds`,
 		name: `On Duty!`,
 		variables: {},
 	},

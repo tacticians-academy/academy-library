@@ -1,5 +1,5 @@
 {
-	"{5f22e93d}": {
+	"Characters/TFT11_XayahRakanDummy/Spells/TFT11_XayahRakanDummyCritAttack": {
 		"mScriptName": "TFT11_XayahRakanDummyCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 7919,
@@ -57,7 +57,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{d503c2fd}": {
+	"Characters/TFT11_XayahRakanDummy/Spells/TFT11_XayahRakanDummyBasicAttack": {
 		"mScriptName": "TFT11_XayahRakanDummyBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 7919,
@@ -117,7 +117,65 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{d4b23fa2}": {
+	"Characters/TFT11_XayahRakanDummy/Spells/TFT11_XayahRakanDummySpell": {
+		"mScriptName": "TFT11_XayahRakanDummySpell",
+		"mSpell": {
+			"mAffectsTypeFlags": 7919,
+			"mApplyMaterialOnHitSound": true,
+			"bHaveHitEffect": true,
+			"castRange": [
+				600,
+				600,
+				600,
+				600,
+				600,
+				600,
+				600
+			],
+			"castRadius": [
+				100,
+				100,
+				100,
+				100,
+				100,
+				100,
+				100
+			],
+			"castConeDistance": 100,
+			"luaOnMissileUpdateDistanceInterval": 51,
+			"mMissileSpec": {
+				"movementComponent": {
+					"mTargetHeightAugment": 100,
+					"mOffsetInitialTargetHeight": 100,
+					"mStartBoneName": "root",
+					"mSpeed": 2500,
+					"__type": "FixedSpeedMovement"
+				},
+				"verticalFacing": {
+					"__type": "VeritcalFacingMatchVelocity"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 1,
+			"castFrame": 6,
+			"missileSpeed": 2500,
+			"mHitEffectOrientType": 2,
+			"mHitEffectKey": "TFT_Global_BA_Crit",
+			"bHaveHitBone": true,
+			"mHitBoneName": "C_Buffbone_Glb_Layout_Loc",
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
+	},
+	"Characters/TFT11_XayahRakanDummy/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_XayahRakanDummy",
 		"baseHP": 800,
 		"baseStaticHPRegen": 0,
@@ -185,6 +243,10 @@
 				},
 				"__type": "{5a0a682a}"
 			}
+		],
+		"{ec296e87}": [
+			"{4569e425}",
+			"{bb91e957}"
 		],
 		"__type": "TFTCharacterRecord"
 	}

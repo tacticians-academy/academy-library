@@ -1583,7 +1583,7 @@ export const choiceAugments: AugmentData[] = [
 		desc: `TFT6_Augment_Overclock_Description`,
 		effects: {
 			'AttackSpeed': 400,
-			'Duration': 10,
+			'Duration': 5,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/TFT6_Augment_ClockworkOverclock.TFT_Set6.dds`,
 	},
@@ -1594,7 +1594,7 @@ export const choiceAugments: AugmentData[] = [
 		desc: `TFT6_Augment_Overclock_Description`,
 		effects: {
 			'AttackSpeed': 400,
-			'Duration': 5,
+			'Duration': 10,
 		},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/TFT6_Augment_ClockworkOverclock.TFT_Set6.dds`,
 	},

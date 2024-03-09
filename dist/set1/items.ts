@@ -669,6 +669,8 @@ export const hexbuffItems: ItemData[] = []
 
 export const modItems: ItemData[] = []
 
+export const temporaryItems: ItemData[] = []
+
 export const unreleasedItems: ItemData[] = [
 	{
 		desc: `@ChanceToSpellSteal@ chance to steal the enemy's spell and cast it`,

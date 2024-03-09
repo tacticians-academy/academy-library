@@ -1,5 +1,5 @@
 {
-	"{08b1b13b}": {
+	"Characters/TFT11_Yasuo/Spells/TFT11_YasuoBasicAttack2": {
 		"mScriptName": "TFT11_YasuoBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -35,7 +35,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{26475003}": {
+	"Characters/TFT11_Yasuo/Spells/TFT11_YasuoCritAttack": {
 		"mScriptName": "TFT11_YasuoCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -121,7 +121,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{ad9dfa8b}": {
+	"Characters/TFT11_Yasuo/Spells/TFT11_YasuoBasicAttack": {
 		"mScriptName": "TFT11_YasuoBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -157,7 +157,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{b17bac3f}": {
+	"Characters/TFT11_Yasuo/Spells/TFT11_YasuoSpell": {
 		"mScriptName": "TFT11_YasuoSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 11333,
@@ -342,7 +342,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{38e9f6a9}": {
+	"Characters/TFT11_Yasuo/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Yasuo",
 		"baseHP": 600,
 		"baseStaticHPRegen": 0,
@@ -353,7 +353,7 @@
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 40,
+		"baseDamage": 35,
 		"baseArmor": 45,
 		"baseSpellBlock": 45,
 		"baseCritChance": 0.25,

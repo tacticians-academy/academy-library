@@ -1,5 +1,5 @@
 {
-	"{1191c49f}": {
+	"Characters/TFT11_Lux/Spells/TFT11_LuxBasicAttack2": {
 		"mScriptName": "TFT11_LuxBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 24527,
@@ -58,7 +58,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{17604877}": {
+	"Characters/TFT11_Lux/Spells/TFT11_LuxBasicAttack": {
 		"mScriptName": "TFT11_LuxBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 24527,
@@ -117,7 +117,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{584fb9af}": {
+	"Characters/TFT11_Lux/Spells/TFT11_LuxCritAttack": {
 		"mScriptName": "TFT11_LuxCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 24527,
@@ -176,7 +176,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{bfc5bc13}": {
+	"Characters/TFT11_Lux/Spells/TFT11_LuxSpell": {
 		"mScriptName": "TFT11_LuxSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 6154,
@@ -185,9 +185,9 @@
 					"mName": "Damage",
 					"mValues": [
 						0,
-						240,
-						360,
-						560,
+						220,
+						330,
+						515,
 						0,
 						0,
 						0
@@ -351,13 +351,13 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{250d8673}": {
+	"Characters/TFT11_Lux/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Lux",
 		"baseHP": 550,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 70,
+			"arBase": 75,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
@@ -412,7 +412,7 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 30,
+		"mInitialMana": 15,
 		"__type": "TFTCharacterRecord"
 	}
 }

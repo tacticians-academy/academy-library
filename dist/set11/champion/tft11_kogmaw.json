@@ -1,5 +1,5 @@
 {
-	"{8a671871}": {
+	"Characters/TFT11_KogMaw/Spells/TFT11_KogMawSpell": {
 		"mScriptName": "TFT11_KogMawSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 11605,
@@ -8,9 +8,9 @@
 					"mName": "Damage",
 					"mValues": [
 						0,
-						150,
+						160,
 						225,
-						340,
+						315,
 						0,
 						0,
 						0
@@ -116,7 +116,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{b35b934d}": {
+	"Characters/TFT11_KogMaw/Spells/TFT11_KogMawBasicAttack": {
 		"mScriptName": "TFT11_KogMawBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -166,7 +166,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{d3a99ecd}": {
+	"Characters/TFT11_KogMaw/Spells/TFT11_KogMawCritAttack": {
 		"mScriptName": "TFT11_KogMawCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -214,7 +214,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{d82930ed}": {
+	"Characters/TFT11_KogMaw/Spells/TFT11_KogMawBasicAttack2": {
 		"mScriptName": "TFT11_KogMawBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -264,7 +264,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{f107394e}": {
+	"Characters/TFT11_KogMaw/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_KogMaw",
 		"baseHP": 500,
 		"baseStaticHPRegen": 0,
@@ -331,6 +331,7 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
+		"{22f5197d}": 100,
 		"__type": "TFTCharacterRecord"
 	}
 }

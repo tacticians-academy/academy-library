@@ -1,5 +1,5 @@
 {
-	"{09332fed}": {
+	"Characters/TFT11_WuKong/Spells/TFT11_WuKongBasicAttack": {
 		"mScriptName": "TFT11_WuKongBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -36,7 +36,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{5a945c0d}": {
+	"Characters/TFT11_WuKong/Spells/TFT11_WuKongBasicAttack2": {
 		"mScriptName": "TFT11_WuKongBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -73,7 +73,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{78b932ed}": {
+	"Characters/TFT11_WuKong/Spells/TFT11_WuKongCritAttack": {
 		"mScriptName": "TFT11_WuKongCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -108,7 +108,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{a0f8bb11}": {
+	"Characters/TFT11_WuKong/Spells/TFT11_WuKongSpell": {
 		"mScriptName": "TFT11_WuKongSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 22538,
@@ -131,9 +131,9 @@
 					"mName": "SpinPercentAttackDamage",
 					"mValues": [
 						0,
-						2.5,
-						2.5,
-						8,
+						3,
+						3,
+						9,
 						0,
 						0,
 						0
@@ -386,9 +386,9 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{a8ab9c5d}": {
+	"Characters/TFT11_WuKong/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_WuKong",
-		"baseHP": 1100,
+		"baseHP": 1200,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,

@@ -3,7 +3,7 @@
 		"mGearData": {
 			"mVFXResourceResolver": {
 				"resourceMap": {
-					"{17fa9b5c}": "{c8e2f31a}"
+					"TFT11_Kayn_Spin": "Characters/TFT11_Kayn/Skins/Skin0/Particles/TFT11_Kayn_Base_Q_Assassin_Q2"
 				},
 				"__type": "ResourceResolver"
 			},
@@ -203,7 +203,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{82fd6e99}": {
+	"Characters/TFT11_Kayn/Spells/TFT11_KaynCritAttack": {
 		"mScriptName": "TFT11_KaynCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -238,7 +238,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{9cdfadb1}": {
+	"Characters/TFT11_Kayn/Spells/TFT11_KaynBasicAttack2": {
 		"mScriptName": "TFT11_KaynBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -274,7 +274,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{c36baa15}": {
+	"Characters/TFT11_Kayn/Spells/TFT11_KaynSpell": {
 		"mScriptName": "TFT11_KaynSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 7183,
@@ -299,7 +299,7 @@
 						0.10000000149011612,
 						4,
 						4,
-						8,
+						10,
 						0.10000000149011612,
 						0.10000000149011612,
 						0.10000000149011612
@@ -325,7 +325,7 @@
 						2,
 						2,
 						2,
-						4,
+						5,
 						2,
 						2,
 						2
@@ -335,13 +335,13 @@
 				{
 					"mName": "SingleTargetDamageAmp",
 					"mValues": [
-						0.5,
-						0.5,
-						0.5,
-						0.5,
-						0.5,
-						0.5,
-						0.5
+						1,
+						1,
+						1,
+						1,
+						1,
+						1,
+						1
 					],
 					"__type": "SpellDataValue"
 				},
@@ -495,7 +495,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{e26d2e19}": {
+	"Characters/TFT11_Kayn/Spells/TFT11_KaynBasicAttack": {
 		"mScriptName": "TFT11_KaynBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -531,18 +531,18 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{eb97798b}": {
+	"Characters/TFT11_Kayn/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Kayn",
 		"baseHP": 1000,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 70,
+			"arBase": 60,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 75,
+		"baseDamage": 80,
 		"baseArmor": 60,
 		"baseSpellBlock": 60,
 		"baseCritChance": 0.25,
@@ -592,7 +592,6 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 20,
 		"__type": "TFTCharacterRecord"
 	}
 }

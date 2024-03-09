@@ -1,5 +1,5 @@
 {
-	"{99105021}": {
+	"Characters/TFT11_KhaZix/Spells/TFT11_KhaZixCritAttack": {
 		"mScriptName": "TFT11_KhaZixCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -15,7 +15,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{9c8ad371}": {
+	"Characters/TFT11_KhaZix/Spells/TFT11_KhaZixBasicAttack": {
 		"mScriptName": "TFT11_KhaZixBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -32,7 +32,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{b18a9279}": {
+	"Characters/TFT11_KhaZix/Spells/TFT11_KhaZixBasicAttack2": {
 		"mScriptName": "TFT11_KhaZixBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -49,7 +49,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{d94f77ad}": {
+	"Characters/TFT11_KhaZix/Spells/TFT11_KhaZixSpell": {
 		"mScriptName": "TFT11_KhaZixSpell",
 		"mSpell": {
 			"flags": 4,
@@ -59,13 +59,13 @@
 				{
 					"mName": "PercentAttackDamage",
 					"mValues": [
-						0,
-						3.5,
-						3.5,
-						3.5,
-						160,
-						200,
-						240
+						3.25,
+						3.25,
+						3.25,
+						3.25,
+						3.25,
+						3.25,
+						3.25
 					],
 					"__type": "SpellDataValue"
 				},
@@ -262,7 +262,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{e7b91b5d}": {
+	"Characters/TFT11_KhaZix/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_KhaZix",
 		"baseHP": 600,
 		"baseStaticHPRegen": 0,
@@ -323,6 +323,7 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
+		"{22f5197d}": 150,
 		"__type": "TFTCharacterRecord"
 	}
 }

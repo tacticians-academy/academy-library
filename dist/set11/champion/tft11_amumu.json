@@ -1,5 +1,5 @@
 {
-	"{30b8ddab}": {
+	"Characters/TFT11_Amumu/Spells/TFT11_AmumuBasicAttack": {
 		"mScriptName": "TFT11_AmumuBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 6095,
@@ -15,7 +15,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{4c04d7db}": {
+	"Characters/TFT11_Amumu/Spells/TFT11_AmumuBasicAttack2": {
 		"mScriptName": "TFT11_AmumuBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 6095,
@@ -47,7 +47,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{efc5a65f}": {
+	"Characters/TFT11_Amumu/Spells/TFT11_AmumuSpell": {
 		"mScriptName": "TFT11_AmumuSpell",
 		"mSpell": {
 			"mDataValues": [
@@ -68,9 +68,9 @@
 					"mName": "SelfHealingAmount",
 					"mValues": [
 						0,
-						175,
-						200,
-						225,
+						250,
+						300,
+						375,
 						0,
 						0,
 						0
@@ -165,13 +165,12 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{327a59e5}": {
+	"Characters/TFT11_Amumu/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Amumu",
 		"baseHP": 900,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 110,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
@@ -227,7 +226,7 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 60,
+		"mInitialMana": 50,
 		"__type": "TFTCharacterRecord"
 	}
 }

@@ -82,7 +82,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `base camp`,
 		name: `Base Camp`,
 		tiers: [2],
-		description: `Scalescorns gain 7% damage each time they start combat in the same hex, stacking up to 4 times. Gain a Lillia.`,
+		description: `Scalescorns gain 8% damage each time they start combat in the same hex, stacking up to 4 times. Gain a Lillia.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/nomads-ii.tft_set7`],
 	},
 	{

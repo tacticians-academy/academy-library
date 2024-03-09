@@ -1,6 +1,6 @@
 import type { AbilityData, ChampionData } from '../index'
 
-export enum ChampionKey { Aatrox = `TFT2_Aatrox`, Amumu = `TFT2_Amumu`, Annie = `TFT2_Annie`, Ashe = `TFT2_Ashe`, Azir = `TFT2_Azir`, Brand = `TFT2_Brand`, Braum = `TFT2_Braum`, Diana = `TFT2_Diana`, DrMundo = `TFT2_DrMundo`, Ezreal = `TFT2_Ezreal`, Ivern = `TFT2_Ivern`, Janna = `TFT2_Janna`, Jax = `TFT2_Jax`, Karma = `TFT2_Karma`, Khazix = `TFT2_Khazix`, Kindred = `TFT2_Kindred`, KogMaw = `TFT2_KogMaw`, LeBlanc = `TFT2_LeBlanc`, Leona = `TFT2_Leona`, Lucian = `TFT2_Lucian`, LuxCrystal = `TFT2_LuxCrystal`, LuxElectric = `TFT2_LuxElectric`, LuxGlacial = `TFT2_LuxGlacial`, LuxInferno = `TFT2_LuxInferno`, LuxLight = `TFT2_LuxLight`, LuxMetal = `TFT2_LuxMetal`, LuxOcean = `TFT2_LuxOcean`, LuxShadow = `TFT2_LuxShadow`, LuxWind = `TFT2_LuxWind`, LuxWoodland = `TFT2_LuxWoodland`, Malphite = `TFT2_Malphite`, Malzahar = `TFT2_Malzahar`, Maokai = `TFT2_Maokai`, MasterYi = `TFT2_MasterYi`, Nami = `TFT2_Nami`, Nasus = `TFT2_Nasus`, Nautilus = `TFT2_Nautilus`, Neeko = `TFT2_Neeko`, Nocturne = `TFT2_Nocturne`, Olaf = `TFT2_Olaf`, Ornn = `TFT2_Ornn`, Qiyana = `TFT2_Qiyana`, QiyanaOcean = `TFT2_QiyanaOcean`, QiyanaInferno = `TFT2_QiyanaInferno`, QiyanaWoodland = `TFT2_QiyanaWoodland`, QiyanaWind = `TFT2_QiyanaWind`, RekSai = `TFT2_RekSai`, Renekton = `TFT2_Renekton`, Senna = `TFT2_Senna`, Singed = `TFT2_Singed`, Sion = `TFT2_Sion`, Sivir = `TFT2_Sivir`, Skarner = `TFT2_Skarner`, Soraka = `TFT2_Soraka`, Syndra = `TFT2_Syndra`, Taliyah = `TFT2_Taliyah`, Taric = `TFT2_Taric`, Thresh = `TFT2_Thresh`, Twitch = `TFT2_Twitch`, Varus = `TFT2_Varus`, Vayne = `TFT2_Vayne`, Veigar = `TFT2_Veigar`, Vladimir = `TFT2_Vladimir`, Volibear = `TFT2_Volibear`, Warwick = `TFT2_Warwick`, Yasuo = `TFT2_Yasuo`, Yorick = `TFT2_Yorick`, Zed = `TFT2_Zed`, Zyra = `TFT2_Zyra` }
+export enum ChampionKey { Aatrox = `TFT2_Aatrox`, Amumu = `TFT2_Amumu`, Annie = `TFT2_Annie`, Ashe = `TFT2_Ashe`, Azir = `TFT2_Azir`, Brand = `TFT2_Brand`, Braum = `TFT2_Braum`, Diana = `TFT2_Diana`, DrMundo = `TFT2_DrMundo`, Ezreal = `TFT2_Ezreal`, Ivern = `TFT2_Ivern`, Janna = `TFT2_Janna`, Jax = `TFT2_Jax`, Karma = `TFT2_Karma`, Khazix = `TFT2_Khazix`, Kindred = `TFT2_Kindred`, KogMaw = `TFT2_KogMaw`, LeBlanc = `TFT2_LeBlanc`, Leona = `TFT2_Leona`, Lucian = `TFT2_Lucian`, LuxCrystal = `TFT2_LuxCrystal`, LuxElectric = `TFT2_LuxElectric`, LuxGlacial = `TFT2_LuxGlacial`, LuxInferno = `TFT2_LuxInferno`, LuxLight = `TFT2_LuxLight`, LuxMetal = `TFT2_LuxMetal`, LuxOcean = `TFT2_LuxOcean`, LuxShadow = `TFT2_LuxShadow`, LuxWind = `TFT2_LuxWind`, LuxWoodland = `TFT2_LuxWoodland`, Malphite = `TFT2_Malphite`, Malzahar = `TFT2_Malzahar`, Maokai = `TFT2_Maokai`, MasterYi = `TFT2_MasterYi`, Nami = `TFT2_Nami`, Nasus = `TFT2_Nasus`, Nautilus = `TFT2_Nautilus`, Neeko = `TFT2_Neeko`, Nocturne = `TFT2_Nocturne`, Olaf = `TFT2_Olaf`, Ornn = `TFT2_Ornn`, Qiyana = `TFT2_Qiyana`, QiyanaInferno = `TFT2_QiyanaInferno`, QiyanaOcean = `TFT2_QiyanaOcean`, QiyanaWind = `TFT2_QiyanaWind`, QiyanaWoodland = `TFT2_QiyanaWoodland`, RekSai = `TFT2_RekSai`, Renekton = `TFT2_Renekton`, Senna = `TFT2_Senna`, Singed = `TFT2_Singed`, Sion = `TFT2_Sion`, Sivir = `TFT2_Sivir`, Skarner = `TFT2_Skarner`, Soraka = `TFT2_Soraka`, Syndra = `TFT2_Syndra`, Taliyah = `TFT2_Taliyah`, Taric = `TFT2_Taric`, Thresh = `TFT2_Thresh`, Twitch = `TFT2_Twitch`, Varus = `TFT2_Varus`, Vayne = `TFT2_Vayne`, Veigar = `TFT2_Veigar`, Vladimir = `TFT2_Vladimir`, Volibear = `TFT2_Volibear`, Warwick = `TFT2_Warwick`, Yasuo = `TFT2_Yasuo`, Yorick = `TFT2_Yorick`, Zed = `TFT2_Zed`, Zyra = `TFT2_Zyra` }
 
 export const champions: ChampionData[] = [
 	{
@@ -3611,93 +3611,6 @@ export const champions: ChampionData[] = [
 		],
 	},
 	{
-		apiName: `TFT2_QiyanaOcean`,
-		name: `Qiyana`,
-		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT2_Qiyana.TFT_Set2.dds`,
-		cost: 3,
-		starLevel: undefined,
-		teamSize: undefined,
-		isSpawn: false,
-		traits: [`Ocean`, `Assassin`],
-		stats: {
-			armor: 25,
-			attackSpeed: 0.699999988079071,
-			critChance: 0.25,
-			critMultiplier: 1.5,
-			damage: 65,
-			hp: 650,
-			initialMana: 50,
-			magicResist: 20,
-			mana: 100,
-			moveSpeed: 550,
-			range: 1,
-		},
-		basicAttackMissileSpeed: 0,
-		critAttackMissileSpeed: 0,
-		passive: undefined,
-		spells: [
-			{
-				name: `TFT2_QiyanaOceanR`,
-				castTime: 0.25,
-				missile: {
-					width: undefined,
-					travelTime: undefined,
-					speedInitial: 1000,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: true,
-				},
-				variables: {
-					'BaseDamage': [100, 300, 500, 900],
-					'CCDuration': [1.5, 2.5, 3.5, 4.5],
-				},
-				calculations: {
-					'Damage': {
-						asPercent: false,
-						parts: [
-							{
-								operator: undefined,
-								subparts: [
-									{
-										variable: `BaseDamage`,
-										starValues: [100, 300, 500, 900],
-										stat: `AP`,
-										ratio: 0.009999999776482582,
-									},
-								],
-							},
-						],
-					},
-				},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-		],
-		missiles: [
-			{
-				name: `TFT2_QiyanaOceanRMis`,
-				castTime: 0.25,
-				missile: {
-					width: 80,
-					travelTime: undefined,
-					speedInitial: 2000,
-					speedMin: undefined,
-					speedMax: undefined,
-					acceleration: undefined,
-					startDelay: undefined,
-					tracksTarget: false,
-					_missileSpeed: 200,
-				},
-				variables: {},
-				calculations: {},
-				cantCastWhileRooted: undefined,
-				uninterruptable: true,
-			},
-		],
-	},
-	{
 		apiName: `TFT2_QiyanaInferno`,
 		name: `Qiyana`,
 		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT2_Qiyana.TFT_Set2.dds`,
@@ -3785,14 +3698,14 @@ export const champions: ChampionData[] = [
 		],
 	},
 	{
-		apiName: `TFT2_QiyanaWoodland`,
+		apiName: `TFT2_QiyanaOcean`,
 		name: `Qiyana`,
 		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT2_Qiyana.TFT_Set2.dds`,
 		cost: 3,
 		starLevel: undefined,
 		teamSize: undefined,
 		isSpawn: false,
-		traits: [`Mountain`, `Assassin`],
+		traits: [`Ocean`, `Assassin`],
 		stats: {
 			armor: 25,
 			attackSpeed: 0.699999988079071,
@@ -3811,7 +3724,7 @@ export const champions: ChampionData[] = [
 		passive: undefined,
 		spells: [
 			{
-				name: `TFT2_QiyanaWoodlandR`,
+				name: `TFT2_QiyanaOceanR`,
 				castTime: 0.25,
 				missile: {
 					width: undefined,
@@ -3851,7 +3764,7 @@ export const champions: ChampionData[] = [
 		],
 		missiles: [
 			{
-				name: `TFT2_QiyanaWoodlandRMis`,
+				name: `TFT2_QiyanaOceanRMis`,
 				castTime: 0.25,
 				missile: {
 					width: 80,
@@ -3939,6 +3852,93 @@ export const champions: ChampionData[] = [
 		missiles: [
 			{
 				name: `TFT2_QiyanaWindRMis`,
+				castTime: 0.25,
+				missile: {
+					width: 80,
+					travelTime: undefined,
+					speedInitial: 2000,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: false,
+					_missileSpeed: 200,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
+			},
+		],
+	},
+	{
+		apiName: `TFT2_QiyanaWoodland`,
+		name: `Qiyana`,
+		icon: `ASSETS/UX/TFT/ChampionSplashes/TFT2_Qiyana.TFT_Set2.dds`,
+		cost: 3,
+		starLevel: undefined,
+		teamSize: undefined,
+		isSpawn: false,
+		traits: [`Mountain`, `Assassin`],
+		stats: {
+			armor: 25,
+			attackSpeed: 0.699999988079071,
+			critChance: 0.25,
+			critMultiplier: 1.5,
+			damage: 65,
+			hp: 650,
+			initialMana: 50,
+			magicResist: 20,
+			mana: 100,
+			moveSpeed: 550,
+			range: 1,
+		},
+		basicAttackMissileSpeed: 0,
+		critAttackMissileSpeed: 0,
+		passive: undefined,
+		spells: [
+			{
+				name: `TFT2_QiyanaWoodlandR`,
+				castTime: 0.25,
+				missile: {
+					width: undefined,
+					travelTime: undefined,
+					speedInitial: 1000,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {
+					'BaseDamage': [100, 300, 500, 900],
+					'CCDuration': [1.5, 2.5, 3.5, 4.5],
+				},
+				calculations: {
+					'Damage': {
+						asPercent: false,
+						parts: [
+							{
+								operator: undefined,
+								subparts: [
+									{
+										variable: `BaseDamage`,
+										starValues: [100, 300, 500, 900],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+				},
+				cantCastWhileRooted: undefined,
+				uninterruptable: true,
+			},
+		],
+		missiles: [
+			{
+				name: `TFT2_QiyanaWoodlandRMis`,
 				castTime: 0.25,
 				missile: {
 					width: 80,
@@ -5969,15 +5969,6 @@ export const abilities: Record<string, AbilityData> = {
 			'NumShots': [12, 12, 12, 12],
 		},
 	},
-	'TFT2_LuxElectric': {
-		desc: `Lux fires an elemental blast dealing @ModifiedDamage@ magic damage to all enemies in a line.<br><br>If Final Spark kills a unit, Lux is refunded @ManaRefund@ mana.`,
-		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds`,
-		name: `Final Spark`,
-		variables: {
-			'Damage': [200, 550, 900, 99999],
-			'ManaRefund': [50, 50, 50, 50],
-		},
-	},
 	'TFT2_LuxCrystal': {
 		desc: `Lux fires an elemental blast dealing @ModifiedDamage@ magic damage to all enemies in a line.<br><br>If Final Spark kills a unit, Lux is refunded @ManaRefund@ mana.`,
 		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds`,
@@ -5987,16 +5978,7 @@ export const abilities: Record<string, AbilityData> = {
 			'ManaRefund': [50, 50, 50, 50],
 		},
 	},
-	'TFT2_LuxMetal': {
-		desc: `Lux fires an elemental blast dealing @ModifiedDamage@ magic damage to all enemies in a line.<br><br>If Final Spark kills a unit, Lux is refunded @ManaRefund@ mana.`,
-		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds`,
-		name: `Final Spark`,
-		variables: {
-			'Damage': [200, 550, 900, 99999],
-			'ManaRefund': [50, 50, 50, 50],
-		},
-	},
-	'TFT2_LuxInferno': {
+	'TFT2_LuxElectric': {
 		desc: `Lux fires an elemental blast dealing @ModifiedDamage@ magic damage to all enemies in a line.<br><br>If Final Spark kills a unit, Lux is refunded @ManaRefund@ mana.`,
 		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds`,
 		name: `Final Spark`,
@@ -6014,7 +5996,7 @@ export const abilities: Record<string, AbilityData> = {
 			'ManaRefund': [50, 50, 50, 50],
 		},
 	},
-	'TFT2_LuxOcean': {
+	'TFT2_LuxInferno': {
 		desc: `Lux fires an elemental blast dealing @ModifiedDamage@ magic damage to all enemies in a line.<br><br>If Final Spark kills a unit, Lux is refunded @ManaRefund@ mana.`,
 		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds`,
 		name: `Final Spark`,
@@ -6023,7 +6005,7 @@ export const abilities: Record<string, AbilityData> = {
 			'ManaRefund': [50, 50, 50, 50],
 		},
 	},
-	'TFT2_LuxWoodland': {
+	'TFT2_LuxMetal': {
 		desc: `Lux fires an elemental blast dealing @ModifiedDamage@ magic damage to all enemies in a line.<br><br>If Final Spark kills a unit, Lux is refunded @ManaRefund@ mana.`,
 		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds`,
 		name: `Final Spark`,
@@ -6032,7 +6014,7 @@ export const abilities: Record<string, AbilityData> = {
 			'ManaRefund': [50, 50, 50, 50],
 		},
 	},
-	'TFT2_LuxShadow': {
+	'TFT2_LuxLight': {
 		desc: `Lux fires an elemental blast dealing @ModifiedDamage@ magic damage to all enemies in a line.<br><br>If Final Spark kills a unit, Lux is refunded @ManaRefund@ mana.`,
 		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds`,
 		name: `Final Spark`,
@@ -6050,7 +6032,25 @@ export const abilities: Record<string, AbilityData> = {
 			'ManaRefund': [50, 50, 50, 50],
 		},
 	},
-	'TFT2_LuxLight': {
+	'TFT2_LuxShadow': {
+		desc: `Lux fires an elemental blast dealing @ModifiedDamage@ magic damage to all enemies in a line.<br><br>If Final Spark kills a unit, Lux is refunded @ManaRefund@ mana.`,
+		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds`,
+		name: `Final Spark`,
+		variables: {
+			'Damage': [200, 550, 900, 99999],
+			'ManaRefund': [50, 50, 50, 50],
+		},
+	},
+	'TFT2_LuxWoodland': {
+		desc: `Lux fires an elemental blast dealing @ModifiedDamage@ magic damage to all enemies in a line.<br><br>If Final Spark kills a unit, Lux is refunded @ManaRefund@ mana.`,
+		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds`,
+		name: `Final Spark`,
+		variables: {
+			'Damage': [200, 550, 900, 99999],
+			'ManaRefund': [50, 50, 50, 50],
+		},
+	},
+	'TFT2_LuxOcean': {
 		desc: `Lux fires an elemental blast dealing @ModifiedDamage@ magic damage to all enemies in a line.<br><br>If Final Spark kills a unit, Lux is refunded @ManaRefund@ mana.`,
 		icon: `ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds`,
 		name: `Final Spark`,
@@ -6180,15 +6180,6 @@ export const abilities: Record<string, AbilityData> = {
 			'CCDuration': [1.5, 2.5, 3.5, 4.5],
 		},
 	},
-	'TFT2_QiyanaInferno': {
-		desc: `Qiyana blasts a short line in front of her, stunning enemies for @CCDuration@ seconds and dealing @ModifiedDamage@ magic damage.`,
-		icon: `ASSETS/Characters/Qiyana/HUD/Icons2D/Qiyana_Q2_Red.dds`,
-		name: `Elemental Blade`,
-		variables: {
-			'BaseDamage': [100, 300, 500, 900],
-			'CCDuration': [1.5, 2.5, 3.5, 4.5],
-		},
-	},
 	'TFT2_QiyanaOcean': {
 		desc: `Qiyana blasts a short line in front of her, stunning enemies for @CCDuration@ seconds and dealing @ModifiedDamage@ magic damage.`,
 		icon: `ASSETS/Characters/Qiyana/HUD/Icons2D/Qiyana_Q2_Blue.dds`,
@@ -6210,6 +6201,15 @@ export const abilities: Record<string, AbilityData> = {
 	'TFT2_QiyanaWind': {
 		desc: `Qiyana blasts a short line in front of her, stunning enemies for @CCDuration@ seconds and dealing @ModifiedDamage@ magic damage.`,
 		icon: `ASSETS/Characters/Qiyana/HUD/Icons2D/Qiyana_Q1.dds`,
+		name: `Elemental Blade`,
+		variables: {
+			'BaseDamage': [100, 300, 500, 900],
+			'CCDuration': [1.5, 2.5, 3.5, 4.5],
+		},
+	},
+	'TFT2_QiyanaInferno': {
+		desc: `Qiyana blasts a short line in front of her, stunning enemies for @CCDuration@ seconds and dealing @ModifiedDamage@ magic damage.`,
+		icon: `ASSETS/Characters/Qiyana/HUD/Icons2D/Qiyana_Q2_Red.dds`,
 		name: `Elemental Blade`,
 		variables: {
 			'BaseDamage': [100, 300, 500, 900],

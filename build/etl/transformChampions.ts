@@ -36,7 +36,7 @@ export async function transformChampions(setNumber: SetNumber, parentSetNumber: 
 		})
 		.sort(sortByName)
 
-	const abilities: [key: string, ability: AbilityData, name: string][] = []
+	const abilities: [key: string, ability: AbilityData, sortBy: string][] = []
 
 	const formattedUnits = await Promise.all(playableUnits.map(async (unit): Promise<ChampionData> => {
 		const apiName = unit.apiName
@@ -167,7 +167,7 @@ export async function transformChampions(setNumber: SetNumber, parentSetNumber: 
 			})
 			const outputAbility = unit.ability as unknown as AbilityData
 			outputAbility.variables = variables
-			abilities.push([apiName, outputAbility, unit.name])
+			abilities.push([apiName, outputAbility, unit.name + unit.apiName])
 		}
 
 		return {

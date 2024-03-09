@@ -1,5 +1,5 @@
 {
-	"{43f6f5fd}": {
+	"Characters/TFT11_LeeSin/Spells/TFT11_LeeSinSpell": {
 		"mScriptName": "TFT11_LeeSinSpell",
 		"mSpell": {
 			"flags": 4,
@@ -51,7 +51,7 @@
 						1.5,
 						1.5,
 						1.5,
-						3,
+						4.5,
 						1.25,
 						1.25,
 						1.25
@@ -213,7 +213,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{77a776e9}": {
+	"Characters/TFT11_LeeSin/Spells/TFT11_LeeSinBasicAttack2": {
 		"mScriptName": "TFT11_LeeSinBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -248,7 +248,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{a0f6e321}": {
+	"Characters/TFT11_LeeSin/Spells/TFT11_LeeSinBasicAttack": {
 		"mScriptName": "TFT11_LeeSinBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -283,7 +283,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{ffbfe291}": {
+	"Characters/TFT11_LeeSin/Spells/TFT11_LeeSinCritAttack": {
 		"mScriptName": "TFT11_LeeSinCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -318,7 +318,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{487be63c}": {
+	"Characters/TFT11_LeeSin/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_LeeSin",
 		"baseHP": 950,
 		"baseStaticHPRegen": 0,

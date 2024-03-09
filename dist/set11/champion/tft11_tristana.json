@@ -1,5 +1,5 @@
 {
-	"{1d5c10dd}": {
+	"Characters/TFT11_Tristana/Spells/TFT11_TristanaBasicAttack2": {
 		"mScriptName": "TFT11_TristanaBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -57,7 +57,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{42e4e9fd}": {
+	"Characters/TFT11_Tristana/Spells/TFT11_TristanaBasicAttack": {
 		"mScriptName": "TFT11_TristanaBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -115,7 +115,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{78d1863d}": {
+	"Characters/TFT11_Tristana/Spells/TFT11_TristanaCritAttack": {
 		"mScriptName": "TFT11_TristanaCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -173,7 +173,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{7e882901}": {
+	"Characters/TFT11_Tristana/Spells/TFT11_TristanaSpell": {
 		"mScriptName": "TFT11_TristanaSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 6351,
@@ -301,7 +301,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{c4af2f84}": {
+	"Characters/TFT11_Tristana/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Tristana",
 		"baseHP": 700,
 		"baseStaticHPRegen": 0,

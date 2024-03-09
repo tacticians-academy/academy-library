@@ -1,5 +1,5 @@
 {
-	"{72262fb0}": {
+	"Characters/TFT11_Zyra/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Zyra",
 		"baseHP": 600,
 		"baseStaticHPRegen": 0,
@@ -17,7 +17,7 @@
 		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
 		"attackRange": 890,
-		"attackSpeed": 0.699999988079071,
+		"attackSpeed": 0.75,
 		"basicAttack": {
 			"mAttackProbability": 0.5,
 			"mAttackName": "TFT11_ZyraBasicAttack",
@@ -60,10 +60,10 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 20,
+		"mInitialMana": 30,
 		"__type": "TFTCharacterRecord"
 	},
-	"{72964259}": {
+	"Characters/TFT11_Zyra/Spells/TFT11_ZyraCritAttack": {
 		"mScriptName": "TFT11_ZyraCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 8143,
@@ -112,7 +112,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{819d55f1}": {
+	"Characters/TFT11_Zyra/Spells/TFT11_ZyraBasicAttack2": {
 		"mScriptName": "TFT11_ZyraBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 8143,
@@ -161,7 +161,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{88f30cd9}": {
+	"Characters/TFT11_Zyra/Spells/TFT11_ZyraBasicAttack": {
 		"mScriptName": "TFT11_ZyraBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 8143,
@@ -210,7 +210,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{94a8e8d5}": {
+	"Characters/TFT11_Zyra/Spells/TFT11_ZyraSpell": {
 		"mScriptName": "TFT11_ZyraSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 8193,

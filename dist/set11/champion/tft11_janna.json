@@ -70,7 +70,7 @@
 			},
 			"mCastType": 8,
 			"missileSpeed": 1600,
-			"mMissileEffectKey": "{1ac35ef4}",
+			"mMissileEffectKey": "TFT11_Janna_Q_mis",
 			"mHitEffectKey": "{f9914762}",
 			"mFloatVarsDecimals": [
 				-1,
@@ -96,7 +96,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{38e6d235}": {
+	"Characters/TFT11_Janna/Spells/TFT11_JannaBasicAttack2": {
 		"mScriptName": "TFT11_JannaBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 7375,
@@ -157,7 +157,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{94476bf5}": {
+	"Characters/TFT11_Janna/Spells/TFT11_JannaCritAttack": {
 		"mScriptName": "TFT11_JannaCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 7375,
@@ -216,7 +216,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{96d2d1c9}": {
+	"Characters/TFT11_Janna/Spells/TFT11_JannaSpell": {
 		"mScriptName": "TFT11_JannaSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 7183,
@@ -252,9 +252,9 @@
 					"mName": "Shield",
 					"mValues": [
 						0,
-						150,
-						200,
-						250,
+						120,
+						170,
+						220,
 						160,
 						200,
 						240
@@ -265,9 +265,9 @@
 					"mName": "BaseDamage",
 					"mValues": [
 						0,
-						140,
-						210,
-						315,
+						180,
+						270,
+						415,
 						0,
 						0,
 						0
@@ -440,8 +440,8 @@
 			"mCastType": 8,
 			"castFrame": 8.5,
 			"missileSpeed": 1600,
-			"mMissileEffectKey": "{1ac35ef4}",
-			"mHitEffectKey": "{0782f330}",
+			"mMissileEffectKey": "TFT11_Janna_Q_mis",
+			"mHitEffectKey": "TFT11_Janna_Q_tar",
 			"mFloatVarsDecimals": [
 				-1,
 				-1,
@@ -466,7 +466,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{d4e35a25}": {
+	"Characters/TFT11_Janna/Spells/TFT11_JannaBasicAttack": {
 		"mScriptName": "TFT11_JannaBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 7375,
@@ -528,7 +528,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{22c3167a}": {
+	"Characters/TFT11_Janna/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Janna",
 		"baseHP": 600,
 		"baseStaticHPRegen": 0,
@@ -546,7 +546,7 @@
 		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
 		"attackRange": 890,
-		"attackSpeed": 0.699999988079071,
+		"attackSpeed": 0.75,
 		"basicAttack": {
 			"mAttackProbability": 0.5,
 			"mAttackName": "TFT11_JannaBasicAttack",

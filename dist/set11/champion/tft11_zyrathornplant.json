@@ -1,5 +1,5 @@
 {
-	"{2b4aa7e2}": {
+	"Characters/TFT11_ZyraThornPlant/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_ZyraThornPlant",
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
@@ -44,7 +44,7 @@
 		"mMoveHeight": 0,
 		"__type": "TFTCharacterRecord"
 	},
-	"{4587963d}": {
+	"Characters/TFT11_ZyraThornPlant/Spells/TFT11_ZyraThornPlantBasicAttack": {
 		"mScriptName": "TFT11_ZyraThornPlantBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 24575,

@@ -691,7 +691,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `socialite`,
 		name: `Socialite Heart/Soul`,
 		tiers: [1, 3],
-		description: `1: Your team counts as having 1 additional Socialite.   3: Your team counts as having 2 additional Socialites.`,
+		description: `1: Your team counts as having 1 additional Socialite.  3: Your team counts as having 2 additional Socialites.`,
 		icons: [`assets/maps/particles/tft/item_icons/augments/hexcore/socialiteheart1.tft_set6`, `assets/maps/particles/tft/item_icons/augments/hexcore/socialitesoul3.tft_set6`],
 	},
 	{

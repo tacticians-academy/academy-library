@@ -1,5 +1,5 @@
 {
-	"{1c8bd0bd}": {
+	"Characters/TFT11_Caitlyn/Spells/TFT11_CaitlynBasicAttack": {
 		"mScriptName": "TFT11_CaitlynBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -58,7 +58,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{6f22a8c1}": {
+	"Characters/TFT11_Caitlyn/Spells/TFT11_CaitlynSpell": {
 		"mScriptName": "TFT11_CaitlynSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 22538,
@@ -208,7 +208,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{7f19511d}": {
+	"Characters/TFT11_Caitlyn/Spells/TFT11_CaitlynBasicAttack2": {
 		"mScriptName": "TFT11_CaitlynBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -267,7 +267,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{bcd720fd}": {
+	"Characters/TFT11_Caitlyn/Spells/TFT11_CaitlynCritAttack": {
 		"mScriptName": "TFT11_CaitlynCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -326,13 +326,13 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{613c22f2}": {
+	"Characters/TFT11_Caitlyn/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Caitlyn",
 		"baseHP": 500,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 120,
+			"arBase": 105,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
@@ -385,7 +385,7 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 10,
+		"{22f5197d}": 150,
 		"__type": "TFTCharacterRecord"
 	}
 }

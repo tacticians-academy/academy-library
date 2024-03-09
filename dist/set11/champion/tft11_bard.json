@@ -1,5 +1,5 @@
 {
-	"{3a30c165}": {
+	"Characters/TFT11_Bard/Spells/TFT11_BardBasicAttack": {
 		"mScriptName": "TFT11_BardBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -56,7 +56,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{a2fbb109}": {
+	"Characters/TFT11_Bard/Spells/TFT11_BardSpell": {
 		"mScriptName": "TFT11_BardSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 8192,
@@ -372,7 +372,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{bb643c35}": {
+	"Characters/TFT11_Bard/Spells/TFT11_BardCritAttack": {
 		"mScriptName": "TFT11_BardCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -496,7 +496,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{f1c05bf5}": {
+	"Characters/TFT11_Bard/Spells/TFT11_BardBasicAttack2": {
 		"mScriptName": "TFT11_BardBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -616,7 +616,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{c90ff9ab}": {
+	"Characters/TFT11_Bard/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Bard",
 		"baseHP": 650,
 		"baseStaticHPRegen": 0,
@@ -634,7 +634,7 @@
 		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
 		"attackRange": 890,
-		"attackSpeed": 0.75,
+		"attackSpeed": 0.800000011920929,
 		"basicAttack": {
 			"mAttackProbability": 0.5,
 			"mAttackName": "TFT11_BardBasicAttack",

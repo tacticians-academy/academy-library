@@ -88,7 +88,9 @@ export const traits: TraitData[] = [
 				maxUnits: 25000,
 				minUnits: 1,
 				style: 6,
-				variables: {},
+				variables: {
+					'{b11aeccf}': null,
+				},
 			},
 		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_11_Artist.TFT_Set11.tex`,
@@ -104,7 +106,7 @@ export const traits: TraitData[] = [
 				style: 1,
 				variables: {
 					'BonusPercent': 0.5,
-					'Defenses': 30,
+					'Defenses': 25,
 					'Duration': 5,
 					'{2af8e84f}': 1,
 				},
@@ -126,7 +128,7 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'BonusPercent': 0.5,
-					'Defenses': 80,
+					'Defenses': 75,
 					'Duration': 5,
 					'{2af8e84f}': 1,
 				},
@@ -145,7 +147,7 @@ export const traits: TraitData[] = [
 				style: 1,
 				variables: {
 					'BonusPercentHP': 0.20000000298023224,
-					'RefreshSeconds': 4,
+					'RefreshSeconds': 3,
 					'{1805b335}': 100,
 					'{f1fe5117}': null,
 				},
@@ -156,7 +158,7 @@ export const traits: TraitData[] = [
 				style: 3,
 				variables: {
 					'BonusPercentHP': 0.4000000059604645,
-					'RefreshSeconds': 4,
+					'RefreshSeconds': 3,
 					'{1805b335}': 100,
 					'{f1fe5117}': null,
 				},
@@ -166,8 +168,8 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 3,
 				variables: {
-					'BonusPercentHP': 0.699999988079071,
-					'RefreshSeconds': 4,
+					'BonusPercentHP': 0.6499999761581421,
+					'RefreshSeconds': 3,
 					'{1805b335}': 100,
 					'{f1fe5117}': null,
 				},
@@ -177,8 +179,8 @@ export const traits: TraitData[] = [
 				minUnits: 8,
 				style: 4,
 				variables: {
-					'BonusPercentHP': 0.8500000238418579,
-					'RefreshSeconds': 4,
+					'BonusPercentHP': 0.800000011920929,
+					'RefreshSeconds': 3,
 					'{1805b335}': 100,
 					'{f1fe5117}': 0.05999999865889549,
 				},
@@ -226,7 +228,7 @@ export const traits: TraitData[] = [
 					'{16c2de34}': 8,
 					'{6dd7a6a9}': 0.30000001192092896,
 					'{81ce23cf}': 3,
-					'{ced35b7b}': 0.15000000596046448,
+					'{ced35b7b}': 0.11999999731779099,
 				},
 			},
 			{
@@ -239,7 +241,7 @@ export const traits: TraitData[] = [
 					'{16c2de34}': 8,
 					'{6dd7a6a9}': 0.4000000059604645,
 					'{81ce23cf}': 3,
-					'{ced35b7b}': 0.25,
+					'{ced35b7b}': 0.18000000715255737,
 				},
 			},
 		],
@@ -248,7 +250,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `TFT11_Dryad`,
-		desc: `Dryads gain Ability Power and @StartingHP@ HP. Each enemy death grants additional HP.<br><br><expandRow>(@MinUnits@) @AP@&nbsp;%i:scaleAP%; @HPPerCompost@&nbsp;%i:scaleHP% per enemy death</expandRow><br><br><TFTTrackerLabel>(Total HP: @TFTUnitProperty.trait:TFT11_Trait_DryadHP@&nbsp;%i:scaleHP%)</TFTTrackerLabel><br><TFTTrackerLabel>(Enemies killed: @TFTUnitProperty.trait:TFT11_Trait_DryadCompost@)</TFTTrackerLabel><br>`,
+		desc: `Dryads gain Ability Power and @StartingHP@ HP. Each enemy death grants permanent additional HP.<br><br><expandRow>(@MinUnits@) @AP@&nbsp;%i:scaleAP%; @HPPerCompost@&nbsp;%i:scaleHP% per enemy death</expandRow><br><br><TFTTrackerLabel>(Total HP: @TFTUnitProperty.trait:TFT11_Trait_DryadHP@&nbsp;%i:scaleHP%)</TFTTrackerLabel><br><TFTTrackerLabel>(Enemies killed: @TFTUnitProperty.trait:TFT11_Trait_DryadCompost@)</TFTTrackerLabel><br>`,
 		effects: [
 			{
 				maxUnits: 3,
@@ -257,10 +259,10 @@ export const traits: TraitData[] = [
 				variables: {
 					'AP': 10,
 					'Duration': 4,
-					'StartingHP': 100,
-					'{01c433db}': 8,
-					'{7055c521}': 4,
-					'{d7c784e1}': 100,
+					'StartingHP': 200,
+					'{01c433db}': 4,
+					'{7055c521}': 2,
+					'{d7c784e1}': 200,
 				},
 			},
 			{
@@ -268,12 +270,12 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 4,
 				variables: {
-					'AP': 20,
+					'AP': 30,
 					'Duration': 4,
-					'StartingHP': 100,
-					'{01c433db}': 16,
-					'{7055c521}': 8,
-					'{d7c784e1}': 100,
+					'StartingHP': 200,
+					'{01c433db}': 10,
+					'{7055c521}': 5,
+					'{d7c784e1}': 200,
 				},
 			},
 			{
@@ -281,12 +283,12 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 4,
 				variables: {
-					'AP': 40,
+					'AP': 60,
 					'Duration': 4,
-					'StartingHP': 100,
-					'{01c433db}': 24,
-					'{7055c521}': 12,
-					'{d7c784e1}': 100,
+					'StartingHP': 200,
+					'{01c433db}': 18,
+					'{7055c521}': 9,
+					'{d7c784e1}': 200,
 				},
 			},
 		],
@@ -295,7 +297,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `TFT11_Duelist`,
-		desc: `Duelists gain Attack&nbsp;Speed on each attack, stacking up to @MaxStacks@&nbsp;times.<br><br><row>(@MinUnits@) @ASPercent*100@%&nbsp;%i:scaleAS%</row><br><row>(@MinUnits@) @ASPercent*100@%&nbsp;%i:scaleAS%</row><br><row>(@MinUnits@) @ASPercent*100@%&nbsp;%i:scaleAS%; Duelists take @DamageReduction*100@%&nbsp;less damage</row>`,
+		desc: `Duelists gain Attack&nbsp;Speed on each attack, stacking up to @MaxStacks@&nbsp;times.<br><br><row>(@MinUnits@) @ASPercent*100@%&nbsp;%i:scaleAS%</row><br><row>(@MinUnits@) @ASPercent*100@%&nbsp;%i:scaleAS%</row><br><row>(@MinUnits@) @ASPercent*100@%&nbsp;%i:scaleAS%; Duelists take @DamageReduction*100@%&nbsp;less damage</row><br><row>(@MinUnits@) @ASPercent*100@%&nbsp;%i:scaleAS%; Duelists take @DamageReduction*100@%&nbsp;less damage</row>`,
 		effects: [
 			{
 				maxUnits: 3,
@@ -318,12 +320,22 @@ export const traits: TraitData[] = [
 				},
 			},
 			{
-				maxUnits: 25000,
+				maxUnits: 7,
 				minUnits: 6,
 				style: 4,
 				variables: {
-					'ASPercent': 0.12999999523162842,
-					'DamageReduction': 0.12999999523162842,
+					'ASPercent': 0.14000000059604645,
+					'DamageReduction': 0.15000000596046448,
+					'MaxStacks': 12,
+				},
+			},
+			{
+				maxUnits: 25000,
+				minUnits: 8,
+				style: 4,
+				variables: {
+					'ASPercent': 0.2199999988079071,
+					'DamageReduction': 0.23999999463558197,
 					'MaxStacks': 12,
 				},
 			},
@@ -340,8 +352,8 @@ export const traits: TraitData[] = [
 				minUnits: 3,
 				style: 3,
 				variables: {
-					'BaseDamageAmp': 5,
-					'{0bdf8b4c}': 2,
+					'BaseDamageAmp': 2,
+					'{0bdf8b4c}': 1,
 					'{33039b9d}': 2,
 					'{ca5fd6df}': 1,
 					'{cd355b65}': 1,
@@ -352,11 +364,11 @@ export const traits: TraitData[] = [
 				minUnits: 5,
 				style: 4,
 				variables: {
-					'BaseDamageAmp': 5,
-					'{0bdf8b4c}': 2,
+					'BaseDamageAmp': 2,
+					'{0bdf8b4c}': 1,
 					'{33039b9d}': 2,
 					'{ca5fd6df}': 3,
-					'{cd355b65}': 3,
+					'{cd355b65}': 2.5,
 				},
 			},
 		],
@@ -385,7 +397,7 @@ export const traits: TraitData[] = [
 				style: 3,
 				variables: {
 					'{55f4e448}': 0.20000000298023224,
-					'{70b30b55}': 1.5,
+					'{70b30b55}': 1.75,
 					'{89fffd48}': 1,
 					'{e84b7a40}': 0.20000000298023224,
 					'{f75cc2d4}': 1,
@@ -397,7 +409,7 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'{55f4e448}': 0.20000000298023224,
-					'{70b30b55}': 2.5,
+					'{70b30b55}': 2.75,
 					'{89fffd48}': 1,
 					'{e84b7a40}': 0.20000000298023224,
 					'{f75cc2d4}': 1,
@@ -429,7 +441,7 @@ export const traits: TraitData[] = [
 				style: 1,
 				variables: {
 					'Heal': null,
-					'WinPenalty': 0.33000001311302185,
+					'WinPenalty': 0.20000000298023224,
 					'{02dd7588}': 5,
 					'{03dd771b}': 4,
 					'{04dd78ae}': 4,
@@ -438,6 +450,8 @@ export const traits: TraitData[] = [
 					'{07dd7d67}': 1,
 					'{1483b8b4}': 1,
 					'{15b17b97}': null,
+					'{5da364e1}': null,
+					'{5ec17b88}': null,
 					'{7b8c990e}': 6,
 				},
 			},
@@ -446,8 +460,8 @@ export const traits: TraitData[] = [
 				minUnits: 5,
 				style: 4,
 				variables: {
-					'Heal': 2,
-					'WinPenalty': 0.33000001311302185,
+					'Heal': 3,
+					'WinPenalty': 0.20000000298023224,
 					'{02dd7588}': 5,
 					'{03dd771b}': 4,
 					'{04dd78ae}': 4,
@@ -456,6 +470,8 @@ export const traits: TraitData[] = [
 					'{07dd7d67}': 1,
 					'{1483b8b4}': 1,
 					'{15b17b97}': null,
+					'{5da364e1}': 1,
+					'{5ec17b88}': 1,
 					'{7b8c990e}': 6,
 				},
 			},
@@ -464,7 +480,7 @@ export const traits: TraitData[] = [
 				minUnits: 7,
 				style: 4,
 				variables: {
-					'Heal': 2,
+					'Heal': 3,
 					'WinPenalty': null,
 					'{02dd7588}': 5,
 					'{03dd771b}': 4,
@@ -473,6 +489,8 @@ export const traits: TraitData[] = [
 					'{06dd7bd4}': 3,
 					'{07dd7d67}': 1,
 					'{1483b8b4}': 1,
+					'{5da364e1}': 1,
+					'{5ec17b88}': 1,
 					'{7b8c990e}': 1,
 					'{ac1f138b}': 30,
 				},
@@ -502,7 +520,7 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 3,
 				variables: {
-					'DamagePercent': 0.09000000357627869,
+					'DamagePercent': 0.11999999731779099,
 					'HealingPercent': 0.029999999329447746,
 					'TickRate': 2,
 					'{28b401f9}': 7,
@@ -514,7 +532,7 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 4,
 				variables: {
-					'DamagePercent': 0.15000000596046448,
+					'DamagePercent': 0.18000000715255737,
 					'HealingPercent': 0.029999999329447746,
 					'TickRate': 2,
 					'{28b401f9}': 7,
@@ -526,7 +544,7 @@ export const traits: TraitData[] = [
 				minUnits: 8,
 				style: 4,
 				variables: {
-					'DamagePercent': 0.30000001192092896,
+					'DamagePercent': 0.27000001072883606,
 					'HealingPercent': 0.029999999329447746,
 					'TickRate': 2,
 					'{28b401f9}': 7,
@@ -598,7 +616,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'{13f889ae}': 1.5,
 					'{19e47528}': 10,
-					'{23a9da9c}': 1.399999976158142,
+					'{23a9da9c}': 1.350000023841858,
 					'{26ac6bc4}': 1.899999976158142,
 					'{3c9e3624}': 3,
 					'{414a2beb}': 10,
@@ -632,7 +650,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'{13f889ae}': 1.5,
 					'{19e47528}': 10,
-					'{23a9da9c}': 1.899999976158142,
+					'{23a9da9c}': 1.9500000476837158,
 					'{26ac6bc4}': 1.899999976158142,
 					'{3c9e3624}': 3,
 					'{414a2beb}': 10,
@@ -649,7 +667,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'{13f889ae}': 1.5,
 					'{19e47528}': 10,
-					'{23a9da9c}': 2.200000047683716,
+					'{23a9da9c}': 2.25,
 					'{26ac6bc4}': 1.899999976158142,
 					'{3c9e3624}': 3,
 					'{414a2beb}': 10,
@@ -665,7 +683,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `TFT11_InkShadow`,
-		desc: `Gain unique Inkshadow items. Inkshadow champions gain bonus damage and damage reduction.<br><br><row>(@MinUnits@) @TFTUnitProperty.trait:TFT11_Trait_Inkshadow_Item1@, @PercentBuff@% bonus damage and damage reduction </row><br><row>(@MinUnits@) @TFTUnitProperty.trait:TFT11_Trait_Inkshadow_Item2@, @PercentBuff@% bonus damage and damage reduction </row><br><row>(@MinUnits@) @TFTUnitProperty.trait:TFT11_Trait_Inkshadow_Item3@ and @TFTUnitProperty.trait:TFT11_Trait_Inkshadow_Item4@, @PercentBuff@% bonus damage and damage reduction </row>`,
+		desc: `Gain unique Inkshadow items. Inkshadow champions gain @PercentBuff@% bonus damage and damage reduction.<br><br><row>(@MinUnits@) @TFTUnitProperty.trait:TFT11_Trait_Inkshadow_Item1@</row><br><row>(@MinUnits@) @TFTUnitProperty.trait:TFT11_Trait_Inkshadow_Item2@ and @IncreasedPercentBuff@% more bonus damage and damage reduction </row><br><row>(@MinUnits@) @TFTUnitProperty.trait:TFT11_Trait_Inkshadow_Item3@ and @TFTUnitProperty.trait:TFT11_Trait_Inkshadow_Item4@</row>`,
 		effects: [
 			{
 				maxUnits: 4,
@@ -673,6 +691,7 @@ export const traits: TraitData[] = [
 				style: 1,
 				variables: {
 					'{1e9458af}': 5,
+					'{20436879}': null,
 					'{5ff50860}': 1,
 				},
 			},
@@ -681,7 +700,8 @@ export const traits: TraitData[] = [
 				minUnits: 5,
 				style: 3,
 				variables: {
-					'{1e9458af}': 7,
+					'{1e9458af}': 5,
+					'{20436879}': 5,
 					'{5ff50860}': 2,
 				},
 			},
@@ -690,7 +710,8 @@ export const traits: TraitData[] = [
 				minUnits: 7,
 				style: 4,
 				variables: {
-					'{1e9458af}': 10,
+					'{1e9458af}': 5,
+					'{20436879}': 5,
 					'{5ff50860}': 4,
 				},
 			},
@@ -730,9 +751,9 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'TeamAP': null,
-					'TeamMana': 15,
+					'TeamMana': 20,
 					'TickRate': 3,
-					'{c0b7f372}': 30,
+					'{c0b7f372}': 45,
 				},
 			},
 		],
@@ -820,7 +841,7 @@ export const traits: TraitData[] = [
 				style: 1,
 				variables: {
 					'AS': 0.30000001192092896,
-					'DR': 0.15000000596046448,
+					'DR': 0.20000000298023224,
 					'Duration': 4,
 				},
 			},
@@ -830,7 +851,7 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'AS': 0.6000000238418579,
-					'DR': 0.20000000298023224,
+					'DR': 0.30000001192092896,
 					'Duration': 4,
 				},
 			},
@@ -840,7 +861,7 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'AS': 1,
-					'DR': 0.3499999940395355,
+					'DR': 0.5,
 					'Duration': 4,
 				},
 			},
@@ -850,7 +871,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `TFT11_Reaper`,
-		desc: `<row>(@MinUnits@) Reapers' Abilities can critically strike and they gain @CritChance*100@% Critical Strike Chance.</row><br><row>(@MinUnits@) Additionally, Reapers' bleed enemies for @BleedDamage*100@% bonus true damage over @Duration@&nbsp;seconds.</row><br>`,
+		desc: `<row>(@MinUnits@) Reapers Abilities can critically strike and they gain @CritChance*100@% Critical Strike Chance.</row><br><row>(@MinUnits@) Additionally, Reapers' bleed enemies for @BleedDamage*100@% bonus true damage over @Duration@&nbsp;seconds.</row><br>`,
 		effects: [
 			{
 				maxUnits: 3,
@@ -886,7 +907,7 @@ export const traits: TraitData[] = [
 				style: 1,
 				variables: {
 					'APAmount': 15,
-					'Omnivamp': 0.15000000596046448,
+					'Omnivamp': 0.11999999731779099,
 				},
 			},
 			{
@@ -895,7 +916,7 @@ export const traits: TraitData[] = [
 				style: 3,
 				variables: {
 					'APAmount': 30,
-					'Omnivamp': 0.2199999988079071,
+					'Omnivamp': 0.20000000298023224,
 				},
 			},
 			{
@@ -922,7 +943,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `TFT11_Sniper`,
-		desc: `Innate: Snipers gain @HexRangeIncrease@&nbsp;Attack&nbsp;Range. <br><br>Snipers deal more damage to targets farther away.<br><br><expandRow>(@MinUnits@) @PercentDamageIncrease@%&nbsp;damage per hex.</expandRow>`,
+		desc: `Innate: Snipers gain @HexRangeIncrease@&nbsp;Attack&nbsp;Range. <br><br>Snipers deal more damage to targets farther away.<br><br><row>(@MinUnits@) @PercentDamageIncrease@%&nbsp;damage per hex.</row><br><row>(@MinUnits@) @PercentDamageIncrease@%&nbsp;damage per hex.</row><br><row>(@MinUnits@) @PercentDamageIncrease@%&nbsp;damage per hex. Snipers gain an additional @BonusHexRangeIncrease@ Attack Range.</row>`,
 		effects: [
 			{
 				maxUnits: 3,
@@ -931,6 +952,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'HexRangeIncrease': 1,
 					'PercentDamageIncrease': 7,
+					'{7db0ae46}': null,
 				},
 			},
 			{
@@ -940,6 +962,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'HexRangeIncrease': 1,
 					'PercentDamageIncrease': 14,
+					'{7db0ae46}': null,
 				},
 			},
 			{
@@ -949,6 +972,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'HexRangeIncrease': 1,
 					'PercentDamageIncrease': 30,
+					'{7db0ae46}': 2,
 				},
 			},
 		],
@@ -975,7 +999,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `TFT11_Storyweaver`,
-		desc: `Storyweavers summon a Hero named Kayle and evolve her. Storyweavers gain max HP.<br><br><row>(@MinUnits@) Pick a supportive effect. @HP@&nbsp;%i:scaleHP%</row><br><row>(@MinUnits@) Pick a combat effect. @HP@&nbsp;%i:scaleHP%</row><br><row>(@MinUnits@) Pick a combat effect. @HP@&nbsp;%i:scaleHP%</row><br><row>(@MinUnits@) Ascend. @HP@&nbsp;%i:scaleHP%</row><br><br><rules>Each Storyweaver star level increases Kayles HP and Ability Power. Kayle gets @BonusAAPerStage*100@% Attack Speed for each game Stage.</rules>`,
+		desc: `Storyweavers summon a Hero named Kayle and evolve her. Storyweavers gain max HP.<br><br><row>(@MinUnits@) Pick a supportive effect. @HP@&nbsp;%i:scaleHP%</row><br><row>(@MinUnits@) Pick a combat effect. @HP@&nbsp;%i:scaleHP%</row><br><row>(@MinUnits@) Pick a combat effect. @HP@&nbsp;%i:scaleHP%</row><br><row>(@MinUnits@) Ascend. @HP@&nbsp;%i:scaleHP%</row><br><br><rules>Each Storyweaver star level increases Kayle's HP and Ability Power. Kayle gets @BonusAAPerStage*100@% Attack Speed for each game Stage.</rules>`,
 		effects: [
 			{
 				maxUnits: 4,
@@ -1068,7 +1092,7 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'MaxBounces': 2,
-					'PercentDamage': 0.5,
+					'PercentDamage': 0.6000000238418579,
 				},
 			},
 		],
@@ -1091,8 +1115,8 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
-					'ShieldAmount': 250,
-					'{688965b1}': 12,
+					'ShieldAmount': 200,
+					'{688965b1}': 10,
 					'{c41e08a6}': null,
 				},
 			},
@@ -1101,8 +1125,8 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 3,
 				variables: {
-					'ShieldAmount': 400,
-					'{688965b1}': 20,
+					'ShieldAmount': 450,
+					'{688965b1}': 15,
 					'{c41e08a6}': null,
 				},
 			},
@@ -1112,7 +1136,7 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'ShieldAmount': 750,
-					'{688965b1}': 20,
+					'{688965b1}': 15,
 					'{c41e08a6}': null,
 				},
 			},

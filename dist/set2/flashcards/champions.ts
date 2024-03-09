@@ -1170,33 +1170,6 @@ export const championFlashcards: ChampionFlashcard[] = [
 		},
 	},
 	{
-		id: `TFT2_QiyanaOcean`,
-		name: `Qiyana`,
-		stats: {
-			armor: 25,
-			attackSpeed: 0.699999988079071,
-			critChance: 0.25,
-			critMultiplier: 1.5,
-			damage: 65,
-			hp: 650,
-			initialMana: 50,
-			magicResist: 20,
-			mana: 100,
-			moveSpeed: 550,
-			range: 1,
-		},
-		icon: `assets/ux/tft/championsplashes/tft2_qiyana.tft_set2`,
-		ability: {
-			name: `Elemental Blade`,
-			variables: {
-				'BaseDamage': [100, 300, 500, 900],
-				'CCDuration': [1.5, 2.5, 3.5, 4.5],
-			},
-			description: `Qiyana blasts a short line in front of her, stunning enemies for 2.5/3.5/4.5 seconds and dealing 300/500/900 magic damage.`,
-			icon: `assets/characters/qiyana/hud/icons2d/qiyana_q2_blue`,
-		},
-	},
-	{
 		id: `TFT2_QiyanaInferno`,
 		name: `Qiyana`,
 		stats: {
@@ -1224,7 +1197,7 @@ export const championFlashcards: ChampionFlashcard[] = [
 		},
 	},
 	{
-		id: `TFT2_QiyanaWoodland`,
+		id: `TFT2_QiyanaOcean`,
 		name: `Qiyana`,
 		stats: {
 			armor: 25,
@@ -1247,7 +1220,7 @@ export const championFlashcards: ChampionFlashcard[] = [
 				'CCDuration': [1.5, 2.5, 3.5, 4.5],
 			},
 			description: `Qiyana blasts a short line in front of her, stunning enemies for 2.5/3.5/4.5 seconds and dealing 300/500/900 magic damage.`,
-			icon: `assets/characters/qiyana/hud/icons2d/qiyana_q2_green`,
+			icon: `assets/characters/qiyana/hud/icons2d/qiyana_q2_blue`,
 		},
 	},
 	{
@@ -1275,6 +1248,33 @@ export const championFlashcards: ChampionFlashcard[] = [
 			},
 			description: `Qiyana blasts a short line in front of her, stunning enemies for 2.5/3.5/4.5 seconds and dealing 300/500/900 magic damage.`,
 			icon: `assets/characters/qiyana/hud/icons2d/qiyana_q1`,
+		},
+	},
+	{
+		id: `TFT2_QiyanaWoodland`,
+		name: `Qiyana`,
+		stats: {
+			armor: 25,
+			attackSpeed: 0.699999988079071,
+			critChance: 0.25,
+			critMultiplier: 1.5,
+			damage: 65,
+			hp: 650,
+			initialMana: 50,
+			magicResist: 20,
+			mana: 100,
+			moveSpeed: 550,
+			range: 1,
+		},
+		icon: `assets/ux/tft/championsplashes/tft2_qiyana.tft_set2`,
+		ability: {
+			name: `Elemental Blade`,
+			variables: {
+				'BaseDamage': [100, 300, 500, 900],
+				'CCDuration': [1.5, 2.5, 3.5, 4.5],
+			},
+			description: `Qiyana blasts a short line in front of her, stunning enemies for 2.5/3.5/4.5 seconds and dealing 300/500/900 magic damage.`,
+			icon: `assets/characters/qiyana/hud/icons2d/qiyana_q2_green`,
 		},
 	},
 	{

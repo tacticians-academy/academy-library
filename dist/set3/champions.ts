@@ -5913,15 +5913,6 @@ export const abilities: Record<string, AbilityData> = {
 			'WaveDamage': [0, 125, 200, 600],
 		},
 	},
-	'TFT3_NPC_KaynElite': {
-		desc: `Kayn temporarily infests the furthest enemy, dealing @TargetDamage@ to the target when he bursts out.`,
-		icon: `ASSETS/Characters/Kayn/HUD/Icons2D/Kayn_W_Primary.dds`,
-		name: `Umbral Trespass`,
-		variables: {
-			'TargetDamage': [1500, 1500, 1500, 1500],
-			'AOEDamage': [],
-		},
-	},
 	'TFT3_NPC_Kayn': {
 		desc: `Kayn swings his scythe, dealing @Damage@ to enemies in a line. `,
 		icon: `ASSETS/Characters/Kayn/HUD/Icons2D/Kayn_W_Primary.dds`,
@@ -5930,6 +5921,15 @@ export const abilities: Record<string, AbilityData> = {
 			'Damage': [200, 200, 200, 200],
 			'BoxWidth': [160, 160, 160, 160],
 			'Range': [700, 700, 700, 700],
+		},
+	},
+	'TFT3_NPC_KaynElite': {
+		desc: `Kayn temporarily infests the furthest enemy, dealing @TargetDamage@ to the target when he bursts out.`,
+		icon: `ASSETS/Characters/Kayn/HUD/Icons2D/Kayn_W_Primary.dds`,
+		name: `Umbral Trespass`,
+		variables: {
+			'TargetDamage': [1500, 1500, 1500, 1500],
+			'AOEDamage': [],
 		},
 	},
 	'TFT3_KhaZix': {

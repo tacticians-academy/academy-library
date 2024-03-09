@@ -1,5 +1,5 @@
 {
-	"{5cadd611}": {
+	"Characters/TFT11_Shen/Spells/TFT11_ShenCritAttack": {
 		"mScriptName": "TFT11_ShenCritAttack",
 		"mSpell": {
 			"bHaveHitEffect": true,
@@ -11,7 +11,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{6b8d35a1}": {
+	"Characters/TFT11_Shen/Spells/TFT11_ShenBasicAttack": {
 		"mScriptName": "TFT11_ShenBasicAttack",
 		"mSpell": {
 			"bHaveHitEffect": true,
@@ -23,7 +23,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{c1b57c7d}": {
+	"Characters/TFT11_Shen/Spells/TFT11_ShenSpell": {
 		"mScriptName": "TFT11_ShenSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 11333,
@@ -177,7 +177,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{e24b5669}": {
+	"Characters/TFT11_Shen/Spells/TFT11_ShenBasicAttack2": {
 		"mScriptName": "TFT11_ShenBasicAttack2",
 		"mSpell": {
 			"bHaveHitEffect": true,
@@ -189,7 +189,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{9e974bf4}": {
+	"Characters/TFT11_Shen/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Shen",
 		"baseHP": 800,
 		"baseStaticHPRegen": 0,

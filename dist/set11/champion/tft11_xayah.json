@@ -1,5 +1,5 @@
 {
-	"{10b115b7}": {
+	"Characters/TFT11_Xayah/Spells/TFT11_XayahSpell": {
 		"mScriptName": "TFT11_XayahSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 7183,
@@ -245,14 +245,23 @@
 						],
 						"mTriggerName": "MissileYeet",
 						"__type": "TriggerFromScript"
+					},
+					{
+						"mActions": [
+							{
+								"__type": "Destroy"
+							}
+						],
+						"mDelay": 2,
+						"__type": "TriggerOnDelay"
 					}
 				],
 				"__type": "MissileSpecification"
 			},
 			"mCastType": 1,
 			"missileSpeed": 2500,
-			"mMissileEffectKey": "{6c7c185b}",
-			"mHitEffectKey": "{c246e95f}",
+			"mMissileEffectKey": "TFT11_Xayah_Q_Mis",
+			"mHitEffectKey": "TFT11_Xayah_Q_tar",
 			"bHaveHitBone": true,
 			"mHitBoneName": "C_Buffbone_Glb_Center_Loc",
 			"mTargetingTypeData": {
@@ -262,7 +271,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{4eafec23}": {
+	"Characters/TFT11_Xayah/Spells/TFT11_XayahBasicAttack": {
 		"mScriptName": "TFT11_XayahBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 6154,
@@ -322,7 +331,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{bf05134b}": {
+	"Characters/TFT11_Xayah/Spells/TFT11_XayahCritAttack": {
 		"mScriptName": "TFT11_XayahCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 6154,
@@ -433,7 +442,7 @@
 			},
 			"mCastType": 1,
 			"missileSpeed": 2500,
-			"mMissileEffectKey": "{dc8f376f}",
+			"mMissileEffectKey": "TFT11_Xayah_E_mis",
 			"bHaveHitBone": true,
 			"mHitBoneName": "C_Buffbone_Glb_Center_Loc",
 			"mTargetingTypeData": {
@@ -443,7 +452,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{eef09d30}": {
+	"Characters/TFT11_Xayah/Spells/TFT11_XayahBasicAttack3": {
 		"mScriptName": "TFT11_XayahBasicAttack3",
 		"mSpell": {
 			"mAffectsTypeFlags": 6154,
@@ -503,7 +512,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{eff09ec3}": {
+	"Characters/TFT11_Xayah/Spells/TFT11_XayahBasicAttack2": {
 		"mScriptName": "TFT11_XayahBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 6154,
@@ -563,7 +572,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{f5f0a835}": {
+	"Characters/TFT11_Xayah/Spells/TFT11_XayahBasicAttack4": {
 		"mScriptName": "TFT11_XayahBasicAttack4",
 		"mSpell": {
 			"mAffectsTypeFlags": 7919,
@@ -623,7 +632,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{4569e425}": {
+	"Characters/TFT11_Xayah/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Xayah",
 		"baseHP": 850,
 		"baseStaticHPRegen": 0,

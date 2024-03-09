@@ -1,5 +1,5 @@
 {
-	"{078ab80e}": {
+	"Characters/TFT11_Gnar/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Gnar",
 		"baseHP": 700,
 		"baseStaticHPRegen": 0,
@@ -62,9 +62,10 @@
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
 		"mInitialMana": 10,
+		"{22f5197d}": 75,
 		"__type": "TFTCharacterRecord"
 	},
-	"{2871884d}": {
+	"Characters/TFT11_Gnar/Spells/TFT11_GnarCritAttack": {
 		"mScriptName": "TFT11_GnarCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 7375,
@@ -100,7 +101,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{aa1027cd}": {
+	"Characters/TFT11_Gnar/Spells/TFT11_GnarBasicAttack": {
 		"mScriptName": "TFT11_GnarBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 7375,
@@ -136,7 +137,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{b66ef66d}": {
+	"Characters/TFT11_Gnar/Spells/TFT11_GnarBasicAttack2": {
 		"mScriptName": "TFT11_GnarBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 7375,
@@ -172,7 +173,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{d97a70f1}": {
+	"Characters/TFT11_Gnar/Spells/TFT11_GnarSpell": {
 		"mScriptName": "TFT11_GnarSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 6282,

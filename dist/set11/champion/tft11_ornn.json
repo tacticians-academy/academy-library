@@ -1,5 +1,5 @@
 {
-	"{10fc7935}": {
+	"Characters/TFT11_Ornn/Spells/TFT11_OrnnCritAttack": {
 		"mScriptName": "TFT11_OrnnCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -35,7 +35,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{144360f5}": {
+	"Characters/TFT11_Ornn/Spells/TFT11_OrnnBasicAttack2": {
 		"mScriptName": "TFT11_OrnnBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -74,7 +74,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{c49bb009}": {
+	"Characters/TFT11_Ornn/Spells/TFT11_OrnnSpell": {
 		"mScriptName": "TFT11_OrnnSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 11333,
@@ -136,12 +136,12 @@
 					"mName": "PercentHealthShield",
 					"mValues": [
 						0,
-						0.15000000596046448,
-						0.15000000596046448,
-						0.15000000596046448,
-						0.15000000596046448,
-						0.15000000596046448,
-						0.15000000596046448
+						0.20000000298023224,
+						0.20000000298023224,
+						0.20000000298023224,
+						0.20000000298023224,
+						0.20000000298023224,
+						0.20000000298023224
 					],
 					"__type": "SpellDataValue"
 				}
@@ -241,7 +241,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{f8d8c865}": {
+	"Characters/TFT11_Ornn/Spells/TFT11_OrnnBasicAttack": {
 		"mScriptName": "TFT11_OrnnBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -280,13 +280,13 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{695a5aa1}": {
+	"Characters/TFT11_Ornn/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Ornn",
 		"baseHP": 1000,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 160,
+			"arBase": 140,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
@@ -341,7 +341,7 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 120,
+		"mInitialMana": 100,
 		"__type": "TFTCharacterRecord"
 	}
 }

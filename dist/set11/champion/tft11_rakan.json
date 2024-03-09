@@ -1,5 +1,5 @@
 {
-	"{1a58c3f3}": {
+	"Characters/TFT11_Rakan/Spells/TFT11_RakanCritAttack": {
 		"mScriptName": "TFT11_RakanCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 512,
@@ -37,7 +37,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{6c28e7bb}": {
+	"Characters/TFT11_Rakan/Spells/TFT11_RakanBasicAttack": {
 		"mScriptName": "TFT11_RakanBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 512,
@@ -75,7 +75,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{896e688f}": {
+	"Characters/TFT11_Rakan/Spells/TFT11_RakanSpell": {
 		"mScriptName": "TFT11_RakanSpell",
 		"mSpell": {
 			"flags": 4,
@@ -86,8 +86,8 @@
 					"mName": "Damage",
 					"mValues": [
 						0,
-						300,
-						450,
+						240,
+						360,
 						1500,
 						0,
 						0,
@@ -243,7 +243,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{cd647cab}": {
+	"Characters/TFT11_Rakan/Spells/TFT11_RakanBasicAttack2": {
 		"mScriptName": "TFT11_RakanBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 512,
@@ -281,13 +281,13 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{bb91e957}": {
+	"Characters/TFT11_Rakan/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Rakan",
 		"baseHP": 1100,
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 70,
+			"arBase": 80,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"

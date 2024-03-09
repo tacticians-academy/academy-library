@@ -1,5 +1,5 @@
 {
-	"{031b271d}": {
+	"Characters/TFT11_Sylas/Spells/TFT11_SylasBasicAttack2": {
 		"mScriptName": "TFT11_SylasBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -54,7 +54,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{cab386fd}": {
+	"Characters/TFT11_Sylas/Spells/TFT11_SylasCritAttack": {
 		"mScriptName": "TFT11_SylasCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -109,7 +109,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{deb44ac1}": {
+	"Characters/TFT11_Sylas/Spells/TFT11_SylasSpell": {
 		"mScriptName": "TFT11_SylasSpell",
 		"mSpell": {
 			"flags": 4,
@@ -120,9 +120,9 @@
 					"mName": "Damage",
 					"mValues": [
 						0,
-						110,
-						165,
-						495,
+						150,
+						225,
+						675,
 						160,
 						200,
 						240
@@ -146,9 +146,9 @@
 					"mName": "Heal",
 					"mValues": [
 						0,
-						110,
-						140,
-						350,
+						125,
+						150,
+						400,
 						0,
 						0,
 						0
@@ -241,7 +241,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{ee8062bd}": {
+	"Characters/TFT11_Sylas/Spells/TFT11_SylasBasicAttack": {
 		"mScriptName": "TFT11_SylasBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 5327,
@@ -296,7 +296,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{878a69c6}": {
+	"Characters/TFT11_Sylas/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Sylas",
 		"baseHP": 1000,
 		"baseStaticHPRegen": 0,
