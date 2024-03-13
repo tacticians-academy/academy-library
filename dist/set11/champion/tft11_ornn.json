@@ -179,7 +179,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{a770d2d2}": {
+				"ModifiedTotalShieldValue": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -286,7 +286,7 @@
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 140,
+			"arBase": 120,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
@@ -341,7 +341,7 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 100,
+		"mInitialMana": 80,
 		"__type": "TFTCharacterRecord"
 	}
 }

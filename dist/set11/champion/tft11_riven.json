@@ -76,14 +76,14 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{52f9b8e7}": {
+				"BoostedModifiedDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mStat": 2,
-							"mDataValue": "{8cfbe6b7}",
+							"mDataValue": "PercentAttackDamageBoosted",
 							"__type": "StatByNamedDataValueCalculationPart"
 						}
 					],
@@ -310,14 +310,14 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{52f9b8e7}": {
+				"BoostedModifiedDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mStat": 2,
-							"mDataValue": "{8cfbe6b7}",
+							"mDataValue": "PercentAttackDamageBoosted",
 							"__type": "StatByNamedDataValueCalculationPart"
 						}
 					],
@@ -436,14 +436,14 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{52f9b8e7}": {
+				"BoostedModifiedDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mStat": 2,
-							"mDataValue": "{8cfbe6b7}",
+							"mDataValue": "PercentAttackDamageBoosted",
 							"__type": "StatByNamedDataValueCalculationPart"
 						}
 					],

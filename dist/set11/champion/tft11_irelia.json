@@ -24,7 +24,7 @@
 						0,
 						1.5,
 						1.5,
-						7,
+						14,
 						0,
 						0,
 						0
@@ -73,13 +73,13 @@
 				{
 					"mName": "AttackSpeedToDamage",
 					"mValues": [
-						0.5,
-						0.5,
-						0.5,
-						0.5,
-						0.5,
-						0.5,
-						0.5
+						0.699999988079071,
+						0.699999988079071,
+						0.699999988079071,
+						0.699999988079071,
+						0.699999988079071,
+						0.699999988079071,
+						0.699999988079071
 					],
 					"__type": "SpellDataValue"
 				},
@@ -137,31 +137,31 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{0f437b7e}": {
+				"Damage_BladeHit": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mStat": 2,
-							"mDataValue": "{74ec0113}",
+							"mDataValue": "BladeHitAD",
 							"__type": "StatByNamedDataValueCalculationPart"
 						}
 					],
 					"__type": "GameCalculation"
 				},
-				"{0003c576}": {
+				"Damage_SpellHit": {
 					"mFormulaParts": [
 						{
 							"mSubparts": [
 								{
 									"mStat": 2,
-									"mDataValue": "{674255fb}",
+									"mDataValue": "SpellHitAD",
 									"__type": "StatByNamedDataValueCalculationPart"
 								},
 								{
 									"mSubpart": {
-										"mDataValue": "{107f7eb9}",
+										"mDataValue": "SpellAPDamage",
 										"__type": "NamedDataValueCalculationPart"
 									},
 									"mRatio": 0.009999999776482582,
@@ -177,7 +177,7 @@
 					"mFormulaParts": [
 						{
 							"mPart1": {
-								"{88536426}": "{0f437b7e}",
+								"{88536426}": "Damage_BladeHit",
 								"__type": "{f3cbe7b2}"
 							},
 							"mPart2": {
@@ -357,7 +357,6 @@
 			"mCastType": 8,
 			"castFrame": 6.5,
 			"missileSpeed": 1000,
-			"mMissileEffectKey": "{198522e0}",
 			"mLineWidth": 100,
 			"mHitEffectOrientType": 2,
 			"mHitEffectKey": "{4fc8917a}",

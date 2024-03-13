@@ -35,9 +35,9 @@
 					"mName": "Shield",
 					"mValues": [
 						0,
+						325,
 						400,
-						450,
-						550,
+						500,
 						0,
 						0,
 						0
@@ -256,7 +256,7 @@
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 80,
+			"arBase": 90,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
@@ -315,6 +315,7 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
+		"mInitialMana": 30,
 		"__type": "TFTCharacterRecord"
 	}
 }

@@ -81,9 +81,9 @@
 					"mName": "AllyHealingAmount",
 					"mValues": [
 						0,
-						60,
-						85,
-						110,
+						80,
+						100,
+						125,
 						0,
 						0,
 						0
@@ -105,14 +105,14 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{b111b1ae}": {
+				"ModifiedSelfHealingAmount": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{06e3841f}",
+								"mDataValue": "SelfHealingAmount",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -121,14 +121,14 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{fea57aaa}": {
+				"ModifiedAllyHealingAmount": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{8d8dca8f}",
+								"mDataValue": "AllyHealingAmount",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -171,6 +171,7 @@
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
+			"arBase": 80,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
@@ -226,7 +227,7 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 50,
+		"mInitialMana": 40,
 		"__type": "TFTCharacterRecord"
 	}
 }

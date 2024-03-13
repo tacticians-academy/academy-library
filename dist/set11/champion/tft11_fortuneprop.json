@@ -61,14 +61,16 @@
 			"arType": 0,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
+			"arIsShown": false,
 			"__type": "AbilityResourceSlotInfo"
 		},
+		"baseDamage": 0,
 		"baseArmor": 88,
 		"baseSpellBlock": 88,
 		"baseCritChance": 0.25,
 		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
-		"attackRange": 180,
+		"attackRange": 25000,
 		"attackSpeed": 0.800000011920929,
 		"basicAttack": {
 			"mAttackName": "TFT10_PBJPropBasicAttack",

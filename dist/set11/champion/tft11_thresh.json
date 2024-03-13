@@ -42,6 +42,24 @@
 			"BaseSpell",
 			"BaseSpell"
 		],
+		"extraSpells": [
+			"TFT11_ThreshSpellMissile",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell",
+			"BaseSpell"
+		],
 		"unitTagsString": "Champion",
 		"flags": 9446664,
 		"tier": 3,
@@ -62,6 +80,66 @@
 		"mMoveHeight": 0,
 		"mInitialMana": 30,
 		"__type": "TFTCharacterRecord"
+	},
+	"{4f44e1df}": {
+		"mScriptName": "TFT11_ThreshSpellMissile",
+		"mSpell": {
+			"mAffectsTypeFlags": 11333,
+			"mAffectsStatusFlags": 32,
+			"delayTotalTimePercent": -0.5,
+			"castRange": [
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000,
+				25000
+			],
+			"mMissileSpec": {
+				"movementComponent": {
+					"mSpeed": 1500,
+					"__type": "FixedSpeedMovement"
+				},
+				"heightSolver": {
+					"mGravity": 5000,
+					"__type": "GravityHeightSolver"
+				},
+				"behaviors": [
+					{
+						"__type": "CastOnMovementComplete"
+					},
+					{
+						"__type": "DestroyOnMovementComplete"
+					}
+				],
+				"__type": "MissileSpecification"
+			},
+			"mCastType": 3,
+			"castFrame": 23,
+			"mFloatVarsDecimals": [
+				0,
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"selectionPriority": 1,
+			"mSpellCooldownOrSealedQueueThreshold": 0.5,
+			"__type": "SpellDataResource"
+		},
+		"__type": "SpellObject"
 	},
 	"Characters/TFT11_Thresh/Spells/TFT11_ThreshSpell": {
 		"mScriptName": "TFT11_ThreshSpell",
@@ -137,13 +215,13 @@
 				{
 					"mName": "FatedDefenses",
 					"mValues": [
-						20,
-						20,
-						20,
-						20,
-						20,
-						20,
-						20
+						25,
+						25,
+						25,
+						25,
+						25,
+						25,
+						25
 					],
 					"__type": "SpellDataValue"
 				}
@@ -192,26 +270,6 @@
 				25000,
 				25000
 			],
-			"mMissileSpec": {
-				"movementComponent": {
-					"mSpeed": 1500,
-					"__type": "FixedSpeedMovement"
-				},
-				"heightSolver": {
-					"mGravity": 5000,
-					"__type": "GravityHeightSolver"
-				},
-				"behaviors": [
-					{
-						"__type": "CastOnMovementComplete"
-					},
-					{
-						"__type": "DestroyOnMovementComplete"
-					}
-				],
-				"__type": "MissileSpecification"
-			},
-			"mCastType": 3,
 			"castFrame": 23,
 			"mFloatVarsDecimals": [
 				0,
@@ -232,6 +290,9 @@
 				2
 			],
 			"selectionPriority": 1,
+			"mTargetingTypeData": {
+				"__type": "Self"
+			},
 			"mSpellCooldownOrSealedQueueThreshold": 0.5,
 			"__type": "SpellDataResource"
 		},

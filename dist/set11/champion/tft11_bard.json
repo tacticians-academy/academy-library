@@ -105,9 +105,9 @@
 					"mName": "APDamage",
 					"mValues": [
 						200,
-						25,
-						40,
-						65,
+						24,
+						36,
+						60,
 						500,
 						575,
 						650
@@ -167,7 +167,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{9e924a4b}": {
+				"ScaledDuration": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -204,7 +204,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{d4bf8645}": {
+				"TOOLTIPTotalSpellDamage": {
 					"mFormulaParts": [
 						{
 							"mSubparts": [

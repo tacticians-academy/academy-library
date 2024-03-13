@@ -35,9 +35,9 @@
 					"mName": "FeatherRecallDamage",
 					"mValues": [
 						0,
-						0.30000001192092896,
-						0.30000001192092896,
-						1,
+						0.5,
+						0.5,
+						5,
 						0,
 						0,
 						0
@@ -72,7 +72,7 @@
 				}
 			],
 			"mSpellCalculations": {
-				"{3b9ce440}": {
+				"ModifiedFeatherDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -92,7 +92,7 @@
 					"mFormulaParts": [
 						{
 							"mStat": 2,
-							"mDataValue": "{9e738d10}",
+							"mDataValue": "FeatherRecallDamage",
 							"__type": "StatByNamedDataValueCalculationPart"
 						}
 					],
@@ -105,7 +105,7 @@
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{075f6969}",
+								"mDataValue": "FeatherRecallBaseDamage",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -114,7 +114,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{aed3fbd8}": {
+				"TotalFeatherRecallDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -123,7 +123,7 @@
 							"mSubparts": [
 								{
 									"mSubpart": {
-										"mDataValue": "{075f6969}",
+										"mDataValue": "FeatherRecallBaseDamage",
 										"__type": "NamedDataValueCalculationPart"
 									},
 									"mRatio": 0.009999999776482582,
@@ -131,7 +131,7 @@
 								},
 								{
 									"mStat": 2,
-									"mDataValue": "{9e738d10}",
+									"mDataValue": "FeatherRecallDamage",
 									"__type": "StatByNamedDataValueCalculationPart"
 								}
 							],

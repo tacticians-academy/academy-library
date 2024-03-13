@@ -5,7 +5,6 @@
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 80,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
@@ -60,7 +59,7 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 20,
+		"mInitialMana": 25,
 		"__type": "TFTCharacterRecord"
 	},
 	"Characters/TFT11_Ashe/Spells/TFT11_AsheBasicAttack": {
@@ -337,7 +336,7 @@
 								},
 								{
 									"mSubpart": {
-										"mDataValue": "{a216ef8a}",
+										"mDataValue": "ArrowBaseDamage",
 										"__type": "NamedDataValueCalculationPart"
 									},
 									"mRatio": 0.009999999776482582,

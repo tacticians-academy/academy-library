@@ -10,8 +10,8 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
+					'PercentDamageToHeal': 0.15000000596046448,
 					'Resists': 10,
-					'{55909764}': 0.15000000596046448,
 				},
 			},
 			{
@@ -19,8 +19,8 @@ export const traits: TraitData[] = [
 				minUnits: 3,
 				style: 3,
 				variables: {
+					'PercentDamageToHeal': 0.15000000596046448,
 					'Resists': 25,
-					'{55909764}': 0.15000000596046448,
 				},
 			},
 			{
@@ -28,8 +28,8 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 4,
 				variables: {
-					'Resists': 40,
-					'{55909764}': 0.15000000596046448,
+					'PercentDamageToHeal': 0.15000000596046448,
+					'Resists': 45,
 				},
 			},
 		],
@@ -54,7 +54,7 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 3,
 				variables: {
-					'ArcanistAP': 40,
+					'ArcanistAP': 45,
 					'TeamAP': 20,
 				},
 			},
@@ -72,8 +72,8 @@ export const traits: TraitData[] = [
 				minUnits: 8,
 				style: 4,
 				variables: {
-					'ArcanistAP': 120,
-					'TeamAP': 100,
+					'ArcanistAP': 125,
+					'TeamAP': 125,
 				},
 			},
 		],
@@ -117,7 +117,7 @@ export const traits: TraitData[] = [
 				style: 3,
 				variables: {
 					'BonusPercent': 0.5,
-					'Defenses': 45,
+					'Defenses': 55,
 					'Duration': 5,
 					'{2af8e84f}': 1,
 				},
@@ -128,7 +128,7 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'BonusPercent': 0.5,
-					'Defenses': 75,
+					'Defenses': 80,
 					'Duration': 5,
 					'{2af8e84f}': 1,
 				},
@@ -148,8 +148,8 @@ export const traits: TraitData[] = [
 				variables: {
 					'BonusPercentHP': 0.20000000298023224,
 					'RefreshSeconds': 3,
-					'{1805b335}': 100,
-					'{f1fe5117}': null,
+					'SlamPercentHP': null,
+					'TeamBonusHP': 100,
 				},
 			},
 			{
@@ -159,8 +159,8 @@ export const traits: TraitData[] = [
 				variables: {
 					'BonusPercentHP': 0.4000000059604645,
 					'RefreshSeconds': 3,
-					'{1805b335}': 100,
-					'{f1fe5117}': null,
+					'SlamPercentHP': null,
+					'TeamBonusHP': 100,
 				},
 			},
 			{
@@ -170,8 +170,8 @@ export const traits: TraitData[] = [
 				variables: {
 					'BonusPercentHP': 0.6499999761581421,
 					'RefreshSeconds': 3,
-					'{1805b335}': 100,
-					'{f1fe5117}': null,
+					'SlamPercentHP': null,
+					'TeamBonusHP': 100,
 				},
 			},
 			{
@@ -181,8 +181,8 @@ export const traits: TraitData[] = [
 				variables: {
 					'BonusPercentHP': 0.800000011920929,
 					'RefreshSeconds': 3,
-					'{1805b335}': 100,
-					'{f1fe5117}': 0.05999999865889549,
+					'SlamPercentHP': 0.05999999865889549,
+					'TeamBonusHP': 100,
 				},
 			},
 		],
@@ -199,10 +199,10 @@ export const traits: TraitData[] = [
 				style: 1,
 				variables: {
 					'ASDuration': 60,
-					'{16c2de34}': 8,
-					'{6dd7a6a9}': 0.20000000298023224,
+					'ASBuff': 0.11999999731779099,
+					'FirstDelay': 8,
+					'TrueDamageHPRatio': 0.05000000074505806,
 					'{81ce23cf}': 1,
-					'{ced35b7b}': 0.05000000074505806,
 				},
 			},
 			{
@@ -211,11 +211,11 @@ export const traits: TraitData[] = [
 				style: 3,
 				variables: {
 					'ASDuration': 60,
+					'ASBuff': 0.18000000715255737,
+					'FirstDelay': 8,
 					'StunDuration': 1.25,
-					'{16c2de34}': 8,
-					'{6dd7a6a9}': 0.30000001192092896,
+					'TrueDamageHPRatio': 0.10000000149011612,
 					'{81ce23cf}': 2,
-					'{ced35b7b}': 0.10000000149011612,
 				},
 			},
 			{
@@ -224,11 +224,11 @@ export const traits: TraitData[] = [
 				style: 3,
 				variables: {
 					'ASDuration': 60,
+					'ASBuff': 0.18000000715255737,
+					'FirstDelay': 8,
 					'StunDuration': 1.5,
-					'{16c2de34}': 8,
-					'{6dd7a6a9}': 0.30000001192092896,
+					'TrueDamageHPRatio': 0.11999999731779099,
 					'{81ce23cf}': 3,
-					'{ced35b7b}': 0.11999999731779099,
 				},
 			},
 			{
@@ -237,11 +237,11 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'ASDuration': 60,
+					'ASBuff': 0.44999998807907104,
+					'FirstDelay': 8,
 					'StunDuration': 1.5,
-					'{16c2de34}': 8,
-					'{6dd7a6a9}': 0.4000000059604645,
+					'TrueDamageHPRatio': 0.18000000715255737,
 					'{81ce23cf}': 3,
-					'{ced35b7b}': 0.18000000715255737,
 				},
 			},
 		],
@@ -257,12 +257,12 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
-					'AP': 10,
+					'AP': 15,
 					'Duration': 4,
-					'StartingHP': 200,
-					'{01c433db}': 4,
-					'{7055c521}': 2,
-					'{d7c784e1}': 200,
+					'HPPerCompost': 2,
+					'HPPerCompostHR': 4,
+					'StartingHP': 250,
+					'StartingHPHR': 250,
 				},
 			},
 			{
@@ -272,10 +272,10 @@ export const traits: TraitData[] = [
 				variables: {
 					'AP': 30,
 					'Duration': 4,
-					'StartingHP': 200,
-					'{01c433db}': 10,
-					'{7055c521}': 5,
-					'{d7c784e1}': 200,
+					'HPPerCompost': 6,
+					'HPPerCompostHR': 12,
+					'StartingHP': 250,
+					'StartingHPHR': 250,
 				},
 			},
 			{
@@ -283,12 +283,12 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 4,
 				variables: {
-					'AP': 60,
+					'AP': 65,
 					'Duration': 4,
-					'StartingHP': 200,
-					'{01c433db}': 18,
-					'{7055c521}': 9,
-					'{d7c784e1}': 200,
+					'HPPerCompost': 10,
+					'HPPerCompostHR': 20,
+					'StartingHP': 250,
+					'StartingHPHR': 250,
 				},
 			},
 		],
@@ -324,8 +324,8 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 4,
 				variables: {
-					'ASPercent': 0.14000000059604645,
-					'DamageReduction': 0.15000000596046448,
+					'ASPercent': 0.12999999523162842,
+					'DamageReduction': 0.11999999731779099,
 					'MaxStacks': 12,
 				},
 			},
@@ -334,8 +334,8 @@ export const traits: TraitData[] = [
 				minUnits: 8,
 				style: 4,
 				variables: {
-					'ASPercent': 0.2199999988079071,
-					'DamageReduction': 0.23999999463558197,
+					'ASPercent': 0.18000000715255737,
+					'DamageReduction': 0.18000000715255737,
 					'MaxStacks': 12,
 				},
 			},
@@ -345,18 +345,18 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `TFT11_Exalted`,
-		desc: `Your team gains @BaseDamageAmp@% bonus damage, plus more based on your level <br><br>After combat, store @BaseAmountXP@ XP in a Soul Core. Sell the Core to claim the XP.<br><br><expandRow>(@MinUnits@) @DamageAmpPerLevel@% damage per level</expandRow><br><br>(<TFTBonus>Current bonus: @TFTUnitProperty.trait:TFT11_Trait_Exalted_CurrentBonus@%</TFTBonus>). <br><br><rules>Each game a different set of units is Exalted.</rules>`,
+		desc: `Your team gains @BaseDamageAmp@% bonus damage, plus more based on your level.<br><br>After combat, store @BaseAmountXP@ XP in a Soul Core. Sell the Core to claim the XP.<br><br><expandRow>(@MinUnits@) @DamageAmpPerLevel@% damage per level</expandRow><br><br>(<TFTBonus>Current bonus: @TFTUnitProperty.trait:TFT11_Trait_Exalted_CurrentBonus@%</TFTBonus>). <br><br><rules>Each game a different set of units is Exalted.</rules>`,
 		effects: [
 			{
 				maxUnits: 4,
 				minUnits: 3,
 				style: 3,
 				variables: {
-					'BaseDamageAmp': 2,
-					'{0bdf8b4c}': 1,
-					'{33039b9d}': 2,
+					'BaseAmountXP': 1,
+					'BaseDamageAmp': 4,
+					'DamageAmpPerLevel': 1,
+					'HRGold': 2,
 					'{ca5fd6df}': 1,
-					'{cd355b65}': 1,
 				},
 			},
 			{
@@ -364,11 +364,11 @@ export const traits: TraitData[] = [
 				minUnits: 5,
 				style: 4,
 				variables: {
-					'BaseDamageAmp': 2,
-					'{0bdf8b4c}': 1,
-					'{33039b9d}': 2,
+					'BaseAmountXP': 1,
+					'BaseDamageAmp': 4,
+					'DamageAmpPerLevel': 2.5,
+					'HRGold': 2,
 					'{ca5fd6df}': 3,
-					'{cd355b65}': 2.5,
 				},
 			},
 		],
@@ -384,10 +384,10 @@ export const traits: TraitData[] = [
 				minUnits: 3,
 				style: 1,
 				variables: {
+					'BondIncreasePercent': 1,
+					'PairHPBonus': 0.20000000298023224,
 					'{55f4e448}': 0.20000000298023224,
-					'{70b30b55}': 1,
 					'{89fffd48}': 1,
-					'{e84b7a40}': 0.20000000298023224,
 					'{f75cc2d4}': null,
 				},
 			},
@@ -396,10 +396,10 @@ export const traits: TraitData[] = [
 				minUnits: 5,
 				style: 3,
 				variables: {
+					'BondIncreasePercent': 2,
+					'PairHPBonus': 0.20000000298023224,
 					'{55f4e448}': 0.20000000298023224,
-					'{70b30b55}': 1.75,
 					'{89fffd48}': 1,
-					'{e84b7a40}': 0.20000000298023224,
 					'{f75cc2d4}': 1,
 				},
 			},
@@ -408,10 +408,10 @@ export const traits: TraitData[] = [
 				minUnits: 7,
 				style: 4,
 				variables: {
+					'BondIncreasePercent': 3,
+					'PairHPBonus': 0.20000000298023224,
 					'{55f4e448}': 0.20000000298023224,
-					'{70b30b55}': 2.75,
 					'{89fffd48}': 1,
-					'{e84b7a40}': 0.20000000298023224,
 					'{f75cc2d4}': 1,
 				},
 			},
@@ -420,10 +420,10 @@ export const traits: TraitData[] = [
 				minUnits: 10,
 				style: 5,
 				variables: {
+					'BondIncreasePercent': 3,
+					'PairHPBonus': 0.20000000298023224,
 					'{55f4e448}': 0.20000000298023224,
-					'{70b30b55}': 3,
 					'{89fffd48}': 1,
-					'{e84b7a40}': 0.20000000298023224,
 					'{f75cc2d4}': 1,
 				},
 			},
@@ -441,7 +441,7 @@ export const traits: TraitData[] = [
 				style: 1,
 				variables: {
 					'Heal': null,
-					'WinPenalty': 0.20000000298023224,
+					'WinPenalty': 0.10000000149011612,
 					'{02dd7588}': 5,
 					'{03dd771b}': 4,
 					'{04dd78ae}': 4,
@@ -461,7 +461,7 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'Heal': 3,
-					'WinPenalty': 0.20000000298023224,
+					'WinPenalty': 0.10000000149011612,
 					'{02dd7588}': 5,
 					'{03dd771b}': 4,
 					'{04dd78ae}': 4,
@@ -510,9 +510,9 @@ export const traits: TraitData[] = [
 				variables: {
 					'DamagePercent': 0.05999999865889549,
 					'HealingPercent': 0.029999999329447746,
+					'NumInstances': 6,
+					'NumSpectres': 2,
 					'TickRate': 2,
-					'{28b401f9}': 7,
-					'{7c91783e}': 2,
 				},
 			},
 			{
@@ -522,9 +522,9 @@ export const traits: TraitData[] = [
 				variables: {
 					'DamagePercent': 0.11999999731779099,
 					'HealingPercent': 0.029999999329447746,
+					'NumInstances': 6,
+					'NumSpectres': 2,
 					'TickRate': 2,
-					'{28b401f9}': 7,
-					'{7c91783e}': 2,
 				},
 			},
 			{
@@ -534,9 +534,9 @@ export const traits: TraitData[] = [
 				variables: {
 					'DamagePercent': 0.18000000715255737,
 					'HealingPercent': 0.029999999329447746,
+					'NumInstances': 6,
+					'NumSpectres': 2,
 					'TickRate': 2,
-					'{28b401f9}': 7,
-					'{7c91783e}': 2,
 				},
 			},
 			{
@@ -544,11 +544,11 @@ export const traits: TraitData[] = [
 				minUnits: 8,
 				style: 4,
 				variables: {
-					'DamagePercent': 0.27000001072883606,
+					'DamagePercent': 0.30000001192092896,
 					'HealingPercent': 0.029999999329447746,
+					'NumInstances': 6,
+					'NumSpectres': 2,
 					'TickRate': 2,
-					'{28b401f9}': 7,
-					'{7c91783e}': 2,
 				},
 			},
 		],
@@ -573,17 +573,17 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `TFT11_Heavenly`,
-		desc: `Heavenly champions grant a unique stat bonus to your team, increased by their star level and each Heavenly unit in play.<br><br><expandRow>(@MinUnits@) <TFTGuildActive>@HeavenlyBonus*100@%</TFTGuildActive>&nbsp;bonus.</expandRow><br><br><TFTGuildActive enabled=TFT11_Trait_Heavenly_ActiveCrit alternate=TFTGuildInactive>Kha'Zix - </TFTGuildActive>&nbsp;%i:scaleCrit% <spellActive enabled=TFT11_Trait_Heavenly_ActiveCrit alternate=TFTGuildInactive>@TFTUnitProperty.trait:TFT11_Trait_Heavenly_Crit@%</spellActive><br><TFTGuildActive enabled=TFT11_Trait_Heavenly_ActiveDefenses alternate=TFTGuildInactive>Malphite - </TFTGuildActive>&nbsp;%i:scaleArmor%&nbsp;%i:scaleMR% <spellActive enabled=TFT11_Trait_Heavenly_ActiveDefenses alternate=TFTGuildInactive>@TFTUnitProperty.trait:TFT11_Trait_Heavenly_Defenses@</spellActive><br><TFTGuildActive enabled=TFT11_Trait_Heavenly_ActiveHP alternate=TFTGuildInactive>Neeko - </TFTGuildActive>&nbsp;%i:scaleHP% <spellActive enabled=TFT11_Trait_Heavenly_ActiveHP alternate=TFTGuildInactive>@TFTUnitProperty.trait:TFT11_Trait_Heavenly_HP@</spellActive><br><TFTGuildActive enabled=TFT11_Trait_Heavenly_ActiveAD alternate=TFTGuildInactive>Qiyana - </TFTGuildActive>&nbsp;%i:scaleAD% <spellActive enabled=TFT11_Trait_Heavenly_ActiveAD alternate=TFTGuildInactive>@TFTUnitProperty.trait:TFT11_Trait_Heavenly_AD@%</spellActive><br><TFTGuildActive enabled=TFT11_Trait_Heavenly_ActiveAP alternate=TFTGuildInactive>Soraka - </TFTGuildActive>&nbsp;%i:scaleAP% <spellActive enabled=TFT11_Trait_Heavenly_ActiveAP alternate=TFTGuildInactive>@TFTUnitProperty.trait:TFT11_Trait_Heavenly_AP@%</spellActive><br><TFTGuildActive enabled=TFT11_Trait_Heavenly_ActiveAS alternate=TFTGuildInactive>Wukong - </TFTGuildActive>&nbsp;%i:scaleAS% <spellActive enabled=TFT11_Trait_Heavenly_ActiveAS alternate=TFTGuildInactive>@TFTUnitProperty.trait:TFT11_Trait_Heavenly_AS@%</spellActive><br><TFTGuildActive enabled=TFT11_Trait_Heavenly_ActiveOmnivamp alternate=TFTGuildInactive>Emblem - &nbsp;Omnivamp </TFTGuildActive><spellActive enabled=TFT11_Trait_Heavenly_ActiveOmnivamp alternate=TFTGuildInactive>@TFTUnitProperty.trait:TFT11_Trait_Heavenly_Omnivamp@%</spellActive><br><br><rules>2-stars grant 50% more.<br>3-stars grant 90%&nbsp;more.</rules>`,
+		desc: `Heavenly units grant unique stats to your team, increased by their star level and each Heavenly unit in play.<br><br><expandRow>(@MinUnits@) <TFTGuildActive>@HeavenlyBonus*100@%</TFTGuildActive>&nbsp;bonus.</expandRow><br><br><TFTGuildActive enabled=TFT11_Trait_Heavenly_ActiveCrit alternate=TFTGuildInactive>Kha'Zix - </TFTGuildActive>&nbsp;%i:scaleCrit% <spellActive enabled=TFT11_Trait_Heavenly_ActiveCrit alternate=TFTGuildInactive>@TFTUnitProperty.trait:TFT11_Trait_Heavenly_Crit@%</spellActive><br><TFTGuildActive enabled=TFT11_Trait_Heavenly_ActiveDefenses alternate=TFTGuildInactive>Malphite - </TFTGuildActive>&nbsp;%i:scaleArmor%&nbsp;%i:scaleMR% <spellActive enabled=TFT11_Trait_Heavenly_ActiveDefenses alternate=TFTGuildInactive>@TFTUnitProperty.trait:TFT11_Trait_Heavenly_Defenses@</spellActive><br><TFTGuildActive enabled=TFT11_Trait_Heavenly_ActiveHP alternate=TFTGuildInactive>Neeko - </TFTGuildActive>&nbsp;%i:scaleHP% <spellActive enabled=TFT11_Trait_Heavenly_ActiveHP alternate=TFTGuildInactive>@TFTUnitProperty.trait:TFT11_Trait_Heavenly_HP@</spellActive><br><TFTGuildActive enabled=TFT11_Trait_Heavenly_ActiveAD alternate=TFTGuildInactive>Qiyana - </TFTGuildActive>&nbsp;%i:scaleAD% <spellActive enabled=TFT11_Trait_Heavenly_ActiveAD alternate=TFTGuildInactive>@TFTUnitProperty.trait:TFT11_Trait_Heavenly_AD@%</spellActive><br><TFTGuildActive enabled=TFT11_Trait_Heavenly_ActiveAP alternate=TFTGuildInactive>Soraka - </TFTGuildActive>&nbsp;%i:scaleAP% <spellActive enabled=TFT11_Trait_Heavenly_ActiveAP alternate=TFTGuildInactive>@TFTUnitProperty.trait:TFT11_Trait_Heavenly_AP@%</spellActive><br><TFTGuildActive enabled=TFT11_Trait_Heavenly_ActiveAS alternate=TFTGuildInactive>Wukong - </TFTGuildActive>&nbsp;%i:scaleAS% <spellActive enabled=TFT11_Trait_Heavenly_ActiveAS alternate=TFTGuildInactive>@TFTUnitProperty.trait:TFT11_Trait_Heavenly_AS@%</spellActive><br><TFTGuildActive enabled=TFT11_Trait_Heavenly_ActiveOmnivamp alternate=TFTGuildInactive>Emblem - &nbsp;Omnivamp </TFTGuildActive><spellActive enabled=TFT11_Trait_Heavenly_ActiveOmnivamp alternate=TFTGuildInactive>@TFTUnitProperty.trait:TFT11_Trait_Heavenly_Omnivamp@%</spellActive>`,
 		effects: [
 			{
 				maxUnits: 2,
 				minUnits: 2,
 				style: 1,
 				variables: {
-					'{13f889ae}': 1.5,
+					'HeavenlyBonus': 1,
+					'{13f889ae}': 1.2999999523162842,
 					'{19e47528}': 10,
-					'{23a9da9c}': 1,
-					'{26ac6bc4}': 1.899999976158142,
+					'{26ac6bc4}': 1.5,
 					'{3c9e3624}': 3,
 					'{414a2beb}': 10,
 					'{4803a4eb}': 12,
@@ -597,10 +597,10 @@ export const traits: TraitData[] = [
 				minUnits: 3,
 				style: 3,
 				variables: {
-					'{13f889ae}': 1.5,
+					'HeavenlyBonus': 1.149999976158142,
+					'{13f889ae}': 1.2999999523162842,
 					'{19e47528}': 10,
-					'{23a9da9c}': 1.149999976158142,
-					'{26ac6bc4}': 1.899999976158142,
+					'{26ac6bc4}': 1.5,
 					'{3c9e3624}': 3,
 					'{414a2beb}': 10,
 					'{4803a4eb}': 12,
@@ -614,10 +614,10 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 3,
 				variables: {
-					'{13f889ae}': 1.5,
+					'HeavenlyBonus': 1.350000023841858,
+					'{13f889ae}': 1.2999999523162842,
 					'{19e47528}': 10,
-					'{23a9da9c}': 1.350000023841858,
-					'{26ac6bc4}': 1.899999976158142,
+					'{26ac6bc4}': 1.5,
 					'{3c9e3624}': 3,
 					'{414a2beb}': 10,
 					'{4803a4eb}': 12,
@@ -631,10 +631,10 @@ export const traits: TraitData[] = [
 				minUnits: 5,
 				style: 3,
 				variables: {
-					'{13f889ae}': 1.5,
+					'HeavenlyBonus': 1.649999976158142,
+					'{13f889ae}': 1.2999999523162842,
 					'{19e47528}': 10,
-					'{23a9da9c}': 1.649999976158142,
-					'{26ac6bc4}': 1.899999976158142,
+					'{26ac6bc4}': 1.5,
 					'{3c9e3624}': 3,
 					'{414a2beb}': 10,
 					'{4803a4eb}': 12,
@@ -648,10 +648,10 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 4,
 				variables: {
-					'{13f889ae}': 1.5,
+					'HeavenlyBonus': 2,
+					'{13f889ae}': 1.2999999523162842,
 					'{19e47528}': 10,
-					'{23a9da9c}': 1.9500000476837158,
-					'{26ac6bc4}': 1.899999976158142,
+					'{26ac6bc4}': 1.5,
 					'{3c9e3624}': 3,
 					'{414a2beb}': 10,
 					'{4803a4eb}': 12,
@@ -665,10 +665,10 @@ export const traits: TraitData[] = [
 				minUnits: 7,
 				style: 4,
 				variables: {
-					'{13f889ae}': 1.5,
+					'HeavenlyBonus': 2.4000000953674316,
+					'{13f889ae}': 1.2999999523162842,
 					'{19e47528}': 10,
-					'{23a9da9c}': 2.25,
-					'{26ac6bc4}': 1.899999976158142,
+					'{26ac6bc4}': 1.5,
 					'{3c9e3624}': 3,
 					'{414a2beb}': 10,
 					'{4803a4eb}': 12,
@@ -690,7 +690,7 @@ export const traits: TraitData[] = [
 				minUnits: 3,
 				style: 1,
 				variables: {
-					'{1e9458af}': 5,
+					'PercentBuff': 5,
 					'{20436879}': null,
 					'{5ff50860}': 1,
 				},
@@ -700,17 +700,17 @@ export const traits: TraitData[] = [
 				minUnits: 5,
 				style: 3,
 				variables: {
-					'{1e9458af}': 5,
+					'PercentBuff': 5,
 					'{20436879}': 5,
 					'{5ff50860}': 2,
 				},
 			},
 			{
-				maxUnits: 8,
+				maxUnits: 25000,
 				minUnits: 7,
 				style: 4,
 				variables: {
-					'{1e9458af}': 5,
+					'PercentBuff': 5,
 					'{20436879}': 5,
 					'{5ff50860}': 4,
 				},
@@ -728,10 +728,10 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
+					'InvokerMana': 5,
 					'TeamAP': null,
 					'TeamMana': 5,
 					'TickRate': 3,
-					'{c0b7f372}': 5,
 				},
 			},
 			{
@@ -739,10 +739,10 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 3,
 				variables: {
+					'InvokerMana': 20,
 					'TeamAP': null,
 					'TeamMana': 5,
 					'TickRate': 3,
-					'{c0b7f372}': 20,
 				},
 			},
 			{
@@ -750,10 +750,10 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 4,
 				variables: {
+					'InvokerMana': 35,
 					'TeamAP': null,
 					'TeamMana': 20,
 					'TickRate': 3,
-					'{c0b7f372}': 45,
 				},
 			},
 		],
@@ -762,7 +762,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `TFT11_Lovers`,
-		desc: `Change which Lover takes the field depending on whether they are placed in the front or back 2 rows. When the fielded Lover casts, the other provides a bonus&nbsp;effect.<br><br>Front: Trickshot Xayah<br>Back: Altruist Rakan`,
+		desc: `Change which Lover takes the field depending on whether they are placed in the front or back 2 rows. <br><br>When the fielded Lover casts, the other provides a bonus&nbsp;effect.<br><br>Front: Altruist Rakan<br>Back: Trickshot Xayah`,
 		effects: [
 			{
 				maxUnits: 1,
@@ -801,8 +801,8 @@ export const traits: TraitData[] = [
 				minUnits: 5,
 				style: 3,
 				variables: {
-					'AP': 20,
-					'HPPct': 0.1599999964237213,
+					'AP': 22,
+					'HPPct': 0.20000000298023224,
 					'Multiplier': 0.5,
 				},
 			},
@@ -811,8 +811,8 @@ export const traits: TraitData[] = [
 				minUnits: 7,
 				style: 4,
 				variables: {
-					'AP': 32,
-					'HPPct': 0.23999999463558197,
+					'AP': 35,
+					'HPPct': 0.30000001192092896,
 					'Multiplier': 0.5,
 				},
 			},
@@ -821,10 +821,10 @@ export const traits: TraitData[] = [
 				minUnits: 10,
 				style: 5,
 				variables: {
-					'AP': 32,
-					'HPPct': 0.23999999463558197,
+					'AP': 35,
+					'HPPct': 0.30000001192092896,
 					'Multiplier': 0.5,
-					'{702df0e0}': 2.5,
+					'PrismaticMultiplier': 2.5,
 				},
 			},
 		],
@@ -851,7 +851,7 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'AS': 0.6000000238418579,
-					'DR': 0.30000001192092896,
+					'DR': 0.3499999940395355,
 					'Duration': 4,
 				},
 			},
@@ -860,8 +860,8 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 4,
 				variables: {
-					'AS': 1,
-					'DR': 0.5,
+					'AS': 1.25,
+					'DR': 0.6000000238418579,
 					'Duration': 4,
 				},
 			},
@@ -871,7 +871,7 @@ export const traits: TraitData[] = [
 	},
 	{
 		apiName: `TFT11_Reaper`,
-		desc: `<row>(@MinUnits@) Reapers Abilities can critically strike and they gain @CritChance*100@% Critical Strike Chance.</row><br><row>(@MinUnits@) Additionally, Reapers' bleed enemies for @BleedDamage*100@% bonus true damage over @Duration@&nbsp;seconds.</row><br>`,
+		desc: `<row>(@MinUnits@) Reapers' Abilities can critically strike and they gain @CritChance*100@% Critical Strike Chance.</row><br><row>(@MinUnits@) Additionally, Reapers bleed enemies for @BleedDamage*100@% bonus true damage over @Duration@&nbsp;seconds.</row><br>`,
 		effects: [
 			{
 				maxUnits: 3,
@@ -888,7 +888,7 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 4,
 				variables: {
-					'BleedDamage': 0.6000000238418579,
+					'BleedDamage': 0.5,
 					'CritChance': 0.20000000298023224,
 					'Duration': 3,
 				},
@@ -933,7 +933,7 @@ export const traits: TraitData[] = [
 				minUnits: 5,
 				style: 4,
 				variables: {
-					'APAmount': 70,
+					'APAmount': 75,
 					'Omnivamp': 0.44999998807907104,
 				},
 			},
@@ -961,7 +961,7 @@ export const traits: TraitData[] = [
 				style: 3,
 				variables: {
 					'HexRangeIncrease': 1,
-					'PercentDamageIncrease': 14,
+					'PercentDamageIncrease': 15,
 					'{7db0ae46}': null,
 				},
 			},
@@ -990,7 +990,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'DamageReduction': 100,
 					'OmnivampPercent': null,
-					'{5c3ff381}': 0.5,
+					'RevivePercent': 0.5,
 				},
 			},
 		],
@@ -1006,9 +1006,9 @@ export const traits: TraitData[] = [
 				minUnits: 3,
 				style: 1,
 				variables: {
+					'BonusAAPerStage': 0.10000000149011612,
 					'HP': 60,
 					'{3609554d}': 3,
-					'{3d6bec47}': 0.10000000149011612,
 					'{6cf32d7f}': 100,
 					'{8f92bd7b}': 1,
 					'{a4d5374e}': 10,
@@ -1023,9 +1023,9 @@ export const traits: TraitData[] = [
 				minUnits: 5,
 				style: 3,
 				variables: {
+					'BonusAAPerStage': 0.10000000149011612,
 					'HP': 100,
 					'{3609554d}': 3,
-					'{3d6bec47}': 0.10000000149011612,
 					'{6cf32d7f}': 100,
 					'{8f92bd7b}': 1,
 					'{a4d5374e}': 10,
@@ -1040,9 +1040,9 @@ export const traits: TraitData[] = [
 				minUnits: 7,
 				style: 4,
 				variables: {
+					'BonusAAPerStage': 0.10000000149011612,
 					'HP': 150,
 					'{3609554d}': 3,
-					'{3d6bec47}': 0.10000000149011612,
 					'{6cf32d7f}': 100,
 					'{8f92bd7b}': 1,
 					'{a4d5374e}': 10,
@@ -1057,9 +1057,9 @@ export const traits: TraitData[] = [
 				minUnits: 10,
 				style: 5,
 				variables: {
+					'BonusAAPerStage': 0.10000000149011612,
 					'HP': 250,
 					'{3609554d}': 3,
-					'{3d6bec47}': 0.10000000149011612,
 					'{6cf32d7f}': 100,
 					'{8f92bd7b}': 1,
 					'{a4d5374e}': 10,
@@ -1102,7 +1102,14 @@ export const traits: TraitData[] = [
 	{
 		apiName: `TFT11_TrickshotAltruist`,
 		desc: `Place in the back two rows to get Trickshot, place in the front two rows to get Altruist!`,
-		effects: [],
+		effects: [
+			{
+				maxUnits: 25000,
+				minUnits: 1,
+				style: 6,
+				variables: {},
+			},
+		],
 		icon: `ASSETS/UX/TraitIcons/Trait_Icon_11_Altruist_Trickshot.TFT_Set11.tex`,
 		name: `Trickshot/Altruist`,
 	},
@@ -1115,9 +1122,9 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
+					'DesireExecuteRewardPercent': null,
+					'DesireExecuteThreshhold': 10,
 					'ShieldAmount': 200,
-					'{688965b1}': 10,
-					'{c41e08a6}': null,
 				},
 			},
 			{
@@ -1125,9 +1132,9 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 3,
 				variables: {
-					'ShieldAmount': 450,
-					'{688965b1}': 15,
-					'{c41e08a6}': null,
+					'DesireExecuteRewardPercent': null,
+					'DesireExecuteThreshhold': 18,
+					'ShieldAmount': 500,
 				},
 			},
 			{
@@ -1135,9 +1142,9 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 4,
 				variables: {
-					'ShieldAmount': 750,
-					'{688965b1}': 15,
-					'{c41e08a6}': null,
+					'DesireExecuteRewardPercent': null,
+					'DesireExecuteThreshhold': 18,
+					'ShieldAmount': 1000,
 				},
 			},
 			{
@@ -1145,11 +1152,11 @@ export const traits: TraitData[] = [
 				minUnits: 9,
 				style: 5,
 				variables: {
-					'ShieldAmount': 750,
-					'{541fac28}': 1,
-					'{688965b1}': 40,
+					'DesireExecuteRewardPercent': 1,
+					'DesireExecuteRewardPercentHR': 1,
+					'DesireExecuteThreshhold': 40,
+					'ShieldAmount': 1000,
 					'{b84914bf}': 0.25,
-					'{c41e08a6}': 1,
 				},
 			},
 		],
@@ -1167,7 +1174,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'DRPercent': 15,
 					'Duration': 10,
-					'{90e613ad}': 12,
+					'StartOfCombatDRPercent': 12,
 				},
 			},
 			{
@@ -1177,7 +1184,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'DRPercent': 25,
 					'Duration': 10,
-					'{90e613ad}': 12,
+					'StartOfCombatDRPercent': 12,
 				},
 			},
 			{
@@ -1187,7 +1194,7 @@ export const traits: TraitData[] = [
 				variables: {
 					'DRPercent': 40,
 					'Duration': 10,
-					'{90e613ad}': 12,
+					'StartOfCombatDRPercent': 12,
 				},
 			},
 		],

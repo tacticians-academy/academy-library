@@ -281,7 +281,7 @@
 							"mSubparts": [
 								{
 									"mStat": 2,
-									"mDataValue": "{9057ebbf}",
+									"mDataValue": "SpinPercentAttackDamage",
 									"__type": "StatByNamedDataValueCalculationPart"
 								}
 							],
@@ -290,7 +290,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{4f2eb533}": {
+				"ModifiedBonkDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -299,12 +299,12 @@
 							"mSubparts": [
 								{
 									"mStat": 2,
-									"mDataValue": "{1ec43387}",
+									"mDataValue": "BonkPercentAttackDamage",
 									"__type": "StatByNamedDataValueCalculationPart"
 								},
 								{
 									"mSubpart": {
-										"mDataValue": "{43e3a6ec}",
+										"mDataValue": "BonkDamage",
 										"__type": "NamedDataValueCalculationPart"
 									},
 									"mRatio": 0.009999999776482582,
@@ -316,7 +316,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{c004dff7}": {
+				"ModifiedStunDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -325,7 +325,7 @@
 							"mSubparts": [
 								{
 									"mStat": 2,
-									"mDataValue": "{d2124a27}",
+									"mDataValue": "StunPercentAttackDamage",
 									"__type": "StatByNamedDataValueCalculationPart"
 								}
 							],

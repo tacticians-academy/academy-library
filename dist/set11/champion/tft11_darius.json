@@ -5,7 +5,7 @@
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 40,
+			"arBase": 30,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
@@ -249,9 +249,9 @@
 					"mName": "DamageOnHit",
 					"mValues": [
 						15,
-						80,
-						120,
-						180,
+						90,
+						135,
+						200,
 						15,
 						15,
 						15
@@ -289,14 +289,14 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{64c2187b}": {
+				"ModifiedDamageOnHit": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{b474078e}",
+								"mDataValue": "DamageOnHit",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,

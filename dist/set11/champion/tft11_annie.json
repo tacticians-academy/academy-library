@@ -4,6 +4,7 @@
 		"mSpell": {
 			"flags": 4,
 			"mAffectsTypeFlags": 1029,
+			"mAffectsStatusFlags": 32,
 			"mDataValues": [
 				{
 					"mName": "HealthRatio",
@@ -35,8 +36,8 @@
 					"mName": "Damage",
 					"mValues": [
 						0,
-						180,
-						270,
+						150,
+						225,
 						2500,
 						0,
 						0,
@@ -61,8 +62,8 @@
 					"mName": "APHealth",
 					"mValues": [
 						0,
-						325,
-						400,
+						300,
+						350,
 						1500,
 						0,
 						0,
@@ -107,7 +108,7 @@
 							"mSubparts": [
 								{
 									"mSubpart": {
-										"mDataValue": "{437f32c2}",
+										"mDataValue": "APHealth",
 										"__type": "NamedDataValueCalculationPart"
 									},
 									"mRatio": 0.009999999776482582,
@@ -140,7 +141,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{cebdf920}": {
+				"PassiveHeal": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -357,7 +358,7 @@
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 65,
+		"baseDamage": 55,
 		"baseArmor": 60,
 		"baseSpellBlock": 60,
 		"baseCritChance": 0.25,

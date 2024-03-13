@@ -185,7 +185,7 @@
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{569969dc}",
+								"mDataValue": "FlatHealing",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,

@@ -1,5 +1,5 @@
 {
-	"{21136845}": {
+	"Characters/TFT11_Nautilus/Spells/TFT11_NautilusSpell": {
 		"mScriptName": "TFT11_NautilusSpell",
 		"mSpell": {
 			"mAffectsTypeFlags": 7183,
@@ -113,7 +113,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{40a2e341}": {
+	"Characters/TFT11_Nautilus/Spells/TFT11_NautilusBasicAttack2": {
 		"mScriptName": "TFT11_NautilusBasicAttack2",
 		"mSpell": {
 			"mAffectsTypeFlags": 512,
@@ -148,7 +148,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{5798dc69}": {
+	"Characters/TFT11_Nautilus/Spells/TFT11_NautilusBasicAttack": {
 		"mScriptName": "TFT11_NautilusBasicAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 512,
@@ -183,7 +183,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{b550af29}": {
+	"Characters/TFT11_Nautilus/Spells/TFT11_NautilusCritAttack": {
 		"mScriptName": "TFT11_NautilusCritAttack",
 		"mSpell": {
 			"mAffectsTypeFlags": 512,
@@ -217,7 +217,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{88161191}": {
+	"Characters/TFT11_Nautilus/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_Nautilus",
 		"baseHP": 1000,
 		"baseStaticHPRegen": 0,

@@ -17,7 +17,7 @@
 		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
 		"attackRange": 180,
-		"attackSpeed": 1,
+		"attackSpeed": 0.949999988079071,
 		"basicAttack": {
 			"mAttackName": "TFT11_UdyrBasicAttack",
 			"__type": "AttackSlotData"
@@ -186,8 +186,8 @@
 					"mName": "ShieldAmt",
 					"mValues": [
 						0,
-						350,
-						425,
+						300,
+						375,
 						3000,
 						0,
 						0,
@@ -212,8 +212,8 @@
 					"mName": "ASPercent",
 					"mValues": [
 						1.5,
-						0.800000011920929,
-						0.800000011920929,
+						0.6000000238418579,
+						0.699999988079071,
 						5,
 						1.5,
 						1.5,
@@ -302,7 +302,7 @@
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{db2b2efa}",
+								"mDataValue": "ShieldAmt",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -311,14 +311,14 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{e167ffa0}": {
+				"ModifiedShurikenDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{4d347543}",
+								"mDataValue": "ShurikenDamage",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,

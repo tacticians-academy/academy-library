@@ -242,7 +242,7 @@
 								},
 								{
 									"mSubpart": {
-										"mDataValue": "{25f2bd2d}",
+										"mDataValue": "BaseDamageAPScaling",
 										"__type": "NamedDataValueCalculationPart"
 									},
 									"mRatio": 0.009999999776482582,
@@ -261,7 +261,7 @@
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{25f2bd2d}",
+								"mDataValue": "BaseDamageAPScaling",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,

@@ -143,12 +143,12 @@
 							"mSubparts": [
 								{
 									"mStat": 2,
-									"mDataValue": "{2a03bb1b}",
+									"mDataValue": "PercentADSecondary",
 									"__type": "StatByNamedDataValueCalculationPart"
 								},
 								{
 									"mSubpart": {
-										"mDataValue": "{b4e5a1a7}",
+										"mDataValue": "PercentAPSecondary",
 										"__type": "NamedDataValueCalculationPart"
 									},
 									"mRatio": 0.009999999776482582,
@@ -160,7 +160,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{55b9485c}": {
+				"TotalPrimaryDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -168,7 +168,7 @@
 						{
 							"mStat": 2,
 							"mSubpart": {
-								"mDataValue": "{512f0b9f}",
+								"mDataValue": "PercentADPrimary",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"__type": "StatBySubPartCalculationPart"

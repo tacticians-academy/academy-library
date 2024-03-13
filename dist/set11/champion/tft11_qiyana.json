@@ -203,7 +203,7 @@
 				},
 				"SecondaryDamage": {
 					"mMultiplier": {
-						"mDataValue": "{430b9694}",
+						"mDataValue": "SecondaryTargetPercentage",
 						"__type": "NamedDataValueCalculationPart"
 					},
 					"{cbcac618}": 5,

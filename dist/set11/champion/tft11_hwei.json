@@ -142,14 +142,14 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{f8fb715d}": {
+				"ModifiedEndHeal": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{a2de9d6c}",
+								"mDataValue": "EndHeal",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,
@@ -215,7 +215,8 @@
 				"__type": "Location"
 			},
 			"{47e0dff9}": {
-				"12": "Play_vo_tft11_HweiSpell3Star_OnCast"
+				"14": "Play_sfx_tft11_HweiSpell_OnHitLocation",
+				"16": "Play_sfx_tft11_HweiSpell_OnMissileLaunch"
 			},
 			"mSpellCooldownOrSealedQueueThreshold": 0.5,
 			"__type": "SpellDataResource"
@@ -446,8 +447,8 @@
 					"mName": "Damage",
 					"mValues": [
 						0,
-						240,
-						360,
+						200,
+						300,
 						2000,
 						0,
 						0,
@@ -515,14 +516,14 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{f8fb715d}": {
+				"ModifiedEndHeal": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{a2de9d6c}",
+								"mDataValue": "EndHeal",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,

@@ -199,19 +199,6 @@
 			"mAffectsStatusFlags": 32,
 			"mDataValues": [
 				{
-					"mName": "HealAmount",
-					"mValues": [
-						0,
-						210,
-						240,
-						270,
-						160,
-						200,
-						240
-					],
-					"__type": "SpellDataValue"
-				},
-				{
 					"mName": "StunDuration",
 					"mValues": [
 						1,
@@ -228,9 +215,9 @@
 					"mName": "SmallDamage",
 					"mValues": [
 						0,
+						35,
 						50,
-						75,
-						120,
+						80,
 						0,
 						0,
 						0
@@ -241,9 +228,9 @@
 					"mName": "LargeDamage",
 					"mValues": [
 						0,
-						100,
-						150,
-						240,
+						80,
+						120,
+						185,
 						0,
 						0,
 						0
@@ -262,10 +249,23 @@
 						0.10000000149011612
 					],
 					"__type": "SpellDataValue"
+				},
+				{
+					"mName": "HealAmount",
+					"mValues": [
+						0,
+						140,
+						170,
+						210,
+						0,
+						0,
+						0
+					],
+					"__type": "SpellDataValue"
 				}
 			],
 			"mSpellCalculations": {
-				"{2bb5c10c}": {
+				"ModifiedSmallDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -281,7 +281,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{30263aa8}": {
+				"ModifiedLargeDamage": {
 					"{cbcac618}": 5,
 					"mFormulaParts": [
 						{
@@ -293,7 +293,7 @@
 								},
 								{
 									"mSubpart": {
-										"mDataValue": "{cf2c9ea5}",
+										"mDataValue": "LargeDamage",
 										"__type": "NamedDataValueCalculationPart"
 									},
 									"mRatio": 0.009999999776482582,
@@ -301,6 +301,22 @@
 								}
 							],
 							"__type": "SumOfSubPartsCalculationPart"
+						}
+					],
+					"__type": "GameCalculation"
+				},
+				"ModifiedHeal": {
+					"{cbcac618}": 5,
+					"{37070a8d}": 5,
+					"{e6eebb2f}": 5,
+					"mFormulaParts": [
+						{
+							"mSubpart": {
+								"mDataValue": "HealAmount",
+								"__type": "NamedDataValueCalculationPart"
+							},
+							"mRatio": 0.009999999776482582,
+							"__type": "SubPartScaledProportionalToStat"
 						}
 					],
 					"__type": "GameCalculation"

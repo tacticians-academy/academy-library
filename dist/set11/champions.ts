@@ -63,8 +63,8 @@ export const champions: ChampionData[] = [
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{569969dc}`,
-										starValues: undefined,
+										variable: `FlatHealing`,
+										starValues: [0, 200, 250, 300],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -119,11 +119,11 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'Damage': [0, 220, 330, 500],
+					'Damage': [0, 280, 420, 630],
 					'NumAllies': [1, 1, 1, 1],
-					'FatedBonus': [25, 25, 25, 25],
+					'FatedBonus': [30, 30, 30, 30],
 					'NumSeconds': [2, 2, 2, 2],
-					'SecondaryDamage': [0, 110, 165, 250],
+					'SecondaryDamage': [0, 130, 195, 295],
 				},
 				calculations: {
 					'Damage': {
@@ -134,7 +134,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [0, 220, 330, 500],
+										starValues: [0, 280, 420, 630],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -150,7 +150,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `SecondaryDamage`,
-										starValues: [0, 110, 165, 250],
+										starValues: [0, 130, 195, 295],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -256,8 +256,8 @@ export const champions: ChampionData[] = [
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{5051e339}`,
-										starValues: undefined,
+										variable: `PrimaryMagicDamage`,
+										starValues: [0, 160, 240, 380],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -336,9 +336,9 @@ export const champions: ChampionData[] = [
 			critMultiplier: 1.399999976158142,
 			damage: 60,
 			hp: 900,
-			initialMana: 50,
+			initialMana: 40,
 			magicResist: 50,
-			mana: 100,
+			mana: 80,
 			moveSpeed: 500,
 			range: 1,
 		},
@@ -353,19 +353,19 @@ export const champions: ChampionData[] = [
 				variables: {
 					'Duration': [3, 3, 3, 3],
 					'SelfHealingAmount': [0, 250, 300, 375],
-					'AllyHealingAmount': [0, 60, 85, 110],
+					'AllyHealingAmount': [0, 80, 100, 125],
 					'Damage': [50, 150, 225, 360],
 				},
 				calculations: {
-					'{b111b1ae}': {
+					'SelfHealingAmount': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{06e3841f}`,
-										starValues: undefined,
+										variable: `SelfHealingAmount`,
+										starValues: [0, 250, 300, 375],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -373,15 +373,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{fea57aaa}': {
+					'AllyHealingAmount': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{8d8dca8f}`,
-										starValues: undefined,
+										variable: `AllyHealingAmount`,
+										starValues: [0, 80, 100, 125],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -436,7 +436,7 @@ export const champions: ChampionData[] = [
 			attackSpeed: 0.6499999761581421,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
-			damage: 65,
+			damage: 55,
 			hp: 850,
 			initialMana: 70,
 			magicResist: 60,
@@ -455,9 +455,9 @@ export const champions: ChampionData[] = [
 				variables: {
 					'HealthRatio': [1, 0.15000000596046448, 0.15000000596046448, 0.15000000596046448],
 					'StunDuration': [1.5, 1.5, 1.5, 1.5],
-					'Damage': [0, 180, 270, 2500],
+					'Damage': [0, 150, 225, 2500],
 					'DebuffDuration': [8, 8, 8, 8],
-					'APHealth': [0, 325, 400, 1500],
+					'APHealth': [0, 300, 350, 1500],
 					'HealRatio': [0.05000000074505806, 0.05000000074505806, 0.05000000074505806, 0.05000000074505806],
 					'HexRange': [2, 2, 2, 2],
 				},
@@ -469,8 +469,8 @@ export const champions: ChampionData[] = [
 								operator: `sum`,
 								subparts: [
 									{
-										variable: `{437f32c2}`,
-										starValues: undefined,
+										variable: `APHealth`,
+										starValues: [0, 300, 350, 1500],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -492,7 +492,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [0, 180, 270, 2500],
+										starValues: [0, 150, 225, 2500],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -500,7 +500,7 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{cebdf920}': {
+					'PassiveHeal': {
 						asPercent: false,
 						parts: [
 							{
@@ -679,9 +679,9 @@ export const champions: ChampionData[] = [
 			critMultiplier: 1.399999976158142,
 			damage: 65,
 			hp: 700,
-			initialMana: 20,
+			initialMana: 25,
 			magicResist: 30,
-			mana: 80,
+			mana: 100,
 			moveSpeed: 500,
 			range: 4,
 		},
@@ -717,8 +717,8 @@ export const champions: ChampionData[] = [
 										ratio: 1,
 									},
 									{
-										variable: `{a216ef8a}`,
-										starValues: undefined,
+										variable: `ArrowBaseDamage`,
+										starValues: [0, 4, 6, 20],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -797,7 +797,7 @@ export const champions: ChampionData[] = [
 					'SoldierHealth': [0, 1100, 1500, 8000],
 				},
 				calculations: {
-					'{f69098cc}': {
+					'LaserDamage': {
 						asPercent: false,
 						parts: [
 							{
@@ -892,7 +892,7 @@ export const champions: ChampionData[] = [
 				variables: {
 					'Duration': [6, 6, 6, 6],
 					'PercentAttackDamage': [0.800000011920929, 0.6499999761581421, 0.6499999761581421, 0.699999988079071],
-					'APDamage': [200, 25, 40, 65],
+					'APDamage': [200, 24, 36, 60],
 					'AOEDamageMultiplier': [2, 2, 2, 2],
 					'HexDistance': [2, 2, 2, 2],
 				},
@@ -913,7 +913,7 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{9e924a4b}': {
+					'ScaledDuration': {
 						asPercent: false,
 						parts: [
 							{
@@ -937,7 +937,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `APDamage`,
-										starValues: [200, 25, 40, 65],
+										starValues: [200, 24, 36, 60],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -945,7 +945,7 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{d4bf8645}': {
+					'TOOLTIPTotalSpellDamage': {
 						asPercent: false,
 						parts: [
 							{
@@ -953,7 +953,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `APDamage`,
-										starValues: [200, 25, 40, 65],
+										starValues: [200, 24, 36, 60],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1154,7 +1154,7 @@ export const champions: ChampionData[] = [
 				variables: {
 					'BurnWoundDuration': [9, 9, 9, 9],
 					'Damage': [0, 200, 300, 450],
-					'Shield': [0, 250, 300, 350],
+					'Shield': [0, 280, 350, 420],
 					'ShieldDuration': [4, 4, 4, 4],
 				},
 				calculations: {
@@ -1182,7 +1182,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Shield`,
-										starValues: [0, 250, 300, 350],
+										starValues: [0, 280, 350, 420],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1215,7 +1215,7 @@ export const champions: ChampionData[] = [
 			hp: 650,
 			initialMana: 0,
 			magicResist: 40,
-			mana: 40,
+			mana: 30,
 			moveSpeed: 500,
 			range: 1,
 		},
@@ -1230,7 +1230,7 @@ export const champions: ChampionData[] = [
 				variables: {
 					'Damage': [0.5, 200, 300, 450],
 					'ManaRefund': [15, 15, 15, 15],
-					'DamageOnHit': [15, 80, 120, 180],
+					'DamageOnHit': [15, 90, 135, 200],
 					'Duration': [4, 4, 4, 4],
 				},
 				calculations: {
@@ -1250,15 +1250,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{64c2187b}': {
+					'DamageOnHit': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{b474078e}`,
-										starValues: undefined,
+										variable: `DamageOnHit`,
+										starValues: [15, 90, 135, 200],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1314,10 +1314,10 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {
-					'Damage': [0, 100, 150, 235],
+					'Damage': [0, 75, 110, 170],
 					'Duration': [4, 4, 4, 4],
 					'DR': [0.30000001192092896, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
-					'Heal': [0, 300, 325, 400],
+					'Heal': [0, 275, 300, 375],
 				},
 				calculations: {
 					'Damage': {
@@ -1328,7 +1328,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [0, 100, 150, 235],
+										starValues: [0, 75, 110, 170],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1344,7 +1344,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Heal`,
-										starValues: [0, 300, 325, 400],
+										starValues: [0, 275, 300, 375],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1390,12 +1390,12 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {
-					'BaseResists': [2, 100, 150, 500],
+					'BaseResists': [2, 130, 160, 1000],
 					'BonusResistsPct': [0.5, 0.5, 0.5, 0.5],
-					'Duration': [4, 4, 4, 4],
+					'Duration': [4, 4, 4, 2],
 					'HexRadius': [3, 3, 3, 3],
 					'Damage': [100, 100, 150, 1800],
-					'ShieldPercent': [0.10000000149011612, 200, 250, 2000],
+					'ShieldPercent': [0.10000000149011612, 160, 200, 2000],
 					'ShieldDuration': [4, 4, 4, 4],
 				},
 				calculations: {
@@ -1422,14 +1422,14 @@ export const champions: ChampionData[] = [
 								operator: `sum`,
 								subparts: [
 									{
-										variable: `{12646f4a}`,
-										starValues: undefined,
+										variable: `BonusResistsPct`,
+										starValues: [0.5, 0.5, 0.5, 0.5],
 										stat: `Armor`,
 										ratio: 1,
 									},
 									{
 										variable: `BaseResists`,
-										starValues: [2, 100, 150, 500],
+										starValues: [2, 130, 160, 1000],
 										stat: undefined,
 										ratio: undefined,
 									},
@@ -1437,21 +1437,21 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{fd0b317b}': {
+					'MagicResist': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `sum`,
 								subparts: [
 									{
-										variable: `{12646f4a}`,
-										starValues: undefined,
+										variable: `BonusResistsPct`,
+										starValues: [0.5, 0.5, 0.5, 0.5],
 										stat: undefined,
 										ratio: undefined,
 									},
 									{
 										variable: `BaseResists`,
-										starValues: [2, 100, 150, 500],
+										starValues: [2, 130, 160, 1000],
 										stat: undefined,
 										ratio: undefined,
 									},
@@ -1467,7 +1467,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `ShieldPercent`,
-										starValues: [0.10000000149011612, 200, 250, 2000],
+										starValues: [0.10000000149011612, 160, 200, 2000],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1733,7 +1733,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'Damage': [0, 240, 360, 2000],
+					'Damage': [0, 200, 300, 2000],
 					'Healing': [0, 40, 60, 1000],
 					'EndHeal': [0, 100, 150, 1000],
 				},
@@ -1746,7 +1746,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [0, 240, 360, 2000],
+										starValues: [0, 200, 300, 2000],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1770,15 +1770,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{f8fb715d}': {
+					'EndHeal': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{a2de9d6c}`,
-										starValues: undefined,
+										variable: `EndHeal`,
+										starValues: [0, 100, 150, 1000],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1843,15 +1843,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{f8fb715d}': {
+					'EndHeal': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{a2de9d6c}`,
-										starValues: undefined,
+										variable: `EndHeal`,
+										starValues: [0, 120, 180, 1000],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -1899,9 +1899,9 @@ export const champions: ChampionData[] = [
 			critMultiplier: 1.399999976158142,
 			damage: 50,
 			hp: 900,
-			initialMana: 0,
+			initialMana: 30,
 			magicResist: 50,
-			mana: 80,
+			mana: 90,
 			moveSpeed: 500,
 			range: 1,
 		},
@@ -1916,7 +1916,7 @@ export const champions: ChampionData[] = [
 				variables: {
 					'Duration': [4, 4, 4, 4],
 					'Damage': [0.10000000149011612, 80, 120, 190],
-					'Shield': [0, 400, 450, 550],
+					'Shield': [0, 325, 400, 500],
 					'Heal': [0, 50, 60, 70],
 				},
 				calculations: {
@@ -1944,7 +1944,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Shield`,
-										starValues: [0, 400, 450, 550],
+										starValues: [0, 325, 400, 500],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2007,26 +2007,26 @@ export const champions: ChampionData[] = [
 				missile: undefined,
 				variables: {
 					'NumOfBlades': [7, 7, 7, 7],
-					'BladeHitAD': [0, 1.5, 1.5, 7],
+					'BladeHitAD': [0, 1.5, 1.5, 14],
 					'AttacksToCast_MustMatchResourceMaximum': [8, 8, 8, 8],
 					'SpellAPDamage': [100, 100, 100, 100],
 					'SpellHitAD': [0, 3, 3, 20],
-					'AttackSpeedToDamage': [0.5, 0.5, 0.5, 0.5],
+					'AttackSpeedToDamage': [0.699999988079071, 0.699999988079071, 0.699999988079071, 0.699999988079071],
 					'AttackSpeedToBladeSpeed': [0.25, 0.25, 0.25, 0.25],
 					'NumSpellBlades': [3, 3, 3, 3],
 					'NumSpellHIts': [3, 3, 3, 3],
 					'SunderDuration': [5, 5, 5, 5],
 				},
 				calculations: {
-					'{0f437b7e}': {
+					'Damage_BladeHit': {
 						asPercent: false,
 						parts: [
 							{
 								operator: undefined,
 								subparts: [
 									{
-										variable: `{74ec0113}`,
-										starValues: undefined,
+										variable: `BladeHitAD`,
+										starValues: [0, 1.5, 1.5, 14],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -2034,21 +2034,21 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{0003c576}': {
+					'Damage_SpellHit': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `sum`,
 								subparts: [
 									{
-										variable: `{674255fb}`,
-										starValues: undefined,
+										variable: `SpellHitAD`,
+										starValues: [0, 3, 3, 20],
 										stat: `AD`,
 										ratio: 1,
 									},
 									{
-										variable: `{107f7eb9}`,
-										starValues: undefined,
+										variable: `SpellAPDamage`,
+										starValues: [100, 100, 100, 100],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2174,7 +2174,7 @@ export const champions: ChampionData[] = [
 				variables: {
 					'Duration': [4, 4, 4, 4],
 					'NumTargets': [2, 2, 2, 2],
-					'Shield': [0, 120, 170, 220],
+					'Shield': [0, 120, 150, 200],
 					'BaseDamage': [0, 180, 270, 415],
 					'NumShieldTargets': [2, 2, 2, 2],
 				},
@@ -2187,7 +2187,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Shield`,
-										starValues: [0, 120, 170, 220],
+										starValues: [0, 120, 150, 200],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2289,7 +2289,7 @@ export const champions: ChampionData[] = [
 				missile: undefined,
 				variables: {
 					'Duration': [2, 2, 2, 2],
-					'Damage': [0, 325, 490, 735],
+					'Damage': [0, 250, 375, 560],
 					'StunDuration': [1.5, 1.5, 1.5, 1.5],
 					'Resists': [60, 60, 60, 60],
 					'ICD': [0.9900000095367432, 0.9900000095367432, 0.9900000095367432, 0.9900000095367432],
@@ -2304,7 +2304,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [0, 325, 490, 735],
+										starValues: [0, 250, 375, 560],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2397,7 +2397,7 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{a336b599}': {
+					'ManaRestore': {
 						asPercent: false,
 						parts: [
 							{
@@ -2413,15 +2413,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{d2d6a35b}': {
+					'AmplifiedDamage': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `sum`,
 								subparts: [
 									{
-										variable: `{d446488c}`,
-										starValues: undefined,
+										variable: `AmpedPercentAD`,
+										starValues: [0, 0.699999988079071, 0.699999988079071, 1.399999976158142],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -2703,7 +2703,7 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{50e8d20d}': {
+					'OnHitDamage': {
 						asPercent: false,
 						parts: [
 							{
@@ -2747,7 +2747,7 @@ export const champions: ChampionData[] = [
 				name: `TFT11_KayleSpellWide`,
 				castTime: undefined,
 				missile: {
-					width: 200,
+					width: 280,
 					travelTime: undefined,
 					speedInitial: 2500,
 					speedMin: undefined,
@@ -2791,14 +2791,14 @@ export const champions: ChampionData[] = [
 		isSpawn: false,
 		traits: [`Ghostly`, `Reaper`],
 		stats: {
-			armor: 60,
+			armor: 70,
 			attackSpeed: 0.8999999761581421,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
-			damage: 80,
+			damage: 75,
 			hp: 1000,
 			initialMana: 0,
-			magicResist: 60,
+			magicResist: 70,
 			mana: 60,
 			moveSpeed: 500,
 			range: 1,
@@ -2815,7 +2815,7 @@ export const champions: ChampionData[] = [
 					'IncreasedPercent': [10, 10, 10, 10],
 					'TransformADPercent': [0.10000000149011612, 4, 4, 10],
 					'CritChance': [0.30000001192092896, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
-					'SwipeADPercent': [2, 2, 2, 5],
+					'SwipeADPercent': [2, 2.4000000953674316, 2.4000000953674316, 6],
 					'SingleTargetDamageAmp': [1, 1, 1, 1],
 					'SwipeFlatDamage': [0, 30, 45, 135],
 				},
@@ -2827,14 +2827,14 @@ export const champions: ChampionData[] = [
 								operator: `sum`,
 								subparts: [
 									{
-										variable: `{0476abad}`,
-										starValues: undefined,
+										variable: `SwipeADPercent`,
+										starValues: [2, 2.4000000953674316, 2.4000000953674316, 6],
 										stat: `AD`,
 										ratio: 1,
 									},
 									{
-										variable: `{f006fa23}`,
-										starValues: undefined,
+										variable: `SwipeFlatDamage`,
+										starValues: [0, 30, 45, 135],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2842,15 +2842,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{d19def62}': {
+					'TransformDamage': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `sum`,
 								subparts: [
 									{
-										variable: `{59fbe917}`,
-										starValues: undefined,
+										variable: `TransformADPercent`,
+										starValues: [0.10000000149011612, 4, 4, 10],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -2884,14 +2884,14 @@ export const champions: ChampionData[] = [
 								operator: `sum`,
 								subparts: [
 									{
-										variable: `{0476abad}`,
-										starValues: undefined,
+										variable: `SwipeADPercent`,
+										starValues: [2, 2, 2, 6],
 										stat: `AD`,
 										ratio: 1,
 									},
 									{
-										variable: `{f006fa23}`,
-										starValues: undefined,
+										variable: `SwipeFlatDamage`,
+										starValues: [0, 30, 45, 135],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -2899,15 +2899,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{d19def62}': {
+					'TransformDamage': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `sum`,
 								subparts: [
 									{
-										variable: `{59fbe917}`,
-										starValues: undefined,
+										variable: `TransformADPercent`,
+										starValues: [0.10000000149011612, 4, 4, 12],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -2970,7 +2970,7 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {
-					'PercentAttackDamage': [3.25, 3.25, 3.25, 3.25],
+					'PercentAttackDamage': [3.0999999046325684, 3.0999999046325684, 3.0999999046325684, 3.0999999046325684],
 					'APDamage': [0, 20, 30, 45],
 				},
 				calculations: {
@@ -2982,7 +2982,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `PercentAttackDamage`,
-										starValues: [3.25, 3.25, 3.25, 3.25],
+										starValues: [3.0999999046325684, 3.0999999046325684, 3.0999999046325684, 3.0999999046325684],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -3070,10 +3070,10 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {
-					'Damage': [0, 125, 185, 285],
-					'SecondaryDamage': [0, 75, 115, 175],
+					'Damage': [0, 115, 175, 260],
+					'SecondaryDamage': [0, 65, 100, 155],
 					'AP': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
-					'FatedAS': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
+					'FatedAS': [0.18000000715255737, 0.18000000715255737, 0.18000000715255737, 0.18000000715255737],
 				},
 				calculations: {
 					'Damage': {
@@ -3084,7 +3084,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [0, 125, 185, 285],
+										starValues: [0, 115, 175, 260],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3100,7 +3100,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `SecondaryDamage`,
-										starValues: [0, 75, 115, 175],
+										starValues: [0, 65, 100, 155],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3233,8 +3233,8 @@ export const champions: ChampionData[] = [
 								operator: undefined,
 								subparts: [
 									{
-										variable: `{1e0630e9}`,
-										starValues: undefined,
+										variable: `DamageHPPercent`,
+										starValues: [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
 										stat: `HP`,
 										ratio: 1,
 									},
@@ -3345,7 +3345,7 @@ export const champions: ChampionData[] = [
 					'Shield': [0, 200, 250, 1000],
 					'AOEDamageADRatio': [1.5, 1.5, 1.5, 4.5],
 					'TooltipReave': [30, 30, 30, 30],
-					'DamageMultiplerPerBonusAS': [0.5, 0.5, 0.5, 0.5],
+					'DamageMultiplerPerBonusAS': [0.30000001192092896, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
 				},
 				calculations: {
 					'Damage': {
@@ -3355,8 +3355,8 @@ export const champions: ChampionData[] = [
 								operator: undefined,
 								subparts: [
 									{
-										variable: `{f5abbad4}`,
-										starValues: undefined,
+										variable: `PhysDamageADRatio`,
+										starValues: [2, 4.5, 4.5, 9],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -3371,8 +3371,8 @@ export const champions: ChampionData[] = [
 								operator: undefined,
 								subparts: [
 									{
-										variable: `{46386e5b}`,
-										starValues: undefined,
+										variable: `AOEDamageADRatio`,
+										starValues: [1.5, 1.5, 1.5, 4.5],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -3396,15 +3396,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{6eb74f4d}': {
+					'BonusDamageFromAS': {
 						asPercent: false,
 						parts: [
 							{
 								operator: undefined,
 								subparts: [
 									{
-										variable: `{b94166b0}`,
-										starValues: undefined,
+										variable: `DamageMultiplerPerBonusAS`,
+										starValues: [0.30000001192092896, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
 										stat: undefined,
 										ratio: undefined,
 									},
@@ -3459,10 +3459,10 @@ export const champions: ChampionData[] = [
 					tracksTarget: false,
 				},
 				variables: {
-					'Damage': [0, 200, 300, 900],
-					'SecondaryTargetDamage': [0, 100, 150, 450],
-					'NumOfOrbs': [3, 3, 3, 3],
-					'MegaDamage': [0, 300, 450, 1350],
+					'Damage': [0, 220, 330, 900],
+					'SecondaryTargetDamage': [0, 100, 150, 350],
+					'NumOfOrbs': [3, 3, 3, 5],
+					'MegaDamage': [0, 360, 540, 1600],
 				},
 				calculations: {
 					'Damage': {
@@ -3473,7 +3473,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [0, 200, 300, 900],
+										starValues: [0, 220, 330, 900],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3489,7 +3489,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `SecondaryTargetDamage`,
-										starValues: [0, 100, 150, 450],
+										starValues: [0, 100, 150, 350],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3497,7 +3497,7 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{6b456dd5}': {
+					'MegaDamage': {
 						asPercent: false,
 						parts: [
 							{
@@ -3505,7 +3505,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `MegaDamage`,
-										starValues: [0, 300, 450, 1350],
+										starValues: [0, 360, 540, 1600],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3580,7 +3580,7 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{6b456dd5}': {
+					'MegaDamage': {
 						asPercent: false,
 						parts: [
 							{
@@ -3833,7 +3833,7 @@ export const champions: ChampionData[] = [
 					tracksTarget: true,
 				},
 				variables: {
-					'Damage': [0, 220, 330, 515],
+					'Damage': [0, 210, 315, 480],
 					'StunDuration': [0, 1.5, 1.5, 1.5],
 					'TargetNum': [2, 2, 2, 2],
 					'AOEDamage': [0, 80, 120, 185],
@@ -3848,7 +3848,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [0, 220, 330, 515],
+										starValues: [0, 210, 315, 480],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4032,7 +4032,7 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {
-					'Damage': [0, 300, 450, 1500],
+					'Damage': [0, 240, 360, 1600],
 					'Duration': [3, 3, 3, 3],
 					'HexRadius': [2, 2, 2, 2],
 					'ChillDuration': [1, 1, 1, 1],
@@ -4047,7 +4047,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [0, 300, 450, 1500],
+										starValues: [0, 240, 360, 1600],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4171,10 +4171,10 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {
-					'Heal': [0, 250, 280, 320],
+					'Heal': [0, 275, 300, 350],
 					'BuffDuration': [2, 2, 2, 2],
 					'Damage': [0, 200, 300, 475],
-					'DR': [0, 0.3499999940395355, 0.3499999940395355, 0.4000000059604645],
+					'DR': [0, 0.30000001192092896, 0.30000001192092896, 0.3499999940395355],
 					'DamageIncreasePerEnemy': [1, 1, 1, 1],
 				},
 				calculations: {
@@ -4186,7 +4186,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Heal`,
-										starValues: [0, 250, 280, 320],
+										starValues: [0, 275, 300, 350],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4252,9 +4252,9 @@ export const champions: ChampionData[] = [
 			critMultiplier: 1.399999976158142,
 			damage: 60,
 			hp: 1000,
-			initialMana: 100,
+			initialMana: 80,
 			magicResist: 60,
-			mana: 140,
+			mana: 120,
 			moveSpeed: 500,
 			range: 1,
 		},
@@ -4306,7 +4306,7 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{a770d2d2}': {
+					'TotalShieldValue': {
 						asPercent: false,
 						parts: [
 							{
@@ -4512,11 +4512,11 @@ export const champions: ChampionData[] = [
 			attackSpeed: 0.8500000238418579,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
-			damage: 70,
+			damage: 60,
 			hp: 1100,
 			initialMana: 30,
 			magicResist: 60,
-			mana: 80,
+			mana: 90,
 			moveSpeed: 500,
 			range: 2,
 		},
@@ -4529,13 +4529,13 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {
-					'Damage': [0, 240, 360, 1500],
+					'Damage': [0, 185, 275, 2000],
 					'HexRange': [2, 2, 2, 2],
 					'DamageReductionPercent': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
 					'DebuffDuration': [4, 4, 4, 4],
 					'ShieldPercentDamage': [1, 1, 1, 1],
 					'ShieldDuration': [2, 2, 2, 2],
-					'BaseShieldAmount': [0, 175, 225, 500],
+					'BaseShieldAmount': [0, 160, 200, 600],
 				},
 				calculations: {
 					'Damage': {
@@ -4546,7 +4546,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [0, 240, 360, 1500],
+										starValues: [0, 185, 275, 2000],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4562,7 +4562,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `BaseShieldAmount`,
-										starValues: [0, 175, 225, 500],
+										starValues: [0, 160, 200, 600],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4781,15 +4781,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{52f9b8e7}': {
+					'BoostedModifiedDamage': {
 						asPercent: false,
 						parts: [
 							{
 								operator: undefined,
 								subparts: [
 									{
-										variable: `{8cfbe6b7}`,
-										starValues: undefined,
+										variable: `PercentAttackDamageBoosted`,
+										starValues: [3.5999999046325684, 3, 3, 3.0999999046325684],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -4845,15 +4845,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{52f9b8e7}': {
+					'BoostedModifiedDamage': {
 						asPercent: false,
 						parts: [
 							{
 								operator: undefined,
 								subparts: [
 									{
-										variable: `{8cfbe6b7}`,
-										starValues: undefined,
+										variable: `PercentAttackDamageBoosted`,
+										starValues: [3, 3, 3, 3],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -4907,15 +4907,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{52f9b8e7}': {
+					'BoostedModifiedDamage': {
 						asPercent: false,
 						parts: [
 							{
 								operator: undefined,
 								subparts: [
 									{
-										variable: `{8cfbe6b7}`,
-										starValues: undefined,
+										variable: `PercentAttackDamageBoosted`,
+										starValues: [3, 3, 3, 3],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -4980,8 +4980,8 @@ export const champions: ChampionData[] = [
 										ratio: 1,
 									},
 									{
-										variable: `{25f2bd2d}`,
-										starValues: undefined,
+										variable: `BaseDamageAPScaling`,
+										starValues: [0, 20, 30, 45],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4996,8 +4996,8 @@ export const champions: ChampionData[] = [
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{25f2bd2d}`,
-										starValues: undefined,
+										variable: `BaseDamageAPScaling`,
+										starValues: [0, 20, 30, 45],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -5078,14 +5078,14 @@ export const champions: ChampionData[] = [
 								operator: `sum`,
 								subparts: [
 									{
-										variable: `{2a03bb1b}`,
-										starValues: undefined,
+										variable: `PercentADSecondary`,
+										starValues: [1.2000000476837158, 1.2000000476837158, 1.2000000476837158, 1.2000000476837158],
 										stat: `AD`,
 										ratio: 1,
 									},
 									{
-										variable: `{b4e5a1a7}`,
-										starValues: undefined,
+										variable: `PercentAPSecondary`,
+										starValues: [0, 30, 45, 2000],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -5093,15 +5093,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{55b9485c}': {
+					'PrimaryDamage': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{512f0b9f}`,
-										starValues: undefined,
+										variable: `PercentADPrimary`,
+										starValues: [6, 2.700000047683716, 2.700000047683716, 90.01000213623047],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -5132,9 +5132,9 @@ export const champions: ChampionData[] = [
 			critMultiplier: 1.399999976158142,
 			damage: 55,
 			hp: 800,
-			initialMana: 40,
+			initialMana: 25,
 			magicResist: 45,
-			mana: 90,
+			mana: 75,
 			moveSpeed: 500,
 			range: 1,
 		},
@@ -5154,7 +5154,7 @@ export const champions: ChampionData[] = [
 					'ShenSelfishReduction': [0, 40, 50, 90],
 				},
 				calculations: {
-					'{1932e601}': {
+					'FlatDamageReduction': {
 						asPercent: false,
 						parts: [
 							{
@@ -5170,7 +5170,7 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{edec746b}': {
+					'TrueDamage': {
 						asPercent: false,
 						parts: [
 							{
@@ -5186,15 +5186,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{5f851b01}': {
+					'ShenSelfishReduction': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{0f241126}`,
-										starValues: undefined,
+										variable: `ShenSelfishReduction`,
+										starValues: [0, 40, 50, 90],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -5261,13 +5261,13 @@ export const champions: ChampionData[] = [
 			attackSpeed: 0.800000011920929,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
-			damage: 10,
+			damage: 0,
 			hp: 88888,
 			initialMana: 0,
 			magicResist: 88,
 			mana: 100,
 			moveSpeed: 500,
-			range: 1,
+			range: 138,
 		},
 		basicAttackMissileSpeed: undefined,
 		critAttackMissileSpeed: undefined,
@@ -5331,7 +5331,7 @@ export const champions: ChampionData[] = [
 				missile: undefined,
 				variables: {
 					'PercentAttackDamage': [0.44999998807907104, 0.949999988079071, 0.949999988079071, 1],
-					'Duration': [5, 5, 5, 5],
+					'Duration': [8, 8, 8, 8],
 					'AttackSpeed': [0.20000000298023224, 0.15000000596046448, 0.20000000298023224, 0.25],
 				},
 				calculations: {
@@ -5446,11 +5446,11 @@ export const champions: ChampionData[] = [
 				castTime: 0.5,
 				missile: undefined,
 				variables: {
-					'Damage': [0, 250, 375, 580],
-					'AoEDamage': [0, 140, 210, 325],
+					'Damage': [0, 220, 330, 510],
+					'AoEDamage': [0, 110, 165, 255],
 					'APPerThreshold': [6, 6, 6, 6],
 					'PercentHealthLost': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
-					'APPerHealthLoss': [10, 10, 10, 10],
+					'APPerHealthLoss': [8, 8, 8, 8],
 				},
 				calculations: {
 					'Damage': {
@@ -5461,7 +5461,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [0, 250, 375, 580],
+										starValues: [0, 220, 330, 510],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -5477,7 +5477,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `AoEDamage`,
-										starValues: [0, 140, 210, 325],
+										starValues: [0, 110, 165, 255],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -5523,9 +5523,9 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {
-					'Damage': [0, 150, 225, 675],
-					'AOEDamage': [0, 100, 150, 450],
-					'Heal': [0, 125, 150, 400],
+					'Damage': [0, 200, 300, 100],
+					'AOEDamage': [0, 90, 135, 450],
+					'Heal': [0, 120, 140, 500],
 				},
 				calculations: {
 					'Damage': {
@@ -5536,7 +5536,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [0, 150, 225, 675],
+										starValues: [0, 200, 300, 100],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -5568,7 +5568,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Heal`,
-										starValues: [0, 125, 150, 400],
+										starValues: [0, 120, 140, 500],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -5616,19 +5616,19 @@ export const champions: ChampionData[] = [
 				variables: {
 					'NumStartingButt': [7, 7, 7, 10],
 					'DamagePerButt': [0, 40, 60, 180],
-					'FatedBonus': [0.11999999731779099, 0.11999999731779099, 0.11999999731779099, 0.11999999731779099],
+					'FatedBonus': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
 					'NumCastsPerButt': [1, 1, 1, 1],
 				},
 				calculations: {
-					'{d71fed93}': {
+					'DamagePerButt': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{a9116f9e}`,
-										starValues: undefined,
+										variable: `DamagePerButt`,
+										starValues: [0, 40, 60, 180],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -5886,8 +5886,8 @@ export const champions: ChampionData[] = [
 					_missileSpeed: 1400,
 				},
 				variables: {
-					'Duration': [10, 10, 10, 10],
-					'Damage': [0, 400, 600, 1000],
+					'Duration': [8, 8, 8, 8],
+					'Damage': [0, 420, 630, 1000],
 					'TickRate': [0.5, 0.5, 0.5, 0.5],
 				},
 				calculations: {
@@ -5899,7 +5899,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [0, 400, 600, 1000],
+										starValues: [0, 420, 630, 1000],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -5979,7 +5979,7 @@ export const champions: ChampionData[] = [
 					'ShieldDuration': [4, 4, 4, 4],
 					'ResistShareDuration': [6, 6, 6, 6],
 					'PercentArmorAndMR': [0, 0.30000001192092896, 0.30000001192092896, 0.3499999940395355],
-					'FatedDefenses': [20, 20, 20, 20],
+					'FatedDefenses': [25, 25, 25, 25],
 				},
 				calculations: {
 					'Shield': {
@@ -6019,7 +6019,26 @@ export const champions: ChampionData[] = [
 				uninterruptable: undefined,
 			},
 		],
-		missiles: [],
+		missiles: [
+			{
+				name: `TFT11_ThreshSpellMissile`,
+				castTime: undefined,
+				missile: {
+					width: undefined,
+					travelTime: undefined,
+					speedInitial: 1500,
+					speedMin: undefined,
+					speedMax: undefined,
+					acceleration: undefined,
+					startDelay: undefined,
+					tracksTarget: true,
+				},
+				variables: {},
+				calculations: {},
+				cantCastWhileRooted: undefined,
+				uninterruptable: undefined,
+			},
+		],
 	},
 	{
 		apiName: `TFT11_Tibbers`,
@@ -6112,7 +6131,7 @@ export const champions: ChampionData[] = [
 				missile: undefined,
 				variables: {
 					'PercentAttackDamage': [0, 2.6500000953674316, 2.6500000953674316, 2.700000047683716],
-					'AttackDamage': [0, 0.5, 0.5, 0.550000011920929],
+					'AttackDamage': [0, 0.44999998807907104, 0.44999998807907104, 0.5],
 					'Duration': [6, 6, 6, 6],
 					'BaseSpellDamage': [0, 75, 115, 185],
 				},
@@ -6130,8 +6149,8 @@ export const champions: ChampionData[] = [
 										ratio: 1,
 									},
 									{
-										variable: `{a1f1037f}`,
-										starValues: undefined,
+										variable: `BaseSpellDamage`,
+										starValues: [0, 75, 115, 185],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -6146,8 +6165,8 @@ export const champions: ChampionData[] = [
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{a1f1037f}`,
-										starValues: undefined,
+										variable: `BaseSpellDamage`,
+										starValues: [0, 75, 115, 185],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -6173,7 +6192,7 @@ export const champions: ChampionData[] = [
 		traits: [`Inkshadow`, `Behemoth`, `Spirit Walker`],
 		stats: {
 			armor: 50,
-			attackSpeed: 1,
+			attackSpeed: 0.949999988079071,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
 			damage: 50,
@@ -6195,9 +6214,9 @@ export const champions: ChampionData[] = [
 				variables: {
 					'HexDistance': [0, 2, 2, 10],
 					'Damage': [0, 300, 450, 5555],
-					'ShieldAmt': [0, 350, 425, 3000],
+					'ShieldAmt': [0, 300, 375, 3000],
 					'ShieldDuration': [3, 3, 3, 3],
-					'ASPercent': [1.5, 0.800000011920929, 0.800000011920929, 5],
+					'ASPercent': [1.5, 0.6000000238418579, 0.699999988079071, 5],
 					'BuffDuration': [4, 6, 6, 30],
 					'BounceCount': [0, 4, 4, 20],
 					'ShurikenDamage': [0, 150, 225, 1500],
@@ -6227,8 +6246,8 @@ export const champions: ChampionData[] = [
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{db2b2efa}`,
-										starValues: undefined,
+										variable: `ShieldAmt`,
+										starValues: [0, 300, 375, 3000],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -6236,15 +6255,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{e167ffa0}': {
+					'ShurikenDamage': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{4d347543}`,
-										starValues: undefined,
+										variable: `ShurikenDamage`,
+										starValues: [0, 150, 225, 1500],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -6365,14 +6384,14 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {
-					'HealAmount': [0, 210, 240, 270],
 					'StunDuration': [1, 1, 1, 1],
-					'SmallDamage': [0, 50, 75, 120],
-					'LargeDamage': [0, 100, 150, 240],
+					'SmallDamage': [0, 35, 50, 80],
+					'LargeDamage': [0, 80, 120, 185],
 					'HealthRatio': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
+					'HealAmount': [0, 140, 170, 210],
 				},
 				calculations: {
-					'{2bb5c10c}': {
+					'SmallDamage': {
 						asPercent: false,
 						parts: [
 							{
@@ -6380,7 +6399,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `SmallDamage`,
-										starValues: [0, 50, 75, 120],
+										starValues: [0, 35, 50, 80],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -6388,7 +6407,7 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{30263aa8}': {
+					'LargeDamage': {
 						asPercent: false,
 						parts: [
 							{
@@ -6401,8 +6420,24 @@ export const champions: ChampionData[] = [
 										ratio: 1,
 									},
 									{
-										variable: `{cf2c9ea5}`,
-										starValues: undefined,
+										variable: `LargeDamage`,
+										starValues: [0, 80, 120, 185],
+										stat: `AP`,
+										ratio: 0.009999999776482582,
+									},
+								],
+							},
+						],
+					},
+					'Heal': {
+						asPercent: false,
+						parts: [
+							{
+								operator: `scale`,
+								subparts: [
+									{
+										variable: `HealAmount`,
+										starValues: [0, 140, 170, 210],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -6533,8 +6568,8 @@ export const champions: ChampionData[] = [
 								operator: `sum`,
 								subparts: [
 									{
-										variable: `{9057ebbf}`,
-										starValues: undefined,
+										variable: `SpinPercentAttackDamage`,
+										starValues: [0, 3, 3, 9],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -6542,21 +6577,21 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{4f2eb533}': {
+					'BonkDamage': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `sum`,
 								subparts: [
 									{
-										variable: `{1ec43387}`,
-										starValues: undefined,
+										variable: `BonkPercentAttackDamage`,
+										starValues: [0, 3, 3, 15],
 										stat: `AD`,
 										ratio: 1,
 									},
 									{
-										variable: `{43e3a6ec}`,
-										starValues: undefined,
+										variable: `BonkDamage`,
+										starValues: [0, 70, 105, 155],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -6564,15 +6599,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{c004dff7}': {
+					'StunDamage': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `sum`,
 								subparts: [
 									{
-										variable: `{d2124a27}`,
-										starValues: undefined,
+										variable: `StunPercentAttackDamage`,
+										starValues: [0, 3, 3, 9],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -6629,12 +6664,12 @@ export const champions: ChampionData[] = [
 				variables: {
 					'NumClosestTargets': [4, 4, 4, 4],
 					'FeatherDamage': [0, 0.699999988079071, 0.699999988079071, 5],
-					'FeatherRecallDamage': [0, 0.30000001192092896, 0.30000001192092896, 1],
+					'FeatherRecallDamage': [0, 0.5, 0.5, 5],
 					'FeatherRecallBaseDamage': [0, 15, 25, 75],
 					'FeatherCount': [0, 12, 12, 30],
 				},
 				calculations: {
-					'{3b9ce440}': {
+					'FeatherDamage': {
 						asPercent: false,
 						parts: [
 							{
@@ -6657,8 +6692,8 @@ export const champions: ChampionData[] = [
 								operator: undefined,
 								subparts: [
 									{
-										variable: `{9e738d10}`,
-										starValues: undefined,
+										variable: `FeatherRecallDamage`,
+										starValues: [0, 0.5, 0.5, 5],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -6673,8 +6708,8 @@ export const champions: ChampionData[] = [
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{075f6969}`,
-										starValues: undefined,
+										variable: `FeatherRecallBaseDamage`,
+										starValues: [0, 15, 25, 75],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -6682,21 +6717,21 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{aed3fbd8}': {
+					'FeatherRecallDamage': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `sum`,
 								subparts: [
 									{
-										variable: `{075f6969}`,
-										starValues: undefined,
+										variable: `FeatherRecallBaseDamage`,
+										starValues: [0, 15, 25, 75],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
 									{
-										variable: `{9e738d10}`,
-										starValues: undefined,
+										variable: `FeatherRecallDamage`,
+										starValues: [0, 0.5, 0.5, 5],
 										stat: `AD`,
 										ratio: 1,
 									},
@@ -6883,7 +6918,7 @@ export const champions: ChampionData[] = [
 			hp: 600,
 			initialMana: 0,
 			magicResist: 45,
-			mana: 80,
+			mana: 70,
 			moveSpeed: 500,
 			range: 1,
 		},
@@ -6901,7 +6936,7 @@ export const champions: ChampionData[] = [
 					'BaseShield': [0, 175, 200, 250],
 					'ShieldResistPct': [0, 1, 1.100000023841858, 1.25],
 					'ShieldDamage': [0.30000001192092896, 0.4000000059604645, 0.4000000059604645, 0.44999998807907104],
-					'FatedBonus': [400, 400, 400, 400],
+					'FatedBonus': [350, 350, 350, 350],
 				},
 				calculations: {
 					'Shield': {
@@ -6911,14 +6946,14 @@ export const champions: ChampionData[] = [
 								operator: `sum`,
 								subparts: [
 									{
-										variable: `{0a80c331}`,
-										starValues: undefined,
+										variable: `ShieldResistPct`,
+										starValues: [0, 1, 1.100000023841858, 1.25],
 										stat: `Armor`,
 										ratio: 1,
 									},
 									{
-										variable: `{0a80c331}`,
-										starValues: undefined,
+										variable: `ShieldResistPct`,
+										starValues: [0, 1, 1.100000023841858, 1.25],
 										stat: undefined,
 										ratio: undefined,
 									},
@@ -6948,7 +6983,7 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{f7f8ddfe}': {
+					'ShieldDamage': {
 						asPercent: false,
 						parts: [
 							{
@@ -7006,15 +7041,15 @@ export const champions: ChampionData[] = [
 		isSpawn: false,
 		traits: [`Umbral`, `Reaper`],
 		stats: {
-			armor: 40,
-			attackSpeed: 0.800000011920929,
+			armor: 50,
+			attackSpeed: 0.8999999761581421,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
 			damage: 65,
 			hp: 800,
-			initialMana: 10,
-			magicResist: 40,
-			mana: 70,
+			initialMana: 0,
+			magicResist: 50,
+			mana: 60,
 			moveSpeed: 500,
 			range: 1,
 		},
@@ -7030,7 +7065,7 @@ export const champions: ChampionData[] = [
 					'ADRatio': [0, 1.649999976158142, 1.649999976158142, 1.75],
 					'Shield': [0, 280, 340, 400],
 					'ShieldDuration': [3, 3, 3, 3],
-					'ASBonus': [0.800000011920929, 0.800000011920929, 0.800000011920929, 0.800000011920929],
+					'ASBonus': [0.75, 0.75, 0.75, 0.75],
 					'WoundDuration': [5, 5, 5, 5],
 					'HexRange': [3, 3, 3, 3],
 				},
@@ -7084,14 +7119,14 @@ export const champions: ChampionData[] = [
 		isSpawn: false,
 		traits: [`Umbral`, `Behemoth`],
 		stats: {
-			armor: 45,
+			armor: 50,
 			attackSpeed: 0.6000000238418579,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
 			damage: 60,
 			hp: 800,
 			initialMana: 40,
-			magicResist: 45,
+			magicResist: 50,
 			mana: 90,
 			moveSpeed: 500,
 			range: 1,
@@ -7150,7 +7185,7 @@ export const champions: ChampionData[] = [
 			critMultiplier: 1.399999976158142,
 			damage: 45,
 			hp: 650,
-			initialMana: 20,
+			initialMana: 0,
 			magicResist: 25,
 			mana: 60,
 			moveSpeed: 500,
@@ -7174,9 +7209,9 @@ export const champions: ChampionData[] = [
 					tracksTarget: false,
 				},
 				variables: {
-					'Damage': [0, 220, 330, 530],
+					'Damage': [0, 275, 415, 640],
 					'BounceRange': [2, 2, 2, 2],
-					'SecondarySpellDamage': [100, 100, 150, 240],
+					'SecondarySpellDamage': [100, 90, 135, 215],
 					'RicochetsPerKill': [1, 1, 1, 1],
 					'TOOLTIPBounceRange': [2, 2, 2, 2],
 				},
@@ -7189,7 +7224,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [0, 220, 330, 530],
+										starValues: [0, 275, 415, 640],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -7197,15 +7232,15 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{f1a7da43}': {
+					'SecondarySpellDamage': {
 						asPercent: false,
 						parts: [
 							{
 								operator: `scale`,
 								subparts: [
 									{
-										variable: `{748589c0}`,
-										starValues: undefined,
+										variable: `SecondarySpellDamage`,
+										starValues: [100, 90, 135, 215],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -7323,11 +7358,11 @@ export const abilities: Record<string, AbilityData> = {
 		icon: `ASSETS/Characters/TFT11_Ahri/HUD/Icons2D/TFT11_Ahri_Ability.tex`,
 		name: `Love Bomb`,
 		variables: {
-			'Damage': [0, 220, 330, 500],
+			'Damage': [0, 280, 420, 630],
 			'NumAllies': [1, 1, 1, 1],
-			'FatedBonus': [25, 25, 25, 25],
+			'FatedBonus': [30, 30, 30, 30],
 			'NumSeconds': [2, 2, 2, 2],
-			'SecondaryDamage': [0, 110, 165, 250],
+			'SecondaryDamage': [0, 130, 195, 295],
 		},
 	},
 	'TFT11_Alune': {
@@ -7350,7 +7385,7 @@ export const abilities: Record<string, AbilityData> = {
 		variables: {
 			'Duration': [3, 3, 3, 3],
 			'SelfHealingAmount': [0, 250, 300, 375],
-			'AllyHealingAmount': [0, 60, 85, 110],
+			'AllyHealingAmount': [0, 80, 100, 125],
 			'Damage': [50, 150, 225, 360],
 		},
 	},
@@ -7361,9 +7396,9 @@ export const abilities: Record<string, AbilityData> = {
 		variables: {
 			'HealthRatio': [1, 0.15000000596046448, 0.15000000596046448, 0.15000000596046448],
 			'StunDuration': [1.5, 1.5, 1.5, 1.5],
-			'Damage': [0, 180, 270, 2500],
+			'Damage': [0, 150, 225, 2500],
 			'DebuffDuration': [8, 8, 8, 8],
-			'APHealth': [0, 325, 400, 1500],
+			'APHealth': [0, 300, 350, 1500],
 			'HealRatio': [0.05000000074505806, 0.05000000074505806, 0.05000000074505806, 0.05000000074505806],
 			'HexRange': [2, 2, 2, 2],
 		},
@@ -7414,7 +7449,7 @@ export const abilities: Record<string, AbilityData> = {
 		variables: {
 			'Duration': [6, 6, 6, 6],
 			'PercentAttackDamage': [0.800000011920929, 0.6499999761581421, 0.6499999761581421, 0.699999988079071],
-			'APDamage': [200, 25, 40, 65],
+			'APDamage': [200, 24, 36, 60],
 			'AOEDamageMultiplier': [2, 2, 2, 2],
 			'HexDistance': [2, 2, 2, 2],
 		},
@@ -7435,7 +7470,7 @@ export const abilities: Record<string, AbilityData> = {
 		variables: {
 			'BurnWoundDuration': [9, 9, 9, 9],
 			'Damage': [0, 200, 300, 450],
-			'Shield': [0, 250, 300, 350],
+			'Shield': [0, 280, 350, 420],
 			'ShieldDuration': [4, 4, 4, 4],
 		},
 	},
@@ -7446,7 +7481,7 @@ export const abilities: Record<string, AbilityData> = {
 		variables: {
 			'Damage': [0.5, 200, 300, 450],
 			'ManaRefund': [15, 15, 15, 15],
-			'DamageOnHit': [15, 80, 120, 180],
+			'DamageOnHit': [15, 90, 135, 200],
 			'Duration': [4, 4, 4, 4],
 		},
 	},
@@ -7455,10 +7490,10 @@ export const abilities: Record<string, AbilityData> = {
 		icon: `ASSETS/Characters/TFT11_Diana/HUD/Icons2D/TFT11_Diana_Ability.tex`,
 		name: `Purification Rites`,
 		variables: {
-			'Damage': [0, 100, 150, 235],
+			'Damage': [0, 75, 110, 170],
 			'Duration': [4, 4, 4, 4],
 			'DR': [0.30000001192092896, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
-			'Heal': [0, 300, 325, 400],
+			'Heal': [0, 275, 300, 375],
 		},
 	},
 	'TFT11_Galio': {
@@ -7466,12 +7501,12 @@ export const abilities: Record<string, AbilityData> = {
 		icon: `ASSETS/Characters/TFT11_Galio/HUD/Icons2D/TFT11_Galio_Ability.tex`,
 		name: `Savior's Protection`,
 		variables: {
-			'BaseResists': [2, 100, 150, 500],
+			'BaseResists': [2, 130, 160, 1000],
 			'BonusResistsPct': [0.5, 0.5, 0.5, 0.5],
-			'Duration': [4, 4, 4, 4],
+			'Duration': [4, 4, 4, 2],
 			'HexRadius': [3, 3, 3, 3],
 			'Damage': [100, 100, 150, 1800],
-			'ShieldPercent': [0.10000000149011612, 200, 250, 2000],
+			'ShieldPercent': [0.10000000149011612, 160, 200, 2000],
 			'ShieldDuration': [4, 4, 4, 4],
 		},
 	},
@@ -7501,7 +7536,7 @@ export const abilities: Record<string, AbilityData> = {
 		icon: `ASSETS/Characters/TFT11_Hwei/HUD/Icons2D/TFT11_Hwei_Ability.tex`,
 		name: `A Brush with Fate`,
 		variables: {
-			'Damage': [0, 240, 360, 2000],
+			'Damage': [0, 200, 300, 2000],
 			'Healing': [0, 40, 60, 1000],
 			'EndHeal': [0, 100, 150, 1000],
 		},
@@ -7513,7 +7548,7 @@ export const abilities: Record<string, AbilityData> = {
 		variables: {
 			'Duration': [4, 4, 4, 4],
 			'Damage': [0.10000000149011612, 80, 120, 190],
-			'Shield': [0, 400, 450, 550],
+			'Shield': [0, 325, 400, 500],
 			'Heal': [0, 50, 60, 70],
 		},
 	},
@@ -7523,11 +7558,11 @@ export const abilities: Record<string, AbilityData> = {
 		name: `Blade Dance`,
 		variables: {
 			'NumOfBlades': [7, 7, 7, 7],
-			'BladeHitAD': [0, 1.5, 1.5, 7],
+			'BladeHitAD': [0, 1.5, 1.5, 14],
 			'AttacksToCast_MustMatchResourceMaximum': [8, 8, 8, 8],
 			'SpellAPDamage': [100, 100, 100, 100],
 			'SpellHitAD': [0, 3, 3, 20],
-			'AttackSpeedToDamage': [0.5, 0.5, 0.5, 0.5],
+			'AttackSpeedToDamage': [0.699999988079071, 0.699999988079071, 0.699999988079071, 0.699999988079071],
 			'AttackSpeedToBladeSpeed': [0.25, 0.25, 0.25, 0.25],
 			'NumSpellBlades': [3, 3, 3, 3],
 			'NumSpellHIts': [3, 3, 3, 3],
@@ -7541,7 +7576,7 @@ export const abilities: Record<string, AbilityData> = {
 		variables: {
 			'Duration': [4, 4, 4, 4],
 			'NumTargets': [2, 2, 2, 2],
-			'Shield': [0, 120, 170, 220],
+			'Shield': [0, 120, 150, 200],
 			'BaseDamage': [0, 180, 270, 415],
 			'NumShieldTargets': [2, 2, 2, 2],
 		},
@@ -7552,7 +7587,7 @@ export const abilities: Record<string, AbilityData> = {
 		name: `Counter Strike`,
 		variables: {
 			'Duration': [2, 2, 2, 2],
-			'Damage': [0, 325, 490, 735],
+			'Damage': [0, 250, 375, 560],
 			'StunDuration': [1.5, 1.5, 1.5, 1.5],
 			'Resists': [60, 60, 60, 60],
 			'ICD': [0.9900000095367432, 0.9900000095367432, 0.9900000095367432, 0.9900000095367432],
@@ -7581,7 +7616,7 @@ export const abilities: Record<string, AbilityData> = {
 			'IncreasedPercent': [10, 10, 10, 10],
 			'TransformADPercent': [0.10000000149011612, 4, 4, 10],
 			'CritChance': [0.30000001192092896, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
-			'SwipeADPercent': [2, 2, 2, 5],
+			'SwipeADPercent': [2, 2.4000000953674316, 2.4000000953674316, 6],
 			'SingleTargetDamageAmp': [1, 1, 1, 1],
 			'SwipeFlatDamage': [0, 30, 45, 135],
 		},
@@ -7591,7 +7626,7 @@ export const abilities: Record<string, AbilityData> = {
 		icon: `ASSETS/Characters/TFT11_KhaZix/HUD/Icons2D/TFT11_KhaZix_Ability.tex`,
 		name: `Leap!`,
 		variables: {
-			'PercentAttackDamage': [3.25, 3.25, 3.25, 3.25],
+			'PercentAttackDamage': [3.0999999046325684, 3.0999999046325684, 3.0999999046325684, 3.0999999046325684],
 			'APDamage': [0, 20, 30, 45],
 		},
 	},
@@ -7600,10 +7635,10 @@ export const abilities: Record<string, AbilityData> = {
 		icon: `ASSETS/Characters/TFT11_Kindred/HUD/Icons2D/TFT11_Kindred_Ability.tex`,
 		name: `Flourish of Arrows`,
 		variables: {
-			'Damage': [0, 125, 185, 285],
-			'SecondaryDamage': [0, 75, 115, 175],
+			'Damage': [0, 115, 175, 260],
+			'SecondaryDamage': [0, 65, 100, 155],
 			'AP': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
-			'FatedAS': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
+			'FatedAS': [0.18000000715255737, 0.18000000715255737, 0.18000000715255737, 0.18000000715255737],
 		},
 	},
 	'TFT11_FortuneYord': {
@@ -7639,7 +7674,7 @@ export const abilities: Record<string, AbilityData> = {
 			'Shield': [0, 200, 250, 1000],
 			'AOEDamageADRatio': [1.5, 1.5, 1.5, 4.5],
 			'TooltipReave': [30, 30, 30, 30],
-			'DamageMultiplerPerBonusAS': [0.5, 0.5, 0.5, 0.5],
+			'DamageMultiplerPerBonusAS': [0.30000001192092896, 0.30000001192092896, 0.30000001192092896, 0.30000001192092896],
 		},
 	},
 	'TFT11_Lillia': {
@@ -7647,10 +7682,10 @@ export const abilities: Record<string, AbilityData> = {
 		icon: `ASSETS/Characters/TFT11_Lillia/HUD/Icons2D/TFT11_Lillia_Ability.tex`,
 		name: `Eep!`,
 		variables: {
-			'Damage': [0, 200, 300, 900],
-			'SecondaryTargetDamage': [0, 100, 150, 450],
-			'NumOfOrbs': [3, 3, 3, 3],
-			'MegaDamage': [0, 300, 450, 1350],
+			'Damage': [0, 220, 330, 900],
+			'SecondaryTargetDamage': [0, 100, 150, 350],
+			'NumOfOrbs': [3, 3, 3, 5],
+			'MegaDamage': [0, 360, 540, 1600],
 		},
 	},
 	'TFT11_Lissandra': {
@@ -7671,7 +7706,7 @@ export const abilities: Record<string, AbilityData> = {
 		icon: `ASSETS/Characters/TFT11_Lux/HUD/Icons2D/TFT11_Lux_Ability.tex`,
 		name: `Bunny Binding`,
 		variables: {
-			'Damage': [0, 220, 330, 515],
+			'Damage': [0, 210, 315, 480],
 			'StunDuration': [0, 1.5, 1.5, 1.5],
 			'TargetNum': [2, 2, 2, 2],
 			'AOEDamage': [0, 80, 120, 185],
@@ -7693,7 +7728,7 @@ export const abilities: Record<string, AbilityData> = {
 		icon: `ASSETS/Characters/TFT11_Morgana/HUD/Icons2D/TFT11_Morgana_Ability.tex`,
 		name: `The Tempest's Torment`,
 		variables: {
-			'Damage': [0, 300, 450, 1500],
+			'Damage': [0, 240, 360, 1600],
 			'Duration': [3, 3, 3, 3],
 			'HexRadius': [2, 2, 2, 2],
 			'ChillDuration': [1, 1, 1, 1],
@@ -7715,10 +7750,10 @@ export const abilities: Record<string, AbilityData> = {
 		icon: `ASSETS/Characters/TFT11_Neeko/HUD/Icons2D/TFT11_Neeko_Ability.tex`,
 		name: `Hop Blossom`,
 		variables: {
-			'Heal': [0, 250, 280, 320],
+			'Heal': [0, 275, 300, 350],
 			'BuffDuration': [2, 2, 2, 2],
 			'Damage': [0, 200, 300, 475],
-			'DR': [0, 0.3499999940395355, 0.3499999940395355, 0.4000000059604645],
+			'DR': [0, 0.30000001192092896, 0.30000001192092896, 0.3499999940395355],
 			'DamageIncreasePerEnemy': [1, 1, 1, 1],
 		},
 	},
@@ -7750,13 +7785,13 @@ export const abilities: Record<string, AbilityData> = {
 		icon: `ASSETS/Characters/TFT11_Rakan/HUD/Icons2D/TFT11_Rakan_Ability.tex`,
 		name: `Grand Entrance`,
 		variables: {
-			'Damage': [0, 240, 360, 1500],
+			'Damage': [0, 185, 275, 2000],
 			'HexRange': [2, 2, 2, 2],
 			'DamageReductionPercent': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
 			'DebuffDuration': [4, 4, 4, 4],
 			'ShieldPercentDamage': [1, 1, 1, 1],
 			'ShieldDuration': [2, 2, 2, 2],
-			'BaseShieldAmount': [0, 175, 225, 500],
+			'BaseShieldAmount': [0, 160, 200, 600],
 		},
 	},
 	'TFT11_RakanBenchDummy': {
@@ -7834,7 +7869,7 @@ export const abilities: Record<string, AbilityData> = {
 		name: `On the Hunt`,
 		variables: {
 			'PercentAttackDamage': [0.44999998807907104, 0.949999988079071, 0.949999988079071, 1],
-			'Duration': [5, 5, 5, 5],
+			'Duration': [8, 8, 8, 8],
 			'AttackSpeed': [0.20000000298023224, 0.15000000596046448, 0.20000000298023224, 0.25],
 		},
 	},
@@ -7843,11 +7878,11 @@ export const abilities: Record<string, AbilityData> = {
 		icon: `ASSETS/Characters/TFT11_Soraka/HUD/Icons2D/TFT11_Soraka_Ability.tex`,
 		name: `Divine Judgement`,
 		variables: {
-			'Damage': [0, 250, 375, 580],
-			'AoEDamage': [0, 140, 210, 325],
+			'Damage': [0, 220, 330, 510],
+			'AoEDamage': [0, 110, 165, 255],
 			'APPerThreshold': [6, 6, 6, 6],
 			'PercentHealthLost': [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224],
-			'APPerHealthLoss': [10, 10, 10, 10],
+			'APPerHealthLoss': [8, 8, 8, 8],
 		},
 	},
 	'TFT11_Sylas': {
@@ -7855,9 +7890,9 @@ export const abilities: Record<string, AbilityData> = {
 		icon: `ASSETS/Characters/TFT11_Sylas/HUD/Icons2D/TFT11_Sylas_Ability.tex`,
 		name: `Unchain The Demon`,
 		variables: {
-			'Damage': [0, 150, 225, 675],
-			'AOEDamage': [0, 100, 150, 450],
-			'Heal': [0, 125, 150, 400],
+			'Damage': [0, 200, 300, 100],
+			'AOEDamage': [0, 90, 135, 450],
+			'Heal': [0, 120, 140, 500],
 		},
 	},
 	'TFT11_Syndra': {
@@ -7867,7 +7902,7 @@ export const abilities: Record<string, AbilityData> = {
 		variables: {
 			'NumStartingButt': [7, 7, 7, 10],
 			'DamagePerButt': [0, 40, 60, 180],
-			'FatedBonus': [0.11999999731779099, 0.11999999731779099, 0.11999999731779099, 0.11999999731779099],
+			'FatedBonus': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
 			'NumCastsPerButt': [1, 1, 1, 1],
 		},
 	},
@@ -7894,8 +7929,8 @@ export const abilities: Record<string, AbilityData> = {
 		icon: `ASSETS/Characters/TFT11_Teemo/HUD/Icons2D/TFT11_Teemo_Ability.tex`,
 		name: `Dim-Sum Delivery`,
 		variables: {
-			'Duration': [10, 10, 10, 10],
-			'Damage': [0, 400, 600, 1000],
+			'Duration': [8, 8, 8, 8],
+			'Damage': [0, 420, 630, 1000],
 			'TickRate': [0.5, 0.5, 0.5, 0.5],
 		},
 	},
@@ -7909,7 +7944,7 @@ export const abilities: Record<string, AbilityData> = {
 			'ShieldDuration': [4, 4, 4, 4],
 			'ResistShareDuration': [6, 6, 6, 6],
 			'PercentArmorAndMR': [0, 0.30000001192092896, 0.30000001192092896, 0.3499999940395355],
-			'FatedDefenses': [20, 20, 20, 20],
+			'FatedDefenses': [25, 25, 25, 25],
 		},
 	},
 	'TFT11_Tibbers': {
@@ -7928,7 +7963,7 @@ export const abilities: Record<string, AbilityData> = {
 		name: `Firecracker Frenzy`,
 		variables: {
 			'PercentAttackDamage': [0, 2.6500000953674316, 2.6500000953674316, 2.700000047683716],
-			'AttackDamage': [0, 0.5, 0.5, 0.550000011920929],
+			'AttackDamage': [0, 0.44999998807907104, 0.44999998807907104, 0.5],
 			'Duration': [6, 6, 6, 6],
 			'BaseSpellDamage': [0, 75, 115, 185],
 		},
@@ -7940,9 +7975,9 @@ export const abilities: Record<string, AbilityData> = {
 		variables: {
 			'HexDistance': [0, 2, 2, 10],
 			'Damage': [0, 300, 450, 5555],
-			'ShieldAmt': [0, 350, 425, 3000],
+			'ShieldAmt': [0, 300, 375, 3000],
 			'ShieldDuration': [3, 3, 3, 3],
-			'ASPercent': [1.5, 0.800000011920929, 0.800000011920929, 5],
+			'ASPercent': [1.5, 0.6000000238418579, 0.699999988079071, 5],
 			'BuffDuration': [4, 6, 6, 30],
 			'BounceCount': [0, 4, 4, 20],
 			'ShurikenDamage': [0, 150, 225, 1500],
@@ -7957,15 +7992,15 @@ export const abilities: Record<string, AbilityData> = {
 		variables: {},
 	},
 	'TFT11_Volibear': {
-		desc: `Empower the next three attacks. The first two heal for <scaleHealth>@HealAmount@</scaleHealth>&nbsp;Health and deal <magicDamage>@ModifiedSmallDamage@&nbsp;(%i:scaleAP%)</magicDamage>&nbsp;bonus magic damage. The final attack deals <magicDamage>@ModifiedLargeDamage@&nbsp;(%i:scaleHealth%%i:scaleAP%)</magicDamage> magic damage and <TFTKeyword>Stuns</TFTKeyword> the target for @StunDuration@ second.`,
+		desc: `Empower the next three attacks. The first two heal for <scaleHealth>@ModifiedHeal@&nbsp;(%i:scaleAP%)</scaleHealth>&nbsp;Health and deal <magicDamage>@ModifiedSmallDamage@&nbsp;(%i:scaleAP%)</magicDamage>&nbsp;bonus magic damage. The final attack deals <magicDamage>@ModifiedLargeDamage@&nbsp;(%i:scaleHealth%%i:scaleAP%)</magicDamage> magic damage and <TFTKeyword>Stuns</TFTKeyword> the target for @StunDuration@ second.`,
 		icon: `ASSETS/Characters/TFT11_Volibear/HUD/Icons2D/TFT11_Volibear_Ability.tex`,
 		name: `Ink Smash`,
 		variables: {
-			'HealAmount': [0, 210, 240, 270],
 			'StunDuration': [1, 1, 1, 1],
-			'SmallDamage': [0, 50, 75, 120],
-			'LargeDamage': [0, 100, 150, 240],
+			'SmallDamage': [0, 35, 50, 80],
+			'LargeDamage': [0, 80, 120, 185],
 			'HealthRatio': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
+			'HealAmount': [0, 140, 170, 210],
 		},
 	},
 	'TFT11_WuKong': {
@@ -8000,7 +8035,7 @@ export const abilities: Record<string, AbilityData> = {
 		variables: {
 			'NumClosestTargets': [4, 4, 4, 4],
 			'FeatherDamage': [0, 0.699999988079071, 0.699999988079071, 5],
-			'FeatherRecallDamage': [0, 0.30000001192092896, 0.30000001192092896, 1],
+			'FeatherRecallDamage': [0, 0.5, 0.5, 5],
 			'FeatherRecallBaseDamage': [0, 15, 25, 75],
 			'FeatherCount': [0, 12, 12, 30],
 		},
@@ -8023,7 +8058,7 @@ export const abilities: Record<string, AbilityData> = {
 			'BaseShield': [0, 175, 200, 250],
 			'ShieldResistPct': [0, 1, 1.100000023841858, 1.25],
 			'ShieldDamage': [0.30000001192092896, 0.4000000059604645, 0.4000000059604645, 0.44999998807907104],
-			'FatedBonus': [400, 400, 400, 400],
+			'FatedBonus': [350, 350, 350, 350],
 		},
 	},
 	'TFT11_Yone': {
@@ -8034,7 +8069,7 @@ export const abilities: Record<string, AbilityData> = {
 			'ADRatio': [0, 1.649999976158142, 1.649999976158142, 1.75],
 			'Shield': [0, 280, 340, 400],
 			'ShieldDuration': [3, 3, 3, 3],
-			'ASBonus': [0.800000011920929, 0.800000011920929, 0.800000011920929, 0.800000011920929],
+			'ASBonus': [0.75, 0.75, 0.75, 0.75],
 			'WoundDuration': [5, 5, 5, 5],
 			'HexRange': [3, 3, 3, 3],
 		},
@@ -8055,9 +8090,9 @@ export const abilities: Record<string, AbilityData> = {
 		icon: `ASSETS/Characters/TFT11_Zoe/HUD/Icons2D/TFT11_Zoe_Ability.tex`,
 		name: `Calculated!`,
 		variables: {
-			'Damage': [0, 220, 330, 530],
+			'Damage': [0, 275, 415, 640],
 			'BounceRange': [2, 2, 2, 2],
-			'SecondarySpellDamage': [100, 100, 150, 240],
+			'SecondarySpellDamage': [100, 90, 135, 215],
 			'RicochetsPerKill': [1, 1, 1, 1],
 			'TOOLTIPBounceRange': [2, 2, 2, 2],
 		},

@@ -228,8 +228,8 @@
 			"__type": "AbilityResourceSlotInfo"
 		},
 		"baseDamage": 60,
-		"baseArmor": 45,
-		"baseSpellBlock": 45,
+		"baseArmor": 50,
+		"baseSpellBlock": 50,
 		"baseCritChance": 0.25,
 		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,

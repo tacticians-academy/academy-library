@@ -376,7 +376,7 @@
 			],
 			"castConeDistance": 100,
 			"mMissileSpec": {
-				"mMissileWidth": 200,
+				"mMissileWidth": 280,
 				"movementComponent": {
 					"mTracksTarget": false,
 					"mOffsetInitialTargetHeight": 100,
@@ -796,7 +796,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{50e8d20d}": {
+				"ModifiedOnHitDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,

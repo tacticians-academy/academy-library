@@ -1178,7 +1178,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{a336b599}": {
+				"ModifiedManaRestore": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -1194,13 +1194,13 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{d2d6a35b}": {
+				"AmplifiedDamage": {
 					"mFormulaParts": [
 						{
 							"mSubparts": [
 								{
 									"mStat": 2,
-									"mDataValue": "{d446488c}",
+									"mDataValue": "AmpedPercentAD",
 									"__type": "StatByNamedDataValueCalculationPart"
 								},
 								{

@@ -62,7 +62,6 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 250,
 		"mMoveHeight": 0,
-		"mInitialMana": 20,
 		"__type": "TFTCharacterRecord"
 	},
 	"Characters/TFT11_Zoe/Spells/TFT11_ZoeSpell": {
@@ -74,9 +73,9 @@
 					"mName": "Damage",
 					"mValues": [
 						0,
-						220,
-						330,
-						530,
+						275,
+						415,
+						640,
 						740,
 						200,
 						240
@@ -100,9 +99,9 @@
 					"mName": "SecondarySpellDamage",
 					"mValues": [
 						100,
-						100,
-						150,
-						240,
+						90,
+						135,
+						215,
 						0,
 						0,
 						0
@@ -153,14 +152,14 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{f1a7da43}": {
+				"ModifiedSecondarySpellDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
 					"mFormulaParts": [
 						{
 							"mSubpart": {
-								"mDataValue": "{748589c0}",
+								"mDataValue": "SecondarySpellDamage",
 								"__type": "NamedDataValueCalculationPart"
 							},
 							"mRatio": 0.009999999776482582,

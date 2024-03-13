@@ -55,9 +55,7 @@ export async function transformAugments(setNumber: SetNumber, parentSetNumber: S
 			} else {
 				const wordTier = getTierFromWord(pathName.split('-').pop()!.split('_').pop()!)
 				if (wordTier && wordTier !== tier) {
-					if (tier && tier !== wordTier - 1) {
-						console.log('Multiple tier designations', tier, wordTier, item)
-					}
+					if (tier !== wordTier - 1) { console.log('Multiple tier designations', tier, wordTier, item) }
 					tier = wordTier
 				}
 			}
@@ -110,26 +108,27 @@ export async function transformAugments(setNumber: SetNumber, parentSetNumber: S
 				tier: tier!,
 				name: item.name,
 				groupID: key[0].toLowerCase() + key.slice(1),
-				desc: item.desc!,
+				desc: item.desc?.trim() ?? '',
 				effects: effects as EffectVariables,
 				icon: item.icon,
 			}
 
-			const keyID = nameNormalized + data.desc //JSON.stringify(data)
+			const keyID = nameNormalized + item.desc
 			if (addedAugments.includes(keyID)) {
 				continue
 			}
 			addedAugments.push(keyID)
 
 			const isUnused = GLOBAL_UNUSED_AUGMENT_NAME_KEYS.includes(nameNormalized) || UNUSED_AUGMENT_NAME_KEYS?.includes(nameNormalized) || iconNormalized.includes('/missing-t')
-			if (data.desc == null) {
-				data.desc = ''
-			}
 			const hasInternalName = nameNormalized.startsWith('tft')
-			if (!isUnused && (iconNormalized.includes('/choiceui/admin_armorery_') || hasInternalName)) {
-				choiceAugments.push(data)
+			if (iconNormalized.includes('/choiceui/admin_armorery_') || item.apiName.includes('_AdminCause_')) {
+				if (parentSetNumber === 8) {
+					choiceAugments.push(data)
+				}
 			} else if (hasInternalName) {
-				continue
+				if (!isUnused) {
+					choiceAugments.push(data)
+				}
 			} else if (isUnused || !tier) {
 				inactiveAugments.push(data)
 			} else {

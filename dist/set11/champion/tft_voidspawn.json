@@ -45,7 +45,8 @@
 		"mMoveProximity": 180,
 		"mMoveRange": 500,
 		"mMoveHeight": 0,
-		"__type": "TFTCharacterRecord"
+		"__type": "TFTCharacterRecord",
+		"isSpawn": true
 	},
 	"Characters/TFT_VoidSpawn/Spells/TFT_VoidSpawnBasicAttack2": {
 		"mScriptName": "TFT_VoidSpawnBasicAttack2",

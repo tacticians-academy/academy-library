@@ -86,9 +86,9 @@
 					"mName": "Damage",
 					"mValues": [
 						0,
-						240,
-						360,
-						1500,
+						185,
+						275,
+						2000,
 						0,
 						0,
 						0
@@ -164,9 +164,9 @@
 					"mName": "BaseShieldAmount",
 					"mValues": [
 						0,
-						175,
-						225,
-						500,
+						160,
+						200,
+						600,
 						0,
 						0,
 						0
@@ -287,12 +287,12 @@
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {
 			"arType": 0,
-			"arBase": 80,
+			"arBase": 90,
 			"arBaseStaticRegen": 0,
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 70,
+		"baseDamage": 60,
 		"baseArmor": 60,
 		"baseSpellBlock": 60,
 		"baseCritChance": 0.25,

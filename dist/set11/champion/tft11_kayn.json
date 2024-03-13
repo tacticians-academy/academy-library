@@ -118,12 +118,12 @@
 							"mSubparts": [
 								{
 									"mStat": 2,
-									"mDataValue": "{0476abad}",
+									"mDataValue": "SwipeADPercent",
 									"__type": "StatByNamedDataValueCalculationPart"
 								},
 								{
 									"mSubpart": {
-										"mDataValue": "{f006fa23}",
+										"mDataValue": "SwipeFlatDamage",
 										"__type": "NamedDataValueCalculationPart"
 									},
 									"mRatio": 0.009999999776482582,
@@ -135,7 +135,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{d19def62}": {
+				"TotalTransformDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -144,7 +144,7 @@
 							"mSubparts": [
 								{
 									"mStat": 2,
-									"mDataValue": "{59fbe917}",
+									"mDataValue": "TransformADPercent",
 									"__type": "StatByNamedDataValueCalculationPart"
 								}
 							],
@@ -323,9 +323,9 @@
 					"mName": "SwipeADPercent",
 					"mValues": [
 						2,
-						2,
-						2,
-						5,
+						2.4000000953674316,
+						2.4000000953674316,
+						6,
 						2,
 						2,
 						2
@@ -369,12 +369,12 @@
 							"mSubparts": [
 								{
 									"mStat": 2,
-									"mDataValue": "{0476abad}",
+									"mDataValue": "SwipeADPercent",
 									"__type": "StatByNamedDataValueCalculationPart"
 								},
 								{
 									"mSubpart": {
-										"mDataValue": "{f006fa23}",
+										"mDataValue": "SwipeFlatDamage",
 										"__type": "NamedDataValueCalculationPart"
 									},
 									"mRatio": 0.009999999776482582,
@@ -386,7 +386,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{d19def62}": {
+				"TotalTransformDamage": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -395,7 +395,7 @@
 							"mSubparts": [
 								{
 									"mStat": 2,
-									"mDataValue": "{59fbe917}",
+									"mDataValue": "TransformADPercent",
 									"__type": "StatByNamedDataValueCalculationPart"
 								}
 							],
@@ -542,9 +542,9 @@
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 80,
-		"baseArmor": 60,
-		"baseSpellBlock": 60,
+		"baseDamage": 75,
+		"baseArmor": 70,
+		"baseSpellBlock": 70,
 		"baseCritChance": 0.25,
 		"critDamageMultiplier": 1.399999976158142,
 		"baseMoveSpeed": 500,
