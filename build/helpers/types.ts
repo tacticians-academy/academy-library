@@ -1,5 +1,5 @@
 import type { SetNumber } from '../../dist'
-import type { ChampionData, TraitData } from '../../dist/types'
+import type { ChampionData, TraitData, ChampionSpellMissileBehavior } from '../../dist/types'
 
 type SetData = {name: string, number?: number, mutator?: string, champions: ChampionData[], traits: TraitData[]}
 export type GameResponseJSON = { items: Record<string, any>[], setData?: SetData[], sets: Record<SetNumber, SetData> }
@@ -77,7 +77,9 @@ export interface ChampionJSONSpell {
 			mAcceleration?: number
 			mStartDelay?: number
 			mTracksTarget?: false
+			__type: string
 		}
+		behaviors: ChampionSpellMissileBehavior[]
 	}
 	cantCastWhileRooted?: true
 }

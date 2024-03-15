@@ -72,6 +72,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [
+						{
+							__type: `CastOnMovementComplete`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedTimeMovement`,
 				},
 				variables: {},
 				calculations: {},
@@ -118,6 +127,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [
+						{
+							__type: `CastOnMovementComplete`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedTimeMovement`,
 				},
 				variables: {
 					'Damage': [0, 500, 700, 3000],
@@ -175,6 +193,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [
+						{
+							__type: `CastOnMovementComplete`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedTimeMovement`,
 				},
 				variables: {},
 				calculations: {},
@@ -193,6 +220,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [
+						{
+							__type: `CastOnMovementComplete`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedTimeMovement`,
 				},
 				variables: {},
 				calculations: {},
@@ -211,6 +247,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [
+						{
+							__type: `CastOnMovementComplete`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedTimeMovement`,
 				},
 				variables: {},
 				calculations: {},
@@ -257,6 +302,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {
 					'Damage': [20, 175, 250, 400],
@@ -298,6 +345,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: false,
+					behaviors: [
+						{
+							__type: `CastOnHit`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 				},
 				variables: {},
 				calculations: {},
@@ -316,6 +372,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: false,
+					behaviors: [
+						{
+							__type: `CastOnHit`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 				},
 				variables: {},
 				calculations: {},
@@ -334,6 +399,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: false,
+					behaviors: [
+						{
+							__type: `CastOnHit`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 				},
 				variables: {},
 				calculations: {},
@@ -352,6 +426,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: false,
+					behaviors: [
+						{
+							__type: `CastOnHit`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 				},
 				variables: {},
 				calculations: {},
@@ -370,6 +453,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: false,
+					behaviors: [
+						{
+							__type: `CastOnHit`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 				},
 				variables: {},
 				calculations: {},
@@ -388,6 +480,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: false,
+					behaviors: [
+						{
+							__type: `CastOnHit`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 				},
 				variables: {},
 				calculations: {},
@@ -434,6 +535,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {
 					'Damage': [100, 250, 350, 450],
@@ -566,6 +669,16 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: false,
+					behaviors: [
+						{
+							__type: `CastOnHit`,
+						},
+						{
+							mDelay: 5,
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedTimeMovement`,
 				},
 				variables: {
 					'Duration': [0, 7, 8, 9],
@@ -605,6 +718,16 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: false,
+					behaviors: [
+						{
+							__type: `CastOnHit`,
+						},
+						{
+							mDelay: 5,
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedTimeMovement`,
 				},
 				variables: {},
 				calculations: {},
@@ -700,6 +823,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [
+						{
+							__type: `CastOnMovementComplete`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 				},
 				variables: {},
 				calculations: {},
@@ -718,6 +850,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [
+						{
+							__type: `CastOnMovementComplete`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 				},
 				variables: {},
 				calculations: {},
@@ -826,6 +967,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {
 					'Damage': [75, 275, 400, 2000],
@@ -912,6 +1055,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [
+						{
+							__type: `CastOnHit`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `CircleMovement`,
 				},
 				variables: {
 					'Orbs': [2, 4, 5, 6],
@@ -970,6 +1122,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [
+						{
+							__type: `CastOnHit`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `CircleMovement`,
 				},
 				variables: {},
 				calculations: {},
@@ -1016,6 +1177,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {
 					'Lifesteal': [0, 40, 80, 160],
@@ -1119,6 +1282,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {
 					'CritMultiplier': [2.5, 2.5, 2.5, 2.5],
@@ -1236,6 +1401,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: false,
+					behaviors: [
+						{
+							__type: `CastOnHit`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 				},
 				variables: {
 					'BaseDamage': [0, 250, 450, 9999],
@@ -1321,6 +1495,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: false,
+					behaviors: [
+						{
+							__type: `CastOnHit`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 				},
 				variables: {
 					'Damage': [0, 250, 400, 600],
@@ -1362,6 +1545,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: false,
+					behaviors: [
+						{
+							__type: `CastOnHit`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 					_missileSpeed: 3200,
 				},
 				variables: {},
@@ -1409,6 +1601,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {
 					'Duration': [3, 3, 3, 3],
@@ -1451,6 +1645,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {
 					'BaseDamage': [200, 150, 300, 500],
@@ -1475,6 +1671,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {},
 				calculations: {},
@@ -1493,6 +1691,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {},
 				calculations: {},
@@ -1539,6 +1739,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {
 					'SpinDuration': [4, 4, 4, 4],
@@ -1581,6 +1783,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {
 					'DamageReduction': [0.4000000059604645, 0.5, 0.6000000238418579, 0.699999988079071],
@@ -1649,6 +1853,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {
 					'Damage': [40, 250, 400, 600],
@@ -1708,6 +1914,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [
+						{
+							__type: `CastOnMovementComplete`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 				},
 				variables: {},
 				calculations: {},
@@ -1754,6 +1969,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: false,
+					behaviors: [
+						{
+							__type: `CastOnHit`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 				},
 				variables: {
 					'Damage': [100, 200, 300, 550],
@@ -1821,6 +2045,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {
 					'NumAllies': [1, 2, 3, 4],
@@ -1863,6 +2089,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [
+						{
+							__type: `CastOnMovementComplete`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 					_missileSpeed: 1600,
 				},
 				variables: {},
@@ -1910,6 +2145,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {
 					'Damage': [50, 175, 250, 750],
@@ -1977,6 +2214,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {
 					'Duration': [2, 2, 2, 2],
@@ -2046,6 +2285,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [
+						{
+							__type: `CastOnMovementComplete`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 				},
 				variables: {
 					'PercentOfAD': [0, 4.440000057220459, 5, 12.34000015258789],
@@ -2103,6 +2351,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [
+						{
+							__type: `CastOnMovementComplete`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 				},
 				variables: {},
 				calculations: {},
@@ -2149,6 +2406,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [
+						{
+							__type: `CastOnMovementComplete`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 					_missileSpeed: 2000,
 				},
 				variables: {
@@ -2190,6 +2456,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [
+						{
+							__type: `CastOnMovementComplete`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 				},
 				variables: {},
 				calculations: {},
@@ -2208,6 +2483,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [
+						{
+							__type: `CastOnMovementComplete`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 					_missileSpeed: 2000,
 				},
 				variables: {},
@@ -2255,6 +2539,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {
 					'PercentHealthDamage': [0.019999999552965164, 0.03999999910593033, 0.05999999865889549, 0.09000000357627869],
@@ -2321,6 +2607,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {
 					'DamagePerTick': [20, 40, 60, 120],
@@ -2365,6 +2653,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [
+						{
+							__type: `CastOnMovementComplete`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 				},
 				variables: {},
 				calculations: {},
@@ -2471,6 +2768,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {
 					'TickRate': [0.5, 0.5, 0.5, 0.5],
@@ -2540,6 +2839,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {
 					'Damage': [100, 450, 650, 1000],
@@ -2581,6 +2882,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [
+						{
+							__type: `CastOnMovementComplete`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 				},
 				variables: {},
 				calculations: {},
@@ -2686,6 +2996,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [
+						{
+							__type: `CastOnMovementComplete`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedTimeSplineMovement`,
 				},
 				variables: {
 					'NumTargets': [0, 2, 3, 10],
@@ -2728,6 +3047,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [
+						{
+							__type: `CastOnMovementComplete`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedTimeSplineMovement`,
 				},
 				variables: {},
 				calculations: {},
@@ -2774,6 +3102,21 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: false,
+					behaviors: [
+						{
+							__type: `CastOnHit`,
+						},
+						{
+							__type: `DestroyOnHit`,
+						},
+						{
+							__type: `CastOnMovementComplete`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 				},
 				variables: {
 					'Damage': [0, 350, 450, 550],
@@ -2830,6 +3173,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: false,
+					behaviors: [
+						{
+							__type: `CastOnHit`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 					_missileSpeed: 2200,
 				},
 				variables: {},
@@ -2877,6 +3229,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {
 					'BonusHealth': [200, 400, 600, 950],
@@ -2946,6 +3300,22 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: false,
+					behaviors: [
+						{
+							__type: `CastOnHit`,
+						},
+						{
+							mMaximumDistance: 2200,
+							mTargeterDefinition: {
+								__type: `TargeterDefinitionSkipTerrain`,
+							},
+							__type: `FixedDistanceIgnoringTerrain`,
+						},
+						{
+							__type: `{e357c116}`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 					_missileSpeed: 1600,
 				},
 				variables: {
@@ -3014,6 +3384,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {
 					'Damage': [50, 225, 350, 550],
@@ -3054,6 +3426,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: false,
+					behaviors: [
+						{
+							__type: `CastOnHit`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 					_missileSpeed: 1600,
 				},
 				variables: {},
@@ -3101,6 +3482,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {
 					'Damage': [0, 250, 400, 2000],
@@ -3169,6 +3552,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [
+						{
+							__type: `CastOnMovementComplete`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedTimeMovement`,
 				},
 				variables: {
 					'Damage': [50, 225, 300, 450],
@@ -3277,6 +3669,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: false,
+					behaviors: [
+						{
+							__type: `CastOnHit`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 					_missileSpeed: 1300,
 				},
 				variables: {
@@ -3318,6 +3719,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [
+						{
+							__type: `CastOnMovementComplete`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 				},
 				variables: {},
 				calculations: {},
@@ -3422,6 +3832,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [
+						{
+							__type: `CastOnHit`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 				},
 				variables: {
 					'Damage': [100, 125, 200, 375],
@@ -3463,6 +3882,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [
+						{
+							__type: `CastOnHit`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 				},
 				variables: {},
 				calculations: {},
@@ -3509,6 +3937,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {
 					'Damage': [50, 175, 250, 750],
@@ -3584,6 +4014,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: false,
+					behaviors: [
+						{
+							__type: `CastOnHit`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 					_missileSpeed: 1600,
 				},
 				variables: {},
@@ -3603,6 +4042,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {
 					'Damage': [50, 550, 750, 2500],
@@ -3659,6 +4100,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {
 					'Damage': [50, 550, 750, 2500],
@@ -3715,6 +4158,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: false,
+					behaviors: [
+						{
+							__type: `CastOnHit`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 					_missileSpeed: 1600,
 				},
 				variables: {},
@@ -3734,6 +4186,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {
 					'Damage': [50, 550, 750, 2500],
@@ -3790,6 +4244,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: false,
+					behaviors: [
+						{
+							__type: `CastOnHit`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 					_missileSpeed: 1600,
 				},
 				variables: {},
@@ -3875,6 +4338,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {
 					'ExplosionDelay': [0, 2, 2, 2],
@@ -4076,6 +4541,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: false,
+					behaviors: [
+						{
+							__type: `CastOnHit`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 				},
 				variables: {
 					'BaseDamage': [0, 250, 400, 700],
@@ -4286,6 +4760,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [
+						{
+							__type: `CastOnMovementComplete`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 				},
 				variables: {
 					'Duration': [2, 2.5, 3, 4.5],
@@ -4327,6 +4810,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [
+						{
+							__type: `CastOnMovementComplete`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 				},
 				variables: {},
 				calculations: {},
@@ -4373,6 +4865,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: false,
+					behaviors: [
+						{
+							__type: `CastOnMovementComplete`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedTimeMovement`,
 				},
 				variables: {
 					'ShieldAmount': [100, 250, 450, 750],
@@ -4414,6 +4915,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {},
 				calculations: {},
@@ -4460,6 +4963,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {
 					'BaseDamage': [0, 250, 350, 475],
@@ -4499,6 +5004,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: false,
+					behaviors: [
+						{
+							__type: `CastOnHit`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 				},
 				variables: {},
 				calculations: {},
@@ -4545,6 +5059,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {
 					'BonusDamage': [60, 50, 90, 140],
@@ -4584,6 +5100,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [
+						{
+							__type: `CastOnMovementComplete`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 				},
 				variables: {},
 				calculations: {},
@@ -4661,6 +5186,15 @@ export const champions: ChampionData[] = [
 					acceleration: 4000,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [
+						{
+							__type: `CastOnMovementComplete`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `AcceleratingMovement`,
 				},
 				variables: {},
 				calculations: {},
@@ -4707,6 +5241,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {
 					'Damage': [50, 250, 400, 800],
@@ -4748,6 +5284,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {},
 				calculations: {},
@@ -4766,6 +5304,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: false,
+					behaviors: [
+						{
+							__type: `CastOnHit`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 				},
 				variables: {},
 				calculations: {},
@@ -4810,6 +5357,8 @@ export const champions: ChampionData[] = [
 				acceleration: undefined,
 				startDelay: undefined,
 				tracksTarget: true,
+				behaviors: [],
+				type: undefined,
 			},
 			variables: {
 				'AttackSpeedPercent': [5, 1.350000023841858, 1.5, 5],
@@ -4853,6 +5402,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {},
 				calculations: {},
@@ -4899,6 +5450,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {
 					'PercentAD': [1.5, 2.5, 2.6500000953674316, 2.799999952316284],
@@ -4982,6 +5535,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {
 					'Damage': [75, 150, 225, 500],
@@ -5054,6 +5609,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {
 					'HexRange': [2, 2, 2, 2],
@@ -5172,6 +5729,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: false,
+					behaviors: [
+						{
+							__type: `CastOnHit`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 					_missileSpeed: 1000,
 				},
 				variables: {},
@@ -5219,6 +5785,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {
 					'Healing': [0.15000000596046448, 0.30000001192092896, 0.44999998807907104, 0.75],
@@ -5302,6 +5870,8 @@ export const champions: ChampionData[] = [
 				acceleration: undefined,
 				startDelay: undefined,
 				tracksTarget: true,
+				behaviors: [],
+				type: undefined,
 			},
 			variables: {
 				'ADSteal': [0.25, 0.25, 0.30000001192092896, 0.3499999940395355],
@@ -5342,6 +5912,15 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [
+						{
+							__type: `CastOnMovementComplete`,
+						},
+						{
+							__type: `DestroyOnMovementComplete`,
+						},
+					],
+					type: `FixedSpeedMovement`,
 				},
 				variables: {},
 				calculations: {},
@@ -5360,6 +5939,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {},
 				calculations: {},
@@ -5406,6 +5987,8 @@ export const champions: ChampionData[] = [
 					acceleration: undefined,
 					startDelay: undefined,
 					tracksTarget: true,
+					behaviors: [],
+					type: undefined,
 				},
 				variables: {
 					'NumTargets': [0, 2, 3, 10],

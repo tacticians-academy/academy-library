@@ -403,6 +403,8 @@ function transformSpellData(spellName: string, spellData: ChampionJSONSpell, jso
 				acceleration: missileMovement?.mAcceleration,
 				startDelay: missileMovement?.mStartDelay,
 				tracksTarget: missileMovement?.mTracksTarget !== false,
+				behaviors: missileSpec?.behaviors ?? [],
+				type: missileMovement?.__type,
 			},
 		variables,
 		calculations,

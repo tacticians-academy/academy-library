@@ -1,5 +1,5 @@
 import type { AugmentData, AugmentTierProbability, SetNumber } from '../../dist/index.js'
-import { importAugments, importSetData } from '../../dist/imports.js'
+import { importAugments, importChampions, importSetData } from '../../dist/imports.js'
 
 import { loadHardcodedTXT } from '../helpers/files.js'
 import { getAugmentNameKey } from '../helpers/utils.js'
@@ -60,4 +60,9 @@ export async function validate(setNumber: SetNumber) {
 			recursiveCheckTiers(augmentTierProbabilities)
 		}
 	}
+
+	const { champions } = await importChampions(setNumber)
+
+	const missileBehaviors = champions.flatMap(champion => champion.spells.flatMap(spell => spell.missile?.behaviors?.map(behavior => behavior.__type) ?? []))
+	console.log('Missile Behaviors', Array.from(new Set(missileBehaviors)))
 }

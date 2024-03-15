@@ -1697,7 +1697,7 @@ export const activeAugments: AugmentData[] = [
 		tier: 1,
 		name: `Socialite Heart`,
 		groupID: `socialiteHeart`,
-		desc: `Your team counts as having 1 additional Socialite. `,
+		desc: `Your team counts as having 1 additional Socialite.`,
 		effects: {},
 		icon: `ASSETS/Maps/Particles/TFT/Item_Icons/Augments/Hexcore/SocialiteHeart1.TFT_Set6.dds`,
 	},

@@ -92,6 +92,19 @@ export enum BonusKey {
 	VampSpell = 'OmniVamp',
 }
 
+export interface ChampionSpellMissileBehavior {
+	__type?: string
+	mDelay?: number
+	mTriggerName?: string
+	'{9aa2fc4c}'?: boolean
+	mActions?: {
+		__type: string
+		mSpeedValue?: number
+		'{f73a559d}'?: boolean
+		mOverrideMovement?: ChampionSpellMissileData
+	}[]
+}
+
 export interface ChampionSpellMissileData {
 	width?: number
 	travelTime?: number
@@ -102,6 +115,16 @@ export interface ChampionSpellMissileData {
 	acceleration?: number
 	startDelay?: number
 	tracksTarget?: boolean
+	behaviors?: ChampionSpellMissileBehavior[]
+	type?: string
+
+	// Unused
+	mSplineInfo?: any
+	mTracksTarget?: boolean
+	mStartBoneName?: string
+	mProjectTargetToCastRange?: boolean
+	mSpeed?: number
+	__type?: string
 }
 
 export interface ChampionSpellData {
