@@ -1392,11 +1392,11 @@ export const championFlashcards: ChampionFlashcard[] = [
 		ability: {
 			name: `Unchain The Demon`,
 			variables: {
-				'Damage': [0, 200, 300, 100],
+				'Damage': [0, 200, 300, 1000],
 				'AOEDamage': [0, 90, 135, 450],
 				'Heal': [0, 120, 140, 500],
 			},
-			description: `Dash around the target and slam, dealing <magicDamage>200/300/100&nbsp;(%i:scaleAP%)</magicDamage>&nbsp;magic damage and healing for <scaleHealth>120/140/500&nbsp;(%i:scaleAP%)</scaleHealth>&nbsp;Health. Then, swipe twice, dealing <magicDamage>1&nbsp;(%i:scaleAP%)</magicDamage>&nbsp;magic damage to nearby enemies.<br>`,
+			description: `Dash around the target and slam, dealing <magicDamage>200/300/1000&nbsp;(%i:scaleAP%)</magicDamage>&nbsp;magic damage and healing for <scaleHealth>120/140/500&nbsp;(%i:scaleAP%)</scaleHealth>&nbsp;Health. Then, swipe twice, dealing <magicDamage>1&nbsp;(%i:scaleAP%)</magicDamage>&nbsp;magic damage to nearby enemies.<br>`,
 			icon: `assets/characters/tft11_sylas/hud/icons2d/tft11_sylas_ability`,
 		},
 	},

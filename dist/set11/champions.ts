@@ -6199,7 +6199,7 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {
-					'Damage': [0, 200, 300, 100],
+					'Damage': [0, 200, 300, 1000],
 					'AOEDamage': [0, 90, 135, 450],
 					'Heal': [0, 120, 140, 500],
 				},
@@ -6212,7 +6212,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [0, 200, 300, 100],
+										starValues: [0, 200, 300, 1000],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -8816,7 +8816,7 @@ export const abilities: Record<string, AbilityData> = {
 		icon: `ASSETS/Characters/TFT11_Sylas/HUD/Icons2D/TFT11_Sylas_Ability.tex`,
 		name: `Unchain The Demon`,
 		variables: {
-			'Damage': [0, 200, 300, 100],
+			'Damage': [0, 200, 300, 1000],
 			'AOEDamage': [0, 90, 135, 450],
 			'Heal': [0, 120, 140, 500],
 		},

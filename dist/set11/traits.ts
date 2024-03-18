@@ -792,7 +792,7 @@ export const traits: TraitData[] = [
 				style: 1,
 				variables: {
 					'AP': 12,
-					'HPPct': 0.10000000149011612,
+					'HPPct': 0.07999999821186066,
 					'Multiplier': 0.5,
 				},
 			},
@@ -802,7 +802,7 @@ export const traits: TraitData[] = [
 				style: 3,
 				variables: {
 					'AP': 22,
-					'HPPct': 0.20000000298023224,
+					'HPPct': 0.18000000715255737,
 					'Multiplier': 0.5,
 				},
 			},
@@ -812,7 +812,7 @@ export const traits: TraitData[] = [
 				style: 4,
 				variables: {
 					'AP': 35,
-					'HPPct': 0.30000001192092896,
+					'HPPct': 0.25,
 					'Multiplier': 0.5,
 				},
 			},
@@ -822,7 +822,7 @@ export const traits: TraitData[] = [
 				style: 5,
 				variables: {
 					'AP': 35,
-					'HPPct': 0.30000001192092896,
+					'HPPct': 0.25,
 					'Multiplier': 0.5,
 					'PrismaticMultiplier': 2.5,
 				},
