@@ -2622,7 +2622,7 @@ export const champions: ChampionData[] = [
 		traits: [`Inkshadow`, `Trickshot`],
 		stats: {
 			armor: 30,
-			attackSpeed: 0.800000011920929,
+			attackSpeed: 0.8500000238418579,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
 			damage: 70,
@@ -3651,7 +3651,7 @@ export const champions: ChampionData[] = [
 				variables: {
 					'PermanentHealthPerInterest': [30, 10, 12, 20],
 					'Duration': [2, 2, 2, 2],
-					'Heal': [60, 300, 350, 400],
+					'Heal': [60, 350, 400, 475],
 					'DamageHPPercent': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
 					'HRHealthPerRound': [15, 60, 80, 200],
 				},
@@ -3664,7 +3664,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Heal`,
-										starValues: [60, 300, 350, 400],
+										starValues: [60, 350, 400, 475],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -3769,7 +3769,7 @@ export const champions: ChampionData[] = [
 			attackSpeed: 0.8500000238418579,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
-			damage: 65,
+			damage: 70,
 			hp: 950,
 			initialMana: 40,
 			magicResist: 55,
@@ -4568,7 +4568,7 @@ export const champions: ChampionData[] = [
 				castTime: undefined,
 				missile: undefined,
 				variables: {
-					'Damage': [0, 240, 360, 1600],
+					'Damage': [0, 250, 375, 1600],
 					'Duration': [3, 3, 3, 3],
 					'HexRadius': [2, 2, 2, 2],
 					'ChillDuration': [1, 1, 1, 1],
@@ -4583,7 +4583,7 @@ export const champions: ChampionData[] = [
 								subparts: [
 									{
 										variable: `Damage`,
-										starValues: [0, 240, 360, 1600],
+										starValues: [0, 250, 375, 1600],
 										stat: `AP`,
 										ratio: 0.009999999776482582,
 									},
@@ -4900,7 +4900,7 @@ export const champions: ChampionData[] = [
 			attackSpeed: 0.75,
 			critChance: 0.25,
 			critMultiplier: 1.399999976158142,
-			damage: 50,
+			damage: 55,
 			hp: 700,
 			initialMana: 0,
 			magicResist: 35,
@@ -6503,7 +6503,7 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{504c56fa}': {
+					'BonusModifiedShield': {
 						asPercent: false,
 						parts: [
 							{
@@ -6519,7 +6519,7 @@ export const champions: ChampionData[] = [
 							},
 						],
 					},
-					'{7b60ce82}': {
+					'BonusModifiedDamage': {
 						asPercent: false,
 						parts: [
 							{
@@ -6741,7 +6741,7 @@ export const champions: ChampionData[] = [
 					'ShieldDuration': [4, 4, 4, 4],
 					'ResistShareDuration': [6, 6, 6, 6],
 					'PercentArmorAndMR': [0, 0.30000001192092896, 0.30000001192092896, 0.3499999940395355],
-					'FatedDefenses': [25, 25, 25, 25],
+					'FatedDefenses': [20, 20, 20, 20],
 				},
 				calculations: {
 					'Shield': {
@@ -7817,7 +7817,7 @@ export const champions: ChampionData[] = [
 					'BaseShield': [0, 175, 200, 250],
 					'ShieldResistPct': [0, 1, 1.100000023841858, 1.25],
 					'ShieldDamage': [0.30000001192092896, 0.4000000059604645, 0.4000000059604645, 0.44999998807907104],
-					'FatedBonus': [350, 350, 350, 350],
+					'FatedBonus': [300, 300, 300, 300],
 				},
 				calculations: {
 					'Shield': {
@@ -8574,7 +8574,7 @@ export const abilities: Record<string, AbilityData> = {
 		variables: {
 			'PermanentHealthPerInterest': [30, 10, 12, 20],
 			'Duration': [2, 2, 2, 2],
-			'Heal': [60, 300, 350, 400],
+			'Heal': [60, 350, 400, 475],
 			'DamageHPPercent': [0.10000000149011612, 0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
 			'HRHealthPerRound': [15, 60, 80, 200],
 		},
@@ -8654,7 +8654,7 @@ export const abilities: Record<string, AbilityData> = {
 		icon: `ASSETS/Characters/TFT11_Morgana/HUD/Icons2D/TFT11_Morgana_Ability.tex`,
 		name: `The Tempest's Torment`,
 		variables: {
-			'Damage': [0, 240, 360, 1600],
+			'Damage': [0, 250, 375, 1600],
 			'Duration': [3, 3, 3, 3],
 			'HexRadius': [2, 2, 2, 2],
 			'ChillDuration': [1, 1, 1, 1],
@@ -8870,7 +8870,7 @@ export const abilities: Record<string, AbilityData> = {
 			'ShieldDuration': [4, 4, 4, 4],
 			'ResistShareDuration': [6, 6, 6, 6],
 			'PercentArmorAndMR': [0, 0.30000001192092896, 0.30000001192092896, 0.3499999940395355],
-			'FatedDefenses': [25, 25, 25, 25],
+			'FatedDefenses': [20, 20, 20, 20],
 		},
 	},
 	'TFT11_Tibbers': {
@@ -8984,7 +8984,7 @@ export const abilities: Record<string, AbilityData> = {
 			'BaseShield': [0, 175, 200, 250],
 			'ShieldResistPct': [0, 1, 1.100000023841858, 1.25],
 			'ShieldDamage': [0.30000001192092896, 0.4000000059604645, 0.4000000059604645, 0.44999998807907104],
-			'FatedBonus': [350, 350, 350, 350],
+			'FatedBonus': [300, 300, 300, 300],
 		},
 	},
 	'TFT11_Yone': {

@@ -476,7 +476,7 @@
 			"arAllowMaxValueToBeOverridden": true,
 			"__type": "AbilityResourceSlotInfo"
 		},
-		"baseDamage": 50,
+		"baseDamage": 55,
 		"baseArmor": 35,
 		"baseSpellBlock": 35,
 		"baseCritChance": 0.25,

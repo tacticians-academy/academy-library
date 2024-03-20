@@ -2686,7 +2686,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `manaShield`,
 		desc: `Whenever an Invoker casts, grant the lowest HP ally Shield equal to @ManaShield*100@% of Mana spent. Gain a Janna.`,
 		effects: {
-			'{6d4321f7}': 2.5,
+			'{6d4321f7}': 2,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/ManaShield_II.TFT_Set11.tex`,
 	},
@@ -4350,7 +4350,7 @@ export const activeAugments: AugmentData[] = [
 		groupID: `twoHealthy`,
 		desc: `Your team gains @HPPerUnit@ HP for each unique @Tier@-cost champion on your board.`,
 		effects: {
-			'HPPerUnit': 110,
+			'HPPerUnit': 99,
 			'Tier': 2,
 		},
 		icon: `ASSETS/Maps/TFT/Icons/Augments/Hexcore/Two-Healthy-II.tex`,

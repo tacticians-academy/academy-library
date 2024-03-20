@@ -259,10 +259,10 @@ export const traits: TraitData[] = [
 				variables: {
 					'AP': 15,
 					'Duration': 4,
-					'HPPerCompost': 2,
+					'HPPerCompost': 3,
 					'HPPerCompostHR': 4,
-					'StartingHP': 250,
-					'StartingHPHR': 250,
+					'StartingHP': 150,
+					'StartingHPHR': 150,
 				},
 			},
 			{
@@ -272,10 +272,10 @@ export const traits: TraitData[] = [
 				variables: {
 					'AP': 30,
 					'Duration': 4,
-					'HPPerCompost': 6,
+					'HPPerCompost': 7,
 					'HPPerCompostHR': 12,
-					'StartingHP': 250,
-					'StartingHPHR': 250,
+					'StartingHP': 150,
+					'StartingHPHR': 150,
 				},
 			},
 			{
@@ -285,10 +285,10 @@ export const traits: TraitData[] = [
 				variables: {
 					'AP': 65,
 					'Duration': 4,
-					'HPPerCompost': 10,
+					'HPPerCompost': 11,
 					'HPPerCompostHR': 20,
-					'StartingHP': 250,
-					'StartingHPHR': 250,
+					'StartingHP': 150,
+					'StartingHPHR': 150,
 				},
 			},
 		],
@@ -508,8 +508,8 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
-					'DamagePercent': 0.05999999865889549,
-					'HealingPercent': 0.029999999329447746,
+					'DamagePercent': 0.05000000074505806,
+					'HealingPercent': 0.019999999552965164,
 					'NumInstances': 6,
 					'NumSpectres': 2,
 					'TickRate': 2,
@@ -521,7 +521,7 @@ export const traits: TraitData[] = [
 				style: 3,
 				variables: {
 					'DamagePercent': 0.11999999731779099,
-					'HealingPercent': 0.029999999329447746,
+					'HealingPercent': 0.019999999552965164,
 					'NumInstances': 6,
 					'NumSpectres': 2,
 					'TickRate': 2,
@@ -532,8 +532,8 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 4,
 				variables: {
-					'DamagePercent': 0.18000000715255737,
-					'HealingPercent': 0.029999999329447746,
+					'DamagePercent': 0.20000000298023224,
+					'HealingPercent': 0.019999999552965164,
 					'NumInstances': 6,
 					'NumSpectres': 2,
 					'TickRate': 2,
@@ -544,8 +544,8 @@ export const traits: TraitData[] = [
 				minUnits: 8,
 				style: 4,
 				variables: {
-					'DamagePercent': 0.30000001192092896,
-					'HealingPercent': 0.029999999329447746,
+					'DamagePercent': 0.3499999940395355,
+					'HealingPercent': 0.019999999552965164,
 					'NumInstances': 6,
 					'NumSpectres': 2,
 					'TickRate': 2,
@@ -1006,7 +1006,7 @@ export const traits: TraitData[] = [
 				minUnits: 3,
 				style: 1,
 				variables: {
-					'BonusAAPerStage': 0.10000000149011612,
+					'BonusAAPerStage': 0.15000000596046448,
 					'HP': 60,
 					'{3609554d}': 3,
 					'{6cf32d7f}': 100,
@@ -1023,7 +1023,7 @@ export const traits: TraitData[] = [
 				minUnits: 5,
 				style: 3,
 				variables: {
-					'BonusAAPerStage': 0.10000000149011612,
+					'BonusAAPerStage': 0.15000000596046448,
 					'HP': 100,
 					'{3609554d}': 3,
 					'{6cf32d7f}': 100,
@@ -1040,7 +1040,7 @@ export const traits: TraitData[] = [
 				minUnits: 7,
 				style: 4,
 				variables: {
-					'BonusAAPerStage': 0.10000000149011612,
+					'BonusAAPerStage': 0.15000000596046448,
 					'HP': 150,
 					'{3609554d}': 3,
 					'{6cf32d7f}': 100,
@@ -1057,7 +1057,7 @@ export const traits: TraitData[] = [
 				minUnits: 10,
 				style: 5,
 				variables: {
-					'BonusAAPerStage': 0.10000000149011612,
+					'BonusAAPerStage': 0.15000000596046448,
 					'HP': 250,
 					'{3609554d}': 3,
 					'{6cf32d7f}': 100,
@@ -1172,9 +1172,9 @@ export const traits: TraitData[] = [
 				minUnits: 2,
 				style: 1,
 				variables: {
-					'DRPercent': 15,
+					'DRPercent': 10,
 					'Duration': 10,
-					'StartOfCombatDRPercent': 12,
+					'StartOfCombatDRPercent': 15,
 				},
 			},
 			{
@@ -1182,9 +1182,9 @@ export const traits: TraitData[] = [
 				minUnits: 4,
 				style: 3,
 				variables: {
-					'DRPercent': 25,
+					'DRPercent': 20,
 					'Duration': 10,
-					'StartOfCombatDRPercent': 12,
+					'StartOfCombatDRPercent': 15,
 				},
 			},
 			{
@@ -1192,9 +1192,9 @@ export const traits: TraitData[] = [
 				minUnits: 6,
 				style: 4,
 				variables: {
-					'DRPercent': 40,
+					'DRPercent': 33,
 					'Duration': 10,
-					'StartOfCombatDRPercent': 12,
+					'StartOfCombatDRPercent': 15,
 				},
 			},
 		],

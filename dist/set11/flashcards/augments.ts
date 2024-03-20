@@ -2056,7 +2056,7 @@ export const augmentFlashcards: AugmentFlashcard[] = [
 		id: `two healthy`,
 		name: `Two Healthy`,
 		tiers: [2],
-		description: `Your team gains 110 HP for each unique 2-cost champion on your board.`,
+		description: `Your team gains 99 HP for each unique 2-cost champion on your board.`,
 		icons: [`assets/maps/tft/icons/augments/hexcore/two-healthy-ii`],
 	},
 	{

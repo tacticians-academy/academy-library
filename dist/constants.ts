@@ -52,7 +52,7 @@ export const SET_DATA: Record<number, {patchLine: string, milestoneID?: number}>
 		patchLine: '14.5',
 	},
 	11: {
-		patchLine: 'pbe',
+		patchLine: 'latest',
 	},
 }
 export type SetNumber = keyof typeof SET_DATA

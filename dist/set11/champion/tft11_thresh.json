@@ -81,7 +81,7 @@
 		"mInitialMana": 30,
 		"__type": "TFTCharacterRecord"
 	},
-	"{4f44e1df}": {
+	"Characters/TFT11_Thresh/Spells/TFT11_ThreshSpellMissile": {
 		"mScriptName": "TFT11_ThreshSpellMissile",
 		"mSpell": {
 			"mAffectsTypeFlags": 11333,
@@ -215,13 +215,13 @@
 				{
 					"mName": "FatedDefenses",
 					"mValues": [
-						25,
-						25,
-						25,
-						25,
-						25,
-						25,
-						25
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20
 					],
 					"__type": "SpellDataValue"
 				}

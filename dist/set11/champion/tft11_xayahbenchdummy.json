@@ -1,5 +1,5 @@
 {
-	"{84157397}": {
+	"Characters/TFT11_XayahBenchDummy/Spells/TFT11_XayahBenchDummySpell": {
 		"mScriptName": "TFT11_XayahBenchDummySpell",
 		"mSpell": {
 			"flags": 4,
@@ -57,8 +57,8 @@
 				"__type": "MissileSpecification"
 			},
 			"mCastType": 3,
-			"mMissileEffectKey": "{2ae4fe26}",
-			"mHitEffectKey": "{db7f1f6c}",
+			"mMissileEffectKey": "TFT11_XayahBenchDummy_Crit_Mis",
+			"mHitEffectKey": "TFT11_XayahBenchDummy_R_Tar",
 			"bHaveHitBone": true,
 			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
 			"mFloatVarsDecimals": [
@@ -128,8 +128,8 @@
 				"__type": "MissileSpecification"
 			},
 			"mCastType": 3,
-			"mMissileEffectKey": "{2ae4fe26}",
-			"mHitEffectKey": "{db7f1f6c}",
+			"mMissileEffectKey": "TFT11_XayahBenchDummy_Crit_Mis",
+			"mHitEffectKey": "TFT11_XayahBenchDummy_R_Tar",
 			"bHaveHitBone": true,
 			"mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
 			"mFloatVarsDecimals": [
@@ -155,7 +155,7 @@
 		},
 		"__type": "SpellObject"
 	},
-	"{8ad81b27}": {
+	"Characters/TFT11_XayahBenchDummy/CharacterRecords/Root": {
 		"mCharacterName": "TFT11_XayahBenchDummy",
 		"baseStaticHPRegen": 0,
 		"primaryAbilityResource": {

@@ -199,7 +199,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{504c56fa}": {
+				"BonusModifiedShield": {
 					"{cbcac618}": 5,
 					"{37070a8d}": 5,
 					"{e6eebb2f}": 5,
@@ -215,7 +215,7 @@
 					],
 					"__type": "GameCalculation"
 				},
-				"{7b60ce82}": {
+				"BonusModifiedDamage": {
 					"mMultiplier": {
 						"mDataValue": "BonusPercentDamage",
 						"__type": "NamedDataValueCalculationPart"
